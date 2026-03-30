@@ -1,0 +1,124 @@
+{
+  "date": "2026-03-30",
+  "session_note": "FY2025-26 LAST TRADING DAY. March 31 = Mahavir Jayanti (market holiday). April 1 = Settlement holiday. Next trading day: April 2 (FY27 Day 1). Gold corrected ~15-19% from ATH of ~$5,595 to ~$4,520 on Iran ceasefire signals. Iran 15-point US ceasefire proposal reported.",
+  "new_predictions": [
+    {
+      "pred_id": "P006",
+      "date": "2026-03-30",
+      "stock": "NIFTY",
+      "prediction": "Nifty 50 will close above 22,600 on April 2, 2026 (first trading day of FY27) as FY-end window-dressing selling pressure reverses",
+      "confidence": 3,
+      "reasoning": "March 30 (FY26 last trading day) saw forced institutional selling — year-end window dressing, FII repatriation, and portfolio cleanup drove a 2.14% decline. Historically, the first 1-2 trading days of a new financial year see a relief bounce as this sell pressure exhausts itself. US futures are +0.80% tonight. Any Iran ceasefire signal overnight further amplifies the bounce. Iran 15-point ceasefire proposal was reported on March 26 (CNBC/Bloomberg), partially explaining gold's selloff from ATH. If it progresses over the 2-day holiday, April 2 opens positively.",
+      "time_horizon": "1 trading day",
+      "check_date": "2026-04-02",
+      "outcome": null
+    },
+    {
+      "pred_id": "P007",
+      "date": "2026-03-30",
+      "stock": "SWIGGY",
+      "prediction": "SWIGGY will NOT breach ₹260 through April 18 check date. The 52-week low at ₹266.30 holds as strong support, with SWIGGY closing above ₹270 by April 18.",
+      "confidence": 3,
+      "reasoning": "Hard data trigger: SWIGGY closed at ₹275.75 on March 30 (FY26 last trading day), rising +2.68% on a day when Nifty fell -2.14%. This massive outperformance (+4.82% relative to market) on the last day of FY is a strong signal of institutional accumulation at the 52-week low zone. Fund managers typically rebalance on FY-end — SWIGGY near 52-wk low would attract bargain buying for FY27 opening positions. Platform fee hike (₹17.58) is a medium-term revenue positive. This directly challenges P001's breach prediction.",
+      "time_horizon": "3 weeks",
+      "check_date": "2026-04-18",
+      "outcome": null
+    },
+    {
+      "pred_id": "P008",
+      "date": "2026-03-30",
+      "stock": "BRENT/GENERAL",
+      "prediction": "Brent crude will fall below $100/bbl within 5 weeks if Iran-US ceasefire proposal advances to a formal signed agreement",
+      "confidence": 2,
+      "reasoning": "Hard data trigger: Gold has corrected from ATH of $5,595 to $4,520 (−19.2%) in March 2026, partly driven by a reported 15-point US-Iran ceasefire proposal (Bloomberg, CNBC March 26). Gold typically prices geopolitical risk premium ahead of crude. The gold correction strongly implies markets are pricing in increasing probability of Iran de-escalation. Brent crude at $115.35 still carries a ~$25-30 war premium vs pre-war $70 base. If a formal ceasefire is signed, Brent would rapidly correct toward $90-100. This would be transformative for the entire portfolio: IRCON, IREDA, IRFC, NHPC would rally on fiscal relief; MRPL and INDIGO would see cost pressure reverse.",
+      "time_horizon": "5 weeks",
+      "check_date": "2026-05-04",
+      "outcome": null
+    }
+  ],
+  "signal_accuracy_today": [
+    {
+      "signal_id": "S001",
+      "score": "PARTIAL",
+      "evidence": "MRPL bearish thesis intact — Brent crude at $115.35 (up from $108-110 on March 27), further compressing MRPL refining margins. MRPL March 30 closing price not confirmed (last known: ₹181.65 on March 27, est. ~₹175-180 today). Directionally confirmed. Check date May 15 — TOO EARLY for final verdict."
+    },
+    {
+      "signal_id": "S002",
+      "score": "NOT CONFIRMED",
+      "evidence": "SWIGGY closed at ₹275.75 on March 30, UP +2.68% on a day when Nifty fell -2.14%. The predicted breach of 52-week low ₹266.30 did NOT happen. SWIGGY showed major relative strength. However, medium-term S002 remains active — check date April 18. Today's bounce challenges the breach thesis."
+    },
+    {
+      "signal_id": "S003",
+      "score": "TOO EARLY",
+      "evidence": "INDIGO ATF cost thesis intact. Brent at $115.35 continues to pressure ATF costs. Q4/Q1FY27 earnings results needed to confirm. Check date May 30."
+    },
+    {
+      "signal_id": "S004",
+      "score": "PARTIAL",
+      "evidence": "Nifty closed at 22,331.40 on March 30 — only 131 points above the predicted 22,200 lower bound. Prediction said '22,000-22,200 range within 4-6 weeks' (from March 28). We are now at 22,331 on Day 2 (first Monday after March 28 briefing). Strongly in motion. Check date May 1."
+    },
+    {
+      "signal_id": "S005",
+      "score": "TOO EARLY",
+      "evidence": "ASTRA MICRO March 30 price not confirmed. Last known ₹1,030-1,038 range. Signal suggested selling 10 shares on Monday open — cannot confirm if action was taken. Check date April 7."
+    },
+    {
+      "signal_id": "S006",
+      "score": "PARTIAL",
+      "evidence": "PSU infra cluster confirmed bearish today: IREDA -2.44% (₹112), NHPC -2.68% (₹74.76), IRCON estimated flat/slight down. IRFC not priced today. However, Iran ceasefire signals (gold falling from ATH on ceasefire news) could be first catalyst for reversal. Check date July 1 — TOO EARLY for final score."
+    },
+    {
+      "signal_id": "S007",
+      "score": "PARTIAL",
+      "evidence": "COAL INDIA at ₹457.20 on March 30 (down from ₹462.25 on March 27, -1.09%). Still well above the ₹430 hold target. Coal-crude substitution thesis intact. Check date April 30."
+    },
+    {
+      "signal_id": "S008",
+      "score": "TOO EARLY",
+      "evidence": "IT sector gap remains. With Nifty down 2.14%, Nifty IT likely also fell but USD-earning defensive character may have cushioned losses. No new IT position initiated. Structural flag ongoing."
+    },
+    {
+      "signal_id": "S009",
+      "score": "PARTIAL",
+      "evidence": "SETFGOLD estimated ~₹122 on March 30. India gold INR price slightly up day-on-day (₹14,808/gram vs ₹14,689/gram March 27, +0.81%). Gold in USD has corrected significantly from ATH (~$4,520 vs $5,595 ATH) but INR weakness offsets. SETFGOLD appears to be slightly above ₹121.42 from March 27. Check date April 7."
+    },
+    {
+      "signal_id": "S010",
+      "score": "TOO EARLY",
+      "evidence": "Adani Port bearish thesis intact. Strait of Hormuz closed. Mundra throughput pressured. No March 30 specific data. Check date June 1."
+    }
+  ],
+  "predictions_review_due_today": [],
+  "predictions_still_open": [
+    {
+      "pred_id": "P001",
+      "prediction": "SWIGGY will breach ₹260 within 4 weeks",
+      "status": "OPEN — CHALLENGED",
+      "note": "SWIGGY closed at ₹275.75 on March 30, bouncing +2.68% vs -2.14% Nifty. P007 was created as a counter-prediction. P001 vs P007 will resolve at April 18 check date."
+    },
+    {
+      "pred_id": "P002",
+      "prediction": "MRPL falls to ₹160-170 if crude >$100",
+      "status": "OPEN — IN MOTION",
+      "note": "Brent at $115.35 (well above $100). MRPL estimated ~₹175-180 (down from ₹181.65). Moving toward target range. Check May 28."
+    },
+    {
+      "pred_id": "P003",
+      "prediction": "Nifty tests 22,000-22,200 range",
+      "status": "OPEN — CLOSE TO TARGET",
+      "note": "Nifty at 22,331 on March 30 — only 131 pts above the upper bound of prediction range (22,200). Check date May 10. Very likely to be scored RIGHT well before check date."
+    },
+    {
+      "pred_id": "P004",
+      "prediction": "ASTRA MICRO corrects to ₹850-900",
+      "status": "OPEN",
+      "note": "Last known ASTRA price ~₹1,030-1,038. Still ~₹130-180 above the correction target. Check April 25."
+    },
+    {
+      "pred_id": "P005",
+      "prediction": "COAL INDIA holds above ₹430 for 2 months",
+      "status": "OPEN — CONFIRMING",
+      "note": "Coal India at ₹457.20 on March 30. Holding well above ₹430 target floor. Check May 28."
+    }
+  ]
+}
