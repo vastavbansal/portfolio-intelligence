@@ -415,9 +415,26 @@ let briefings = null;
 let charts = {};
 
 // ════════════════════════════════
-// PRICE FETCHING (Yahoo Finance via CORS proxy)
+// PRICE FETCHING (Yahoo Finance chart endpoint via CORS proxy)
 // ════════════════════════════════
 const PROXY = "https://corsproxy.io/?";
+
+async function fetchOnePrice(sym) {
+  try {
+    const url = `${PROXY}https://query1.finance.yahoo.com/v8/finance/chart/${sym}?interval=1d&range=5d`;
+    const r = await fetch(url);
+    const d = await r.json();
+    const meta = d?.chart?.result?.[0]?.meta;
+    if (meta?.regularMarketPrice) {
+      const prev = meta.chartPreviousClose || meta.previousClose || meta.regularMarketPrice;
+      prices[sym] = {
+        price: meta.regularMarketPrice,
+        changePct: ((meta.regularMarketPrice - prev) / prev) * 100,
+        prevClose: prev
+      };
+    }
+  } catch(e) { /* silent per-symbol fail */ }
+}
 
 async function refreshPrices() {
   const btn = document.getElementById("refreshBtn");
@@ -426,32 +443,22 @@ async function refreshPrices() {
   icon.classList.add("spinning");
   btn.classList.replace("bg-blue-600","bg-blue-800");
 
-  // Get unique Yahoo symbols (excluding penny stocks that likely won't be on Yahoo)
-  const symbols = [...new Set(
-    HOLDINGS.filter(h => !h.isPenny).map(h => h.yahoo)
-  )];
+  const symbols = [...new Set(HOLDINGS.filter(h => !h.isPenny).map(h => h.yahoo))];
 
-  try {
-    // Batch request — Yahoo Finance quote endpoint
-    const ySymbols = symbols.join(",");
-    const yUrl = `https://query1.finance.yahoo.com/v7/finance/quote?symbols=${encodeURIComponent(ySymbols)}&fields=regularMarketPrice,regularMarketChangePercent,regularMarketPreviousClose`;
-    const res = await fetch(PROXY + yUrl);
-    const json = await res.json();
-    const results = json?.quoteResponse?.result || [];
-    results.forEach(q => {
-      prices[q.symbol] = {
-        price: q.regularMarketPrice,
-        changePct: q.regularMarketChangePercent,
-        prevClose: q.regularMarketPreviousClose
-      };
-    });
-    document.getElementById("lastUpdated").textContent = "Live prices as of " + new Date().toLocaleTimeString('en-IN');
-    document.getElementById("priceStatus").textContent = `${results.length}/${symbols.length} prices loaded`;
-    document.getElementById("macroAlert").classList.remove("hidden");
-  } catch(e) {
-    document.getElementById("lastUpdated").textContent = "Price refresh failed — showing avg costs only";
-    console.warn("Yahoo Finance error:", e);
+  // Fetch in parallel batches of 8 to avoid overwhelming the proxy
+  for (let i = 0; i < symbols.length; i += 8) {
+    const batch = symbols.slice(i, i + 8);
+    await Promise.all(batch.map(fetchOnePrice));
   }
+
+  const loaded = Object.keys(prices).length;
+  document.getElementById("lastUpdated").textContent =
+    loaded > 0
+      ? `Live prices as of ${new Date().toLocaleTimeString('en-IN')} — ${loaded}/${symbols.length} loaded`
+      : "Price refresh failed — check connection";
+  document.getElementById("priceStatus").textContent =
+    loaded > 0 ? `${loaded} live prices loaded` : "Live prices not loaded";
+  document.getElementById("macroAlert").classList.remove("hidden");
 
   renderAll();
   icon.classList.remove("spinning");
@@ -463,11 +470,16 @@ async function refreshPrices() {
 // DATA LOADING
 // ════════════════════════════════
 async function loadJSON(path) {
-  try {
-    const r = await fetch(path + "?t=" + Date.now());
-    if (!r.ok) throw new Error("not found");
-    return await r.json();
-  } catch { return null; }
+  // Try the given path first, then fall back to the filename at root
+  const filename = path.split("/").pop();
+  const attempts = [path, "./" + filename];
+  for (const p of attempts) {
+    try {
+      const r = await fetch(p + "?t=" + Date.now());
+      if (r.ok) return await r.json();
+    } catch { /* try next */ }
+  }
+  return null;
 }
 
 async function loadData() {
@@ -809,14 +821,20 @@ async function viewReport(filePath, title) {
   document.getElementById("downloadReportBtn").classList.remove("hidden");
   const viewer = document.getElementById("reportViewer");
   viewer.innerHTML = '<div class="shimmer h-4 w-full mb-2"></div><div class="shimmer h-4 w-4/5 mb-2"></div><div class="shimmer h-4 w-3/4"></div>';
-  try {
-    const r = await fetch("./" + filePath + "?t=" + Date.now());
-    if (!r.ok) throw new Error("not found");
-    const md = await r.text();
-    viewer.innerHTML = `<div class="markdown-body">${marked.parse(md)}</div>`;
-  } catch {
-    viewer.innerHTML = `<p class="text-slate-500 text-xs">Could not load report: ${filePath}</p>`;
+  // Try subfolder path first, then just the filename at root
+  const filename = filePath.split("/").pop();
+  const attempts = ["./" + filePath, "./" + filename];
+  for (const p of attempts) {
+    try {
+      const r = await fetch(p + "?t=" + Date.now());
+      if (r.ok) {
+        const md = await r.text();
+        viewer.innerHTML = `<div class="markdown-body">${marked.parse(md)}</div>`;
+        return;
+      }
+    } catch { /* try next */ }
   }
+  viewer.innerHTML = `<p class="text-slate-500 text-xs">Could not load: ${filePath}</p>`;
 }
 
 function closeModal() { document.getElementById("modal").classList.add("hidden"); }
