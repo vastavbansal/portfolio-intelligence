@@ -1,0 +1,26 @@
+{
+  "briefings": [
+    {
+      "date": "2026-03-30",
+      "type": "eod",
+      "label": "Mon Mar 30 — EOD Wrap (FY26 Last Day)",
+      "file": "daily-briefings/2026-03-30-eod.md",
+      "summary": "Nifty -2.14% to 22,331. FY26 ends in red. Brent $115. Rupee at 94.62. FII net sellers CY26."
+    },
+    {
+      "date": "2026-03-28",
+      "type": "morning",
+      "label": "Sat Mar 28 — Morning Briefing",
+      "file": "daily-briefings/2026-03-28-morning.md",
+      "summary": "Iran war crude shock. Nifty 22,819. SWIGGY near 52-wk low. 12 signals generated."
+    },
+    {
+      "date": "2026-03-28",
+      "type": "daily",
+      "label": "Sat Mar 28 — Initial Full Briefing",
+      "file": "daily-briefings/briefing-2026-03-28.md",
+      "summary": "First full briefing. Iran war crude shock. Nifty -2.09%. 5 predictions opened."
+    }
+  ],
+  "weekly_reports": []
+}
