@@ -1,0 +1,28 @@
+{
+  "accuracy_meta": {
+    "total": 5, "right": 0, "wrong": 0, "partial": 0, "open": 5, "accuracy_pct": null
+  },
+  "predictions": [
+    {
+      "id": "P005", "stock": "COAL INDIA", "type": "BULLISH",
+      "prediction": "Will hold above ₹430 or exceed it due to crude-substitution tailwind",
+      "target": "> 430", "check_date": "2026-05-28",
+      "confidence": 3, "status": "OPEN",
+      "opened_date": "2026-03-28", "notes": "Coal benefits from oil substitution demand. Currently at ~$462.25 (+34% gain)"
+    },
+    {
+      "id": "P004", "stock": "ASTRA MICRO", "type": "BEARISH",
+      "prediction": "Valuation compression after extended run",
+      "target": "850-900", "check_date": "2026-04-25",
+      "confidence": 3, "status": "OPEN",
+      "opened_date": "2026-03-28", "notes": "At ~+83% gain, defence PE stretched"
+    },
+    {
+      "id": "P006", "stock": "SWIGGY", "type": "BEARISH",
+      "prediction": "Will breach 260",
+      "target": "<260", "check_date": "2026-04-25",
+      "confidence": 4, "status": "OPEN",
+      "opened_date": "2026-03-28", "notes": "AT ~268.55, just 3.2% above 52wk low"
+    }
+  ]
+}
