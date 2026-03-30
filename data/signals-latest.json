@@ -1,0 +1,15 @@
+{
+  "generated": "2026-03-28",
+  "nifty": 22819.60,
+  "sensex": 73583.22,
+  "macro_note": "US-Israel struck Iran Feb 28. Hormuz closed. Brent crude $104–$122/bbl. FIIs sold ₹1.04L cr CY2026.",
+  "signals": [
+    {
+      "id": "S001", "category": "CRITICAL", "confidence": 5,
+      "title": "MRPL: Crude Input Cost Explosion",
+      "symbols": ["MRPL"],
+      "direction": "BEARISH",
+      "summary": "Brent at $104–$122/bbl. MRPL is a PSU refiner — input costs up 50–75%. Government blocked cost pass-through via ₹10/L excise cut. Q4 GRM will collapse.",
+      "action": "Do NOT add. Stop loss: ₹160. Check Q4 earnings ~May 2026.",
+      "source": "Brent crude CNN/CNBC Mar 27; MRPL LTP ₹181.65"
+    }
