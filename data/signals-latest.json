@@ -12,4 +12,128 @@
       "summary": "Brent at $104–$122/bbl. MRPL is a PSU refiner — input costs up 50–75%. Government blocked cost pass-through via ₹10/L excise cut. Q4 GRM will collapse.",
       "action": "Do NOT add. Stop loss: ₹160. Check Q4 earnings ~May 2026.",
       "source": "Brent crude CNN/CNBC Mar 27; MRPL LTP ₹181.65"
+    },
+    {
+      "id": "S002", "category": "CRITICAL", "confidence": 4,
+      "title": "SWIGGY: 3.2% Above 52-Week Low — Breach Risk",
+      "symbols": ["SWIGGY"],
+      "direction": "BEARISH",
+      "summary": "SWIGGY at ₹268.55. 52-wk low ₹266.30. Down 37% in 6 months. Quick-commerce war ongoing. 382 shares across both portfolios.",
+      "action": "Define stop-loss NOW. Exit ICICI position if close below ₹260.",
+      "source": "ICICI Direct; 52-wk low ₹266.30"
+    },
+    {
+      "id": "S003", "category": "CRITICAL", "confidence": 4,
+      "title": "INDIGO: ATF Cost Spike from Crude Surge",
+      "symbols": ["INDIGO"],
+      "direction": "BEARISH",
+      "summary": "ATF = 35–40% of IndiGo's costs. Crude up 50–75% from $70 to $104–$122. Q4 FY26 margin will take severe hit.",
+      "action": "Hold but do not add. Consider partial exit above ₹4,350.",
+      "source": "Brent crude CNBC Mar 27; INDIGO LTP ₹4,294"
+    },
+    {
+      "id": "S004", "category": "HIGH", "confidence": 4,
+      "title": "FII Outflow + PMI Weakness → Nifty Downside",
+      "symbols": ["NIFTY"],
+      "direction": "BEARISH",
+      "summary": "FIIs net -₹1.04L cr CY2026. India PMI at lowest since Oct 2022. Nifty fell 2.09% on March 27. Next support: 22,000–22,200.",
+      "action": "Avoid averaging into PSU/infra positions. Keep powder dry.",
+      "source": "Business Standard FII data; HSBC PMI flash Mar 2026"
+    },
+    {
+      "id": "S005", "category": "HIGH", "confidence": 4,
+      "title": "ASTRA MICRO +83%: Book Partial Profits",
+      "symbols": ["ASTRA MICRO"],
+      "direction": "ACTION",
+      "summary": "At ~₹1,030 vs avg ₹562.35 — +83% gain on 20 shares. Defence sector at stretched 50x PE (vs 10-yr avg 36.6x).",
+      "action": "Sell 10 of 20 shares. Hold remaining 10 with stop loss ₹850.",
+      "source": "Defence sector PE: Business Standard Dec 2025; ASTRA MICRO LTP"
+    },
+    {
+      "id": "S006", "category": "HIGH", "confidence": 3,
+      "title": "PSU Infra Cluster: No Near-Term Catalyst",
+      "symbols": ["IRFC","IREDA","IRCON","NHPC"],
+      "direction": "NEUTRAL",
+      "summary": "IRFC -30.8%, IREDA -34.4%, IRCON -28.7%, NHPC -26.3%. Oil shock worsens India's fiscal position → capex delays. No recovery catalyst until crude normalises.",
+      "action": "DO NOT AVERAGE. Hold 3–6 month horizon. Recovery trigger: Iran ceasefire → fiscal relief → capex.",
+      "source": "India fiscal analysis: CNBC Mar 27; stock LTPs"
+    },
+    {
+      "id": "S007", "category": "HIGH", "confidence": 3,
+      "title": "COAL INDIA +34%: Consider Partial Profit Booking",
+      "symbols": ["COAL INDIA"],
+      "direction": "ACTION",
+      "summary": "At ₹462.25 vs avg ₹345.55 (+33.8%). Crude-coal substitution effect is real. JM Financial has Coal India in buy basket.",
+      "action": "Sell 25–30 of 55 shares. Lock in ~₹3,000 profit.",
+      "source": "BusinessToday Mar 5 JM Financial picks"
+    },
+    {
+      "id": "S008", "category": "MEDIUM", "confidence": 4,
+      "title": "⚠️ ZERO IT SECTOR EXPOSURE",
+      "symbols": [],
+      "direction": "STRUCTURAL GAP",
+      "summary": "Portfolio has no IT stocks. With INR under depreciation pressure (crude import bill), IT (USD-earners) is a natural hedge. IT described as 'cheap' by analysts vs PSU/infra.",
+      "action": "Plan Nifty IT ETF entry when Nifty finds support at ~22,000.",
+      "source": "Business Standard 2026 investment strategy report"
+    },
+    {
+      "id": "S009", "category": "MEDIUM", "confidence": 3,
+      "title": "SBI Gold Fund: Verify SETFGOLD vs Gold ATH",
+      "symbols": ["SETFGOLD"],
+      "direction": "BULLISH",
+      "summary": "Gold at $5,300/oz all-time high. SBI Gold Fund SIP (₹15K/mo) should be performing strongly. SETFGOLD shows ₹121 — verify on broker portal as this may lag gold ATH.",
+      "action": "Verify SETFGOLD price on ICICI Direct. Continue SBI Gold Fund SIP.",
+      "source": "Gold: Intellectia AI; BusinessToday Mar 27"
+    },
+    {
+      "id": "S010", "category": "MEDIUM", "confidence": 3,
+      "title": "ADANI PORT: Hormuz Closure → Trade Volume Risk",
+      "symbols": ["ADANI PORT"],
+      "direction": "BEARISH",
+      "summary": "Mundra port exposed to India-Middle East trade disruption. Hormuz closed since Mar 4 → ships rerouting via Cape of Good Hope. At -12.9% vs avg ₹1,579.",
+      "action": "Hold. Stop loss ₹1,250. Key catalyst: Hormuz reopening.",
+      "source": "Wikipedia: Economic impact of 2026 Iran war"
+    },
+    {
+      "id": "S011", "category": "MEDIUM", "confidence": 3,
+      "title": "HDFC Defence Fund: Hold, Valuations Stretched",
+      "symbols": ["HDFC Defence Fund"],
+      "direction": "HOLD",
+      "summary": "NAV ₹23.657, +21% 1-yr, +22% on ₹3.14L investment. Nifty Defence at 50.6x PE vs 10-yr avg 36.6x. Iran war = defence tailwind, but expensive.",
+      "action": "Hold. Proceed April 18 SIP. No lump-sum additions. Book partial if NAV > ₹27.",
+      "source": "Groww NAV data; Business Standard PE data"
+    },
+    {
+      "id": "S012", "category": "MEDIUM", "confidence": 3,
+      "title": "TATA MOTORS DVR: Structural Discount — Avoid Adding",
+      "symbols": ["TATA MOTORS DVR"],
+      "direction": "HOLD",
+      "summary": "DVR at ~-51% vs avg ₹622.74. DVR structurally trades 40–50% below regular shares. Regular Tata Motors at +51.8% — only DVR is the problem.",
+      "action": "Exit on any bounce above ₹350. File capital loss for tax offset. No averaging.",
+      "source": "Tata Motors LTP ₹427.60; DVR estimated ~₹300-320"
     }
+  ],
+  "opportunities": [
+    {
+      "title": "Nifty IT ETF — Fill the IT Gap",
+      "reasoning": "Zero IT exposure when FII selling is concentrated in PSU/infra. IT stocks (TCS, Infosys) earn USD — benefits from INR depreciation. Nifty IT described as 'cheap' by analysts at current valuations vs historical averages.",
+      "entry_condition": "Nifty at or below 22,000",
+      "risk": "US recession tanks IT spending; USD weakens",
+      "priority": "HIGH"
+    },
+    {
+      "title": "ACME SOLAR + NHPC BESS Partnership",
+      "reasoning": "ACME Solar and NHPC signed a landmark 275 MW/550 MWh Battery Energy Storage deal for Andhra Pradesh (Feb 2026). Long-term revenue stream for both. Currently both at significant losses — but fundamental positioning is strong.",
+      "entry_condition": "Already held. Wait for government capex restoration as trigger.",
+      "risk": "Project delays; fiscal constraints delay commissioning",
+      "priority": "MEDIUM"
+    },
+    {
+      "title": "CMA CGM 6-Vessel Order (COCHINSHIP)",
+      "reasoning": "Cochin Shipyard signed deal (Feb 18, 2026) to build 6 × 1,700 TEU LNG feeder vessels for CMA CGM. Deliveries 36–64 months. Adds to order book beyond domestic defence contracts.",
+      "entry_condition": "Already held. Watch for management guidance on margin from this contract.",
+      "risk": "Shipping cycle reversal; LNG demand drops",
+      "priority": "MEDIUM"
+    }
+  ]
+}
