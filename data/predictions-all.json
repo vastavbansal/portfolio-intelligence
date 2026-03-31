@@ -1,28 +1,85 @@
 {
   "accuracy_meta": {
-    "total": 5, "right": 0, "wrong": 0, "partial": 0, "open": 5, "accuracy_pct": null
+    "total": 5,
+    "scored": 0,
+    "accuracy_pct": null,
+    "by_category": {
+      "CRITICAL": {"right": 0, "wrong": 0, "partial": 0},
+      "HIGH": {"right": 0, "wrong": 0, "partial": 0},
+      "MEDIUM": {"right": 0, "wrong": 0, "partial": 0}
+    },
+    "note": "First briefing — no predictions scored yet. Track record builds from March 28, 2026."
   },
   "predictions": [
     {
-      "id": "P005", "stock": "COAL INDIA", "type": "BULLISH",
-      "prediction": "Will hold above ₹430 or exceed it due to crude-substitution tailwind",
-      "target": "> 430", "check_date": "2026-05-28",
-      "confidence": 3, "status": "OPEN",
-      "opened_date": "2026-03-28", "notes": "Coal benefits from oil substitution demand. Currently at ~$462.25 (+34% gain)"
+      "pred_id": "P001",
+      "date": "2026-03-28",
+      "stock": "SWIGGY",
+      "prediction": "SWIGGY will breach ₹260 (near 52-week low area) within 4 weeks if no positive earnings catalyst emerges",
+      "confidence": 4,
+      "category": "CRITICAL",
+      "reasoning": "At ₹268.55, just 3.2% above 52-wk low of ₹266.30. No profitability catalyst visible. Quick-commerce war ongoing. 382 combined shares at significant loss.",
+      "time_horizon": "4 weeks",
+      "check_date": "2026-04-25",
+      "outcome": null,
+      "outcome_evidence": null,
+      "scored_on": null
     },
     {
-      "id": "P004", "stock": "ASTRA MICRO", "type": "BEARISH",
-      "prediction": "Valuation compression after extended run",
-      "target": "850-900", "check_date": "2026-04-25",
-      "confidence": 3, "status": "OPEN",
-      "opened_date": "2026-03-28", "notes": "At ~+83% gain, defence PE stretched"
+      "pred_id": "P002",
+      "date": "2026-03-28",
+      "stock": "MRPL",
+      "prediction": "MRPL will fall to ₹160–₹170 range within 2 months if Brent crude stays above $100/bbl",
+      "confidence": 4,
+      "category": "CRITICAL",
+      "reasoning": "MRPL at ₹181.65 already down -7.5%. Crude at $104–$122 = GRM compression. Government blocking pass-through. Q4 results will show damage.",
+      "time_horizon": "2 months",
+      "check_date": "2026-05-28",
+      "outcome": null,
+      "outcome_evidence": null,
+      "scored_on": null
     },
     {
-      "id": "P006", "stock": "SWIGGY", "type": "BEARISH",
-      "prediction": "Will breach 260",
-      "target": "<260", "check_date": "2026-04-25",
-      "confidence": 4, "status": "OPEN",
-      "opened_date": "2026-03-28", "notes": "AT ~268.55, just 3.2% above 52wk low"
+      "pred_id": "P003",
+      "date": "2026-03-28",
+      "stock": "NIFTY",
+      "prediction": "Nifty will test the 22,000–22,200 range within 4–6 weeks given continued FII outflows and PMI weakness",
+      "confidence": 3,
+      "category": "HIGH",
+      "reasoning": "FIIs -₹1.04L cr CY2026, PMI at 3.5yr low, Nifty at 22,819. No near-term FII reversal catalyst. DII support insufficient to offset.",
+      "time_horizon": "4–6 weeks",
+      "check_date": "2026-05-10",
+      "outcome": null,
+      "outcome_evidence": null,
+      "scored_on": null
+    },
+    {
+      "pred_id": "P004",
+      "date": "2026-03-28",
+      "stock": "ASTRA MICRO",
+      "prediction": "ASTRA MICRO will face profit-booking correction to ₹850–₹900 range within 4 weeks as defence sector PE remains stretched",
+      "confidence": 3,
+      "category": "HIGH",
+      "reasoning": "At ₹1,030, +83% gain. Nifty Defence at 50.6x TTM PE. Broad market selling pressure. Profit-booking likely at these levels.",
+      "time_horizon": "4 weeks",
+      "check_date": "2026-04-25",
+      "outcome": null,
+      "outcome_evidence": null,
+      "scored_on": null
+    },
+    {
+      "pred_id": "P005",
+      "date": "2026-03-28",
+      "stock": "COAL INDIA",
+      "prediction": "COAL INDIA will hold above ₹430 for the next 2 months as crude-coal substitution demand continues",
+      "confidence": 3,
+      "category": "HIGH",
+      "reasoning": "Coal India at ₹462. Crude at $104–$122 makes coal a cheaper industrial fuel alternative. JM Financial included in buy basket. Support at ₹430.",
+      "time_horizon": "2 months",
+      "check_date": "2026-05-28",
+      "outcome": null,
+      "outcome_evidence": null,
+      "scored_on": null
     }
   ]
 }
