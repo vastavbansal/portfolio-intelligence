@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "last_updated": "2026-04-01",
+  "description": "Master checklist of fundamental and technical factors for prediction generation. Grows over time via post-mortem analysis of wrong predictions — not correlation-mining. Every factor added must have a causal explanation.",
+
+  "macro_factors": [
+    {
+      "id": "M001", "name": "Brent Crude ($/bbl)", "category": "macro",
+      "relevant_sectors": ["oil_refining", "aviation", "paints", "chemicals", "shipping"],
+      "why_it_matters": "Direct input cost driver for refiners and airlines. India imports 90% of crude — affects fiscal deficit, FII sentiment, rupee.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "M002", "name": "USD/INR Exchange Rate", "category": "macro",
+      "relevant_sectors": ["it_services", "oil_refining", "import_heavy", "pharma_exports"],
+      "why_it_matters": "Weaker rupee = higher import costs (crude, electronics). Benefits IT and pharma exporters who earn in USD.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "M003", "name": "RBI Repo Rate", "category": "macro",
+      "relevant_sectors": ["nbfc", "banking", "housing", "psu_infra", "real_estate"],
+      "why_it_matters": "Directly sets cost of borrowing. Higher rates compress margins for debt-heavy PSU infra companies and NBFCs.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "M004", "name": "FII Net Flows (CY)", "category": "macro",
+      "relevant_sectors": ["all"],
+      "why_it_matters": "Sustained FII selling = index headwind regardless of fundamentals. Triggers stop-loss cascades in mid/small caps.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "M005", "name": "DII Net Flows (CY)", "category": "macro",
+      "relevant_sectors": ["all"],
+      "why_it_matters": "DII buying (SIP inflows, insurance) acts as floor support during FII exits. Net DII-FII gap determines index direction.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "M006", "name": "India PMI (Manufacturing + Services)", "category": "macro",
+      "relevant_sectors": ["all"],
+      "why_it_matters": "Forward-looking indicator of economic activity. PMI below 50 = contraction. Affects earnings expectations across sectors.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "M007", "name": "India CPI Inflation", "category": "macro",
+      "relevant_sectors": ["fmcg", "banking", "nbfc", "consumer_staples"],
+      "why_it_matters": "High CPI constrains RBI from cutting rates. Affects consumer purchasing power and FMCG volume growth.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "M008", "name": "Government Capex Budget Utilization (%)", "category": "macro",
+      "relevant_sectors": ["psu_infra", "defence", "railways", "renewable_energy"],
+      "why_it_matters": "PSU infra stocks (IRFC, IRCON, NHPC) depend on government spending. Low utilization = order delays = earnings miss.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "M009", "name": "US Fed Funds Rate / Fed Outlook", "category": "macro",
+      "relevant_sectors": ["all"],
+      "why_it_matters": "Higher US rates = stronger USD = capital outflow from EMs including India. Affects FII flows and rupee directly.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    }
+  ],
+
+  "sector_factors": [
+    {
+      "id": "S001", "name": "Gross Refining Margin (GRM) spread", "sector": "oil_refining",
+      "why_it_matters": "GRM = revenue per barrel minus crude cost. When crude spikes and government blocks pass-through, GRM collapses. Primary P&L driver for MRPL.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "S002", "name": "ATF Price (Aviation Turbine Fuel)", "sector": "aviation",
+      "why_it_matters": "ATF = 35-40% of IndiGo operating cost. Tracks Brent with ~2 week lag. Government has separate excise policy for ATF vs petrol/diesel.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "S003", "name": "India Defence Budget (% of GDP + absolute ₹)", "sector": "defence",
+      "why_it_matters": "ASTRA MICRO and shipyards earn from defence orders. Budget allocation + Make-in-India push determines order pipeline.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "S004", "name": "Quick Commerce GMV Growth + Profitability Timeline", "sector": "quick_commerce",
+      "why_it_matters": "SWIGGY and Zomato valued on path to profitability. GMV growth slowing or competitive intensity rising = multiple compression.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "S005", "name": "Renewable Energy Capex + BESS Orders", "sector": "renewable_energy",
+      "why_it_matters": "NHPC and ACME SOLAR revenue depends on project commissioning. Government renewable targets drive order flow.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "S006", "name": "Shipbuilding Order Book + Delivery Timeline", "sector": "shipbuilding",
+      "why_it_matters": "COCHINSHIP revenue is long-duration order book driven. CMA CGM contract and defence vessels are the key near-term deliveries.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "S007", "name": "Coal e-Auction Premium vs Notified Price", "sector": "coal",
+      "why_it_matters": "Coal India's realisation per tonne = notified price + e-auction premium. Higher crude = more industrial coal demand = higher premium.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "S008", "name": "Hormuz Strait / Geopolitical Shipping Routes", "sector": "shipping",
+      "why_it_matters": "Hormuz closure reroutes ships via Cape of Good Hope (+2 weeks transit). Reduces effective fleet capacity = higher freight rates. Affects ADANI PORT volumes.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    },
+    {
+      "id": "S009", "name": "India IT Sector Deal Pipeline + US Tech Spend", "sector": "it_services",
+      "why_it_matters": "IT revenue tied to US enterprise tech spending. Recession fears or discretionary spend cuts = deal slowdown = earnings downgrade.",
+      "added_date": "2026-03-28", "added_reason": "Initial framework"
+    }
+  ],
+
+  "technical_factors": [
+    {
+      "id": "T001", "name": "52-Week High/Low Proximity (within 5%)",
+      "why_it_matters": "Stocks near 52wk lows have stop-loss clusters below — a breach triggers forced selling. Near 52wk highs = breakout or resistance.",
+      "added_date": "2026-03-28"
+    },
+    {
+      "id": "T002", "name": "Key Support/Resistance Level Test",
+      "why_it_matters": "Technically significant price levels concentrate buy/sell orders. A test of support with high volume = decision point.",
+      "added_date": "2026-03-28"
+    },
+    {
+      "id": "T003", "name": "Volume Spike on Breakout/Breakdown (2x avg)",
+      "why_it_matters": "Price moves on high volume = conviction. Same move on low volume = likely reversal. Volume confirms or questions the thesis.",
+      "added_date": "2026-03-28"
+    },
+    {
+      "id": "T004", "name": "RSI Overbought/Oversold (>75 or <25 on weekly)",
+      "why_it_matters": "Extreme RSI on weekly timeframe = mean reversion tendency. Most useful for short-term 1D/7D predictions.",
+      "added_date": "2026-03-28"
+    },
+    {
+      "id": "T005", "name": "50-Day / 200-Day MA Position + Crossover",
+      "why_it_matters": "Death cross (50 below 200) signals medium-term downtrend. Used for 4W+ predictions. Not useful for 1D/7D.",
+      "added_date": "2026-03-28"
+    },
+    {
+      "id": "T006", "name": "Sector Relative Strength vs Nifty",
+      "why_it_matters": "A stock can look cheap but if sector is underperforming Nifty, it drags. Relative strength confirms or weakens the individual thesis.",
+      "added_date": "2026-03-28"
+    }
+  ],
+
+  "prediction_horizons": {
+    "1D": {"label": "1-Day", "purpose": "Event-driven — earnings day, RBI policy, results. Fast validation.", "min_factors_required": 2},
+    "7D": {"label": "7-Day", "purpose": "Technical thesis — level test, support breach, short-term momentum. Validates in one week.", "min_factors_required": 2},
+    "4W": {"label": "4-Week", "purpose": "Catalyst-driven — earnings season, Q4 results impact, FII trend continuation.", "min_factors_required": 3},
+    "2M": {"label": "2-Month", "purpose": "Fundamental shift — policy change, earnings cycle, crude trend.", "min_factors_required": 4},
+    "6M": {"label": "6-Month", "purpose": "Structural — sector re-rating, macro regime change.", "min_factors_required": 5}
+  },
+
+  "accuracy_thresholds": {
+    "flag_for_review_below": 0.40,
+    "min_predictions_before_review": 8,
+    "note": "A signal category with <40% accuracy over 8+ predictions triggers post-mortem review. Missing causal factor is identified and added to framework. Not correlation-mining — every new factor must have a fundamental causal explanation."
+  },
+
+  "evolution_log": []
+}
