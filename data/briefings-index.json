@@ -1,6 +1,20 @@
 {
   "briefings": [
     {
+      "date": "2026-04-01",
+      "type": "morning",
+      "label": "Wed Apr 1 — Morning Briefing (FY27 Day 1)",
+      "file": "daily-briefings/2026-04-01-morning.md",
+      "summary": "GIFT Nifty +0.49%. Brent $105.56. US markets +3%. DII inflow ₹14,895 Cr vs FII outflow ₹11,163 Cr. SWIGGY holds above ₹270. IndiGo CEO appointed. IREDA dividend declared."
+    },
+    {
+      "date": "2026-03-31",
+      "type": "midday",
+      "label": "Tue Mar 31 — Midday Update",
+      "file": "daily-briefings/2026-03-31-midday.md",
+      "summary": "FY26 final trading session midday check."
+    },
+    {
       "date": "2026-03-30",
       "type": "eod",
       "label": "Mon Mar 30 — EOD Wrap (FY26 Last Day)",
