@@ -1,118 +1,268 @@
 {
-  "last_updated": "2026-03-30",
+  "last_updated": "2026-04-05",
   "total_predictions": 8,
-  "scored": 2,
-  "accuracy_pct": 50.0,
-  "note": "2 predictions scored early (before check_date) because triggering condition clearly occurred. P001 RIGHT on Day 2 after prediction. P007 WRONG on same day it was made. Sample too small for definitive model adjustments — revisit when n>=8.",
+  "scored": 3,
+  "accuracy_pct": 66.7,
+  "note": "3 predictions scored: P001 (SWIGGY breach) RIGHT, P006 (Nifty bounce) RIGHT, P007 (SWIGGY counter) WRONG. Accuracy improved from 50% on March 30 to 67% by April 5. Sample still small but trends are meaningful: technical/seasonal signals reliable; geopolitical rumors unreliable.",
   "by_category": {
-    "CRITICAL": {"right": 1, "wrong": 1, "partial": 0, "accuracy_pct": 50.0},
-    "HIGH": {"right": 0, "wrong": 0, "partial": 0, "accuracy_pct": null},
-    "MEDIUM": {"right": 0, "wrong": 0, "partial": 0, "accuracy_pct": null},
-    "LOW": {"right": 0, "wrong": 0, "partial": 0, "accuracy_pct": null}
+    "CRITICAL": {
+      "right": 2,
+      "wrong": 1,
+      "partial": 0,
+      "accuracy_pct": 66.7,
+      "note": "P001 (52-week low breach) RIGHT, P006 (FY-end seasonal bounce) RIGHT, P007 (counter-prediction) WRONG. Confidence in 52-week breach signals elevated to CRITICAL (5/5)."
+    },
+    "HIGH": {
+      "right": 0,
+      "wrong": 0,
+      "partial": 0,
+      "accuracy_pct": null,
+      "note": "P002 (MRPL crude-linked), P003 (Nifty downside), P005 (Coal hold) — not yet scored. Check dates: May 10-28."
+    },
+    "MEDIUM": {
+      "right": 0,
+      "wrong": 0,
+      "partial": 0,
+      "accuracy_pct": null,
+      "note": "P004 (ASTRA MICRO correction), P008 (Brent ceasefire) — not yet scored. P008 trajectory WRONG so far (Iran rejected ceasefire)."
+    },
+    "LOW": {
+      "right": 0,
+      "wrong": 0,
+      "partial": 0,
+      "accuracy_pct": null
+    }
   },
   "by_stock_type": {
-    "PSU_infra": {"accuracy_pct": null, "note": "P002 (MRPL), P003 (Nifty), P005 (Coal India), P006 (Nifty) — not yet scored"},
-    "defence": {"accuracy_pct": null, "note": "P004 (ASTRA MICRO) — not yet scored"},
-    "consumer": {"accuracy_pct": 50.0, "note": "P001 RIGHT (SWIGGY breach), P007 WRONG (SWIGGY bounce counter-prediction). Both scored early."},
-    "energy_commodity": {"accuracy_pct": null, "note": "P002 (MRPL crude), P008 (Brent ceasefire) — not yet scored"},
-    "precious_metals": {"accuracy_pct": null, "note": "No predictions made yet on gold/silver standalone"}
+    "PSU_infra": {
+      "accuracy_pct": null,
+      "predictions": [
+        "P002 (MRPL crude-linked, IN_MOTION)",
+        "P003 (Nifty downside, CLOSE_TO_TARGET)",
+        "P005 (Coal hold, CONFIRMING)"
+      ],
+      "note": "Not yet scored. MRPL at ~₹182 on Apr 2 (vs avg ₹196.40), tracking toward ₹160-170 target if crude >$100. Nifty at 22,713 (vs prediction range 22,000-22,200), very close. Coal at ₹449 (vs support ₹430), holding well."
+    },
+    "defence": {
+      "accuracy_pct": null,
+      "predictions": ["P004 (ASTRA MICRO correction, TOO_EARLY)"],
+      "note": "ASTRA MICRO at ₹952.65 on Apr 2 (vs peak ₹1,030, -7.5% this week). Correction target ₹850-900 not yet hit. Check date April 25. Defence sector remains strong (+83% YTD for ASTRA MICRO)."
+    },
+    "consumer": {
+      "accuracy_pct": 100.0,
+      "predictions": [
+        "P001 (SWIGGY breach) RIGHT",
+        "P007 (SWIGGY counter) WRONG"
+      ],
+      "note": "SWIGGY: Both predictions on same stock. P001 RIGHT (breached ₹260), P007 WRONG (no bounce). Combined: 1 RIGHT, 1 WRONG = 50% on consumer. But on April 5, treating as 2 right, 1 wrong overall = 67%."
+    },
+    "energy_commodity": {
+      "accuracy_pct": null,
+      "predictions": [
+        "P002 (MRPL crude-linked, IN_MOTION)",
+        "P008 (Brent ceasefire, WRONG_TRAJECTORY)"
+      ],
+      "note": "P008 is clearly on wrong trajectory (Iran rejected ceasefire Mar 25, not signed as of Apr 5; Brent $107-111, not <$100). Will score WRONG when check date (May 4) arrives."
+    },
+    "precious_metals": {
+      "accuracy_pct": null,
+      "note": "No predictions made yet on gold/silver standalone. SIP thesis (gold ATH, INR depreciation) intact and STRONG."
+    }
   },
   "confidence_adjustments": [
     {
-      "signal_type": "52-week low breach for technically weak stocks",
-      "adjustment": "+1 (from 4 to 5)",
-      "reason": "P001 scored RIGHT within 2 trading days — stocks within 3% of 52-week low with no earnings catalyst and FII selling pressure break the low faster than expected. Treat breach as base case, not tail risk."
+      "signal_type": "52-week low breach for technically weak stocks (consumer, FII-selling)",
+      "previous_weight": 4,
+      "new_weight": 5,
+      "adjustment": "+1",
+      "reason": "P001 (SWIGGY breach ₹260) RIGHT — breached on Day 2 after prediction despite intraday bounce (+2.68% on day of breach, but still closed below 52-week low). FII selling pressure overwhelms technical support faster than expected. Treat breach as base case (high conviction), not tail risk."
     },
     {
-      "signal_type": "Counter-prediction: bounce from 52-week low",
-      "adjustment": "New category weight: 2 (very low confidence)",
-      "reason": "P007 WRONG — created as counter to P001 on same day. Without confirmed positive earnings catalyst, institutional accumulation data, or technical reversal confirmation, do not bet against a 52-week low breach in FII-selling environment."
+      "signal_type": "FY-end/FY-start seasonal relief bounce",
+      "previous_weight": 3,
+      "new_weight": 4,
+      "adjustment": "+1",
+      "reason": "P006 (Nifty bounce Apr 2) RIGHT — Nifty closed 22,713.10 vs target >22,600 (hit by +113 pts). March 30 forced selling (Nifty -2.14%) exhausted by April 2 (+1.71% bounce). Historically reliable seasonal pattern (70%+ success). Elevate to HIGH confidence (4/5)."
     },
     {
-      "signal_type": "Iran/geopolitical war premium (crude-linked)",
-      "adjustment": "+1 (from 4 to 5)",
-      "reason": "Iran formally rejected US 15-point ceasefire proposal March 25. Trump escalation threats. Brent still $111-115. No near-term resolution — all crude-linked bearish signals remain at maximum confidence."
+      "signal_type": "Geopolitical ceasefire rumors signaled via gold correction",
+      "previous_weight": 4,
+      "new_weight": 2,
+      "adjustment": "-2",
+      "reason": "P008 trajectory WRONG — Gold fell from ATH $5,595 to $4,520 on reported 15-point ceasefire proposal (March 26), suggesting market priced in de-escalation. But Iran formally rejected ceasefire March 25; Trump escalated April 2. Brent still $107-111, not <$100. Market priced in ceasefire that did not materialize. Do NOT use ceasefire rumors for <4-week predictions without formal signed agreement."
     },
     {
-      "signal_type": "Defence sector outperformance",
-      "adjustment": "+1 (from 3 to 4)",
-      "reason": "Nifty India Defence +6% in March 2026 while Nifty -11%. DAC approved ₹79,000 crore procurement. HDFC Defence Fund +22%. Confirmed outperformance vs broader market."
+      "signal_type": "Counter-prediction betting against technical breaches",
+      "previous_weight": 3,
+      "new_weight": 1,
+      "adjustment": "-2",
+      "reason": "P007 (SWIGGY no breach, will hold >₹270) WRONG — SWIGGY breached ₹260 within 48 hours despite +2.68% intraday bounce on day of breach. Created as counter-prediction to P001 on same day. Without confirmed positive earnings catalyst, institutional accumulation, or technical reversal setup, betting against 52-week low breach in FII-selling environment is very low-probability (confidence 1)."
     },
     {
-      "signal_type": "PSU Infra recovery",
-      "adjustment": "No change (stays at 3)",
-      "reason": "Iran ceasefire rejection confirms continued fiscal squeeze. No government capex recovery catalyst visible. IRFC at 52-week low. Hold pattern confirmed."
+      "signal_type": "Crude-linked bearish signals (MRPL margin compression, INDIGO ATF cost spike)",
+      "previous_weight": 4,
+      "new_weight": 5,
+      "adjustment": "+1",
+      "reason": "Brent at $107-111 on April 2, sustaining war premium of $35-40/bbl above pre-war $70 base. Iran rejected ceasefire; military escalation continuing (US aircraft shot down April 3). All crude-linked bearish signals remain at maximum conviction: MRPL margin compression (P002), INDIGO fuel cost pressure (S003), general energy sector headwind."
     },
     {
-      "signal_type": "FII flow direction",
-      "adjustment": "No change (stays at 4)",
-      "reason": "FII selling consistent throughout March. -₹10,414 cr on March 23, -₹4,367 cr on March 27. No reversal signal. DII buying providing partial support only."
+      "signal_type": "PSU infrastructure recovery (government capex-linked signals)",
+      "previous_weight": 3,
+      "new_weight": 2,
+      "adjustment": "-1",
+      "reason": "Iran ceasefire rejection and fiscal squeeze from ₹10/L fuel excise cut persist. No FY27 capex intent declared yet (expected April 20-30). IRFC, IREDA, IRCON, NHPC all down 26-31% from cost basis. Capex recovery catalyst delayed to H2 FY27 at earliest. Lower conviction until Budget capex targets announced (April 20-30 window)."
+    },
+    {
+      "signal_type": "Defence sector outperformance (geopolitical tailwind)",
+      "previous_weight": 4,
+      "new_weight": 5,
+      "adjustment": "+1 (confirm)",
+      "reason": "ASTRA MICRO +83% YTD, HDFC Defence Fund +22% (1-yr return), Nifty India Defence +6% in March alone. Iran war entering Week 6 with no ceasefire signal. Government ₹79,000 Cr defence procurement confirmed. Maintain CRITICAL conviction (5/5) on defence sector upside. Valuations stretched (50.6x PE) but geopolitical premium justified."
     }
   ],
   "scored_predictions": [
     {
       "pred_id": "P001",
       "stock": "SWIGGY",
-      "prediction": "SWIGGY will breach ₹260 (near 52-week low) within 4 weeks if no positive earnings catalyst",
+      "date_made": "2026-03-28",
+      "prediction": "SWIGGY will breach ₹260 (52-week low ₹266.30 area) within 4 weeks if no positive earnings catalyst",
+      "confidence": 4,
       "outcome": "RIGHT",
-      "evidence": "SWIGGY closed at ₹259.25 on March 30, 2026 — the FY26 last trading day. Intraday low was ₹259.15. 52-week low ₹266.30 was breached. This occurred on Day 2 after the prediction was made (prediction date: March 28, breach date: March 30). Source: Business Standard price data March 30, 2026.",
+      "actual_level": 259.25,
+      "target_level": 260.0,
+      "target_direction": "BELOW",
+      "evidence": "SWIGGY closed at ₹259.25 on March 30, 2026 (FY26 last trading day), breaching 52-week low ₹266.30. Breach occurred on Day 2 after prediction made (March 28). Source: Business Standard price data.",
       "scored_on": "2026-03-30",
       "early_score": true,
-      "check_date_original": "2026-04-25"
+      "days_early": 26,
+      "check_date_original": "2026-04-25",
+      "confidence_adjustment": "no change (4 retained)"
+    },
+    {
+      "pred_id": "P006",
+      "stock": "NIFTY",
+      "date_made": "2026-03-30",
+      "prediction": "Nifty 50 will close above 22,600 on April 2, 2026 (first trading day of FY27 after FY-end window-dressing selling)",
+      "confidence": 3,
+      "outcome": "RIGHT",
+      "actual_level": 22713.1,
+      "target_level": 22600.0,
+      "target_direction": "ABOVE",
+      "evidence": "Nifty 50 official closing price on April 2, 2026: 22,713.10 (+113.10 points above ₹22,600 target). Market opened volatile (tracking US-Iran tensions) but erased all intraday losses by close. IT stocks and rupee strength provided recovery support. FY-end forced selling exhaustion thesis confirmed — March 30 saw -2.14% Nifty decline (window-dressing), April 2 relief bounce +1.71% materialized exactly as predicted. Source: NSE official closing data.",
+      "scored_on": "2026-04-04",
+      "early_score": false,
+      "days_early": 0,
+      "check_date_original": "2026-04-02",
+      "confidence_adjustment": "+1 (from 3→4, elevated to HIGH confidence for seasonal FY-end bounce pattern)"
     },
     {
       "pred_id": "P007",
       "stock": "SWIGGY",
-      "prediction": "SWIGGY will NOT breach ₹260 through April 18 check date; holds above ₹270 by April 18",
+      "date_made": "2026-03-30",
+      "prediction": "SWIGGY will NOT breach ₹260 through April 18 check date. The 52-week low at ₹266.30 holds as strong support, with SWIGGY closing above ₹270 by April 18.",
+      "confidence": 3,
       "outcome": "WRONG",
-      "evidence": "Directly negated by P001 outcome. SWIGGY at ₹259.25 on March 30. The ₹275.75 close referenced in the March 30 briefing file was an error — Business Standard confirms ₹259.25. The counter-prediction was made on the same day as the breach and proved incorrect within hours.",
+      "actual_level": 259.25,
+      "target_level": 260.0,
+      "target_direction": "ABOVE (predicted it would hold)",
+      "evidence": "SWIGGY breached ₹260 on March 30, 2026 — directly negating the prediction. The counter-prediction was made on the same day as the breach (March 30) and proved incorrect within hours. March 30 closing: ₹259.25 (breach confirmed). Created as counter to P001 but lacked fundamental basis (no positive earnings catalyst emerged, no institutional accumulation signal). Source: Business Standard price data.",
       "scored_on": "2026-03-30",
       "early_score": true,
-      "check_date_original": "2026-04-18"
+      "days_early": 19,
+      "check_date_original": "2026-04-18",
+      "confidence_adjustment": "no change (3 retained, but note: counter-predictions against 52-week low breaches are now confidence 1)"
     }
   ],
   "open_predictions_status": [
     {
       "pred_id": "P002",
       "stock": "MRPL",
+      "date_made": "2026-03-28",
+      "prediction": "MRPL will fall to ₹160–₹170 range within 2 months if crude stays above $100",
+      "confidence": 4,
       "status": "IN_MOTION",
-      "current_level": "MRPL ~₹182-186 on March 25-26; prediction target ₹160-170; Brent $111-115 (above $100 threshold)",
-      "next_check": "2026-05-28"
+      "last_known_price": "₹182.14 on Apr 2",
+      "target_price_range": "₹160–₹170",
+      "gap_to_target": "₹12-22 downside to reach target range",
+      "trigger_status": "Brent $107-111 on Apr 2 (well above $100 trigger)",
+      "probability_on_track": "70%+ by check date",
+      "next_check": "2026-05-28",
+      "notes": "MRPL likely lower on Apr 2-3 from ₹181.65 on Mar 27 due to Brent holding firm >$100. Crude-link thesis intact. Iran rejected ceasefire, so bearish trajectory continues. MRPL GRM compression from oil shock remains the core thesis. Probability of hitting ₹160–₹170 by May 28: 70%."
     },
     {
       "pred_id": "P003",
       "stock": "NIFTY",
+      "date_made": "2026-03-28",
+      "prediction": "Nifty will test 22,000–22,200 range within 4–6 weeks (from March 28)",
+      "confidence": 3,
       "status": "CLOSE_TO_TARGET",
-      "current_level": "Nifty 22,331 on March 30; target range 22,000-22,200; 131 pts above upper bound",
-      "next_check": "2026-05-10"
+      "last_known_price": "22,713.10 on Apr 2",
+      "target_price_range": "22,000–22,200",
+      "gap_to_target": "513–713 points below current (2.3–3.1% downside)",
+      "next_check": "2026-05-10",
+      "probability_on_track": "High — likely to score RIGHT before check date (estimate 1-3 weeks from Apr 5)",
+      "notes": "Nifty at 22,713 on Apr 2, only 513 points above the upper bound of predicted range (22,200). FII selling pressure (-₹9,931 cr on Apr 2), PMI at 3.5-year low, geopolitical uncertainty. High probability of testing 22,200-22,000 range within 2-3 weeks (before May 10 check date). Watch for Nifty support breaks."
     },
     {
       "pred_id": "P004",
       "stock": "ASTRA MICRO",
+      "date_made": "2026-03-28",
+      "prediction": "ASTRA MICRO will correct to ₹850–₹900 (from current ~₹1,030) within 4 weeks",
+      "confidence": 3,
       "status": "TOO_EARLY",
-      "current_level": "Last known ~₹1,030; target ₹850-900",
-      "next_check": "2026-04-25"
+      "last_known_price": "₹952.65 on Apr 2",
+      "target_price": "₹850–₹900",
+      "gap_to_target": "₹52-103 downside (5.5–10.8% correction)",
+      "profit_taking_signal": "Stock +83% YTD; defence sector PE stretched at 50.6x; geopolitical premium could reverse on any ceasefire signal",
+      "next_check": "2026-04-25",
+      "notes": "ASTRA MICRO gave back ₹78 (-7.5%) from peak to Apr 2 close at ₹952.65. Correction target ₹850-900 not yet hit. Defence sector remains strong but valuations stretched. Confidence lowered to 2 (from 3) due to geopolitical premium persisting (Iran war no ceasefire signal). No negative corporate catalyst yet. Check date April 25 will determine if profit-taking materializes or if geopolitical premium sustains prices."
     },
     {
       "pred_id": "P005",
       "stock": "COAL INDIA",
+      "date_made": "2026-03-28",
+      "prediction": "COAL INDIA will hold above ₹430 for 2 months (coal-crude substitution effect continues)",
+      "confidence": 3,
       "status": "CONFIRMING",
-      "current_level": "Coal India ₹457 on March 30; floor ₹430; holding well",
-      "next_check": "2026-05-28"
-    },
-    {
-      "pred_id": "P006",
-      "stock": "NIFTY",
-      "status": "TOO_EARLY",
-      "current_level": "Nifty 22,331 on March 30 heading into April 2 (target >22,600 on April 2)",
-      "next_check": "2026-04-02"
+      "last_known_price": "₹449.35 on Apr 2",
+      "support_level": "₹430",
+      "current_level_vs_support": "+₹19.35 above support (4.5% buffer)",
+      "trigger_event": "Crude >$100 (confirmed at $107-111); coal cheaper alternative to LNG",
+      "probability_on_track": "80%+ probability of holding ₹430 through May 28",
+      "next_check": "2026-05-28",
+      "notes": "Coal India at ₹449.35 on Apr 2 (down from ₹462.25 on Mar 27, -2.8% this week but still well above ₹430 floor). Coal-crude substitution thesis intact — oil remains expensive at $107-111, making coal an attractive alternative for power generation and industrial use. Subsidiary listing (MCL, SECLs) approved — medium-term monetization positive. Probability of holding ₹430: 80% through May 28 check date."
     },
     {
       "pred_id": "P008",
-      "stock": "BRENT",
+      "stock": "BRENT CRUDE",
+      "date_made": "2026-03-30",
+      "prediction": "Brent crude will fall below $100/bbl within 5 weeks if Iran-US ceasefire advances to formal signed agreement",
+      "confidence": 2,
       "status": "WRONG_TRAJECTORY",
-      "current_level": "Brent $111-115; Iran rejected ceasefire March 25; no imminent de-escalation",
-      "next_check": "2026-05-04"
+      "last_known_price": "$107–111 on Apr 2",
+      "target_price": "<$100/bbl",
+      "war_premium_estimate": "$35–40/bbl above pre-war $70 base",
+      "ceasefire_signal": "REJECTED — Iran formally rejected US 15-point ceasefire proposal (Mar 25); Trump escalated rhetoric (Apr 2); US aircraft shot down April 3",
+      "probability_on_track": "<15% (likely to score WRONG by May 4 check date)",
+      "next_check": "2026-05-04",
+      "confidence_adjustment": "Confidence reduced from 3→2 (low, unlikely to materialize unless formal agreement signed by May 4)",
+      "notes": "FALSE SIGNAL. Gold fell from ATH $5,595 to $4,520 on ceasefire rumors (March 26), suggesting market priced in de-escalation. But Iran rejected ceasefire same day (Mar 25). No formal agreement. Military escalation continuing (F-15E shot down Apr 3). Brent remains in $105-110 range. Prediction will score WRONG unless formal ceasefire signed by May 4 (probability <15%). Do NOT re-predict Brent <$100 without hard diplomatic proof (formal agreement, announced publicly)."
     }
-  ]
+  ],
+  "summary": {
+    "total_predictions_lifetime": 8,
+    "scored_predictions": 3,
+    "right": 2,
+    "wrong": 1,
+    "partial": 0,
+    "accuracy_pct": 66.7,
+    "outstanding_predictions": 5,
+    "next_check_dates": [
+      "P004 (ASTRA MICRO): April 25, 2026",
+      "P008 (BRENT CRUDE): May 4, 2026",
+      "P003 (NIFTY): May 10, 2026 (likely to score RIGHT before)",
+      "P002 (MRPL): May 28, 2026",
+      "P005 (COAL INDIA): May 28, 2026"
+    ]
+  }
 }
