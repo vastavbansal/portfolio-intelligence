@@ -1,6 +1,20 @@
 {
   "briefings": [
     {
+      "date": "2026-04-04",
+      "type": "eod",
+      "label": "Sat Apr 4 — EOD Wrap (Weekend Review)",
+      "file": "daily-briefings/2026-04-04-eod.md",
+      "summary": "Weekend review. Nifty Apr 2 close 22,713 (+1.71%). Brent $105–107. P006 scored RIGHT (Nifty >22,600). P007 WRONG (SWIGGY breached). Running accuracy 60%. Monday Apr 7 setup: SWIGGY watch ₹255–270, IREDA dividend record date Apr 2."
+    },
+    {
+      "date": "2026-04-01",
+      "type": "midday",
+      "label": "Wed Apr 1 — Midday Update",
+      "file": "daily-briefings/2026-04-01-midday.md",
+      "summary": "Nifty +1.90% to 22,754. Sensex +2.8%. Brent $113–118 (down 4.8%). INDIGO +8.3% on crude retreat. SWIGGY at ₹260 — critically near 52-wk low. Iran fired missiles but de-escalation hopes driving rally."
+    },
+    {
       "date": "2026-04-01",
       "type": "morning",
       "label": "Wed Apr 1 — Morning Briefing (FY27 Day 1)",
