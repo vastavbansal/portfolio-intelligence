@@ -508,18 +508,48 @@ async function loadData() {
   ]);
   DATA = { signals, predictions, briefings, holdings, forecasts, accuracy, predHistory, actions };
 
-  // Load holdings: localStorage first (live), then file
+  // Load holdings: file is always source of truth for base data (normalised),
+  // localStorage layered on top only for ltp updates done this session.
+  const fileHoldings = (holdings?.holdings || []).map(normalizeHolding);
   const lsRaw = localStorage.getItem(LS_HOLDINGS_KEY);
-  if (lsRaw) {
-    try { HOLDINGS = JSON.parse(lsRaw); }
-    catch { HOLDINGS = holdings?.holdings || []; }
-  } else {
-    HOLDINGS = holdings?.holdings || [];
+  let lsHoldings = [];
+  try { lsHoldings = lsRaw ? JSON.parse(lsRaw).map(normalizeHolding) : []; } catch { lsHoldings = []; }
+  // Merge: file wins for base fields, localStorage wins for ltp
+  if (fileHoldings.length) {
+    HOLDINGS = fileHoldings.map(fh => {
+      const lh = lsHoldings.find(l => l.symbol === fh.symbol && l.broker === fh.broker);
+      return lh ? { ...fh, ltp: lh.ltp || fh.ltp } : fh;
+    });
     saveHoldings();
+  } else if (lsHoldings.length) {
+    HOLDINGS = lsHoldings;
   }
 
   renderAll();
   document.getElementById('lastUpdated').textContent = 'Updated ' + new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+}
+
+function normalizeHolding(h) {
+  // Accepts both old format (avg/source/qty) and new format (avgBuyPrice/broker/quantity)
+  const sym = h.symbol || h.name || '';
+  const broker = h.broker || h.exchange || h.source || '';
+  const qty = h.quantity || h.qty || 0;
+  const avgPrice = h.avgBuyPrice || h.avg_buy_price || h.avg || 0;
+  return {
+    symbol: sym,
+    name: sym,
+    broker: broker,
+    exchange: broker,
+    source: broker,
+    quantity: qty,
+    qty: qty,
+    avgBuyPrice: avgPrice,
+    avg_buy_price: avgPrice,
+    avg: avgPrice,
+    ltp: h.ltp || 0,
+    yahoo: h.yahoo || (sym.replace(/\s/g,'') + '.NS'),
+    buyDate: h.buyDate || h.buy_date || ''
+  };
 }
 
 function saveHoldings() {
@@ -770,23 +800,26 @@ function renderOpenPredictions() {
     const last = p.daily_log?.slice(-1)[0];
     const conf = p.confidence_current || p.confidence;
     const trend = p.confidence_trend;
-    const trendIcon = trend==='RISING'?'↑':trend==='DECLINING'?'↓':'→';
-    const trendCol = trend==='RISING'?'text-emerald-400':trend==='DECLINING'?'text-yellow-400':'text-slate-400';
+    const trendIcon = trend==='RISING'?'↑':(trend||'').includes('DECLIN')?'↓':'→';
+    const trendCol = trend==='RISING'?'text-emerald-400':(trend||'').includes('DECLIN')?'text-yellow-400':'text-slate-400';
+    const id = p.id || p.pred_id || '';
+    const thesis = p.thesis || p.prediction || '';
+    const resDate = p.resolution_date || p.check_date || '';
     return `
     <div class="card p-4">
       <div class="flex items-start justify-between gap-2 mb-2">
         <div class="flex items-center gap-2">
-          <span class="badge badge-OPEN">${p.id}</span>
-          <span class="font-semibold text-sm text-slate-200">${p.stock}</span>
+          <span class="badge badge-OPEN">${id}</span>
+          <span class="font-semibold text-sm text-slate-200">${p.stock||''}</span>
         </div>
         <div class="flex items-center gap-1">
           <span>${renderStars(conf||3)}</span>
           <span class="text-xs ${trendCol} ml-1">${trendIcon}</span>
         </div>
       </div>
-      <p class="text-xs text-slate-300 mb-2">${p.thesis}</p>
+      <p class="text-xs text-slate-300 mb-2">${thesis}</p>
       ${last ? `<div class="text-xs text-slate-500 italic">${last.observation||last.note||''}</div>` : ''}
-      ${p.resolution_date ? `<div class="text-xs text-slate-600 mt-1.5">Resolves ${p.resolution_date}</div>` : ''}
+      ${resDate ? `<div class="text-xs text-slate-600 mt-1.5">Resolves ${resDate}</div>` : ''}
     </div>`;
   }).join('');
 }
@@ -957,7 +990,8 @@ function renderL1Scorecard() {
   const acc = DATA.accuracy;
   if (!acc?.L1_scorecard) return;
   const s = acc.L1_scorecard;
-  const overall = s.overall;
+  // Support both {overall:...} and {all_time:...} field names
+  const overall = s.overall || s.all_time || {};
 
   document.getElementById('l1Cards').innerHTML = `
     <div class="card p-4 text-center">
@@ -973,38 +1007,31 @@ function renderL1Scorecard() {
       <div class="text-xs text-slate-500 mt-1">Wrong</div>
     </div>
     <div class="card p-4 text-center">
-      <div class="text-3xl font-black text-blue-400">${overall.total_scored||0}</div>
+      <div class="text-3xl font-black text-blue-400">${overall.scored||overall.total_scored||overall.total||0}</div>
       <div class="text-xs text-slate-500 mt-1">Total Scored</div>
     </div>
   `;
 
   const byConf = s.by_confidence||{};
+  // Key format may be "4_stars" or "4" — normalise to display label
   document.getElementById('l1ByConfidence').innerHTML = `
     <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Accuracy by Confidence</div>
-    <div class="space-y-2">${Object.entries(byConf).map(([k,v])=>`
-      <div class="flex items-center gap-3">
-        <span class="text-xs text-slate-400 w-16">${k}★</span>
-        <div class="flex-1 bg-slate-800 rounded-full h-2">
-          <div class="h-2 rounded-full ${(v.accuracy_pct||0)>=70?'bg-emerald-500':'bg-red-500'}" style="width:${v.accuracy_pct||0}%"></div>
-        </div>
-        <span class="text-xs mono ${(v.accuracy_pct||0)>=70?'text-emerald-400':'text-red-400'}">${v.accuracy_pct||0}%</span>
-        <span class="text-xs text-slate-600">(${v.right||0}/${v.total||0})</span>
-      </div>
-    `).join('')}</div>
+    <div class="space-y-2">${Object.entries(byConf).map(([k,v])=>{
+      const label = k.replace('_stars','').replace('_star','') + '★';
+      const pct = v.accuracy_pct ?? null;
+      const bar = pct !== null ? `<div class="flex-1 bg-slate-800 rounded-full h-2"><div class="h-2 rounded-full ${pct>=70?'bg-emerald-500':'bg-red-500'}" style="width:${pct}%"></div></div><span class="text-xs mono ${pct>=70?'text-emerald-400':'text-red-400'}">${pct}%</span>` : `<div class="flex-1 text-xs text-slate-600">no data</div>`;
+      return `<div class="flex items-center gap-3"><span class="text-xs text-slate-400 w-12">${label}</span>${bar}<span class="text-xs text-slate-600">(${v.right||0}/${v.total||v.scored||0})</span></div>`;
+    }).join('')}</div>
   `;
 
   const bySector = s.by_sector||{};
   document.getElementById('l1BySector').innerHTML = `
     <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Accuracy by Sector</div>
-    <div class="space-y-2">${Object.keys(bySector).length?Object.entries(bySector).map(([k,v])=>`
-      <div class="flex items-center gap-3">
-        <span class="text-xs text-slate-400 w-24 truncate">${k}</span>
-        <div class="flex-1 bg-slate-800 rounded-full h-2">
-          <div class="h-2 rounded-full ${(v.accuracy_pct||0)>=70?'bg-emerald-500':'bg-red-500'}" style="width:${v.accuracy_pct||0}%"></div>
-        </div>
-        <span class="text-xs mono ${(v.accuracy_pct||0)>=70?'text-emerald-400':'text-red-400'}">${v.accuracy_pct||0}%</span>
-      </div>
-    `).join(''):'<div class="text-xs text-slate-500">Not enough data yet.</div>'}</div>
+    <div class="space-y-2">${Object.keys(bySector).length?Object.entries(bySector).map(([k,v])=>{
+      const pct = v.accuracy_pct ?? null;
+      const bar = pct !== null ? `<div class="flex-1 bg-slate-800 rounded-full h-2"><div class="h-2 rounded-full ${pct>=70?'bg-emerald-500':'bg-red-500'}" style="width:${pct}%"></div></div><span class="text-xs mono ${pct>=70?'text-emerald-400':'text-red-400'}">${pct}%</span>` : `<div class="flex-1 text-xs text-slate-600">no data</div>`;
+      return `<div class="flex items-center gap-3"><span class="text-xs text-slate-400 w-28 truncate">${k}</span>${bar}</div>`;
+    }).join(''):'<div class="text-xs text-slate-500">Not enough data yet.</div>'}</div>
   `;
 }
 
@@ -1014,43 +1041,40 @@ function renderL2RCA() {
   const el = document.getElementById('l2RcaLog');
   if (!acc.L2_rca_log.length) { el.innerHTML='<div class="text-slate-500 text-sm">No wrong predictions to analyse yet.</div>'; return; }
 
-  el.innerHTML = acc.L2_rca_log.map(r=>`
+  el.innerHTML = acc.L2_rca_log.map(r=>{
+    // Support both naming conventions used by different sessions
+    const predId = r.prediction_id || r.pred_id || '';
+    const rootCause = r.root_cause || r.root_cause_summary || '—';
+    const missingFactor = r.missing_factor || r.factor_gap || '—';
+    const signalMissed = r.signal_missed || r.missing_signal || '—';
+    const lesson = r.lesson || '—';
+    const severity = r.severity || 'MEDIUM';
+    // proposed_factor may be inline object or separate fields
+    const pf = r.proposed_factor || (r.proposed_factor_id ? {id:r.proposed_factor_id, name:r.proposed_factor_name, causal_explanation:''} : null);
+    return `
     <div class="card p-5">
       <div class="flex items-start justify-between gap-3 mb-4">
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 flex-wrap">
           <span class="badge badge-WRONG">WRONG</span>
-          <span class="font-bold text-sm text-slate-100">${r.prediction_id} — ${r.stock}</span>
+          <span class="font-bold text-sm text-slate-100">${predId} — ${r.stock||''}</span>
           <span class="text-xs text-slate-500">${r.date||''}</span>
         </div>
-        <span class="badge ${r.severity==='HIGH'?'badge-HIGH':'badge-MEDIUM'}">${r.severity||''}</span>
+        <span class="badge ${severity==='HIGH'?'badge-HIGH':'badge-MEDIUM'}">${severity}</span>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-        <div>
-          <div class="text-xs text-slate-500 mb-1">Root Cause</div>
-          <div class="text-sm text-slate-200">${r.root_cause||'—'}</div>
-        </div>
-        <div>
-          <div class="text-xs text-slate-500 mb-1">Missing Factor</div>
-          <div class="text-sm text-slate-200">${r.missing_factor||'—'}</div>
-        </div>
-        <div>
-          <div class="text-xs text-slate-500 mb-1">Signal Missed</div>
-          <div class="text-sm text-slate-200">${r.signal_missed||'—'}</div>
-        </div>
-        <div>
-          <div class="text-xs text-slate-500 mb-1">Lesson</div>
-          <div class="text-sm text-slate-200">${r.lesson||'—'}</div>
-        </div>
+        <div><div class="text-xs text-slate-500 mb-1">Root Cause</div><div class="text-sm text-slate-200">${rootCause}</div></div>
+        <div><div class="text-xs text-slate-500 mb-1">Missing Factor</div><div class="text-sm text-slate-200">${missingFactor}</div></div>
+        <div><div class="text-xs text-slate-500 mb-1">Signal Missed</div><div class="text-sm text-slate-200">${signalMissed}</div></div>
+        <div><div class="text-xs text-slate-500 mb-1">Lesson</div><div class="text-sm text-slate-200">${lesson}</div></div>
       </div>
-      ${r.proposed_factor ? `
+      ${pf ? `
         <div class="bg-blue-950/40 border border-blue-900/40 rounded-lg p-3">
-          <div class="text-xs font-semibold text-blue-400 mb-1">Proposed New Factor: ${r.proposed_factor.id||''} — ${r.proposed_factor.name||''}</div>
-          <div class="text-xs text-slate-300">${r.proposed_factor.causal_explanation||''}</div>
-        </div>
-      ` : ''}
-      ${r.pattern_tag ? `<div class="text-xs text-yellow-500 mt-2">Pattern: ${r.pattern_tag}</div>` : ''}
-    </div>
-  `).join('');
+          <div class="text-xs font-semibold text-blue-400 mb-1">Proposed Factor: ${pf.id||''} — ${pf.name||''}</div>
+          ${pf.causal_explanation ? `<div class="text-xs text-slate-300">${pf.causal_explanation}</div>` : ''}
+        </div>` : ''}
+      ${r.pattern_tag ? `<div class="text-xs text-yellow-500 mt-2">Pattern tag: ${r.pattern_tag}</div>` : ''}
+    </div>`;
+  }).join('');
 }
 
 function renderL3Trend() {
@@ -1058,10 +1082,18 @@ function renderL3Trend() {
   if (!acc) return;
   const l3 = acc.L3_trend || {};
 
+  // rolling_accuracy may be a number OR an object like {last_5_predictions:{accuracy_pct:67}}
+  const rollingPct = typeof l3.rolling_accuracy === 'number' ? l3.rolling_accuracy :
+    (l3.rolling_accuracy?.last_10_predictions?.accuracy_pct || l3.rolling_accuracy?.last_5_predictions?.accuracy_pct || null);
+  // improvement_signal may be "INSUFFICIENT_DATA" — treat as neutral
+  const signal = l3.improvement_signal;
+  const signalDisplay = signal==='IMPROVING' ? '↑ Improving' : signal==='DEGRADING' ? '↓ Degrading' : signal==='STABLE' ? '→ Stable' : '— Accumulating data';
+  const signalColor = signal==='IMPROVING' ? 'text-emerald-400' : signal==='DEGRADING' ? 'text-red-400' : 'text-slate-400';
+
   document.getElementById('l3Trend').innerHTML = `
     <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Accuracy Trend</div>
-    ${l3.rolling_accuracy ? `<div class="flex items-baseline gap-2 mb-3"><span class="text-2xl font-black ${(l3.rolling_accuracy||0)>=70?'text-emerald-400':'text-red-400'}">${l3.rolling_accuracy}%</span><span class="text-xs text-slate-500">rolling accuracy</span></div>` : ''}
-    ${l3.improvement_signal ? `<div class="text-xs ${l3.improvement_signal==='IMPROVING'?'text-emerald-400':l3.improvement_signal==='DEGRADING'?'text-red-400':'text-yellow-400'} mb-3 font-semibold">${l3.improvement_signal==='IMPROVING'?'↑ Improving':l3.improvement_signal==='DEGRADING'?'↓ Degrading':'→ Stable'}</div>` : ''}
+    ${rollingPct !== null ? `<div class="flex items-baseline gap-2 mb-3"><span class="text-2xl font-black ${rollingPct>=70?'text-emerald-400':'text-red-400'}">${rollingPct}%</span><span class="text-xs text-slate-500">rolling accuracy</span></div>` : ''}
+    <div class="text-xs ${signalColor} mb-3 font-semibold">${signalDisplay}</div>
     <div class="space-y-2">
       ${(l3.monthly_accuracy||[]).map(m=>`
         <div class="flex items-center gap-3">
@@ -1152,28 +1184,34 @@ function renderPredictionHistory() {
     return;
   }
   document.getElementById('predictionHistory').innerHTML = ph.predictions.map(p=>{
-    const statusClass = p.status==='RIGHT'?'badge-RIGHT':p.status==='WRONG'?'badge-WRONG':'badge-OPEN';
+    // Support both naming conventions
+    const id = p.id || p.pred_id || '';
+    const status = p.status || p.outcome || 'OPEN';
+    const thesis = p.thesis || p.prediction || '';
+    const resolutionDate = p.resolution_date || p.check_date || p.outcome_date || '';
+    const horizon = p.timeframe || p.horizon || '';
+    const statusClass = status==='RIGHT'?'badge-RIGHT':status==='WRONG'?'badge-WRONG':'badge-OPEN';
+    const dailyLog = p.daily_log || [];
     return `
     <div class="card p-5">
       <div class="flex items-start justify-between gap-3 mb-3">
         <div class="flex flex-wrap gap-2 items-center">
-          <span class="badge ${statusClass}">${p.status}</span>
-          <span class="badge badge-OPEN">${p.id}</span>
-          <span class="font-bold text-sm text-slate-100">${p.stock}</span>
-          <span class="text-xs text-slate-500">${p.timeframe||''}</span>
+          <span class="badge ${statusClass}">${status}</span>
+          <span class="badge badge-OPEN">${id}</span>
+          <span class="font-bold text-sm text-slate-100">${p.stock||''}</span>
+          ${horizon ? `<span class="text-xs text-slate-500">${horizon}</span>` : ''}
         </div>
-        <div class="text-xs text-slate-500">${p.created_at||''} → ${p.resolution_date||'open'}</div>
+        <div class="text-xs text-slate-500 shrink-0">${p.created_at||''} → ${resolutionDate||'open'}</div>
       </div>
-      <p class="text-sm text-slate-300 mb-3">${p.thesis||''}</p>
-      ${(p.daily_log||[]).length ? `
+      <p class="text-sm text-slate-300 mb-3">${thesis}</p>
+      ${dailyLog.length ? `
         <details class="text-xs">
-          <summary class="text-slate-500 cursor-pointer hover:text-slate-300">Day log (${p.daily_log.length} entries)</summary>
+          <summary class="text-slate-500 cursor-pointer hover:text-slate-300">Day log (${dailyLog.length} entr${dailyLog.length===1?'y':'ies'})</summary>
           <div class="mt-2 space-y-1 border-l-2 border-slate-800 pl-3">
-            ${p.daily_log.map(d=>`<div class="text-slate-400"><span class="text-slate-600">${d.date}</span> — ${d.observation||d.note||''} <span class="text-blue-400">${d.confidence_update?'conf→'+d.confidence_update:''}</span></div>`).join('')}
+            ${dailyLog.map(d=>`<div class="text-slate-400 py-0.5"><span class="text-slate-600 mono">${d.date}</span> — ${d.observation||d.note||''}${d.confidence_delta||d.confidence_update?` <span class="text-blue-400">conf ${d.confidence_delta>0?'+':''}${d.confidence_delta||d.confidence_update}</span>`:''}</div>`).join('')}
           </div>
-        </details>
-      ` : ''}
-      ${p.outcome ? `<div class="mt-3 text-xs text-slate-400 border-t border-slate-800 pt-2"><span class="text-slate-500">Outcome:</span> ${p.outcome}</div>` : ''}
+        </details>` : ''}
+      ${p.outcome||p.outcome_evidence ? `<div class="mt-3 text-xs text-slate-400 border-t border-slate-800 pt-2"><span class="text-slate-500">Outcome:</span> ${p.outcome||''} ${p.outcome_evidence?'— '+p.outcome_evidence:''}</div>` : ''}
     </div>`;
   }).join('');
 }
@@ -1347,9 +1385,10 @@ async function refreshPrices() {
   btn.classList.add('spinning');
   const results = await Promise.allSettled(
     HOLDINGS.map(async h=>{
-      const sym = (h.symbol||h.name||'').replace(/\s/g,'');
-      if (!sym) return;
-      const price = await fetchLTP(sym);
+      // Use yahoo ticker if available (already has .NS), else build from symbol
+      const ticker = h.yahoo || ((h.symbol||h.name||'').replace(/\s/g,'') + '.NS');
+      if (!ticker) return;
+      const price = await fetchLTP(ticker.replace('.NS',''));
       if (price) { h.ltp = price; }
     })
   );
