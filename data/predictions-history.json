@@ -1,0 +1,220 @@
+{
+  "schema_version": "2.0",
+  "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
+  "last_updated": "2026-04-06",
+  "predictions": [
+    {
+      "pred_id": "P001",
+      "stock": "SWIGGY",
+      "created_at": "2026-03-28",
+      "prediction": "SWIGGY will breach ₹260 within 4 weeks as selling pressure and weak quick-commerce fundamentals persist",
+      "horizon": "4W",
+      "check_date": "2026-04-25",
+      "target": "< ₹260",
+      "entry_price": 275.75,
+      "confidence": 4,
+      "category": "HIGH",
+      "factors_checked": ["M001", "M003", "T001", "T004", "S003"],
+      "factors_not_checked": ["M004"],
+      "thesis": "SWIGGY is within 2% of 52-week low at ₹259.15. FII outflows of ₹11,163 Cr on Mar 30 suggest continued selling. No fundamental catalyst for reversal before Q4 results (May 8). Brent at $115 increases delivery cost pressure. Iran-driven market risk-off adds to selling.",
+      "daily_log": [
+        {
+          "date": "2026-03-30",
+          "price_observed": 259.25,
+          "note": "52-week low breached. SWIGGY closed at ₹259.25 vs low of ₹259.15. Prediction confirmed 26 days ahead of check date.",
+          "signal_updates": ["T001 confirmed — 52-wk low breach", "M003 confirmed — FII sold ₹11,163 Cr"],
+          "confidence_delta": 1
+        }
+      ],
+      "outcome": "RIGHT",
+      "outcome_date": "2026-03-30",
+      "outcome_price": 259.25,
+      "outcome_evidence": "NSE official closing price March 30, 2026",
+      "rca": null,
+      "framework_update": null
+    },
+    {
+      "pred_id": "P007",
+      "stock": "SWIGGY",
+      "created_at": "2026-03-28",
+      "prediction": "SWIGGY will NOT breach ₹260 by April 8 — will hold above on DII support",
+      "horizon": "7D",
+      "check_date": "2026-04-08",
+      "target": "> ₹260",
+      "entry_price": 275.75,
+      "confidence": 3,
+      "category": "MEDIUM",
+      "factors_checked": ["T001", "M004"],
+      "factors_not_checked": ["M003", "S003"],
+      "thesis": "DII inflows of ₹14,895 Cr on Mar 30 suggested domestic support could hold SWIGGY above key level short-term.",
+      "daily_log": [
+        {
+          "date": "2026-03-30",
+          "price_observed": 259.25,
+          "note": "WRONG — SWIGGY breached ₹260 same day as prediction was made. DII support was insufficient against FII magnitude.",
+          "signal_updates": ["M003 missed — FII outflow ₹11,163 Cr overwhelmed DII inflow"],
+          "confidence_delta": -3
+        }
+      ],
+      "outcome": "WRONG",
+      "outcome_date": "2026-03-30",
+      "outcome_price": 259.25,
+      "outcome_evidence": "NSE official closing price March 30, 2026",
+      "rca": {
+        "root_cause": "Checked DII inflows (bullish signal) but did not check FII outflow magnitude. When FII outflow is >1.5x DII inflow, short-term support predictions are unreliable.",
+        "missing_factor": "FII/DII flow ratio — absolute magnitude of FII outflow vs DII inflow",
+        "signal_missed": "M003 — FII net sold ₹11,163 Cr vs DII bought ₹14,895 Cr. Ratio was 0.75x but absolute FII selling was extreme.",
+        "framework_gap": "Signal framework checks FII and DII flows independently but does not flag when FII selling is in panic-mode (>₹8,000 Cr single day).",
+        "proposed_factor": {
+          "id": "M010",
+          "name": "FII Single-Day Panic Threshold",
+          "description": "Flag when FII single-day net sell exceeds ₹8,000 Cr — invalidates short-term bullish predictions",
+          "causal_explanation": "At extreme FII outflow levels (>₹8,000 Cr/day), domestic institutional buying cannot offset intraday price pressure regardless of DII net positive. Creates supply shock.",
+          "evidence": "P007 miss — ₹11,163 Cr FII sell overwhelmed ₹14,895 Cr DII buy"
+        },
+        "lesson": "For short-horizon bullish predictions, always check M003 absolute magnitude, not just direction. Panic-level FII selling negates support.",
+        "severity": "HIGH",
+        "pattern_tag": "FII_PANIC_OVERRIDE"
+      },
+      "framework_update": {
+        "status": "PROPOSED",
+        "proposed_factor_id": "M010",
+        "proposed_at": "2026-04-06",
+        "approved": false,
+        "approved_at": null
+      }
+    },
+    {
+      "pred_id": "P006",
+      "stock": "NIFTY",
+      "created_at": "2026-04-02",
+      "prediction": "Nifty 50 will close above 22,600 on April 2 — FY-end forced selling exhaustion + FY27 fresh start buying",
+      "horizon": "1D",
+      "check_date": "2026-04-02",
+      "target": "> 22,600",
+      "entry_price": 22331,
+      "confidence": 3,
+      "category": "MEDIUM",
+      "factors_checked": ["M003", "M004", "T004"],
+      "factors_not_checked": ["M001"],
+      "thesis": "FY26 closed with Nifty -2.14% on March 30 (forced institutional selling for book closure). Historical pattern: FY-start sessions see relief bounce as selling exhausts and SIPs trigger fresh inflows.",
+      "daily_log": [],
+      "outcome": "RIGHT",
+      "outcome_date": "2026-04-02",
+      "outcome_price": 22713,
+      "outcome_evidence": "NSE official close April 2. Closed 113 pts above target. FY-end exhaustion thesis confirmed.",
+      "rca": null,
+      "framework_update": null
+    },
+    {
+      "pred_id": "P002",
+      "stock": "MRPL",
+      "created_at": "2026-03-28",
+      "prediction": "MRPL will fall to ₹160–170 range by May 28 as Brent sustained above $110 compresses refining margins",
+      "horizon": "2M",
+      "check_date": "2026-05-28",
+      "target": "₹160–170",
+      "entry_price": 180.0,
+      "confidence": 3,
+      "category": "HIGH",
+      "factors_checked": ["M001", "S001", "T004"],
+      "factors_not_checked": ["M005", "M008"],
+      "thesis": "Brent at $115 with Hormuz blockade = sustained crude input cost elevation. MRPL's GRM spread compresses when crude is above $110 for extended periods. No near-term refinery upgrade catalyst.",
+      "daily_log": [
+        {
+          "date": "2026-04-02",
+          "price_observed": null,
+          "note": "Brent fell to $113 on April 1 on de-escalation hopes, but Iran rejected US peace plan same day. Crude remains above $110. Thesis intact.",
+          "signal_updates": ["M001 — Brent still elevated, thesis on track"],
+          "confidence_delta": 0
+        },
+        {
+          "date": "2026-04-04",
+          "price_observed": null,
+          "note": "Brent holding $105–107 range. Slightly below ₹110 threshold. Monitor: if sustained below $100, MRPL may not fall to target range.",
+          "signal_updates": ["M001 — Brent slightly easing, slight risk to thesis"],
+          "confidence_delta": -1
+        }
+      ],
+      "outcome": null,
+      "outcome_date": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "rca": null,
+      "framework_update": null
+    },
+    {
+      "pred_id": "P003",
+      "stock": "NIFTY",
+      "created_at": "2026-03-28",
+      "prediction": "Nifty 50 will test 22,000–22,200 support zone by May 10 as Iran war premium sustains selling",
+      "horizon": "2M",
+      "check_date": "2026-05-10",
+      "target": "22,000–22,200",
+      "entry_price": 22819,
+      "confidence": 3,
+      "category": "HIGH",
+      "factors_checked": ["M001", "M003", "T002", "T004"],
+      "factors_not_checked": ["M004", "M007"],
+      "thesis": "Iran war creating sustained FII outflow + crude premium. Nifty at 22,819 has technical support at 22,000–22,200 (200DMA zone). Expect test within 2 months.",
+      "daily_log": [
+        {
+          "date": "2026-04-04",
+          "price_observed": 22713,
+          "note": "Nifty at 22,713 on April 2. Already -1% from prediction start price. Iran war ongoing, thesis intact. April 2 bounce may slow descent but 22,000 test likely by May.",
+          "signal_updates": ["M003 — FII still net sellers (₹9,931 Cr on Apr 2)", "T002 — approaching support levels"],
+          "confidence_delta": 0
+        }
+      ],
+      "outcome": null,
+      "outcome_date": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "rca": null,
+      "framework_update": null
+    },
+    {
+      "pred_id": "P005",
+      "stock": "COAL INDIA",
+      "created_at": "2026-03-28",
+      "prediction": "Coal India will hold above ₹430 through May 28 on e-auction premium + power demand",
+      "horizon": "2M",
+      "check_date": "2026-05-28",
+      "target": "> ₹430",
+      "entry_price": 390.0,
+      "confidence": 3,
+      "category": "MEDIUM",
+      "factors_checked": ["S008", "M006", "T005"],
+      "factors_not_checked": ["M003"],
+      "thesis": "Coal e-auction prices elevated on power demand surge. Renewables not scaling fast enough to offset coal dependency. PSU dividend yield provides price floor.",
+      "daily_log": [
+        {
+          "date": "2026-04-01",
+          "price_observed": 451.05,
+          "note": "Coal India at ₹451 (+30.7% from March close). Already well above ₹430 target. Thesis confirming ahead of schedule.",
+          "signal_updates": ["S008 — Coal demand strong, price elevated well above target"],
+          "confidence_delta": 1
+        }
+      ],
+      "outcome": null,
+      "outcome_date": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "rca": null,
+      "framework_update": null
+    }
+  ],
+  "rca_pattern_log": [
+    {
+      "pattern_id": "PAT001",
+      "pattern_tag": "FII_PANIC_OVERRIDE",
+      "description": "Short-term bullish predictions fail when FII single-day sell > ₹8,000 Cr, regardless of DII support",
+      "occurrences": ["P007"],
+      "occurrences_needed_for_framework_update": 2,
+      "current_count": 1,
+      "status": "WATCHING",
+      "proposed_framework_factor": "M010",
+      "notes": "One occurrence so far. Need 1 more WRONG prediction with same root cause before promoting to framework."
+    }
+  ]
+}

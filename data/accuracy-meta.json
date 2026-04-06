@@ -1,0 +1,118 @@
+{
+  "schema_version": "2.0",
+  "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
+  "last_updated": "2026-04-06",
+
+  "L1_scorecard": {
+    "all_time": {
+      "total": 6,
+      "open": 3,
+      "scored": 3,
+      "right": 2,
+      "wrong": 1,
+      "partial": 0,
+      "accuracy_pct": 67
+    },
+    "by_horizon": {
+      "1D": { "total": 1, "scored": 1, "right": 1, "wrong": 0, "accuracy_pct": 100 },
+      "7D": { "total": 1, "scored": 1, "right": 0, "wrong": 1, "accuracy_pct": 0 },
+      "4W": { "total": 2, "scored": 1, "right": 1, "wrong": 0, "accuracy_pct": 100 },
+      "2M": { "total": 3, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null }
+    },
+    "by_sector": {
+      "Consumer/QComm": { "total": 2, "scored": 2, "right": 1, "wrong": 1, "accuracy_pct": 50 },
+      "Index": { "total": 2, "scored": 2, "right": 2, "wrong": 0, "accuracy_pct": 100 },
+      "Energy": { "total": 1, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null },
+      "PSU/Mining": { "total": 1, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null }
+    },
+    "by_confidence": {
+      "5_stars": { "total": 0, "scored": 0, "right": 0, "accuracy_pct": null },
+      "4_stars": { "total": 1, "scored": 1, "right": 1, "accuracy_pct": 100 },
+      "3_stars": { "total": 5, "scored": 2, "right": 1, "accuracy_pct": 50 },
+      "2_stars": { "total": 0, "scored": 0, "right": 0, "accuracy_pct": null },
+      "1_star":  { "total": 0, "scored": 0, "right": 0, "accuracy_pct": null }
+    }
+  },
+
+  "L2_rca_log": [
+    {
+      "rca_id": "RCA001",
+      "pred_id": "P007",
+      "date": "2026-04-06",
+      "stock": "SWIGGY",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "Checked DII inflows but missed FII outflow magnitude. When FII single-day sell > ₹8,000 Cr, short-term support predictions fail regardless of DII net positive.",
+      "missing_signal": "M003 — FII panic sell threshold",
+      "factor_gap": "Framework lacked a threshold-based FII panic flag",
+      "proposed_factor_id": "M010",
+      "proposed_factor_name": "FII Single-Day Panic Threshold (>₹8,000 Cr)",
+      "pattern_tag": "FII_PANIC_OVERRIDE",
+      "framework_promoted": false,
+      "lesson": "Always check M003 absolute magnitude (not just direction) for short-horizon bullish predictions"
+    }
+  ],
+
+  "L3_trend": {
+    "monthly_accuracy": [
+      {
+        "month": "2026-03",
+        "scored": 2,
+        "right": 1,
+        "wrong": 1,
+        "accuracy_pct": 50,
+        "notes": "First month. 2 predictions scored — P001 RIGHT, P007 WRONG."
+      },
+      {
+        "month": "2026-04",
+        "scored": 1,
+        "right": 1,
+        "wrong": 0,
+        "accuracy_pct": 100,
+        "notes": "P006 RIGHT — FY-start relief bounce thesis confirmed."
+      }
+    ],
+    "rolling_accuracy": {
+      "last_5_predictions": { "scored": 3, "right": 2, "accuracy_pct": 67 },
+      "last_10_predictions": { "scored": 3, "right": 2, "accuracy_pct": 67 }
+    },
+    "improvement_signal": "INSUFFICIENT_DATA",
+    "notes": "Need minimum 10 scored predictions to detect meaningful improvement trend."
+  },
+
+  "factor_performance": {
+    "M001": { "name": "Brent Crude", "times_checked": 4, "contributed_right": 1, "missed_in_wrong": 0, "accuracy_contribution": "neutral" },
+    "M003": { "name": "FII Flows", "times_checked": 3, "contributed_right": 1, "missed_in_wrong": 1, "accuracy_contribution": "HIGH — missed in P007 WRONG" },
+    "M004": { "name": "DII Flows", "times_checked": 3, "contributed_right": 1, "missed_in_wrong": 0, "accuracy_contribution": "neutral" },
+    "T001": { "name": "52-Week Proximity", "times_checked": 3, "contributed_right": 2, "missed_in_wrong": 0, "accuracy_contribution": "STRONG — 2 correct predictions" },
+    "T004": { "name": "RSI", "times_checked": 2, "contributed_right": 1, "missed_in_wrong": 0, "accuracy_contribution": "neutral" },
+    "S008": { "name": "Coal E-Auction", "times_checked": 1, "contributed_right": 0, "missed_in_wrong": 0, "accuracy_contribution": "pending" }
+  },
+
+  "framework_evolution_log": [
+    {
+      "date": "2026-04-06",
+      "event": "FRAMEWORK_v1_CREATED",
+      "description": "Signal framework initialized with 9 macro, 9 sector, 6 technical factors",
+      "triggered_by": "Initial system setup",
+      "accuracy_at_time": null
+    },
+    {
+      "date": "2026-04-06",
+      "event": "FACTOR_PROPOSED",
+      "factor_id": "M010",
+      "factor_name": "FII Single-Day Panic Threshold",
+      "triggered_by": "RCA001 — P007 WRONG",
+      "promoted_to_framework": false,
+      "notes": "Waiting for 1 more corroborating WRONG prediction before promoting to framework"
+    }
+  ],
+
+  "next_session_accuracy": {
+    "total_sessions": 0,
+    "direction_correct": 0,
+    "within_range": 0,
+    "accuracy_pct": null,
+    "session_log": []
+  }
+}
