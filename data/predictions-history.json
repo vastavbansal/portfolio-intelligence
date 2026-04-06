@@ -115,7 +115,7 @@
       "check_date": "2026-05-28",
       "target": "₹160–170",
       "entry_price": 180.0,
-      "confidence": 3,
+      "confidence": 2,
       "category": "HIGH",
       "factors_checked": ["M001", "S001", "T004"],
       "factors_not_checked": ["M005", "M008"],
@@ -133,6 +133,13 @@
           "price_observed": null,
           "note": "Brent holding $105–107 range. Slightly below ₹110 threshold. Monitor: if sustained below $100, MRPL may not fall to target range.",
           "signal_updates": ["M001 — Brent slightly easing, slight risk to thesis"],
+          "confidence_delta": -1
+        },
+        {
+          "date": "2026-04-06",
+          "price_observed": null,
+          "note": "Trump's April 6 deadline on Strait of Hormuz passed. Brent at $108.3 as of Apr 5-6. De-escalation narrative strengthening, crude below $110 threshold. MRPL had trading pause (results window). Thesis weakening — need to reassess if crude stays below $110.",
+          "signal_updates": ["M001 — Brent now below $110, increasing risk to thesis", "Geopolitical: De-escalation narrative emerging"],
           "confidence_delta": -1
         }
       ],
@@ -152,7 +159,7 @@
       "check_date": "2026-05-10",
       "target": "22,000–22,200",
       "entry_price": 22819,
-      "confidence": 3,
+      "confidence": 2,
       "category": "HIGH",
       "factors_checked": ["M001", "M003", "T002", "T004"],
       "factors_not_checked": ["M004", "M007"],
@@ -164,6 +171,13 @@
           "note": "Nifty at 22,713 on April 2. Already -1% from prediction start price. Iran war ongoing, thesis intact. April 2 bounce may slow descent but 22,000 test likely by May.",
           "signal_updates": ["M003 — FII still net sellers (₹9,931 Cr on Apr 2)", "T002 — approaching support levels"],
           "confidence_delta": 0
+        },
+        {
+          "date": "2026-04-06",
+          "price_observed": 22968,
+          "note": "MAJOR REVERSAL: Nifty rallied to 22,968 on April 6 (+255 pts, +1.12% from Apr 2). De-escalation narrative replacing war premium. Index now 768 points ABOVE target zone of 22,000–22,200. This contradicts thesis. If de-escalation holds, thesis may fail to resolve.",
+          "signal_updates": ["M001 — Geopolitical premium deflating as Trump deadline passes without escalation", "M003 — FII data for Apr 6 pending, but sentiment shifted to de-escalation relief", "Thesis contradiction — Nifty moving away from support test zone"],
+          "confidence_delta": -2
         }
       ],
       "outcome": null,
@@ -182,7 +196,7 @@
       "check_date": "2026-05-28",
       "target": "> ₹430",
       "entry_price": 390.0,
-      "confidence": 3,
+      "confidence": 4,
       "category": "MEDIUM",
       "factors_checked": ["S008", "M006", "T005"],
       "factors_not_checked": ["M003"],
@@ -193,6 +207,13 @@
           "price_observed": 451.05,
           "note": "Coal India at ₹451 (+30.7% from March close). Already well above ₹430 target. Thesis confirming ahead of schedule.",
           "signal_updates": ["S008 — Coal demand strong, price elevated well above target"],
+          "confidence_delta": 1
+        },
+        {
+          "date": "2026-04-06",
+          "price_observed": 461.25,
+          "note": "Coal India at ₹461.25 — up 1.48% on April 6, gained ₹11.89 from opening. Thesis strongly confirming. Now ₹31.25 above target with 52 days remaining. Resilient to geopolitical risk. Only risk: broad PSU sector crash if Nifty breaks 22,000.",
+          "signal_updates": ["S008 — Continued strength in coal e-auction segment", "M006 — PSU rerating ongoing, dividend yield floor holding"],
           "confidence_delta": 1
         }
       ],

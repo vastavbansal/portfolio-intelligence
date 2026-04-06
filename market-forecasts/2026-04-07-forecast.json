@@ -1,0 +1,221 @@
+{
+  "schema_version": "1.0",
+  "forecast_date": "2026-04-07",
+  "generated_at": "2026-04-06T16:30:00Z",
+  "regime_at_forecast": "TRANSITIONING_TO_RELIEF",
+  "key_variable": "De-escalation narrative holding vs new escalation risk",
+
+  "next_session": {
+    "date": "2026-04-07",
+    "market_open_time": "09:15 IST",
+    "market_close_time": "15:30 IST"
+  },
+
+  "index_forecasts": [
+    {
+      "index": "NIFTY 50",
+      "expected_direction": "SIDEWAYS_UP",
+      "base_case_open": 22850,
+      "base_case_close": 22950,
+      "change_pct_estimate": 0.4,
+      "confidence": 3,
+      "upside_target": 23100,
+      "downside_target": 22600,
+      "key_factors": [
+        "De-escalation narrative strength (primary)",
+        "FII buying confirmation on April 6 data release",
+        "Crude oil hold above $105",
+        "RBI policy signals (if any new commentary)"
+      ],
+      "watch": [
+        "If Nifty opens >23,000: continued relief rally, 23,200 possible",
+        "If Nifty opens <22,500: support test zone, P003 thesis back in play",
+        "Key support: 22,200 (P003 target), 22,000 (200DMA)",
+        "If breaks >23,200: regime change to BULLISH confirmed"
+      ]
+    },
+    {
+      "index": "SENSEX",
+      "expected_direction": "UP",
+      "base_case_close": 74500,
+      "change_pct_estimate": 0.5,
+      "confidence": 3,
+      "key_factors": [
+        "Banking sector resilience (KMB weakness on Apr 6 was shallow)",
+        "PSU continuation (Coal, NTPC, Power Grid benefiting)",
+        "FII buying on Asia sentiment"
+      ]
+    },
+    {
+      "index": "BRENT CRUDE",
+      "expected_direction": "SIDEWAYS",
+      "base_case": 107,
+      "range_low": 105,
+      "range_high": 110,
+      "confidence": 2,
+      "watch": [
+        "Most important variable for P002 (MRPL) thesis",
+        "If >$115: escalation fear returns, P002 revived, market risk-off",
+        "If <$100: P002 thesis invalidated, energy sector relief, INR strengthens"
+      ]
+    },
+    {
+      "index": "GOLD (MCX/COMEX)",
+      "expected_direction": "SLIGHT_PULLBACK",
+      "expected_move": -0.5,
+      "key_factors": [
+        "War premium deflating on de-escalation",
+        "Still at ATH territory, profit-taking likely",
+        "Hold as hedge until ceasefire officially signed"
+      ]
+    },
+    {
+      "index": "USD/INR",
+      "expected_direction": "WEAKER_INR",
+      "key_factors": [
+        "De-escalation → lower crude premium → INR support",
+        "FII buying → capital inflows → INR strength"
+      ]
+    }
+  ],
+
+  "holding_forecasts": [
+    {
+      "stock": "NIFTY 50 (INDEX)",
+      "basis": "P003 prediction thesis (Nifty test 22,000-22,200)",
+      "direction": "SIDEWAYS_UP",
+      "change_pct_estimate": 0.4,
+      "confidence": 3,
+      "scenario_analysis": {
+        "de_escalation_holds_60pct": "Nifty 23,000-23,200 — P003 invalidated",
+        "status_quo_30pct": "Nifty 22,500-22,750 — thesis stays uncertain",
+        "escalation_10pct": "Nifty 21,500-22,000 — thesis comes back alive"
+      },
+      "key_watch": "Opening level and first 30 mins trading volume — will determine sentiment confirmation"
+    },
+    {
+      "stock": "COAL INDIA",
+      "basis": "P005 prediction thesis (>₹430 through May 28)",
+      "direction": "UP",
+      "change_pct_estimate": 0.8,
+      "confidence": 4,
+      "thesis": "Domestic demand insulation. Already ₹461 (+31 from target). No reason to sell.",
+      "watch": "If market rallies (de-escalation), Coal likely gains further. If crash, support at ₹430."
+    },
+    {
+      "stock": "MRPL",
+      "basis": "P002 prediction thesis (₹160-170 by May 28 on Brent >$110)",
+      "direction": "WATCH",
+      "change_pct_estimate": 0,
+      "confidence": 1,
+      "thesis": "Crude at $108.3, below $110 threshold. Thesis HIGH RISK. Trading pause may continue.",
+      "watch": "If Brent >$115 confirmed: MRPL down. If <$100: thesis invalid, MRPL may rebound."
+    },
+    {
+      "stock": "SWIGGY",
+      "basis": "P001 thesis already RIGHT (breach of ₹260). Q4 earnings May 8 catalyst.",
+      "direction": "WATCH",
+      "change_pct_estimate": 0.5,
+      "confidence": 2,
+      "thesis": "Bounced to ₹293 from ₹260 lows. Q4 catalyst may come May 8. Near-term: watch for fresh supply or demand.",
+      "watch": "Is this just relief bounce or sustained recovery? Monitor weekly volumes."
+    },
+    {
+      "stock": "INDIGO (InterGlobe Aviation)",
+      "basis": "Crude price sensitive (ATF = 30-35% of costs)",
+      "direction": "UP",
+      "change_pct_estimate": 1.5,
+      "confidence": 3,
+      "thesis": "De-escalation relief → crude falls → ATF cost eases → margins improve. Strong buy signal if de-escalation confirms.",
+      "watch": "If Brent holds <$110: INDIGO +3-5% by EOD April 7."
+    }
+  ],
+
+  "macroeconomic_backdrop": {
+    "rbi_policy_status": "Due soon — MPC decision likely next week. Market pricing in one more hike but potential pause on de-escalation/disinflation signals.",
+    "fii_sentiment": "PIVOTAL. April 6 FII data will be critical. If buying, regime change confirmed. If still selling, de-escalation relief is temporary.",
+    "gsec_yields": "May fall 10-15 bps on de-escalation if FII inflows confirmed.",
+    "crude_outlook": "Depends entirely on Iran-US trajectory. Key levels: $95 (BULLISH), $110 (NEUTRAL), $120 (BEARISH)."
+  },
+
+  "risk_alerts": [
+    {
+      "type": "GEOPOLITICAL",
+      "severity": "HIGH",
+      "description": "Any new Iran/US military action announced during April 7 trading hours would reverse rally immediately.",
+      "action": "Check news every 30 mins during trading hours."
+    },
+    {
+      "type": "TECHNICAL",
+      "severity": "MEDIUM",
+      "description": "P003 thesis invalidation possible if Nifty closes >23,000. This would signal loss of support test prediction.",
+      "action": "If Nifty >22,500 at 10 AM, reduce bearish bias, shift to neutral."
+    },
+    {
+      "type": "ENERGY",
+      "severity": "MEDIUM",
+      "description": "P002 (MRPL) thesis at risk if Brent sustains <$100. Would indicate structural change to energy markets.",
+      "action": "Monitor Brent throughout day. If <$100 confirmed by 3 PM, mark P002 invalidation."
+    }
+  ],
+
+  "action_recommendations_for_apr7": [
+    {
+      "action": "START_DAY_WITH_THESE_CHECKS",
+      "priority": "CRITICAL",
+      "steps": [
+        "09:00 AM: Check Brent crude price",
+        "09:10 AM: Check Iran/US news (overnight)",
+        "09:15 AM: Note Nifty open level",
+        "09:45 AM: Check FII data for April 6 (should publish by 10 AM)"
+      ]
+    },
+    {
+      "action": "IF_NIFTY_OPENS_ABOVE_22800",
+      "rationale": "De-escalation narrative holding. P003 thesis invalidating.",
+      "execute": [
+        "Reduce bearish hedge positions",
+        "Consider increasing exposure to INDIGO, airlines",
+        "Hold COAL INDIA (thesis unaffected)",
+        "Hold GOLD (war premium receding but keep hedge)"
+      ]
+    },
+    {
+      "action": "IF_NIFTY_OPENS_BELOW_22500",
+      "rationale": "Support test developing. War premium re-emerging.",
+      "execute": [
+        "Increase bearish hedges",
+        "Monitor for MRPL thesis recovery (if Brent >$110)",
+        "Watch for P003 validation opportunity"
+      ]
+    },
+    {
+      "action": "IF_BRENT_ABOVE_115",
+      "rationale": "Escalation signal. Thesis pivot.",
+      "execute": [
+        "Sell INDIGO 30-50%",
+        "Reduce COAL INDIA on broad market weakness",
+        "Revive MRPL bearish thesis (P002)",
+        "Hold GOLD (war premium intact)"
+      ]
+    },
+    {
+      "action": "IF_BRENT_BELOW_100",
+      "rationale": "De-escalation confirmation. BULLISH signal.",
+      "execute": [
+        "Mark P002 as INVALIDATED",
+        "Increase INDIGO, airlines exposure",
+        "Sell partial GOLD (war hedge no longer needed)",
+        "Stay positive on NIFTY (avoid selling into strength)"
+      ]
+    }
+  ],
+
+  "confidence_summary": {
+    "forecast_confidence": "LOW_TO_MEDIUM (2-3 out of 5)",
+    "reason": "Single binary variable (geopolitical) drives all theses. Prediction precision impossible until de-escalation narrative confirmed or reversed.",
+    "expected_volatility": "HIGH (±1-2% index moves on any news)",
+    "best_case": "De-escalation holds, FII buys, indices rally, P003 invalidates, P005 confirms",
+    "worst_case": "New escalation overnight, crude spikes, FII selling resumes, all plans flip"
+  }
+}
