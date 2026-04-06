@@ -2,6 +2,13 @@
   "briefings": [
     {
       "date": "2026-04-06",
+      "type": "midday",
+      "label": "Mon Apr 6 — Midday Update",
+      "file": "daily-briefings/2026-04-06-midday.md",
+      "summary": "Nifty 50:** 22,609 (−104 pts, −0.46%) | Intraday range: 22,591–22,798. Sensex:** 73,078 (−241 pts, −0.33%)"
+    },
+    {
+      "date": "2026-04-06",
       "type": "morning",
       "label": "Mon Apr 6 — Morning Briefing",
       "file": "daily-briefings/2026-04-06-morning.md",
