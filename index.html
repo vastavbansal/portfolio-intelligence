@@ -7,1691 +7,1403 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/11.1.1/marked.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <style>
-    * { font-family: 'Inter', sans-serif; }
-    .mono { font-family: 'JetBrains Mono', monospace; }
-    body { background: #060d1c; }
-    ::-webkit-scrollbar { width: 5px; height: 5px; }
-    ::-webkit-scrollbar-track { background: #0f172a; }
-    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
-    @keyframes shimmer { 0%{background-position:-800px 0} 100%{background-position:800px 0} }
-    .shimmer { background: linear-gradient(90deg,#1e293b 25%,#2d3f55 50%,#1e293b 75%); background-size:800px 100%; animation: shimmer 1.5s infinite; border-radius:6px; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .spinning { animation: spin 0.8s linear infinite; display: inline-block; }
-    @keyframes fadeIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
-    .fade-in { animation: fadeIn 0.3s ease forwards; }
-    .tab-btn { transition: all 0.2s; }
-    .tab-btn.active { background: #1e40af; color: white; }
-    .tab-btn:not(.active):hover { background: #1e293b; }
-    .signal-CRITICAL { border-left: 3px solid #ef4444; background: linear-gradient(90deg, rgba(239,68,68,0.07) 0%, transparent 100%); }
-    .signal-HIGH { border-left: 3px solid #f97316; background: linear-gradient(90deg, rgba(249,115,22,0.07) 0%, transparent 100%); }
-    .signal-MEDIUM { border-left: 3px solid #eab308; background: linear-gradient(90deg, rgba(234,179,8,0.06) 0%, transparent 100%); }
-    .signal-LOW { border-left: 3px solid #22c55e; background: linear-gradient(90deg, rgba(34,197,94,0.06) 0%, transparent 100%); }
-    .badge-CRITICAL { background:#7f1d1d; color:#fca5a5; }
-    .badge-HIGH { background:#7c2d12; color:#fdba74; }
-    .badge-MEDIUM { background:#713f12; color:#fde68a; }
-    .badge-LOW { background:#14532d; color:#86efac; }
-    .badge-ACTION { background:#1e3a5f; color:#93c5fd; }
-    .badge-STRUCTURAL { background:#2d1b69; color:#c4b5fd; }
-    .badge-HOLD { background:#1c2d3b; color:#7dd3fc; }
-    .badge-BEARISH { background:#7f1d1d; color:#fca5a5; }
-    .badge-BULLISH { background:#14532d; color:#86efac; }
-    .pred-OPEN { background:#1e3a5f; color:#93c5fd; }
-    .pred-RIGHT { background:#14532d; color:#86efac; }
-    .pred-WRONG { background:#7f1d1d; color:#fca5a5; }
-    .pred-PARTIAL { background:#713f12; color:#fde68a; }
-    tr.pos td.pnl { color: #10b981; }
-    tr.neg td.pnl { color: #ef4444; }
-    .card { background: #0f1e35; border: 1px solid #1e3a5f; border-radius: 12px; }
-    .card-sm { background: #0f1e35; border: 1px solid #1a2d47; border-radius: 10px; }
-    @media print {
-      nav, #headerBtns, .no-print { display: none !important; }
-      body, .card, .card-sm { background: white !important; color: #111 !important; border-color: #ddd !important; }
-      * { color: #111 !important; }
-      h1, h2, h3 { color: #111 !important; }
-      .text-slate-400, .text-slate-500, .text-slate-300 { color: #555 !important; }
-      .text-green-400, .text-emerald-400 { color: #047857 !important; }
-      .text-red-400 { color: #b91c1c !important; }
-      .text-yellow-400 { color: #b45309 !important; }
-      .text-orange-400 { color: #c2410c !important; }
-    }
+    *{font-family:'Inter',sans-serif;}
+    .mono{font-family:'JetBrains Mono',monospace;}
+    body{background:#060d1c;}
+    ::-webkit-scrollbar{width:5px;height:5px;}
+    ::-webkit-scrollbar-track{background:#0f172a;}
+    ::-webkit-scrollbar-thumb{background:#334155;border-radius:3px;}
+
+    /* Animations */
+    @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes pulse-ring{0%{transform:scale(1);opacity:1}100%{transform:scale(1.6);opacity:0}}
+    @keyframes shimmer{0%{background-position:-800px 0}100%{background-position:800px 0}}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .fade-in{animation:fadeIn 0.35s ease forwards;}
+    .shimmer{background:linear-gradient(90deg,#1e293b 25%,#2d3f55 50%,#1e293b 75%);background-size:800px 100%;animation:shimmer 1.5s infinite;border-radius:6px;}
+    .spinning{animation:spin 0.8s linear infinite;display:inline-block;}
+
+    /* Regime Strip */
+    .regime-BEARISH_SIDEWAYS{background:linear-gradient(90deg,rgba(239,68,68,0.15),rgba(239,68,68,0.05));}
+    .regime-BULLISH{background:linear-gradient(90deg,rgba(34,197,94,0.15),rgba(34,197,94,0.05));}
+    .regime-NEUTRAL{background:linear-gradient(90deg,rgba(234,179,8,0.12),rgba(234,179,8,0.03));}
+
+    /* Urgency colors */
+    .urg-CRITICAL{border-left:3px solid #ef4444;}
+    .urg-HIGH{border-left:3px solid #f97316;}
+    .urg-MEDIUM{border-left:3px solid #eab308;}
+    .urg-LOW{border-left:3px solid #22c55e;}
+
+    /* Badges */
+    .badge{display:inline-flex;align-items:center;gap:3px;padding:2px 8px;border-radius:9999px;font-size:11px;font-weight:600;letter-spacing:0.02em;}
+    .badge-CRITICAL{background:#7f1d1d;color:#fca5a5;}
+    .badge-HIGH{background:#7c2d12;color:#fdba74;}
+    .badge-MEDIUM{background:#713f12;color:#fde68a;}
+    .badge-LOW{background:#14532d;color:#86efac;}
+    .badge-SELL{background:#4c0519;color:#fda4af;}
+    .badge-BUY{background:#052e16;color:#86efac;}
+    .badge-HOLD{background:#1c2d3b;color:#7dd3fc;}
+    .badge-WATCH{background:#1e1b4b;color:#c4b5fd;}
+    .badge-OPEN{background:#1e3a5f;color:#93c5fd;}
+    .badge-RIGHT{background:#14532d;color:#86efac;}
+    .badge-WRONG{background:#7f1d1d;color:#fca5a5;}
+
+    /* Cards */
+    .card{background:#0f1e35;border:1px solid #1e3a5f;border-radius:12px;}
+    .card-glass{background:rgba(15,30,53,0.8);border:1px solid #1e3a5f;border-radius:12px;backdrop-filter:blur(8px);}
+    .card-action{background:#0a1628;border:1px solid #1e3a5f;border-radius:12px;transition:border-color 0.2s,transform 0.15s;}
+    .card-action:hover{border-color:#3b82f6;transform:translateY(-1px);}
+
+    /* Confidence stars */
+    .star-filled{color:#fbbf24;}
+    .star-empty{color:#1e3a5f;}
+
+    /* Tabs */
+    .tab-nav-btn{padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;transition:all 0.2s;color:#94a3b8;cursor:pointer;white-space:nowrap;}
+    .tab-nav-btn:hover{color:#e2e8f0;background:#1e293b;}
+    .tab-nav-btn.active{background:#1d4ed8;color:#fff;}
+    .tab-pane{display:none;}
+    .tab-pane.active{display:block;animation:fadeIn 0.3s ease forwards;}
+
+    /* Holdings table */
+    .holdings-table th{background:#0a1628;color:#64748b;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;padding:10px 12px;}
+    .holdings-table td{padding:10px 12px;border-bottom:1px solid #0f1e35;font-size:13px;vertical-align:middle;}
+    .holdings-table tr:hover td{background:rgba(30,58,95,0.3);}
+    .pnl-pos{color:#10b981;}
+    .pnl-neg{color:#ef4444;}
+
+    /* Modal */
+    .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:200;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);}
+    .modal-box{background:#0f1e35;border:1px solid #1e3a5f;border-radius:16px;max-width:640px;width:100%;max-height:85vh;overflow-y:auto;animation:slideDown 0.2s ease;}
+
+    /* Briefing viewer */
+    .briefing-md h1,.briefing-md h2{color:#93c5fd;margin:16px 0 8px;font-weight:700;}
+    .briefing-md h3{color:#7dd3fc;margin:12px 0 6px;font-weight:600;}
+    .briefing-md p{color:#cbd5e1;line-height:1.7;margin-bottom:10px;}
+    .briefing-md ul{color:#cbd5e1;padding-left:20px;margin-bottom:10px;}
+    .briefing-md li{margin-bottom:4px;line-height:1.6;}
+    .briefing-md strong{color:#e2e8f0;}
+    .briefing-md code{background:#1e3a5f;color:#7dd3fc;padding:1px 5px;border-radius:3px;font-size:12px;}
+    .briefing-md hr{border-color:#1e3a5f;margin:14px 0;}
+
+    /* Toast */
+    #toast{position:fixed;bottom:24px;right:24px;background:#1e40af;color:#fff;padding:10px 18px;border-radius:10px;font-size:13px;font-weight:500;z-index:999;transition:opacity 0.3s;pointer-events:none;}
+
+    /* Nifty/Sensex mini ticker in regime bar */
+    .ticker-val{font-size:13px;font-weight:700;font-family:'JetBrains Mono',monospace;}
+
+    /* Drill panel inside action card */
+    .drill-panel{display:none;border-top:1px solid #1e3a5f;margin-top:12px;padding-top:12px;}
+    .drill-panel.open{display:block;animation:fadeIn 0.2s ease;}
   </style>
 </head>
 <body class="text-slate-100 min-h-screen">
 
-<!-- ═══════════════════════ HEADER ═══════════════════════ -->
-<header class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/70" style="background:rgba(6,13,28,0.96);backdrop-filter:blur(12px)">
-  <div class="max-w-screen-2xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+<!-- HEADER -->
+<header class="fixed top-0 left-0 right-0 z-50 border-b border-slate-800/60" style="background:rgba(6,13,28,0.97);backdrop-filter:blur(14px)">
+  <div class="max-w-screen-2xl mx-auto px-4 py-2.5 flex items-center justify-between gap-3">
     <div class="flex items-center gap-3">
-      <div class="text-2xl">📊</div>
+      <span class="text-xl">📊</span>
       <div>
-        <h1 class="font-bold text-base sm:text-lg leading-tight">Portfolio Intelligence</h1>
-        <p class="text-xs text-slate-400" id="lastUpdated">Click Refresh to load live prices</p>
+        <h1 class="font-bold text-sm sm:text-base leading-tight tracking-tight">Portfolio Intelligence</h1>
+        <p class="text-xs text-slate-500" id="lastUpdated">Loading…</p>
       </div>
     </div>
-    <div id="headerBtns" class="flex items-center gap-2 flex-wrap justify-end">
-      <div id="macroAlert" class="hidden text-xs px-3 py-1.5 rounded-full font-medium bg-red-900/50 text-red-300 border border-red-800/50">⚡ Iran War — Crude $104–$122</div>
-      <button id="refreshBtn" onclick="refreshPrices()" class="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg bg-blue-600 hover:bg-blue-500 transition text-white">
-        <span id="refreshIcon">⟳</span> Refresh Prices
+    <div class="flex items-center gap-2 flex-wrap justify-end">
+      <div id="macroAlert" class="hidden text-xs px-3 py-1 rounded-full font-semibold bg-red-900/40 text-red-300 border border-red-800/50 animate-pulse">⚠ Iran Risk Active</div>
+      <button onclick="refreshPrices()" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-600 hover:bg-blue-500 transition text-white">
+        <span id="refreshIcon">⟳</span> Refresh LTP
       </button>
-      <button id="syncBtn" onclick="syncDashboard()" class="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg bg-emerald-700 hover:bg-emerald-600 transition text-white no-print">
-        <span id="syncIcon">↻</span> Sync Dashboard
-      </button>
-      <button onclick="window.print()" class="flex items-center gap-1.5 px-3 py-1.5 text-sm font-medium rounded-lg bg-slate-700 hover:bg-slate-600 transition text-white no-print">
-        ⬇ Export PDF
+      <button onclick="syncDashboard()" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-lg bg-emerald-700 hover:bg-emerald-600 transition text-white">
+        ↻ Sync
       </button>
     </div>
+  </div>
+  <!-- TABS -->
+  <div class="max-w-screen-2xl mx-auto px-4 pb-2 flex items-center gap-1 overflow-x-auto">
+    <button class="tab-nav-btn active" id="tab-btn-today" onclick="showTab('today')">⚡ Today</button>
+    <button class="tab-nav-btn" id="tab-btn-portfolio" onclick="showTab('portfolio')">💼 Portfolio</button>
+    <button class="tab-nav-btn" id="tab-btn-intelligence" onclick="showTab('intelligence')">🧠 Intelligence</button>
+    <button class="tab-nav-btn" id="tab-btn-history" onclick="showTab('history')">📋 History</button>
+    <button class="tab-nav-btn" id="tab-btn-trade" onclick="showTab('trade')">+ Trade</button>
   </div>
 </header>
 
-<!-- ═══════════════════════ TAB NAV ═══════════════════════ -->
-<nav class="fixed top-[57px] left-0 right-0 z-40 border-b border-slate-800/70 overflow-x-auto no-print" style="background:rgba(6,13,28,0.95)">
-  <div class="flex gap-1 px-4 py-2 min-w-max">
-    <button class="tab-btn active px-3 py-1.5 text-sm rounded-md font-medium" onclick="showTab('overview',this)">Overview</button>
-    <button class="tab-btn px-3 py-1.5 text-sm rounded-md font-medium text-slate-400" onclick="showTab('holdings',this)">Holdings</button>
-    <button class="tab-btn px-3 py-1.5 text-sm rounded-md font-medium text-slate-400" onclick="showTab('trade',this)">+ Trade</button>
-    <button class="tab-btn px-3 py-1.5 text-sm rounded-md font-medium text-slate-400" onclick="showTab('intelligence',this)">🧠 Intelligence</button>
-    <button class="tab-btn px-3 py-1.5 text-sm rounded-md font-medium text-slate-400" onclick="showTab('signals',this)">Signals</button>
-    <button class="tab-btn px-3 py-1.5 text-sm rounded-md font-medium text-slate-400" onclick="showTab('predictions',this)">Predictions</button>
-    <button class="tab-btn px-3 py-1.5 text-sm rounded-md font-medium text-slate-400" onclick="showTab('opportunities',this)">Opportunities</button>
-    <button class="tab-btn px-3 py-1.5 text-sm rounded-md font-medium text-slate-400" onclick="showTab('reports',this)">Reports</button>
+<main class="max-w-screen-2xl mx-auto px-4 pt-28 pb-16">
+
+<!-- ═══════════ TODAY TAB ═══════════ -->
+<div id="tab-today" class="tab-pane active">
+
+  <!-- REGIME STRIP -->
+  <div id="regimeStrip" class="regime-BEARISH_SIDEWAYS rounded-xl p-3 mb-5 flex flex-wrap items-center justify-between gap-3 border border-red-900/30">
+    <div class="flex items-center gap-3 flex-wrap">
+      <span id="regimeLabel" class="badge badge-CRITICAL text-xs px-3 py-1">⚡ BEARISH · SIDEWAYS</span>
+      <span id="regimeRisk" class="text-xs text-slate-300">Iran April 6 deadline — outcome pending</span>
+    </div>
+    <div class="flex items-center gap-4 flex-wrap">
+      <div class="text-center">
+        <div class="text-xs text-slate-500 mb-0.5">NIFTY</div>
+        <div class="ticker-val text-slate-200" id="niftyVal">22,519</div>
+      </div>
+      <div class="text-center">
+        <div class="text-xs text-slate-500 mb-0.5">SENSEX</div>
+        <div class="ticker-val text-slate-200" id="sensexVal">74,188</div>
+      </div>
+      <div class="text-center">
+        <div class="text-xs text-slate-500 mb-0.5">BRENT</div>
+        <div class="ticker-val text-orange-300" id="brentVal">$109</div>
+      </div>
+      <div class="text-center">
+        <div class="text-xs text-slate-500 mb-0.5">FII</div>
+        <div class="ticker-val text-red-400" id="fiiVal">−₹9,931 Cr</div>
+      </div>
+    </div>
   </div>
-</nav>
 
-<!-- ═══════════════════════ MAIN ═══════════════════════ -->
-<main class="max-w-screen-2xl mx-auto px-3 sm:px-4 pt-28 pb-10">
-
-  <!-- ══════════ TAB: OVERVIEW ══════════ -->
-  <section id="tab-overview" class="fade-in">
-
-    <!-- STAT CARDS -->
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
-      <div class="card p-4">
-        <p class="text-xs text-slate-400 mb-1">Total Invested</p>
-        <p class="text-xl font-bold text-slate-100 mono" id="totalInvested">—</p>
-        <p class="text-xs text-slate-500 mt-1">Across ICICI + Groww</p>
-      </div>
-      <div class="card p-4">
-        <p class="text-xs text-slate-400 mb-1">Current Value</p>
-        <p class="text-xl font-bold mono" id="totalCurrent">—</p>
-        <p class="text-xs text-slate-500 mt-1" id="priceStatus">Live prices not loaded</p>
-      </div>
-      <div class="card p-4">
-        <p class="text-xs text-slate-400 mb-1">Overall P&amp;L</p>
-        <p class="text-xl font-bold mono" id="totalPnl">—</p>
-        <p class="text-xs mono" id="totalPnlPct">—</p>
-      </div>
-      <div class="card p-4">
-        <p class="text-xs text-slate-400 mb-1">Nifty 50</p>
-        <p class="text-xl font-bold mono text-slate-100" id="niftyDisplay">22,819</p>
-        <p class="text-xs text-red-400 mt-1">↓ -2.09% Mar 27</p>
-      </div>
+  <!-- PRE-MARKET CHECKLIST -->
+  <div id="preMarketChecklist" class="card p-4 mb-5 hidden">
+    <div class="flex items-center gap-2 mb-3">
+      <span class="text-yellow-400">☀</span>
+      <h2 class="font-bold text-sm text-slate-200">Pre-Market Checklist</h2>
+      <span class="text-xs text-slate-500 ml-auto">Check these BEFORE 9:15 AM</span>
     </div>
+    <div id="preMarketItems" class="space-y-2"></div>
+  </div>
 
-    <!-- CHARTS ROW -->
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-3 mb-4">
-      <div class="card p-4 lg:col-span-2">
-        <h2 class="text-sm font-semibold text-slate-300 mb-3">📈 Stock P&amp;L % (vs Avg Cost)</h2>
-        <div style="height:300px; position:relative;">
-          <canvas id="plChart"></canvas>
-        </div>
-        <p class="text-xs text-slate-500 mt-2">Based on avg buy price. Green = above avg, Red = below avg. Refresh for live.</p>
-      </div>
-      <div class="card p-4">
-        <h2 class="text-sm font-semibold text-slate-300 mb-3">🥧 Portfolio Allocation</h2>
-        <div style="height:240px; position:relative;">
-          <canvas id="allocChart"></canvas>
-        </div>
-        <p class="text-xs text-slate-500 mt-2">By estimated invested value</p>
-      </div>
-    </div>
-
-    <!-- CRITICAL SIGNALS + ACTIONS -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mb-4">
-      <div class="card p-4">
-        <h2 class="text-sm font-semibold mb-3 flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
-          Critical Signals
-        </h2>
-        <div id="criticalSignalsList" class="space-y-2"></div>
-      </div>
-      <div class="card p-4">
-        <h2 class="text-sm font-semibold mb-3 flex items-center gap-2">
-          <span class="text-yellow-400">⚡</span> Action Items
-        </h2>
-        <div id="actionsList" class="space-y-2"></div>
-      </div>
-    </div>
-
-    <!-- MACRO BANNER -->
-    <div class="card p-4 mb-4 border-orange-900/50" style="background:linear-gradient(90deg,rgba(194,65,12,0.1),rgba(6,13,28,0.9))">
-      <div class="flex items-start gap-3">
-        <span class="text-2xl">🌍</span>
-        <div>
-          <h3 class="text-sm font-semibold text-orange-300 mb-1">Dominant Macro Risk — Iran War (Active since Feb 28, 2026)</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">US-Israel struck Iran. Strait of Hormuz closed → 20% global oil supply disrupted. Brent: <strong class="text-orange-300">$104–$122/bbl</strong>. India cut fuel excise by ₹10/L (fiscal negative). FIIs net sold <strong class="text-red-300">₹1.04L cr</strong> CY2026. India PMI at lowest since Oct 2022. Gold at <strong class="text-yellow-300">$5,300/oz</strong> all-time high.</p>
-          <p class="text-xs text-slate-500 mt-1">Monitor: Ceasefire news → immediate broad market rally signal</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- PREDICTION SUMMARY STRIP -->
-    <div class="card p-4">
-      <div class="flex items-center justify-between mb-3">
-        <h2 class="text-sm font-semibold">🎯 Open Predictions Snapshot</h2>
-        <button onclick="showTab('predictions', document.querySelectorAll('.tab-btn')[3])" class="text-xs text-blue-400 hover:text-blue-300 no-print">View all →</button>
-      </div>
-      <div id="predSnap" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2"></div>
-    </div>
-  </section>
-
-  <!-- ══════════ TAB: HOLDINGS ══════════ -->
-  <section id="tab-holdings" class="hidden fade-in">
-    <div class="card p-4 mb-4">
-      <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
-        <h2 class="font-semibold">💼 All Holdings</h2>
-        <div class="flex items-center gap-3 flex-wrap">
-          <div class="flex items-center gap-3 text-xs text-slate-400">
-            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-500"></span>ICICI Direct</span>
-            <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-purple-500"></span>Groww</span>
-          </div>
-          <div class="flex gap-1.5">
-            <button onclick="showTab('trade', document.querySelectorAll('.tab-btn')[2])" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-green-700 hover:bg-green-600 text-white transition">+ Buy</button>
-            <button onclick="openExitModal()" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-red-800 hover:bg-red-700 text-white transition">− Sell</button>
-            <button onclick="exportHoldings()" title="Download holdings.json" class="px-2.5 py-1.5 text-xs rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 transition">↓ Export</button>
-            <button onclick="resetHoldings()" title="Reset to server baseline" class="px-2.5 py-1.5 text-xs rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-500 transition">↺</button>
-          </div>
-        </div>
-      </div>
-      <div class="overflow-x-auto">
-        <table class="w-full text-xs">
-          <thead>
-            <tr class="text-slate-400 border-b border-slate-800">
-              <th class="text-left py-2 pr-3 font-medium">Stock</th>
-              <th class="text-right py-2 px-2 font-medium">Qty</th>
-              <th class="text-right py-2 px-2 font-medium">Avg</th>
-              <th class="text-right py-2 px-2 font-medium">LTP</th>
-              <th class="text-right py-2 px-2 font-medium">Day%</th>
-              <th class="text-right py-2 px-2 font-medium pnl">P&amp;L%</th>
-              <th class="text-right py-2 pl-2 font-medium pnl">P&amp;L ₹</th>
-              <th class="text-left py-2 pl-3 font-medium">Source</th>
-            </tr>
-          </thead>
-          <tbody id="holdingsBody" class="divide-y divide-slate-800/50"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- MF SECTION -->
-    <div class="card p-4">
-      <h2 class="font-semibold mb-3">🏦 Mutual Funds</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        <div class="card-sm p-3">
-          <div class="flex justify-between items-start mb-1">
-            <p class="text-xs font-medium text-slate-200">HDFC Defence Fund <span class="text-slate-500">(Direct)</span></p>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-green-900/60 text-green-300">+22%</span>
-          </div>
-          <p class="text-xs text-slate-400">Invested: <span class="text-white font-medium">₹3,14,984</span> · NAV: ₹23.657 · Source: Groww</p>
-          <p class="text-xs text-slate-500 mt-1">1-yr return: 21% · Since launch: 136%</p>
-        </div>
-        <div class="card-sm p-3">
-          <div class="flex justify-between items-start mb-1">
-            <p class="text-xs font-medium text-slate-200">SBI Gold Fund <span class="text-slate-500">(Growth)</span></p>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-900/60 text-yellow-300">Gold ATH</span>
-          </div>
-          <p class="text-xs text-slate-400">SIP: <span class="text-white font-medium">₹15,000/mo</span> · Gold at $5,300/oz · Source: ICICI</p>
-          <p class="text-xs text-slate-500 mt-1">Gold at all-time high — strong performer</p>
-        </div>
-        <div class="card-sm p-3">
-          <div class="flex justify-between items-start mb-1">
-            <p class="text-xs font-medium text-slate-200">SBI Silver ETF FoF</p>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-slate-700 text-slate-300">Monitoring</span>
-          </div>
-          <p class="text-xs text-slate-400">SIP: <span class="text-white font-medium">₹10,000/mo</span> · Source: ICICI</p>
-          <p class="text-xs text-slate-500 mt-1">Silver elevated but underperforming gold</p>
-        </div>
-        <div class="card-sm p-3">
-          <div class="flex justify-between items-start mb-1">
-            <p class="text-xs font-medium text-slate-200">HDFC Defence Fund <span class="text-slate-500">(Regular)</span></p>
-            <span class="text-xs px-2 py-0.5 rounded-full bg-blue-900/60 text-blue-300">Starts Apr 18</span>
-          </div>
-          <p class="text-xs text-slate-400">SIP: <span class="text-white font-medium">₹10,000/mo</span> · Source: ICICI</p>
-          <p class="text-xs text-slate-500 mt-1">Not yet started</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════ TAB: INTELLIGENCE ══════════ -->
-  <section id="tab-intelligence" class="hidden fade-in">
-
-    <!-- NEXT SESSION HEADER -->
-    <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
-      <div>
-        <h2 class="font-bold text-lg text-slate-100" id="intel-session-label">Next Session Forecast</h2>
-        <p class="text-xs text-slate-500" id="intel-generated-at">Loading...</p>
-      </div>
-      <div id="intel-bias-badge" class="px-4 py-2 rounded-xl text-sm font-semibold"></div>
-    </div>
-
-    <!-- SCENARIO CARDS -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4" id="intel-scenarios"></div>
-
-    <!-- KEY VARIABLE BANNER -->
-    <div id="intel-dominant-var" class="card p-3 mb-4 border-yellow-900/40 text-xs text-yellow-200 flex items-start gap-2" style="background:linear-gradient(90deg,rgba(202,138,4,0.1),transparent)">
-      <span class="text-base mt-0.5">⚡</span><span></span>
-    </div>
-
-    <!-- INDEX FORECASTS -->
-    <h3 class="text-sm font-semibold text-slate-300 mb-2">📊 Market Indices</h3>
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-4" id="intel-indices"></div>
-
-    <!-- HOLDINGS FORECAST TABLE -->
-    <h3 class="text-sm font-semibold text-slate-300 mb-2">💼 Holdings — Next Session</h3>
-    <div class="card p-0 overflow-hidden mb-6">
-      <div class="overflow-x-auto">
-        <table class="w-full text-xs">
-          <thead>
-            <tr class="text-slate-400 bg-slate-800/60 border-b border-slate-700">
-              <th class="text-left py-2.5 px-3 font-medium">Stock</th>
-              <th class="text-center py-2.5 px-2 font-medium">Direction</th>
-              <th class="text-center py-2.5 px-2 font-medium">Est. Move</th>
-              <th class="text-center py-2.5 px-2 font-medium">Range</th>
-              <th class="text-center py-2.5 px-2 font-medium">Conf</th>
-              <th class="text-left py-2.5 px-3 font-medium">Key Factor</th>
-              <th class="text-left py-2.5 px-3 font-medium">Watch</th>
-            </tr>
-          </thead>
-          <tbody id="intel-holdings-body" class="divide-y divide-slate-800/50"></tbody>
-        </table>
-      </div>
-    </div>
-
-    <!-- ACCURACY DIVIDER -->
-    <div class="border-t border-slate-800 pt-6 mb-4">
-      <h2 class="font-bold text-base text-slate-100 mb-1">📈 Prediction Accuracy Intelligence</h2>
-      <p class="text-xs text-slate-500">Three layers: L1 Scorecard → L2 Root Cause Analysis → L3 Trend & Framework Evolution</p>
-    </div>
-
-    <!-- L1 SCORECARD -->
-    <div class="card p-4 mb-4">
-      <h3 class="text-sm font-semibold text-slate-300 mb-3">L1 — Scorecard</h3>
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-4" id="intel-l1-overall"></div>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="intel-l1-breakdown"></div>
-    </div>
-
-    <!-- L2 RCA LOG -->
-    <div class="card p-4 mb-4">
-      <h3 class="text-sm font-semibold text-slate-300 mb-1">L2 — Root Cause Analysis (Wrong Predictions)</h3>
-      <p class="text-xs text-slate-500 mb-3">Every wrong prediction gets an RCA. Patterns across RCAs trigger signal framework updates.</p>
-      <div id="intel-l2-rca" class="space-y-3"></div>
-    </div>
-
-    <!-- L3 TREND + FRAMEWORK -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4">
-      <div class="card p-4">
-        <h3 class="text-sm font-semibold text-slate-300 mb-3">L3 — Accuracy Trend</h3>
-        <div style="height:180px; position:relative;"><canvas id="accuracyTrendChart"></canvas></div>
-        <p class="text-xs text-slate-600 mt-2" id="intel-trend-note"></p>
-      </div>
-      <div class="card p-4">
-        <h3 class="text-sm font-semibold text-slate-300 mb-3">L3 — Signal Framework Evolution</h3>
-        <div id="intel-framework-log" class="space-y-2 text-xs"></div>
-      </div>
-    </div>
-
-    <!-- FACTOR PERFORMANCE -->
-    <div class="card p-4">
-      <h3 class="text-sm font-semibold text-slate-300 mb-3">L3 — Factor Performance Heatmap</h3>
-      <div id="intel-factors" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2"></div>
-    </div>
-
-  </section>
-
-  <!-- ══════════ TAB: SIGNALS ══════════ -->
-  <section id="tab-signals" class="hidden fade-in">
+  <!-- ACTIONS HERO -->
+  <div class="mb-6">
     <div class="flex items-center justify-between mb-3">
-      <h2 class="font-semibold">📡 All Signals</h2>
-      <p class="text-xs text-slate-400" id="signalsDate">Generated: —</p>
+      <div class="flex items-center gap-3">
+        <h2 class="font-bold text-lg text-slate-100">Actions</h2>
+        <div id="actionSummaryBadges" class="flex gap-2"></div>
+      </div>
+      <div class="text-xs text-slate-500" id="actionsValidThrough"></div>
     </div>
-    <div id="allSignalsList" class="space-y-2 mb-6"></div>
-    <h2 class="font-semibold mb-3">💡 Opportunities</h2>
-    <div id="opportunitiesList" class="space-y-3"></div>
-  </section>
+    <div id="actionsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div class="card p-8 flex items-center justify-center col-span-full">
+        <div class="shimmer h-5 w-40 rounded"></div>
+      </div>
+    </div>
+  </div>
 
-  <!-- ══════════ TAB: PREDICTIONS ══════════ -->
-  <section id="tab-predictions" class="hidden fade-in">
-    <!-- Stats -->
-    <div class="grid grid-cols-3 sm:grid-cols-5 gap-3 mb-4">
-      <div class="card-sm p-3 text-center">
-        <p class="text-2xl font-bold text-blue-400" id="statTotal">—</p>
-        <p class="text-xs text-slate-400 mt-1">Total</p>
-      </div>
-      <div class="card-sm p-3 text-center">
-        <p class="text-2xl font-bold text-slate-300" id="statOpen">—</p>
-        <p class="text-xs text-slate-400 mt-1">Open</p>
-      </div>
-      <div class="card-sm p-3 text-center">
-        <p class="text-2xl font-bold text-green-400" id="statRight">—</p>
-        <p class="text-xs text-slate-400 mt-1">RIGHT</p>
-      </div>
-      <div class="card-sm p-3 text-center">
-        <p class="text-2xl font-bold text-red-400" id="statWrong">—</p>
-        <p class="text-xs text-slate-400 mt-1">WRONG</p>
-      </div>
-      <div class="card-sm p-3 text-center">
-        <p class="text-2xl font-bold text-yellow-400" id="statAccuracy">—</p>
-        <p class="text-xs text-slate-400 mt-1">Accuracy</p>
-      </div>
-    </div>
-    <!-- Horizon filters -->
-    <div class="flex gap-2 mb-3 flex-wrap items-center">
-      <span class="text-xs text-slate-500">Filter:</span>
-      <button onclick="filterPredictions('ALL',this)" class="pred-filter-btn px-3 py-1 text-xs rounded-full bg-blue-700 text-white font-medium">All</button>
-      <button onclick="filterPredictions('7D',this)" class="pred-filter-btn px-3 py-1 text-xs rounded-full bg-slate-700 text-slate-300 font-medium hover:bg-slate-600">7-Day</button>
-      <button onclick="filterPredictions('4W',this)" class="pred-filter-btn px-3 py-1 text-xs rounded-full bg-slate-700 text-slate-300 font-medium hover:bg-slate-600">4-Week</button>
-      <button onclick="filterPredictions('2M',this)" class="pred-filter-btn px-3 py-1 text-xs rounded-full bg-slate-700 text-slate-300 font-medium hover:bg-slate-600">2-Month</button>
-      <button onclick="filterPredictions('OPEN',this)" class="pred-filter-btn px-3 py-1 text-xs rounded-full bg-slate-700 text-slate-300 font-medium hover:bg-slate-600">Open Only</button>
-      <button onclick="filterPredictions('OVERDUE',this)" class="pred-filter-btn px-3 py-1 text-xs rounded-full bg-red-900/60 text-red-300 font-medium hover:bg-red-900">⚠ Overdue</button>
-      <span class="text-xs text-slate-600 ml-1">← click any row to expand</span>
-    </div>
-    <!-- Table -->
-    <div class="card p-0 overflow-hidden">
-      <div class="overflow-x-auto">
-        <table class="w-full text-xs">
-          <thead>
-            <tr class="text-slate-400 bg-slate-800/60 border-b border-slate-700">
-              <th class="text-left py-2.5 px-3 font-medium">Stock</th>
-              <th class="text-left py-2.5 px-3 font-medium">Prediction</th>
-              <th class="text-center py-2.5 px-2 font-medium">Horizon</th>
-              <th class="text-center py-2.5 px-2 font-medium">Target</th>
-              <th class="text-center py-2.5 px-2 font-medium">Check Date</th>
-              <th class="text-center py-2.5 px-2 font-medium">Days</th>
-              <th class="text-center py-2.5 px-2 font-medium">Conf</th>
-              <th class="text-center py-2.5 px-2 font-medium">Status</th>
-            </tr>
-          </thead>
-          <tbody id="predBody" class="divide-y divide-slate-800/50"></tbody>
-        </table>
-      </div>
-    </div>
-    <!-- Accuracy chart -->
-    <div class="card p-4 mt-4">
-      <h3 class="text-sm font-semibold mb-3">📊 Accuracy by Category</h3>
-      <div style="height:200px; position:relative;">
-        <canvas id="predAccuracyChart"></canvas>
-      </div>
-    </div>
-    <!-- Framework note -->
-    <div class="card p-3 mt-3 text-xs text-slate-500 border-slate-800">
-      <span class="text-slate-400 font-medium">🔬 Signal Framework v1</span> — Predictions are built on a structured fundamental + technical checklist. Wrong predictions trigger post-mortems to find the missing causal factor, which is then added to the framework. Learning is causal, not correlation-based.
-    </div>
-  </section>
+  <!-- MARKET FORECASTS STRIP -->
+  <div class="mb-6">
+    <h2 class="font-bold text-base text-slate-200 mb-3">Next Session Forecasts <span class="text-xs text-slate-500 font-normal ml-2" id="forecastLabel"></span></h2>
+    <div id="forecastStrip" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3"></div>
+  </div>
 
-  <!-- ══════════ TAB: TRADE ══════════ -->
-  <section id="tab-trade" class="hidden fade-in">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-
-      <!-- ENTER HOLDING -->
-      <div class="card p-5">
-        <h2 class="font-semibold text-green-400 mb-4 flex items-center gap-2"><span class="text-xl">+</span> Enter New Position (Buy)</h2>
-        <div class="space-y-3">
-          <div>
-            <label class="text-xs text-slate-400 mb-1 block">Stock Name <span class="text-slate-600">(display label)</span></label>
-            <input id="eh-symbol" type="text" placeholder="e.g. TATA STEEL" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-slate-100 focus:border-green-600 focus:outline-none transition"/>
-          </div>
-          <div>
-            <label class="text-xs text-slate-400 mb-1 block">Yahoo Finance Symbol <span class="text-slate-600">(NSE stocks: add .NS)</span></label>
-            <input id="eh-yahoo" type="text" placeholder="e.g. TATASTEEL.NS" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm font-mono text-slate-100 focus:border-green-600 focus:outline-none transition"/>
-          </div>
-          <div class="grid grid-cols-2 gap-3">
-            <div>
-              <label class="text-xs text-slate-400 mb-1 block">Quantity</label>
-              <input id="eh-qty" type="number" min="1" placeholder="100" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm mono text-slate-100 focus:border-green-600 focus:outline-none transition"/>
-            </div>
-            <div>
-              <label class="text-xs text-slate-400 mb-1 block">Avg Buy Price (₹)</label>
-              <input id="eh-avg" type="number" step="0.01" min="0" placeholder="0.00" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm mono text-slate-100 focus:border-green-600 focus:outline-none transition"/>
-            </div>
-          </div>
-          <div>
-            <label class="text-xs text-slate-400 mb-1 block">Broker</label>
-            <select id="eh-source" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-slate-100 focus:border-green-600 focus:outline-none transition">
-              <option value="ICICI">ICICI Direct</option>
-              <option value="Groww">Groww</option>
-            </select>
-          </div>
-          <div id="eh-preview" class="hidden card-sm p-3 border-green-900/40 text-xs space-y-1"></div>
-          <div id="eh-error" class="hidden text-xs text-red-400 px-1"></div>
-          <button onclick="confirmEnterHolding()" class="w-full py-2.5 rounded-lg bg-green-700 hover:bg-green-600 text-sm text-white font-semibold transition mt-1">Add to Portfolio</button>
-        </div>
-      </div>
-
-      <!-- EXIT HOLDING -->
-      <div class="card p-5" id="exitPanel">
-        <h2 class="font-semibold text-red-400 mb-4 flex items-center gap-2"><span class="text-xl">−</span> Exit Position (Sell)</h2>
-        <div class="space-y-3">
-          <div>
-            <label class="text-xs text-slate-400 mb-1 block">Select Holding</label>
-            <select id="xh-holding" onchange="onExitHoldingSelect()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-slate-100 focus:border-red-600 focus:outline-none transition">
-              <option value="">— choose a holding —</option>
-            </select>
-          </div>
-          <div id="xh-details" class="hidden space-y-3">
-            <div class="card-sm p-3 text-xs grid grid-cols-3 gap-2">
-              <div class="text-center"><p class="text-slate-500 mb-0.5">Holding</p><p id="xh-current-qty" class="text-slate-200 font-mono font-semibold"></p></div>
-              <div class="text-center"><p class="text-slate-500 mb-0.5">Avg Cost</p><p id="xh-current-avg" class="text-slate-200 font-mono font-semibold"></p></div>
-              <div class="text-center"><p class="text-slate-500 mb-0.5">LTP</p><p id="xh-ltp" class="text-slate-200 font-mono font-semibold"></p></div>
-            </div>
-            <div class="grid grid-cols-2 gap-3">
-              <div>
-                <label class="text-xs text-slate-400 mb-1 block">Units to Sell</label>
-                <input id="xh-qty" type="number" min="1" onchange="updateExitPreview()" oninput="updateExitPreview()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm mono text-slate-100 focus:border-red-600 focus:outline-none transition"/>
-              </div>
-              <div>
-                <label class="text-xs text-slate-400 mb-1 block">Sell Price (₹)</label>
-                <div class="flex gap-1.5">
-                  <input id="xh-price" type="number" step="0.01" onchange="updateExitPreview()" oninput="updateExitPreview()" placeholder="0.00" class="flex-1 min-w-0 bg-slate-800 border border-slate-700 rounded-lg px-3 py-2.5 text-sm mono text-slate-100 focus:border-red-600 focus:outline-none transition"/>
-                  <button onclick="useExitLTP()" class="px-2.5 py-1 rounded-lg bg-blue-800 hover:bg-blue-700 text-xs text-blue-200 font-medium whitespace-nowrap transition" title="Fill with current LTP">LTP</button>
-                </div>
-              </div>
-            </div>
-            <div id="xh-preview" class="card-sm p-3 text-xs space-y-1.5 min-h-[60px]">
-              <span class="text-slate-500">Enter quantity and price to see P&L preview.</span>
-            </div>
-            <div id="xh-error" class="hidden text-xs text-red-400 px-1"></div>
-            <button id="xh-confirm-btn" onclick="confirmExitHolding()" disabled class="w-full py-2.5 rounded-lg bg-red-700 hover:bg-red-600 text-sm text-white font-semibold transition disabled:opacity-30 disabled:cursor-not-allowed">Confirm Exit</button>
-          </div>
-          <div id="xh-empty" class="text-xs text-slate-500 py-6 text-center">Select a holding above to begin.</div>
-        </div>
-      </div>
-
+  <!-- OPEN PREDICTIONS SUMMARY -->
+  <div>
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="font-bold text-base text-slate-200">Open Predictions</h2>
+      <button onclick="showTab('intelligence')" class="text-xs text-blue-400 hover:text-blue-300">View full accuracy →</button>
     </div>
+    <div id="openPredictions" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3"></div>
+  </div>
 
-    <!-- Recent trades log -->
-    <div class="card p-4 mt-4">
-      <div class="flex items-center justify-between mb-3">
-        <h3 class="text-sm font-semibold text-slate-300">📋 Session Trade Log</h3>
-        <button onclick="clearTradeLog()" class="text-xs text-slate-600 hover:text-slate-400 transition">Clear</button>
-      </div>
-      <div id="tradeLog" class="space-y-2 text-xs">
-        <p class="text-slate-600">No trades this session.</p>
-      </div>
-    </div>
+</div>
 
-    <!-- Export reminder -->
-    <div class="card p-3 mt-3 text-xs text-slate-500 border-slate-800 flex items-center gap-2">
-      <span>💡</span>
-      <span>Changes are saved in your browser. Click <button onclick="exportHoldings()" class="text-blue-400 hover:text-blue-300 underline">↓ Export holdings.json</button> and drop the file into your <code class="text-slate-400">data/</code> folder to make them permanent across devices.</span>
-    </div>
-  </section>
+<!-- ═══════════ PORTFOLIO TAB ═══════════ -->
+<div id="tab-portfolio" class="tab-pane">
 
-  <!-- ══════════ TAB: OPPORTUNITIES ══════════ -->
-  <section id="tab-opportunities" class="hidden fade-in">
-    <div class="mb-3">
-      <h2 class="font-semibold mb-1">🔍 New Opportunities</h2>
-      <p class="text-xs text-slate-400">Data-anchored opportunities based on latest intelligence. Not financial advice.</p>
+  <!-- Summary Bar -->
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+    <div class="card p-4">
+      <div class="text-xs text-slate-500 mb-1">Total Invested</div>
+      <div class="text-xl font-bold mono text-slate-100" id="portTotalInvested">—</div>
     </div>
-    <div id="oppCards" class="space-y-3"></div>
-    <div class="card p-4 mt-4 border-yellow-900/40" style="background:linear-gradient(90deg,rgba(202,138,4,0.08),transparent)">
-      <div class="flex items-start gap-3">
-        <span class="text-xl">⚠️</span>
-        <div>
-          <h3 class="text-sm font-semibold text-yellow-300 mb-1">IT Sector Gap — Flagged Every Week</h3>
-          <p class="text-xs text-slate-400 leading-relaxed">Portfolio has <strong class="text-white">zero IT exposure</strong>. With INR under depreciation pressure from the crude import bill shock, IT companies (USD-earners like TCS, Infosys, HCL, Wipro) are a natural portfolio hedge. IT sector is described as "cheap" by analysts vs PSU/infra. Nifty IT is not directly affected by crude prices.</p>
-          <p class="text-xs text-blue-400 mt-2">📌 Action: Plan Nifty IT ETF entry when Nifty finds support at ~22,000. Target 5–8% portfolio allocation.</p>
-        </div>
-      </div>
+    <div class="card p-4">
+      <div class="text-xs text-slate-500 mb-1">Current Value</div>
+      <div class="text-xl font-bold mono" id="portCurrentValue">—</div>
     </div>
-  </section>
+    <div class="card p-4">
+      <div class="text-xs text-slate-500 mb-1">Total P&L</div>
+      <div class="text-xl font-bold mono" id="portTotalPnl">—</div>
+    </div>
+    <div class="card p-4">
+      <div class="text-xs text-slate-500 mb-1">Return %</div>
+      <div class="text-xl font-bold mono" id="portReturnPct">—</div>
+    </div>
+  </div>
 
-  <!-- ══════════ TAB: REPORTS ══════════ -->
-  <section id="tab-reports" class="hidden fade-in">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
-      <div class="card p-4">
-        <h2 class="font-semibold mb-3">📁 All Reports</h2>
-        <div id="reportsList" class="space-y-2"></div>
-      </div>
-      <div class="card p-4 lg:col-span-2">
-        <div class="flex items-center justify-between mb-3">
-          <h2 class="font-semibold" id="reportViewTitle">Select a report to view</h2>
-          <button id="downloadReportBtn" class="hidden text-xs px-3 py-1.5 bg-slate-700 rounded-lg hover:bg-slate-600 no-print" onclick="window.print()">⬇ Print/PDF</button>
-        </div>
-        <div id="reportViewer" class="prose-sm text-slate-300 leading-relaxed text-sm overflow-y-auto" style="max-height:70vh; min-height:200px;">
-          <p class="text-slate-500 text-xs">Select a report from the left panel to read it here.</p>
-        </div>
-      </div>
+  <!-- Holdings by Broker -->
+  <div class="mb-4 flex items-center gap-3">
+    <h2 class="font-bold text-base text-slate-200">Holdings</h2>
+    <div class="flex gap-2">
+      <button onclick="filterBroker('ALL')" id="broker-ALL" class="text-xs px-3 py-1 rounded-full bg-blue-700 text-white font-semibold">All</button>
+      <button onclick="filterBroker('ICICI')" id="broker-ICICI" class="text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-300 hover:bg-slate-700 font-semibold">ICICI</button>
+      <button onclick="filterBroker('GROWW')" id="broker-GROWW" class="text-xs px-3 py-1 rounded-full bg-slate-800 text-slate-300 hover:bg-slate-700 font-semibold">Groww</button>
     </div>
-  </section>
+    <button onclick="refreshPrices()" class="ml-auto text-xs text-blue-400 hover:text-blue-300">⟳ Live prices</button>
+  </div>
 
-</main>
+  <div class="card overflow-x-auto mb-6">
+    <table class="holdings-table w-full">
+      <thead>
+        <tr>
+          <th class="text-left">Stock</th>
+          <th class="text-left">Broker</th>
+          <th class="text-right">Qty</th>
+          <th class="text-right">Avg Buy</th>
+          <th class="text-right">LTP</th>
+          <th class="text-right">Value</th>
+          <th class="text-right">P&L</th>
+          <th class="text-right">P&L %</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody id="holdingsTableBody">
+        <tr><td colspan="9" class="text-center text-slate-500 py-8">Loading holdings…</td></tr>
+      </tbody>
+    </table>
+  </div>
 
-<!-- ═══════════════════════ REPORT MODAL (mobile) ═══════════════════════ -->
-<div id="modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 no-print" style="background:rgba(0,0,0,0.8)">
-  <div class="card w-full max-w-3xl max-h-[85vh] flex flex-col">
-    <div class="flex items-center justify-between p-4 border-b border-slate-700">
-      <h3 id="modalTitle" class="font-semibold text-sm"></h3>
-      <button onclick="closeModal()" class="text-slate-400 hover:text-white text-lg">✕</button>
+  <!-- Allocation chart -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="card p-5">
+      <h3 class="font-semibold text-sm text-slate-300 mb-4">Allocation by Value</h3>
+      <canvas id="allocationChart" height="220"></canvas>
     </div>
-    <div id="modalBody" class="p-4 overflow-y-auto text-xs text-slate-300 leading-relaxed flex-1"></div>
+    <div class="card p-5">
+      <h3 class="font-semibold text-sm text-slate-300 mb-4">P&L by Holding</h3>
+      <canvas id="pnlChart" height="220"></canvas>
+    </div>
   </div>
 </div>
 
-<!-- ═══════════════════════ SCRIPT ═══════════════════════ -->
+<!-- ═══════════ INTELLIGENCE TAB ═══════════ -->
+<div id="tab-intelligence" class="tab-pane">
+
+  <!-- Next Session Full Forecasts -->
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <h2 class="font-bold text-base text-slate-200">Next Session Forecasts</h2>
+      <span class="badge badge-OPEN" id="forecastSessionLabel">Apr 7, 2026</span>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4" id="fullForecastGrid"></div>
+  </div>
+
+  <!-- L1 Scorecard -->
+  <div class="mb-8">
+    <h2 class="font-bold text-base text-slate-200 mb-4">📊 L1 — Accuracy Scorecard</h2>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4" id="l1Cards"></div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="card p-4" id="l1ByConfidence"></div>
+      <div class="card p-4" id="l1BySector"></div>
+    </div>
+  </div>
+
+  <!-- L2 RCA -->
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <h2 class="font-bold text-base text-slate-200">🔬 L2 — Wrong Prediction RCA</h2>
+      <span class="text-xs text-slate-500">Root cause analysis of every miss</span>
+    </div>
+    <div id="l2RcaLog" class="space-y-4"></div>
+  </div>
+
+  <!-- L3 Trend + Factor Performance -->
+  <div>
+    <div class="flex items-center gap-3 mb-4">
+      <h2 class="font-bold text-base text-slate-200">📈 L3 — Trend & Framework</h2>
+      <span class="text-xs text-slate-500">How are we improving?</span>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="card p-5" id="l3Trend"></div>
+      <div class="card p-5" id="l3FactorPerf"></div>
+    </div>
+    <div class="card p-5 mt-4" id="l3FrameworkLog"></div>
+  </div>
+
+</div>
+
+<!-- ═══════════ HISTORY TAB ═══════════ -->
+<div id="tab-history" class="tab-pane">
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Briefings list -->
+    <div class="md:col-span-1">
+      <h2 class="font-bold text-base text-slate-200 mb-3">Briefings</h2>
+      <div id="briefingsList" class="space-y-2"></div>
+    </div>
+    <!-- Briefing content -->
+    <div class="md:col-span-2">
+      <div class="card p-6" id="briefingContent">
+        <div class="text-slate-500 text-sm text-center py-12">← Select a briefing to read</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Prediction Lifecycle -->
+  <div class="mt-8">
+    <h2 class="font-bold text-base text-slate-200 mb-4">Prediction Lifecycle</h2>
+    <div id="predictionHistory" class="space-y-4"></div>
+  </div>
+
+</div>
+
+<!-- ═══════════ TRADE TAB ═══════════ -->
+<div id="tab-trade" class="tab-pane">
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+
+    <!-- Enter Holding -->
+    <div class="card p-5">
+      <h2 class="font-bold text-base text-slate-200 mb-4">📥 Enter Holding (New Buy)</h2>
+      <div class="space-y-3">
+        <div>
+          <label class="text-xs text-slate-400 mb-1 block">Stock Symbol *</label>
+          <input id="enterSymbol" type="text" placeholder="e.g. SWIGGY, COALINDIA" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-blue-500"/>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs text-slate-400 mb-1 block">Qty *</label>
+            <input id="enterQty" type="number" placeholder="100" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-blue-500"/>
+          </div>
+          <div>
+            <label class="text-xs text-slate-400 mb-1 block">Buy Price (₹) *</label>
+            <input id="enterPrice" type="number" placeholder="250.00" step="0.01" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-blue-500"/>
+          </div>
+        </div>
+        <div>
+          <label class="text-xs text-slate-400 mb-1 block">Broker *</label>
+          <select id="enterBroker" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500">
+            <option value="ICICI">ICICI Direct</option>
+            <option value="GROWW">Groww</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-slate-400 mb-1 block">Buy Date</label>
+          <input id="enterDate" type="date" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500"/>
+        </div>
+        <button onclick="confirmEnterHolding()" class="w-full py-2.5 bg-emerald-700 hover:bg-emerald-600 rounded-lg text-sm font-semibold text-white transition">Add to Portfolio</button>
+      </div>
+    </div>
+
+    <!-- Exit Holding -->
+    <div class="card p-5">
+      <h2 class="font-bold text-base text-slate-200 mb-4">📤 Exit Holding</h2>
+      <div class="space-y-3">
+        <div>
+          <label class="text-xs text-slate-400 mb-1 block">Select Holding *</label>
+          <select id="exitSelect" onchange="onExitHoldingSelect()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 focus:outline-none focus:border-blue-500">
+            <option value="">— choose holding —</option>
+          </select>
+        </div>
+        <div id="exitHoldingInfo" class="hidden card-sm p-3 text-xs text-slate-400 space-y-1">
+          <div class="flex justify-between"><span>Avg Buy:</span><span id="exitAvgBuy" class="text-slate-200 font-semibold">—</span></div>
+          <div class="flex justify-between"><span>Total Qty:</span><span id="exitTotalQty" class="text-slate-200 font-semibold">—</span></div>
+          <div class="flex justify-between"><span>Current LTP:</span><span id="exitLTPDisplay" class="text-blue-300 font-semibold">—</span></div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="text-xs text-slate-400 mb-1 block">Qty to Sell *</label>
+            <input id="exitQty" type="number" placeholder="0" oninput="updateExitPreview()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-blue-500"/>
+          </div>
+          <div>
+            <label class="text-xs text-slate-400 mb-1 block">Sell Price (₹)</label>
+            <div class="flex gap-1">
+              <input id="exitPrice" type="number" placeholder="0.00" step="0.01" oninput="updateExitPreview()" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100 placeholder-slate-600 focus:outline-none focus:border-blue-500"/>
+              <button onclick="useExitLTP()" class="px-2 py-1.5 bg-blue-700 hover:bg-blue-600 rounded-lg text-xs font-semibold text-white shrink-0">LTP</button>
+            </div>
+          </div>
+        </div>
+        <!-- P&L Preview -->
+        <div id="exitPreview" class="hidden card-sm p-3 text-xs space-y-1.5">
+          <div class="flex justify-between"><span class="text-slate-400">Invested Value</span><span id="prevInvested" class="text-slate-200 mono font-semibold">—</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">Sale Proceeds</span><span id="prevProceeds" class="text-slate-200 mono font-semibold">—</span></div>
+          <div class="flex justify-between border-t border-slate-700 pt-1.5"><span class="text-slate-300 font-semibold">P&L</span><span id="prevPnl" class="mono font-bold text-lg">—</span></div>
+          <div class="flex justify-between"><span class="text-slate-400">Return %</span><span id="prevReturn" class="mono font-semibold">—</span></div>
+        </div>
+        <button onclick="confirmExitHolding()" class="w-full py-2.5 bg-red-800 hover:bg-red-700 rounded-lg text-sm font-semibold text-white transition">Confirm Exit</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Trade Log -->
+  <div>
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="font-bold text-base text-slate-200">Trade Log</h2>
+      <button onclick="clearTradeLog()" class="text-xs text-slate-500 hover:text-red-400">Clear log</button>
+    </div>
+    <div class="card overflow-x-auto">
+      <table class="holdings-table w-full">
+        <thead>
+          <tr>
+            <th class="text-left">Date</th>
+            <th class="text-left">Type</th>
+            <th class="text-left">Stock</th>
+            <th class="text-right">Qty</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">P&L</th>
+            <th class="text-right">Return %</th>
+          </tr>
+        </thead>
+        <tbody id="tradeLogBody">
+          <tr><td colspan="7" class="text-center text-slate-500 py-6 text-sm">No trades yet</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="mt-3 flex justify-end">
+      <button onclick="exportHoldings()" class="text-xs px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded-lg text-slate-300 transition">↓ Export holdings.json</button>
+    </div>
+  </div>
+
+</div>
+
+</main>
+
+<!-- DRILL-DOWN MODAL -->
+<div id="drillModal" class="modal-overlay hidden" onclick="if(event.target===this)closeDrill()">
+  <div class="modal-box m-4">
+    <div class="p-5 border-b border-slate-700 flex items-start justify-between gap-3">
+      <div>
+        <div class="flex items-center gap-2 mb-1" id="drillHeader"></div>
+        <div class="text-sm text-slate-300" id="drillInstruction"></div>
+      </div>
+      <button onclick="closeDrill()" class="text-slate-500 hover:text-slate-300 text-xl shrink-0 mt-1">✕</button>
+    </div>
+    <div class="p-5 space-y-5" id="drillBody"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" style="opacity:0;pointer-events:none;">—</div>
+
 <script>
-// ════════════════════════════════
-// HOLDINGS — loaded dynamically from holdings.json + localStorage
-// ════════════════════════════════
-let HOLDINGS = [];   // populated in loadData()
+// ═══════════════════════════════════════════════════════
+//  GLOBAL STATE
+// ═══════════════════════════════════════════════════════
 const LS_HOLDINGS_KEY = 'portfolio_holdings_v1';
-let _tradeLog = [];  // session-only trade log
+const LS_TRADE_LOG_KEY = 'portfolio_trade_log_v1';
+let HOLDINGS = [];
+let DATA = { signals:{}, predictions:{}, briefings:{}, holdings:{}, forecasts:{}, accuracy:{}, predHistory:{}, actions:{} };
 
-// ════════════════════════════════
-// STATE
-// ════════════════════════════════
-let prices = {};   // { "CDSL.NS": { price, changePct } }
-let signals = null;
-let predictions = null;
-let briefings = null;
-let charts = {};
-
-// ════════════════════════════════
-// PRICE FETCHING (Yahoo Finance chart endpoint via CORS proxy)
-// ════════════════════════════════
-const PROXY = "https://corsproxy.io/?";
-
-async function fetchOnePrice(sym) {
-  try {
-    const url = `${PROXY}https://query1.finance.yahoo.com/v8/finance/chart/${sym}?interval=1d&range=5d`;
-    const r = await fetch(url);
-    const d = await r.json();
-    const meta = d?.chart?.result?.[0]?.meta;
-    if (meta?.regularMarketPrice) {
-      const prev = meta.chartPreviousClose || meta.previousClose || meta.regularMarketPrice;
-      prices[sym] = {
-        price: meta.regularMarketPrice,
-        changePct: ((meta.regularMarketPrice - prev) / prev) * 100,
-        prevClose: prev
-      };
-    }
-  } catch(e) { /* silent per-symbol fail */ }
-}
-
-async function refreshPrices() {
-  const btn = document.getElementById("refreshBtn");
-  const icon = document.getElementById("refreshIcon");
-  btn.disabled = true;
-  icon.classList.add("spinning");
-  btn.classList.replace("bg-blue-600","bg-blue-800");
-
-  const symbols = [...new Set(HOLDINGS.filter(h => !h.isPenny).map(h => h.yahoo))];
-
-  // Fetch in parallel batches of 8 to avoid overwhelming the proxy
-  for (let i = 0; i < symbols.length; i += 8) {
-    const batch = symbols.slice(i, i + 8);
-    await Promise.all(batch.map(fetchOnePrice));
-  }
-
-  const loaded = Object.keys(prices).length;
-  document.getElementById("lastUpdated").textContent =
-    loaded > 0
-      ? `Live prices as of ${new Date().toLocaleTimeString('en-IN')} — ${loaded}/${symbols.length} loaded`
-      : "Price refresh failed — check connection";
-  document.getElementById("priceStatus").textContent =
-    loaded > 0 ? `${loaded} live prices loaded` : "Live prices not loaded";
-  document.getElementById("macroAlert").classList.remove("hidden");
-
-  renderAll();
-  icon.classList.remove("spinning");
-  btn.disabled = false;
-  btn.classList.replace("bg-blue-800","bg-blue-600");
-}
-
-// ════════════════════════════════
-// DATA LOADING
-// ════════════════════════════════
+// ═══════════════════════════════════════════════════════
+//  LOAD ALL DATA
+// ═══════════════════════════════════════════════════════
 async function loadJSON(path) {
-  // Try the given path first, then fall back to the filename at root
-  const filename = path.split("/").pop();
-  const attempts = [path, "./" + filename];
-  for (const p of attempts) {
-    try {
-      const r = await fetch(p + "?t=" + Date.now());
-      if (r.ok) return await r.json();
-    } catch { /* try next */ }
-  }
-  return null;
+  try {
+    const r = await fetch(path + '?t=' + Date.now());
+    if (!r.ok) return null;
+    return await r.json();
+  } catch { return null; }
 }
 
 async function loadData() {
-  const [s, p, b, h, f, a, ph] = await Promise.all([
-    loadJSON("./data/signals-latest.json"),
-    loadJSON("./data/predictions-all.json"),
-    loadJSON("./data/briefings-index.json"),
-    loadJSON("./data/holdings.json"),
-    loadJSON("./data/market-forecasts.json"),
-    loadJSON("./data/accuracy-meta.json"),
-    loadJSON("./data/predictions-history.json"),
+  document.getElementById('lastUpdated').textContent = 'Loading…';
+  const [signals, predictions, briefings, holdings, forecasts, accuracy, predHistory, actions] = await Promise.all([
+    loadJSON('data/signals-latest.json'),
+    loadJSON('data/predictions-all.json'),
+    loadJSON('data/briefings-index.json'),
+    loadJSON('data/holdings.json'),
+    loadJSON('data/market-forecasts.json'),
+    loadJSON('data/accuracy-meta.json'),
+    loadJSON('data/predictions-history.json'),
+    loadJSON('data/actions.json'),
   ]);
-  forecasts    = f;
-  accuracyMeta = a;
-  predHistory  = ph;
-  signals     = s;
-  predictions = p;
-  briefings   = b;
+  DATA = { signals, predictions, briefings, holdings, forecasts, accuracy, predHistory, actions };
 
-  // Holdings: localStorage overrides server file (user edits persist)
-  const stored = localStorage.getItem(LS_HOLDINGS_KEY);
-  if (stored) {
-    try { HOLDINGS = JSON.parse(stored); return; } catch(e) {}
+  // Load holdings: localStorage first (live), then file
+  const lsRaw = localStorage.getItem(LS_HOLDINGS_KEY);
+  if (lsRaw) {
+    try { HOLDINGS = JSON.parse(lsRaw); }
+    catch { HOLDINGS = holdings?.holdings || []; }
+  } else {
+    HOLDINGS = holdings?.holdings || [];
+    saveHoldings();
   }
-  // First load: use server holdings.json, fall back to empty
-  HOLDINGS = (h && Array.isArray(h.holdings)) ? h.holdings : [];
-  saveHoldings();
+
+  renderAll();
+  document.getElementById('lastUpdated').textContent = 'Updated ' + new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
 }
-
-// ════════════════════════════════
-// CALCULATIONS
-// ════════════════════════════════
-function computePortfolioStats() {
-  let totalInvested = 0, totalCurrent = 0, pricesLoaded = 0;
-  HOLDINGS.forEach(h => {
-    const invested = h.qty * h.avg;
-    totalInvested += invested;
-    const p = prices[h.yahoo];
-    if (p) { totalCurrent += h.qty * p.price; pricesLoaded++; }
-    else { totalCurrent += invested; } // fallback to invested if no price
-  });
-  return { totalInvested, totalCurrent, pricesLoaded,
-    totalPnl: totalCurrent - totalInvested,
-    totalPnlPct: ((totalCurrent - totalInvested)/totalInvested)*100 };
-}
-
-function fmtINR(n, compact=false) {
-  if (compact) {
-    if (Math.abs(n) >= 1e7) return "₹" + (n/1e7).toFixed(2) + "Cr";
-    if (Math.abs(n) >= 1e5) return "₹" + (n/1e5).toFixed(2) + "L";
-    if (Math.abs(n) >= 1e3) return "₹" + (n/1e3).toFixed(1) + "K";
-    return "₹" + n.toFixed(0);
-  }
-  return "₹" + n.toLocaleString('en-IN', {maximumFractionDigits:0});
-}
-
-function pnlClass(v) { return v >= 0 ? "text-emerald-400" : "text-red-400"; }
-function pnlArrow(v) { return v >= 0 ? "▲" : "▼"; }
-
-// ════════════════════════════════
-// RENDER FUNCTIONS
-// ════════════════════════════════
-
-function renderSummaryCards() {
-  const s = computePortfolioStats();
-  document.getElementById("totalInvested").textContent = fmtINR(s.totalInvested, true);
-  const curEl = document.getElementById("totalCurrent");
-  curEl.textContent = fmtINR(s.totalCurrent, true);
-  curEl.className = "text-xl font-bold mono " + pnlClass(s.totalPnl);
-
-  const pnlEl = document.getElementById("totalPnl");
-  pnlEl.textContent = (s.totalPnl >= 0 ? "+" : "") + fmtINR(s.totalPnl, true);
-  pnlEl.className = "text-xl font-bold mono " + pnlClass(s.totalPnl);
-
-  const pnlPctEl = document.getElementById("totalPnlPct");
-  pnlPctEl.textContent = pnlArrow(s.totalPnlPct) + " " + Math.abs(s.totalPnlPct).toFixed(2) + "%";
-  pnlPctEl.className = "text-xs mono " + pnlClass(s.totalPnl);
-
-  if (s.pricesLoaded > 0)
-    document.getElementById("priceStatus").textContent = `${s.pricesLoaded} live prices loaded`;
-}
-
-function renderHoldingsTable() {
-  const tbody = document.getElementById("holdingsBody");
-  const rows = HOLDINGS.map(h => {
-    const p = prices[h.yahoo];
-    const ltp = p ? p.price : null;
-    const pnlPct = ltp ? ((ltp - h.avg)/h.avg)*100 : null;
-    const pnlRs = ltp ? (ltp - h.avg) * h.qty : null;
-    const invested = h.avg * h.qty;
-    const dayPct = p ? p.changePct : null;
-    return { ...h, ltp, pnlPct, pnlRs, invested, dayPct };
-  }).sort((a,b) => (b.pnlPct??0) - (a.pnlPct??0));
-
-  tbody.innerHTML = rows.map(h => {
-    const srcColor = h.source === "ICICI" ? "text-blue-400" : "text-purple-400";
-    const ltpStr = h.ltp ? fmtINR(h.ltp) : '<span class="text-slate-600">—</span>';
-    const dayStr = h.dayPct != null ? `<span class="${pnlClass(h.dayPct)}">${h.dayPct>=0?"+":""}${h.dayPct.toFixed(2)}%</span>` : '<span class="text-slate-600">—</span>';
-    const pnlPctStr = h.pnlPct != null ? `<span class="${pnlClass(h.pnlPct)}">${h.pnlPct>=0?"+":""}${h.pnlPct.toFixed(1)}%</span>` : `<span class="text-slate-500">${fmtINR(h.invested,true)} inv.</span>`;
-    const pnlRsStr = h.pnlRs != null ? `<span class="${pnlClass(h.pnlRs)}">${h.pnlRs>=0?"+":""}${fmtINR(h.pnlRs,true)}</span>` : '<span class="text-slate-600">—</span>';
-    const rowCls = h.ltp ? (h.ltp > h.avg ? "pos" : "neg") : "";
-    return `<tr class="${rowCls} hover:bg-slate-800/30 transition">
-      <td class="py-1.5 pr-3 font-medium text-slate-100">${h.symbol}${h.note?` <span class="text-slate-600 text-xs">(${h.note})</span>`:""}</td>
-      <td class="text-right px-2 text-slate-300 mono">${h.qty.toLocaleString()}</td>
-      <td class="text-right px-2 mono text-slate-400">${fmtINR(h.avg)}</td>
-      <td class="text-right px-2 mono">${ltpStr}</td>
-      <td class="text-right px-2 mono">${dayStr}</td>
-      <td class="text-right px-2 mono pnl">${pnlPctStr}</td>
-      <td class="text-right pl-2 mono pnl">${pnlRsStr}</td>
-      <td class="pl-3"><span class="text-xs ${srcColor}">${h.source}</span></td>
-    </tr>`;
-  }).join("");
-}
-
-function renderPlChart() {
-  if (charts.pl) { charts.pl.destroy(); }
-  const ctx = document.getElementById("plChart").getContext("2d");
-
-  // Build data: for each holding with a price, compute P&L%
-  const data = HOLDINGS
-    .filter(h => !h.isPenny)
-    .map(h => {
-      const p = prices[h.yahoo];
-      const ltp = p ? p.price : h.avg; // fallback to avg (shows 0% if no price)
-      return { label: h.symbol, pnlPct: ((ltp-h.avg)/h.avg)*100, hasPrice: !!p };
-    })
-    .sort((a,b) => b.pnlPct - a.pnlPct);
-
-  // Deduplicate labels for chart
-  const seen = new Set();
-  const unique = data.filter(d => { if(seen.has(d.label)) return false; seen.add(d.label); return true; });
-
-  charts.pl = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: unique.map(d => d.label),
-      datasets: [{
-        data: unique.map(d => +d.pnlPct.toFixed(2)),
-        backgroundColor: unique.map(d => d.pnlPct >= 0 ? "rgba(16,185,129,0.7)" : "rgba(239,68,68,0.7)"),
-        borderColor: unique.map(d => d.pnlPct >= 0 ? "rgba(16,185,129,1)" : "rgba(239,68,68,1)"),
-        borderWidth: 1,
-        borderRadius: 3,
-      }]
-    },
-    options: {
-      indexAxis: "y",
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false },
-        tooltip: { callbacks: { label: ctx => ` ${ctx.raw >= 0 ? "+" : ""}${ctx.raw}%` } } },
-      scales: {
-        x: { grid: { color:"rgba(255,255,255,0.05)" }, ticks: { color:"#94a3b8", font:{size:10}, callback: v => v+"%"} },
-        y: { grid: { display:false }, ticks: { color:"#94a3b8", font:{size:9} } }
-      }
-    }
-  });
-}
-
-function renderAllocChart() {
-  if (charts.alloc) { charts.alloc.destroy(); }
-  const ctx = document.getElementById("allocChart").getContext("2d");
-
-  const sectors = {
-    "Defence": ["COCHINSHIP","MAZDOCK","ASTRA MICRO","HDFC Defence"],
-    "PSU Infra": ["IRCON","IREDA","IRFC","NHPC","NCC","IRCON (Groww)","IREDA"],
-    "Energy/Power": ["MRPL","ADANI POWER","SUZLON","SUZLON (Groww)","COAL INDIA","ACME SOLAR","NHPC"],
-    "Consumer/Tech": ["ITC","SWIGGY","SWIGGY (Groww)","CDSL","JIOFIN","JIOFIN (Groww)"],
-    "Precious Metals": ["SBISILVER","SETFGOLD"],
-    "Finance/Infra": ["ADANI PORT","RELIANCE","PI INDUSTRIES","GODREJPROP"],
-    "EV/Mobility": ["TATA MOTORS","TATA MOTORS DVR","INDIGO"],
-    "Other": ["IGIL","IGIL (Groww)","URBANCO","PREMEXPLN","SATIA IND.","SAWACA","SHREE GANESH B.","ACME SOLAR","JIOFIN"]
-  };
-
-  const sectorTotals = {};
-  HOLDINGS.forEach(h => {
-    const inv = h.avg * h.qty;
-    let found = false;
-    for (const [sec, syms] of Object.entries(sectors)) {
-      if (syms.some(s => h.symbol.includes(s.replace(" (Groww)","").replace(" (ICICI)","")))) {
-        sectorTotals[sec] = (sectorTotals[sec]||0) + inv; found = true; break;
-      }
-    }
-    if (!found) sectorTotals["Other"] = (sectorTotals["Other"]||0) + inv;
-  });
-
-  const entries = Object.entries(sectorTotals).sort((a,b)=>b[1]-a[1]);
-  const colors = ["#3b82f6","#8b5cf6","#10b981","#f59e0b","#ef4444","#ec4899","#14b8a6","#94a3b8"];
-
-  charts.alloc = new Chart(ctx, {
-    type: "doughnut",
-    data: {
-      labels: entries.map(e=>e[0]),
-      datasets: [{ data: entries.map(e=>Math.round(e[1])),
-        backgroundColor: colors.slice(0,entries.length),
-        borderColor: "#060d1c", borderWidth: 2 }]
-    },
-    options: {
-      responsive:true, maintainAspectRatio:false,
-      plugins: {
-        legend: { position:"bottom", labels:{ color:"#94a3b8", font:{size:10}, padding:8, boxWidth:10 } },
-        tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${fmtINR(ctx.raw,true)}` } }
-      }
-    }
-  });
-}
-
-function renderSignalsSection() {
-  if (!signals) return;
-  document.getElementById("signalsDate").textContent = "Generated: " + (signals.generated || "—");
-
-  // Critical signals for overview
-  const critical = signals.signals.filter(s => s.category === "CRITICAL");
-  document.getElementById("criticalSignalsList").innerHTML = critical.map(s => signalCard(s, true)).join("");
-
-  // Actions
-  const actions = signals.signals.filter(s => s.action && (s.category === "CRITICAL" || s.category === "HIGH"));
-  document.getElementById("actionsList").innerHTML = actions.map(s => `
-    <div class="card-sm p-3 flex items-start gap-2">
-      <span class="text-base mt-0.5">${s.category==="CRITICAL"?"🔴":"🟡"}</span>
-      <div>
-        <p class="text-xs font-medium text-slate-200">${s.symbols.join(", ") || s.title}</p>
-        <p class="text-xs text-slate-400 mt-0.5">${s.action}</p>
-      </div>
-    </div>`).join("");
-
-  // All signals
-  document.getElementById("allSignalsList").innerHTML = signals.signals.map(s => signalCard(s, false)).join("");
-
-  // Opportunities
-  if (signals.opportunities) {
-    document.getElementById("opportunitiesList").innerHTML = signals.opportunities.map(o => oppCard(o)).join("");
-    document.getElementById("oppCards").innerHTML = signals.opportunities.map(o => oppCard(o)).join("");
-  }
-}
-
-function signalCard(s, compact) {
-  const badge = `<span class="text-xs px-2 py-0.5 rounded-full font-medium badge-${s.category}">${s.category}</span>`;
-  const dirBadge = s.direction ? `<span class="text-xs px-2 py-0.5 rounded-full badge-${s.direction.replace(" ","")}">${s.direction}</span>` : "";
-  const dots = Array.from({length:5},(_,i)=>`<span class="${i<s.confidence?"text-yellow-400":"text-slate-700"}">★</span>`).join("");
-  return `<div class="card-sm p-3 signal-${s.category}">
-    <div class="flex items-start justify-between gap-2 mb-1.5">
-      <div class="flex items-center gap-1.5 flex-wrap">${badge}${dirBadge}<span class="text-xs">${dots}</span></div>
-      <span class="text-xs text-slate-500">${s.symbols?.join(", ")||""}</span>
-    </div>
-    <p class="text-xs font-semibold text-slate-100 mb-1">${s.title}</p>
-    <p class="text-xs text-slate-400 leading-relaxed">${s.summary}</p>
-    ${!compact && s.action ? `<p class="text-xs text-blue-400 mt-1.5">📌 ${s.action}</p>` : ""}
-  </div>`;
-}
-
-function oppCard(o) {
-  const priBadge = o.priority === "HIGH" ? "bg-orange-900/60 text-orange-300" : "bg-blue-900/60 text-blue-300";
-  return `<div class="card p-4">
-    <div class="flex items-start justify-between gap-2 mb-2">
-      <h3 class="text-sm font-semibold text-slate-100">${o.title}</h3>
-      <span class="text-xs px-2 py-0.5 rounded-full ${priBadge} whitespace-nowrap">${o.priority}</span>
-    </div>
-    <p class="text-xs text-slate-300 leading-relaxed mb-2">${o.reasoning}</p>
-    <div class="grid grid-cols-2 gap-2">
-      <div><p class="text-xs text-slate-500">Entry Condition</p><p class="text-xs text-slate-300">${o.entry_condition}</p></div>
-      <div><p class="text-xs text-slate-500">Risk</p><p class="text-xs text-slate-300">${o.risk}</p></div>
-    </div>
-  </div>`;
-}
-
-// ════════════════════════════════
-// PREDICTIONS — HORIZON FILTER + TABLE
-// ════════════════════════════════
-let _predFilter = 'ALL';
-
-function filterPredictions(filter, btn) {
-  _predFilter = filter;
-  document.querySelectorAll('.pred-filter-btn').forEach(b => {
-    b.className = b.className.replace(/bg-blue-700|text-white|bg-red-900\/60|text-red-300/g, '');
-    if (!b.className.includes('bg-')) {
-      b.className += ' bg-slate-700 text-slate-300';
-    }
-  });
-  btn.className = btn.className.replace('bg-slate-700 text-slate-300', '');
-  if (filter === 'OVERDUE') btn.className += ' bg-red-900/60 text-red-300';
-  else btn.className += ' bg-blue-700 text-white';
-  renderPredBody();
-}
-
-function togglePredDetail(id) {
-  const row = document.getElementById('pd-' + id);
-  if (row) row.classList.toggle('hidden');
-}
-
-function renderPredBody() {
-  if (!predictions) return;
-  const today = new Date(); today.setHours(0,0,0,0);
-  let p = [...predictions.predictions];
-
-  if (_predFilter === '7D')     p = p.filter(x => x.horizon === '7D');
-  else if (_predFilter === '4W') p = p.filter(x => x.horizon === '4W');
-  else if (_predFilter === '2M') p = p.filter(x => x.horizon === '2M');
-  else if (_predFilter === 'OPEN')    p = p.filter(x => !x.outcome);
-  else if (_predFilter === 'OVERDUE') p = p.filter(x => !x.outcome && new Date(x.check_date) < today);
-
-  const hzColor = { '1D':'bg-orange-900/50 text-orange-300', '7D':'bg-purple-900/50 text-purple-300', '4W':'bg-blue-900/50 text-blue-300', '2M':'bg-cyan-900/50 text-cyan-300', '6M':'bg-teal-900/50 text-teal-300' };
-
-  document.getElementById('predBody').innerHTML = p.map(pr => {
-    const checkDate = new Date(pr.check_date);
-    const daysLeft  = Math.ceil((checkDate - today) / 86400000);
-    const isOverdue = !pr.outcome && daysLeft < 0;
-    const daysText  = pr.outcome ? '✓' : isOverdue ? `${Math.abs(daysLeft)}d ago` : `${daysLeft}d`;
-    const daysCls   = pr.outcome ? 'text-slate-600' : isOverdue ? 'text-red-400 font-bold' : daysLeft <= 3 ? 'text-yellow-400 font-semibold' : 'text-slate-300';
-    const rowBg     = pr.outcome==='RIGHT' ? 'bg-green-950/20' : pr.outcome==='WRONG' ? 'bg-red-950/20' : isOverdue ? 'bg-red-950/10' : '';
-
-    const outBadge = pr.outcome === 'RIGHT'    ? '<span class="px-1.5 py-0.5 rounded-full pred-RIGHT text-xs">✓ RIGHT</span>'
-                   : pr.outcome === 'WRONG'    ? '<span class="px-1.5 py-0.5 rounded-full pred-WRONG text-xs">✗ WRONG</span>'
-                   : pr.outcome === 'PARTIAL'  ? '<span class="px-1.5 py-0.5 rounded-full pred-PARTIAL text-xs">~ PART</span>'
-                   : isOverdue                 ? '<span class="px-1.5 py-0.5 rounded-full bg-red-900/60 text-red-300 text-xs">⚠ DUE</span>'
-                   :                            '<span class="px-1.5 py-0.5 rounded-full pred-OPEN text-xs">OPEN</span>';
-
-    const dots = Array.from({length:5},(_,i)=>`<span class="${i<pr.confidence?"text-yellow-400":"text-slate-800"}">★</span>`).join("");
-    const hzBadge = `<span class="px-1.5 py-0.5 rounded text-xs font-mono ${hzColor[pr.horizon]||'bg-slate-700 text-slate-400'}">${pr.horizon}</span>`;
-
-    const checkedTags  = (pr.factors_checked||[]).map(f=>`<span class="px-1 py-0.5 rounded bg-slate-700/60 text-blue-400 font-mono text-xs">${f}</span>`).join(' ');
-    const missingTags  = (pr.factors_not_checked||[]).map(f=>`<span class="px-1 py-0.5 rounded bg-slate-800 text-slate-600 font-mono text-xs line-through">${f}</span>`).join(' ');
-    const postmortem   = pr.postmortem ? `<div class="mt-2 p-2 rounded bg-amber-950/40 border border-amber-900/40 text-xs text-amber-200"><span class="font-semibold">Post-mortem:</span> ${pr.postmortem}</div>` : '';
-    const evidence     = pr.outcome_evidence ? `<p class="text-xs text-slate-500 mt-1"><span class="text-slate-400">Evidence:</span> ${pr.outcome_evidence}</p>` : '';
-
-    const detail = `<tr id="pd-${pr.pred_id}" class="hidden">
-      <td colspan="8" class="px-4 pb-4 pt-1" style="background:rgba(15,23,42,0.6)">
-        <p class="text-xs text-slate-400 leading-relaxed mb-2 border-l-2 border-slate-700 pl-3">${pr.reasoning}</p>
-        <div class="flex flex-wrap gap-1 items-center mb-1">
-          <span class="text-slate-500 text-xs">Factors checked:</span> ${checkedTags}
-          ${missingTags ? `<span class="text-slate-600 text-xs ml-2">Not checked:</span> ${missingTags}` : ''}
-        </div>
-        ${postmortem}${evidence}
-      </td>
-    </tr>`;
-
-    return `<tr class="hover:bg-slate-800/20 transition cursor-pointer ${rowBg}" onclick="togglePredDetail('${pr.pred_id}')">
-      <td class="py-2.5 px-3">
-        <span class="font-medium text-slate-100 text-xs">${pr.stock}</span>
-        <span class="text-slate-600 text-xs ml-1">${pr.pred_id}</span>
-      </td>
-      <td class="py-2.5 px-3 text-slate-400 text-xs" style="max-width:220px">${pr.prediction.substring(0,65)}${pr.prediction.length>65?'…':''}</td>
-      <td class="py-2.5 px-2 text-center">${hzBadge}</td>
-      <td class="py-2.5 px-2 text-center text-slate-300 font-mono text-xs">${pr.target||'—'}</td>
-      <td class="py-2.5 px-2 text-center text-slate-400 text-xs">${pr.check_date}</td>
-      <td class="py-2.5 px-2 text-center font-mono text-xs ${daysCls}">${daysText}</td>
-      <td class="py-2.5 px-2 text-center text-xs">${dots}</td>
-      <td class="py-2.5 px-2 text-center">${outBadge}</td>
-    </tr>${detail}`;
-  }).join('') || '<tr><td colspan="8" class="py-8 text-center text-slate-500 text-xs">No predictions match this filter.</td></tr>';
-}
-
-function renderPredictionsSection() {
-  if (!predictions) return;
-  const meta = predictions.accuracy_meta;
-  const p    = predictions.predictions;
-  const today = new Date(); today.setHours(0,0,0,0);
-
-  const open    = p.filter(x => !x.outcome).length;
-  const right   = p.filter(x => x.outcome === 'RIGHT').length;
-  const wrong   = p.filter(x => x.outcome === 'WRONG').length;
-  const scored  = p.filter(x => x.outcome).length;
-
-  document.getElementById("statTotal").textContent    = p.length;
-  document.getElementById("statOpen").textContent     = open;
-  document.getElementById("statRight").textContent    = right;
-  document.getElementById("statWrong").textContent    = wrong;
-  document.getElementById("statAccuracy").textContent = scored > 0 ? ((right/scored)*100).toFixed(0)+"%" : "—";
-
-  renderPredBody();
-
-  // Overview snapshot — show most urgent open predictions first
-  const urgent = [...p].filter(x=>!x.outcome).sort((a,b)=>new Date(a.check_date)-new Date(b.check_date));
-  const hzTxtColor = { '1D':'text-orange-300', '7D':'text-purple-300', '4W':'text-blue-300', '2M':'text-cyan-300', '6M':'text-teal-300' };
-  document.getElementById("predSnap").innerHTML = urgent.slice(0,6).map(pr => {
-    const daysLeft  = Math.ceil((new Date(pr.check_date) - today) / 86400000);
-    const isOverdue = daysLeft < 0;
-    const borderCls = isOverdue ? 'border-red-900/60' : 'border-blue-800/40';
-    const dots = Array.from({length:5},(_,i)=>`<span class="${i<pr.confidence?"text-yellow-400":"text-slate-800"}">★</span>`).join("");
-    return `<div class="card-sm p-3 border ${borderCls}">
-      <div class="flex justify-between items-start mb-1">
-        <span class="font-mono text-xs ${hzTxtColor[pr.horizon]||'text-slate-400'}">${pr.horizon} · ${pr.pred_id}</span>
-        ${isOverdue ? '<span class="text-xs text-red-400 font-semibold">⚠ OVERDUE</span>' : `<span class="text-xs text-slate-500">${daysLeft}d left</span>`}
-      </div>
-      <p class="text-xs font-semibold text-slate-200 mb-1">${pr.stock}</p>
-      <p class="text-xs text-slate-400 leading-tight">${pr.prediction.substring(0,75)}${pr.prediction.length>75?"…":""}</p>
-      <div class="flex justify-between items-center mt-2">
-        <span class="text-xs">${dots}</span>
-        <span class="text-xs text-slate-500">→ ${pr.target||''} · check ${pr.check_date}</span>
-      </div>
-    </div>`;
-  }).join("");
-
-  // Accuracy chart by category
-  if (charts.predAcc) charts.predAcc.destroy();
-  const cats = ["CRITICAL","HIGH","MEDIUM"];
-  const ctx  = document.getElementById("predAccuracyChart").getContext("2d");
-  charts.predAcc = new Chart(ctx, {
-    type: "bar",
-    data: {
-      labels: cats,
-      datasets: [
-        { label:"Right",   data: cats.map(c=>meta.by_category?.[c]?.right||0),   backgroundColor:"rgba(16,185,129,0.75)", borderRadius:3 },
-        { label:"Partial", data: cats.map(c=>meta.by_category?.[c]?.partial||0), backgroundColor:"rgba(234,179,8,0.75)",  borderRadius:3 },
-        { label:"Wrong",   data: cats.map(c=>meta.by_category?.[c]?.wrong||0),   backgroundColor:"rgba(239,68,68,0.75)",  borderRadius:3 },
-      ]
-    },
-    options: {
-      responsive:true, maintainAspectRatio:false,
-      plugins:{ legend:{ labels:{ color:"#94a3b8", font:{size:11} } } },
-      scales:{
-        x:{ stacked:true, grid:{display:false}, ticks:{color:"#94a3b8"} },
-        y:{ stacked:true, grid:{color:"rgba(255,255,255,0.05)"}, ticks:{color:"#94a3b8",stepSize:1} }
-      }
-    }
-  });
-}
-
-function renderReports() {
-  if (!briefings) return;
-  const allReports = [
-    ...(briefings.briefings||[]).map(b=>({...b,rtype:"Daily"})),
-    ...(briefings.weekly_reports||[]).map(b=>({...b,rtype:"Weekly"}))
-  ].sort((a,b)=>b.date.localeCompare(a.date));
-
-  document.getElementById("reportsList").innerHTML = allReports.map((b,i) => `
-    <button onclick="viewReport('${b.file}','${b.label||b.date}')" class="w-full text-left card-sm p-3 hover:border-blue-700/50 transition ${i===0?"border-blue-800/50":""}">
-      <div class="flex justify-between items-start">
-        <span class="text-xs font-medium text-slate-200">${b.label||b.date}</span>
-        <span class="text-xs px-1.5 py-0.5 rounded bg-slate-700 text-slate-400">${b.rtype}</span>
-      </div>
-      <p class="text-xs text-slate-500 mt-1 leading-snug">${b.summary||""}</p>
-    </button>`).join("") || '<p class="text-xs text-slate-500">No reports yet.</p>';
-
-  // Auto-load latest
-  if (allReports.length > 0) viewReport(allReports[0].file, allReports[0].label||allReports[0].date);
-}
-
-async function viewReport(filePath, title) {
-  document.getElementById("reportViewTitle").textContent = title;
-  document.getElementById("downloadReportBtn").classList.remove("hidden");
-  const viewer = document.getElementById("reportViewer");
-  viewer.innerHTML = '<div class="shimmer h-4 w-full mb-2"></div><div class="shimmer h-4 w-4/5 mb-2"></div><div class="shimmer h-4 w-3/4"></div>';
-  // Try subfolder path first, then just the filename at root
-  const filename = filePath.split("/").pop();
-  const attempts = ["./" + filePath, "./" + filename];
-  for (const p of attempts) {
-    try {
-      const r = await fetch(p + "?t=" + Date.now());
-      if (r.ok) {
-        const md = await r.text();
-        viewer.innerHTML = `<div class="markdown-body">${marked.parse(md)}</div>`;
-        return;
-      }
-    } catch { /* try next */ }
-  }
-  viewer.innerHTML = `<p class="text-slate-500 text-xs">Could not load: ${filePath}</p>`;
-}
-
-function closeModal() { document.getElementById("modal").classList.add("hidden"); }
-
-// ════════════════════════════════
-// TAB SWITCHING
-// ════════════════════════════════
-function showTab(name, btn) {
-  ["overview","holdings","trade","intelligence","signals","predictions","opportunities","reports"].forEach(t => {
-    document.getElementById("tab-"+t).classList.add("hidden");
-  });
-  document.getElementById("tab-"+name).classList.remove("hidden");
-  document.getElementById("tab-"+name).classList.add("fade-in");
-  document.querySelectorAll(".tab-btn").forEach(b => {
-    b.classList.remove("active"); b.classList.add("text-slate-400");
-  });
-  if (btn) { btn.classList.add("active"); btn.classList.remove("text-slate-400"); }
-  // Populate exit dropdown when trade tab opens
-  if (name === 'trade') populateExitDropdown();
-}
-
-// ════════════════════════════════
-// MASTER RENDER
-// ════════════════════════════════
-function renderAll() {
-  renderSummaryCards();
-  renderHoldingsTable();
-  renderPlChart();
-  renderAllocChart();
-  renderSignalsSection();
-  renderPredictionsSection();
-  renderReports();
-  renderIntelligence();
-  renderTradeLog();
-  populateExitDropdown();
-}
-
-// ════════════════════════════════
-// MARKDOWN STYLES (injected)
-// ════════════════════════════════
-const mdStyle = document.createElement("style");
-mdStyle.textContent = `
-.markdown-body h1{font-size:1.2em;font-weight:700;color:#f1f5f9;margin:1rem 0 0.5rem}
-.markdown-body h2{font-size:1em;font-weight:600;color:#cbd5e1;margin:0.9rem 0 0.4rem;border-bottom:1px solid #1e293b;padding-bottom:0.3rem}
-.markdown-body h3{font-size:0.9em;font-weight:600;color:#94a3b8;margin:0.7rem 0 0.3rem}
-.markdown-body p{margin:0.4rem 0;font-size:0.82rem;line-height:1.6;color:#94a3b8}
-.markdown-body strong{color:#e2e8f0;font-weight:600}
-.markdown-body ul,ol{padding-left:1.2rem;margin:0.4rem 0}
-.markdown-body li{font-size:0.82rem;color:#94a3b8;margin:0.2rem 0;line-height:1.5}
-.markdown-body table{width:100%;border-collapse:collapse;font-size:0.78rem;margin:0.6rem 0}
-.markdown-body th{background:#0f1e35;color:#94a3b8;font-weight:500;padding:0.4rem 0.6rem;text-align:left;border:1px solid #1e3a5f}
-.markdown-body td{padding:0.35rem 0.6rem;border:1px solid #1a2d47;color:#cbd5e1}
-.markdown-body tr:hover td{background:#0f1e35}
-.markdown-body code{background:#1e293b;color:#7dd3fc;padding:0.1rem 0.3rem;border-radius:3px;font-size:0.78rem}
-.markdown-body blockquote{border-left:3px solid #3b82f6;padding-left:0.8rem;color:#64748b;margin:0.5rem 0}
-.markdown-body hr{border:none;border-top:1px solid #1e293b;margin:0.8rem 0}
-`;
-document.head.appendChild(mdStyle);
-
-// ════════════════════════════════
-// INTELLIGENCE TAB
-// ════════════════════════════════
-let forecasts    = null;
-let accuracyMeta = null;
-let predHistory  = null;
-
-async function loadIntelligenceData() {
-  const [f, a, h] = await Promise.all([
-    loadJSON('./data/market-forecasts.json'),
-    loadJSON('./data/accuracy-meta.json'),
-    loadJSON('./data/predictions-history.json'),
-  ]);
-  forecasts    = f;
-  accuracyMeta = a;
-  predHistory  = h;
-}
-
-function renderIntelligence() {
-  if (!forecasts || !accuracyMeta) return;
-  renderNextSession();
-  renderL1Scorecard();
-  renderL2RCA();
-  renderL3Trend();
-  renderFactorPerformance();
-}
-
-// ── NEXT SESSION ─────────────────────────────────────────────────────────────
-function renderNextSession() {
-  const ns = forecasts.next_session;
-  if (!ns) return;
-
-  document.getElementById('intel-session-label').textContent = `Next Session — ${ns.date}`;
-  document.getElementById('intel-generated-at').textContent  = `Generated: ${ns.generated_at} · Base case: Scenario ${ns.base_case_scenario}`;
-
-  const biasColors = {
-    'BEARISH_SIDEWAYS': 'bg-red-900/60 text-red-200',
-    'BULLISH':          'bg-green-900/60 text-green-200',
-    'VOLATILE':         'bg-orange-900/60 text-orange-200',
-    'FLAT':             'bg-slate-700 text-slate-300',
-  };
-  const badge = document.getElementById('intel-bias-badge');
-  badge.className = `px-4 py-2 rounded-xl text-sm font-semibold ${biasColors[ns.market_bias]||'bg-slate-700 text-slate-300'}`;
-  badge.textContent = ns.market_bias.replace('_',' ');
-
-  // Dominant variable banner
-  const dv = document.getElementById('intel-dominant-var');
-  dv.querySelector('span:last-child').textContent = ns.dominant_variable || '';
-
-  // Scenarios
-  const scenColors = ['border-blue-800/50','border-red-800/50','border-green-800/50'];
-  const probColors = ['text-blue-300','text-red-300','text-green-300'];
-  document.getElementById('intel-scenarios').innerHTML = (ns.scenarios||[]).map((s,i) => `
-    <div class="card-sm p-3 border ${scenColors[i]||'border-slate-700'}">
-      <div class="flex items-center justify-between mb-1.5">
-        <span class="text-xs font-semibold text-slate-200">Scenario ${s.id} — ${s.label}</span>
-        <span class="text-lg font-bold ${probColors[i]||'text-slate-300'}">${s.probability_pct}%</span>
-      </div>
-      <p class="text-xs text-slate-400 leading-snug mb-2">${s.description}</p>
-      <div class="flex gap-3 text-xs">
-        <span class="text-slate-500">Nifty</span><span class="text-slate-300 mono">${s.nifty_range[0].toLocaleString()}–${s.nifty_range[1].toLocaleString()}</span>
-        <span class="text-slate-500">Brent</span><span class="text-slate-300 mono">$${s.brent_range[0]}–$${s.brent_range[1]}</span>
-      </div>
-    </div>`).join('');
-
-  // Index forecasts
-  const dirIcons = {'DOWN':'▼','FLAT_TO_DOWN':'↘','FLAT':'→','FLAT_TO_UP':'↗','UP':'▲','VOLATILE':'⚡'};
-  const dirColors= {'DOWN':'text-red-400','FLAT_TO_DOWN':'text-orange-400','FLAT':'text-slate-400','FLAT_TO_UP':'text-emerald-400','UP':'text-green-400','VOLATILE':'text-yellow-400'};
-  document.getElementById('intel-indices').innerHTML = (forecasts.index_forecasts||[]).map(f => {
-    const col  = dirColors[f.direction]||'text-slate-400';
-    const icon = dirIcons[f.direction]||'→';
-    const conf = Array.from({length:5},(_,i)=>`<span class="${i<f.confidence?"text-yellow-400":"text-slate-800"}">★</span>`).join('');
-    const chg  = f.change_pct_estimate !== null ? `${f.change_pct_estimate>=0?'+':''}${f.change_pct_estimate}%` : '?%';
-    return `<div class="card-sm p-3">
-      <p class="text-xs text-slate-500 mb-1 truncate">${f.index}</p>
-      <div class="flex items-center gap-1.5 mb-1">
-        <span class="text-xl font-bold ${col}">${icon}</span>
-        <span class="text-sm font-semibold ${col} mono">${chg}</span>
-      </div>
-      ${f.last_close ? `<p class="text-xs text-slate-400 mono mb-1">${f.last_close.toLocaleString()}</p>` : ''}
-      <div class="text-xs">${conf}</div>
-      ${f.watch ? `<p class="text-xs text-yellow-500 mt-1 leading-tight">${f.watch}</p>` : ''}
-    </div>`;
-  }).join('');
-
-  // Holdings forecast table
-  const tbody = document.getElementById('intel-holdings-body');
-  tbody.innerHTML = (forecasts.holding_forecasts||[]).map(f => {
-    const col  = dirColors[f.direction]||'text-slate-400';
-    const icon = dirIcons[f.direction]||'→';
-    const chg  = f.change_pct_estimate !== null ? `${f.change_pct_estimate>=0?'+':''}${f.change_pct_estimate}%` : '—';
-    const range= (f.forecast_low && f.forecast_high) ? `₹${f.forecast_low}–${f.forecast_high}` : '—';
-    const conf = Array.from({length:5},(_,i)=>`<span class="${i<f.confidence?"text-yellow-400":"text-slate-800"}">★</span>`).join('');
-    const keyF = (f.key_factors||[]).slice(0,1).join('');
-    const posInHoldings = HOLDINGS.find(h => h.yahoo === f.yahoo);
-    const rowBg = posInHoldings ? '' : 'opacity-50';
-    return `<tr class="hover:bg-slate-800/20 transition ${rowBg}">
-      <td class="py-2.5 px-3 font-medium text-slate-100">${f.symbol}</td>
-      <td class="py-2.5 px-2 text-center"><span class="${col} font-bold">${icon} ${f.direction.replace('_',' ')}</span></td>
-      <td class="py-2.5 px-2 text-center mono ${col}">${chg}</td>
-      <td class="py-2.5 px-2 text-center mono text-slate-400 text-xs">${range}</td>
-      <td class="py-2.5 px-2 text-center">${conf}</td>
-      <td class="py-2.5 px-3 text-slate-400 text-xs" style="max-width:180px">${keyF}</td>
-      <td class="py-2.5 px-3 text-yellow-500 text-xs" style="max-width:160px">${f.watch||'—'}</td>
-    </tr>`;
-  }).join('');
-}
-
-// ── L1 SCORECARD ─────────────────────────────────────────────────────────────
-function renderL1Scorecard() {
-  const L1 = accuracyMeta.L1_scorecard;
-  const ov = L1.all_time;
-
-  document.getElementById('intel-l1-overall').innerHTML = [
-    { label:'Total Predictions', val: ov.total,        color:'text-blue-400' },
-    { label:'Accuracy',          val: ov.accuracy_pct != null ? ov.accuracy_pct+'%' : '—', color: ov.accuracy_pct >= 60 ? 'text-emerald-400' : 'text-red-400' },
-    { label:'Right',             val: ov.right,         color:'text-emerald-400' },
-    { label:'Wrong',             val: ov.wrong,         color:'text-red-400' },
-  ].map(s => `<div class="card-sm p-3 text-center">
-    <p class="text-2xl font-bold ${s.color}">${s.val}</p>
-    <p class="text-xs text-slate-400 mt-1">${s.label}</p>
-  </div>`).join('');
-
-  // Breakdown by horizon + sector + confidence
-  const makeBreakdown = (title, obj) => {
-    const rows = Object.entries(obj).map(([k,v]) => {
-      const pct = v.accuracy_pct;
-      const barColor = pct === null ? 'bg-slate-700' : pct >= 60 ? 'bg-emerald-600' : 'bg-red-700';
-      const barW = pct !== null ? Math.round(pct) : 0;
-      return `<div class="flex items-center gap-2 mb-1.5">
-        <span class="text-slate-400 w-16 shrink-0">${k}</span>
-        <div class="flex-1 bg-slate-800 rounded-full h-1.5">
-          <div class="${barColor} h-1.5 rounded-full" style="width:${barW}%"></div>
-        </div>
-        <span class="mono text-slate-300 w-12 text-right">${pct !== null ? pct+'%' : '—'} <span class="text-slate-600">${v.scored?`(${v.scored})`:''}
-        </span></span>
-      </div>`;
-    }).join('');
-    return `<div class="card-sm p-3"><p class="text-xs font-semibold text-slate-400 mb-2">${title}</p>${rows}</div>`;
-  };
-
-  document.getElementById('intel-l1-breakdown').innerHTML =
-    makeBreakdown('By Horizon',    L1.by_horizon) +
-    makeBreakdown('By Sector',     L1.by_sector) +
-    makeBreakdown('By Confidence', L1.by_confidence);
-}
-
-// ── L2 RCA ────────────────────────────────────────────────────────────────────
-function renderL2RCA() {
-  const rcas = accuracyMeta.L2_rca_log || [];
-  const el   = document.getElementById('intel-l2-rca');
-  if (rcas.length === 0) {
-    el.innerHTML = '<p class="text-xs text-slate-600">No wrong predictions yet. RCA entries will appear here when predictions resolve WRONG.</p>';
-    return;
-  }
-  el.innerHTML = rcas.map(r => `
-    <div class="card-sm p-3 border-red-900/40" style="background:linear-gradient(90deg,rgba(127,29,29,0.08),transparent)">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <div>
-          <span class="text-xs font-semibold text-red-300">${r.pred_id} — ${r.stock} (${r.horizon})</span>
-          <span class="text-xs text-slate-500 ml-2">${r.date}</span>
-        </div>
-        <span class="text-xs px-2 py-0.5 rounded-full bg-red-900/50 text-red-300 whitespace-nowrap">${r.pattern_tag}</span>
-      </div>
-      <p class="text-xs text-slate-300 mb-2 leading-relaxed"><span class="text-slate-500">Root cause:</span> ${r.root_cause_summary}</p>
-      <div class="grid grid-cols-2 gap-2 text-xs">
-        <div><span class="text-slate-500">Signal missed:</span><br><span class="text-orange-300">${r.missing_signal}</span></div>
-        <div><span class="text-slate-500">Proposed factor:</span><br><span class="text-blue-300">${r.proposed_factor_id} — ${r.proposed_factor_name}</span></div>
-      </div>
-      <p class="text-xs text-yellow-400 mt-2">📌 Lesson: ${r.lesson}</p>
-      ${r.framework_promoted ? '<span class="text-xs text-emerald-400">✓ Promoted to framework</span>' : '<span class="text-xs text-slate-600">⏳ Watching for pattern confirmation before promoting</span>'}
-    </div>`).join('');
-}
-
-// ── L3 TREND ─────────────────────────────────────────────────────────────────
-function renderL3Trend() {
-  const monthly = accuracyMeta.L3_trend?.monthly_accuracy || [];
-
-  // Trend chart
-  if (charts.accTrend) charts.accTrend.destroy();
-  const ctx = document.getElementById('accuracyTrendChart').getContext('2d');
-  charts.accTrend = new Chart(ctx, {
-    type: 'line',
-    data: {
-      labels: monthly.map(m => m.month),
-      datasets: [{
-        label: 'Accuracy %',
-        data: monthly.map(m => m.accuracy_pct),
-        borderColor: '#10b981',
-        backgroundColor: 'rgba(16,185,129,0.1)',
-        borderWidth: 2,
-        pointRadius: 4,
-        tension: 0.3,
-        fill: true,
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { grid: { color:'rgba(255,255,255,0.05)' }, ticks: { color:'#94a3b8', font:{size:10} } },
-        y: { min:0, max:100, grid: { color:'rgba(255,255,255,0.05)' }, ticks: { color:'#94a3b8', font:{size:10}, callback: v => v+'%' } }
-      }
-    }
-  });
-
-  document.getElementById('intel-trend-note').textContent = accuracyMeta.L3_trend?.notes || '';
-
-  // Framework evolution log
-  const evLog = accuracyMeta.framework_evolution_log || [];
-  document.getElementById('intel-framework-log').innerHTML = evLog.map(e => {
-    const icon = e.event === 'FACTOR_PROPOSED' ? '💡' : e.event === 'FACTOR_PROMOTED' ? '✅' : '🔧';
-    return `<div class="card-sm p-2.5">
-      <div class="flex items-center justify-between mb-1">
-        <span class="font-medium text-slate-200">${icon} ${e.event.replace(/_/g,' ')}</span>
-        <span class="text-slate-500">${e.date}</span>
-      </div>
-      <p class="text-slate-400 leading-snug">${e.description}</p>
-      ${e.factor_id ? `<span class="text-blue-400 mt-0.5 block">Factor: ${e.factor_id} — ${e.factor_name||''}</span>` : ''}
-      ${e.triggered_by ? `<span class="text-slate-600">Triggered by: ${e.triggered_by}</span>` : ''}
-    </div>`;
-  }).join('') || '<p class="text-slate-600">No framework changes yet.</p>';
-}
-
-// ── FACTOR PERFORMANCE ────────────────────────────────────────────────────────
-function renderFactorPerformance() {
-  const fp = accuracyMeta.factor_performance || {};
-  document.getElementById('intel-factors').innerHTML = Object.entries(fp).map(([id, f]) => {
-    const strength = f.contributed_right > 0 ? 'border-emerald-900/50' : f.missed_in_wrong > 0 ? 'border-red-900/50' : 'border-slate-700';
-    const tag = f.accuracy_contribution?.includes('STRONG') ? 'bg-emerald-900/50 text-emerald-300' :
-                f.accuracy_contribution?.includes('HIGH')   ? 'bg-red-900/50 text-red-300' : 'bg-slate-700 text-slate-400';
-    return `<div class="card-sm p-3 border ${strength}">
-      <div class="flex items-center justify-between mb-1">
-        <span class="font-mono text-blue-400 text-xs">${id}</span>
-        <span class="text-xs px-1.5 py-0.5 rounded ${tag}">${f.times_checked}×</span>
-      </div>
-      <p class="text-xs text-slate-300 font-medium mb-1 truncate">${f.name}</p>
-      <div class="flex gap-2 text-xs">
-        <span class="text-emerald-400">✓${f.contributed_right}</span>
-        <span class="text-red-400">✗${f.missed_in_wrong}</span>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-// ════════════════════════════════
-// HOLDINGS MANAGEMENT
-// ════════════════════════════════
 
 function saveHoldings() {
   localStorage.setItem(LS_HOLDINGS_KEY, JSON.stringify(HOLDINGS));
 }
 
-function exportHoldings() {
-  const data = JSON.stringify({ holdings: HOLDINGS }, null, 2);
-  const blob = new Blob([data], { type: 'application/json' });
-  const url  = URL.createObjectURL(blob);
-  const a    = document.createElement('a');
-  a.href = url;
-  a.download = `holdings-${new Date().toISOString().slice(0,10)}.json`;
-  a.click();
-  URL.revokeObjectURL(url);
-  showToast('holdings.json downloaded — drop it into your data/ folder to make permanent', 'blue');
+// ═══════════════════════════════════════════════════════
+//  TABS
+// ═══════════════════════════════════════════════════════
+function showTab(t) {
+  ['today','portfolio','intelligence','history','trade'].forEach(id => {
+    document.getElementById('tab-'+id).classList.remove('active');
+    document.getElementById('tab-btn-'+id).classList.remove('active');
+  });
+  document.getElementById('tab-'+t).classList.add('active');
+  document.getElementById('tab-btn-'+t).classList.add('active');
+  if (t === 'portfolio') renderPortfolioCharts();
+  if (t === 'trade') populateExitDropdown();
 }
 
-function resetHoldings() {
-  if (!confirm('Reset portfolio to server baseline? Any buys/sells you entered in the browser will be lost.')) return;
-  localStorage.removeItem(LS_HOLDINGS_KEY);
-  loadData().then(() => renderAll());
-  showToast('Reset to baseline', 'orange');
+// ═══════════════════════════════════════════════════════
+//  RENDER ALL
+// ═══════════════════════════════════════════════════════
+function renderAll() {
+  renderRegimeStrip();
+  renderActions();
+  renderForecastStrip();
+  renderOpenPredictions();
+  renderPortfolioSummary();
+  renderHoldingsTable();
+  renderIntelligence();
+  renderBriefings();
+  renderPredictionHistory();
+  renderTradeLog();
+  populateExitDropdown();
+  checkMacroAlert();
 }
 
-// ── ENTER HOLDING ────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════
+//  REGIME STRIP
+// ═══════════════════════════════════════════════════════
+function renderRegimeStrip() {
+  const actions = DATA.actions;
+  if (!actions) return;
+  const r = actions.market_regime;
+  if (!r) return;
 
-function clearEnterForm() {
-  ['eh-symbol','eh-yahoo','eh-qty','eh-avg'].forEach(id => document.getElementById(id).value = '');
-  document.getElementById('eh-source').value = 'ICICI';
-  document.getElementById('eh-preview').classList.add('hidden');
-  const err = document.getElementById('eh-error');
-  err.classList.add('hidden'); err.textContent = '';
-}
+  const strip = document.getElementById('regimeStrip');
+  strip.className = 'regime-' + (r.label || 'NEUTRAL') + ' rounded-xl p-3 mb-5 flex flex-wrap items-center justify-between gap-3 border ' +
+    (r.label === 'BEARISH_SIDEWAYS' ? 'border-red-900/30' : r.label === 'BULLISH' ? 'border-green-900/30' : 'border-yellow-900/30');
 
-function confirmEnterHolding() {
-  const symbol = document.getElementById('eh-symbol').value.trim().toUpperCase();
-  const yahoo  = document.getElementById('eh-yahoo').value.trim();
-  const qty    = parseFloat(document.getElementById('eh-qty').value);
-  const avg    = parseFloat(document.getElementById('eh-avg').value);
-  const source = document.getElementById('eh-source').value;
-  const errEl  = document.getElementById('eh-error');
+  const labelEl = document.getElementById('regimeLabel');
+  const labelClass = r.label === 'BEARISH_SIDEWAYS' ? 'badge-CRITICAL' : r.label === 'BULLISH' ? 'badge-RIGHT' : 'badge-MEDIUM';
+  labelEl.className = 'badge ' + labelClass + ' text-xs px-3 py-1';
+  labelEl.textContent = '⚡ ' + (r.label || '').replace('_', ' · ');
+  document.getElementById('regimeRisk').textContent = r.key_risk || r.dominant_risk || '';
 
-  errEl.classList.add('hidden');
-  if (!symbol)       { errEl.textContent = 'Stock name is required.'; errEl.classList.remove('hidden'); return; }
-  if (!yahoo)        { errEl.textContent = 'Yahoo symbol required (e.g. TATASTEEL.NS).'; errEl.classList.remove('hidden'); return; }
-  if (!qty || qty<=0){ errEl.textContent = 'Enter a valid quantity.'; errEl.classList.remove('hidden'); return; }
-  if (!avg || avg<0) { errEl.textContent = 'Enter a valid buy price.'; errEl.classList.remove('hidden'); return; }
+  if (r.crude_last) document.getElementById('brentVal').textContent = '$' + r.crude_last;
+  if (r.nifty_last) document.getElementById('niftyVal').textContent = Number(r.nifty_last).toLocaleString('en-IN');
+  if (r.fii_flow) document.getElementById('fiiVal').textContent = r.fii_flow;
 
-  // Merge if same symbol + source already exists
-  const existing = HOLDINGS.find(h => h.symbol === symbol && h.source === source);
-  let action;
-  if (existing) {
-    const totalCost = (existing.avg * existing.qty) + (avg * qty);
-    const totalQty  = existing.qty + qty;
-    existing.avg = parseFloat((totalCost / totalQty).toFixed(2));
-    existing.qty = totalQty;
-    action = `Averaged ${symbol} → ${existing.qty} shares @ ₹${existing.avg}`;
-  } else {
-    HOLDINGS.push({ symbol, yahoo, qty, avg, source });
-    action = `Bought ${qty} × ${symbol} @ ₹${avg} (${source})`;
+  // Pre-market checklist
+  const mas = actions.market_actions;
+  if (mas && mas.length) {
+    document.getElementById('preMarketChecklist').classList.remove('hidden');
+    document.getElementById('preMarketItems').innerHTML = mas.map(ma => `
+      <div class="flex items-start gap-3 p-3 rounded-lg bg-slate-900/50 border border-slate-800">
+        <span class="badge badge-${ma.urgency} mt-0.5 shrink-0">${ma.urgency}</span>
+        <div class="min-w-0">
+          <div class="text-xs font-semibold text-slate-200 mb-1">${ma.index}</div>
+          <div class="text-xs text-slate-400">${ma.instruction}</div>
+          ${ma.scenarios ? `<div class="mt-2 space-y-0.5">${Object.entries(ma.scenarios).map(([k,v])=>`<div class="text-xs"><span class="text-slate-500 mono">${k.replace(/_/g,'–')}:</span> <span class="text-slate-300">${v}</span></div>`).join('')}</div>` : ''}
+        </div>
+      </div>
+    `).join('');
   }
 
-  saveHoldings();
-  logTrade('BUY', action, qty * avg);
-  renderAll();
-  clearEnterForm();
-  showToast(action, 'green');
+  document.getElementById('actionsValidThrough').textContent = actions.valid_through ? 'Valid through ' + actions.valid_through : '';
+
+  // Action summary badges
+  const s = actions.action_summary;
+  if (s) {
+    const colors = {HIGH:'badge-HIGH',CRITICAL:'badge-CRITICAL',MEDIUM:'badge-MEDIUM',LOW:'badge-LOW'};
+    document.getElementById('actionSummaryBadges').innerHTML =
+      Object.entries(s.by_urgency).filter(([,v])=>v>0).map(([k,v])=>`<span class="badge ${colors[k]||'badge-LOW'}">${v} ${k}</span>`).join('') +
+      (s.active_sells ? `<span class="badge badge-SELL">${s.active_sells} SELL</span>` : '');
+  }
 }
 
-// ── EXIT HOLDING ─────────────────────────────────────────────────────────────
+// ═══════════════════════════════════════════════════════
+//  ACTIONS HERO
+// ═══════════════════════════════════════════════════════
+const URGENCY_ORDER = {CRITICAL:0,HIGH:1,MEDIUM:2,LOW:3};
+const TYPE_ICON = {SELL_PARTIAL:'🔴',SELL_ALL:'⛔',BUY:'🟢',HOLD:'🔵',WATCH:'👁'};
 
-let _exitIdx = -1;
-
-function openExitModal() {
-  showTab('trade', document.querySelectorAll('.tab-btn')[2]);
-  document.getElementById('xh-holding').value = '';
-  document.getElementById('xh-details').classList.add('hidden');
-  document.getElementById('xh-empty').classList.remove('hidden');
-}
-
-function populateExitDropdown() {
-  const sel = document.getElementById('xh-holding');
-  const cur = sel.value;
-  sel.innerHTML = '<option value="">— choose a holding —</option>';
-  HOLDINGS.forEach((h, i) => {
-    const opt = document.createElement('option');
-    opt.value = i;
-    const ltp = prices[h.yahoo] ? ` · LTP ₹${prices[h.yahoo].price.toFixed(0)}` : '';
-    opt.textContent = `${h.symbol} (${h.source}) · ${h.qty.toLocaleString()} shares${ltp}`;
-    sel.appendChild(opt);
-  });
-  if (cur) sel.value = cur;
-}
-
-function onExitHoldingSelect() {
-  const idx = parseInt(document.getElementById('xh-holding').value);
-  document.getElementById('xh-empty').classList.add('hidden');
-  if (isNaN(idx) || idx < 0) {
-    document.getElementById('xh-details').classList.add('hidden');
-    document.getElementById('xh-empty').classList.remove('hidden');
+function renderActions() {
+  const actions = DATA.actions;
+  if (!actions || !actions.actions) {
+    document.getElementById('actionsGrid').innerHTML = '<div class="col-span-full text-slate-500 text-sm text-center py-8">No actions data. Run sync to update.</div>';
     return;
   }
-  _exitIdx = idx;
-  const h   = HOLDINGS[idx];
-  const ltp = prices[h.yahoo];
-  document.getElementById('xh-current-qty').textContent = h.qty.toLocaleString() + ' sh';
-  document.getElementById('xh-current-avg').textContent = '₹' + h.avg.toLocaleString('en-IN');
-  document.getElementById('xh-ltp').textContent = ltp ? '₹' + ltp.price.toFixed(2) : '— (refresh)';
-  document.getElementById('xh-qty').value   = h.qty;
-  document.getElementById('xh-qty').max     = h.qty;
-  document.getElementById('xh-price').value = ltp ? ltp.price.toFixed(2) : '';
-  document.getElementById('xh-details').classList.remove('hidden');
-  document.getElementById('xh-error').classList.add('hidden');
-  document.getElementById('xh-confirm-btn').disabled = true;
-  updateExitPreview();
-}
 
-function useExitLTP() {
-  if (_exitIdx < 0) return;
-  const h   = HOLDINGS[_exitIdx];
-  const ltp = prices[h.yahoo];
-  if (ltp) {
-    document.getElementById('xh-price').value = ltp.price.toFixed(2);
-    updateExitPreview();
-  } else {
-    const e = document.getElementById('xh-error');
-    e.textContent = 'LTP not loaded — click Refresh Prices first.';
-    e.classList.remove('hidden');
-  }
-}
+  const sorted = [...actions.actions].filter(a=>a.status==='OPEN').sort((a,b)=>(URGENCY_ORDER[a.urgency]||3)-(URGENCY_ORDER[b.urgency]||3));
 
-function updateExitPreview() {
-  if (_exitIdx < 0) return;
-  const h     = HOLDINGS[_exitIdx];
-  const qty   = parseFloat(document.getElementById('xh-qty').value)   || 0;
-  const price = parseFloat(document.getElementById('xh-price').value) || 0;
-  const prev  = document.getElementById('xh-preview');
-  const btn   = document.getElementById('xh-confirm-btn');
-
-  if (qty <= 0 || price <= 0) {
-    prev.innerHTML = '<span class="text-slate-500">Enter quantity and price to see P&L preview.</span>';
-    btn.disabled = true; return;
-  }
-  if (qty > h.qty) {
-    prev.innerHTML = '<span class="text-red-400">⚠ Cannot sell more than you hold.</span>';
-    btn.disabled = true; return;
-  }
-
-  const realPnl    = (price - h.avg) * qty;
-  const realPnlPct = ((price - h.avg) / h.avg) * 100;
-  const remaining  = h.qty - qty;
-  const col        = realPnl >= 0 ? 'text-emerald-400' : 'text-red-400';
-  const arrow      = realPnl >= 0 ? '▲' : '▼';
-
-  prev.innerHTML = `
-    <div class="flex justify-between"><span class="text-slate-400">Sell ${qty.toLocaleString()} @ ₹${price.toFixed(2)}</span><span class="font-medium text-slate-200">= ₹${(qty*price).toLocaleString('en-IN',{maximumFractionDigits:0})}</span></div>
-    <div class="flex justify-between"><span class="text-slate-400">Cost basis</span><span class="text-slate-400">₹${h.avg} × ${qty.toLocaleString()}</span></div>
-    <div class="flex justify-between border-t border-slate-700 pt-1.5 mt-1"><span class="text-slate-300 font-medium">Realized P&L</span><span class="${col} font-bold">${arrow} ${realPnl>=0?'+':''}₹${Math.abs(realPnl).toLocaleString('en-IN',{maximumFractionDigits:0})} (${realPnlPct.toFixed(1)}%)</span></div>
-    <div class="flex justify-between mt-1"><span class="text-slate-400">Remaining</span><span class="text-slate-300">${remaining > 0 ? remaining.toLocaleString()+' shares' : '<span class="text-red-300 font-medium">Position fully closed</span>'}</span></div>`;
-  btn.disabled = false;
-}
-
-function confirmExitHolding() {
-  if (_exitIdx < 0) return;
-  const h     = HOLDINGS[_exitIdx];
-  const qty   = parseFloat(document.getElementById('xh-qty').value);
-  const price = parseFloat(document.getElementById('xh-price').value);
-  const realPnl = (price - h.avg) * qty;
-
-  let action;
-  if (qty >= h.qty) {
-    action = `Sold ALL ${h.qty.toLocaleString()} × ${h.symbol} @ ₹${price} | P&L: ${realPnl>=0?'+':''}₹${Math.abs(realPnl).toLocaleString('en-IN',{maximumFractionDigits:0})}`;
-    HOLDINGS.splice(_exitIdx, 1);
-  } else {
-    h.qty -= qty;
-    action = `Sold ${qty.toLocaleString()} × ${h.symbol} @ ₹${price} | P&L: ${realPnl>=0?'+':''}₹${Math.abs(realPnl).toLocaleString('en-IN',{maximumFractionDigits:0})} | ${h.qty} remain`;
-  }
-
-  saveHoldings();
-  logTrade('SELL', action, qty * price);
-  _exitIdx = -1;
-  document.getElementById('xh-details').classList.add('hidden');
-  document.getElementById('xh-empty').classList.remove('hidden');
-  document.getElementById('xh-holding').value = '';
-  renderAll();
-  populateExitDropdown();
-  showToast(action.split('|')[0].trim(), 'red');
-}
-
-// ── TRADE LOG ────────────────────────────────────────────────────────────────
-
-function logTrade(type, desc, value) {
-  _tradeLog.unshift({ type, desc, value, time: new Date().toLocaleTimeString('en-IN') });
-  renderTradeLog();
-}
-
-function renderTradeLog() {
-  const el = document.getElementById('tradeLog');
-  if (!el) return;
-  if (_tradeLog.length === 0) {
-    el.innerHTML = '<p class="text-slate-600">No trades this session.</p>'; return;
-  }
-  el.innerHTML = _tradeLog.map(t => {
-    const col = t.type === 'BUY' ? 'text-green-400' : 'text-red-400';
-    const bg  = t.type === 'BUY' ? 'bg-green-950/30 border-green-900/40' : 'bg-red-950/30 border-red-900/40';
-    return `<div class="card-sm p-2.5 border ${bg} flex items-start gap-2">
-      <span class="font-bold ${col} mt-0.5">${t.type}</span>
-      <div class="flex-1 min-w-0">
-        <p class="text-slate-200 leading-snug">${t.desc}</p>
-        <p class="text-slate-500 mt-0.5">${t.time}</p>
+  document.getElementById('actionsGrid').innerHTML = sorted.map(a => {
+    const stars = renderStars(a.confidence, 5);
+    const typeClass = a.type.includes('SELL') ? 'badge-SELL' : a.type==='BUY' ? 'badge-RIGHT' : a.type==='HOLD' ? 'badge-HOLD' : 'badge-WATCH';
+    return `
+    <div class="card-action p-5 urg-${a.urgency}">
+      <div class="flex items-start justify-between gap-2 mb-3">
+        <div class="flex flex-wrap gap-2 items-center">
+          <span class="badge badge-${a.urgency}">${a.urgency}</span>
+          <span class="badge ${typeClass}">${TYPE_ICON[a.type]||''} ${a.type.replace('_',' ')}</span>
+          <span class="font-bold text-sm text-slate-100">${a.stock}</span>
+          <span class="text-xs text-slate-500">${a.broker || ''}</span>
+        </div>
+        <div class="shrink-0 text-xs text-slate-500">${a.valid_until || ''}</div>
       </div>
-      <span class="text-slate-400 font-mono whitespace-nowrap">₹${Math.abs(t.value).toLocaleString('en-IN',{maximumFractionDigits:0})}</span>
+
+      <p class="text-sm text-slate-200 font-medium mb-3 leading-snug">${a.instruction}</p>
+
+      <div class="flex items-center justify-between mb-3">
+        <div>
+          <div class="text-xs text-slate-500 mb-1">Confidence</div>
+          <div>${stars}</div>
+        </div>
+        <div class="text-right">
+          <div class="text-xs text-emerald-400">✓ ${a.pnl_impact_if_right || '—'}</div>
+          <div class="text-xs text-red-400 mt-0.5">✗ ${a.pnl_impact_if_wrong || '—'}</div>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-400 mb-3 line-clamp-2">${a.rationale_short}</div>
+
+      <button onclick="openDrill('${a.action_id}')" class="w-full text-center text-xs text-blue-400 hover:text-blue-300 py-1.5 border border-blue-900/50 hover:border-blue-700 rounded-lg transition">
+        Why this action? + Signals + Risk →
+      </button>
+    </div>
+    `;
+  }).join('');
+}
+
+function renderStars(n, max=5) {
+  return Array.from({length:max}, (_,i) =>
+    `<span class="${i<n?'star-filled':'star-empty'}" style="font-size:13px">★</span>`
+  ).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+//  DRILL-DOWN MODAL
+// ═══════════════════════════════════════════════════════
+function openDrill(actionId) {
+  const a = DATA.actions?.actions?.find(x=>x.action_id===actionId);
+  if (!a) return;
+  const typeClass = a.type.includes('SELL') ? 'badge-SELL' : a.type==='BUY' ? 'badge-RIGHT' : a.type==='HOLD' ? 'badge-HOLD' : 'badge-WATCH';
+
+  document.getElementById('drillHeader').innerHTML =
+    `<span class="badge badge-${a.urgency}">${a.urgency}</span>
+     <span class="badge ${typeClass}">${a.type.replace('_',' ')}</span>
+     <span class="font-bold text-base text-slate-100">${a.stock}</span>`;
+  document.getElementById('drillInstruction').textContent = a.instruction;
+
+  const dd = a.drill_down || {};
+  const sigDetails = a.signal_details || {};
+  const signals = (a.signals_triggered || []).map(s=>`<div class="flex items-start gap-2"><span class="badge badge-WATCH mt-0.5 shrink-0">${s}</span><span class="text-xs text-slate-300">${sigDetails[s]||'—'}</span></div>`).join('');
+
+  document.getElementById('drillBody').innerHTML = `
+    ${dd.why_now ? `<div><div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Why Now</div><p class="text-sm text-slate-200">${dd.why_now}</p></div>` : ''}
+
+    ${signals ? `<div><div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Signals Triggered</div><div class="space-y-2">${signals}</div></div>` : ''}
+
+    ${a.prediction_support?.length ? `<div><div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Supporting Predictions</div>
+      <div class="flex gap-2 flex-wrap">${a.prediction_support.map(p=>`<span class="badge badge-OPEN">${p}</span>`).join('')}</div></div>` : ''}
+
+    <div class="grid grid-cols-2 gap-3">
+      <div class="card-sm p-3"><div class="text-xs text-slate-500 mb-1">If RIGHT</div><div class="text-sm text-emerald-400 font-semibold">${a.pnl_impact_if_right||'—'}</div></div>
+      <div class="card-sm p-3"><div class="text-xs text-slate-500 mb-1">If WRONG</div><div class="text-sm text-red-400 font-semibold">${a.pnl_impact_if_wrong||'—'}</div></div>
+    </div>
+
+    ${a.risk ? `<div class="card-sm p-3 border-yellow-900/40"><div class="text-xs font-semibold text-yellow-500 mb-1">⚠ Key Risk</div><div class="text-sm text-slate-300">${a.risk}</div></div>` : ''}
+
+    ${dd.what_could_go_wrong ? `<div><div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-1">What Could Go Wrong</div><p class="text-sm text-slate-300">${dd.what_could_go_wrong}</p></div>` : ''}
+
+    ${dd.watch_before_acting ? `<div class="bg-blue-950/40 border border-blue-900/40 rounded-lg p-3"><div class="text-xs font-semibold text-blue-400 mb-1">👁 Watch Before Acting</div><p class="text-sm text-blue-200">${dd.watch_before_acting}</p></div>` : ''}
+
+    ${dd.exit_levels ? `<div><div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2">Levels</div>
+      <div class="space-y-1">${Object.entries(dd.exit_levels).map(([k,v])=>`<div class="flex justify-between text-xs"><span class="text-slate-500">${k.replace('_',' ')}</span><span class="text-slate-200 font-semibold mono">${v}</span></div>`).join('')}</div></div>` : ''}
+
+    ${a.confidence_basis ? `<div class="text-xs text-slate-500 border-t border-slate-800 pt-3">${a.confidence_basis}</div>` : ''}
+  `;
+
+  document.getElementById('drillModal').classList.remove('hidden');
+}
+
+function closeDrill() {
+  document.getElementById('drillModal').classList.add('hidden');
+}
+
+// ═══════════════════════════════════════════════════════
+//  FORECAST STRIP (TODAY tab mini)
+// ═══════════════════════════════════════════════════════
+function renderForecastStrip() {
+  const f = DATA.forecasts;
+  if (!f) return;
+  const label = f.next_session?.date || '';
+  document.getElementById('forecastLabel').textContent = label;
+
+  const indices = f.next_session?.index_forecasts || {};
+  const strip = document.getElementById('forecastStrip');
+
+  const items = [
+    { name: 'Nifty', data: indices.nifty_50 },
+    { name: 'Sensex', data: indices.sensex },
+    { name: 'Brent', data: indices.brent_crude },
+    { name: 'Gold', data: indices.gold_mcx },
+    { name: 'Silver', data: indices.silver_mcx },
+  ].filter(x=>x.data);
+
+  strip.innerHTML = items.map(({name,data})=>{
+    const dir = data.direction;
+    const col = dir==='UP'?'text-emerald-400':dir==='DOWN'?'text-red-400':'text-yellow-400';
+    const arr = dir==='UP'?'↑':dir==='DOWN'?'↓':'→';
+    const conf = Math.round((data.confidence||0)*20);
+    return `
+    <div class="card p-3 text-center">
+      <div class="text-xs text-slate-500 mb-1">${name}</div>
+      <div class="text-lg font-bold ${col}">${arr} ${data.change_pct_estimate||''}</div>
+      <div class="text-xs text-slate-400 mt-1">${data.scenario_A?.split('(')[0]||data.key_factors?.[0]||''}</div>
+      <div class="mt-2 w-full bg-slate-800 rounded-full h-1">
+        <div class="h-1 rounded-full ${dir==='UP'?'bg-emerald-500':dir==='DOWN'?'bg-red-500':'bg-yellow-500'}" style="width:${conf}%"></div>
+      </div>
+      <div class="text-xs text-slate-600 mt-1">${conf}% conf</div>
     </div>`;
   }).join('');
 }
 
-function clearTradeLog() {
-  _tradeLog = [];
+// ═══════════════════════════════════════════════════════
+//  OPEN PREDICTIONS (TODAY tab)
+// ═══════════════════════════════════════════════════════
+function renderOpenPredictions() {
+  const ph = DATA.predHistory;
+  if (!ph) return;
+  const open = (ph.predictions||[]).filter(p=>p.status==='OPEN');
+  const el = document.getElementById('openPredictions');
+  if (!open.length) { el.innerHTML='<div class="text-slate-500 text-sm">No open predictions.</div>'; return; }
+
+  el.innerHTML = open.map(p=>{
+    const last = p.daily_log?.slice(-1)[0];
+    const conf = p.confidence_current || p.confidence;
+    const trend = p.confidence_trend;
+    const trendIcon = trend==='RISING'?'↑':trend==='DECLINING'?'↓':'→';
+    const trendCol = trend==='RISING'?'text-emerald-400':trend==='DECLINING'?'text-yellow-400':'text-slate-400';
+    return `
+    <div class="card p-4">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <div class="flex items-center gap-2">
+          <span class="badge badge-OPEN">${p.id}</span>
+          <span class="font-semibold text-sm text-slate-200">${p.stock}</span>
+        </div>
+        <div class="flex items-center gap-1">
+          <span>${renderStars(conf||3)}</span>
+          <span class="text-xs ${trendCol} ml-1">${trendIcon}</span>
+        </div>
+      </div>
+      <p class="text-xs text-slate-300 mb-2">${p.thesis}</p>
+      ${last ? `<div class="text-xs text-slate-500 italic">${last.observation||last.note||''}</div>` : ''}
+      ${p.resolution_date ? `<div class="text-xs text-slate-600 mt-1.5">Resolves ${p.resolution_date}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+//  PORTFOLIO SUMMARY
+// ═══════════════════════════════════════════════════════
+function renderPortfolioSummary() {
+  let totalInvested=0, totalValue=0;
+  HOLDINGS.forEach(h=>{
+    const invested = (h.avgBuyPrice||h.avg_buy_price||0) * (h.quantity||h.qty||0);
+    const ltp = h.ltp || h.avgBuyPrice || h.avg_buy_price || 0;
+    const value = ltp * (h.quantity||h.qty||0);
+    totalInvested += invested;
+    totalValue += value;
+  });
+  const pnl = totalValue - totalInvested;
+  const pct = totalInvested ? (pnl/totalInvested*100) : 0;
+  const fmt = n => '₹' + Math.abs(n).toLocaleString('en-IN',{maximumFractionDigits:0});
+
+  document.getElementById('portTotalInvested').textContent = fmt(totalInvested);
+  const cvEl = document.getElementById('portCurrentValue');
+  cvEl.textContent = fmt(totalValue);
+  cvEl.className = 'text-xl font-bold mono ' + (pnl>=0?'text-emerald-400':'text-red-400');
+
+  const pnlEl = document.getElementById('portTotalPnl');
+  pnlEl.textContent = (pnl>=0?'+':'-') + fmt(pnl);
+  pnlEl.className = 'text-xl font-bold mono ' + (pnl>=0?'text-emerald-400':'text-red-400');
+
+  const pctEl = document.getElementById('portReturnPct');
+  pctEl.textContent = (pct>=0?'+':'') + pct.toFixed(2) + '%';
+  pctEl.className = 'text-xl font-bold mono ' + (pct>=0?'text-emerald-400':'text-red-400');
+}
+
+// ═══════════════════════════════════════════════════════
+//  HOLDINGS TABLE
+// ═══════════════════════════════════════════════════════
+let currentBrokerFilter = 'ALL';
+function filterBroker(broker) {
+  currentBrokerFilter = broker;
+  ['ALL','ICICI','GROWW'].forEach(b=>{
+    const btn = document.getElementById('broker-'+b);
+    btn.className = 'text-xs px-3 py-1 rounded-full font-semibold ' + (b===broker ? 'bg-blue-700 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700');
+  });
+  renderHoldingsTable();
+}
+
+function renderHoldingsTable() {
+  const actions = DATA.actions?.actions || [];
+  const filtered = currentBrokerFilter==='ALL' ? HOLDINGS : HOLDINGS.filter(h=>(h.broker||h.exchange||'').toUpperCase().includes(currentBrokerFilter));
+
+  if (!filtered.length) {
+    document.getElementById('holdingsTableBody').innerHTML = '<tr><td colspan="9" class="text-center text-slate-500 py-8 text-sm">No holdings found.</td></tr>';
+    return;
+  }
+
+  document.getElementById('holdingsTableBody').innerHTML = filtered.map(h=>{
+    const qty = h.quantity || h.qty || 0;
+    const avg = h.avgBuyPrice || h.avg_buy_price || 0;
+    const ltp = h.ltp || avg;
+    const invested = avg * qty;
+    const value = ltp * qty;
+    const pnl = value - invested;
+    const pct = invested ? pnl/invested*100 : 0;
+    const pos = pnl >= 0;
+    const sym = h.symbol || h.name || '';
+    const broker = h.broker || h.exchange || '';
+
+    // Find action for this stock
+    const act = actions.find(a => a.stock && sym.toUpperCase().includes(a.stock.toUpperCase().split(' ')[0]) && a.status==='OPEN');
+    const actBadge = act ? `<span class="badge ${act.type.includes('SELL')?'badge-SELL':act.type==='BUY'?'badge-RIGHT':act.type==='HOLD'?'badge-HOLD':'badge-WATCH'} cursor-pointer" onclick="openDrill('${act.action_id}')">${act.type.replace('_',' ')}</span>` : '<span class="text-slate-700 text-xs">—</span>';
+
+    return `<tr>
+      <td class="font-semibold text-slate-200 text-sm">${sym}</td>
+      <td><span class="text-xs text-slate-500">${broker}</span></td>
+      <td class="text-right mono text-sm">${qty.toLocaleString()}</td>
+      <td class="text-right mono text-sm text-slate-300">₹${avg.toLocaleString('en-IN',{maximumFractionDigits:2})}</td>
+      <td class="text-right mono text-sm text-blue-300" id="ltp-${sym.replace(/\s/g,'-')}">${ltp>0?'₹'+ltp.toLocaleString('en-IN',{maximumFractionDigits:2}):'—'}</td>
+      <td class="text-right mono text-sm text-slate-200">₹${Math.round(value).toLocaleString('en-IN')}</td>
+      <td class="text-right mono text-sm ${pos?'pnl-pos':'pnl-neg'}">${pos?'+':'-'}₹${Math.abs(Math.round(pnl)).toLocaleString('en-IN')}</td>
+      <td class="text-right mono text-sm ${pos?'pnl-pos':'pnl-neg'}">${pos?'+':''}${pct.toFixed(2)}%</td>
+      <td class="text-center">${actBadge}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+//  PORTFOLIO CHARTS
+// ═══════════════════════════════════════════════════════
+let allocChart=null, pnlChartObj=null;
+function renderPortfolioCharts() {
+  const top = [...HOLDINGS].map(h=>{
+    const qty = h.quantity||h.qty||0;
+    const avg = h.avgBuyPrice||h.avg_buy_price||0;
+    const ltp = h.ltp||avg;
+    return {name:h.symbol||h.name, value:ltp*qty, pnl:(ltp-avg)*qty};
+  }).sort((a,b)=>b.value-a.value).slice(0,10);
+
+  if (allocChart) { allocChart.destroy(); allocChart=null; }
+  if (pnlChartObj) { pnlChartObj.destroy(); pnlChartObj=null; }
+
+  const palette = ['#3b82f6','#8b5cf6','#06b6d4','#10b981','#f59e0b','#ef4444','#ec4899','#84cc16','#f97316','#6366f1'];
+
+  allocChart = new Chart(document.getElementById('allocationChart'), {
+    type:'doughnut',
+    data:{labels:top.map(x=>x.name),datasets:[{data:top.map(x=>Math.max(0,x.value)),backgroundColor:palette,borderWidth:0}]},
+    options:{plugins:{legend:{labels:{color:'#94a3b8',font:{size:10},boxWidth:10}}},cutout:'65%'}
+  });
+
+  const pnlSorted = [...top].sort((a,b)=>a.pnl-b.pnl);
+  pnlChartObj = new Chart(document.getElementById('pnlChart'), {
+    type:'bar',
+    data:{labels:pnlSorted.map(x=>x.name),datasets:[{data:pnlSorted.map(x=>Math.round(x.pnl)),backgroundColor:pnlSorted.map(x=>x.pnl>=0?'#10b981':'#ef4444'),borderRadius:4}]},
+    options:{indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{ticks:{color:'#64748b',font:{size:10}},grid:{color:'#1e293b'}},y:{ticks:{color:'#94a3b8',font:{size:10}},grid:{display:false}}}}
+  });
+}
+
+// ═══════════════════════════════════════════════════════
+//  INTELLIGENCE TAB
+// ═══════════════════════════════════════════════════════
+function renderIntelligence() {
+  renderFullForecasts();
+  renderL1Scorecard();
+  renderL2RCA();
+  renderL3Trend();
+}
+
+function renderFullForecasts() {
+  const f = DATA.forecasts;
+  if (!f) return;
+  const label = f.next_session?.date || '';
+  document.getElementById('forecastSessionLabel').textContent = label;
+
+  const holdings = f.next_session?.holding_forecasts || [];
+  const indices = f.next_session?.index_forecasts || {};
+  const grid = document.getElementById('fullForecastGrid');
+
+  const indexItems = Object.entries(indices).map(([k,v])=>({name:k.replace('_',' ').replace(/\b\w/g,c=>c.toUpperCase()), data:v, isIndex:true}));
+  const holdingItems = holdings.map(h=>({name:h.stock, data:h, isIndex:false}));
+  const all = [...indexItems, ...holdingItems];
+
+  grid.innerHTML = all.map(({name,data,isIndex})=>{
+    const dir = data.direction;
+    const col = dir==='UP'?'text-emerald-400':dir==='DOWN'?'text-red-400':'text-yellow-400';
+    const arr = dir==='UP'?'↑':dir==='DOWN'?'↓':'→';
+    const conf = data.confidence || 3;
+    const factors = data.key_factors || [];
+    return `
+    <div class="card p-4">
+      <div class="flex items-center justify-between mb-2">
+        <div class="flex items-center gap-2">
+          ${isIndex?'<span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-semibold">INDEX</span>':''}
+          <span class="font-bold text-sm text-slate-100">${name}</span>
+        </div>
+        <div class="${col} text-xl font-bold">${arr}</div>
+      </div>
+      <div class="flex items-center justify-between mb-3">
+        <div class="${col} text-base font-bold">${data.change_pct_estimate||data.forecast||''}</div>
+        <div>${renderStars(conf)}</div>
+      </div>
+      ${factors.length ? `<div class="space-y-1 mb-2">${factors.slice(0,2).map(f=>`<div class="text-xs text-slate-400">• ${f}</div>`).join('')}</div>` : ''}
+      ${data.watch ? `<div class="text-xs text-yellow-500 bg-yellow-950/30 rounded px-2 py-1">👁 ${data.watch}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+function renderL1Scorecard() {
+  const acc = DATA.accuracy;
+  if (!acc?.L1_scorecard) return;
+  const s = acc.L1_scorecard;
+  const overall = s.overall;
+
+  document.getElementById('l1Cards').innerHTML = `
+    <div class="card p-4 text-center">
+      <div class="text-3xl font-black ${(overall.accuracy_pct||0)>=70?'text-emerald-400':'text-red-400'}">${overall.accuracy_pct||0}%</div>
+      <div class="text-xs text-slate-500 mt-1">Overall Accuracy</div>
+    </div>
+    <div class="card p-4 text-center">
+      <div class="text-3xl font-black text-emerald-400">${overall.right||0}</div>
+      <div class="text-xs text-slate-500 mt-1">Correct</div>
+    </div>
+    <div class="card p-4 text-center">
+      <div class="text-3xl font-black text-red-400">${overall.wrong||0}</div>
+      <div class="text-xs text-slate-500 mt-1">Wrong</div>
+    </div>
+    <div class="card p-4 text-center">
+      <div class="text-3xl font-black text-blue-400">${overall.total_scored||0}</div>
+      <div class="text-xs text-slate-500 mt-1">Total Scored</div>
+    </div>
+  `;
+
+  const byConf = s.by_confidence||{};
+  document.getElementById('l1ByConfidence').innerHTML = `
+    <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Accuracy by Confidence</div>
+    <div class="space-y-2">${Object.entries(byConf).map(([k,v])=>`
+      <div class="flex items-center gap-3">
+        <span class="text-xs text-slate-400 w-16">${k}★</span>
+        <div class="flex-1 bg-slate-800 rounded-full h-2">
+          <div class="h-2 rounded-full ${(v.accuracy_pct||0)>=70?'bg-emerald-500':'bg-red-500'}" style="width:${v.accuracy_pct||0}%"></div>
+        </div>
+        <span class="text-xs mono ${(v.accuracy_pct||0)>=70?'text-emerald-400':'text-red-400'}">${v.accuracy_pct||0}%</span>
+        <span class="text-xs text-slate-600">(${v.right||0}/${v.total||0})</span>
+      </div>
+    `).join('')}</div>
+  `;
+
+  const bySector = s.by_sector||{};
+  document.getElementById('l1BySector').innerHTML = `
+    <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Accuracy by Sector</div>
+    <div class="space-y-2">${Object.keys(bySector).length?Object.entries(bySector).map(([k,v])=>`
+      <div class="flex items-center gap-3">
+        <span class="text-xs text-slate-400 w-24 truncate">${k}</span>
+        <div class="flex-1 bg-slate-800 rounded-full h-2">
+          <div class="h-2 rounded-full ${(v.accuracy_pct||0)>=70?'bg-emerald-500':'bg-red-500'}" style="width:${v.accuracy_pct||0}%"></div>
+        </div>
+        <span class="text-xs mono ${(v.accuracy_pct||0)>=70?'text-emerald-400':'text-red-400'}">${v.accuracy_pct||0}%</span>
+      </div>
+    `).join(''):'<div class="text-xs text-slate-500">Not enough data yet.</div>'}</div>
+  `;
+}
+
+function renderL2RCA() {
+  const acc = DATA.accuracy;
+  if (!acc?.L2_rca_log) return;
+  const el = document.getElementById('l2RcaLog');
+  if (!acc.L2_rca_log.length) { el.innerHTML='<div class="text-slate-500 text-sm">No wrong predictions to analyse yet.</div>'; return; }
+
+  el.innerHTML = acc.L2_rca_log.map(r=>`
+    <div class="card p-5">
+      <div class="flex items-start justify-between gap-3 mb-4">
+        <div class="flex items-center gap-2">
+          <span class="badge badge-WRONG">WRONG</span>
+          <span class="font-bold text-sm text-slate-100">${r.prediction_id} — ${r.stock}</span>
+          <span class="text-xs text-slate-500">${r.date||''}</span>
+        </div>
+        <span class="badge ${r.severity==='HIGH'?'badge-HIGH':'badge-MEDIUM'}">${r.severity||''}</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+        <div>
+          <div class="text-xs text-slate-500 mb-1">Root Cause</div>
+          <div class="text-sm text-slate-200">${r.root_cause||'—'}</div>
+        </div>
+        <div>
+          <div class="text-xs text-slate-500 mb-1">Missing Factor</div>
+          <div class="text-sm text-slate-200">${r.missing_factor||'—'}</div>
+        </div>
+        <div>
+          <div class="text-xs text-slate-500 mb-1">Signal Missed</div>
+          <div class="text-sm text-slate-200">${r.signal_missed||'—'}</div>
+        </div>
+        <div>
+          <div class="text-xs text-slate-500 mb-1">Lesson</div>
+          <div class="text-sm text-slate-200">${r.lesson||'—'}</div>
+        </div>
+      </div>
+      ${r.proposed_factor ? `
+        <div class="bg-blue-950/40 border border-blue-900/40 rounded-lg p-3">
+          <div class="text-xs font-semibold text-blue-400 mb-1">Proposed New Factor: ${r.proposed_factor.id||''} — ${r.proposed_factor.name||''}</div>
+          <div class="text-xs text-slate-300">${r.proposed_factor.causal_explanation||''}</div>
+        </div>
+      ` : ''}
+      ${r.pattern_tag ? `<div class="text-xs text-yellow-500 mt-2">Pattern: ${r.pattern_tag}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+function renderL3Trend() {
+  const acc = DATA.accuracy;
+  if (!acc) return;
+  const l3 = acc.L3_trend || {};
+
+  document.getElementById('l3Trend').innerHTML = `
+    <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Accuracy Trend</div>
+    ${l3.rolling_accuracy ? `<div class="flex items-baseline gap-2 mb-3"><span class="text-2xl font-black ${(l3.rolling_accuracy||0)>=70?'text-emerald-400':'text-red-400'}">${l3.rolling_accuracy}%</span><span class="text-xs text-slate-500">rolling accuracy</span></div>` : ''}
+    ${l3.improvement_signal ? `<div class="text-xs ${l3.improvement_signal==='IMPROVING'?'text-emerald-400':l3.improvement_signal==='DEGRADING'?'text-red-400':'text-yellow-400'} mb-3 font-semibold">${l3.improvement_signal==='IMPROVING'?'↑ Improving':l3.improvement_signal==='DEGRADING'?'↓ Degrading':'→ Stable'}</div>` : ''}
+    <div class="space-y-2">
+      ${(l3.monthly_accuracy||[]).map(m=>`
+        <div class="flex items-center gap-3">
+          <span class="text-xs text-slate-400 w-16">${m.month||m.period||''}</span>
+          <div class="flex-1 bg-slate-800 rounded-full h-2">
+            <div class="h-2 rounded-full ${(m.accuracy_pct||0)>=70?'bg-emerald-500':'bg-red-500'}" style="width:${m.accuracy_pct||0}%"></div>
+          </div>
+          <span class="text-xs mono ${(m.accuracy_pct||0)>=70?'text-emerald-400':'text-red-400'}">${m.accuracy_pct||0}%</span>
+        </div>
+      `).join('')}
+    </div>
+    ${!(l3.monthly_accuracy||[]).length ? '<div class="text-xs text-slate-500">Accumulating data — trend visible after 3 months.</div>' : ''}
+  `;
+
+  const fp = acc.factor_performance || {};
+  document.getElementById('l3FactorPerf').innerHTML = `
+    <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Factor Performance</div>
+    <div class="space-y-2">
+      ${Object.entries(fp).length ? Object.entries(fp).map(([k,v])=>`
+        <div class="flex items-center gap-3">
+          <span class="badge badge-WATCH shrink-0">${k}</span>
+          <div class="flex-1 bg-slate-800 rounded-full h-2">
+            <div class="h-2 rounded-full ${(v.accuracy_pct||0)>=70?'bg-emerald-500':'bg-red-500'}" style="width:${v.accuracy_pct||0}%"></div>
+          </div>
+          <span class="text-xs mono ${(v.accuracy_pct||0)>=70?'text-emerald-400':'text-red-400'}">${v.accuracy_pct||0}%</span>
+        </div>
+      `).join('') : '<div class="text-xs text-slate-500">Factor tracking begins after 5 scored predictions.</div>'}
+    </div>
+  `;
+
+  const fl = acc.framework_evolution_log || [];
+  document.getElementById('l3FrameworkLog').innerHTML = `
+    <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Framework Evolution Log</div>
+    ${fl.length ? fl.map(e=>`
+      <div class="flex items-start gap-3 py-2 border-b border-slate-800 last:border-0">
+        <span class="text-xs text-slate-500 mono w-24 shrink-0">${e.date||''}</span>
+        <div>
+          <div class="text-xs text-slate-200">${e.change||e.description||''}</div>
+          ${e.reason ? `<div class="text-xs text-slate-500 mt-0.5">${e.reason}</div>` : ''}
+        </div>
+      </div>
+    `).join('') : '<div class="text-xs text-slate-500">No framework changes yet.</div>'}
+  `;
+}
+
+// ═══════════════════════════════════════════════════════
+//  BRIEFINGS
+// ═══════════════════════════════════════════════════════
+function renderBriefings() {
+  const b = DATA.briefings;
+  if (!b) return;
+  const items = [...(b.briefings||[]), ...(b.weekly_reports||[])];
+  items.sort((a,b)=> new Date(b.date)-new Date(a.date) || 0);
+
+  const typeIcon = {morning:'☀',midday:'⏰',eod:'🌆',daily:'📋',weekly:'📊'};
+  const list = document.getElementById('briefingsList');
+  list.innerHTML = items.map((item,i)=>`
+    <button onclick="loadBriefing('${item.file}')" class="w-full text-left p-3 rounded-lg bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 transition">
+      <div class="flex items-center gap-2 mb-1">
+        <span class="text-sm">${typeIcon[item.type]||'📋'}</span>
+        <span class="text-xs font-semibold text-slate-200">${item.date}</span>
+        <span class="badge badge-WATCH text-xs">${item.type||''}</span>
+      </div>
+      <div class="text-xs text-slate-400 line-clamp-2">${item.summary||item.title||''}</div>
+    </button>
+  `).join('');
+}
+
+async function loadBriefing(file) {
+  const el = document.getElementById('briefingContent');
+  el.innerHTML = '<div class="shimmer h-4 w-3/4 mb-3 rounded"></div><div class="shimmer h-4 w-full mb-2 rounded"></div><div class="shimmer h-4 w-5/6 rounded"></div>';
+  try {
+    const r = await fetch(file + '?t=' + Date.now());
+    const text = await r.text();
+    el.innerHTML = '<div class="briefing-md prose prose-invert max-w-none">' + marked.parse(text) + '</div>';
+  } catch {
+    el.innerHTML = '<div class="text-red-400 text-sm">Could not load briefing. Run sync to update.</div>';
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+//  PREDICTION HISTORY
+// ═══════════════════════════════════════════════════════
+function renderPredictionHistory() {
+  const ph = DATA.predHistory;
+  if (!ph?.predictions?.length) {
+    document.getElementById('predictionHistory').innerHTML = '<div class="text-slate-500 text-sm">No prediction history yet.</div>';
+    return;
+  }
+  document.getElementById('predictionHistory').innerHTML = ph.predictions.map(p=>{
+    const statusClass = p.status==='RIGHT'?'badge-RIGHT':p.status==='WRONG'?'badge-WRONG':'badge-OPEN';
+    return `
+    <div class="card p-5">
+      <div class="flex items-start justify-between gap-3 mb-3">
+        <div class="flex flex-wrap gap-2 items-center">
+          <span class="badge ${statusClass}">${p.status}</span>
+          <span class="badge badge-OPEN">${p.id}</span>
+          <span class="font-bold text-sm text-slate-100">${p.stock}</span>
+          <span class="text-xs text-slate-500">${p.timeframe||''}</span>
+        </div>
+        <div class="text-xs text-slate-500">${p.created_at||''} → ${p.resolution_date||'open'}</div>
+      </div>
+      <p class="text-sm text-slate-300 mb-3">${p.thesis||''}</p>
+      ${(p.daily_log||[]).length ? `
+        <details class="text-xs">
+          <summary class="text-slate-500 cursor-pointer hover:text-slate-300">Day log (${p.daily_log.length} entries)</summary>
+          <div class="mt-2 space-y-1 border-l-2 border-slate-800 pl-3">
+            ${p.daily_log.map(d=>`<div class="text-slate-400"><span class="text-slate-600">${d.date}</span> — ${d.observation||d.note||''} <span class="text-blue-400">${d.confidence_update?'conf→'+d.confidence_update:''}</span></div>`).join('')}
+          </div>
+        </details>
+      ` : ''}
+      ${p.outcome ? `<div class="mt-3 text-xs text-slate-400 border-t border-slate-800 pt-2"><span class="text-slate-500">Outcome:</span> ${p.outcome}</div>` : ''}
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+//  TRADE TAB
+// ═══════════════════════════════════════════════════════
+function populateExitDropdown() {
+  const sel = document.getElementById('exitSelect');
+  const current = sel.value;
+  sel.innerHTML = '<option value="">— choose holding —</option>' +
+    HOLDINGS.map(h=>{
+      const sym = h.symbol||h.name||'';
+      return `<option value="${sym}">${sym} (${h.broker||h.exchange||''}) — ${h.quantity||h.qty||0} qty</option>`;
+    }).join('');
+  if (current) sel.value = current;
+}
+
+function onExitHoldingSelect() {
+  const sym = document.getElementById('exitSelect').value;
+  const h = HOLDINGS.find(x=>(x.symbol||x.name||'')==sym);
+  if (!h) { document.getElementById('exitHoldingInfo').classList.add('hidden'); return; }
+  document.getElementById('exitHoldingInfo').classList.remove('hidden');
+  document.getElementById('exitAvgBuy').textContent = '₹' + (h.avgBuyPrice||h.avg_buy_price||0).toFixed(2);
+  document.getElementById('exitTotalQty').textContent = (h.quantity||h.qty||0).toLocaleString();
+  document.getElementById('exitLTPDisplay').textContent = h.ltp ? '₹'+h.ltp.toFixed(2) : 'Not loaded — click Refresh LTP';
+  document.getElementById('exitQty').max = h.quantity||h.qty||0;
+  updateExitPreview();
+}
+
+function useExitLTP() {
+  const sym = document.getElementById('exitSelect').value;
+  const h = HOLDINGS.find(x=>(x.symbol||x.name||'')==sym);
+  if (h?.ltp) { document.getElementById('exitPrice').value = h.ltp.toFixed(2); updateExitPreview(); }
+  else showToast('LTP not loaded — click Refresh LTP first');
+}
+
+function updateExitPreview() {
+  const sym = document.getElementById('exitSelect').value;
+  const h = HOLDINGS.find(x=>(x.symbol||x.name||'')==sym);
+  if (!h) return;
+  const qty = parseFloat(document.getElementById('exitQty').value)||0;
+  const price = parseFloat(document.getElementById('exitPrice').value)||0;
+  if (!qty||!price) { document.getElementById('exitPreview').classList.add('hidden'); return; }
+  const avg = h.avgBuyPrice||h.avg_buy_price||0;
+  const invested = avg * qty;
+  const proceeds = price * qty;
+  const pnl = proceeds - invested;
+  const pct = invested ? pnl/invested*100 : 0;
+  document.getElementById('exitPreview').classList.remove('hidden');
+  document.getElementById('prevInvested').textContent = '₹' + Math.round(invested).toLocaleString('en-IN');
+  document.getElementById('prevProceeds').textContent = '₹' + Math.round(proceeds).toLocaleString('en-IN');
+  const pnlEl = document.getElementById('prevPnl');
+  pnlEl.textContent = (pnl>=0?'+':'-') + '₹' + Math.abs(Math.round(pnl)).toLocaleString('en-IN');
+  pnlEl.className = 'mono font-bold text-lg ' + (pnl>=0?'text-emerald-400':'text-red-400');
+  const retEl = document.getElementById('prevReturn');
+  retEl.textContent = (pct>=0?'+':'') + pct.toFixed(2) + '%';
+  retEl.className = 'mono font-semibold ' + (pct>=0?'text-emerald-400':'text-red-400');
+}
+
+function confirmEnterHolding() {
+  const sym = document.getElementById('enterSymbol').value.trim().toUpperCase();
+  const qty = parseFloat(document.getElementById('enterQty').value);
+  const price = parseFloat(document.getElementById('enterPrice').value);
+  const broker = document.getElementById('enterBroker').value;
+  const date = document.getElementById('enterDate').value;
+  if (!sym||!qty||!price) { showToast('Fill in symbol, qty, and price'); return; }
+
+  const existing = HOLDINGS.findIndex(h=>(h.symbol||h.name||'')==sym && (h.broker||h.exchange||'')==broker);
+  if (existing>=0) {
+    const h = HOLDINGS[existing];
+    const oldQty = h.quantity||h.qty||0;
+    const oldAvg = h.avgBuyPrice||h.avg_buy_price||0;
+    const newQty = oldQty + qty;
+    const newAvg = (oldQty*oldAvg + qty*price) / newQty;
+    HOLDINGS[existing].quantity = newQty; HOLDINGS[existing].qty = newQty;
+    HOLDINGS[existing].avgBuyPrice = +newAvg.toFixed(2); HOLDINGS[existing].avg_buy_price = +newAvg.toFixed(2);
+    showToast(`Updated ${sym} — avg ₹${newAvg.toFixed(2)}, qty ${newQty}`);
+  } else {
+    HOLDINGS.push({symbol:sym, name:sym, broker, exchange:broker, quantity:qty, qty, avgBuyPrice:price, avg_buy_price:price, buyDate:date});
+    showToast(`Added ${sym} — ₹${price} × ${qty}`);
+  }
+  logTrade({date:date||new Date().toISOString().split('T')[0],type:'BUY',stock:sym,qty,price,pnl:0,returnPct:0});
+  saveHoldings();
+  renderAll();
+  document.getElementById('enterSymbol').value=''; document.getElementById('enterQty').value=''; document.getElementById('enterPrice').value='';
+}
+
+function confirmExitHolding() {
+  const sym = document.getElementById('exitSelect').value;
+  const sellQty = parseFloat(document.getElementById('exitQty').value);
+  const sellPrice = parseFloat(document.getElementById('exitPrice').value);
+  if (!sym||!sellQty||!sellPrice) { showToast('Fill in all exit fields'); return; }
+  const idx = HOLDINGS.findIndex(h=>(h.symbol||h.name||'')==sym);
+  if (idx<0) { showToast('Holding not found'); return; }
+  const h = HOLDINGS[idx];
+  const totalQty = h.quantity||h.qty||0;
+  const avg = h.avgBuyPrice||h.avg_buy_price||0;
+  if (sellQty>totalQty) { showToast(`Only ${totalQty} shares available`); return; }
+  const pnl = (sellPrice-avg)*sellQty;
+  const pct = avg ? pnl/(avg*sellQty)*100 : 0;
+  logTrade({date:new Date().toISOString().split('T')[0],type:'SELL',stock:sym,qty:sellQty,price:sellPrice,pnl,returnPct:pct});
+  if (sellQty>=totalQty) {
+    HOLDINGS.splice(idx,1);
+    showToast(`Exited ${sym} fully. P&L: ${pnl>=0?'+':'-'}₹${Math.abs(Math.round(pnl)).toLocaleString('en-IN')}`);
+  } else {
+    HOLDINGS[idx].quantity = totalQty-sellQty; HOLDINGS[idx].qty = totalQty-sellQty;
+    showToast(`Sold ${sellQty} of ${sym}. Remaining: ${totalQty-sellQty}`);
+  }
+  saveHoldings();
+  renderAll();
+  document.getElementById('exitSelect').value=''; document.getElementById('exitQty').value=''; document.getElementById('exitPrice').value='';
+  document.getElementById('exitHoldingInfo').classList.add('hidden'); document.getElementById('exitPreview').classList.add('hidden');
+}
+
+function logTrade(t) {
+  const log = JSON.parse(localStorage.getItem(LS_TRADE_LOG_KEY)||'[]');
+  log.unshift(t);
+  localStorage.setItem(LS_TRADE_LOG_KEY, JSON.stringify(log.slice(0,100)));
   renderTradeLog();
 }
 
-// ── TOAST ────────────────────────────────────────────────────────────────────
-
-function showToast(msg, color) {
-  const map = {
-    green:  'bg-green-900 border-green-700 text-green-200',
-    red:    'bg-red-900   border-red-700   text-red-200',
-    orange: 'bg-orange-900 border-orange-700 text-orange-200',
-    blue:   'bg-blue-900  border-blue-700  text-blue-200',
-  };
-  const cls = map[color] || map.green;
-  const t = document.createElement('div');
-  t.className = `fixed bottom-6 right-6 z-[200] max-w-sm px-4 py-3 rounded-xl text-xs font-medium shadow-2xl border fade-in ${cls}`;
-  t.textContent = msg;
-  document.body.appendChild(t);
-  setTimeout(() => t.remove(), 4000);
+function renderTradeLog() {
+  const log = JSON.parse(localStorage.getItem(LS_TRADE_LOG_KEY)||'[]');
+  const tbody = document.getElementById('tradeLogBody');
+  if (!log.length) { tbody.innerHTML='<tr><td colspan="7" class="text-center text-slate-500 py-6 text-sm">No trades yet</td></tr>'; return; }
+  tbody.innerHTML = log.map(t=>`
+    <tr>
+      <td class="text-xs text-slate-400">${t.date}</td>
+      <td><span class="badge ${t.type==='BUY'?'badge-RIGHT':'badge-SELL'}">${t.type}</span></td>
+      <td class="font-semibold text-sm text-slate-200">${t.stock}</td>
+      <td class="text-right mono text-sm">${t.qty}</td>
+      <td class="text-right mono text-sm">₹${Number(t.price).toLocaleString('en-IN',{maximumFractionDigits:2})}</td>
+      <td class="text-right mono text-sm ${(t.pnl||0)>=0?'pnl-pos':'pnl-neg'}">${t.pnl?(((t.pnl||0)>=0?'+':'-')+'₹'+Math.abs(Math.round(t.pnl)).toLocaleString('en-IN')):'—'}</td>
+      <td class="text-right mono text-sm ${(t.returnPct||0)>=0?'pnl-pos':'pnl-neg'}">${t.returnPct?((t.returnPct>=0?'+':'')+t.returnPct.toFixed(2)+'%'):'—'}</td>
+    </tr>
+  `).join('');
 }
 
-// ════════════════════════════════
-// SYNC DASHBOARD
-// ════════════════════════════════
-async function syncDashboard() {
-  const btn = document.getElementById("syncBtn");
-  const icon = document.getElementById("syncIcon");
-  btn.disabled = true;
-  icon.classList.add("spinning");
-  btn.classList.replace("bg-emerald-700","bg-emerald-900");
-
-  document.getElementById("lastUpdated").textContent = "Syncing latest data from GitHub...";
-
-  await loadData();
-  renderAll();
-
-  const now = new Date().toLocaleTimeString('en-IN');
-  document.getElementById("lastUpdated").textContent = `Dashboard synced at ${now}`;
-
-  icon.classList.remove("spinning");
-  btn.disabled = false;
-  btn.classList.replace("bg-emerald-900","bg-emerald-700");
+function clearTradeLog() {
+  if (!confirm('Clear trade log? This cannot be undone.')) return;
+  localStorage.removeItem(LS_TRADE_LOG_KEY);
+  renderTradeLog();
 }
 
-// ════════════════════════════════
-// INIT
-// ════════════════════════════════
-(async function init() {
-  await loadData();
-  renderAll();
-})();
+function exportHoldings() {
+  const blob = new Blob([JSON.stringify({holdings:HOLDINGS,exported_at:new Date().toISOString()},null,2)],{type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'holdings-' + new Date().toISOString().split('T')[0] + '.json';
+  a.click();
+}
+
+// ═══════════════════════════════════════════════════════
+//  LIVE PRICES
+// ═══════════════════════════════════════════════════════
+const PROXY = 'https://corsproxy.io/?';
+const YF_URL = 'https://query1.finance.yahoo.com/v8/finance/chart/';
+
+async function fetchLTP(symbol) {
+  const url = PROXY + encodeURIComponent(YF_URL + symbol + '.NS?interval=1d&range=1d');
+  try {
+    const r = await fetch(url);
+    const d = await r.json();
+    return d?.chart?.result?.[0]?.meta?.regularMarketPrice || null;
+  } catch { return null; }
+}
+
+async function refreshPrices() {
+  const btn = document.getElementById('refreshIcon');
+  btn.classList.add('spinning');
+  const results = await Promise.allSettled(
+    HOLDINGS.map(async h=>{
+      const sym = (h.symbol||h.name||'').replace(/\s/g,'');
+      if (!sym) return;
+      const price = await fetchLTP(sym);
+      if (price) { h.ltp = price; }
+    })
+  );
+  btn.classList.remove('spinning');
+  renderPortfolioSummary();
+  renderHoldingsTable();
+  saveHoldings();
+  document.getElementById('lastUpdated').textContent = 'LTP refreshed ' + new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'});
+  showToast('Live prices updated');
+}
+
+// ═══════════════════════════════════════════════════════
+//  SYNC + MACRO ALERT
+// ═══════════════════════════════════════════════════════
+function syncDashboard() { loadData(); showToast('Refreshing all data…'); }
+
+function checkMacroAlert() {
+  const regime = DATA.actions?.market_regime;
+  const el = document.getElementById('macroAlert');
+  if (regime && regime.label !== 'BULLISH') {
+    el.classList.remove('hidden');
+    el.textContent = '⚠ ' + (regime.key_risk || regime.dominant_risk || regime.label);
+  } else {
+    el.classList.add('hidden');
+  }
+}
+
+// ═══════════════════════════════════════════════════════
+//  TOAST
+// ═══════════════════════════════════════════════════════
+let toastTimer;
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.style.opacity = '1';
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(()=>{ el.style.opacity='0'; }, 2800);
+}
+
+// ═══════════════════════════════════════════════════════
+//  KEYBOARD
+// ═══════════════════════════════════════════════════════
+document.addEventListener('keydown', e=>{
+  if (e.key==='Escape') closeDrill();
+});
+
+// ═══════════════════════════════════════════════════════
+//  INIT
+// ═══════════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded', ()=>{
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('enterDate').value = today;
+  loadData();
+});
 </script>
 </body>
 </html>

@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0",
+  "description": "Dynamic bridge between scheduled runs. Each run reads this file, applies its learnings, does its work, then OVERWRITES this file with updated context for the next run. This is the memory of the intelligence system.",
+  "last_updated_by": "session_init_2026-04-06",
+  "last_updated_at": "2026-04-06T22:00:00",
+
+  "market_regime": {
+    "label": "BEARISH_SIDEWAYS",
+    "key_risk": "Iran-US military conflict — April 6 deadline passed, outcome pending",
+    "crude_last": 109,
+    "crude_threshold_for_regime_change": 95,
+    "nifty_last": 22519,
+    "nifty_key_support": 22200,
+    "nifty_key_resistance": 23500,
+    "regime_since": "2026-03-28",
+    "regime_note": "FII selling ₹9,931 Cr Apr 2. Iran war premium embedded in all asset prices. Regime changes on: (1) Iran ceasefire, (2) crude <$95, (3) sustained FII inflows >₹5,000 Cr/day."
+  },
+
+  "open_predictions": [
+    {
+      "id": "P002",
+      "stock": "MRPL",
+      "thesis": "Falls to ₹160–170 by May 28 on crude-driven GRM compression",
+      "last_price": 180,
+      "confidence_current": 2,
+      "confidence_trend": "DECLINING",
+      "note": "Brent fell to $105–107 on Apr 4 — threshold needs $110+. Watch crude daily.",
+      "check_on_next_run": "Has Brent sustained above $110? If yes, confidence back to 3. If below $100, mark for invalidation."
+    },
+    {
+      "id": "P003",
+      "stock": "NIFTY",
+      "thesis": "Nifty tests 22,000–22,200 by Apr 21 on FII selling + Iran risk",
+      "last_price": 22519,
+      "confidence_current": 3,
+      "confidence_trend": "STABLE",
+      "note": "Still in play. 22,500 is first support. Key test on April 7 open.",
+      "check_on_next_run": "Did Nifty close above 22,500 on Apr 7? If yes, confidence drops to 2. If below 22,200, confidence rises to 4."
+    },
+    {
+      "id": "P005",
+      "stock": "COAL INDIA",
+      "thesis": "Closes above ₹430 by May 28 — domestic demand insulation",
+      "last_price": 451,
+      "confidence_current": 4,
+      "confidence_trend": "RISING",
+      "note": "Already at ₹451 — thesis confirming ahead of schedule. Monitor for continued strength.",
+      "check_on_next_run": "Is Coal India still above ₹430? Log daily price for tracking."
+    }
+  ],
+
+  "pending_outcomes_to_score": [
+    {
+      "id": "P003",
+      "resolution_date": "2026-04-21",
+      "score_condition": "Did Nifty close at or below 22,200 at any point before April 21?"
+    },
+    {
+      "id": "P005",
+      "resolution_date": "2026-05-28",
+      "score_condition": "Is COAL INDIA above ₹430 at close on May 28?"
+    }
+  ],
+
+  "accuracy_state": {
+    "total_scored": 3,
+    "right": 2,
+    "wrong": 1,
+    "accuracy_pct": 66.7,
+    "last_wrong": "P007 — FII panic threshold underestimated",
+    "last_right": "P001 (SWIGGY 52-wk low breach), P006 (Gold ATH)",
+    "rolling_5": null,
+    "pattern_alerts": [
+      {
+        "pattern_id": "PAT001",
+        "description": "FII selling + global risk-off = actual price move exceeds model estimate by 1.5–2x",
+        "occurrences": 1,
+        "threshold_to_promote": 2,
+        "status": "WATCHING — needs 1 more occurrence to confirm"
+      }
+    ],
+    "framework_updates_pending": [
+      {
+        "factor_id": "M010_proposed",
+        "name": "FII Panic Threshold",
+        "description": "Track FII daily sell quantum vs 30-day average. >2x average = panic mode = double all downside estimates",
+        "evidence": "P007 wrong because FII sold ₹9,931 Cr vs avg ₹4,000 Cr — panic threshold not modeled",
+        "promote_when": "PAT001 has 2+ occurrences"
+      }
+    ]
+  },
+
+  "priority_checks_for_next_run": [
+    {
+      "priority": 1,
+      "check": "What happened with Iran on April 7? Any military action? Any deal?",
+      "why": "Single biggest variable. Entire portfolio strategy changes on this.",
+      "where_to_check": "Search 'Iran US military April 7 2026' + 'Brent crude April 7'"
+    },
+    {
+      "priority": 2,
+      "check": "How did Nifty open and close on April 7? Below 22,500 or above?",
+      "why": "P003 thesis tracking — key support test",
+      "where_to_check": "NSE/BSE data or news search"
+    },
+    {
+      "priority": 3,
+      "check": "Any earnings announcements for portfolio holdings this week?",
+      "why": "IREDA April 16 — first key earnings of the season",
+      "where_to_check": "NSE earnings calendar"
+    },
+    {
+      "priority": 4,
+      "check": "FII flow for April 7 — continuing to sell or reversal?",
+      "why": "Directional confirmation for all short-term actions",
+      "where_to_check": "SEBI/NSDL FII data"
+    }
+  ],
+
+  "questions_to_answer_next_run": [
+    "Did any OPEN actions (A001-A007) get executed by the user? If yes, update holdings.json and trade log.",
+    "Is PAT001 now confirmed? (FII selling >2x avg for 2+ sessions?)",
+    "Has Brent fallen below $100 — triggering regime change to NEUTRAL/BULLISH?",
+    "Any new signals from April 7 that warrant new actions or modification of existing?"
+  ],
+
+  "prompt_for_morning_brief": "You are an expert market intelligence agent. Today is {{DATE}}. Run the morning intelligence briefing. \n\nCONTEXT FROM LAST RUN:\n- Market regime: {{market_regime.label}} since {{market_regime.regime_since}}\n- Key risk: {{market_regime.key_risk}}\n- Last Nifty: {{market_regime.nifty_last}}, Crude: {{market_regime.crude_last}}\n- Open predictions: P002 (MRPL bear, conf:{{P002_confidence}}), P003 (Nifty test 22200, conf:{{P003_confidence}}), P005 (Coal India hold, conf:{{P005_confidence}})\n- Accuracy: {{accuracy_state.accuracy_pct}}% on {{accuracy_state.total_scored}} scored\n- Last wrong: {{accuracy_state.last_wrong}} — watch for PAT001 pattern\n\nACTIONS FOR THIS RUN:\n1. Search: 'India market news {{DATE}}', 'Nifty today', 'FII flow today', 'Iran update {{DATE}}'\n2. Check each OPEN prediction — log new daily observations\n3. Update confidence scores based on new data\n4. Generate new actions based on current signals\n5. Update actions.json with any new or changed actions\n6. Write morning briefing to daily-briefings/{{DATE}}-morning.md\n7. CRITICAL: At end of run, update next-run-context.json with: new market regime, new crude price, new Nifty level, updated prediction confidences, new patterns observed, prompt for next run\n\nACCURACY LEARNINGS TO APPLY:\n- PAT001 active: if FII selling >₹8,000 Cr/day, multiply all downside estimates by 1.5x\n- Factor M010 proposed: add FII panic threshold check to all bearish predictions\n\nOUTPUT FORMAT:\nBriefing should contain: (1) overnight summary, (2) Iran update with scenario impact, (3) prediction updates with new confidence, (4) top 3 actions with updated urgency, (5) what to watch during market hours",
+
+  "prompt_for_eod_wrap": "You are an expert market intelligence agent. Run the end-of-day wrap for {{DATE}}.\n\nCONTEXT FROM MORNING BRIEF:\n- {{morning_brief_summary}}\n- Open actions: {{open_actions_count}} with {{high_urgency_count}} HIGH urgency\n\nACTIONS FOR THIS RUN:\n1. Search: 'Nifty close {{DATE}}', 'India market close today', 'top gainers losers NSE {{DATE}}'\n2. Score any predictions that resolved today\n3. For any WRONG predictions: run RCA (root_cause, missing_factor, signal_missed, proposed_factor)\n4. Update predictions-history.json with daily log entries\n5. Recalculate accuracy-meta.json with new scores\n6. Check if any patterns (like PAT001) now have 2+ occurrences → promote to framework\n7. Generate market-forecasts.json for next session\n8. Write EOD brief to daily-briefings/{{DATE}}-eod.md\n9. CRITICAL: Update next-run-context.json — especially update prompt_for_morning_brief with learnings from today\n\nACCURACY FEEDBACK LOOP:\n- If a prediction was WRONG: add to rca_log, check if pattern repeating, if yes promote to framework factor\n- If framework factor promoted: update signal-framework.json + update all future prompts to use new factor\n- Accuracy target: >70% in rolling 10. If below: tighten confidence thresholds, require more signal convergence",
+
+  "prompt_for_weekly_intelligence": "You are an expert market intelligence agent. Run the weekly intelligence review for week ending {{DATE}}.\n\nSCOPE:\n1. Score all predictions that matured this week\n2. Full L2 RCA on all WRONG predictions from the week\n3. L3 trend analysis: is accuracy improving or degrading? Why?\n4. Factor performance: which signals were most/least predictive this week?\n5. Framework evolution: any factors to promote, modify, or retire?\n6. Portfolio review: any holdings to re-evaluate based on thesis changes?\n7. Macro outlook: next 4 weeks — key events, risks, opportunities\n8. Generate 5 new predictions for next week with full signal backing\n9. Write weekly intelligence report to daily-briefings/weekly-{{DATE}}.md\n10. CRITICAL: Update next-run-context.json with evolved framework, new patterns, updated prompts\n\nEVOLUTION MECHANISM:\n- Check accuracy_meta.json for factor_performance\n- Any factor with <40% accuracy in last 10 uses: flag for review\n- Any factor with >80% accuracy: increase weight in future predictions\n- Update prompt templates to reflect evolved framework",
+
+  "scheduled_task_definitions": [
+    {
+      "name": "morning_brief",
+      "when": "Weekdays 8:00 AM IST",
+      "prompt_source": "next-run-context.json → prompt_for_morning_brief",
+      "output": "daily-briefings/YYYY-MM-DD-morning.md + actions.json update + next-run-context.json update"
+    },
+    {
+      "name": "eod_wrap",
+      "when": "Weekdays 4:30 PM IST",
+      "prompt_source": "next-run-context.json → prompt_for_eod_wrap",
+      "output": "daily-briefings/YYYY-MM-DD-eod.md + predictions-history.json update + accuracy-meta.json update + market-forecasts.json + next-run-context.json update"
+    },
+    {
+      "name": "weekly_intelligence",
+      "when": "Sundays 9:00 AM IST",
+      "prompt_source": "next-run-context.json → prompt_for_weekly_intelligence",
+      "output": "daily-briefings/weekly-YYYY-MM-DD.md + signal-framework.json update + next-run-context.json major update"
+    }
+  ]
+}
