@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-04-06T12:58:12.026533+00:00",
-  "fetched_at_ist": "2026-04-06 18:28 IST",
+  "fetched_at": "2026-04-06T13:01:12.081087+00:00",
+  "fetched_at_ist": "2026-04-06 18:31 IST",
   "coverage": {
-    "nse_stocks_fetched": 85,
-    "nse_stocks_attempted": 93,
+    "nse_stocks_fetched": 87,
+    "nse_stocks_attempted": 92,
     "indices_fetched": 3,
     "commodities_fetched": 5,
     "portfolio_stocks_with_pnl": 33
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4705.1,
-      "prev_close": 4705.1,
+      "price": 4703.2,
+      "prev_close": 4703.2,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 50901,
+      "volume": 51007,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 73.49,
-      "prev_close": 73.49,
+      "price": 73.33,
+      "prev_close": 73.33,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 9435,
+      "volume": 9465,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 110.38,
-      "prev_close": 110.38,
+      "price": 110.41,
+      "prev_close": 110.41,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 98860,
+      "volume": 99307,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 108.38,
-      "prev_close": 108.38,
+      "price": 108.53,
+      "prev_close": 108.53,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 13531,
+      "volume": 13561,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 2.83,
-      "prev_close": 2.83,
+      "price": 2.84,
+      "prev_close": 2.84,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 25666,
+      "volume": 25894,
       "ticker": "NG=F"
     }
   },
@@ -999,6 +999,13 @@
       "change_pct": -1.29,
       "volume": 20125302
     },
+    "ETERNAL.NS": {
+      "price": 232.2,
+      "prev_close": 231.72,
+      "change": 0.48,
+      "change_pct": 0.21,
+      "volume": 31582946
+    },
     "NYKAA.NS": {
       "price": 252.52,
       "prev_close": 245.98,
@@ -1201,6 +1208,13 @@
       "change": 6.43,
       "change_pct": 2.98,
       "volume": 42803413
+    },
+    "NIFTYBEES.NS": {
+      "price": 260.25,
+      "prev_close": 257.61,
+      "change": 2.64,
+      "change_pct": 1.02,
+      "volume": 15626138
     }
   }
 }
