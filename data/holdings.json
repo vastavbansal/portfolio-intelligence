@@ -31,12 +31,12 @@
     { "symbol": "NHPC",            "yahoo": "NHPC.NS",          "qty": 400,   "avg": 104.28,  "source": "Groww" },
     { "symbol": "PI INDUSTRIES",   "yahoo": "PIIND.NS",         "qty": 6,     "avg": 3877.50, "source": "Groww" },
     { "symbol": "RELIANCE",        "yahoo": "RELIANCE.NS",      "qty": 36,    "avg": 1399.10, "source": "Groww" },
-    { "symbol": "SATIA IND.",      "yahoo": "SATIAINDS.NS",     "qty": 65,    "avg": 147.60,  "source": "Groww" },
+    { "symbol": "SATIA IND.",      "yahoo": "SATIA.NS",         "qty": 65,    "avg": 147.60,  "source": "Groww" },
     { "symbol": "SAWACA",          "yahoo": "SAWACA.NS",        "qty": 2950,  "avg": 1.26,    "source": "Groww", "isPenny": true },
     { "symbol": "SUZLON (Groww)",  "yahoo": "SUZLON.NS",        "qty": 600,   "avg": 49.13,   "source": "Groww" },
     { "symbol": "SWIGGY (Groww)",  "yahoo": "SWIGGY.NS",        "qty": 212,   "avg": 375.28,  "source": "Groww" },
     { "symbol": "SHREE GANESH B.", "yahoo": "SHREEGANGA.NS",    "qty": 14150, "avg": 1.48,    "source": "Groww", "isPenny": true },
     { "symbol": "TATA MOTORS",     "yahoo": "TATAMOTORS.NS",    "qty": 100,   "avg": 281.75,  "source": "Groww" },
-    { "symbol": "TATA MOTORS DVR", "yahoo": "TATAMTRDVR.NS",    "qty": 100,   "avg": 622.74,  "source": "Groww" }
+    { "symbol": "TATA MOTORS DVR", "yahoo": "TATAMOTORS.NS",    "qty": 100,   "avg": 622.74,  "source": "Groww", "note": "DVR delisted 2021 — merged into ordinary shares. Verify with Groww." }
   ]
 }

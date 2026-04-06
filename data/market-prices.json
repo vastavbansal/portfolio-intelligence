@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-04-06T13:01:12.081087+00:00",
-  "fetched_at_ist": "2026-04-06 18:31 IST",
+  "fetched_at": "2026-04-06T18:00:04.988678+00:00",
+  "fetched_at_ist": "2026-04-06 23:30 IST",
   "coverage": {
-    "nse_stocks_fetched": 87,
-    "nse_stocks_attempted": 92,
+    "nse_stocks_fetched": 88,
+    "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 33
+    "portfolio_stocks_with_pnl": 34
   },
   "indices": {
     "NIFTY_50": {
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4703.2,
-      "prev_close": 4703.2,
+      "price": 4681.9,
+      "prev_close": 4681.9,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 51007,
+      "volume": 81035,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 73.33,
-      "prev_close": 73.33,
+      "price": 72.83,
+      "prev_close": 72.83,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 9465,
+      "volume": 17348,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 110.41,
-      "prev_close": 110.41,
+      "price": 113.98,
+      "prev_close": 113.98,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 99307,
+      "volume": 196898,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 108.53,
-      "prev_close": 108.53,
+      "price": 110.94,
+      "prev_close": 110.94,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 13561,
+      "volume": 21971,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 2.84,
-      "prev_close": 2.84,
+      "price": 2.81,
+      "prev_close": 2.81,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 25894,
+      "volume": 71301,
       "ticker": "NG=F"
     }
   },
@@ -572,6 +572,22 @@
       "market_value": 46969.2,
       "pnl": -3398.4,
       "pnl_pct": -6.75
+    },
+    "SATIA IND.": {
+      "price": 60.41,
+      "prev_close": 57.36,
+      "change": 3.05,
+      "change_pct": 5.32,
+      "volume": 138986,
+      "symbol": "SATIA IND.",
+      "yahoo_ticker": "SATIA.NS",
+      "broker": "Groww",
+      "avg_buy": 147.6,
+      "qty": 65,
+      "invested": 9594.0,
+      "market_value": 3926.65,
+      "pnl": -5667.35,
+      "pnl_pct": -59.07
     },
     "SUZLON (Groww)": {
       "price": 41.59,
@@ -1194,6 +1210,13 @@
       "change": 40.5,
       "change_pct": 1.45,
       "volume": 191728
+    },
+    "SATIA.NS": {
+      "price": 60.41,
+      "prev_close": 57.36,
+      "change": 3.05,
+      "change_pct": 5.32,
+      "volume": 138986
     },
     "GOLDBEES.NS": {
       "price": 122.81,
