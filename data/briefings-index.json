@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-04-06",
+      "type": "morning",
+      "label": "Mon Apr 6 — Morning Briefing",
+      "file": "daily-briefings/2026-04-06-morning.md",
+      "summary": "SGX Nifty / Nifty Futures | 22,721.50 (08:19 IST) | ↓ Cautious open. Nifty 50 (April 6 actual) | 22,609.05 (-0.46% from prev) | Down; opened 22,780"
+    },
+    {
       "date": "2026-04-04",
       "type": "eod",
       "label": "Sat Apr 4 — EOD Wrap",
