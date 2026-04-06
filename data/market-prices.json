@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-04-06T12:57:57.165710+00:00",
+  "fetched_at": "2026-04-06T12:58:12.026533+00:00",
   "fetched_at_ist": "2026-04-06 18:28 IST",
   "coverage": {
     "nse_stocks_fetched": 85,
@@ -36,11 +36,11 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4704.0,
-      "prev_close": 4704.0,
+      "price": 4705.1,
+      "prev_close": 4705.1,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 50890,
+      "volume": 50901,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
@@ -72,7 +72,7 @@
       "prev_close": 2.83,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 25644,
+      "volume": 25666,
       "ticker": "NG=F"
     }
   },
