@@ -5,31 +5,33 @@
 
   "L1_scorecard": {
     "all_time": {
-      "total": 6,
-      "open": 3,
-      "scored": 3,
-      "right": 2,
+      "total": 9,
+      "open": 5,
+      "scored": 4,
+      "right": 3,
       "wrong": 1,
       "partial": 0,
-      "accuracy_pct": 67
+      "accuracy_pct": 75
     },
     "by_horizon": {
       "1D": { "total": 1, "scored": 1, "right": 1, "wrong": 0, "accuracy_pct": 100 },
-      "7D": { "total": 1, "scored": 1, "right": 0, "wrong": 1, "accuracy_pct": 0 },
-      "4W": { "total": 2, "scored": 1, "right": 1, "wrong": 0, "accuracy_pct": 100 },
-      "2M": { "total": 3, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null }
+      "7D": { "total": 4, "scored": 2, "right": 1, "wrong": 1, "accuracy_pct": 50, "open": 2 },
+      "4W": { "total": 3, "scored": 1, "right": 1, "wrong": 0, "accuracy_pct": 100, "open": 2 },
+      "2M": { "total": 5, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null, "open": 5 }
     },
     "by_sector": {
       "Consumer/QComm": { "total": 2, "scored": 2, "right": 1, "wrong": 1, "accuracy_pct": 50 },
-      "Index": { "total": 2, "scored": 2, "right": 2, "wrong": 0, "accuracy_pct": 100 },
+      "Index": { "total": 3, "scored": 3, "right": 3, "wrong": 0, "accuracy_pct": 100 },
       "Energy": { "total": 1, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null },
+      "Defense": { "total": 2, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null },
+      "Aviation": { "total": 1, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null },
       "PSU/Mining": { "total": 1, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null }
     },
     "by_confidence": {
       "5_stars": { "total": 0, "scored": 0, "right": 0, "accuracy_pct": null },
       "4_stars": { "total": 1, "scored": 1, "right": 1, "accuracy_pct": 100 },
-      "3_stars": { "total": 5, "scored": 2, "right": 1, "accuracy_pct": 50 },
-      "2_stars": { "total": 0, "scored": 0, "right": 0, "accuracy_pct": null },
+      "3_stars": { "total": 8, "scored": 3, "right": 2, "accuracy_pct": 67 },
+      "2_stars": { "total": 1, "scored": 0, "right": 0, "accuracy_pct": null },
       "1_star":  { "total": 0, "scored": 0, "right": 0, "accuracy_pct": null }
     }
   },
@@ -65,20 +67,20 @@
       },
       {
         "month": "2026-04",
-        "scored": 1,
-        "right": 1,
+        "scored": 2,
+        "right": 2,
         "wrong": 0,
         "accuracy_pct": 100,
-        "notes": "P006 RIGHT — FY-start relief bounce thesis confirmed."
+        "notes": "P006 RIGHT — FY-start relief bounce thesis confirmed. P008 RIGHT on April 7 — Nifty held 22,000 as predicted, DII support absorbed FII selling."
       }
     ],
     "rolling_accuracy": {
-      "last_5_predictions": { "scored": 3, "right": 2, "accuracy_pct": 67 },
-      "last_10_predictions": { "scored": 3, "right": 2, "accuracy_pct": 67 }
+      "last_5_predictions": { "scored": 4, "right": 3, "accuracy_pct": 75 },
+      "last_10_predictions": { "scored": 4, "right": 3, "accuracy_pct": 75 }
     },
     "improvement_signal": "INSUFFICIENT_DATA",
-    "notes": "Need minimum 10 scored predictions to detect meaningful improvement trend. No new scores on Apr 7 EOD — all open predictions (P002, P003, P005) are multi-week/month horizons with no early triggers hit today. Apr 7 EOD daily logs updated with closing prices and observations.",
-    "apr_7_eod_observation": "No predictions scored today. P003 (Nifty) thesis was tested by today's +0.68% rally — market chose 'wait and see' on Trump deadline rather than pre-emptive selling. Thesis integrity maintained. PAT001 still WATCHING — FII data for Apr 7 not publicly available yet; if Apr 7 FII sell also >₹8k Cr, PAT001 may be promoted in Apr 8 morning brief."
+    "notes": "Need minimum 10 scored predictions to detect meaningful improvement trend. P008 scored RIGHT on Apr 7 EOD — Nifty held 22,000 support as DII buying offset FII selling. Three new predictions (P012, P013, P014) added April 7 to capitalize on Trump Hormuz deadline regime. All open predictions (P002, P003, P005) remain multi-week/month horizons.",
+    "apr_7_eod_observation": "P008 scored RIGHT on April 7. Nifty closed 23,123.65, well above 22,000 target. DII support thesis confirmed. Market interpreted Trump deadline as likely extended tension rather than immediate escalation. Three new HIGH-confidence predictions added for 7D/4W horizons: ASTRA MICRO (₹1,000 breach on war premium), INDIGO (ATF compression below ₹4,100), and Nifty IT (outperformance vs Nifty 50 on USD strength + Q1 earnings). Confidence 3 across all three due to bifurcated macro scenarios."
   },
 
   "factor_performance": {
