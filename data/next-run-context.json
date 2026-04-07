@@ -1,19 +1,19 @@
 {
   "schema_version": "1.0",
   "description": "Dynamic bridge between scheduled runs. Each run reads this file, applies its learnings, does its work, then OVERWRITES this file with updated context for the next run. This is the memory of the intelligence system.",
-  "last_updated_by": "session_init_2026-04-06",
-  "last_updated_at": "2026-04-06T22:00:00",
+  "last_updated_by": "morning_brief_2026-04-07",
+  "last_updated_at": "2026-04-07T08:30:00",
 
   "market_regime": {
-    "label": "TRANSITIONING_TO_RELIEF",
-    "key_risk": "Trump's April 6 deadline passed without escalation — de-escalation narrative emerging",
-    "crude_last": 108.3,
+    "label": "WAR_PREMIUM_RESURGING",
+    "key_risk": "Iran REJECTED 45-day ceasefire. Trump new Tuesday 8pm ET Hormuz deadline. Escalation imminent if no deal.",
+    "crude_last": 110.05,
     "crude_threshold_for_regime_change": 95,
-    "nifty_last": 22968,
+    "nifty_last": 22838,
     "nifty_key_support": 22200,
-    "nifty_key_resistance": 23500,
-    "regime_since": "2026-04-06",
-    "regime_note": "MAJOR SHIFT: April 6 passed without US strikes on Iran energy. Market rallied +1.12% on de-escalation relief. Brent fell to $108.3. War premium deflating. FII data for Apr 6 pending. If ceasefire announced or Hormuz reopens, regime changes to BULLISH. Watch for: any new escalation, Hormuz reopening, RBI policy (due soon)."
+    "nifty_key_resistance": 22968,
+    "regime_since": "2026-04-07",
+    "regime_note": "REGIME REVERTED: Apr 6 de-escalation narrative was a FALSE DAWN. Iran formally rejected 45-day ceasefire (demanding permanent peace). Trump issued new Tuesday 8pm ET deadline for Hormuz reopening or massive strikes. Only 5% of pre-war shipping through Hormuz. Brent back at $110.05 (above $110 threshold). FII sold ₹8,167 Cr on Apr 6 (PAT001 threshold breached). Nifty opened at 22,838 on Apr 7, pulling back from Apr 6 close. Key binary: Tuesday 8pm ET deadline → if strikes → Nifty gap-down to 22,200-22,500. If Iran blinks → brief relief rally. P003 (Nifty bearish) thesis STRONGLY REVIVING (conf: 1→3). P002 (MRPL bearish) REVIVING (conf: 1→2). P005 (Coal India bullish) UNCHANGED (conf: 5)."
   },
 
   "open_predictions": [
@@ -21,21 +21,21 @@
       "id": "P002",
       "stock": "MRPL",
       "thesis": "Falls to ₹160–170 by May 28 on crude-driven GRM compression",
-      "last_price": null,
-      "confidence_current": 1,
-      "confidence_trend": "SHARPLY_DECLINING",
-      "note": "Brent at $108.3 as of Apr 6 — BELOW $110 threshold. De-escalation narrative strengthening. MRPL had trading pause (results window). Thesis now HIGH RISK.",
-      "check_on_next_run": "Has Brent remained below $110? If yes through Apr 7, consider marking thesis as INVALIDATED. If crude rebounds above $115, thesis recovers."
+      "last_price": 175.12,
+      "confidence_current": 2,
+      "confidence_trend": "RECOVERING",
+      "note": "THESIS REVIVING: Brent back at $110.05 (above $110 threshold). Iran rejected ceasefire = war premium returning = crude elevated or higher. Govt diesel export tax adds direct refiner margin pressure. MRPL at ~₹175, above target (₹160-170) but narrowing. Tuesday escalation could spike crude to $115+ and accelerate MRPL decline.",
+      "check_on_next_run": "Did Brent stay above $110 through Apr 7? Did Trump act on Tuesday deadline? If Brent >$115 = P002 thesis accelerating. Check MRPL EOD price."
     },
     {
       "id": "P003",
       "stock": "NIFTY",
       "thesis": "Nifty tests 22,000–22,200 by May 10 on FII selling + Iran risk",
-      "last_price": 22968,
-      "confidence_current": 1,
-      "confidence_trend": "SHARPLY_DECLINING",
-      "note": "CRITICAL: Nifty rallied to 22,968 on Apr 6 on de-escalation. Now 768 pts ABOVE target zone. War premium deflating. Thesis may fail.",
-      "check_on_next_run": "Is de-escalation holding? If Nifty stays >22,500 through Apr 7-8, consider invalidating P003. If new escalation news → back to 2-3 stars."
+      "last_price": 22838,
+      "confidence_current": 3,
+      "confidence_trend": "RECOVERING",
+      "note": "THESIS STRONGLY REVIVING: Apr 6 rally was false dawn. Iran rejected ceasefire. FII sold ₹8,167 Cr Apr 6 (PAT001 breached). Nifty at 22,838 = 638 pts above target but path re-opened. PAT001 1.5x applied = effective downside extends to 21,500-21,800. Tuesday Trump deadline = possible gap-down to 22,200-22,500 zone. P003 may resolve before May 10.",
+      "check_on_next_run": "What happened Tuesday 8pm ET? Gap-down on strikes? Or Iran blinked? Did Nifty break 22,500? Was FII Apr 7 data also >₹8,000 Cr (PAT001 confirmation)?"
     },
     {
       "id": "P005",
@@ -43,9 +43,9 @@
       "thesis": "Closes above ₹430 by May 28 — domestic demand insulation",
       "last_price": 461.25,
       "confidence_current": 5,
-      "confidence_trend": "RISING",
-      "note": "At ₹461.25 on Apr 6, up 1.48%. Now ₹31.25 above target with 52 days left. Thesis strongly confirming. Resilient to geopolitical swings.",
-      "check_on_next_run": "Maintain daily log. If Coal India falls below ₹430, mark for review. Otherwise thesis is tracking to SUCCESS."
+      "confidence_trend": "STABLE",
+      "note": "Thesis tracking strongly. ₹461 vs ₹430 target with 51 days left. Market weakness on Apr 7 but Coal India insulated. Only risk: correlated crash if Nifty breaks 22,000 on Tuesday escalation. Watch IREDA Apr 16 earnings for PSU sector rotation impact.",
+      "check_on_next_run": "Coal India EOD price Apr 7. Did broader market selloff drag Coal India? If >₹450 = thesis very safe. If <₹430 = flag for urgent review."
     }
   ],
 
@@ -93,47 +93,53 @@
   "priority_checks_for_next_run": [
     {
       "priority": 1,
-      "check": "CRITICAL: Is de-escalation narrative holding or reversing? Any new Iran/US military action on April 7?",
-      "why": "April 6 passed without escalation. This is a REGIME SHIFT. P003 thesis now HIGH RISK. Need confirmation that peace holds.",
-      "where_to_check": "Search 'Iran US April 7 2026', 'Hormuz Strait news', 'Brent crude Apr 7', Trump Iran statements"
+      "check": "CRITICAL: What happened at/after Trump's Tuesday 8pm ET deadline? Did US strike Iran? Did Iran blink?",
+      "why": "This is the single biggest binary event. Gap-down open on Wed Apr 8 = strikes happened. Gap-up = Iran accepted. This determines regime for next 2-4 weeks.",
+      "where_to_check": "Search 'Trump Iran strikes April 8 2026', 'Hormuz Strait reopened', 'Iran ceasefire April 8'"
     },
     {
       "priority": 2,
-      "check": "How did Nifty open and close on April 7? Did it hold >22,500 or did it test support?",
-      "why": "P003 is now on life support (conf: 1). If Nifty stays >22,500, P003 likely invalidated. If it sells off <22,200, P003 comes back alive.",
+      "check": "Nifty EOD close on April 7 — did it hold 22,500? Did it close above or below the Apr 6 close of 22,968?",
+      "why": "P003 thesis needs Nifty to decline. If Apr 7 close <22,500 = P003 accelerating. If >22,700 = war premium not fully back.",
       "where_to_check": "NSE/BSE EOD data"
     },
     {
       "priority": 3,
-      "check": "FII flow for April 6 & April 7 — did they buy on de-escalation relief or continue selling?",
-      "why": "This determines if regime change is real. FII inflows >₹5,000 Cr/day would confirm transition to BULLISH.",
-      "where_to_check": "SEBI/NSDL data, financial websites"
+      "check": "FII flow for April 7 — continued selling or reversal?",
+      "why": "If FII sold >₹8,000 Cr again on Apr 7 = PAT001 pattern has 2 consecutive occurrences = promote to confirmed framework. If FII bought = de-escalation trades coming back.",
+      "where_to_check": "SEBI/NSDL data, 5paisa FII DII page"
     },
     {
       "priority": 4,
-      "check": "Brent crude — is it holding at $108-110 or moving further down?",
-      "why": "P002 (MRPL) now depends on crude staying <$100 to mark thesis as invalidated, or >$115 to revive it.",
-      "where_to_check": "Bloomberg, oil futures data"
+      "check": "Brent crude EOD — is it holding $110 or spiking toward $115+ on Tuesday deadline fears?",
+      "why": "P002 (MRPL) thesis fully alive if Brent stays >$110. Tuesday deadline creates spike risk. Monitor direction.",
+      "where_to_check": "Oil price trackers, Bloomberg"
     },
     {
       "priority": 5,
-      "check": "SWIGGY at ₹292.90 on April 6 — does Q4 earnings catalyst (May 8) still hold weight?",
-      "why": "P001 already RIGHT (breach confirmed). But stock bounced from ₹260 to ₹292 — is this just relief or is thesis changing?",
-      "where_to_check": "Stock price + earnings pre-releases"
+      "check": "Coal India EOD price — did broad market selloff drag it below ₹450?",
+      "why": "P005 very safe at ₹461 but violent selloff days can drag even insulated stocks. Confirm thesis still intact.",
+      "where_to_check": "NSE EOD data"
+    },
+    {
+      "priority": 6,
+      "check": "Did user execute A001 (SWIGGY sell) or A002 (INDIGO partial sell) today?",
+      "why": "A002 INDIGO is CRITICAL — user should have trimmed 20-30% before Tuesday deadline. Check execution.",
+      "where_to_check": "User confirmation or ICICI/Groww portfolio check"
     }
   ],
 
   "questions_to_answer_next_run": [
-    "CRITICAL: Did de-escalation narrative hold overnight? Any new Iran/US military action on Apr 6 evening or Apr 7 morning?",
-    "Is P003 invalidating? (Nifty stayed >22,500 = thesis fails to materialize)",
-    "Is P002 invalidating? (Brent stayed <$100 sustained = crude GRM thesis broken)",
-    "What was FII data for Apr 6? Did they reverse to buying on de-escalation?",
-    "Did any OPEN actions (A001-A007) get executed by the user on Apr 6-7?",
-    "Is PAT001 (FII panic threshold) confirmed with 2nd occurrence?",
-    "Any new framework factors emerging from Apr 6 regime shift?"
+    "CRITICAL: Did Trump strike Iran on Tuesday 8pm ET? What is Hormuz status on Apr 8 morning?",
+    "Did Nifty close above or below 22,500 on Apr 7? Confirm P003 direction.",
+    "What was FII flow for Apr 7? If >₹8,000 Cr sell again = PAT001 promoted to confirmed framework factor.",
+    "Did user execute A001 (SWIGGY) and A002 (INDIGO partial sell) today?",
+    "Is Brent above or below $110 at Apr 8 open? P002 direction depends on this.",
+    "Coal India EOD Apr 7 — confirm thesis still safely above ₹430.",
+    "Any new corporate actions/results announcements for portfolio holdings (IREDA etc.)?"
   ],
 
-  "prompt_for_morning_brief": "You are an expert market intelligence agent. Today is {{DATE}}. Run the morning intelligence briefing. \n\nCONTEXT FROM LAST RUN (Apr 6 EOD):\n- **REGIME SHIFT ALERT:** Market transitioned from BEARISH_SIDEWAYS to TRANSITIONING_TO_RELIEF on Apr 6\n- Key event: Trump's April 6 deadline PASSED WITHOUT escalation — de-escalation narrative now dominant\n- Last Nifty: {{market_regime.nifty_last}}, Crude: {{market_regime.crude_last}} (below $110 threshold)\n- **CRITICAL PREDICTION STATUS:**\n  - P002 (MRPL bearish): Conf **1⭐ FAILING** — Brent <$110\n  - P003 (NIFTY bearish): Conf **1⭐ FAILING** — Nifty rallied 768pts AWAY from support zone\n  - P005 (Coal India bullish): Conf **5⭐ STRONG** — thesis confirming, resilient\n\nACTIONS FOR THIS RUN:\n1. **PRIORITY 1:** Confirm de-escalation narrative — any new Iran/US action overnight? Search: 'Iran US April 7 2026', 'Trump Iran statement', 'Hormuz Strait'\n2. **PRIORITY 2:** Check Brent crude — is it holding <$110 or spiking on new risk? This invalidates P002 if sustained <$100.\n3. **PRIORITY 3:** Check Nifty open — above or below 22,500? Determines if P003 officially fails.\n4. Search: 'India market news {{DATE}}', 'FII data April 6', 'RBI policy signals'\n5. Log observations for P002, P003, P005 — especially watch for P002/P003 invalidation signals\n6. **NEW FRAMEWORK INSIGHT:** Geopolitical-dependent theses can flip overnight on narrative shift. Confidence should drop FASTER when base assumption (war premium) is questioned.\n7. Update actions.json — prioritize de-risk actions if de-escalation holds\n8. Write morning briefing to daily-briefings/{{DATE}}-morning.md\n\nACCURACY LEARNINGS TO APPLY:\n- PAT001 active: if FII selling >₹8,000 Cr/day, multiply downside estimates by 1.5x (need 1 more occurrence to promote to framework)\n- **NEW LEARNING from Apr 6:** Single-variable theses (P003 depends entirely on war premium) are fragile. When narrative flips, confidence should have been lower from inception.\n- Factor M010 (FII Panic Threshold): Add to all bullish support predictions\n- **FRAMEWORK GAP IDENTIFIED:** Need a \"Thesis Invalidation Signal\" check — when base assumption breaks, mark prediction as invalidated early rather than waiting for resolution date\n\nOUTPUT FORMAT:\nBriefing should contain: (1) overnight summary with geopolitical update, (2) P002/P003 invalidation status, (3) P005 continued strength, (4) updated actions with de-escalation scenario, (5) what to watch during market hours, (6) confidence updates"
+  "prompt_for_morning_brief": "You are an expert market intelligence agent. Today is {{DATE}}. Run the morning intelligence briefing.\n\nCONTEXT FROM LAST RUN (Apr 7 Morning):\n- **REGIME: WAR_PREMIUM_RESURGING** — Apr 6 de-escalation was FALSE DAWN. Iran REJECTED ceasefire. Trump Tuesday 8pm ET Hormuz deadline LIVE.\n- Last Nifty: 22,838 (Apr 7 open, down from 22,968). Brent: $110.05 (back above $110 threshold).\n- FII Apr 6: ₹-8,167 Cr (PAT001 threshold breached >₹8,000 Cr). DII Apr 6: +₹8,089 Cr.\n- **PREDICTION STATUS:**\n  - P002 (MRPL bearish): Conf **2⭐ RECOVERING** — Brent back at $110, war premium returning, diesel export tax adds margin pressure\n  - P003 (NIFTY bearish): Conf **3⭐ STRONGLY REVIVING** — false dawn confirmed, FII panic-selling, war premium back\n  - P005 (Coal India bullish): Conf **5⭐ STRONG** — insulated, ₹461 vs ₹430 target\n\nACTIONS FOR THIS RUN:\n1. **PRIORITY 1 (CRITICAL):** What happened at Trump's Tuesday 8pm ET deadline? US strikes on Iran? Hormuz status? This single event changes everything for Apr 8.\n   Search: 'Trump Iran strikes April 8 2026', 'Hormuz reopened April 8', 'Iran ceasefire April 8'\n2. **PRIORITY 2:** Nifty Apr 7 EOD close and Apr 8 open — confirm P003 direction.\n3. **PRIORITY 3:** FII flow for Apr 7 — if >₹8,000 Cr second day = PAT001 PROMOTED to confirmed framework factor (update signal-framework.json)\n4. **PRIORITY 4:** Check INDIGO — did user execute A002 partial sell? What is current INDIGO price?\n5. Log all observations for P002, P003, P005\n6. Update actions.json urgency based on Trump deadline outcome\n7. Write morning briefing to daily-briefings/{{DATE}}-morning.md\n\nACCURACY LEARNINGS TO APPLY:\n- PAT001 active: if FII selling >₹8,000 Cr/day, multiply ALL downside estimates by 1.5x\n- **LEARNING from Apr 6-7:** 'Deadline passed without strikes' ≠ 'de-escalation confirmed'. Require actual signed agreement + Hormuz reopening for regime change.\n- **NEW FRAMEWORK GAP:** Add 'Geopolitical Narrative Verification' check — before marking regime change, require 2 of: (1) ceasefire signed, (2) Hormuz reopened, (3) Brent <$100 for 3 days\n- Thesis Invalidation Protocol: P002 invalidated ONLY if Brent <$95 for 5+ days. P003 invalidated ONLY if Nifty closes >23,500 for 3 days AND FII inflow >₹5,000 Cr/day.\n\nOUTPUT FORMAT:\nBriefing: (1) Trump deadline outcome + Hormuz status, (2) Nifty open + regime assessment, (3) FII data + PAT001 status, (4) P002/P003/P005 updates, (5) top 3 actions with urgency, (6) watch levels for the session"
 
   "prompt_for_eod_wrap": "You are an expert market intelligence agent. Run the end-of-day wrap for {{DATE}}.\n\nCONTEXT FROM MORNING BRIEF:\n- {{morning_brief_summary}}\n- Open actions: {{open_actions_count}} with {{high_urgency_count}} HIGH urgency\n\nACTIONS FOR THIS RUN:\n1. Search: 'Nifty close {{DATE}}', 'India market close today', 'top gainers losers NSE {{DATE}}'\n2. Score any predictions that resolved today\n3. For any WRONG predictions: run RCA (root_cause, missing_factor, signal_missed, proposed_factor)\n4. Update predictions-history.json with daily log entries\n5. Recalculate accuracy-meta.json with new scores\n6. Check if any patterns (like PAT001) now have 2+ occurrences → promote to framework\n7. Generate market-forecasts.json for next session\n8. Write EOD brief to daily-briefings/{{DATE}}-eod.md\n9. CRITICAL: Update next-run-context.json — especially update prompt_for_morning_brief with learnings from today\n\nACCURACY FEEDBACK LOOP:\n- If a prediction was WRONG: add to rca_log, check if pattern repeating, if yes promote to framework factor\n- If framework factor promoted: update signal-framework.json + update all future prompts to use new factor\n- Accuracy target: >70% in rolling 10. If below: tighten confidence thresholds, require more signal convergence",
 

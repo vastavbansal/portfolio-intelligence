@@ -141,6 +141,13 @@
           "note": "Trump's April 6 deadline on Strait of Hormuz passed. Brent at $108.3 as of Apr 5-6. De-escalation narrative strengthening, crude below $110 threshold. MRPL had trading pause (results window). Thesis weakening — need to reassess if crude stays below $110.",
           "signal_updates": ["M001 — Brent now below $110, increasing risk to thesis", "Geopolitical: De-escalation narrative emerging"],
           "confidence_delta": -1
+        },
+        {
+          "date": "2026-04-07",
+          "price_observed": 175.12,
+          "note": "Brent at $110.05 — BACK ABOVE $110 threshold. Apr 6 de-escalation narrative was FALSE: Iran REJECTED 45-day ceasefire proposal, demanding permanent peace instead. Trump issued NEW deadline: Tuesday 8pm ET (Apr 8) for Hormuz reopening or massive escalation. War premium RETURNING. Additionally, govt imposed export tax on diesel this week — direct GRM compression for refiners. MRPL at ~₹175 (above ₹160-170 target but thesis is REVIVING). Confidence recovering: from 1 back to 2.",
+          "signal_updates": ["M001 — Brent $110.05, back above thesis threshold", "Geopolitical: Iran REJECTED ceasefire, Trump new deadline Tue 8pm ET", "Macro: Govt diesel export tax adds direct refiner margin pressure"],
+          "confidence_delta": 1
         }
       ],
       "outcome": null,
@@ -178,6 +185,13 @@
           "note": "MAJOR REVERSAL: Nifty rallied to 22,968 on April 6 (+255 pts, +1.12% from Apr 2). De-escalation narrative replacing war premium. Index now 768 points ABOVE target zone of 22,000–22,200. This contradicts thesis. If de-escalation holds, thesis may fail to resolve.",
           "signal_updates": ["M001 — Geopolitical premium deflating as Trump deadline passes without escalation", "M003 — FII data for Apr 6 pending, but sentiment shifted to de-escalation relief", "Thesis contradiction — Nifty moving away from support test zone"],
           "confidence_delta": -2
+        },
+        {
+          "date": "2026-04-07",
+          "price_observed": 22838,
+          "note": "THESIS REVIVING: Apr 6 de-escalation rally was a DEAD CAT BOUNCE. Iran REJECTED 45-day ceasefire, Trump set new Tuesday 8pm ET Hormuz deadline. Nifty opened at 22,838 — already DOWN 130 pts from Apr 6 close. FII sold ₹8,167 Cr on Apr 6 (CONFIRMED PAT001 threshold >₹8,000 Cr — second data point). War premium returning. Nifty 638 pts above target zone (22,000-22,200) — but with PAT001 1.5x multiplier applied, effective downside estimate extends to 21,500-21,800. Services PMI hit 14-month low in March — macro headwind adding. Confidence recovering: 1 → 3.",
+          "signal_updates": ["M001 — War premium resurging (Iran rejected ceasefire, Trump escalation threat)", "M003 — FII sold ₹8,167 Cr Apr 6 (PAT001 threshold: >₹8,000 Cr BREACHED)", "T002 — Nifty pulling back from Apr 6 relief rally", "Macro: India services PMI 14-month low March"],
+          "confidence_delta": 2
         }
       ],
       "outcome": null,
@@ -215,6 +229,13 @@
           "note": "Coal India at ₹461.25 — up 1.48% on April 6, gained ₹11.89 from opening. Thesis strongly confirming. Now ₹31.25 above target with 52 days remaining. Resilient to geopolitical risk. Only risk: broad PSU sector crash if Nifty breaks 22,000.",
           "signal_updates": ["S008 — Continued strength in coal e-auction segment", "M006 — PSU rerating ongoing, dividend yield floor holding"],
           "confidence_delta": 1
+        },
+        {
+          "date": "2026-04-07",
+          "price_observed": null,
+          "note": "Market weak open (Nifty 22,838, Sensex -0.41%). Coal India expected to hold steady — domestic demand thesis fully insulated from Iran/crude dynamics. No Coal India-specific negative news. Target >₹430, current ~₹461 — thesis tracking 7.2% above target with 51 days to go. Risk: Escalating war premium causing correlated PSU selloff if Nifty cracks 22,200. Maintain confidence at 5. Watch: IREDA earnings Apr 16 may spur PSU sector rotation which could affect Coal India.",
+          "signal_updates": ["S008 — Coal demand fundamentals unchanged", "M006 — PSU rerating theme intact, dividend yield floor supportive"],
+          "confidence_delta": 0
         }
       ],
       "outcome": null,
@@ -233,9 +254,10 @@
       "occurrences": ["P007"],
       "occurrences_needed_for_framework_update": 2,
       "current_count": 1,
-      "status": "WATCHING",
+      "status": "WATCHING — CLOSE TO CONFIRM",
       "proposed_framework_factor": "M010",
-      "notes": "One occurrence so far. Need 1 more WRONG prediction with same root cause before promoting to framework."
+      "notes": "Apr 6: FII sold ₹8,167 Cr (threshold: >₹8,000 Cr). Second data point supporting PAT001. Pattern is ACTIVE for risk estimates — applying 1.5x multiplier to downside on Apr 7 Nifty. Still need a formal WRONG prediction with PAT001 root cause to promote to framework (requires 2 occurrences). Apr 7 session will be the test — if P003 thesis gets further confirmation today, PAT001 may be promoted in EOD wrap.",
+      "last_threshold_event": {"date": "2026-04-06", "fii_sell": 8167, "dii_buy": 8089, "nifty_outcome": "UP 1.12% (DII offset FII that day)", "pattern_note": "PAT001 applies more to NEXT DAY reversal risk than same-day — Nifty fell at open Apr 7 confirming delayed effect"}
     }
   ]
 }

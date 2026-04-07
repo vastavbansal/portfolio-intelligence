@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
   "description": "Current actionable recommendations. Generated each session based on signals, predictions, and market forecasts. Accuracy is tracked to build confidence over time.",
-  "generated_at": "2026-04-06",
-  "valid_through": "2026-04-07",
+  "generated_at": "2026-04-07",
+  "valid_through": "2026-04-08",
   "market_regime": {
-    "label": "BEARISH_SIDEWAYS",
-    "dominant_risk": "Iran April 6 deadline — US/Iran military escalation",
-    "crude_level": "HIGH ($109 Brent)",
-    "fii_flow": "SELLING (₹9,931 Cr Apr 2)",
-    "dii_flow": "BUYING (absorbing)",
-    "regime_note": "Iran outcome April 7 is the single biggest variable. All actions carry elevated uncertainty until clarity."
+    "label": "WAR_PREMIUM_RESURGING",
+    "dominant_risk": "Iran REJECTED ceasefire — Trump new Tuesday 8pm ET Hormuz deadline — escalation imminent",
+    "crude_level": "HIGH ($110.05 Brent — back above $110 threshold)",
+    "fii_flow": "SELLING (₹8,167 Cr Apr 6 — PAT001 threshold breached)",
+    "dii_flow": "BUYING (₹8,089 Cr Apr 6 — absorbing but barely offsetting)",
+    "regime_note": "Apr 6 de-escalation narrative was FALSE. Iran rejected 45-day ceasefire. Trump Tuesday deadline is existential for Hormuz. Brent back at $110. FII panic-level selling Apr 6 (PAT001: >₹8,000 Cr). Regime reverted from TRANSITIONING_TO_RELIEF back to WAR_PREMIUM_RESURGING. All bearish theses (P002, P003) reviving. Gold hedge (A005/SETFGOLD) re-validated. INDIGO at high risk if Brent spikes on Tuesday escalation."
   },
   "actions": [
     {
@@ -45,13 +45,13 @@
     {
       "action_id": "A002",
       "type": "WATCH",
-      "urgency": "HIGH",
+      "urgency": "CRITICAL",
       "stock": "INDIGO",
       "broker": "GROWW",
-      "instruction": "Watch at open. If Brent >$115 at 9:15 AM OR US strike news overnight → sell 30–50% immediately. If Brent <$100 (deal) → HOLD, strong upside.",
-      "rationale_short": "IndiGo is the most Iran-sensitive holding. ATF cost = 30–35% of expenses. Brent at $109 = already margin-compressing.",
-      "confidence": 2,
-      "confidence_basis": "Pure scenario-dependent. No signal edge until Iran outcome known.",
+      "instruction": "ELEVATED RISK — Iran rejected ceasefire. Trump Tuesday 8pm ET deadline is LIVE. Brent at $110.05 (in 100–115 base case zone but rising). If Brent breaks >$115 today OR Trump announces strikes → SELL 30–50% immediately before 10:30 AM. Do NOT wait. Ceasefire deal is OFF the table for now.",
+      "rationale_short": "IndiGo is the most Iran-sensitive holding. ATF cost = 30–35% of expenses. Brent at $110 = margin-compressing. War premium returning. Tuesday deadline is the new binary risk event.",
+      "confidence": 3,
+      "confidence_basis": "Iran rejected ceasefire (Apr 7 morning confirmation). Escalation > de-escalation probability. Brent $110 = already hurting margins. Tuesday deadline could spike crude to $120+.",
       "signals_triggered": ["M001"],
       "signal_details": {
         "M001": "Brent crude at $109 — ATF = ~jet fuel * 1.1x. Every $10 Brent rise = ~₹200–300 EPS impact for IndiGo"
@@ -60,15 +60,16 @@
       "pnl_impact_if_right": "Scenario B (escalation) → INDIGO -5 to -8% from current ₹4,271",
       "pnl_impact_if_wrong": "Scenario C (deal) → INDIGO +6 to +10%. Missing this upside if sold too early.",
       "risk": "Binary — wrong scenario call = significant miss",
-      "valid_until": "2026-04-07",
+      "valid_until": "2026-04-08",
       "similar_action_accuracy": null,
       "status": "OPEN",
       "created_at": "2026-04-06",
+      "updated_at": "2026-04-07",
       "drill_down": {
-        "why_now": "Iran April 6 deadline created overnight binary. IndiGo at ₹4,271 = 33% above 52-wk low ₹3,216 — has room to fall.",
-        "what_could_go_wrong": "Deal scenario: Hormuz reopens → crude crashes → INDIGO gaps up 8%+ before action.",
-        "watch_before_acting": "FIRST action of the day: check Brent price at 9:00 AM before market opens. This single number determines entire INDIGO strategy.",
-        "exit_levels": { "sell_trigger": "Brent >$115 or strike news", "hold_trigger": "Brent <$100 or Hormuz deal" }
+        "why_now": "Iran REJECTED ceasefire Apr 6-7. Trump Tuesday 8pm ET deadline is the new binary. IndiGo at ₹4,271 has major downside if Brent spikes to $120+ on escalation.",
+        "what_could_go_wrong": "Iran surprise reversal and accepts ceasefire → crude crashes → INDIGO gaps up. Very low probability given Iran's hard stance.",
+        "watch_before_acting": "FIRST action at 9:00 AM: check Brent. If >$112 and no deal news → lean toward partial sell. Tuesday 8pm ET is hard deadline — decide before then.",
+        "exit_levels": { "sell_trigger": "Brent >$115 or Trump strikes announced", "hold_trigger": "Iran announces ceasefire acceptance (very low probability now)", "partial_sell_trigger": "Brent $110-115 + no ceasefire progress → sell 20-30% as hedge" }
       }
     },
     {
@@ -223,34 +224,42 @@
       "type": "WATCH_INDEX",
       "urgency": "CRITICAL",
       "index": "BRENT CRUDE",
-      "instruction": "Check Brent price at 9:00 AM before market open. This single number changes ALL holding strategies for April 7.",
+      "instruction": "Brent at $110.05 as of Apr 7 morning. Iran rejected ceasefire. Trump Tuesday 8pm ET deadline. Watch Brent through the day — escalation scenario is back.",
+      "current_level": "$110.05",
       "scenarios": {
-        "above_115": "Escalation likely → sell INDIGO 30-50%, watch ADANI PORT for trim, SETFGOLD holds strong",
-        "100_to_115": "Status quo → base case, all actions as planned",
-        "below_100": "Deal signal → HOLD INDIGO, HOLD ADANI PORT, consider reducing SETFGOLD"
+        "above_115": "ESCALATION CONFIRMED → sell INDIGO 30-50% immediately, trim ADANI PORT 30%, SETFGOLD holds strong",
+        "110_to_115": "CURRENT ZONE — base case deteriorating. Monitor hourly. Sell INDIGO 20% as risk hedge. War premium returning.",
+        "100_to_110": "De-escalation progress possible (Iran reversal) → hold positions as planned",
+        "below_100": "Deal scenario (very unlikely now) → HOLD all, reduce SETFGOLD only"
       },
-      "created_at": "2026-04-06"
+      "created_at": "2026-04-06",
+      "updated_at": "2026-04-07"
     },
     {
       "action_id": "MA002",
       "type": "WATCH_INDEX",
       "urgency": "HIGH",
       "index": "NIFTY 50",
-      "instruction": "Key support: 22,500. If Nifty opens below 22,500 and holds down → defensive posture across all holdings.",
+      "instruction": "Nifty opened at 22,838 (Apr 7). Key resistance: 22,968 (Apr 6 close). Key support: 22,500 then 22,200. Iran war premium returning — P003 thesis reviving.",
+      "current_level": "22,838",
       "scenarios": {
-        "above_22800": "Scenario C developing → risk-on, hold positions",
-        "22500_to_22800": "Base case scenario A → execute planned actions",
-        "below_22500": "Scenario B developing → reduce exposure aggressively. Next support 22,000–22,200 (P003 target zone)"
+        "above_22968": "Short-term relief — P003 still alive but thesis needs reassessment",
+        "22500_to_22969": "CURRENT ZONE — P003 path intact. Monitor. FII continue selling = next leg down possible.",
+        "below_22500": "P003 accelerating — reduce all equity exposure. Move toward 22,200 support zone.",
+        "below_22200": "P003 TARGET ZONE — thesis confirming. Consider adding hedges."
       },
-      "created_at": "2026-04-06"
+      "created_at": "2026-04-06",
+      "updated_at": "2026-04-07"
     }
   ],
   "action_summary": {
     "total_actions": 7,
-    "by_urgency": { "CRITICAL": 0, "HIGH": 2, "MEDIUM": 4, "LOW": 1 },
+    "by_urgency": { "CRITICAL": 1, "HIGH": 2, "MEDIUM": 3, "LOW": 1 },
     "by_type": { "SELL_PARTIAL": 1, "SELL_ALL": 0, "BUY": 0, "HOLD": 2, "WATCH": 4 },
     "active_sells": 1,
     "highest_confidence_action": "A001 (SWIGGY SELL_PARTIAL, 4★)",
-    "lowest_confidence_action": "A002 (INDIGO WATCH, 2★) — pure scenario play"
+    "most_urgent_action": "A002 (INDIGO — CRITICAL urgency, Iran ceasefire rejected, Tuesday deadline)",
+    "lowest_confidence_action": "A004 (ADANI PORT WATCH, 2★) — binary Iran outcome",
+    "morning_brief_note": "Apr 7: Regime reverted to WAR_PREMIUM_RESURGING. Iran rejected ceasefire. All bearish theses reviving. INDIGO is top risk position — consider partial sell pre-Tuesday deadline."
   }
 }
