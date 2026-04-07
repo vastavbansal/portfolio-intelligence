@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-06",
+  "last_updated": "2026-04-07",
 
   "L1_scorecard": {
     "all_time": {
@@ -77,7 +77,8 @@
       "last_10_predictions": { "scored": 3, "right": 2, "accuracy_pct": 67 }
     },
     "improvement_signal": "INSUFFICIENT_DATA",
-    "notes": "Need minimum 10 scored predictions to detect meaningful improvement trend."
+    "notes": "Need minimum 10 scored predictions to detect meaningful improvement trend. No new scores on Apr 7 EOD — all open predictions (P002, P003, P005) are multi-week/month horizons with no early triggers hit today. Apr 7 EOD daily logs updated with closing prices and observations.",
+    "apr_7_eod_observation": "No predictions scored today. P003 (Nifty) thesis was tested by today's +0.68% rally — market chose 'wait and see' on Trump deadline rather than pre-emptive selling. Thesis integrity maintained. PAT001 still WATCHING — FII data for Apr 7 not publicly available yet; if Apr 7 FII sell also >₹8k Cr, PAT001 may be promoted in Apr 8 morning brief."
   },
 
   "factor_performance": {

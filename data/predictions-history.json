@@ -148,6 +148,13 @@
           "note": "Brent at $110.05 — BACK ABOVE $110 threshold. Apr 6 de-escalation narrative was FALSE: Iran REJECTED 45-day ceasefire proposal, demanding permanent peace instead. Trump issued NEW deadline: Tuesday 8pm ET (Apr 8) for Hormuz reopening or massive escalation. War premium RETURNING. Additionally, govt imposed export tax on diesel this week — direct GRM compression for refiners. MRPL at ~₹175 (above ₹160-170 target but thesis is REVIVING). Confidence recovering: from 1 back to 2.",
           "signal_updates": ["M001 — Brent $110.05, back above thesis threshold", "Geopolitical: Iran REJECTED ceasefire, Trump new deadline Tue 8pm ET", "Macro: Govt diesel export tax adds direct refiner margin pressure"],
           "confidence_delta": 1
+        },
+        {
+          "date": "2026-04-07",
+          "price_observed": 179.33,
+          "note": "EOD UPDATE: MRPL closed at ₹179.33 (+0.22% on day, +₹4.21 from morning). Counterintuitively, MRPL ROSE today despite Brent at $110.15. Market-wide recovery (Nifty +0.68%, IT-led) dragged even bearish thesis stocks higher. Brent: $110.15 (above $110 threshold, thesis intact). WTI at $113.87 (+1.30%) shows crude pressure still real. Trump April 8 8pm ET deadline STILL PENDING — no resolution yet. Iran pushing 10-point counterproposal via Pakistan mediation. Tomorrow's Apr 8 open will be the key event: gap-down on strikes would spike Brent to $115+ and accelerate MRPL decline toward target. Stock is ₹9-19 above target range (₹160-170). Thesis INTACT but stock not yet cooperating intraday. Confidence unchanged at 2.",
+          "signal_updates": ["M001 — Brent $110.15 EOD, thesis threshold maintained", "Geopolitical — Trump deadline pending Apr 8 8pm ET; no deal yet", "Price — MRPL rose on broad market recovery, moving away from target short-term"],
+          "confidence_delta": 0
         }
       ],
       "outcome": null,
@@ -189,9 +196,16 @@
         {
           "date": "2026-04-07",
           "price_observed": 22838,
-          "note": "THESIS REVIVING: Apr 6 de-escalation rally was a DEAD CAT BOUNCE. Iran REJECTED 45-day ceasefire, Trump set new Tuesday 8pm ET Hormuz deadline. Nifty opened at 22,838 — already DOWN 130 pts from Apr 6 close. FII sold ₹8,167 Cr on Apr 6 (CONFIRMED PAT001 threshold >₹8,000 Cr — second data point). War premium returning. Nifty 638 pts above target zone (22,000-22,200) — but with PAT001 1.5x multiplier applied, effective downside estimate extends to 21,500-21,800. Services PMI hit 14-month low in March — macro headwind adding. Confidence recovering: 1 → 3.",
+          "note": "MORNING: THESIS REVIVING: Apr 6 de-escalation rally was a DEAD CAT BOUNCE. Iran REJECTED 45-day ceasefire, Trump set new Tuesday 8pm ET Hormuz deadline. Nifty opened at 22,838 — already DOWN 130 pts from Apr 6 close. FII sold ₹8,167 Cr on Apr 6 (CONFIRMED PAT001 threshold >₹8,000 Cr — second data point). War premium returning. Nifty 638 pts above target zone (22,000-22,200) — but with PAT001 1.5x multiplier applied, effective downside estimate extends to 21,500-21,800. Services PMI hit 14-month low in March — macro headwind adding. Confidence recovering: 1 → 3.",
           "signal_updates": ["M001 — War premium resurging (Iran rejected ceasefire, Trump escalation threat)", "M003 — FII sold ₹8,167 Cr Apr 6 (PAT001 threshold: >₹8,000 Cr BREACHED)", "T002 — Nifty pulling back from Apr 6 relief rally", "Macro: India services PMI 14-month low March"],
           "confidence_delta": 2
+        },
+        {
+          "date": "2026-04-07",
+          "price_observed": 23123.65,
+          "note": "EOD UPDATE: SURPRISING RESULT — Nifty RALLIED to 23,123.65 (+155.40, +0.68%) from Apr 6 close of 22,968. Opened weak at ~22,838 then RECOVERED and closed green. IT stocks led: HCLTECH +2.73%, INFY +2.54%, TCS +2.66%, BHARTIARTL +2.09%. Market appears to have priced in 'wait and see' on Trump deadline rather than panic-selling. Iran counterproposal via Pakistan mediation (10-point protocol) giving markets hope of eventual resolution. HOWEVER: Trump deadline (Apr 8 8pm ET = ~5:30am IST Apr 8) still LIVE. Apr 8 gap-down expected (22,395-22,500 zone) if no deal reached. Thesis still ALIVE: even if today was a 'relief trade', tomorrow's deadline outcome could trigger the test of 22,000-22,200 zone. Nifty now 923 pts above target zone. Confidence maintained at 3 — today's rally is noise vs the structural thesis. Apr 8 will be decisive.",
+          "signal_updates": ["T002 — Nifty REVERSED higher today, moving away from target (bearish thesis headwind)", "M001 — IT sector rotation (USD-beneficiary), not geopolitical de-escalation, drove rally", "Geopolitical — Trump deadline still pending Apr 8 8pm ET; Iran filed 10-point counterproposal", "Apr 8 outlook — gap-down to 22,395 expected per market analysis if no deal"],
+          "confidence_delta": 0
         }
       ],
       "outcome": null,
@@ -232,9 +246,9 @@
         },
         {
           "date": "2026-04-07",
-          "price_observed": null,
-          "note": "Market weak open (Nifty 22,838, Sensex -0.41%). Coal India expected to hold steady — domestic demand thesis fully insulated from Iran/crude dynamics. No Coal India-specific negative news. Target >₹430, current ~₹461 — thesis tracking 7.2% above target with 51 days to go. Risk: Escalating war premium causing correlated PSU selloff if Nifty cracks 22,200. Maintain confidence at 5. Watch: IREDA earnings Apr 16 may spur PSU sector rotation which could affect Coal India.",
-          "signal_updates": ["S008 — Coal demand fundamentals unchanged", "M006 — PSU rerating theme intact, dividend yield floor supportive"],
+          "price_observed": 463.00,
+          "note": "EOD UPDATE: Coal India closed at ₹463.00 (+3.45, +0.75%). THESIS STRONGLY CONFIRMING. Rose alongside the broader market recovery (Nifty +0.68%). Now ₹33 above target (>₹430) with 51 days remaining to May 28 resolution. Broad market selloff did NOT drag Coal India today — in fact it outperformed in PSU space. Domestic demand insulation thesis validated. Risk for Apr 8: If Trump strikes Iran overnight → Nifty gap-down to 22,395 → even Coal India may see -1 to -2% correlated selloff. But ₹33 buffer makes P005 resolution very safe even in that scenario (would need to fall to ₹430 = -7.1% from current). Confidence maintained at 5.",
+          "signal_updates": ["S008 — Coal India +0.75% today, domestic demand thesis intact", "M006 — PSU rerating supportive, dividend yield floor holding", "Risk watch — Apr 8 gap-down on Iran escalation could create brief dip, but thesis buffer of ₹33 is comfortable"],
           "confidence_delta": 0
         }
       ],

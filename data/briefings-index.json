@@ -2,6 +2,13 @@
   "briefings": [
     {
       "date": "2026-04-07",
+      "type": "eod",
+      "label": "Tue Apr 7 — EOD Wrap",
+      "file": "daily-briefings/2026-04-07-eod.md",
+      "summary": "Nifty 50 | 23,123.65 | 22,968.25. Sensex | 74,616.58 | 74,106.85"
+    },
+    {
+      "date": "2026-04-07",
       "type": "midday",
       "label": "Tue Apr 7 — Midday Update",
       "file": "daily-briefings/2026-04-07-midday.md",
