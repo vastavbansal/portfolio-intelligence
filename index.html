@@ -760,35 +760,61 @@ function closeDrill() {
 // ═══════════════════════════════════════════════════════
 //  FORECAST STRIP (TODAY tab mini)
 // ═══════════════════════════════════════════════════════
+function forecastDirStyle(dir) {
+  if (!dir) return { col:'text-slate-400', bar:'bg-slate-500', arr:'→' };
+  const d = dir.toUpperCase();
+  if (d==='UP')   return { col:'text-emerald-400', bar:'bg-emerald-500', arr:'↑' };
+  if (d==='DOWN') return { col:'text-red-400',     bar:'bg-red-500',     arr:'↓' };
+  if (d.includes('BINARY') || d.includes('VOLATILE')) return { col:'text-yellow-300', bar:'bg-yellow-500', arr:'⚡' };
+  return { col:'text-yellow-400', bar:'bg-yellow-500', arr:'→' };
+}
+
+function normaliseForecastArray(f) {
+  // Returns { label, indexArr, holdingArr }
+  // Handles both: f.next_session.index_forecasts (old object) and f.index_forecasts (new array)
+  const label = f.next_session?.date || f.date || '';
+
+  // Index forecasts — try top-level array first, then nested object
+  let indexArr = [];
+  if (Array.isArray(f.index_forecasts)) {
+    indexArr = f.index_forecasts.map(x => ({ name: x.index || x.name || '', data: x }));
+  } else if (f.next_session?.index_forecasts) {
+    const obj = f.next_session.index_forecasts;
+    const nameMap = { nifty_50:'Nifty 50', sensex:'Sensex', brent_crude:'Brent', gold_mcx:'Gold', silver_mcx:'Silver' };
+    indexArr = Object.entries(obj).map(([k,v]) => ({ name: nameMap[k]||k, data: v }));
+  }
+
+  // Holding forecasts — try top-level array first, then nested
+  let holdingArr = [];
+  if (Array.isArray(f.holding_forecasts)) {
+    holdingArr = f.holding_forecasts.map(x => ({ name: x.symbol || x.stock || '', data: x }));
+  } else if (Array.isArray(f.next_session?.holding_forecasts)) {
+    holdingArr = f.next_session.holding_forecasts.map(x => ({ name: x.stock || x.symbol || '', data: x }));
+  }
+
+  return { label, indexArr, holdingArr };
+}
+
 function renderForecastStrip() {
   const f = DATA.forecasts;
   if (!f) return;
-  const label = f.next_session?.date || '';
-  document.getElementById('forecastLabel').textContent = label;
+  const { label, indexArr } = normaliseForecastArray(f);
+  document.getElementById('forecastLabel').textContent = label ? 'for ' + label : '';
 
-  const indices = f.next_session?.index_forecasts || {};
-  const strip = document.getElementById('forecastStrip');
-
-  const items = [
-    { name: 'Nifty', data: indices.nifty_50 },
-    { name: 'Sensex', data: indices.sensex },
-    { name: 'Brent', data: indices.brent_crude },
-    { name: 'Gold', data: indices.gold_mcx },
-    { name: 'Silver', data: indices.silver_mcx },
-  ].filter(x=>x.data);
-
-  strip.innerHTML = items.map(({name,data})=>{
-    const dir = data.direction;
-    const col = dir==='UP'?'text-emerald-400':dir==='DOWN'?'text-red-400':'text-yellow-400';
-    const arr = dir==='UP'?'↑':dir==='DOWN'?'↓':'→';
-    const conf = Math.round((data.confidence||0)*20);
+  const top5 = indexArr.slice(0, 5);
+  document.getElementById('forecastStrip').innerHTML = top5.map(({name, data}) => {
+    const { col, bar, arr } = forecastDirStyle(data.direction);
+    const chg = data.change_pct_estimate;
+    const chgStr = chg != null ? (chg > 0 ? '+' : '') + chg + '%' : '';
+    const conf = Math.round((data.confidence || 0) * 20);
+    const firstFactor = (data.key_factors||[])[0] || data.watch || '';
     return `
     <div class="card p-3 text-center">
       <div class="text-xs text-slate-500 mb-1">${name}</div>
-      <div class="text-lg font-bold ${col}">${arr} ${data.change_pct_estimate||''}</div>
-      <div class="text-xs text-slate-400 mt-1">${data.scenario_A?.split('(')[0]||data.key_factors?.[0]||''}</div>
+      <div class="text-lg font-bold ${col}">${arr} ${chgStr}</div>
+      <div class="text-xs text-slate-400 mt-1 line-clamp-1">${firstFactor}</div>
       <div class="mt-2 w-full bg-slate-800 rounded-full h-1">
-        <div class="h-1 rounded-full ${dir==='UP'?'bg-emerald-500':dir==='DOWN'?'bg-red-500':'bg-yellow-500'}" style="width:${conf}%"></div>
+        <div class="h-1 rounded-full ${bar}" style="width:${conf}%"></div>
       </div>
       <div class="text-xs text-slate-600 mt-1">${conf}% conf</div>
     </div>`;
@@ -1114,38 +1140,66 @@ function renderIntelligence() {
 function renderFullForecasts() {
   const f = DATA.forecasts;
   if (!f) return;
-  const label = f.next_session?.date || '';
-  document.getElementById('forecastSessionLabel').textContent = label;
+  const { label, indexArr, holdingArr } = normaliseForecastArray(f);
+  document.getElementById('forecastSessionLabel').textContent = label || '—';
 
-  const holdings = f.next_session?.holding_forecasts || [];
-  const indices = f.next_session?.index_forecasts || {};
+  const all = [
+    ...indexArr.map(x => ({ ...x, isIndex: true })),
+    ...holdingArr.map(x => ({ ...x, isIndex: false })),
+  ];
+
+  // Scenarios block from next_session
+  const scenarios = f.next_session?.scenarios || [];
+  const scenarioHtml = scenarios.length ? `
+    <div class="col-span-full card p-4 mb-2">
+      <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3">Scenarios for ${label}</div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        ${scenarios.map(s => {
+          const col = s.nifty_change_pct > 0 ? 'border-emerald-800/50 bg-emerald-950/20' : s.nifty_change_pct < -1 ? 'border-red-800/50 bg-red-950/20' : 'border-slate-700/50';
+          return `<div class="rounded-lg border ${col} p-3">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-bold text-slate-200">${s.id}: ${s.label}</span>
+              <span class="badge badge-WATCH">${s.probability_pct}%</span>
+            </div>
+            <div class="text-xs text-slate-400">${s.description||''}</div>
+            ${s.nifty_range ? `<div class="text-xs text-slate-300 mt-1 mono">Nifty ${s.nifty_range[0].toLocaleString('en-IN')}–${s.nifty_range[1].toLocaleString('en-IN')}</div>` : ''}
+          </div>`;
+        }).join('')}
+      </div>
+    </div>` : '';
+
   const grid = document.getElementById('fullForecastGrid');
+  if (!all.length) {
+    grid.innerHTML = '<div class="col-span-full text-slate-500 text-sm">No forecasts yet. Will populate after EOD run.</div>';
+    return;
+  }
 
-  const indexItems = Object.entries(indices).map(([k,v])=>({name:k.replace('_',' ').replace(/\b\w/g,c=>c.toUpperCase()), data:v, isIndex:true}));
-  const holdingItems = holdings.map(h=>({name:h.stock, data:h, isIndex:false}));
-  const all = [...indexItems, ...holdingItems];
-
-  grid.innerHTML = all.map(({name,data,isIndex})=>{
-    const dir = data.direction;
-    const col = dir==='UP'?'text-emerald-400':dir==='DOWN'?'text-red-400':'text-yellow-400';
-    const arr = dir==='UP'?'↑':dir==='DOWN'?'↓':'→';
-    const conf = data.confidence || 3;
+  grid.innerHTML = scenarioHtml + all.map(({name, data, isIndex}) => {
+    const { col, bar, arr } = forecastDirStyle(data.direction);
+    const chg = data.change_pct_estimate;
+    const chgStr = chg != null ? (chg > 0 ? '+' : '') + chg + '%' : '';
+    const conf = data.confidence || 2;
     const factors = data.key_factors || [];
+    const lastClose = data.last_close;
     return `
     <div class="card p-4">
       <div class="flex items-center justify-between mb-2">
-        <div class="flex items-center gap-2">
-          ${isIndex?'<span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-semibold">INDEX</span>':''}
+        <div class="flex items-center gap-2 flex-wrap">
+          ${isIndex ? '<span class="text-xs bg-slate-800 text-slate-400 px-2 py-0.5 rounded font-semibold">INDEX</span>' : ''}
           <span class="font-bold text-sm text-slate-100">${name}</span>
         </div>
         <div class="${col} text-xl font-bold">${arr}</div>
       </div>
       <div class="flex items-center justify-between mb-3">
-        <div class="${col} text-base font-bold">${data.change_pct_estimate||data.forecast||''}</div>
+        <div>
+          <div class="${col} text-base font-bold">${chgStr}</div>
+          ${lastClose ? `<div class="text-xs text-slate-500 mono">Last ₹${Number(lastClose).toLocaleString('en-IN',{maximumFractionDigits:2})}</div>` : ''}
+        </div>
         <div>${renderStars(conf)}</div>
       </div>
-      ${factors.length ? `<div class="space-y-1 mb-2">${factors.slice(0,2).map(f=>`<div class="text-xs text-slate-400">• ${f}</div>`).join('')}</div>` : ''}
-      ${data.watch ? `<div class="text-xs text-yellow-500 bg-yellow-950/30 rounded px-2 py-1">👁 ${data.watch}</div>` : ''}
+      ${factors.length ? `<div class="space-y-1 mb-2">${factors.slice(0,3).map(f=>`<div class="text-xs text-slate-400">• ${f}</div>`).join('')}</div>` : ''}
+      ${data.watch ? `<div class="text-xs text-yellow-400 bg-yellow-950/30 rounded px-2 py-1.5 mt-1">👁 ${data.watch}</div>` : ''}
+      ${data.forecast_low!=null&&data.forecast_high!=null ? `<div class="text-xs text-slate-500 mt-1 mono">Range: ${data.forecast_low.toLocaleString('en-IN')}–${data.forecast_high.toLocaleString('en-IN')}</div>` : ''}
     </div>`;
   }).join('');
 }
