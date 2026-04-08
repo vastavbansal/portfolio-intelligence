@@ -33,11 +33,16 @@
       "factors_checked": ["T001", "T002", "M004", "S004"],
       "factors_not_checked": ["T003", "T004"],
       "check_date": "2026-04-08",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null
+      "outcome": "WRONG",
+      "outcome_price": 281.45,
+      "outcome_evidence": "On April 8 at 11:29 AM IST, SWIGGY closed at ₹281.45 (+4.51% vs April 7). Market rallied on ceasefire news. SWIGGY failed to breach ₹260 target. Instead, the stock recovered as Brent crude crashed and broader market sentiment turned positive.",
+      "postmortem": {
+        "root_cause": "Regime change from DEADLINE_EVE_BINARY to DE-ESCALATION_REAL was NOT anticipated",
+        "missed_factor": "Ceasefire agreement was not incorporated into the bearish case. The prediction was built on the assumption of either strikes or extended war premium. A 2-week ceasefire + Hormuz protocol agreement was an unexpected positive catalyst.",
+        "signal_missed": "Geopolitical binary resolution typically creates regime shifts that override technical setup. The broader market relief on ceasefire overwhelmed stop-loss selling pressure.",
+        "proposed_factor": "M012_GEOPOLITICAL_RESOLUTION_RISK — when a major deadline has THREE possible outcomes (strikes/extension/deal), range the probability-weighted outcome. This prediction underweighted the 'deal' scenario."
+      },
+      "scored_on": "2026-04-08T11:35:00"
     },
 
     {
@@ -75,11 +80,16 @@
       "factors_checked": ["T001", "T004", "S003", "M004"],
       "factors_not_checked": ["T003", "T005"],
       "check_date": "2026-04-08",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null
+      "outcome": "WRONG",
+      "outcome_price": 1019.9,
+      "outcome_evidence": "On April 8 at 11:29 AM IST, ASTRA MICRO at ₹1,019.90 (+2.31% vs April 7). Stock BREACHED ₹1,000 resistance and is now at new highs. No pullback to ₹950-980 occurred. Instead, war premium on ceasefire news benefited defense electronics.",
+      "postmortem": {
+        "root_cause": "Regime change: Trump's 2-week ceasefire + Hormuz protocol agreement was perceived as stabilizing the geopolitical situation SHORT-TERM. This extended war premium instead of unwinding it.",
+        "missed_factor": "The ceasefire is a 2-week truce, not a permanent peace. Markets are treating it as 'stable with ongoing negotiations', which EXTENDS war premium demand for defense stocks rather than unwinding it.",
+        "signal_missed": "Defense electronics thrive on 'extended tension' scenarios more than 'immediate escalation' or 'instant deal' scenarios. The 2-week ceasefire = best outcome for defense stocks (premium lasts longer).",
+        "proposed_factor": "M012_DEFENSE_SECTOR_DURATION_PREMIUM — War premium benefit is MAXIMIZED in 'extended truce' scenarios (2-6 weeks), not in 'strikes' (acute but short) or 'deal' (unwound immediately) scenarios."
+      },
+      "scored_on": "2026-04-08T11:36:00"
     },
 
     {

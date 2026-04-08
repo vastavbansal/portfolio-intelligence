@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-04-08",
+      "type": "morning",
+      "label": "Wed Apr 8 — Morning Briefing",
+      "file": "daily-briefings/2026-04-08-morning.md",
+      "summary": "Expected: Nifty gap-down to 22,500–22,200. Actual: Nifty gapped UP to 23,984.85 (+3.72%, +861 pts)"
+    },
+    {
       "date": "2026-04-07",
       "type": "eod",
       "label": "Tue Apr 7 — EOD Wrap",

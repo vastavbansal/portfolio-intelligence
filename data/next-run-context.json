@@ -1,20 +1,20 @@
 {
   "schema_version": "1.0",
   "description": "Dynamic bridge between scheduled runs. Each run reads this file, applies its learnings, does its work, then OVERWRITES this file with updated context for the next run. This is the memory of the intelligence system.",
-  "last_updated_by": "eod_wrap_2026-04-07",
-  "last_updated_at": "2026-04-07T16:30:00",
+  "last_updated_by": "morning_brief_2026-04-08",
+  "last_updated_at": "2026-04-08T11:35:00",
 
   "market_regime": {
-    "label": "DEADLINE_EVE_BINARY",
-    "key_risk": "Trump 8pm ET April 7 Hormuz deadline expires TONIGHT (5:30am IST April 8). Outcome unknown at EOD write. April 8 open will be a binary gap event.",
-    "crude_last": 110.15,
+    "label": "DE-ESCALATION_REAL",
+    "key_risk": "Ceasefire is 2-week truce, not permanent deal. April 10 Islamabad talks could collapse. War premium could return.",
+    "crude_last": 93.85,
     "crude_threshold_for_regime_change": 95,
-    "nifty_last": 23123.65,
-    "nifty_key_support": 22200,
-    "nifty_key_resistance": 23200,
-    "regime_since": "2026-04-07",
-    "regime_note": "April 7 session delivered a SURPRISING RALLY (+0.68%, Nifty to 23,123.65) despite the war premium. IT sector drove gains (HCLTECH +2.73%, INFY +2.54%, TCS +2.66%) — USD strength/global tech rotation. Market chose 'wait and see' on Trump deadline. BUT: that patience ends tonight. By April 8 open (9:15 AM IST), the outcome of Trump's 8pm ET deadline will be known. THREE regimes possible: (A) ESCALATION — strikes on Iran → Brent $120+ → Nifty gap-down to 22,000-22,500; (B) EXTENSION — deadline pushed again → modest gap-down + continued war premium; (C) DEAL — Iran accepts Hormuz protocol → Brent crashes → Nifty gaps up to 23,200+. Morning brief MUST establish which regime before any other analysis.",
-    "session_forecast_accuracy_note": "April 7 forecast was WRONG (predicted FLAT-TO-DOWN, actual UP +0.68%). Lesson: IT sector can decouple from geopolitical risk when USD strengthens and global tech rotates. Future forecasts must include IT/USD correlation as a separate bullish factor that can override war premium in short sessions."
+    "nifty_last": 23984.85,
+    "nifty_key_support": 23800,
+    "nifty_key_resistance": 24100,
+    "regime_since": "2026-04-08T05:30:00",
+    "regime_note": "CEASEFIRE CONFIRMED: 90 minutes before Trump's 8pm ET deadline (5:30am IST April 8), Trump agreed to suspend attacks for 2 weeks. Iran accepted ceasefire + Hormuz safe passage protocol. Negotiations continue April 10 in Islamabad. Market response: MASSIVE POSITIVE. Nifty gapped UP +3.72% to 23,984.85 (not down to 22,000-22,200 as bearish theses predicted). Brent crashed -14.11% to $93.85 (below $95 invalidation threshold for MRPL/P002). This is the BEST ceasefire outcome for India equities (2-week premium extension for defense stocks + energy cost relief + rupee stability). Regime: Risk-ON with extended geopolitical tension management.",
+    "session_forecast_accuracy_note": "April 7 session forecast was WRONG (predicted FLAT-TO-DOWN, actual UP +0.68%) due to IT/USD decoupling. April 8 session IS confirming the pattern: Nifty UP +3.72% on ceasefire + Brent crash. March-April pattern emerging: Geopolitical volatility + USD strength + India tech appeal = consistent rally driver."
   },
 
   "open_predictions": [
@@ -22,31 +22,31 @@
       "id": "P002",
       "stock": "MRPL",
       "thesis": "Falls to ₹160–170 by May 28 on crude-driven GRM compression",
-      "last_price": 179.33,
-      "confidence_current": 2,
-      "confidence_trend": "RECOVERING",
-      "note": "MRPL rose +0.22% today to ₹179.33 — moved away from target on broad market recovery. But Brent at $110.15 (above $110 threshold) and diesel export tax maintain thesis. Escalation scenario tonight (Trump strikes) would spike Brent to $118-120+ and could accelerate MRPL toward target ₹160-170 faster. Stock is ₹9-19 above target range. Thesis intact, time required.",
-      "check_on_next_run": "What happened Trump deadline? If escalation → Brent $120+ → MRPL should be moving toward target. Check MRPL open price April 8. If deal scenario → Brent falls → P002 thesis weakens, reassess."
+      "last_price": 182.70,
+      "confidence_current": 1,
+      "confidence_trend": "INVALIDATED",
+      "note": "THESIS INVALIDATED: Brent crashed to $93.85 — BELOW $95 invalidation threshold! This was the single condition for P002 to fail. Ceasefire agreement removed escalation risk, causing 14% crude crash. MRPL at ₹182.70 (+1.88%) — thesis now DEAD unless Brent rebounds above $110 sustained. Mark for closure at EOD. Lesson: Geopolitical binary theses need floor-ceiling modeling, not single-scenario bearishness.",
+      "check_on_next_run": "Close P002 at EOD if Brent <$95 holds. Unlikely to recover to >$110 in next 2 weeks given ceasefire momentum. Archive thesis."
     },
     {
       "id": "P003",
       "stock": "NIFTY",
       "thesis": "Nifty tests 22,000–22,200 by May 10 on FII selling + Iran risk",
-      "last_price": 23123.65,
-      "confidence_current": 3,
-      "confidence_trend": "CONTESTED",
-      "note": "MAJOR DEVELOPMENT: Nifty RALLIED +0.68% today despite war premium — moved AWAY from target (now 923 pts above target zone). BUT: Trump deadline expires tonight. April 8 gap-down to 22,395 is the base case per market analysis. If strikes → gap to 22,000-22,500 (P003 target hit). If extension → sideways/down toward 22,500 over days. Deal scenario = P003 fails. Maintaining confidence at 3 — today's rally is noise vs the structural geopolitical thesis. April 8 is decisive.",
-      "check_on_next_run": "PRIORITY: Did Nifty gap-down on April 8 open? If gap to 22,200 or below = P003 EARLY RESOLUTION (score as RIGHT). If gap-down but recovers above 22,500 = thesis still active. If gap-up on deal = P003 confidence drops to 1, reassess."
+      "last_price": 23984.85,
+      "confidence_current": 1,
+      "confidence_trend": "INVALIDATED",
+      "note": "THESIS COMPLETELY INVALIDATED: Nifty did NOT gap-down as expected. Instead, GAPPED UP +3.72% to 23,984.85 on ceasefire news. Now 1,784 pts ABOVE target zone. This is exactly opposite direction. Market structure has CHANGED — FII selling thesis was overridden by geopolitical relief + rupee strength + energy cost recovery. Thesis built on March-April tensions; now tensions are managed. ABANDON. Confidence dropped to 1⭐.",
+      "check_on_next_run": "Close P003 at EOD as thesis-invalidated. Reverse prediction: Nifty now likely to test 24,200-24,500 by May 10 on continued ceasefire benefits."
     },
     {
       "id": "P005",
       "stock": "COAL INDIA",
       "thesis": "Closes above ₹430 by May 28 — domestic demand insulation",
-      "last_price": 463.00,
-      "confidence_current": 5,
-      "confidence_trend": "STABLE",
-      "note": "Thesis strongly confirming. ₹463 close (+0.75% today) = ₹33 buffer above ₹430 target with 51 days remaining. Domestic demand insulation validated — rose with broader market but insulated from crude. Even extreme gap-down on April 8 would need -7.1% from current for thesis to be at risk. Near-certain prediction. Watch IREDA Apr 16 earnings for PSU sector rotation.",
-      "check_on_next_run": "Coal India open April 8. If >₹445 = thesis very safe despite any gap-down. If <₹430 = URGENT flag (would require extreme event). Confirm thesis still intact."
+      "last_price": 449.65,
+      "confidence_current": 3,
+      "confidence_trend": "FLAGGED",
+      "note": "STILL INTACT BUT FLAGGED: Coal India at ₹449.65 (-2.88%) — now only ₹19 above ₹430 target. Dropped below ₹450 support level. Ceasefire is positive for power demand but stock showing weakness. Monitor closely. Watch for breach of ₹430 (would require 2 consecutive days below for thesis invalidation per rules).",
+      "check_on_next_run": "Daily watch. If Coal India closes below ₹430 tomorrow, flag as early warning. Thesis still has 51 days, so 2-day rule applies. If holds above ₹430 tomorrow, reconfirm thesis."
     }
   ],
 
