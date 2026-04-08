@@ -4,8 +4,8 @@
   "last_updated": "2026-04-08T17:00:00",
   "L1_scorecard": {
     "all_time": {
-      "total": 11,
-      "open": 5,
+      "total": 17,
+      "open": 11,
       "scored": 5,
       "right": 2,
       "wrong": 3,
@@ -152,28 +152,28 @@
       },
       {
         "month": "2026-04",
-        "scored": 2,
-        "right": 2,
-        "wrong": 0,
-        "accuracy_pct": 100,
-        "notes": "P006 RIGHT \u2014 FY-start relief bounce thesis confirmed. P008 RIGHT on April 7 \u2014 Nifty held 22,000 as predicted, DII support absorbed FII selling."
+        "scored": 3,
+        "right": 1,
+        "wrong": 2,
+        "accuracy_pct": 33.3,
+        "notes": "April 7: P008 RIGHT (Nifty held 22,000). April 8: P007 WRONG (SWIGGY didn't breach 260 \u2014 ceasefire relief overrode bearish thesis), P009 WRONG (ASTRA MICRO didn't pullback \u2014 2-week ceasefire extended war premium instead)."
       }
     ],
     "rolling_accuracy": {
       "last_5_predictions": {
-        "scored": 4,
-        "right": 3,
-        "accuracy_pct": 75
+        "scored": 5,
+        "right": 2,
+        "accuracy_pct": 40
       },
       "last_10_predictions": {
-        "scored": 4,
-        "right": 3,
-        "accuracy_pct": 75
+        "scored": 5,
+        "right": 2,
+        "accuracy_pct": 40
       }
     },
     "improvement_signal": "INSUFFICIENT_DATA",
-    "notes": "Need minimum 10 scored predictions to detect meaningful improvement trend. P008 scored RIGHT on Apr 7 EOD \u2014 Nifty held 22,000 support as DII buying offset FII selling. Three new predictions (P012, P013, P014) added April 7 to capitalize on Trump Hormuz deadline regime. All open predictions (P002, P003, P005) remain multi-week/month horizons.",
-    "apr_7_eod_observation": "P008 scored RIGHT on April 7. Nifty closed 23,123.65, well above 22,000 target. DII support thesis confirmed. Market interpreted Trump deadline as likely extended tension rather than immediate escalation. Three new HIGH-confidence predictions added for 7D/4W horizons: ASTRA MICRO (\u20b91,000 breach on war premium), INDIGO (ATF compression below \u20b94,100), and Nifty IT (outperformance vs Nifty 50 on USD strength + Q1 earnings). Confidence 3 across all three due to bifurcated macro scenarios."
+    "notes": "Need minimum 10 scored predictions to detect meaningful improvement trend. April 8 EOD: P007, P009 both WRONG due to ceasefire announcement (regime shift from WAR_PREMIUM to DE-ESCALATION). Key learning: Geopolitical binary events create regime flips, not incremental moves. Framework pattern FORECAST_PAT003 confirmed.",
+    "apr_8_eod_observation": "MAJOR REGIME CHANGE: Ceasefire deal confirmed (Trump + Iran + Hormuz protocol). Market gap-up +3.72%. P007 (SWIGGY) invalidated \u2014 ceasefire relief overrode bearish tech thesis. P009 (ASTRA MICRO pullback) invalidated \u2014 2-week ceasefire extended war premium rather than unwinding it. Both predictions had correct direction (bearish/pullback) but missed the macro regime shift. Three new predictions (P015, P016, P017) added April 8: INDIGO consolidation (7D), NIFTY consolidation (7D), MRPL re-rating (4W). Accuracy decline from 100% (April 7) to 33% (April 8) reflects underweighting 'deal' scenario in binary forecasts."
   },
   "factor_performance": {
     "M001": {

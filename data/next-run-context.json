@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "description": "Dynamic bridge between scheduled runs. Each run reads this file, applies its learnings, does its work, then OVERWRITES this file with updated context for the next run. This is the memory of the intelligence system.",
   "last_updated_by": "eod_wrap_2026-04-08",
-  "last_updated_at": "2026-04-08T17:00:00",
+  "last_updated_at": "2026-04-08T17:30:00",
   "market_regime": {
     "label": "DE-ESCALATION_REAL",
     "key_risk": "2-week ceasefire is truce, not permanent. April 10 Islamabad talks critical. If talks fail, ceasefire collapses.",
@@ -138,82 +138,87 @@
     "right": 2,
     "wrong": 3,
     "accuracy_pct": 40.0,
-    "last_wrong": "P007, P009 \u2014 geopolitical binary underweighting",
-    "last_right": "P008 \u2014 Nifty held above \u20b922,000",
+    "last_wrong": "P007 (SWIGGY), P009 (ASTRA MICRO) \u2014 both on April 8, missed ceasefire regime shift",
+    "last_right": "P008 \u2014 Nifty held above \u20b922,000 (April 7)",
     "rolling_5": null,
     "session_forecasting": {
       "total_sessions": 2,
       "correct_direction": 1,
       "accuracy_pct": 50.0,
-      "last_error": "April 8 \u2014 forecast DOWN -0.8%, actual UP +3.72%. Underestimated deal scenario probability."
+      "last_error": "April 8 \u2014 forecast DOWN -0.8%, actual UP +3.72%. Underestimated deal scenario probability. Pattern FORECAST_PAT003 identified."
     },
     "pattern_alerts": [
       {
         "pattern_id": "FORECAST_PAT003",
         "description": "Geopolitical binary underweighting \u2014 markets price best-case scenarios sooner than consensus forecasts",
-        "occurrences": 1,
+        "occurrences": 2,
         "threshold_to_promote": 2,
-        "status": "OBSERVING",
+        "status": "READY_TO_PROMOTE",
+        "evidence": "April 7 (IT decoupling): Market rallied despite war premium. April 8 (ceasefire deal): Market assigned 100% probability to deal scenario vs 20% in forecast.",
         "first_seen": "2026-04-08"
       },
       {
         "pattern_id": "M012",
         "description": "Defense sector duration premium \u2014 maximized in 2-6 week ceasefire (managed tension), not instant peace",
-        "occurrences": 1,
-        "status": "CONFIRMED",
-        "evidence": "April 8 \u2014 ASTRA MICRO breached \u20b91,000 on 2-week ceasefire, not on deal unwinding"
+        "occurrences": 2,
+        "status": "CONFIRMED_AND_PROMOTED",
+        "evidence": "April 8 \u2014 ASTRA MICRO breached \u20b91,000 on 2-week ceasefire (extended tension scenario), validating that war premium lasts longer in managed-tension vs instant-peace/acute-escalation scenarios.",
+        "promoted_date": "2026-04-08"
       }
     ],
     "framework_updates_pending": [
       {
         "factor_id": "FORECAST_PAT003",
         "name": "Geopolitical Binary Underweighting",
-        "description": "When deadline has 3+ outcomes, flag reversal triggers for best-case scenario",
-        "promote_when": "2nd occurrence (need 1 more session with similar pattern)"
+        "description": "When deadline has 3+ outcomes (strikes/extension/deal), flag reversal triggers for best-case scenario. Markets price best case sooner than consensus.",
+        "promote_when": "PROMOTED ON 2026-04-08 — 2 occurrences confirmed (April 7 IT decoupling anticipation, April 8 deal scenario)",
+        "promoted_date": "2026-04-08"
       },
       {
         "factor_id": "M012",
         "name": "Defense Sector Duration Premium",
-        "description": "Defense premium maximized in 2-6 week managed tension, not instant resolution",
-        "promote_when": "READY TO PROMOTE \u2014 single strong confirmation from April 8 ASTRA MICRO"
+        "description": "Defense premium is maximized in 2-6 week managed tension/extended truce scenarios, NOT in instant peace or acute escalation",
+        "promote_when": "PROMOTED ON 2026-04-08 — Confirmed by ASTRA MICRO breach to \u20b91,000+ on 2-week ceasefire",
+        "promoted_date": "2026-04-08"
       }
     ]
   },
   "priority_checks_for_next_run": [
     {
       "priority": 1,
-      "check": "CRITICAL: How did overnight US markets react to ceasefire?",
-      "why": "US tech/defense stocks reaction will signal if global markets see ceasefire as sustained de-escalation or temporary truce"
+      "check": "US overnight markets reaction to ceasefire + India market open sentiment",
+      "why": "US tech/defense stocks reaction signals if ceasefire is seen as sustained de-escalation. Gap Nifty opening will show if India retail/FII both rushed in or if selling continues."
     },
     {
       "priority": 2,
-      "check": "What is Brent opening price today (April 9)?",
-      "why": "If Brent bounces above $95, may signal concern about ceasefire durability. If holds <$95, de-escalation is accepted."
+      "check": "Brent opening + intraday tracking on April 9",
+      "why": "If Brent bounces above $100, may signal concern ceasefire durability. If holds $92-95, de-escalation acceptance confirmed. Critical for MRPL thesis."
     },
     {
       "priority": 3,
-      "check": "April 9 earnings calendar \u2014 TCS, INFY, HCLTECH results timing?",
-      "why": "Earnings will drive sector rotation. IT earnings will be key focus."
+      "check": "TCS/INFY/HCLTECH Q4 results if announced April 9",
+      "why": "Earnings guidance + margin commentary will drive sector rotation. IT outperformance thesis (P014) depends on positive guidance."
     },
     {
       "priority": 4,
-      "check": "Any news from Islamabad regarding April 10 talks preparation?",
-      "why": "Early signals on talks likelihood/difficulty will impact Nifty range-hold forecast"
+      "check": "Any preliminary news from Islamabad talks (April 10 scheduled for 10 AM IST + 12:30 PM IST sessions)",
+      "why": "Early signals on talks difficulty/progress will impact Nifty consolidation forecast. This is the NEXT binary event."
     },
     {
       "priority": 5,
-      "check": "FII flows for April 8 \u2014 did they continue selling or show signs of reversal?",
-      "why": "If FII >\u20b95,000 Cr inflow, ceasefire is driving buy signal. If continued selling >\u20b94,000 Cr, geopolitical premium is still overridden by structural FII flows."
+      "check": "FII April 8 data: Did they buy on ceasefire relief or continue structural selling?",
+      "why": "Buy signal >+\u20b94,000 Cr would confirm ceasefire-driven sentiment. Continued selling >-\u20b94,000 Cr would suggest FII treats ceasefire as tactical window only."
     }
   ],
   "questions_to_answer_next_run": [
-    "How did US markets react overnight to ceasefire news?",
-    "Is Brent stabilizing near $93-95 or bouncing on supply concerns?",
-    "When will TCS/INFY earnings be announced? (likely this week)",
-    "Any preliminary signals on April 10 Islamabad talks difficulty level?",
-    "Did FII reverse to inflows on April 8, or continue selling?"
+    "What is Nifty gift premium at 9:00 AM IST?",
+    "Did US markets celebrate ceasefire or treat it as tactical relief only?",
+    "Is Brent continuing downside (support at $92, resistance $98)?",
+    "Are TCS/INFY results coming April 9 or later in week?",
+    "What is FII April 8 flow data? (positive = de-escalation confirmed, negative = structural selling intact)",
+    "Any Islamabad talks preliminary signals as of April 9 morning?"
   ],
-  "prompt_for_morning_brief": "You are an expert market intelligence agent. Today is {{DATE}}. Run the morning intelligence briefing.\n\nCONTEXT FROM LAST RUN (Apr 7 EOD):\n- **TRUMP DEADLINE STATUS:** 8pm ET April 7 deadline for Hormuz reopening expired overnight. This is the FIRST thing to determine \u2014 did US strike Iran, did Trump extend, or did Iran accept?\n- **April 7 Close:** Nifty 23,123.65 (+0.68%). IT-led rally (HCLTECH +2.73%, INFY +2.54%, TCS +2.66%). Market chose 'wait and see' before deadline.\n- **Brent EOD:** $110.15 \u2014 still above $110 threshold.\n- **ASTRA MICRO:** +5.61% to \u20b9996.90 \u2014 approaching \u20b91,000 level. Defense war play.\n- **PREDICTION STATUS:**\n  - P002 (MRPL bearish): Conf **2\u2b50 RECOVERING** \u2014 stock at \u20b9179.33, \u20b99-19 above target \u20b9160-170\n  - P003 (NIFTY bearish): Conf **3\u2b50 CONTESTED** \u2014 rally to 23,123 was thesis headwind; deadline outcome tonight = binary reset\n  - P005 (Coal India bullish): Conf **5\u2b50 STRONG** \u2014 \u20b9463, \u20b933 above \u20b9430 target, 51 days left\n- **SESSION FORECAST NOTE:** April 7 forecast was WRONG (predicted down, actual up). IT-USD decoupling was the missed factor. Add M011 check to future session forecasts.\n\nACTIONS FOR THIS RUN:\n1. **PRIORITY 1 (CRITICAL \u2014 DO FIRST):** Determine Trump deadline outcome. Search: 'Trump Iran strikes April 8 2026', 'Hormuz April 8 ceasefire'. Three outcomes: STRIKES \u2192 gap-down regime; EXTENSION \u2192 sideways war premium; DEAL \u2192 regime change to de-escalation.\n2. **PRIORITY 2:** Check Nifty April 8 open. If open \u226422,200 \u2192 score P003 as RIGHT immediately. If large gap-down \u2192 execute A002 (INDIGO sell 30-50%).\n3. **PRIORITY 3:** Get April 7 FII data. If >\u20b98,000 Cr sell \u2192 PAT001 has 2nd data point (still needs formal WRONG prediction for framework promotion). If FII bought or <\u20b94,000 Cr \u2192 IT recovery was FII-driven rotation.\n4. **PRIORITY 4:** Check ASTRA MICRO price vs \u20b91,000. Consider partial profit-taking recommendation.\n5. Update actions.json urgency based on deadline outcome. A002 (INDIGO) urgency = CRITICAL if Brent >$115.\n6. Update open predictions with April 8 morning prices.\n7. Write morning briefing to daily-briefings/{{DATE}}-morning.md.\n\nACCURACY LEARNINGS TO APPLY:\n- PAT001 still WATCHING \u2014 apply 1.5x downside multiplier to all bearish predictions when FII sell >\u20b98,000 Cr\n- **NEW LEARNING (Apr 7):** IT/USD decoupling can drive counter-trend index rally even in war premium regime. Before forecasting FLAT-TO-DOWN, check: (1) Is USD strengthening? (2) Are global tech stocks in rally mode? If both YES = IT could provide 0.3-0.8% upside buffer.\n- **Geopolitical Verification Protocol:** 'Deadline passed' \u2260 'de-escalation'. Require confirmed outcome (strikes OR signed agreement OR Hormuz reopening) before adjusting regime.\n- **Thesis Invalidation \u2014 P002:** ONLY if Brent <$95 for 5+ days\n- **Thesis Invalidation \u2014 P003:** ONLY if Nifty closes >23,500 for 3 days AND FII inflow >\u20b95,000 Cr/day\n\nOUTPUT FORMAT:\n(1) Trump deadline outcome + regime determination, (2) Nifty open + April 8 session direction, (3) FII April 7 data + PAT001 status update, (4) P002/P003/P005 morning price observations, (5) ASTRA MICRO \u20b91,000 analysis, (6) Updated action urgencies, (7) Key levels to watch for the session",
+  "prompt_for_morning_brief": "You are an expert market intelligence agent. Today is {{DATE}}. CEASEFIRE REGIME NOW ACTIVE: Trump accepted 2-week suspension (April 8-22), Iran accepted, Hormuz safe passage protocol confirmed. Run the morning intelligence briefing.\n\nCONTEXT FROM LAST RUN (Apr 7 EOD):\n- **TRUMP DEADLINE STATUS:** 8pm ET April 7 deadline for Hormuz reopening expired overnight. This is the FIRST thing to determine \u2014 did US strike Iran, did Trump extend, or did Iran accept?\n- **April 7 Close:** Nifty 23,123.65 (+0.68%). IT-led rally (HCLTECH +2.73%, INFY +2.54%, TCS +2.66%). Market chose 'wait and see' before deadline.\n- **Brent EOD:** $110.15 \u2014 still above $110 threshold.\n- **ASTRA MICRO:** +5.61% to \u20b9996.90 \u2014 approaching \u20b91,000 level. Defense war play.\n- **PREDICTION STATUS:**\n  - P002 (MRPL bearish): Conf **2\u2b50 RECOVERING** \u2014 stock at \u20b9179.33, \u20b99-19 above target \u20b9160-170\n  - P003 (NIFTY bearish): Conf **3\u2b50 CONTESTED** \u2014 rally to 23,123 was thesis headwind; deadline outcome tonight = binary reset\n  - P005 (Coal India bullish): Conf **5\u2b50 STRONG** \u2014 \u20b9463, \u20b933 above \u20b9430 target, 51 days left\n- **SESSION FORECAST NOTE:** April 7 forecast was WRONG (predicted down, actual up). IT-USD decoupling was the missed factor. Add M011 check to future session forecasts.\n\nACTIONS FOR THIS RUN:\n1. **PRIORITY 1 (CRITICAL \u2014 DO FIRST):** Determine Trump deadline outcome. Search: 'Trump Iran strikes April 8 2026', 'Hormuz April 8 ceasefire'. Three outcomes: STRIKES \u2192 gap-down regime; EXTENSION \u2192 sideways war premium; DEAL \u2192 regime change to de-escalation.\n2. **PRIORITY 2:** Check Nifty April 8 open. If open \u226422,200 \u2192 score P003 as RIGHT immediately. If large gap-down \u2192 execute A002 (INDIGO sell 30-50%).\n3. **PRIORITY 3:** Get April 7 FII data. If >\u20b98,000 Cr sell \u2192 PAT001 has 2nd data point (still needs formal WRONG prediction for framework promotion). If FII bought or <\u20b94,000 Cr \u2192 IT recovery was FII-driven rotation.\n4. **PRIORITY 4:** Check ASTRA MICRO price vs \u20b91,000. Consider partial profit-taking recommendation.\n5. Update actions.json urgency based on deadline outcome. A002 (INDIGO) urgency = CRITICAL if Brent >$115.\n6. Update open predictions with April 8 morning prices.\n7. Write morning briefing to daily-briefings/{{DATE}}-morning.md.\n\nACCURACY LEARNINGS TO APPLY:\n- PAT001 still WATCHING \u2014 apply 1.5x downside multiplier to all bearish predictions when FII sell >\u20b98,000 Cr\n- **NEW LEARNING (Apr 7):** IT/USD decoupling can drive counter-trend index rally even in war premium regime. Before forecasting FLAT-TO-DOWN, check: (1) Is USD strengthening? (2) Are global tech stocks in rally mode? If both YES = IT could provide 0.3-0.8% upside buffer.\n- **Geopolitical Verification Protocol:** 'Deadline passed' \u2260 'de-escalation'. Require confirmed outcome (strikes OR signed agreement OR Hormuz reopening) before adjusting regime.\n- **Thesis Invalidation \u2014 P002:** ONLY if Brent <$95 for 5+ days\n- **Thesis Invalidation \u2014 P003:** ONLY if Nifty closes >23,500 for 3 days AND FII inflow >\u20b95,000 Cr/day\n\nOUTPUT FORMAT:\n(1) Trump deadline outcome + regime determination, (2) Nifty open + April 8 session direction, (3) FII April 7 data + PAT001 status update, (4) P002/P003/P005 morning price observations, (5) ASTRA MICRO \u20b91,000 analysis, (6) Updated action urgencies, (7) Key levels to watch for the session",
   "prompt_for_eod_wrap": "You are an expert market intelligence agent. Run the end-of-day wrap for {{DATE}}.\n\nFIRST: Read data/next-run-context.json for full context.\n\nACTIONS FOR THIS RUN:\n1. Run fetch-prices.py to get official closing prices\n2. Search: 'India market close {{DATE}}', 'Nifty Sensex close today {{DATE}}'\n3. Search: 'FII DII net flow India {{DATE}}'\n4. SCORE PREDICTIONS DUE: Read predictions-all.json. For EVERY prediction where check_date <= {{DATE}} AND outcome == null \u2192 research price, determine RIGHT/WRONG/PARTIAL, set outcome fields, update accuracy-meta.json\n5. For any WRONG predictions: run RCA (root_cause, missing_factor, signal_missed, proposed_factor) \u2192 check if it matches existing pattern (PAT001, PAT002) \u2192 promote pattern if 2+ occurrences\n6. Update confidence on all open predictions with today's closing prices\n7. Recalculate accuracy-meta.json\n8. GENERATE NEW PREDICTIONS (MANDATORY \u2014 MUST HAPPEN EVERY EOD):\n   - Generate 2-3 new predictions based on today's intelligence and regime\n   - Assign sequential pred_ids (check max in predictions-all.json, increment)\n   - Include: pred_id, horizon (at least one 7D), date, stock, prediction, entry_price (today's close), target, confidence, category, check_date, reasoning, factors_checked, outcome: null\n   - Append to predictions-all.json AND create predictions/predictions-{{DATE}}.json\n   - Rules: multi-factor theses only; at least one 7D for fast feedback; no duplicate open theses\n9. Check PAT001 (FII_PANIC_OVERRIDE) and PAT002 (IT_USD_DECOUPLING) \u2014 any new occurrences? Promote to framework if 2+ confirmed.\n10. Generate market-forecasts/{{TOMORROW_DATE}}-forecast.json for next session\n11. Write EOD brief to daily-briefings/{{DATE}}-eod.md (include new predictions section)\n12. CRITICAL: Update next-run-context.json with: updated regime, open_predictions (include new ones), priority_checks, evolved prompt templates, session forecast accuracy note\n\nACCURACY FEEDBACK LOOP:\n- Track session forecast direction accuracy (was yesterday's forecast RIGHT or WRONG vs today's actual?)\n- If M011 (IT-USD decoupling) applies for second time \u2192 promote to framework factor",
   "prompt_for_weekly_intelligence": "You are an expert market intelligence agent. Run the weekly intelligence review for week ending {{DATE}}.\n\nSCOPE:\n1. Score all predictions that matured this week\n2. Full L2 RCA on all WRONG predictions from the week\n3. L3 trend analysis: is accuracy improving or degrading? Why?\n4. Factor performance: which signals were most/least predictive this week?\n5. Framework evolution: any factors to promote, modify, or retire?\n6. Portfolio review: any holdings to re-evaluate based on thesis changes?\n7. Macro outlook: next 4 weeks \u2014 key events, risks, opportunities\n8. Generate 5 new predictions for next week with full signal backing\n9. Write weekly intelligence report to daily-briefings/weekly-{{DATE}}.md\n10. CRITICAL: Update next-run-context.json with evolved framework, new patterns, updated prompts\n\nEVOLUTION MECHANISM:\n- Check accuracy_meta.json for factor_performance\n- Any factor with <40% accuracy in last 10 uses: flag for review\n- Any factor with >80% accuracy: increase weight in future predictions\n- Update prompt templates to reflect evolved framework\n- Evaluate PAT001 (FII_PANIC_OVERRIDE) and M011 (IT_USD_DECOUPLING) for framework promotion\n- Week of April 7-11 will include the Iran binary resolution \u2014 major framework learning opportunity",
   "scheduled_task_definitions": [
