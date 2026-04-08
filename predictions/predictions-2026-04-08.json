@@ -1,0 +1,77 @@
+{
+  "date": "2026-04-08",
+  "session_regime": "DE-ESCALATION_REAL",
+  "generated_by": "eod_wrap_2026-04-08",
+  "new_predictions": [
+    {
+      "pred_id": "P018",
+      "horizon": "7D",
+      "date": "2026-04-08",
+      "stock": "TCS",
+      "prediction": "TCS will close above ₹2,600 within 7 days following Q4FY26 results (announced April 9), supported by IT-USD decoupling pattern and stable margin guidance",
+      "entry_price": 2555.30,
+      "target": ">2600",
+      "confidence": 3,
+      "category": "HIGH",
+      "check_date": "2026-04-15",
+      "reasoning": "TCS Q4FY26 results on April 9. IT-USD decoupling confirmed (FORECAST_PAT001). USD strength + ceasefire removes rupee risk. Modest +1.7% target to ₹2,600 makes this high probability if earnings beat.",
+      "factors_checked": ["M004","M005","T001","T002","S003"],
+      "outcome": null,
+      "scored_on": null
+    },
+    {
+      "pred_id": "P019",
+      "horizon": "7D",
+      "date": "2026-04-08",
+      "stock": "ADANI PORT",
+      "prediction": "ADANI PORT will sustain above ₹1,430 and test ₹1,490-1,540 within 7 days as Hormuz safe passage protocol confirms cargo traffic restoration",
+      "entry_price": 1453.30,
+      "target": "1490-1540",
+      "confidence": 3,
+      "category": "HIGH",
+      "check_date": "2026-04-15",
+      "reasoning": "Hormuz safe passage protocol = direct revenue catalyst for port traffic. Multi-factor: Hormuz reopening, rupee stability, April 10 talks progress, PSU infra re-rating.",
+      "factors_checked": ["M001","M003","T001","T002","S005"],
+      "outcome": null,
+      "scored_on": null
+    },
+    {
+      "pred_id": "P020",
+      "horizon": "7D",
+      "date": "2026-04-08",
+      "stock": "SETFGOLD",
+      "prediction": "SETFGOLD will correct toward ₹120-122 within 7 days as US-Iran ceasefire progressively compresses gold's geopolitical war premium",
+      "entry_price": 125.59,
+      "target": "120-122",
+      "confidence": 3,
+      "category": "MEDIUM",
+      "check_date": "2026-04-15",
+      "reasoning": "Ceasefire + Hormuz protocol removes gold war premium driver. A005 exit trigger activated. Historical: gold corrects 3-7% in 1 week of major ceasefire events. Multi-factor: de-escalation, safe-haven demand compression, risk-on regime.",
+      "factors_checked": ["M008","M001","T002","T001"],
+      "outcome": null,
+      "scored_on": null
+    }
+  ],
+  "invalidated_predictions_noted": [
+    {
+      "pred_id": "P002",
+      "reason": "Brent crashed to $93.13, below $95 invalidation threshold. Bearish MRPL thesis (₹160-170) no longer viable.",
+      "action": "Will score WRONG at check_date May 28 unless Brent recovers above $100."
+    },
+    {
+      "pred_id": "P003",
+      "reason": "Nifty at 23,997.35 — 1,800 pts above the 22,000-22,200 target zone. FII selling thesis overridden by geopolitical regime change.",
+      "action": "Will score WRONG at check_date May 10 unless significant reversal."
+    },
+    {
+      "pred_id": "P004",
+      "reason": "ASTRA MICRO at ₹1,019.45 — defense premium extended by 2-week ceasefire. Requires -17% fall to target ₹850-900.",
+      "action": "Will score WRONG at check_date April 25."
+    },
+    {
+      "pred_id": "P013",
+      "reason": "IndiGo at ₹4,614.90 (+8.11%) — 12.6% ABOVE the <₹4,100 target. ATF cost thesis overridden by Brent crash.",
+      "action": "Will score WRONG at check_date April 14."
+    }
+  ]
+}

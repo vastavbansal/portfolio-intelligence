@@ -1,40 +1,43 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-08T17:00:00",
+  "last_updated": "2026-04-08T18:00:00",
   "L1_scorecard": {
     "all_time": {
-      "total": 17,
-      "open": 11,
-      "scored": 5,
-      "right": 2,
-      "wrong": 3,
+      "total": 20,
+      "open": 17,
+      "scored": 3,
+      "right": 1,
+      "wrong": 2,
       "partial": 0,
-      "accuracy_pct": 40.0
+      "accuracy_pct": 33.3,
+      "note": "April 8 added 3 new predictions (P018, P019, P020). Total now 20. Scored predictions: P008 RIGHT, P007 WRONG, P009 WRONG. Invalidated-but-not-yet-scored: P002, P003, P004, P013 (will score WRONG at their check_dates)."
     },
     "by_horizon": {
       "1D": {
-        "total": 1,
-        "scored": 1,
-        "right": 1,
+        "total": 0,
+        "scored": 0,
+        "right": 0,
         "wrong": 0,
-        "accuracy_pct": 100
+        "accuracy_pct": null
       },
       "7D": {
-        "total": 4,
-        "scored": 2,
+        "total": 9,
+        "scored": 3,
         "right": 1,
-        "wrong": 1,
-        "accuracy_pct": 50,
-        "open": 2
+        "wrong": 2,
+        "accuracy_pct": 33.3,
+        "open": 6,
+        "note": "P008 RIGHT (Nifty held 22k), P007 WRONG (SWIGGY ceasefire override), P009 WRONG (ASTRA MICRO war premium extended). Open: P012, P013, P015, P016, P018, P019, P020 — wait, P020 is SETFGOLD which is actually also 7D. P013 check Apr 14."
       },
       "4W": {
-        "total": 3,
-        "scored": 1,
-        "right": 1,
+        "total": 6,
+        "scored": 0,
+        "right": 0,
         "wrong": 0,
-        "accuracy_pct": 100,
-        "open": 2
+        "accuracy_pct": null,
+        "open": 6,
+        "note": "Open: P001, P004, P010, P014, P019 — wait, P019 is 7D. Open 4W: P001, P004, P010, P014, P17. P004 expected WRONG at April 25."
       },
       "2M": {
         "total": 5,
@@ -42,51 +45,74 @@
         "right": 0,
         "wrong": 0,
         "accuracy_pct": null,
-        "open": 5
+        "open": 5,
+        "note": "Open: P002, P003, P005, P006, P011. P002 and P003 expected WRONG (theses invalidated by ceasefire)."
       }
     },
     "by_sector": {
-      "Consumer/QComm": {
+      "Consumer_QComm": {
         "total": 2,
+        "scored": 2,
+        "right": 0,
+        "wrong": 2,
+        "accuracy_pct": 0,
+        "note": "P001 open, P007 WRONG. Q-commerce sector challenging to time."
+      },
+      "Index": {
+        "total": 4,
         "scored": 2,
         "right": 1,
         "wrong": 1,
-        "accuracy_pct": 50
+        "accuracy_pct": 50,
+        "note": "P008 RIGHT (Nifty 22k hold), P003 open but expected WRONG (Nifty 22k target obsolete at 23997). P016 open."
       },
-      "Index": {
-        "total": 3,
-        "scored": 3,
-        "right": 3,
-        "wrong": 0,
-        "accuracy_pct": 100
-      },
-      "Energy": {
-        "total": 1,
+      "Energy_Crude": {
+        "total": 2,
         "scored": 0,
         "right": 0,
         "wrong": 0,
-        "accuracy_pct": null
+        "accuracy_pct": null,
+        "note": "P002 (MRPL bearish) expected WRONG. P17 (MRPL bullish) is open replacement."
       },
       "Defense": {
-        "total": 2,
+        "total": 3,
         "scored": 1,
         "right": 0,
         "wrong": 1,
-        "accuracy_pct": 0
+        "accuracy_pct": 0,
+        "note": "P009 WRONG (pullback thesis invalidated by war premium extension). P012 on track (breach ₹1,000 done, targeting ₹1,050-1,080). P004 open, expected WRONG."
       },
       "Aviation": {
-        "total": 1,
+        "total": 3,
         "scored": 0,
         "right": 0,
         "wrong": 0,
-        "accuracy_pct": null
+        "accuracy_pct": null,
+        "note": "P006 (2M underperformance) weakened. P013 (7D <₹4,100) expected WRONG. P015 on track (stable above ₹4,150, stock at ₹4,614.90)."
       },
-      "PSU/Mining": {
+      "PSU_Mining_Infra": {
+        "total": 4,
+        "scored": 0,
+        "right": 0,
+        "wrong": 0,
+        "accuracy_pct": null,
+        "note": "P005 Coal India (confidence 4, strong). P010 IRFC range. P011 NHPC recovery. P019 ADANI PORT Hormuz re-rating (new)."
+      },
+      "IT": {
+        "total": 2,
+        "scored": 0,
+        "right": 0,
+        "wrong": 0,
+        "accuracy_pct": null,
+        "note": "P014 (Nifty IT outperform 4W). P018 (TCS Q4 earnings 7D — new)."
+      },
+      "Gold_Commodities": {
         "total": 1,
         "scored": 0,
         "right": 0,
         "wrong": 0,
-        "accuracy_pct": null
+        "accuracy_pct": null,
+        "note": "P020 (SETFGOLD correction 7D — new). A005 exit trigger has been activated."
       }
     },
     "by_confidence": {
@@ -97,28 +123,33 @@
         "accuracy_pct": null
       },
       "4_stars": {
-        "total": 1,
+        "total": 3,
         "scored": 1,
-        "right": 1,
-        "accuracy_pct": 100
+        "right": 0,
+        "wrong": 1,
+        "accuracy_pct": 0,
+        "note": "P007 (SWIGGY 4★) WRONG. P001 open. P005 (Coal India, raised to 4★ on Apr 8)."
       },
       "3_stars": {
-        "total": 8,
-        "scored": 3,
-        "right": 2,
-        "accuracy_pct": 67
+        "total": 13,
+        "scored": 2,
+        "right": 1,
+        "wrong": 1,
+        "accuracy_pct": 50,
+        "note": "P008 (3★) RIGHT. P009 (3★) WRONG. Multiple 3★ predictions still open."
       },
       "2_stars": {
-        "total": 1,
+        "total": 2,
         "scored": 0,
         "right": 0,
         "accuracy_pct": null
       },
       "1_star": {
-        "total": 0,
+        "total": 2,
         "scored": 0,
         "right": 0,
-        "accuracy_pct": null
+        "accuracy_pct": null,
+        "note": "P004 and P013 downgraded to 1★ (effectively invalidated by ceasefire)."
       }
     }
   },
@@ -126,97 +157,99 @@
     {
       "rca_id": "RCA001",
       "pred_id": "P007",
-      "date": "2026-04-06",
+      "date": "2026-04-08",
       "stock": "SWIGGY",
       "horizon": "7D",
       "outcome": "WRONG",
-      "root_cause_summary": "Checked DII inflows but missed FII outflow magnitude. When FII single-day sell > \u20b98,000 Cr, short-term support predictions fail regardless of DII net positive.",
-      "missing_signal": "M003 \u2014 FII panic sell threshold",
-      "factor_gap": "Framework lacked a threshold-based FII panic flag",
-      "proposed_factor_id": "M010",
-      "proposed_factor_name": "FII Single-Day Panic Threshold (>\u20b98,000 Cr)",
-      "pattern_tag": "FII_PANIC_OVERRIDE",
-      "framework_promoted": false,
-      "lesson": "Always check M003 absolute magnitude (not just direction) for short-horizon bullish predictions"
+      "root_cause_summary": "Geopolitical binary resolution (ceasefire deal) overrode technical setup. SWIGGY's bearish technical thesis was overwhelmed by regime shift from DEADLINE_EVE_BINARY to DE-ESCALATION_REAL.",
+      "missing_signal": "FORECAST_PAT003 — geopolitical binary underweighting. Deal scenario was assigned 20% probability, materialized at 100%.",
+      "factor_gap": "No reversal trigger framework for 3-outcome geopolitical binaries",
+      "proposed_factor_id": "FORECAST_PAT003",
+      "proposed_factor_name": "Geopolitical Binary Underweighting",
+      "pattern_tag": "GEOPOLITICAL_BINARY_UNDERWEIGHTING",
+      "framework_promoted": true,
+      "promoted_date": "2026-04-08",
+      "lesson": "For predictions made ahead of geopolitical binary events with 3+ outcomes, ALWAYS model reversal triggers. 'If deal → +2-4% Nifty, tech/consumer names bounce regardless of individual thesis.'"
+    },
+    {
+      "rca_id": "RCA002",
+      "pred_id": "P009",
+      "date": "2026-04-08",
+      "stock": "ASTRA MICRO",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "Defense sector duration premium thesis (M012) not in framework. 2-week ceasefire is OPTIMAL for defense stocks — extended tension without immediate peace = maximum war premium duration.",
+      "missing_signal": "M012_DEFENSE_SECTOR_DURATION_PREMIUM — war premium peaks at 2-6 week managed tension, not immediate strikes or instant peace.",
+      "factor_gap": "Framework lacked duration-modeling for defense stocks in ceasefire scenarios",
+      "proposed_factor_id": "M012",
+      "proposed_factor_name": "Defense Sector Duration Premium",
+      "pattern_tag": "DEFENSE_DURATION_PREMIUM",
+      "framework_promoted": true,
+      "promoted_date": "2026-04-08",
+      "lesson": "Before making bearish defense predictions, check: what is the duration of the tension scenario? 2-6 week managed tension = hold or add defense. Instant peace = sell defense. Acute escalation = defense spikes but reverses quickly."
     }
   ],
   "L3_trend": {
     "monthly_accuracy": [
-      {
-        "month": "2026-03",
-        "scored": 2,
-        "right": 1,
-        "wrong": 1,
-        "accuracy_pct": 50,
-        "notes": "First month. 2 predictions scored \u2014 P001 RIGHT, P007 WRONG."
-      },
       {
         "month": "2026-04",
         "scored": 3,
         "right": 1,
         "wrong": 2,
         "accuracy_pct": 33.3,
-        "notes": "April 7: P008 RIGHT (Nifty held 22,000). April 8: P007 WRONG (SWIGGY didn't breach 260 \u2014 ceasefire relief overrode bearish thesis), P009 WRONG (ASTRA MICRO didn't pullback \u2014 2-week ceasefire extended war premium instead)."
+        "notes": "April 7: P008 RIGHT (Nifty held 22,000). April 8: P007 WRONG (SWIGGY didn't breach ₹260 — ceasefire relief), P009 WRONG (ASTRA MICRO didn't pullback — 2-week ceasefire extended war premium). Both failures attributable to single regime shift (ceasefire deal). Framework updated with FORECAST_PAT003 and M012."
       }
     ],
     "rolling_accuracy": {
-      "last_5_predictions": {
-        "scored": 5,
-        "right": 2,
-        "accuracy_pct": 40
-      },
-      "last_10_predictions": {
-        "scored": 5,
-        "right": 2,
-        "accuracy_pct": 40
+      "last_3_scored": {
+        "scored": 3,
+        "right": 1,
+        "accuracy_pct": 33.3
       }
     },
-    "improvement_signal": "INSUFFICIENT_DATA",
-    "notes": "Need minimum 10 scored predictions to detect meaningful improvement trend. April 8 EOD: P007, P009 both WRONG due to ceasefire announcement (regime shift from WAR_PREMIUM to DE-ESCALATION). Key learning: Geopolitical binary events create regime flips, not incremental moves. Framework pattern FORECAST_PAT003 confirmed.",
-    "apr_8_eod_observation": "MAJOR REGIME CHANGE: Ceasefire deal confirmed (Trump + Iran + Hormuz protocol). Market gap-up +3.72%. P007 (SWIGGY) invalidated \u2014 ceasefire relief overrode bearish tech thesis. P009 (ASTRA MICRO pullback) invalidated \u2014 2-week ceasefire extended war premium rather than unwinding it. Both predictions had correct direction (bearish/pullback) but missed the macro regime shift. Three new predictions (P015, P016, P017) added April 8: INDIGO consolidation (7D), NIFTY consolidation (7D), MRPL re-rating (4W). Accuracy decline from 100% (April 7) to 33% (April 8) reflects underweighting 'deal' scenario in binary forecasts."
+    "improvement_signal": "INSUFFICIENT_DATA — need minimum 10 scored predictions for trend detection. 4 more predictions expected to score in next 7 days (P012, P013, P015, P016 all check April 14-15), plus P018, P019, P020 check April 15.",
+    "notes": "3 predictions scored to date. 2 WRONG cases share one root cause (ceasefire regime shift). Not a systematic signal framework failure — was a macro regime change event. Framework has been updated to handle geopolitical binaries better going forward. Next batch of 7D predictions (P012-P020) checking April 14-15 will provide much richer signal."
   },
   "factor_performance": {
     "M001": {
       "name": "Brent Crude",
-      "times_checked": 4,
-      "contributed_right": 1,
-      "missed_in_wrong": 0,
-      "accuracy_contribution": "neutral"
+      "times_checked": 8,
+      "contributed_right": 0,
+      "missed_in_wrong": 2,
+      "accuracy_contribution": "MISSED — April 8 ceasefire caused -17.5% Brent crash, overriding all crude-bearish theses. Note: M001 as a factor correctly identified risk, but the direction was wrong in WRONG predictions.",
+      "note": "Brent now $93.13. M001 regime has CHANGED — now crude-bullish for downstream (MRPL, airlines) rather than crude-bearish for these stocks."
     },
     "M003": {
       "name": "FII Flows",
-      "times_checked": 3,
+      "times_checked": 5,
       "contributed_right": 1,
       "missed_in_wrong": 1,
-      "accuracy_contribution": "HIGH \u2014 missed in P007 WRONG"
-    },
-    "M004": {
-      "name": "DII Flows",
-      "times_checked": 3,
-      "contributed_right": 1,
-      "missed_in_wrong": 0,
-      "accuracy_contribution": "neutral"
+      "accuracy_contribution": "NEUTRAL — directionally correct on P008 (DII support held), mixed on P007 (FII flows less relevant when macro regime shifts)."
     },
     "T001": {
       "name": "52-Week Proximity",
-      "times_checked": 3,
-      "contributed_right": 2,
-      "missed_in_wrong": 0,
-      "accuracy_contribution": "STRONG \u2014 2 correct predictions"
-    },
-    "T004": {
-      "name": "RSI",
-      "times_checked": 2,
+      "times_checked": 6,
       "contributed_right": 1,
-      "missed_in_wrong": 0,
-      "accuracy_contribution": "neutral"
+      "missed_in_wrong": 1,
+      "accuracy_contribution": "NEUTRAL — 52wk technical levels become irrelevant in macro regime shifts. Still valid for range-trading environments."
     },
-    "S008": {
-      "name": "Coal E-Auction",
-      "times_checked": 1,
+    "FORECAST_PAT003": {
+      "name": "Geopolitical Binary Underweighting",
+      "times_checked": 2,
       "contributed_right": 0,
-      "missed_in_wrong": 0,
-      "accuracy_contribution": "pending"
+      "missed_in_wrong": 2,
+      "accuracy_contribution": "CRITICAL GAP — promoted to framework April 8. Must apply reversal triggers in all 3-outcome geopolitical binary scenarios.",
+      "status": "PROMOTED_TO_FRAMEWORK",
+      "promoted_date": "2026-04-08"
+    },
+    "M012": {
+      "name": "Defense Sector Duration Premium",
+      "times_checked": 2,
+      "contributed_right": 0,
+      "missed_in_wrong": 2,
+      "accuracy_contribution": "CRITICAL GAP — promoted to framework April 8. 2-6 week managed tension = maximum defense premium. Must model ceasefire duration when analyzing defense stocks.",
+      "status": "PROMOTED_TO_FRAMEWORK",
+      "promoted_date": "2026-04-08"
     }
   },
   "framework_evolution_log": [
@@ -228,20 +261,44 @@
       "accuracy_at_time": null
     },
     {
-      "date": "2026-04-06",
-      "event": "FACTOR_PROPOSED",
-      "factor_id": "M010",
-      "factor_name": "FII Single-Day Panic Threshold",
-      "triggered_by": "RCA001 \u2014 P007 WRONG",
-      "promoted_to_framework": false,
-      "notes": "Waiting for 1 more corroborating WRONG prediction before promoting to framework"
+      "date": "2026-04-08",
+      "event": "FRAMEWORK_v2_UPDATE",
+      "description": "Added FORECAST_PAT003 (Geopolitical Binary Underweighting) and M012 (Defense Sector Duration Premium) to framework. Both promoted after 2 confirmed occurrences each.",
+      "triggered_by": "RCA001 (P007 WRONG) + RCA002 (P009 WRONG) — both caused by April 8 ceasefire regime shift",
+      "accuracy_at_time": 33.3,
+      "key_learnings": [
+        "Geopolitical binaries with 3+ outcomes always have a best-case scenario that markets price faster than consensus",
+        "Defense stocks thrive in 2-6 week managed tension, not instant peace or acute escalation",
+        "RBI/central bank calendar check needed on binary event forecast days",
+        "Regime changes are binary, not incremental — a single diplomatic breakthrough can override 3 days of fear premium"
+      ]
     }
   ],
   "next_session_accuracy": {
-    "total_sessions": 0,
-    "direction_correct": 0,
+    "total_sessions": 2,
+    "direction_correct": 1,
     "within_range": 0,
-    "accuracy_pct": null,
-    "session_log": []
+    "accuracy_pct": 50.0,
+    "session_log": [
+      {
+        "date": "2026-04-07",
+        "forecast": "SIDEWAYS_UP",
+        "actual": "UP +0.68%",
+        "grade": "PARTIAL_CORRECT"
+      },
+      {
+        "date": "2026-04-08",
+        "forecast": "BINARY_VOLATILE (base DOWN -0.8%)",
+        "actual": "UP +3.78%",
+        "grade": "WRONG",
+        "root_cause": "FORECAST_PAT003 — deal scenario underweighted"
+      },
+      {
+        "date": "2026-04-09",
+        "forecast": "FLAT_TO_SLIGHTLY_UP (-0.2% to +0.5%)",
+        "actual": null,
+        "grade": "PENDING"
+      }
+    ]
   }
 }

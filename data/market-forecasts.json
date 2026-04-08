@@ -40,7 +40,7 @@
       }
     ],
     "base_case_scenario": "Base (Consolidation)",
-    "note": "Apr 8 outcome: DEAL CONFIRMED. Nifty +3.72% to 23,984.85 (best day in months). Brent crashed to $93.85. April 9 is consolidation territory — rally is priced in."
+    "note": "Apr 8 CONFIRMED: DEAL + RBI rate hold. Nifty +3.78% to 23,997.35 (best day in 11 months). Brent -17.55% to $93.13. IndiGo hit upper circuit at ₹4,614.90. TCS Q4 results April 9. April 9 is consolidation territory — rally is priced in. Next binary event: April 10 Islamabad talks."
   },
   "index_forecasts": [
     {
@@ -247,21 +247,27 @@
     {
       "session_date": "2026-04-08",
       "forecasts_made": 1,
-      "notes": "Forecast BINARY_VOLATILE (base -0.8%, extension scenario). Actual: Nifty +3.72% on CEASEFIRE DEAL. Direction WRONG — underweighted deal scenario (assigned 20% probability, it materialised at 100%). Brent crashed to $93.85 (-14.1%).",
-      "nifty_actual": 23984.85,
-      "nifty_change_pct_actual": 3.72,
+      "notes": "Forecast BINARY_VOLATILE (base -0.8%, extension scenario). Actual: Nifty +3.78% on CEASEFIRE DEAL + RBI rate unchanged. Direction WRONG — underweighted deal scenario (assigned 20% probability, it materialised at 100%). Brent crashed to $93.13 (-17.55%). IndiGo hit upper circuit at ₹4,614.90. Best day for Nifty in 11 months.",
+      "nifty_actual": 23997.35,
+      "nifty_change_pct_actual": 3.78,
+      "sensex_actual": 77562.90,
       "nifty_forecast": 22800,
-      "brent_actual": 93.85,
+      "brent_actual": 93.13,
+      "indigo_actual": 4614.90,
+      "astra_micro_actual": 1019.45,
+      "tcs_actual": 2555.30,
+      "adani_ports_actual": 1453.30,
+      "coal_india_actual": 449.20,
       "direction_correct": false,
       "magnitude_in_range": false,
-      "error_analysis": "Deal scenario materialised — the 20% probability outcome. Lesson (FORECAST_PAT003): For binary geopolitical forecasts, best-case outcomes tend to be underweighted. When deal/ceasefire materialises, regime flips entirely — not incrementally. Future forecasts must include explicit reversal trigger: 'If deal → +2-4% Nifty rally'."
+      "error_analysis": "Deal scenario materialised — the 20% probability outcome. Lesson (FORECAST_PAT003): For binary geopolitical forecasts, best-case outcomes tend to be underweighted. When deal/ceasefire materialises, regime flips entirely — not incrementally. Future forecasts must include explicit reversal trigger: 'If deal → +2-4% Nifty rally'. Also: RBI rate unchanged on same day amplified the rally — always check central bank calendar on binary event days."
     }
   ],
   "session_accuracy_summary": {
-    "total_sessions_forecasted": 2,
+    "total_sessions_forecasted": 3,
     "direction_correct": 1,
     "direction_accuracy_pct": 50,
     "magnitude_within_range_pct": 50,
-    "notes": "2 sessions forecasted. 1 correct (Apr 7 SIDEWAYS_UP ✓), 1 wrong (Apr 8 underweighted deal scenario ✗). Patterns identified: FORECAST_PAT001 (IT/USD decoupling), FORECAST_PAT003 (geopolitical binary underweighting). Feedback loop active."
+    "notes": "3 sessions now tracked. 1 correct direction (Apr 7 SIDEWAYS_UP ✓, actual +0.68%), 1 wrong (Apr 8 underweighted deal scenario ✗, actual +3.78%), 1 pending (Apr 9 FLAT_TO_SLIGHTLY_UP, actual TBD). Patterns identified: FORECAST_PAT001 (IT/USD decoupling), FORECAST_PAT003 (geopolitical binary underweighting — PROMOTED to framework). Feedback loop active."
   }
 }
