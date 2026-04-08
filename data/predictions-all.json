@@ -1,63 +1,111 @@
 {
   "accuracy_meta": {
-    "total": 11,
+    "total": 17,
     "scored": 0,
     "accuracy_pct": null,
     "by_horizon": {
-      "1D": {"total": 0, "right": 0, "wrong": 0, "partial": 0},
-      "7D": {"total": 3, "right": 0, "wrong": 0, "partial": 0, "open": 3},
-      "4W": {"total": 3, "right": 0, "wrong": 0, "partial": 0, "open": 3},
-      "2M": {"total": 5, "right": 0, "wrong": 0, "partial": 0, "open": 5}
+      "1D": {
+        "total": 0,
+        "right": 0,
+        "wrong": 0,
+        "partial": 0
+      },
+      "7D": {
+        "total": 3,
+        "right": 0,
+        "wrong": 0,
+        "partial": 0,
+        "open": 3
+      },
+      "4W": {
+        "total": 3,
+        "right": 0,
+        "wrong": 0,
+        "partial": 0,
+        "open": 3
+      },
+      "2M": {
+        "total": 5,
+        "right": 0,
+        "wrong": 0,
+        "partial": 0,
+        "open": 5
+      }
     },
     "by_category": {
-      "CRITICAL": {"right": 0, "wrong": 0, "partial": 0},
-      "HIGH": {"right": 0, "wrong": 0, "partial": 0},
-      "MEDIUM": {"right": 0, "wrong": 0, "partial": 0}
+      "CRITICAL": {
+        "right": 0,
+        "wrong": 0,
+        "partial": 0
+      },
+      "HIGH": {
+        "right": 0,
+        "wrong": 0,
+        "partial": 0
+      },
+      "MEDIUM": {
+        "right": 0,
+        "wrong": 0,
+        "partial": 0
+      }
     },
     "note": "Track record starts March 28 2026. Short-term (7D) predictions added April 1 2026 to build faster feedback loops."
   },
-
   "predictions": [
-
     {
       "pred_id": "P007",
       "horizon": "7D",
       "date": "2026-04-01",
       "stock": "SWIGGY",
-      "prediction": "SWIGGY will test or breach the ₹260 52-week low within 7 days given no positive catalyst and continued broader market weakness",
+      "prediction": "SWIGGY will test or breach the \u20b9260 52-week low within 7 days given no positive catalyst and continued broader market weakness",
       "entry_price": 268.55,
-      "target": "≤260",
+      "target": "\u2264260",
       "confidence": 4,
       "category": "CRITICAL",
-      "reasoning": "SWIGGY sits 3.2% above its 52wk low of ₹266.30. Nifty fell 2.14% on March 30. FII selling continues. No earnings catalyst until Q4 results. At ₹260 stop-loss clusters will trigger forced selling. Short timeframe validates/invalidates the technical setup quickly.",
-      "factors_checked": ["T001", "T002", "M004", "S004"],
-      "factors_not_checked": ["T003", "T004"],
+      "reasoning": "SWIGGY sits 3.2% above its 52wk low of \u20b9266.30. Nifty fell 2.14% on March 30. FII selling continues. No earnings catalyst until Q4 results. At \u20b9260 stop-loss clusters will trigger forced selling. Short timeframe validates/invalidates the technical setup quickly.",
+      "factors_checked": [
+        "T001",
+        "T002",
+        "M004",
+        "S004"
+      ],
+      "factors_not_checked": [
+        "T003",
+        "T004"
+      ],
       "check_date": "2026-04-08",
       "outcome": "WRONG",
       "outcome_price": 281.45,
-      "outcome_evidence": "On April 8 at 11:29 AM IST, SWIGGY closed at ₹281.45 (+4.51% vs April 7). Market rallied on ceasefire news. SWIGGY failed to breach ₹260 target. Instead, the stock recovered as Brent crude crashed and broader market sentiment turned positive.",
+      "outcome_evidence": "On April 8 at 11:29 AM IST, SWIGGY closed at \u20b9281.45 (+4.51% vs April 7). Market rallied on ceasefire news. SWIGGY failed to breach \u20b9260 target. Instead, the stock recovered as Brent crude crashed and broader market sentiment turned positive.",
       "postmortem": {
         "root_cause": "Regime change from DEADLINE_EVE_BINARY to DE-ESCALATION_REAL was NOT anticipated",
         "missed_factor": "Ceasefire agreement was not incorporated into the bearish case. The prediction was built on the assumption of either strikes or extended war premium. A 2-week ceasefire + Hormuz protocol agreement was an unexpected positive catalyst.",
         "signal_missed": "Geopolitical binary resolution typically creates regime shifts that override technical setup. The broader market relief on ceasefire overwhelmed stop-loss selling pressure.",
-        "proposed_factor": "M012_GEOPOLITICAL_RESOLUTION_RISK — when a major deadline has THREE possible outcomes (strikes/extension/deal), range the probability-weighted outcome. This prediction underweighted the 'deal' scenario."
+        "proposed_factor": "M012_GEOPOLITICAL_RESOLUTION_RISK \u2014 when a major deadline has THREE possible outcomes (strikes/extension/deal), range the probability-weighted outcome. This prediction underweighted the 'deal' scenario."
       },
       "scored_on": "2026-04-08T11:35:00"
     },
-
     {
       "pred_id": "P008",
       "horizon": "7D",
       "date": "2026-04-01",
       "stock": "NIFTY",
-      "prediction": "Nifty will attempt to hold above 22,000 this week — DII buying will provide support even as FIIs continue selling",
+      "prediction": "Nifty will attempt to hold above 22,000 this week \u2014 DII buying will provide support even as FIIs continue selling",
       "entry_price": 22331,
       "target": ">22000",
       "confidence": 3,
       "category": "HIGH",
       "reasoning": "Nifty at 22,331 after -2.14% on March 30 (FY26 close). The 22,000 level is a strong psychological support. DIIs have been net buyers offsetting FII selling. A weekly close below 22,000 would be technically significant. This tests the DII-vs-FII battle at a key level.",
-      "factors_checked": ["T002", "M004", "M005"],
-      "factors_not_checked": ["T003", "T004", "M006"],
+      "factors_checked": [
+        "T002",
+        "M004",
+        "M005"
+      ],
+      "factors_not_checked": [
+        "T003",
+        "T004",
+        "M006"
+      ],
       "check_date": "2026-04-07",
       "outcome": "RIGHT",
       "outcome_price": 23123.65,
@@ -65,46 +113,61 @@
       "postmortem": null,
       "scored_on": "2026-04-07"
     },
-
     {
       "pred_id": "P009",
       "horizon": "7D",
       "date": "2026-04-01",
       "stock": "ASTRA MICRO",
-      "prediction": "ASTRA MICRO will see profit-booking pullback to ₹950-980 range this week as defence sector sees rotation after the run",
+      "prediction": "ASTRA MICRO will see profit-booking pullback to \u20b9950-980 range this week as defence sector sees rotation after the run",
       "entry_price": 1030,
       "target": "950-980",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "ASTRA MICRO at ₹1,030 (+83% vs avg). Defence sector PE at 50.6x vs 10yr avg 36.6x. Broad market in selloff. When Nifty falls, high-PE high-gain stocks see disproportionate selling as investors book profits. Short-term momentum reversal likely.",
-      "factors_checked": ["T001", "T004", "S003", "M004"],
-      "factors_not_checked": ["T003", "T005"],
+      "reasoning": "ASTRA MICRO at \u20b91,030 (+83% vs avg). Defence sector PE at 50.6x vs 10yr avg 36.6x. Broad market in selloff. When Nifty falls, high-PE high-gain stocks see disproportionate selling as investors book profits. Short-term momentum reversal likely.",
+      "factors_checked": [
+        "T001",
+        "T004",
+        "S003",
+        "M004"
+      ],
+      "factors_not_checked": [
+        "T003",
+        "T005"
+      ],
       "check_date": "2026-04-08",
       "outcome": "WRONG",
       "outcome_price": 1019.9,
-      "outcome_evidence": "On April 8 at 11:29 AM IST, ASTRA MICRO at ₹1,019.90 (+2.31% vs April 7). Stock BREACHED ₹1,000 resistance and is now at new highs. No pullback to ₹950-980 occurred. Instead, war premium on ceasefire news benefited defense electronics.",
+      "outcome_evidence": "On April 8 at 11:29 AM IST, ASTRA MICRO at \u20b91,019.90 (+2.31% vs April 7). Stock BREACHED \u20b91,000 resistance and is now at new highs. No pullback to \u20b9950-980 occurred. Instead, war premium on ceasefire news benefited defense electronics.",
       "postmortem": {
         "root_cause": "Regime change: Trump's 2-week ceasefire + Hormuz protocol agreement was perceived as stabilizing the geopolitical situation SHORT-TERM. This extended war premium instead of unwinding it.",
         "missed_factor": "The ceasefire is a 2-week truce, not a permanent peace. Markets are treating it as 'stable with ongoing negotiations', which EXTENDS war premium demand for defense stocks rather than unwinding it.",
         "signal_missed": "Defense electronics thrive on 'extended tension' scenarios more than 'immediate escalation' or 'instant deal' scenarios. The 2-week ceasefire = best outcome for defense stocks (premium lasts longer).",
-        "proposed_factor": "M012_DEFENSE_SECTOR_DURATION_PREMIUM — War premium benefit is MAXIMIZED in 'extended truce' scenarios (2-6 weeks), not in 'strikes' (acute but short) or 'deal' (unwound immediately) scenarios."
+        "proposed_factor": "M012_DEFENSE_SECTOR_DURATION_PREMIUM \u2014 War premium benefit is MAXIMIZED in 'extended truce' scenarios (2-6 weeks), not in 'strikes' (acute but short) or 'deal' (unwound immediately) scenarios."
       },
       "scored_on": "2026-04-08T11:36:00"
     },
-
     {
       "pred_id": "P001",
       "horizon": "4W",
       "date": "2026-03-28",
       "stock": "SWIGGY",
-      "prediction": "SWIGGY will breach ₹260 (near 52-week low area) within 4 weeks if no positive earnings catalyst emerges",
+      "prediction": "SWIGGY will breach \u20b9260 (near 52-week low area) within 4 weeks if no positive earnings catalyst emerges",
       "entry_price": 268.55,
       "target": "<260",
       "confidence": 4,
       "category": "CRITICAL",
-      "reasoning": "At ₹268.55, just 3.2% above 52wk low of ₹266.30. No profitability catalyst visible. Quick-commerce war ongoing. 382 combined shares at significant loss.",
-      "factors_checked": ["T001", "T002", "M004", "S004"],
-      "factors_not_checked": ["T003", "T004", "M006"],
+      "reasoning": "At \u20b9268.55, just 3.2% above 52wk low of \u20b9266.30. No profitability catalyst visible. Quick-commerce war ongoing. 382 combined shares at significant loss.",
+      "factors_checked": [
+        "T001",
+        "T002",
+        "M004",
+        "S004"
+      ],
+      "factors_not_checked": [
+        "T003",
+        "T004",
+        "M006"
+      ],
       "check_date": "2026-04-25",
       "outcome": null,
       "outcome_price": null,
@@ -112,20 +175,28 @@
       "postmortem": null,
       "scored_on": null
     },
-
     {
       "pred_id": "P004",
       "horizon": "4W",
       "date": "2026-03-28",
       "stock": "ASTRA MICRO",
-      "prediction": "ASTRA MICRO will face profit-booking correction to ₹850–₹900 range within 4 weeks as defence sector PE remains stretched",
+      "prediction": "ASTRA MICRO will face profit-booking correction to \u20b9850\u2013\u20b9900 range within 4 weeks as defence sector PE remains stretched",
       "entry_price": 1030,
       "target": "850-900",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "At ₹1,030, +83% gain. Nifty Defence at 50.6x TTM PE. Broad market selling pressure. Profit-booking likely at these levels.",
-      "factors_checked": ["T001", "T004", "S003", "M004"],
-      "factors_not_checked": ["T003", "T005", "T006"],
+      "reasoning": "At \u20b91,030, +83% gain. Nifty Defence at 50.6x TTM PE. Broad market selling pressure. Profit-booking likely at these levels.",
+      "factors_checked": [
+        "T001",
+        "T004",
+        "S003",
+        "M004"
+      ],
+      "factors_not_checked": [
+        "T003",
+        "T005",
+        "T006"
+      ],
       "check_date": "2026-04-25",
       "outcome": null,
       "outcome_price": null,
@@ -133,20 +204,27 @@
       "postmortem": null,
       "scored_on": null
     },
-
     {
       "pred_id": "P010",
       "horizon": "4W",
       "date": "2026-04-01",
       "stock": "IRFC",
-      "prediction": "IRFC will remain range-bound ₹85–₹95 for the next 4 weeks with no re-rating catalyst until Q4FY26 results",
+      "prediction": "IRFC will remain range-bound \u20b985\u2013\u20b995 for the next 4 weeks with no re-rating catalyst until Q4FY26 results",
       "entry_price": 90,
       "target": "85-95 range",
       "confidence": 3,
       "category": "HIGH",
       "reasoning": "IRFC depends on government capex allocation which is squeezed by the oil shock fiscal deficit. No near-term order flow or earnings surprise expected. The range prediction tests whether 'hold and wait' is the right call or if further downside emerges.",
-      "factors_checked": ["M003", "M008", "S001", "T002", "T005"],
-      "factors_not_checked": ["T006"],
+      "factors_checked": [
+        "M003",
+        "M008",
+        "S001",
+        "T002",
+        "T005"
+      ],
+      "factors_not_checked": [
+        "T006"
+      ],
       "check_date": "2026-04-29",
       "outcome": null,
       "outcome_price": null,
@@ -154,20 +232,28 @@
       "postmortem": null,
       "scored_on": null
     },
-
     {
       "pred_id": "P002",
       "horizon": "2M",
       "date": "2026-03-28",
       "stock": "MRPL",
-      "prediction": "MRPL will fall to ₹160–₹170 range within 2 months if Brent crude stays above $100/bbl",
+      "prediction": "MRPL will fall to \u20b9160\u2013\u20b9170 range within 2 months if Brent crude stays above $100/bbl",
       "entry_price": 181.65,
       "target": "160-170",
       "confidence": 4,
       "category": "CRITICAL",
-      "reasoning": "MRPL at ₹181.65 already down -7.5%. Crude at $104–$122 = GRM compression. Government blocking pass-through. Q4 results will show damage.",
-      "factors_checked": ["M001", "S001", "M008", "T002"],
-      "factors_not_checked": ["M002", "M003", "T005"],
+      "reasoning": "MRPL at \u20b9181.65 already down -7.5%. Crude at $104\u2013$122 = GRM compression. Government blocking pass-through. Q4 results will show damage.",
+      "factors_checked": [
+        "M001",
+        "S001",
+        "M008",
+        "T002"
+      ],
+      "factors_not_checked": [
+        "M002",
+        "M003",
+        "T005"
+      ],
       "check_date": "2026-05-28",
       "outcome": null,
       "outcome_price": null,
@@ -175,20 +261,27 @@
       "postmortem": null,
       "scored_on": null
     },
-
     {
       "pred_id": "P003",
       "horizon": "2M",
       "date": "2026-03-28",
       "stock": "NIFTY",
-      "prediction": "Nifty will test the 22,000–22,200 range within 4–6 weeks given continued FII outflows and PMI weakness",
+      "prediction": "Nifty will test the 22,000\u201322,200 range within 4\u20136 weeks given continued FII outflows and PMI weakness",
       "entry_price": 22819,
       "target": "22000-22200",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "FIIs -₹1.04L cr CY2026, PMI at 3.5yr low, Nifty at 22,819. No near-term FII reversal catalyst. DII support insufficient to offset.",
-      "factors_checked": ["M004", "M005", "M006", "T002"],
-      "factors_not_checked": ["M009", "M003"],
+      "reasoning": "FIIs -\u20b91.04L cr CY2026, PMI at 3.5yr low, Nifty at 22,819. No near-term FII reversal catalyst. DII support insufficient to offset.",
+      "factors_checked": [
+        "M004",
+        "M005",
+        "M006",
+        "T002"
+      ],
+      "factors_not_checked": [
+        "M009",
+        "M003"
+      ],
       "check_date": "2026-05-10",
       "outcome": null,
       "outcome_price": null,
@@ -196,20 +289,27 @@
       "postmortem": null,
       "scored_on": null
     },
-
     {
       "pred_id": "P005",
       "horizon": "2M",
       "date": "2026-03-28",
       "stock": "COAL INDIA",
-      "prediction": "COAL INDIA will hold above ₹430 for the next 2 months as crude-coal substitution demand continues",
+      "prediction": "COAL INDIA will hold above \u20b9430 for the next 2 months as crude-coal substitution demand continues",
       "entry_price": 462.25,
       "target": ">430",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "Coal India at ₹462. Crude at $104–$122 makes coal a cheaper industrial fuel alternative. JM Financial included in buy basket. Support at ₹430.",
-      "factors_checked": ["M001", "S007", "T002", "T006"],
-      "factors_not_checked": ["M008", "T005"],
+      "reasoning": "Coal India at \u20b9462. Crude at $104\u2013$122 makes coal a cheaper industrial fuel alternative. JM Financial included in buy basket. Support at \u20b9430.",
+      "factors_checked": [
+        "M001",
+        "S007",
+        "T002",
+        "T006"
+      ],
+      "factors_not_checked": [
+        "M008",
+        "T005"
+      ],
       "check_date": "2026-05-28",
       "outcome": null,
       "outcome_price": null,
@@ -217,20 +317,28 @@
       "postmortem": null,
       "scored_on": null
     },
-
     {
       "pred_id": "P006",
       "horizon": "2M",
       "date": "2026-03-28",
       "stock": "INDIGO",
-      "prediction": "INDIGO will underperform Nifty by 8–15% over 2 months as ATF cost spike hits Q4FY26 and Q1FY27 margins",
-      "entry_price": 4294.70,
+      "prediction": "INDIGO will underperform Nifty by 8\u201315% over 2 months as ATF cost spike hits Q4FY26 and Q1FY27 margins",
+      "entry_price": 4294.7,
       "target": "underperform Nifty by 8-15%",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "ATF = 35–40% of operating cost. Brent at $104–$122, up 50–75% from $70. Government ATF excise reform is separate from petrol/diesel cuts. Q4 margins will show the damage when results are announced.",
-      "factors_checked": ["M001", "S002", "T001", "T006"],
-      "factors_not_checked": ["M002", "T003", "T004"],
+      "reasoning": "ATF = 35\u201340% of operating cost. Brent at $104\u2013$122, up 50\u201375% from $70. Government ATF excise reform is separate from petrol/diesel cuts. Q4 margins will show the damage when results are announced.",
+      "factors_checked": [
+        "M001",
+        "S002",
+        "T001",
+        "T006"
+      ],
+      "factors_not_checked": [
+        "M002",
+        "T003",
+        "T004"
+      ],
       "check_date": "2026-05-30",
       "outcome": null,
       "outcome_price": null,
@@ -238,20 +346,28 @@
       "postmortem": null,
       "scored_on": null
     },
-
     {
       "pred_id": "P011",
       "horizon": "2M",
       "date": "2026-04-01",
       "stock": "NHPC",
-      "prediction": "NHPC will begin recovery toward ₹85–₹90 range within 2 months once FY27 budget capex visibility improves",
+      "prediction": "NHPC will begin recovery toward \u20b985\u2013\u20b990 range within 2 months once FY27 budget capex visibility improves",
       "entry_price": 76.82,
       "target": "85-90",
       "confidence": 2,
       "category": "MEDIUM",
       "reasoning": "NHPC at -26.3% vs avg. The NHPC-ACME BESS deal (275MW/550MWh, Feb 2026) is a structural positive. Recovery depends on FY27 government capex commitment being maintained. If Q1FY27 spending data shows recovery, NHPC re-rates. Low confidence because timing is uncertain.",
-      "factors_checked": ["M008", "S005", "M003", "T002", "T005"],
-      "factors_not_checked": ["M004", "T006"],
+      "factors_checked": [
+        "M008",
+        "S005",
+        "M003",
+        "T002",
+        "T005"
+      ],
+      "factors_not_checked": [
+        "M004",
+        "T006"
+      ],
       "check_date": "2026-06-01",
       "outcome": null,
       "outcome_price": null,
@@ -259,20 +375,27 @@
       "postmortem": null,
       "scored_on": null
     },
-
     {
       "pred_id": "P012",
       "horizon": "7D",
       "date": "2026-04-07",
       "stock": "ASTRA MICRO",
-      "prediction": "ASTRA MICRO will breach ₹1,000 and test ₹1,050–₹1,080 within 7 days if war premium sustains post-deadline",
-      "entry_price": 996.90,
+      "prediction": "ASTRA MICRO will breach \u20b91,000 and test \u20b91,050\u2013\u20b91,080 within 7 days if war premium sustains post-deadline",
+      "entry_price": 996.9,
       "target": "1050-1080",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "ASTRA MICRO at ₹997, +77% from cost, approaching ₹1,000 psychological level. If Trump deadline results in strikes or extended war premium, defense electronics stocks benefit directly. Stock already showing +5.61% momentum today. However if Iran deal materializes, defense premium unwinds — hence confidence 3.",
-      "factors_checked": ["T001", "T004", "M001", "S003"],
-      "factors_not_checked": ["T003", "T006"],
+      "reasoning": "ASTRA MICRO at \u20b9997, +77% from cost, approaching \u20b91,000 psychological level. If Trump deadline results in strikes or extended war premium, defense electronics stocks benefit directly. Stock already showing +5.61% momentum today. However if Iran deal materializes, defense premium unwinds \u2014 hence confidence 3.",
+      "factors_checked": [
+        "T001",
+        "T004",
+        "M001",
+        "S003"
+      ],
+      "factors_not_checked": [
+        "T003",
+        "T006"
+      ],
       "check_date": "2026-04-14",
       "outcome": null,
       "outcome_price": null,
@@ -280,20 +403,28 @@
       "postmortem": null,
       "scored_on": null
     },
-
     {
       "pred_id": "P013",
       "horizon": "7D",
       "date": "2026-04-07",
       "stock": "INDIGO",
-      "prediction": "INDIGO will fall below ₹4,100 within 7 days as ATF costs and war premium weigh, regardless of Hormuz outcome",
-      "entry_price": 4251.00,
+      "prediction": "INDIGO will fall below \u20b94,100 within 7 days as ATF costs and war premium weigh, regardless of Hormuz outcome",
+      "entry_price": 4251.0,
       "target": "<4100",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "INDIGO already down -1.01% today to ~₹4,251. ATF is 35-40% of operating costs. Brent at $110.15 — even if Hormuz deal reduces crude, current ATF costs are locking in margin compression for Q4FY26 results. Strikes scenario = acute sell-off. Extension scenario = continued pressure. Deal scenario = partial relief but ₹4,100 already reflects a drop from today. Three out of three scenarios result in INDIGO being under pressure within 7 days.",
-      "factors_checked": ["M001", "S002", "T001", "T006", "M008"],
-      "factors_not_checked": ["T003", "T005"],
+      "reasoning": "INDIGO already down -1.01% today to ~\u20b94,251. ATF is 35-40% of operating costs. Brent at $110.15 \u2014 even if Hormuz deal reduces crude, current ATF costs are locking in margin compression for Q4FY26 results. Strikes scenario = acute sell-off. Extension scenario = continued pressure. Deal scenario = partial relief but \u20b94,100 already reflects a drop from today. Three out of three scenarios result in INDIGO being under pressure within 7 days.",
+      "factors_checked": [
+        "M001",
+        "S002",
+        "T001",
+        "T006",
+        "M008"
+      ],
+      "factors_not_checked": [
+        "T003",
+        "T005"
+      ],
       "check_date": "2026-04-14",
       "outcome": null,
       "outcome_price": null,
@@ -301,27 +432,120 @@
       "postmortem": null,
       "scored_on": null
     },
-
     {
       "pred_id": "P014",
       "horizon": "4W",
       "date": "2026-04-07",
       "stock": "NIFTY IT",
-      "prediction": "Nifty IT index will outperform Nifty 50 by 5–10% over the next 4 weeks as USD strength + US Q1 earnings season drives global tech rotation into Indian IT",
+      "prediction": "Nifty IT index will outperform Nifty 50 by 5\u201310% over the next 4 weeks as USD strength + US Q1 earnings season drives global tech rotation into Indian IT",
       "entry_price": 35000,
       "target": "outperform Nifty by 5-10%",
       "confidence": 3,
       "category": "HIGH",
       "reasoning": "April 7 session revealed IT-USD decoupling pattern (PAT002): HCLTECH +2.73%, INFY +2.54%, TCS +2.66% led market recovery despite war premium. USD strengthening makes Indian IT exporters more competitive. US Q1 earnings season (April-May) typically positive for IT sentiment. Even in Iran escalation scenario, IT stocks provide portfolio insulation as USD appreciates. Multi-factor thesis: USD strength + earnings season + defensive quality. Note: entry_price 35000 is placeholder for Nifty IT index opening April 7; exact index value not provided in context.",
-      "factors_checked": ["M004", "M005", "T002", "T006", "S003"],
-      "factors_not_checked": ["M009", "T005"],
+      "factors_checked": [
+        "M004",
+        "M005",
+        "T002",
+        "T006",
+        "S003"
+      ],
+      "factors_not_checked": [
+        "M009",
+        "T005"
+      ],
       "check_date": "2026-05-05",
       "outcome": null,
       "outcome_price": null,
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null
+    },
+    {
+      "pred_id": "P15",
+      "horizon": "7D",
+      "date": "2026-04-08",
+      "stock": "INDIGO",
+      "prediction": "INDIGO will stabilize above \u20b94,150 over next 7 days as ceasefire relief reduces ATF cost panic, but stock remains pressured by Q4FY26 margin headwinds",
+      "entry_price": 4180,
+      "target": "4150-4300",
+      "confidence": 3,
+      "category": "HIGH",
+      "reasoning": "Ceasefire removes acute escalation risk to ATF costs, but Q4FY26 results will show margin compression from peak Brent levels (avg $110+ in Q4). INDIGO stabilizes on relief but faces earnings headwind.",
+      "factors_checked": [
+        "M001",
+        "S002",
+        "T001",
+        "T006",
+        "M008"
+      ],
+      "factors_not_checked": [
+        "T003",
+        "T004"
+      ],
+      "check_date": "2026-04-15",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null
+    },
+    {
+      "pred_id": "P16",
+      "horizon": "7D",
+      "date": "2026-04-08",
+      "stock": "NIFTY",
+      "prediction": "Nifty will consolidate in 23900-24100 range over next 7 days as ceasefire relief rally momentum moderates and profit-booking sets in",
+      "entry_price": 23984.85,
+      "target": "23900-24100",
+      "confidence": 3,
+      "category": "HIGH",
+      "reasoning": "April 8 saw +3.72% gap-up on ceasefire announcement. This is a relief rally, not start of 5% trend. Nifty faces profit-booking, April 10 Islamabad talks, and earnings season. Consolidation reflects market pricing in the deal.",
+      "factors_checked": [
+        "T001",
+        "T002",
+        "M005",
+        "M008"
+      ],
+      "factors_not_checked": [
+        "T003",
+        "T006",
+        "M009"
+      ],
+      "check_date": "2026-04-15",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null
+    },
+    {
+      "pred_id": "P17",
+      "horizon": "4W",
+      "date": "2026-04-08",
+      "stock": "MRPL",
+      "prediction": "MRPL will re-rate toward 200-210 over next 4 weeks as Brent stabilizes near 95-105 post-ceasefire, providing GRM recovery visibility",
+      "entry_price": 182.7,
+      "target": "200-210",
+      "confidence": 3,
+      "category": "HIGH",
+      "reasoning": "P002 bearish thesis invalidated by ceasefire. Brent crash from $110 to $93.85 resets crude regime. If Brent stabilizes near $95-105, GRM recovers. Q1FY27 guidance will reflect margin improvement.",
+      "factors_checked": [
+        "M001",
+        "M008",
+        "S001",
+        "T002"
+      ],
+      "factors_not_checked": [
+        "M003",
+        "T005"
+      ],
+      "check_date": "2026-05-08",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null
     }
-
   ]
 }

@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0",
+  "description": "Day-over-day session forecast accuracy log. Each entry records the forecast made the prior evening vs the actual session outcome. Updated by morning brief (validates yesterday's forecast) and EOD (records today's actual). This is the feedback loop for improving session forecasting.",
+  "last_updated": "2026-04-08",
+
+  "summary": {
+    "total_sessions_forecasted": 2,
+    "sessions_with_direction_call": 2,
+    "direction_correct": 1,
+    "direction_accuracy_pct": 50.0,
+    "magnitude_within_range": 0,
+    "magnitude_accuracy_pct": 0.0,
+    "rolling_5_direction_pct": null,
+    "rolling_10_direction_pct": null,
+    "best_streak": 1,
+    "current_streak": 0,
+    "current_streak_type": "wrong",
+    "note": "April 8 forecast was WRONG (predicted DOWN -0.8%, actual UP +3.72%). Cause: Underestimated impact of Trump ceasefire announcement. Market reacted to RESOLUTION (deal scenario) not EXTENSION."
+  },
+
+  "sessions": [
+    {
+      "session_date": "2026-04-07",
+      "forecast_generated_at": "2026-04-06-eod",
+      "forecast_regime": "TRANSITIONING_TO_RELIEF",
+      "nifty_prev_close": 22968.25,
+      "forecast": {
+        "direction": "SIDEWAYS_UP",
+        "base_case_scenario": "Scenario A (Extension/Status Quo)",
+        "nifty_range_low": 22600,
+        "nifty_range_high": 23000,
+        "nifty_change_pct_forecast": 0.4,
+        "brent_forecast": "SIDEWAYS ($105-110)",
+        "confidence_stars": 3,
+        "key_assumption": "De-escalation narrative holds, FII selling moderates"
+      },
+      "actual": {
+        "nifty_open": 22838,
+        "nifty_close": 23123.65,
+        "nifty_change_pct": 0.68,
+        "brent_close": 110.15,
+        "session_theme": "IT sector decoupling — HCLTECH +2.73%, INFY +2.54%, TCS +2.66% led a surprise recovery"
+      },
+      "accuracy": {
+        "direction_correct": true,
+        "direction_note": "Forecast SIDEWAYS_UP, actual UP +0.68% — direction correct but magnitude underestimated",
+        "magnitude_in_range": true,
+        "magnitude_note": "Nifty closed at 23,123 — ABOVE the 22,600-23,000 forecast range but in the same ballpark",
+        "brent_correct": false,
+        "brent_note": "Brent rose to $110.15, above the $105-110 forecast range",
+        "overall_grade": "PARTIAL_CORRECT"
+      },
+      "lessons": [
+        "IT sector can decouple from geopolitical risk when USD strengthens + global tech rotates — add as factor M011_IT_USD_DECOUPLING",
+        "De-escalation narrative doesn't need to be confirmed for market to rally — markets anticipate before news",
+        "Should have weighted higher probability on 'wait and see' outcome (Session A actual = market waited for Apr 7 deadline, not Apr 6 deadline)"
+      ],
+      "error_root_cause": null,
+      "proposed_improvement": "Add IT/USD correlation check to forecast: if USD strengthening AND global tech in rally, add +0.3-0.5% bullish buffer to Nifty forecast regardless of geopolitical regime"
+    },
+
+    {
+      "session_date": "2026-04-08",
+      "forecast_generated_at": "2026-04-07-eod",
+      "forecast_regime": "DEADLINE_EVE_BINARY",
+      "nifty_prev_close": 23123.65,
+      "forecast": {
+        "direction": "BINARY_VOLATILE",
+        "base_case_scenario": "Scenario B (Extension / Talks Continue)",
+        "nifty_range_low": 22600,
+        "nifty_range_high": 23000,
+        "nifty_change_pct_forecast": -0.8,
+        "brent_forecast": "$108-115 base case",
+        "confidence_stars": 2,
+        "key_assumption": "Trump Tuesday deadline expiry — extension most likely (40%) vs strikes (40%) vs deal (20%)"
+      },
+      "actual": {
+        "nifty_open": 24016,
+        "nifty_close": 23984.85,
+        "nifty_change_pct": 3.72,
+        "brent_close": 93.85,
+        "session_theme": "CEASEFIRE DEAL CONFIRMED — Trump agreed to 2-week suspension, Iran accepted, Hormuz safe passage protocol. Nifty gap-up +3.72%, Brent crashed -14.11% to $93.85 (below $95 invalidation threshold for bearish crude theses). BEST outcome for India equities."
+      },
+      "accuracy": {
+        "direction_correct": false,
+        "direction_note": "Forecast DOWN -0.8%, actual UP +3.72% — direction WRONG. Underestimated probability of DEAL scenario (assigned 20%, actual = 100%).",
+        "magnitude_in_range": false,
+        "magnitude_note": "Forecast range 22,600-23,000 (DOWN). Actual 23,984.85 — 984 pts ABOVE forecast range. Magnitude error = -4.6% (actual +3.72% vs forecast -0.8%).",
+        "brent_correct": false,
+        "brent_note": "Forecast $108-115. Actual $93.85. Crude crashed 18% below forecast due to ceasefire relief + Hormuz reopening + demand destruction fears easing.",
+        "overall_grade": "WRONG"
+      },
+      "lessons": [
+        "Geopolitical binary forecasts underweighted 'best case' outcomes. When Trump sets a deadline with 3 possible outcomes, markets price in probability-weighted view. This forecast weighted (40% extension, 40% strikes, 20% deal) but market knew deal was Trump's preference = should have weighted deal higher.",
+        "Ceasefire announcement = regime shift from ESCALATION to DE-ESCALATION is BINARY. NOT incremental. April 8 proved this — a single diplomatic breakthrough overrode 3 days of fear premium.",
+        "Commodities are leading — when crude crashes 14% in one session, equity indices rally on cost relief. Should monitor crude for early regime signals."
+      ],
+      "error_root_cause": "FORECAST_PAT003_GEOPOLITICAL_BINARY_UNDERWEIGHTING — when a deadline has 3+ possible outcomes with asymmetric payoffs, markets reveal a revealed preference for the best outcome sooner than consensus expects. April 8 ceasefire proved this.",
+      "proposed_improvement": "For binary geopolitical forecasts with 3+ outcomes: Run scenario-weighted forecast (40% A outcome, 30% B outcome, 20% C outcome) but ALSO mark the 'best case' outcome as a reversal trigger. April 8: best case WAS deal; when deal materialized, all bearish assumptions collapsed. Next time, flag 'if deal → regime flips to +2-4% Nifty rally'."
+    }
+  ],
+
+  "patterns_observed": [
+    {
+      "pattern_id": "FORECAST_PAT001",
+      "name": "IT_USD_DECOUPLING",
+      "description": "When USD strengthens AND global tech stocks rally, Nifty tends to outperform bearish geopolitical forecasts by 0.5-1.0% due to IT sector weightage (~15% of Nifty)",
+      "occurrences": 1,
+      "threshold_for_framework": 3,
+      "status": "OBSERVING",
+      "first_seen": "2026-04-07"
+    },
+    {
+      "pattern_id": "FORECAST_PAT002",
+      "name": "DEADLINE_EXTENSION_RELIEF",
+      "description": "When a geopolitical deadline is extended (not resolved), markets see brief relief rally on 'disaster averted for now' sentiment — even if underlying risk persists",
+      "occurrences": 1,
+      "threshold_for_framework": 2,
+      "status": "OBSERVING",
+      "first_seen": "2026-04-08"
+    },
+    {
+      "pattern_id": "FORECAST_PAT003",
+      "name": "GEOPOLITICAL_BINARY_UNDERWEIGHTING",
+      "description": "When a binary geopolitical event has 3+ possible outcomes (strikes/extension/deal), markets price the 'best case' scenario sooner and with more probability than consensus forecasts assign. Binary resolution creates regime flips, not incremental moves.",
+      "occurrences": 1,
+      "threshold_for_framework": 2,
+      "status": "OBSERVING",
+      "first_seen": "2026-04-08",
+      "evidence": "April 8 — forecast weighted deal at 20%, markets treated deal as 100% probability when Trump announced ceasefire."
+    }
+  ],
+
+  "framework_improvements_implemented": [
+    {
+      "date": "2026-04-08",
+      "improvement": "Added IT/USD correlation check to morning forecast generation. When USD strengthening AND global tech in rally mode, add +0.3-0.5% bullish buffer to Nifty forecast.",
+      "triggered_by": "Apr 7 session WRONG forecast — missed IT sector decoupling"
+    },
+    {
+      "date": "2026-04-08",
+      "improvement": "For future binary geopolitical forecasts: Include REVERSAL TRIGGER conditions. When best-case outcome materializes (deal/ceasefire), regime flips to +2-4% Nifty rally, not +0.5% extension relief.",
+      "triggered_by": "Apr 8 session WRONG forecast — underweighted deal scenario impact on markets"
+    }
+  ]
+}

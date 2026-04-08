@@ -1,41 +1,127 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-07",
-
+  "last_updated": "2026-04-08T17:00:00",
   "L1_scorecard": {
     "all_time": {
-      "total": 9,
+      "total": 11,
       "open": 5,
-      "scored": 4,
-      "right": 3,
-      "wrong": 1,
+      "scored": 5,
+      "right": 2,
+      "wrong": 3,
       "partial": 0,
-      "accuracy_pct": 75
+      "accuracy_pct": 40.0
     },
     "by_horizon": {
-      "1D": { "total": 1, "scored": 1, "right": 1, "wrong": 0, "accuracy_pct": 100 },
-      "7D": { "total": 4, "scored": 2, "right": 1, "wrong": 1, "accuracy_pct": 50, "open": 2 },
-      "4W": { "total": 3, "scored": 1, "right": 1, "wrong": 0, "accuracy_pct": 100, "open": 2 },
-      "2M": { "total": 5, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null, "open": 5 }
+      "1D": {
+        "total": 1,
+        "scored": 1,
+        "right": 1,
+        "wrong": 0,
+        "accuracy_pct": 100
+      },
+      "7D": {
+        "total": 4,
+        "scored": 2,
+        "right": 1,
+        "wrong": 1,
+        "accuracy_pct": 50,
+        "open": 2
+      },
+      "4W": {
+        "total": 3,
+        "scored": 1,
+        "right": 1,
+        "wrong": 0,
+        "accuracy_pct": 100,
+        "open": 2
+      },
+      "2M": {
+        "total": 5,
+        "scored": 0,
+        "right": 0,
+        "wrong": 0,
+        "accuracy_pct": null,
+        "open": 5
+      }
     },
     "by_sector": {
-      "Consumer/QComm": { "total": 2, "scored": 2, "right": 1, "wrong": 1, "accuracy_pct": 50 },
-      "Index": { "total": 3, "scored": 3, "right": 3, "wrong": 0, "accuracy_pct": 100 },
-      "Energy": { "total": 1, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null },
-      "Defense": { "total": 2, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null },
-      "Aviation": { "total": 1, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null },
-      "PSU/Mining": { "total": 1, "scored": 0, "right": 0, "wrong": 0, "accuracy_pct": null }
+      "Consumer/QComm": {
+        "total": 2,
+        "scored": 2,
+        "right": 1,
+        "wrong": 1,
+        "accuracy_pct": 50
+      },
+      "Index": {
+        "total": 3,
+        "scored": 3,
+        "right": 3,
+        "wrong": 0,
+        "accuracy_pct": 100
+      },
+      "Energy": {
+        "total": 1,
+        "scored": 0,
+        "right": 0,
+        "wrong": 0,
+        "accuracy_pct": null
+      },
+      "Defense": {
+        "total": 2,
+        "scored": 1,
+        "right": 0,
+        "wrong": 1,
+        "accuracy_pct": 0
+      },
+      "Aviation": {
+        "total": 1,
+        "scored": 0,
+        "right": 0,
+        "wrong": 0,
+        "accuracy_pct": null
+      },
+      "PSU/Mining": {
+        "total": 1,
+        "scored": 0,
+        "right": 0,
+        "wrong": 0,
+        "accuracy_pct": null
+      }
     },
     "by_confidence": {
-      "5_stars": { "total": 0, "scored": 0, "right": 0, "accuracy_pct": null },
-      "4_stars": { "total": 1, "scored": 1, "right": 1, "accuracy_pct": 100 },
-      "3_stars": { "total": 8, "scored": 3, "right": 2, "accuracy_pct": 67 },
-      "2_stars": { "total": 1, "scored": 0, "right": 0, "accuracy_pct": null },
-      "1_star":  { "total": 0, "scored": 0, "right": 0, "accuracy_pct": null }
+      "5_stars": {
+        "total": 0,
+        "scored": 0,
+        "right": 0,
+        "accuracy_pct": null
+      },
+      "4_stars": {
+        "total": 1,
+        "scored": 1,
+        "right": 1,
+        "accuracy_pct": 100
+      },
+      "3_stars": {
+        "total": 8,
+        "scored": 3,
+        "right": 2,
+        "accuracy_pct": 67
+      },
+      "2_stars": {
+        "total": 1,
+        "scored": 0,
+        "right": 0,
+        "accuracy_pct": null
+      },
+      "1_star": {
+        "total": 0,
+        "scored": 0,
+        "right": 0,
+        "accuracy_pct": null
+      }
     }
   },
-
   "L2_rca_log": [
     {
       "rca_id": "RCA001",
@@ -44,17 +130,16 @@
       "stock": "SWIGGY",
       "horizon": "7D",
       "outcome": "WRONG",
-      "root_cause_summary": "Checked DII inflows but missed FII outflow magnitude. When FII single-day sell > ₹8,000 Cr, short-term support predictions fail regardless of DII net positive.",
-      "missing_signal": "M003 — FII panic sell threshold",
+      "root_cause_summary": "Checked DII inflows but missed FII outflow magnitude. When FII single-day sell > \u20b98,000 Cr, short-term support predictions fail regardless of DII net positive.",
+      "missing_signal": "M003 \u2014 FII panic sell threshold",
       "factor_gap": "Framework lacked a threshold-based FII panic flag",
       "proposed_factor_id": "M010",
-      "proposed_factor_name": "FII Single-Day Panic Threshold (>₹8,000 Cr)",
+      "proposed_factor_name": "FII Single-Day Panic Threshold (>\u20b98,000 Cr)",
       "pattern_tag": "FII_PANIC_OVERRIDE",
       "framework_promoted": false,
       "lesson": "Always check M003 absolute magnitude (not just direction) for short-horizon bullish predictions"
     }
   ],
-
   "L3_trend": {
     "monthly_accuracy": [
       {
@@ -63,7 +148,7 @@
         "right": 1,
         "wrong": 1,
         "accuracy_pct": 50,
-        "notes": "First month. 2 predictions scored — P001 RIGHT, P007 WRONG."
+        "notes": "First month. 2 predictions scored \u2014 P001 RIGHT, P007 WRONG."
       },
       {
         "month": "2026-04",
@@ -71,27 +156,69 @@
         "right": 2,
         "wrong": 0,
         "accuracy_pct": 100,
-        "notes": "P006 RIGHT — FY-start relief bounce thesis confirmed. P008 RIGHT on April 7 — Nifty held 22,000 as predicted, DII support absorbed FII selling."
+        "notes": "P006 RIGHT \u2014 FY-start relief bounce thesis confirmed. P008 RIGHT on April 7 \u2014 Nifty held 22,000 as predicted, DII support absorbed FII selling."
       }
     ],
     "rolling_accuracy": {
-      "last_5_predictions": { "scored": 4, "right": 3, "accuracy_pct": 75 },
-      "last_10_predictions": { "scored": 4, "right": 3, "accuracy_pct": 75 }
+      "last_5_predictions": {
+        "scored": 4,
+        "right": 3,
+        "accuracy_pct": 75
+      },
+      "last_10_predictions": {
+        "scored": 4,
+        "right": 3,
+        "accuracy_pct": 75
+      }
     },
     "improvement_signal": "INSUFFICIENT_DATA",
-    "notes": "Need minimum 10 scored predictions to detect meaningful improvement trend. P008 scored RIGHT on Apr 7 EOD — Nifty held 22,000 support as DII buying offset FII selling. Three new predictions (P012, P013, P014) added April 7 to capitalize on Trump Hormuz deadline regime. All open predictions (P002, P003, P005) remain multi-week/month horizons.",
-    "apr_7_eod_observation": "P008 scored RIGHT on April 7. Nifty closed 23,123.65, well above 22,000 target. DII support thesis confirmed. Market interpreted Trump deadline as likely extended tension rather than immediate escalation. Three new HIGH-confidence predictions added for 7D/4W horizons: ASTRA MICRO (₹1,000 breach on war premium), INDIGO (ATF compression below ₹4,100), and Nifty IT (outperformance vs Nifty 50 on USD strength + Q1 earnings). Confidence 3 across all three due to bifurcated macro scenarios."
+    "notes": "Need minimum 10 scored predictions to detect meaningful improvement trend. P008 scored RIGHT on Apr 7 EOD \u2014 Nifty held 22,000 support as DII buying offset FII selling. Three new predictions (P012, P013, P014) added April 7 to capitalize on Trump Hormuz deadline regime. All open predictions (P002, P003, P005) remain multi-week/month horizons.",
+    "apr_7_eod_observation": "P008 scored RIGHT on April 7. Nifty closed 23,123.65, well above 22,000 target. DII support thesis confirmed. Market interpreted Trump deadline as likely extended tension rather than immediate escalation. Three new HIGH-confidence predictions added for 7D/4W horizons: ASTRA MICRO (\u20b91,000 breach on war premium), INDIGO (ATF compression below \u20b94,100), and Nifty IT (outperformance vs Nifty 50 on USD strength + Q1 earnings). Confidence 3 across all three due to bifurcated macro scenarios."
   },
-
   "factor_performance": {
-    "M001": { "name": "Brent Crude", "times_checked": 4, "contributed_right": 1, "missed_in_wrong": 0, "accuracy_contribution": "neutral" },
-    "M003": { "name": "FII Flows", "times_checked": 3, "contributed_right": 1, "missed_in_wrong": 1, "accuracy_contribution": "HIGH — missed in P007 WRONG" },
-    "M004": { "name": "DII Flows", "times_checked": 3, "contributed_right": 1, "missed_in_wrong": 0, "accuracy_contribution": "neutral" },
-    "T001": { "name": "52-Week Proximity", "times_checked": 3, "contributed_right": 2, "missed_in_wrong": 0, "accuracy_contribution": "STRONG — 2 correct predictions" },
-    "T004": { "name": "RSI", "times_checked": 2, "contributed_right": 1, "missed_in_wrong": 0, "accuracy_contribution": "neutral" },
-    "S008": { "name": "Coal E-Auction", "times_checked": 1, "contributed_right": 0, "missed_in_wrong": 0, "accuracy_contribution": "pending" }
+    "M001": {
+      "name": "Brent Crude",
+      "times_checked": 4,
+      "contributed_right": 1,
+      "missed_in_wrong": 0,
+      "accuracy_contribution": "neutral"
+    },
+    "M003": {
+      "name": "FII Flows",
+      "times_checked": 3,
+      "contributed_right": 1,
+      "missed_in_wrong": 1,
+      "accuracy_contribution": "HIGH \u2014 missed in P007 WRONG"
+    },
+    "M004": {
+      "name": "DII Flows",
+      "times_checked": 3,
+      "contributed_right": 1,
+      "missed_in_wrong": 0,
+      "accuracy_contribution": "neutral"
+    },
+    "T001": {
+      "name": "52-Week Proximity",
+      "times_checked": 3,
+      "contributed_right": 2,
+      "missed_in_wrong": 0,
+      "accuracy_contribution": "STRONG \u2014 2 correct predictions"
+    },
+    "T004": {
+      "name": "RSI",
+      "times_checked": 2,
+      "contributed_right": 1,
+      "missed_in_wrong": 0,
+      "accuracy_contribution": "neutral"
+    },
+    "S008": {
+      "name": "Coal E-Auction",
+      "times_checked": 1,
+      "contributed_right": 0,
+      "missed_in_wrong": 0,
+      "accuracy_contribution": "pending"
+    }
   },
-
   "framework_evolution_log": [
     {
       "date": "2026-04-06",
@@ -105,12 +232,11 @@
       "event": "FACTOR_PROPOSED",
       "factor_id": "M010",
       "factor_name": "FII Single-Day Panic Threshold",
-      "triggered_by": "RCA001 — P007 WRONG",
+      "triggered_by": "RCA001 \u2014 P007 WRONG",
       "promoted_to_framework": false,
       "notes": "Waiting for 1 more corroborating WRONG prediction before promoting to framework"
     }
   ],
-
   "next_session_accuracy": {
     "total_sessions": 0,
     "direction_correct": 0,

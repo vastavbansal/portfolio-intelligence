@@ -191,7 +191,15 @@
 
   <!-- MARKET FORECASTS STRIP -->
   <div class="mb-6">
-    <h2 class="font-bold text-base text-slate-200 mb-3">Next Session Forecasts <span class="text-xs text-slate-500 font-normal ml-2" id="forecastLabel"></span></h2>
+    <div class="flex items-center justify-between mb-3 flex-wrap gap-2">
+      <h2 class="font-bold text-base text-slate-200">Next Session Forecasts <span class="text-xs text-slate-500 font-normal ml-2" id="forecastLabel"></span></h2>
+      <!-- DoD Forecast Accuracy Mini Badge -->
+      <div id="forecastAccuracyMini" class="hidden flex items-center gap-2 text-xs">
+        <span class="text-slate-500">Session forecast accuracy:</span>
+        <span id="forecastAccBadge" class="badge badge-MEDIUM">— / —</span>
+        <span id="forecastAccLast" class="text-slate-500"></span>
+      </div>
+    </div>
     <div id="forecastStrip" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3"></div>
   </div>
 
@@ -316,6 +324,34 @@
       <div class="card p-5" id="l3FactorPerf"></div>
     </div>
     <div class="card p-5 mt-4" id="l3FrameworkLog"></div>
+  </div>
+
+  <!-- SESSION FORECAST ACCURACY — DoD History -->
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <h2 class="font-bold text-base text-slate-200">📅 Session Forecast Accuracy</h2>
+      <span class="text-xs text-slate-500">Day-over-day: predicted vs actual</span>
+    </div>
+    <!-- Summary bar -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4" id="forecastAccSummary"></div>
+    <!-- Session history table -->
+    <div class="card overflow-x-auto mb-4">
+      <table class="w-full text-xs">
+        <thead>
+          <tr class="border-b border-slate-800">
+            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Date</th>
+            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Forecast</th>
+            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Actual</th>
+            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Direction</th>
+            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Grade</th>
+            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Key Lesson</th>
+          </tr>
+        </thead>
+        <tbody id="forecastAccTable"></tbody>
+      </table>
+    </div>
+    <!-- Patterns observed -->
+    <div id="forecastAccPatterns" class="grid grid-cols-1 sm:grid-cols-2 gap-3"></div>
   </div>
 
   <!-- Next Session Full Forecasts -->
@@ -505,7 +541,7 @@ async function loadJSON(path) {
 
 async function loadData() {
   document.getElementById('lastUpdated').textContent = 'Loading…';
-  const [signals, predictions, briefings, holdings, forecasts, accuracy, predHistory, actions] = await Promise.all([
+  const [signals, predictions, briefings, holdings, forecasts, accuracy, predHistory, actions, forecastLog] = await Promise.all([
     loadJSON('data/signals-latest.json'),
     loadJSON('data/predictions-all.json'),
     loadJSON('data/briefings-index.json'),
@@ -514,8 +550,9 @@ async function loadData() {
     loadJSON('data/accuracy-meta.json'),
     loadJSON('data/predictions-history.json'),
     loadJSON('data/actions.json'),
+    loadJSON('data/forecast-accuracy-log.json'),
   ]);
-  DATA = { signals, predictions, briefings, holdings, forecasts, accuracy, predHistory, actions };
+  DATA = { signals, predictions, briefings, holdings, forecasts, accuracy, predHistory, actions, forecastLog };
 
   // Load holdings: file is always source of truth for base data (normalised),
   // localStorage layered on top only for ltp updates done this session.
@@ -586,6 +623,7 @@ function renderAll() {
   renderRegimeStrip();
   renderActions();
   renderForecastStrip();
+  renderForecastAccuracy();
   renderOpenPredictions();
   renderPortfolioSummary();
   renderHoldingsTable();
@@ -819,6 +857,89 @@ function renderForecastStrip() {
       <div class="text-xs text-slate-600 mt-1">${conf}% conf</div>
     </div>`;
   }).join('');
+}
+
+// ═══════════════════════════════════════════════════════
+//  FORECAST ACCURACY — DoD history panel
+// ═══════════════════════════════════════════════════════
+function renderForecastAccuracy() {
+  const log = DATA.forecastLog;
+  if (!log) return;
+
+  const summary = log.summary || {};
+  const sessions = (log.sessions || []).filter(s => s.accuracy && s.accuracy.overall_grade !== 'PENDING');
+  const allSessions = log.sessions || [];
+  const patterns = log.patterns_observed || [];
+
+  // Mini badge on Today tab
+  const miniEl = document.getElementById('forecastAccuracyMini');
+  const accBadge = document.getElementById('forecastAccBadge');
+  const accLast = document.getElementById('forecastAccLast');
+  if (miniEl && summary.total_sessions_forecasted > 0) {
+    miniEl.classList.remove('hidden');
+    const pct = summary.direction_accuracy_pct || 0;
+    const total = summary.total_sessions_forecasted;
+    const correct = summary.direction_correct || 0;
+    accBadge.textContent = correct + '/' + total + ' (' + pct.toFixed(0) + '%)';
+    accBadge.className = 'badge ' + (pct >= 60 ? 'badge-RIGHT' : pct >= 40 ? 'badge-MEDIUM' : 'badge-WRONG');
+    const lastSession = allSessions[allSessions.length - 1];
+    if (lastSession && lastSession.accuracy) {
+      const g = lastSession.accuracy.overall_grade;
+      const lastIcon = g === 'CORRECT' || g === 'PARTIAL_CORRECT' ? '✓' : g === 'WRONG' ? '✗' : '⏳';
+      accLast.textContent = 'Last: ' + lastIcon + ' ' + (lastSession.session_date || '');
+    }
+  }
+
+  // Summary cards on Intelligence tab
+  const summaryEl = document.getElementById('forecastAccSummary');
+  if (!summaryEl) return;
+  summaryEl.innerHTML = [
+    { label: 'Direction Accuracy', val: (summary.direction_accuracy_pct || 0).toFixed(0) + '%', sub: (summary.direction_correct || 0) + ' / ' + (summary.total_sessions_forecasted || 0) + ' sessions', col: summary.direction_accuracy_pct >= 60 ? 'text-emerald-400' : summary.direction_accuracy_pct >= 40 ? 'text-yellow-400' : 'text-red-400' },
+    { label: 'Current Streak', val: (summary.current_streak || 0) + ' ' + (summary.current_streak_type === 'correct' ? '✓' : '✗'), sub: summary.current_streak_type || '—', col: summary.current_streak_type === 'correct' ? 'text-emerald-400' : 'text-red-400' },
+    { label: 'Total Forecasted', val: summary.total_sessions_forecasted || 0, sub: 'sessions tracked', col: 'text-slate-200' },
+    { label: 'Patterns Found', val: patterns.length, sub: 'in observation', col: 'text-blue-400' },
+  ].map(c => `<div class="card p-4"><div class="text-xs text-slate-500 mb-1">${c.label}</div><div class="text-2xl font-bold mono ${c.col}">${c.val}</div><div class="text-xs text-slate-600 mt-1">${c.sub}</div></div>`).join('');
+
+  // Session table
+  const tbody = document.getElementById('forecastAccTable');
+  if (!tbody) return;
+  const gradeStyle = g => {
+    if (!g || g === 'PENDING') return 'badge-WATCH';
+    if (g === 'CORRECT') return 'badge-RIGHT';
+    if (g === 'PARTIAL_CORRECT') return 'badge-MEDIUM';
+    return 'badge-WRONG';
+  };
+  if (!allSessions.length) { tbody.innerHTML = '<tr><td colspan="6" class="text-center text-slate-500 py-6 px-4">No forecast history yet — starts building after first EOD run</td></tr>'; return; }
+  tbody.innerHTML = [...allSessions].reverse().map(s => {
+    const a = s.accuracy || {};
+    const forecastDir = s.forecast?.direction || '—';
+    const forecastPct = s.forecast?.nifty_change_pct_forecast != null ? (s.forecast.nifty_change_pct_forecast > 0 ? '+' : '') + s.forecast.nifty_change_pct_forecast + '%' : '';
+    const actualPct = s.actual?.nifty_change_pct != null ? (s.actual.nifty_change_pct > 0 ? '+' : '') + s.actual.nifty_change_pct.toFixed(2) + '%' : '⏳ pending';
+    const lesson = s.lessons?.[0] || a.direction_note || '—';
+    return `<tr class="border-b border-slate-800/50 hover:bg-slate-800/30">
+      <td class="px-4 py-3 font-semibold text-slate-300 mono">${s.session_date || '—'}</td>
+      <td class="px-4 py-3 text-slate-400">${forecastDir.replace(/_/g,' ')} ${forecastPct}</td>
+      <td class="px-4 py-3 font-semibold ${s.actual?.nifty_change_pct > 0 ? 'text-emerald-400' : s.actual?.nifty_change_pct < 0 ? 'text-red-400' : 'text-slate-400'}">${actualPct}</td>
+      <td class="px-4 py-3"><span class="badge ${a.direction_correct === true ? 'badge-RIGHT' : a.direction_correct === false ? 'badge-WRONG' : 'badge-WATCH'}">${a.direction_correct === true ? '✓ RIGHT' : a.direction_correct === false ? '✗ WRONG' : '⏳'}</span></td>
+      <td class="px-4 py-3"><span class="badge ${gradeStyle(a.overall_grade)}">${(a.overall_grade || 'PENDING').replace(/_/g,' ')}</span></td>
+      <td class="px-4 py-3 text-slate-400 max-w-xs truncate" title="${lesson}">${lesson}</td>
+    </tr>`;
+  }).join('');
+
+  // Patterns
+  const patEl = document.getElementById('forecastAccPatterns');
+  if (patEl && patterns.length) {
+    patEl.innerHTML = patterns.map(p => `
+      <div class="card p-4">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="badge badge-WATCH">${p.pattern_id}</span>
+          <span class="font-semibold text-sm text-slate-200">${p.name.replace(/_/g,' ')}</span>
+          <span class="ml-auto badge badge-MEDIUM">${p.occurrences}/${p.threshold_for_framework} obs</span>
+        </div>
+        <div class="text-xs text-slate-400 mb-2">${p.description}</div>
+        <div class="text-xs text-slate-600">First seen: ${p.first_seen} · Status: ${p.status}</div>
+      </div>`).join('');
+  }
 }
 
 // ═══════════════════════════════════════════════════════

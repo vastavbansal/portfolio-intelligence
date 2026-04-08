@@ -1,0 +1,117 @@
+{
+  "forecast_date": "2026-04-09",
+  "forecast_generated_at": "2026-04-08-eod",
+  "forecast_regime": "DE-ESCALATION_REAL",
+  "nifty_prev_close": 23984.85,
+
+  "scenarios": [
+    {
+      "scenario_id": "Bull",
+      "description": "Earnings optimism + continued ceasefire sentiment drives IT/financials higher",
+      "probability_pct": 25,
+      "nifty_target": "24200-24400",
+      "nifty_change_pct": "0.9-1.8%",
+      "trigger": "TCS/INFY results beat expectations; April 10 talks proceed without incident"
+    },
+    {
+      "scenario_id": "Base",
+      "description": "Profit-booking after +3.72% rally; consolidation with earnings-driven volatility",
+      "probability_pct": 50,
+      "nifty_target": "23900-24100",
+      "nifty_change_pct": "-0.4% to +0.5%",
+      "trigger": "Mixed earnings; April 10 talks neutral; FII flows unchanged"
+    },
+    {
+      "scenario_id": "Bear",
+      "description": "Profit-taking accelerates; April 10 Islamabad talks signal breakdown risk",
+      "probability_pct": 25,
+      "nifty_target": "23600-23800",
+      "nifty_change_pct": "-1.5% to -0.4%",
+      "trigger": "Earnings disappoint; Islamabad talks show no progress; FII selling resumes"
+    }
+  ],
+
+  "base_case_scenario": "Base (Consolidation)",
+  "expected_direction": "FLAT_TO_SLIGHTLY_UP",
+
+  "nifty_range": {
+    "low": 23800,
+    "high": 24100,
+    "change_pct_estimate": "-0.4% to +0.5%"
+  },
+
+  "confidence": "3⭐",
+  "confidence_reasoning": "April 8 relief rally is now priced in. Session April 9 will be dominated by: (1) Profit-booking after +3.72% day (2) TCS/INFY earnings calendar (3) April 10 Islamabad talks uncertainty (4) FII flows. No single catalyst expected. Consolidation is most likely. Confidence is 3⭐ because April 10 talks introduce binary risk (not priced in yet).",
+
+  "key_factors": [
+    "TCS, INFY, HCLTECH earnings (announcements expected this week)",
+    "April 10 Islamabad talks — next geopolitical binary event",
+    "FII flows — structurally weak; ceasefire doesn't change long-term flows",
+    "Brent crude — watch for stabilization or fresh weakness",
+    "Rupee strength — ceasefire removes depreciation fears; may cap rupee rally"
+  ],
+
+  "sector_watch": [
+    {
+      "sector": "IT",
+      "direction": "Flat to Consolidation",
+      "watch_points": "Q1 margin guidance; US Q1 earnings season; USD strength"
+    },
+    {
+      "sector": "Defense",
+      "direction": "Consolidation at highs",
+      "watch_points": "Ceasefire is 2-week duration; April 10 talks progress. If deal expands to 4+ weeks, premium extends. If talks fail, premium could reverse."
+    },
+    {
+      "sector": "Energy",
+      "direction": "Stabilization",
+      "watch_points": "Brent range $90-95 if ceasefire holds. Watch for OPEC comments or production changes."
+    },
+    {
+      "sector": "Financials",
+      "direction": "Mixed — Bank earnings this week",
+      "watch_points": "Q4 margins on NPA recognition; asset quality; deposit growth"
+    }
+  ],
+
+  "major_holdings_watch": [
+    {
+      "stock": "ASTRA MICRO",
+      "direction": "Consolidation near ₹1,020-1,050",
+      "rationale": "Defense premium extended (2-week ceasefire), but P012 target of ₹1,050-1,080 may face profit-booking. April 10 talks are key catalyst.",
+      "action": "Hold for now; consider partial profit-taking if approaches ₹1,050. Avoid chasing new highs."
+    },
+    {
+      "stock": "INDIGO",
+      "direction": "Stabilization above ₹4,150",
+      "rationale": "Ceasefire removed acute ATF cost panic. P015 thesis is consolidation range. Q4FY26 results (May) will drive next move.",
+      "action": "Hold; watch for earnings announcement date. If stock approaches ₹4,300, consider selling on bounce."
+    },
+    {
+      "stock": "MRPL",
+      "direction": "Recovery toward ₹195-210",
+      "rationale": "P002 (₹160-170 downside) invalidated by ceasefire. Brent <$95 means GRM recovery. P017 (₹200-210 target) is new thesis.",
+      "action": "Hold for GRM recovery play. April 9 consolidation is normal; GRM uplift will be visible in Q1FY27 guidance refresh."
+    },
+    {
+      "stock": "COAL INDIA",
+      "direction": "Flat to Slight Upside",
+      "rationale": "P005 thesis (>₹430) intact. Ceasefire benefits cheap coal substitution thesis further. At ₹449.65, stock has buffer.",
+      "action": "Hold. No action needed. Continue monitoring above ₹430 support."
+    }
+  ],
+
+  "fii_dii_outlook": {
+    "fii_flow_forecast": "Continued outflows (-₹2,000 to -₹5,000 Cr range) as geopolitical premium eases and global rate hikes continue",
+    "dii_support": "Strong domestic buying expected to absorb FII selling, especially on dips below 23,800",
+    "rupee_impact": "Ceasefire removes depreciation fears; rupee may strengthen 2-3% vs dollar over 2-4 weeks"
+  },
+
+  "risk_events_april_9": [
+    "TCS, INFY earnings beat/miss",
+    "US market reaction to ceasefire (overnight data)",
+    "Any negative news from Islamabad talks setup"
+  ],
+
+  "next_critical_event": "April 10 Islamabad talks between US, Iran, intermediaries. Outcome will determine: (1) If deal expands beyond 2 weeks → war premium extends further (2) If talks fail → ceasefire may collapse, Nifty risk-off"
+}
