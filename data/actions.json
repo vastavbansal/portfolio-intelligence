@@ -57,7 +57,7 @@
       "signal_details": {
         "M001": "Brent at $93.76 — well below $115 sell trigger. ATF cost relief is real and durable."
       },
-      "prediction_support": ["P15","P006"],
+      "prediction_support": ["P015","P006"],
       "pnl_impact_if_right": "Holding INDIGO to May Q4 results. P015 already scoring RIGHT.",
       "pnl_impact_if_wrong": "April 10 talks fail → Brent spikes → ATF concern returns → INDIGO gives back 3-5%",
       "risk": "Islamabad talks failure = Brent spike = INDIGO headwind",

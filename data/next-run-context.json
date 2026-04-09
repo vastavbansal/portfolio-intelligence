@@ -75,7 +75,7 @@
       "note": "Nifty opened at 23,856 — slightly below the 23,900 lower bound of the range. Still tracking — intraday can recover. April 10 talks will determine if range holds. If talks fail, P016 likely scores WRONG."
     },
     {
-      "id": "P15",
+      "id": "P015",
       "stock": "INDIGO",
       "thesis": "Stabilizes above ₹4,150 over 7 days",
       "last_price": 4614.90,
@@ -363,7 +363,7 @@
     },
     {
       "name": "eod_wrap",
-      "when": "Weekdays 4:30 PM IST",
+      "when": "Weekdays 9:30 PM IST",
       "prompt_source": "next-run-context.json → prompt_for_eod_wrap",
       "output": "daily-briefings/YYYY-MM-DD-eod.md + predictions-history.json update + accuracy-meta.json update + market-forecasts.json + next-run-context.json update"
     },

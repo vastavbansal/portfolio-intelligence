@@ -524,6 +524,46 @@
 //  GLOBAL STATE
 // ═══════════════════════════════════════════════════════
 const LS_HOLDINGS_KEY = 'portfolio_holdings_v1';
+
+// ═══════════════════════════════════════════════════════
+//  PREDICTION MERGE HELPER
+//  predictions-all.json = source of truth for ALL predictions (live)
+//  predictions-history.json = source of rich data (daily_log, RCA, thesis)
+//  This merges them so the dashboard always shows all predictions.
+// ═══════════════════════════════════════════════════════
+function getMergedPredictions() {
+  // Base: all predictions from predictions-all.json
+  const allPreds = (DATA.predictions?.predictions || []).map(p => ({
+    ...p,
+    // Normalise status field: predictions-all uses outcome:null for open
+    status: p.outcome === null || p.outcome === undefined ? 'OPEN' : p.outcome,
+    // Normalise id
+    id: p.pred_id || p.id,
+    // Normalise text field
+    thesis: p.prediction || p.thesis,
+  }));
+
+  // Enrich with daily_log / rca / thesis from predictions-history where available
+  const histMap = {};
+  (DATA.predHistory?.predictions || []).forEach(h => {
+    const key = h.pred_id || h.id;
+    if (key) histMap[key] = h;
+  });
+
+  return allPreds.map(p => {
+    const hist = histMap[p.id];
+    if (!hist) return p;
+    return {
+      ...p,
+      // Pull richer fields from history if present
+      daily_log: hist.daily_log || p.daily_log,
+      rca: hist.rca || p.postmortem || null,
+      thesis: p.thesis || hist.thesis || hist.prediction,
+      confidence_current: hist.confidence_current || p.confidence,
+      confidence_trend: hist.confidence_trend || p.confidence_trend,
+    };
+  });
+}
 const LS_TRADE_LOG_KEY = 'portfolio_trade_log_v1';
 let HOLDINGS = [];
 let DATA = { signals:{}, predictions:{}, briefings:{}, holdings:{}, forecasts:{}, accuracy:{}, predHistory:{}, actions:{} };
@@ -946,9 +986,7 @@ function renderForecastAccuracy() {
 //  OPEN PREDICTIONS (TODAY tab)
 // ═══════════════════════════════════════════════════════
 function renderOpenPredictions() {
-  const ph = DATA.predHistory;
-  if (!ph) return;
-  const open = (ph.predictions||[]).filter(p=>p.status==='OPEN');
+  const open = getMergedPredictions().filter(p => p.status === 'OPEN');
   const el = document.getElementById('openPredictions');
   if (!open.length) { el.innerHTML='<div class="text-slate-500 text-sm">No open predictions.</div>'; return; }
 
@@ -1109,14 +1147,14 @@ function filterPredLog(f) {
 }
 
 function renderPredLogGrid() {
-  const ph = DATA.predHistory;
-  if (!ph?.predictions?.length) {
+  const merged = getMergedPredictions();
+  if (!merged.length) {
     document.getElementById('predLogGrid').innerHTML = '<div class="text-slate-500 text-sm">No predictions yet.</div>';
     return;
   }
 
   // Sort: OPEN first, then newest first
-  const all = [...ph.predictions].sort((a,b) => {
+  const all = [...merged].sort((a,b) => {
     const so = {OPEN:0,RIGHT:1,WRONG:2,PARTIAL:3};
     const sa = so[a.status||a.outcome||'OPEN'] ?? 1;
     const sb = so[b.status||b.outcome||'OPEN'] ?? 1;
@@ -1517,12 +1555,12 @@ async function loadBriefing(file) {
 //  PREDICTION HISTORY
 // ═══════════════════════════════════════════════════════
 function renderPredictionHistory() {
-  const ph = DATA.predHistory;
-  if (!ph?.predictions?.length) {
+  const merged = getMergedPredictions();
+  if (!merged.length) {
     document.getElementById('predictionHistory').innerHTML = '<div class="text-slate-500 text-sm">No prediction history yet.</div>';
     return;
   }
-  document.getElementById('predictionHistory').innerHTML = ph.predictions.map(p=>{
+  document.getElementById('predictionHistory').innerHTML = merged.map(p=>{
     // Support both naming conventions
     const id = p.id || p.pred_id || '';
     const status = p.status || p.outcome || 'OPEN';

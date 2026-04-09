@@ -354,7 +354,7 @@
       "confidence_note": "INTACT: TCS Q4 results on April 9. IT sector decoupling confirmed on April 7+8. TCS at ₹2,555.30. Thesis has 27 days remaining. If TCS Q4 results beat expectations, confidence raises to 4."
     },
     {
-      "pred_id": "P15",
+      "pred_id": "P015",
       "horizon": "7D",
       "date": "2026-04-08",
       "stock": "INDIGO",
@@ -375,7 +375,7 @@
       "confidence_note": "TARGET EXCEEDED ON ENTRY DAY: IndiGo closed at ₹4,614.90 on April 8, far above the ₹4,150-4,300 target range. This suggests target was too conservative. Will score as RIGHT (stable above ₹4,150) but the range was blown out by the ATF relief rally. Confidence raised to 4. Updating target band upward mentally to ₹4,500-4,700 to track consolidation."
     },
     {
-      "pred_id": "P16",
+      "pred_id": "P016",
       "horizon": "7D",
       "date": "2026-04-08",
       "stock": "NIFTY",
@@ -396,7 +396,7 @@
       "confidence_note": "ON TRACK as of April 8 close (23,997.35). Thesis: consolidation 23,900-24,100. TCS earnings and April 10 talks are key risks. Confidence 3."
     },
     {
-      "pred_id": "P17",
+      "pred_id": "P017",
       "horizon": "4W",
       "date": "2026-04-08",
       "stock": "MRPL",
