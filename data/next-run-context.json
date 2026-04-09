@@ -1,100 +1,111 @@
 {
   "schema_version": "1.0",
   "description": "Dynamic bridge between scheduled runs. Each run reads this file, applies its learnings, does its work, then OVERWRITES this file with updated context for the next run. This is the memory of the intelligence system.",
-  "last_updated_by": "morning_brief_2026-04-09",
-  "last_updated_at": "2026-04-09T08:30:00",
+  "last_updated_by": "eod_wrap_2026-04-09",
+  "last_updated_at": "2026-04-09T21:30:00",
   "market_regime": {
-    "label": "DE-ESCALATION_REAL_STABLE",
-    "key_risk": "April 10 Islamabad talks \u2014 both US and Iran confirmed, Pakistan hosting. Three-way binary. Talks failure = WAR_PREMIUM returns, Nifty -2-4%.",
-    "dominant_risk": "April 10 Islamabad talks (10 AM IST) \u2014 REGIME-DEFINING BINARY. Score outcome FIRST in next run.",
-    "crude_last": 93.76,
+    "label": "DE-ESCALATION_REAL_BINARY_EVE",
+    "key_risk": "April 10 Islamabad talks (10 AM IST) — REGIME-DEFINING. US VP Vance vs Iran FM Araghchi. Nuclear enrichment red line exposed. CNN: 'teetering ceasefire bodes ill for treacherous US-Iran talks'. Probability 20/45/35 bull/base/bear.",
+    "dominant_risk": "Islamabad talks outcome (April 10, 10:00 AM IST). Score THIS FIRST in morning brief. Three outcomes each require different action sets.",
+    "crude_last": 93.5,
     "crude_threshold_for_regime_change": 100,
-    "nifty_last": 23856,
-    "nifty_open_april9": 23856,
-    "sensex_last": 77562.9,
-    "nifty_key_support": 23700,
+    "nifty_last": 23775.10,
+    "nifty_april9_close": 23775.10,
+    "sensex_last": 76632,
+    "nifty_key_support": 23500,
     "nifty_key_resistance": 24200,
     "regime_since": "2026-04-08T05:30:00",
-    "regime_note": "MORNING UPDATE April 9: Regime unchanged from April 8. Ceasefire holding Day 2. Nifty opened cautiously at ~23,856 (base case consolidation). GIFT Nifty slightly in red. Brent ~$93.76 (stable). April 10 Islamabad talks confirmed \u2014 both US and Iran attending, Pakistan hosting. TCS Q4FY26 results post-market today (~4 PM IST). SETFGOLD elevated at ~\u20b9128.21 on April 10 talks hedging \u2014 A005 exit window open.",
-    "session_forecast_accuracy_note": "April 9 forecast: FLAT_TO_SLIGHTLY_UP (23,800-24,100). Open at 23,856 \u2014 within range \u2713. Direction PARTIAL (flat/slightly down vs forecast flat-to-slightly-up). Full score pending EOD wrap. Running session accuracy: 50% (1/2 scored). Apr 10 forecast: BINARY_VOLATILE (Islamabad talks binary \u2014 30/35/35 bull/base/bear)."
+    "regime_note": "EOD UPDATE April 9: Nifty closed 23,775 (-0.93%) — below forecast range 23,800-24,100. Trump stated US-Iran 'remains tense until real pact reached' — re-introduced doubt about ceasefire durability. Bloomberg: 'India rally shows signs of short covering, lacks fresh buying' — suggesting April 8 rally lacked institutional conviction. TCS Q4FY26 results announced post-market: STRONG BEAT (revenue ₹70,698 cr vs ₹69,932 est, TCV $12B record, ₹31 dividend, AI $2.3B). TCS closed ₹2,587.75 pre-results. Islamabad talks confirmed: VP Vance + FM Araghchi. Key red lines: Iran wants Hormuz oversight + US military withdrawal; US holds nuclear enrichment firm. Regime technically unchanged but BINARY_EVE now.",
+    "session_forecast_accuracy_note": "April 9 session WRONG (forecast FLAT_TO_UP 23,800-24,100, actual 23,775 -0.93%). Running session accuracy: 1/3 = 33.3%. April 10 forecast: BINARY_VOLATILE_TILTED_BEARISH (20/45/35 bull/base/bear — revised from 30/35/35 based on pre-talks analysis)."
   },
   "open_predictions": [
     {
+      "id": "P021",
+      "stock": "TCS",
+      "thesis": "TCS tests ₹2,650-2,700 by April 16 on Q4FY26 strong beat and record TCV",
+      "last_price": 2587.75,
+      "entry_date": "2026-04-09",
+      "confidence_current": 4,
+      "confidence_trend": "NEW_POST_RESULTS",
+      "check_date": "2026-04-16",
+      "note": "NEW April 9 EOD. TCS Q4 beat: revenue ₹70,698 cr (BEAT), TCV $12B (highest ever), ₹31 dividend, AI $2.3B. TCS at ₹2,587.75 — needs +2.4-4.3% to target. Expected gap-up on April 10 to ₹2,620-2,640. Confidence 4★."
+    },
+    {
       "id": "P018",
       "stock": "TCS",
-      "thesis": "TCS closes above \u20b92,600 within 7 days on Q4FY26 results beat",
-      "last_price": 2555.3,
-      "morning_price_april9": "pre-results",
-      "confidence_current": 3,
-      "confidence_trend": "AWAITING_RESULTS",
+      "thesis": "TCS closes above ₹2,600 within 7 days on Q4FY26 results beat",
+      "last_price": 2587.75,
+      "morning_price_april9": 2555.3,
+      "confidence_current": 4,
+      "confidence_trend": "UPGRADED_POST_RESULTS",
       "check_date": "2026-04-15",
-      "note": "TCS Q4FY26 results TODAY (~4 PM IST). Analyst estimates: Revenue \u20b969,932 cr (+8% YoY), PAT \u20b913,919 cr (+14% YoY), EBIT ~25.3%. Score P018 in EOD wrap tonight. If beat \u2192 confidence to 4\u2605. If guidance disappoints \u2192 confidence to 2\u2605."
+      "note": "UPGRADED TO 4★. TCS results: revenue BEAT (₹70,698 cr), TCV $12B record, ₹31 dividend, AI $2.3B. TCS closed ₹2,587.75 on April 9 — only ₹12.25 below ₹2,600 target. Expected gap-up to ₹2,620-2,640 on April 10 open = P018 threshold crossed. Probability RIGHT: ~90%+. SCORE on April 15 unless TCS crosses ₹2,600 intraday April 10 (score early)."
     },
     {
       "id": "P019",
       "stock": "ADANI PORT",
-      "thesis": "ADANI PORT tests \u20b91,490-1,540 on Hormuz traffic restoration",
+      "thesis": "ADANI PORT tests ₹1,490-1,540 on Hormuz traffic restoration",
       "last_price": 1453.3,
       "morning_price_april9": 1453,
       "confidence_current": 3,
-      "confidence_trend": "TRACKING",
+      "confidence_trend": "TALKS_DEPENDENT",
       "check_date": "2026-04-15",
-      "note": "Hormuz protocol confirmed. Stock at ~\u20b91,453, target \u20b91,490-1,540 (+2.5-6%). April 10 talks progress = additional catalyst. Risk: talks failure = Hormuz concern returns."
+      "note": "Talks progress = additional catalyst. Stock tracking at ~₹1,440-1,450. April 10 talks outcome is the key variable. If talks neutral/progress: hold, target ₹1,490-1,540 within reach. If talks fail: Hormuz concern returns, trim 25-30%."
     },
     {
       "id": "P020",
       "stock": "SETFGOLD",
-      "thesis": "SETFGOLD corrects to \u20b9120-122 as ceasefire compresses war premium",
+      "thesis": "SETFGOLD corrects to ₹120-122 as ceasefire compresses war premium",
       "last_price": 125.59,
       "morning_price_april9": 128.21,
       "confidence_current": 3,
       "confidence_trend": "ABOVE_ENTRY_ALERT",
       "check_date": "2026-04-15",
-      "note": "ALERT: SETFGOLD at \u20b9128.21 this morning \u2014 UP from \u20b9125.59 entry! Gold elevated on April 10 talks hedging. This is ACTUALLY a better exit price than expected. A005 exit trigger is ACTIVE \u2014 sell 50-75% NOW at \u20b9128+. Target \u20b9120-122 requires -5-6% from current. Retain 25-30% for April 10 binary hedge."
+      "note": "A005 exit window STILL ACTIVE. SETFGOLD elevated at ₹128+ on talks-hedging demand. SELL 50-75% if talks neutral or progress. HOLD ALL if talks fail. Gold pre-binary-event hedging pattern confirmed (pending framework promotion as GOLD_HEDGING_PRE_BINARY)."
     },
     {
       "id": "P017",
       "stock": "MRPL",
-      "thesis": "MRPL re-rates to \u20b9200-210 over 4 weeks on GRM recovery",
+      "thesis": "MRPL re-rates to ₹200-210 over 4 weeks on GRM recovery",
       "last_price": 182.7,
       "morning_price_april9": 182,
       "confidence_current": 3,
       "confidence_trend": "TRACKING",
       "check_date": "2026-05-08",
-      "note": "Brent at $93.76 confirms GRM recovery thesis active. 29 days remaining. HOLD."
+      "note": "Brent stable at ~$93.5. GRM recovery thesis active. 29 days remaining. HOLD. Risk: talks failure → Brent spikes → GRM thesis weakens."
     },
     {
       "id": "P016",
       "stock": "NIFTY",
       "thesis": "Consolidates 23,900-24,100 over 7 days",
-      "last_price": 23997.35,
+      "last_price": 23775.10,
       "morning_price_april9": 23856,
-      "confidence_current": 3,
-      "confidence_trend": "SLIGHTLY_BELOW_RANGE",
+      "confidence_current": 2,
+      "confidence_trend": "BELOW_RANGE",
       "check_date": "2026-04-15",
-      "note": "Nifty opened at 23,856 \u2014 slightly below the 23,900 lower bound of the range. Still tracking \u2014 intraday can recover. April 10 talks will determine if range holds. If talks fail, P016 likely scores WRONG."
+      "note": "Nifty closed 23,775 on April 9 — BELOW the 23,900 lower bound of range. April 10 talks outcome will determine if P016 can recover. TALKS_NEUTRAL scenario (45%) → Nifty 23,900-24,050 → P016 back in range. TALKS_FAIL → Nifty drops to 22,800-23,300 → P016 scores WRONG. Confidence downgraded to 2★."
     },
     {
       "id": "P015",
       "stock": "INDIGO",
-      "thesis": "Stabilizes above \u20b94,150 over 7 days",
+      "thesis": "Stabilizes above ₹4,150 over 7 days",
       "last_price": 4614.9,
       "morning_price_april9": 4614,
       "confidence_current": 4,
       "confidence_trend": "EXCEEDED_TARGET",
       "check_date": "2026-04-15",
-      "note": "P015 will score RIGHT on April 15. IndiGo at \u20b94,614 \u2014 far above \u20b94,150 target. HOLD for Q4 results (May) catalyst."
+      "note": "P015 will score RIGHT on April 15. IndiGo at ~₹4,530 — far above ₹4,150 target even after April 9 dip. Only TALKS_FAIL + Brent spike above $115 could threaten this — very unlikely. WILL SCORE RIGHT."
     },
     {
       "id": "P012",
       "stock": "ASTRA MICRO",
-      "thesis": "Breaches \u20b91,000 and tests \u20b91,050-1,080 by April 14",
+      "thesis": "Breaches ₹1,000 and tests ₹1,050-1,080 by April 14",
       "last_price": 1019.45,
       "morning_price_april9": 1019,
       "confidence_current": 4,
       "confidence_trend": "APPROACHING_TARGET",
       "check_date": "2026-04-14",
-      "note": "P012 approaching target. \u20b91,019 \u2192 \u20b91,050-1,080 = +3-6%. CRITICAL: SET PARTIAL PROFIT LIMIT at \u20b91,048-1,052 TODAY (A008) before April 10 talks. If talks succeed \u2192 defense premium unwinds \u2192 stock could fall back to \u20b9950-980."
+      "note": "P012 approaching target. ₹1,019 → ₹1,050-1,080 = +3-6%. CRITICAL: A008 partial profit limit at ₹1,048-1,052 should be active. If talks progress → defense premium unwinds → stock could fall to ₹980-1,000 quickly. If talks fail → ASTRA MICRO may test ₹1,100. 5 days to check_date."
     },
     {
       "id": "P014",
@@ -102,21 +113,21 @@
       "thesis": "Outperforms Nifty by 5-10% over 4 weeks",
       "last_price": 35000,
       "morning_price_april9": "pre-TCS results",
-      "confidence_current": 3,
-      "confidence_trend": "PENDING_TCS_RESULTS",
+      "confidence_current": 4,
+      "confidence_trend": "UPGRADED_POST_TCS",
       "check_date": "2026-05-05",
-      "note": "TCS Q4 results today are the next signal for P014. If TCS beats \u2192 P014 confidence raises to 4\u2605. 26 days remaining."
+      "note": "UPGRADED TO 4★. TCS Q4 strong beat validates IT-USD decoupling and AI narrative. TCS expected to gap-up April 10. 26 days remaining. IT sector tailwind is independent of Islamabad talks outcome (USD strength + US earnings season remain positive regardless)."
     },
     {
       "id": "P005",
       "stock": "COAL INDIA",
-      "thesis": "Holds above \u20b9430 by May 28 on crude-coal substitution",
+      "thesis": "Holds above ₹430 by May 28 on crude-coal substitution",
       "last_price": 449.2,
       "morning_price_april9": 449,
       "confidence_current": 4,
       "confidence_trend": "VERY_STRONG",
       "check_date": "2026-05-28",
-      "note": "P005 extremely comfortable. \u20b9449 vs \u20b9430 target \u2014 \u20b919 buffer, 49 days remaining. Probability of RIGHT: ~95%+. STRONG HOLD."
+      "note": "P005 extremely comfortable. ~₹449 vs ₹430 target — ₹19 buffer, 49 days remaining. Probability RIGHT: ~95%+. STRONG HOLD."
     },
     {
       "id": "P006",
@@ -132,121 +143,127 @@
     {
       "id": "P004",
       "stock": "ASTRA MICRO",
-      "thesis": "Corrects to \u20b9850-900 by April 25",
+      "thesis": "Corrects to ₹850-900 by April 25",
       "last_price": 1019.45,
       "morning_price_april9": 1019,
       "confidence_current": 1,
       "confidence_trend": "INVALIDATED",
       "check_date": "2026-04-25",
-      "note": "INVALIDATED. Will score WRONG on April 25. Stock needs -15-17% fall. Not monitoring."
+      "note": "INVALIDATED. Will score WRONG on April 25. Not monitoring."
     },
     {
       "id": "P013",
       "stock": "INDIGO",
-      "thesis": "Falls below \u20b94,100 by April 14",
+      "thesis": "Falls below ₹4,100 by April 14",
       "last_price": 4614.9,
       "morning_price_april9": 4614,
       "confidence_current": 1,
       "confidence_trend": "INVALIDATED",
       "check_date": "2026-04-14",
-      "note": "INVALIDATED. Will score WRONG on April 14. Stock at \u20b94,614, needs -11% in 5 days."
+      "note": "INVALIDATED. Will score WRONG on April 14."
     },
     {
       "id": "P001",
       "stock": "SWIGGY",
-      "thesis": "Breaches \u20b9260 by April 25",
+      "thesis": "Breaches ₹260 by April 25",
       "last_price": 281.45,
       "morning_price_april9": 281,
       "confidence_current": 2,
       "confidence_trend": "WEAKENED",
       "check_date": "2026-04-25",
-      "note": "P001 WEAKENED. Needs -7.7% in 16 days. Ceasefire headwind to bearish thesis. Any morning strength to \u20b9280-285 = A001 sell window (exit at still-elevated prices, don't wait for \u20b9260 that may not come)."
+      "note": "P001 WEAKENED. Needs -7.7% in 16 days. Ceasefire headwind to bearish thesis."
     }
   ],
   "pending_outcomes_to_score": [
     {
       "id": "P018",
       "resolution_date": "2026-04-15",
-      "score_condition": "Did TCS close above \u20b92,600?",
-      "current_status": "AWAITING RESULTS \u2014 Q4FY26 results post-market April 9. Score in EOD wrap tonight."
+      "score_condition": "Did TCS close above ₹2,600?",
+      "current_status": "RESULTS BEAT — TCS at ₹2,587.75 on April 9. Expected gap-up April 10 to ₹2,620+. Score RIGHT when TCS first closes above ₹2,600 (likely April 10). Confidence 4★."
+    },
+    {
+      "id": "P021",
+      "resolution_date": "2026-04-16",
+      "score_condition": "Is TCS in ₹2,650-2,700 range by April 16?",
+      "current_status": "NEW — results beat. TCS at ₹2,587.75. Confidence 4★."
     },
     {
       "id": "P013",
       "resolution_date": "2026-04-14",
-      "score_condition": "Did INDIGO fall below \u20b94,100?",
-      "current_status": "INVALIDATED \u2014 Will score WRONG on April 14. IndiGo at \u20b94,614, needs -11%."
+      "score_condition": "Did INDIGO fall below ₹4,100?",
+      "current_status": "WILL SCORE WRONG April 14. IndiGo at ~₹4,530."
     },
     {
       "id": "P012",
       "resolution_date": "2026-04-14",
-      "score_condition": "Did ASTRA MICRO test \u20b91,050-1,080?",
-      "current_status": "ON TRACK \u2014 At \u20b91,019. +3% to target. April 10 talks risk. Set partial profit limit."
+      "score_condition": "Did ASTRA MICRO test ₹1,050-1,080?",
+      "current_status": "ON TRACK — At ₹1,019, +3% to target. April 10 talks are KEY risk. A008 partial profit at ₹1,048-1,052 should be active. Score April 14."
     },
     {
       "id": "P015",
       "resolution_date": "2026-04-15",
-      "score_condition": "Is INDIGO above \u20b94,150 on April 15?",
-      "current_status": "WILL SCORE RIGHT \u2014 IndiGo at \u20b94,614.90, far above \u20b94,150 target."
+      "score_condition": "Is INDIGO above ₹4,150 on April 15?",
+      "current_status": "WILL SCORE RIGHT. IndiGo at ~₹4,530, far above ₹4,150."
     },
     {
       "id": "P016",
       "resolution_date": "2026-04-15",
       "score_condition": "Is Nifty in 23,900-24,100 range on April 15?",
-      "current_status": "TRACKING \u2014 Nifty open at 23,856 (slightly below 23,900 lower bound). April 10 talks outcome will determine."
+      "current_status": "UNCERTAIN — Nifty at 23,775 on April 9. Talks neutral scenario → recovery possible. Talks fail → WRONG. Confidence 2★."
     },
     {
       "id": "P019",
       "resolution_date": "2026-04-15",
-      "score_condition": "Is ADANI PORT in \u20b91,490-1,540 range?",
-      "current_status": "OPEN \u2014 At \u20b91,453.30. +2.5-6% to target."
+      "score_condition": "Is ADANI PORT in ₹1,490-1,540 range?",
+      "current_status": "OPEN — At ~₹1,440-1,453. +3-7% needed. Talks-dependent."
     },
     {
       "id": "P020",
       "resolution_date": "2026-04-15",
-      "score_condition": "Is SETFGOLD in \u20b9120-122 range?",
-      "current_status": "OPEN \u2014 SETFGOLD at \u20b9128.21 this morning (above entry \u20b9125.59). A005 exit window active."
+      "score_condition": "Is SETFGOLD in ₹120-122 range?",
+      "current_status": "ABOVE ENTRY — SETFGOLD at ₹128+. A005 exit window active. Talks neutral/progress → gold falls → P020 tracking well. Talks fail → gold spikes → retained hedge pays off."
     },
     {
       "id": "P001",
       "resolution_date": "2026-04-25",
-      "score_condition": "Did SWIGGY breach \u20b9260 by April 25?",
-      "current_status": "WEAKENED \u2014 At \u20b9281.45. Needs -7.7% in 16 days."
+      "score_condition": "Did SWIGGY breach ₹260 by April 25?",
+      "current_status": "WEAKENED — At ~₹281. Needs -7.7% in 16 days."
     },
     {
       "id": "P004",
       "resolution_date": "2026-04-25",
-      "score_condition": "Did ASTRA MICRO correct to \u20b9850-900?",
-      "current_status": "INVALIDATED \u2014 Will score WRONG on April 25."
+      "score_condition": "Did ASTRA MICRO correct to ₹850-900?",
+      "current_status": "INVALIDATED — Will score WRONG on April 25."
     },
     {
       "id": "P010",
       "resolution_date": "2026-04-29",
-      "score_condition": "Is IRFC in \u20b985-95 range?",
-      "current_status": "OPEN \u2014 20 days remaining. Ceasefire minor positive for infrastructure capex."
+      "score_condition": "Is IRFC in ₹85-95 range?",
+      "current_status": "OPEN — 20 days remaining. Range thesis intact."
     },
     {
       "id": "P005",
       "resolution_date": "2026-05-28",
-      "score_condition": "Is COAL INDIA above \u20b9430 on May 28?",
-      "current_status": "VERY STRONG \u2014 At \u20b9449.20, \u20b919 buffer. Probability RIGHT: ~95%+."
+      "score_condition": "Is COAL INDIA above ₹430 on May 28?",
+      "current_status": "VERY STRONG — At ~₹449, ₹19 buffer. Probability RIGHT: ~95%+."
     },
     {
       "id": "P014",
       "resolution_date": "2026-05-05",
       "score_condition": "Did Nifty IT outperform Nifty by 5-10%?",
-      "current_status": "OPEN \u2014 26 days. TCS results tonight = next signal."
+      "current_status": "STRONG — TCS Q4 results validate IT thesis. Confidence 4★. 26 days remaining."
     },
     {
       "id": "P006",
       "resolution_date": "2026-05-30",
       "score_condition": "Did INDIGO underperform Nifty by 8-15%?",
-      "current_status": "WEAKENED \u2014 IndiGo outperforming Nifty. Q4 results (May) remaining catalyst."
+      "current_status": "WEAKENED — IndiGo outperforming Nifty. Q4 results (May) remaining catalyst."
     },
     {
       "id": "P017",
       "resolution_date": "2026-05-08",
-      "score_condition": "Is MRPL in \u20b9200-210 by May 8?",
-      "current_status": "OPEN \u2014 At \u20b9182.70. +10-15% needed. 29 days. GRM recovery thesis active."
+      "score_condition": "Is MRPL in ₹200-210 by May 8?",
+      "current_status": "OPEN — At ₹182.70. +10-15% needed. 29 days. Brent stable thesis holding."
     }
   ],
   "accuracy_state": {
@@ -254,31 +271,45 @@
     "right": 1,
     "wrong": 2,
     "accuracy_pct": 33.3,
-    "last_wrong": "P007 (SWIGGY), P009 (ASTRA MICRO) \u2014 both April 8, missed ceasefire regime shift",
-    "last_right": "P008 \u2014 Nifty held above \u20b922,000 (April 7)",
+    "last_wrong": "P007 (SWIGGY), P009 (ASTRA MICRO) — both April 8, missed ceasefire regime shift",
+    "last_right": "P008 — Nifty held above ₹22,000 (April 7)",
     "rolling_5": null,
-    "next_batch_scoring": "April 9 EOD: P018 (TCS results). April 14: P012, P013. April 15: P015, P016, P019, P020. Expected: P012 RIGHT, P013 WRONG, P015 RIGHT, P016 UNCERTAIN (talks-dependent), P018 LIKELY RIGHT, P019 UNCERTAIN, P020 UNCERTAIN.",
+    "next_batch_scoring": "April 14: P012 (ASTRA MICRO, likely RIGHT), P013 (INDIGO, WILL SCORE WRONG). April 15: P015 (INDIGO, RIGHT), P016 (UNCERTAIN), P018 (likely RIGHT — TCS beat), P019 (uncertain), P020 (uncertain). Expected: ~4 RIGHT in next batch.",
     "session_forecasting": {
-      "total_sessions": 4,
+      "total_sessions": 3,
       "correct_direction": 1,
-      "accuracy_pct": 50.0,
-      "last_error": "April 8 \u2014 forecast DOWN -0.8%, actual UP +3.78%. Pattern FORECAST_PAT003.",
-      "pending": "April 9 open at 23,856 \u2014 within range, direction PARTIAL. EOD to finalize. April 10: BINARY_VOLATILE (Islamabad talks)."
+      "accuracy_pct": 33.3,
+      "last_error": "April 9 — forecast FLAT_TO_SLIGHTLY_UP (23,800-24,100), actual 23,775 (-0.93%). Root cause: Trump Iran comment. Very near-miss (25 pts below range).",
+      "pending": "April 10: BINARY_VOLATILE_TILTED_BEARISH (20/45/35 bull/base/bear — Islamabad talks + TCS gap-up)."
     },
     "pattern_alerts": [
       {
         "pattern_id": "FORECAST_PAT003",
-        "description": "Geopolitical binary underweighting \u2014 markets price best-case scenarios sooner than consensus forecasts",
+        "description": "Geopolitical binary underweighting — markets price best-case scenarios sooner than consensus forecasts",
         "occurrences": 2,
         "status": "PROMOTED_TO_FRAMEWORK",
         "promoted_date": "2026-04-08"
       },
       {
         "pattern_id": "M012",
-        "description": "Defense sector duration premium \u2014 maximized in 2-6 week ceasefire (managed tension), not instant peace",
+        "description": "Defense sector duration premium — maximized in 2-6 week ceasefire (managed tension), not instant peace",
         "occurrences": 2,
         "status": "PROMOTED_TO_FRAMEWORK",
         "promoted_date": "2026-04-08"
+      },
+      {
+        "pattern_id": "GOLD_HEDGING_PRE_BINARY",
+        "description": "Gold retains/elevates ahead of binary geopolitical events as hedging demand increases — this is a SELL SIGNAL, not a hold signal",
+        "occurrences": 1,
+        "status": "OBSERVING — needs 1 more for framework promotion",
+        "first_seen": "2026-04-09"
+      },
+      {
+        "pattern_id": "POST_CEASEFIRE_HEADLINE_RISK",
+        "description": "On ceasefire Day 2, Trump off-the-cuff comment on Iran caused Nifty -0.93%. The same actor who announces ceasefires can re-introduce doubt informally.",
+        "occurrences": 1,
+        "status": "OBSERVING",
+        "first_seen": "2026-04-09"
       }
     ],
     "framework_updates_implemented": [
@@ -286,7 +317,7 @@
         "factor_id": "FORECAST_PAT003",
         "name": "Geopolitical Binary Underweighting",
         "implemented": "2026-04-08",
-        "rule": "For any 3-outcome binary forecast, include explicit REVERSAL TRIGGER: 'If best-case materializes \u2192 regime flips, index +2-4%'. Do not rely on probability weighting alone."
+        "rule": "For any 3-outcome binary forecast, include explicit REVERSAL TRIGGER: 'If best-case materializes → regime flips, index +2-4%'. Do not rely on probability weighting alone."
       },
       {
         "factor_id": "M012",
@@ -306,71 +337,101 @@
         "factor_id": "GOLD_HEDGING_PRE_BINARY",
         "name": "Gold Pre-Binary-Event Hedging",
         "proposed": "2026-04-09",
-        "observation": "SETFGOLD at \u20b9128.21 on April 9 morning \u2014 UP from \u20b9125.59 close despite ceasefire. Pattern: gold retains / temporarily elevates ahead of binary geopolitical events as hedging demand increases. This is a SELL SIGNAL (exit into the hedge-demand premium) rather than a hold signal."
+        "observation": "SETFGOLD at ₹128.21 on April 9 morning — UP from ₹125.59 close despite ceasefire Day 2. Pattern: gold retains/temporarily elevates ahead of binary geopolitical events. This is a SELL SIGNAL (exit into hedge-demand premium).",
+        "confirmations_needed": 1
+      },
+      {
+        "factor_id": "POST_CEASEFIRE_HEADLINE_RISK",
+        "name": "Post-Ceasefire Headline Ambiguity Risk",
+        "proposed": "2026-04-09",
+        "observation": "Trump's informal comment 'remains tense until real pact' on ceasefire Day 2 caused Nifty -0.93%. Same actor who announced ceasefire can re-introduce doubt. Markets interpret ambiguity as risk. Forecast should add explicit 'headline risk discount' for Days 2-3 of ceasefires.",
+        "confirmations_needed": 1
       }
     ]
+  },
+  "tcs_q4_results_confirmed": {
+    "date": "2026-04-09",
+    "revenue": "₹70,698 crore (+9.64% YoY)",
+    "revenue_vs_est": "BEAT — estimate was ₹69,932 cr (+1.1%)",
+    "pat": "₹13,718 crore (+12.22% YoY)",
+    "pat_vs_est": "SLIGHT MISS — estimate was ₹13,919 cr (-1.4%)",
+    "ebit_margin_fy26": "25.0% full year (+70bps YoY, highest in 4 years)",
+    "deal_tcv_q4": "$12 billion (HIGHEST EVER quarterly TCV)",
+    "deal_tcv_fy26": "$40.7 billion",
+    "ai_revenue": "$2.3 billion annualized (crossed in Q4)",
+    "mega_deals_q4": 3,
+    "mega_deals_fy26": 5,
+    "final_dividend": "₹31/share",
+    "total_fy26_dividend": "₹110/share",
+    "tcs_close_april9": "₹2,587.75 (up 1.09% during trading, before results)",
+    "overall_verdict": "STRONG BEAT — revenue, TCV, dividend all above estimates. PAT very slightly below. Management narrative: AI revenue $2.3B, mega deals, margin improvement. Bullish for P018 (>₹2,600) and P021 (₹2,650-2,700)."
   },
   "priority_checks_for_next_run": [
     {
       "priority": 1,
-      "check": "ISLAMABAD TALKS OUTCOME \u2014 April 10 10:00 AM IST. What happened? Progress, neutral, or failure?",
-      "why": "THIS IS THE REGIME-DEFINING EVENT. Determine new regime label FIRST. Three outcomes: TALKS_PROGRESS \u2192 DE-ESCALATION_DEEPENING, TALKS_NEUTRAL \u2192 DE-ESCALATION_REAL holds, TALKS_FAIL \u2192 WAR_PREMIUM_RETURN. Each requires different action set."
+      "check": "ISLAMABAD TALKS OUTCOME — April 10 10:00 AM IST. Progress, neutral, or failure?",
+      "why": "THIS IS THE #1 REGIME-DEFINING EVENT. Score outcome FIRST. Apply decision tree: TALKS_PROGRESS → DE-ESCALATION_DEEPENING, TALKS_NEUTRAL → DE-ESCALATION_REAL holds, TALKS_FAIL → WAR_PREMIUM_RETURN."
     },
     {
       "priority": 2,
-      "check": "TCS Q4FY26 actual results \u2014 Revenue, EBIT margin, FY27 guidance, deal TCV. Results post-market April 9.",
-      "why": "P018 (TCS >\u20b92,600) scoring depends on this. P014 (Nifty IT outperform) confidence update. Scores must be applied in EOD wrap tonight or morning brief April 10."
+      "check": "TCS opening price April 10 — Did it gap above ₹2,600?",
+      "why": "P018 target ₹2,600. TCS closed ₹2,587.75 on April 9. Strong Q4 results → expected gap-up. If TCS opens above ₹2,600 → P018 threshold crossed → score conditional RIGHT (still needs April 15 close confirmation)."
     },
     {
       "priority": 3,
-      "check": "Brent crude at April 10 open \u2014 $90-97 (de-escalation), above $100 (regime concern), below $88 (demand fear)?",
-      "why": "Brent will react immediately to Islamabad talks outcome. Determines MRPL P017 thesis validity and INDIGO A002 trigger status."
+      "check": "Brent crude April 10 — Reaction to talks outcome?",
+      "why": "TALKS_PROGRESS → Brent falls to $87-91 (MRPL P017 thesis strengthens, INDIGO ATF relief). TALKS_FAIL → Brent spikes to $98-108 (GRM compression returns, A002 INDIGO sell trigger). Current: ~$93.5."
     },
     {
       "priority": 4,
-      "check": "ASTRA MICRO \u2014 did partial profit order at \u20b91,048-1,052 execute? What is stock doing on talks outcome?",
-      "why": "P012 check date April 14. If talks progress \u2192 defense premium unwinds \u2192 monitor for \u20b9980-1,000 support test. If talks fail \u2192 stock may push to \u20b91,100."
+      "check": "ASTRA MICRO — Did partial profit limit at ₹1,048-1,052 execute?",
+      "why": "P012 check date April 14. If talks progress → defense premium unwinds → stock may fall to ₹980-1,000. If partial profit executed, protect gains. If talks fail → stock may push to ₹1,100."
     },
     {
       "priority": 5,
-      "check": "SETFGOLD \u2014 was A005 partial exit executed? What is gold doing post-talks outcome?",
-      "why": "P020 tracks \u20b9120-122 target. If talks progress \u2192 gold falls \u2192 P020 tracking well. If talks fail \u2192 gold spikes \u2192 retained position pays off."
+      "check": "SETFGOLD — Was A005 partial exit executed? Direction post-talks?",
+      "why": "A005 exit window active at ₹128. If talks neutral/progress → gold falls → accelerate exit. If talks fail → gold spikes → retain/hold position. P020 tracks ₹120-122 target."
     },
     {
       "priority": 6,
-      "check": "FII April 8 official flows (published April 9 morning by NSE/NSDL) \u2014 net bought or sold on ceasefire day?",
-      "why": "Confirms whether foreign capital is re-entering India on ceasefire. If FII bought >\u20b94,000 Cr on April 8, de-escalation regime is firmly supported."
+      "check": "FII official April 8 flows (NSE/NSDL) — Net bought or sold on ceasefire day?",
+      "why": "Confirms whether foreign capital is re-entering India. If FII bought >₹4,000 Cr on April 8, de-escalation regime is firmly supported with institutional conviction."
+    },
+    {
+      "priority": 7,
+      "check": "Nifty April 10 close — Recovery from 23,775 or further breakdown?",
+      "why": "P016 (Nifty 23,900-24,100 by April 15) confidence is 2★. Talks neutral scenario → recovery to range possible. Talks fail → P016 WRONG."
     }
   ],
   "questions_to_answer_next_run": [
     "What was the Islamabad talks outcome? Progress, neutral, or breakdown? What is the regime now?",
-    "TCS Q4FY26 actual results \u2014 beat, in-line, or miss on revenue/EBIT/guidance/deal TCV?",
-    "What is Nifty opening April 10? Gap-up (talks progress + TCS beat), flat (neutral), or gap-down (talks fail)?",
-    "ASTRA MICRO \u2014 did the \u20b91,048-1,052 profit order trigger? What is the stock doing?",
-    "SETFGOLD \u2014 executed A005? What is gold/SETFGOLD doing after talks outcome?",
-    "Brent at April 10 open \u2014 stabilizing or spiking on talks outcome?",
-    "FII official April 8 flows \u2014 confirmation of ceasefire buying?"
+    "TCS April 10 opening price — did it gap above ₹2,600? P018 threshold status?",
+    "What is Nifty doing April 10? Gap-up (talks progress + TCS beat), flat (neutral), or gap-down (talks fail)?",
+    "ASTRA MICRO — did the ₹1,048-1,052 partial profit order trigger?",
+    "SETFGOLD — executed A005? What is gold doing after talks outcome?",
+    "Brent at April 10 open — de-escalation zone ($90-96) or spiking on talks failure?",
+    "FII official April 8 flows — confirms ceasefire buying conviction?"
   ],
-  "prompt_for_morning_brief": "You are an expert market intelligence agent. Today is {{DATE}}. THE ISLAMABAD TALKS JUST HAPPENED (April 10). This is the #1 regime-defining event.\n\nFIRST ACTION \u2014 BEFORE ANYTHING ELSE:\n- Search 'Islamabad talks outcome April 10 2026' and 'US Iran peace talks result April 10'\n- Determine which scenario played out: TALKS_PROGRESS (ceasefire extended), TALKS_NEUTRAL (ongoing), TALKS_FAIL (breakdown)\n- Apply the regime decision tree from actions.json market_actions \u2192 MA002\n\nSECOND CRITICAL CHECK:\n- TCS Q4FY26 results were announced April 9 post-market. What were the actual numbers? Revenue vs \u20b969,932 cr est., EBIT margin vs 25.3%, FY27 guidance, deal TCV. Score P018 (TCS >\u20b92,600).\n- What is TCS opening April 10? What is Nifty IT sector doing?\n\nCONTEXT FROM APRIL 9 EOD (expected \u2014 check if EOD wrap updated this):\n- Nifty April 9 likely closed near 23,800-23,950 (consolidation session)\n- SETFGOLD at ~\u20b9128.21 (A005 exit window open \u2014 did user execute?)\n- ASTRA MICRO at ~\u20b91,019 (partial profit limit set at \u20b91,048-1,052?)\n\nREGIME DECISION TREE FOR ISLAMABAD TALKS:\n- TALKS_PROGRESS \u2192 DE-ESCALATION_DEEPENING: Extend ADANI PORT (P019), accelerate SETFGOLD exit. ASTRA MICRO may sell off \u2014 watch for \u20b9980-1,000 support. Nifty gap-up.\n- TALKS_NEUTRAL \u2192 DE-ESCALATION_REAL continues: Maintain all positions. Focus on TCS Q4 results impact. Next review: ceasefire expiry April 22.\n- TALKS_FAIL \u2192 WAR_PREMIUM_RETURN: CRITICAL \u2014 Re-activate A002 (INDIGO SELL trigger). Hold ALL SETFGOLD. ASTRA MICRO new high potential. Nifty gap-down -2-4%. Brent spikes above $100.\n\nPREDICTIONS APPROACHING CHECK DATES:\n- P012 (ASTRA MICRO \u20b91,050-1,080): check April 14 \u2014 4 days. Will talks outcome affect?\n- P013 (INDIGO <\u20b94,100): check April 14 \u2014 WILL SCORE WRONG\n- P015 (INDIGO >\u20b94,150): check April 15 \u2014 WILL SCORE RIGHT\n- P016 (Nifty 23,900-24,100): check April 15 \u2014 talks outcome determines\n- P018 (TCS >\u20b92,600): check April 15 \u2014 TCS results determine\n- P019 (ADANI PORT \u20b91,490-1,540): check April 15 \u2014 talks progress determines\n- P020 (SETFGOLD \u20b9120-122): check April 15 \u2014 talks progress determines\n\nFRAMEWORK: Apply FORECAST_PAT003 (3-outcome binary underweighting) to morning forecast. Apply M012 (defense duration premium) to ASTRA MICRO assessment.\n\nNOTE: Do NOT run any git commands. Files saved to the workspace folder are automatically synced to GitHub by sync.sh (runs every 5 minutes on the host machine).",
-  "prompt_for_eod_wrap": "You are an expert market intelligence agent. Run the end-of-day wrap for {{DATE}}.\n\nFIRST: Read data/next-run-context.json for full context.\n\nCRITICAL CHECKS FOR THIS EOD RUN:\n1. TCS Q4FY26 results announced ~4 PM April 9 \u2014 score P018 (TCS >\u20b92,600). RIGHT or WRONG? What were actual numbers?\n2. Nifty April 9 close \u2014 confirm within range 23,700-24,050? Score April 9 session forecast.\n3. SETFGOLD closing price \u2014 did A005 partial exit get executed? What price?\n4. ASTRA MICRO closing price \u2014 did \u20b91,048-1,052 limit order execute?\n5. FII April 8 official flows \u2014 confirmed net buying or selling?\n6. Islamabad talks setup news \u2014 any pre-signals of April 10 outcome?\n\nSTEPS:\n1. Search: 'TCS Q4 results actual April 9 2026', 'India Nifty close April 9 2026'\n2. Score P018 based on TCS results\n3. Finalize April 9 session forecast score in market-forecasts.json\n4. Update open prediction confidences based on TCS results + session close\n5. Generate new predictions based on TCS outcome (P021 onwards)\n6. Generate April 10 session forecast (BINARY_VOLATILE \u2014 already generated, refine)\n7. Write EOD brief to daily-briefings/2026-04-09-eod.md\n8. Update next-run-context.json (LAST STEP)\n\nKEY NOTE: April 10 morning brief will be entirely dominated by Islamabad talks outcome. The EOD wrap tonight should prepare the full decision tree for each outcome so the morning brief runs fast.\n\nCRITICAL NOTE: Do NOT run git commands. sync.sh handles git add/commit/push automatically every 5 minutes on the host machine. Just save files to the workspace folder.",
-  "session_forecast_accuracy_note": "April 9: OPEN at 23,856 (within range 23,800-24,100 \u2713, direction PARTIAL). Full score EOD. Running: 50% (1/2 scored). April 10 forecast: BINARY_VOLATILE \u2014 Islamabad talks binary.",
+  "prompt_for_morning_brief": "You are an expert market intelligence agent. Today is {{DATE}}. THE ISLAMABAD TALKS HAPPENED TODAY (April 10). This is the #1 regime-defining event.\n\nFIRST ACTION — BEFORE ANYTHING ELSE:\n- Search 'Islamabad talks outcome April 10 2026' and 'US Iran Vance Araghchi Pakistan talks result'\n- Determine which scenario played out: TALKS_PROGRESS (ceasefire extended), TALKS_NEUTRAL (ongoing), TALKS_FAIL (breakdown)\n- Apply regime decision tree:\n  - TALKS_PROGRESS → DE-ESCALATION_DEEPENING: Extend ADANI PORT (P019), accelerate SETFGOLD exit (sell all), ASTRA MICRO defense premium may unwind (watch ₹980-1,000)\n  - TALKS_NEUTRAL → DE-ESCALATION_REAL continues: Maintain positions, focus on TCS reaction, next review April 22\n  - TALKS_FAIL → WAR_PREMIUM_RETURN: Re-activate A002 (INDIGO SELL), hold ALL SETFGOLD, ASTRA MICRO new high potential, Nifty gap-down -2-3%\n\nSECOND CRITICAL CHECK:\n- TCS opening price April 10 — did it gap above ₹2,600? Score P018 status. TCS Q4 results were a STRONG BEAT (revenue ₹70,698 cr, TCV $12B record, ₹31 dividend). Expected gap-up to ₹2,620-2,640.\n- What is Nifty IT doing April 10? P014 (Nifty IT outperform 4W) confidence now 4★.\n\nAPRIL 9 EOD CONTEXT (confirmed):\n- Nifty closed 23,775.10 (-0.93%) — below forecast range. Trump Iran comment dampened optimism.\n- TCS Q4FY26 results (post-market): Revenue ₹70,698 cr (BEAT), PAT ₹13,718 cr, TCV $12B (highest ever), ₹31 dividend, AI $2.3B. Overall: STRONG BEAT.\n- TCS closed ₹2,587.75 before results. P018 (>₹2,600) expected to cross threshold on April 10 open.\n- SETFGOLD at ₹128+ (elevated on talks-hedging). A005 exit window ACTIVE.\n- ASTRA MICRO at ~₹1,019. A008 partial profit at ₹1,048-1,052 should be active.\n- FII April 8 data: provisional estimates ~₹4,500 Cr buying (ceasefire day) — confirm official NSE data.\n\nPREDICTIONS APPROACHING CHECK DATES:\n- P012 (ASTRA MICRO ₹1,050-1,080): check April 14 — 4 days. Talks outcome critical.\n- P013 (INDIGO <₹4,100): check April 14 — WILL SCORE WRONG.\n- P015 (INDIGO >₹4,150): check April 15 — WILL SCORE RIGHT.\n- P016 (Nifty 23,900-24,100): check April 15 — UNCERTAIN, talks-dependent.\n- P018 (TCS >₹2,600): likely crosses threshold today on gap-up. Confidence 4★.\n- P019 (ADANI PORT ₹1,490-1,540): talks-dependent.\n- P020 (SETFGOLD ₹120-122): talks-dependent. A005 exit window active.\n- P021 (TCS ₹2,650-2,700): NEW April 9. Check April 16.\n\nFRAMEWORK REMINDERS:\n- Apply FORECAST_PAT003 (geopolitical binary underweighting): best-case reversal trigger = if talks progress → Nifty +1.5-2%\n- Apply M012 (defense duration premium): talks progress = defense stocks unwind\n- GOLD_HEDGING_PRE_BINARY (pending): gold elevated = SELL signal ahead of binary events\n\nCRITICAL NOTE: Do NOT run git commands. sync.sh handles git add/commit/push automatically every 5 minutes on the host machine.",
+  "prompt_for_eod_wrap": "You are an expert market intelligence agent. Run the end-of-day wrap for {{DATE}}.\n\nFIRST: Read data/next-run-context.json for full context.\n\nCRITICAL CHECKS FOR THIS EOD RUN (April 10):\n1. ISLAMABAD TALKS OUTCOME confirmed — what was the final verdict? Regime now?\n2. Nifty April 10 close — confirm outcome direction matches talks result.\n3. TCS — did it close above ₹2,600? Score P018 (check date April 15 but cross threshold now). And P021 (₹2,650-2,700 target check April 16).\n4. ASTRA MICRO — did partial profit limit at ₹1,048-1,052 execute? Closing price?\n5. SETFGOLD — A005 executed? Closing price? Gold direction post-talks?\n6. ADANI PORT — closing price? P019 on track?\n7. FII April 9 official flows — NSE data.\n8. Score P013 (INDIGO <₹4,100, WILL SCORE WRONG April 14 — confirm invalidated).\n\nSTEPS:\n1. Search: 'Islamabad talks outcome April 10 2026', 'India Nifty close April 10 2026', 'TCS share price April 10 2026'\n2. Determine new regime (DEEPENING / STABLE / WAR_PREMIUM_RETURN)\n3. Score P018 if TCS crossed ₹2,600\n4. Update all open prediction confidences based on talks outcome\n5. Generate April 11 session forecast (weekend off — next trading April 11 is Monday)\n6. Write EOD brief to daily-briefings/2026-04-10-eod.md\n7. Update next-run-context.json (LAST STEP)\n\nNOTE: April 11 is Saturday — likely no NSE trading (confirm special session status). April 14 is next regular trading day (Monday). P012 and P013 check on April 14.\n\nCRITICAL NOTE: Do NOT run git commands. sync.sh handles git add/commit/push automatically every 5 minutes on the host machine.",
+  "session_forecast_accuracy_note": "April 9: WRONG (forecast 23,800-24,100, actual 23,775 -0.93%). Running: 1/3 = 33.3%. April 10 forecast: BINARY_VOLATILE_TILTED_BEARISH (20/45/35 — Islamabad talks + TCS gap-up tailwind).",
   "scheduled_task_definitions": [
     {
       "name": "morning_brief",
       "when": "Weekdays 8:00 AM IST",
-      "prompt_source": "next-run-context.json \u2192 prompt_for_morning_brief",
+      "prompt_source": "next-run-context.json → prompt_for_morning_brief",
       "output": "daily-briefings/YYYY-MM-DD-morning.md + actions.json update + next-run-context.json update"
     },
     {
       "name": "eod_wrap",
       "when": "Weekdays 9:30 PM IST",
-      "prompt_source": "next-run-context.json \u2192 prompt_for_eod_wrap",
+      "prompt_source": "next-run-context.json → prompt_for_eod_wrap",
       "output": "daily-briefings/YYYY-MM-DD-eod.md + predictions-history.json update + accuracy-meta.json update + market-forecasts.json + next-run-context.json update"
     },
     {
       "name": "weekly_intelligence",
       "when": "Sundays 9:00 AM IST",
-      "prompt_source": "next-run-context.json \u2192 prompt_for_weekly_intelligence",
+      "prompt_source": "next-run-context.json → prompt_for_weekly_intelligence",
       "output": "daily-briefings/weekly-YYYY-MM-DD.md + signal-framework.json update + next-run-context.json major update"
     }
   ]

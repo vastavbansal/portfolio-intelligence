@@ -4,18 +4,18 @@
   "last_updated": "2026-04-08",
 
   "summary": {
-    "total_sessions_forecasted": 2,
-    "sessions_with_direction_call": 2,
+    "total_sessions_forecasted": 3,
+    "sessions_with_direction_call": 3,
     "direction_correct": 1,
-    "direction_accuracy_pct": 50.0,
-    "magnitude_within_range": 0,
-    "magnitude_accuracy_pct": 0.0,
+    "direction_accuracy_pct": 33.3,
+    "magnitude_within_range": 1,
+    "magnitude_accuracy_pct": 33.3,
     "rolling_5_direction_pct": null,
     "rolling_10_direction_pct": null,
     "best_streak": 1,
     "current_streak": 0,
     "current_streak_type": "wrong",
-    "note": "April 8 forecast WRONG (predicted BINARY_VOLATILE base DOWN -0.8%, actual UP +3.78%). Root cause: Underestimated deal scenario probability in geopolitical binary. Framework updated with FORECAST_PAT003. April 9 forecast generated: FLAT_TO_SLIGHTLY_UP (consolidation)."
+    "note": "3 sessions fully scored. Apr 7: PARTIAL_CORRECT (direction ✓, magnitude near-miss). Apr 8: WRONG (forecast DOWN -0.8%, actual +3.78% ceasefire euphoria — FORECAST_PAT003). Apr 9: WRONG (forecast FLAT_TO_UP range 23,800-24,100, actual 23,775 close -0.93% — 25 pts below range, Trump Iran statement dampened optimism). Running accuracy: 1 correct / 3 scored = 33.3%. Apr 10 forecast: BINARY_VOLATILE_TILTED_BEARISH (Islamabad talks + TCS gap-up tailwind)."
   },
 
   "sessions": [
@@ -118,6 +118,47 @@
         "brent_forecast": "$90-97 (stabilization after crash)",
         "confidence_stars": 3,
         "key_assumption": "Post-ceasefire profit-booking. TCS Q4 results (April 9). April 10 Islamabad talks. FII flows uncertain."
+      },
+      "actual": {
+        "nifty_open": 23856,
+        "nifty_close": 23775.10,
+        "sensex_close": 76632,
+        "nifty_change_pct": -0.93,
+        "brent_close": "~93.5 (estimated, stable)",
+        "tcs_close": 2587.75,
+        "session_theme": "POST-CEASEFIRE PULLBACK. Trump stated US-Iran situation 'remains tense until a real pact is reached' — dampening optimism. Bloomberg: 'India Rally Shows Signs of Short Covering, Lacks Fresh Buying'. TCS Q4FY26 announced post-market (strong beat — revenue ₹70,698 cr, TCV $12B record, dividend ₹31/share) but Nifty had already closed by then."
+      },
+      "accuracy": {
+        "direction_correct": false,
+        "direction_note": "Forecast FLAT_TO_SLIGHTLY_UP, actual DOWN -0.93%. Direction WRONG.",
+        "magnitude_in_range": false,
+        "magnitude_note": "Forecast range 23,800-24,100. Actual close 23,775.10 — 25 pts BELOW lower bound. Near-miss but outside range.",
+        "brent_correct": true,
+        "brent_note": "Brent estimated stable ~$93-95. Within forecast $90-97 range. CORRECT.",
+        "overall_grade": "WRONG"
+      },
+      "lessons": [
+        "Post-ceasefire sessions are not automatic 'hold gains' sessions — headline risk from the same actor (Trump) can re-introduce doubt same-day",
+        "Bloomberg 'short covering, lacks fresh buying' signal — when a 3.78% rally is driven by short covering rather than fresh institutional longs, the next session is vulnerable to reversal",
+        "Positive post-market results (TCS) can't prevent intraday selling when the regime signal is mixed — the market prices the live headline, not the after-hours good news",
+        "April 9 miss was a very near-miss (25 pts below range) — model calibration is acceptable, but the direction call needs to incorporate 'Trump headline risk' on Iran even during ceasefire days"
+      ],
+      "error_root_cause": "TRUMP_CEASEFIRE_AMBIGUITY — Trump's comment 'remains tense until real pact' on ceasefire Day 2 introduced doubt about the durability of the April 8 rally. Combined with Bloomberg's short-covering warning, market gave back gains without fresh catalysts. TCS results positive but post-market. Magnitude error: -0.73% vs forecast (25 pts below lower bound — very near miss)."
+    },
+    {
+      "session_date": "2026-04-10",
+      "forecast_generated_at": "2026-04-09-eod",
+      "forecast_regime": "DE-ESCALATION_REAL_BINARY_EVENT",
+      "nifty_prev_close": 23775.10,
+      "forecast": {
+        "direction": "BINARY_VOLATILE_TILTED_BEARISH",
+        "base_case_scenario": "Talks Neutral (45%) — ceasefire holds, no breakthrough",
+        "nifty_range_low": 23700,
+        "nifty_range_high": 24000,
+        "nifty_change_pct_forecast": 0.2,
+        "brent_forecast": "$90-96 (stable base)",
+        "confidence_stars": 2,
+        "key_assumption": "Islamabad talks 10AM IST — VP Vance vs FM Araghchi. Nuclear enrichment red line vs Hormuz oversight demand. Talks likely neutral/ongoing. TCS gap-up provides IT floor."
       },
       "actual": {
         "nifty_close": null,

@@ -539,7 +539,8 @@
       "outcome_price": null,
       "outcome_evidence": null,
       "postmortem": null,
-      "scored_on": null
+      "scored_on": null,
+      "confidence_note": "UPGRADED TO 4★ — TCS Q4FY26 results beat on revenue (₹70,698 cr vs ₹69,932 est), record TCV $12B Q4, ₹31 final dividend. TCS closed ₹2,587.75 on April 9 (before results). Expected gap-up on April 10 to ₹2,620-2,640. P018 target ₹2,600 very likely to be breached on April 10 open. With 6 more days to check_date April 15, probability RIGHT: ~90%+. Confidence raised from 3 to 4★."
     },
     {
       "pred_id": "P019",
@@ -597,6 +598,27 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null
+    },
+    {
+      "pred_id": "P021",
+      "horizon": "7D",
+      "date": "2026-04-09",
+      "stock": "TCS",
+      "prediction": "TCS will test ₹2,650-2,700 by April 16 following strong Q4FY26 beat — record $12B quarterly TCV, revenue beat, AI narrative, ₹31 dividend",
+      "entry_price": 2587.75,
+      "target": "2650-2700",
+      "confidence": 4,
+      "category": "HIGH",
+      "reasoning": "TCS Q4FY26 actual results beat analyst estimates on revenue (₹70,698 cr vs ₹69,932 est, +1.1%), announced record quarterly TCV of $12 billion (highest ever), signed 3 mega deals in Q4 (5 in FY26), AI revenue crossed $2.3B annualized, FY26 full-year EBIT margin at 25% (+70bps YoY, highest in 4 years), final dividend ₹31/share (total FY26: ₹110/share). Strong across all key investor metrics. IT sector had already decoupled positively. USD strength tailwind. US earnings season positive context. TCS at ₹2,587.75 — needs +2.4-4.3% to reach target. Confidence 4★ based on multiple positive catalysts converging.",
+      "factors_checked": ["M004", "M005", "T001", "T002", "S003", "M009"],
+      "factors_not_checked": ["T006"],
+      "check_date": "2026-04-16",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "confidence_note": "NEW April 9 EOD. Based on post-market TCS Q4FY26 results beat. P021 check_date April 16 (1 week from results). Risk: April 10 Islamabad talks failure = broad market selloff could cap IT upside temporarily, but TCS-specific catalysts are strong enough to recover within the 7D window."
     }
   ],
   "rca_pattern_log": [

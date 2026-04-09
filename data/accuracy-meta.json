@@ -275,10 +275,10 @@
     }
   ],
   "next_session_accuracy": {
-    "total_sessions": 2,
+    "total_sessions": 3,
     "direction_correct": 1,
     "within_range": 0,
-    "accuracy_pct": 50.0,
+    "accuracy_pct": 33.3,
     "session_log": [
       {
         "date": "2026-04-07",
@@ -295,7 +295,14 @@
       },
       {
         "date": "2026-04-09",
-        "forecast": "FLAT_TO_SLIGHTLY_UP (-0.2% to +0.5%)",
+        "forecast": "FLAT_TO_SLIGHTLY_UP (range 23,800-24,100, -0.2%)",
+        "actual": "DOWN -0.93% (close 23,775.10) \u2014 25 pts BELOW range lower bound",
+        "grade": "WRONG",
+        "root_cause": "Trump statement on Iran 'remains tense until real pact reached' dampened post-ceasefire optimism more than expected. Bloomberg noted India rally showed 'signs of short covering, lacks fresh buying'. TCS Q4 results announced post-market (positive) but not tradeable on April 9. Error magnitude: -0.73% vs forecast (close was 25 pts below lower bound)."
+      },
+      {
+        "date": "2026-04-10",
+        "forecast": "BINARY_VOLATILE_TILTED_BEARISH (20/45/35 bull/base/bear) — Islamabad talks + TCS gap-up",
         "actual": null,
         "grade": "PENDING"
       }

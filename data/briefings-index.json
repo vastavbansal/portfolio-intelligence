@@ -2,6 +2,13 @@
   "briefings": [
     {
       "date": "2026-04-09",
+      "type": "eod",
+      "label": "Thu Apr 9 — EOD Wrap",
+      "file": "daily-briefings/2026-04-09-eod.md",
+      "summary": "Nifty 50 | 23,775.10 | -0.93% (-222 pts). Sensex | 76,632 | -1.20% (-931 pts)"
+    },
+    {
+      "date": "2026-04-09",
       "type": "midday",
       "label": "Thu Apr 9 — Midday Update",
       "file": "daily-briefings/2026-04-09-midday.md",
