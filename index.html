@@ -31,6 +31,12 @@
     .regime-BULLISH{background:linear-gradient(90deg,rgba(34,197,94,0.15),rgba(34,197,94,0.05));}
     .regime-NEUTRAL{background:linear-gradient(90deg,rgba(234,179,8,0.12),rgba(234,179,8,0.03));}
 
+    /* Expandable / details toggle */
+    details summary::-webkit-details-marker{display:none;}
+    details[open] summary .toggle-arrow{transform:rotate(90deg);}
+    details summary .toggle-arrow{display:inline-block;transition:transform 0.2s;}
+    details[open] > summary{border-bottom:1px solid #1e293b;}
+
     /* Urgency colors */
     .urg-CRITICAL{border-left:3px solid #ef4444;}
     .urg-HIGH{border-left:3px solid #f97316;}
@@ -311,6 +317,15 @@
       <div class="card p-4" id="l1ByConfidence"></div>
       <div class="card p-4" id="l1BySector"></div>
     </div>
+  </div>
+
+  <!-- L2 RCA Log -->
+  <div class="mb-8">
+    <div class="flex items-center gap-3 mb-4">
+      <h2 class="font-bold text-base text-slate-200">🔬 L2 — Root Cause Analysis</h2>
+      <span class="text-xs text-slate-500">Why did wrong predictions fail?</span>
+    </div>
+    <div id="l2RcaLog" class="space-y-4"></div>
   </div>
 
   <!-- L3 Trend + Factor Performance -->
@@ -962,7 +977,9 @@ function renderForecastAccuracy() {
       <td class="px-4 py-3 font-semibold ${s.actual?.nifty_change_pct > 0 ? 'text-emerald-400' : s.actual?.nifty_change_pct < 0 ? 'text-red-400' : 'text-slate-400'}">${actualPct}</td>
       <td class="px-4 py-3"><span class="badge ${a.direction_correct === true ? 'badge-RIGHT' : a.direction_correct === false ? 'badge-WRONG' : 'badge-WATCH'}">${a.direction_correct === true ? '✓ RIGHT' : a.direction_correct === false ? '✗ WRONG' : '⏳'}</span></td>
       <td class="px-4 py-3"><span class="badge ${gradeStyle(a.overall_grade)}">${(a.overall_grade || 'PENDING').replace(/_/g,' ')}</span></td>
-      <td class="px-4 py-3 text-slate-400 max-w-xs truncate" title="${lesson}">${lesson}</td>
+      <td class="px-4 py-3 text-slate-400 max-w-xs">
+        ${s.lessons && s.lessons.length > 1 ? `<details><summary class="cursor-pointer hover:text-slate-200 select-none">${s.lessons[0]}</summary><ul class="mt-1.5 space-y-1 list-none">${s.lessons.slice(1).map(l=>`<li class="text-xs text-slate-500 before:content-['•'] before:mr-1">${l}</li>`).join('')}</ul></details>` : `<span title="${lesson}">${lesson}</span>`}
+      </td>
     </tr>`;
   }).join('');
 
@@ -1171,9 +1188,9 @@ function renderPredLogGrid() {
   const counts = {OPEN:0, RIGHT:0, WRONG:0};
   all.forEach(p => { const s = p.status||p.outcome||'OPEN'; if(counts[s]!==undefined) counts[s]++; });
   document.getElementById('predLogBadges').innerHTML =
-    `<span class="badge badge-OPEN">${counts.OPEN} Open</span>` +
-    `<span class="badge badge-RIGHT">${counts.RIGHT} Right</span>` +
-    `<span class="badge badge-WRONG">${counts.WRONG} Wrong</span>`;
+    `<span class="badge badge-OPEN cursor-pointer hover:opacity-80" onclick="filterPredLog('OPEN')">${counts.OPEN} Open</span>` +
+    `<span class="badge badge-RIGHT cursor-pointer hover:opacity-80" onclick="filterPredLog('RIGHT')">${counts.RIGHT} Right</span>` +
+    `<span class="badge badge-WRONG cursor-pointer hover:opacity-80" onclick="filterPredLog('WRONG')">${counts.WRONG} Wrong</span>`;
 
   if (!filtered.length) {
     document.getElementById('predLogGrid').innerHTML = '<div class="text-slate-500 text-sm">No predictions match this filter.</div>';
@@ -1225,15 +1242,21 @@ function renderPredLogGrid() {
       const lesson = rca.lesson || '';
       const pf = rca.proposed_factor || (rca.proposed_factor_id ? {id:rca.proposed_factor_id,name:rca.proposed_factor_name} : null);
       rcaHtml = `
-        <div class="mt-3 bg-red-950/30 border border-red-900/40 rounded-lg p-3 space-y-2">
-          <div class="text-xs font-semibold text-red-400 mb-1">🔬 Root Cause Analysis</div>
-          ${rootCause ? `<div class="text-xs"><span class="text-slate-500">Root cause:</span> <span class="text-slate-200">${rootCause}</span></div>` : ''}
-          ${missing ? `<div class="text-xs"><span class="text-slate-500">Missing factor:</span> <span class="text-slate-200">${missing}</span></div>` : ''}
-          ${signal ? `<div class="text-xs"><span class="text-slate-500">Signal missed:</span> <span class="text-slate-200">${signal}</span></div>` : ''}
-          ${lesson ? `<div class="text-xs bg-yellow-950/40 border border-yellow-900/30 rounded px-2 py-1.5 text-yellow-300">💡 ${lesson}</div>` : ''}
-          ${pf ? `<div class="text-xs text-blue-400">→ Proposed factor: <span class="font-semibold">${pf.id||''} ${pf.name||''}</span></div>` : ''}
-          ${rca.pattern_tag ? `<div class="text-xs text-yellow-500">Pattern: ${rca.pattern_tag}</div>` : ''}
-        </div>`;
+        <details class="mt-3 group">
+          <summary class="cursor-pointer select-none flex items-center gap-2 text-xs font-semibold text-red-400 hover:text-red-300">
+            <span class="toggle-arrow">▶</span>
+            🔬 Root Cause Analysis
+            ${lesson ? `<span class="text-yellow-500 font-normal truncate max-w-xs">— ${lesson.substring(0,60)}${lesson.length>60?'…':''}</span>` : ''}
+          </summary>
+          <div class="mt-2 bg-red-950/30 border border-red-900/40 rounded-lg p-3 space-y-2">
+            ${rootCause ? `<div class="text-xs"><span class="text-slate-500">Root cause:</span> <span class="text-slate-200">${rootCause}</span></div>` : ''}
+            ${missing ? `<div class="text-xs"><span class="text-slate-500">Missing factor:</span> <span class="text-slate-200">${missing}</span></div>` : ''}
+            ${signal ? `<div class="text-xs"><span class="text-slate-500">Signal missed:</span> <span class="text-slate-200">${signal}</span></div>` : ''}
+            ${lesson ? `<div class="text-xs bg-yellow-950/40 border border-yellow-900/30 rounded px-2 py-1.5 text-yellow-300">💡 ${lesson}</div>` : ''}
+            ${pf ? `<div class="text-xs text-blue-400">→ Proposed factor: <span class="font-semibold">${pf.id||''} ${pf.name||''}</span></div>` : ''}
+            ${rca.pattern_tag ? `<div class="text-xs text-yellow-500">Pattern: ${rca.pattern_tag}</div>` : ''}
+          </div>
+        </details>`;
     }
 
     // Day log
@@ -1293,6 +1316,7 @@ function renderIntelligence() {
   renderPredLogGrid();
   renderFullForecasts();
   renderL1Scorecard();
+  renderL2RCA();
   renderL3Trend();
 }
 
@@ -1375,17 +1399,17 @@ function renderL1Scorecard() {
       <div class="text-3xl font-black ${(overall.accuracy_pct||0)>=70?'text-emerald-400':'text-red-400'}">${overall.accuracy_pct||0}%</div>
       <div class="text-xs text-slate-500 mt-1">Overall Accuracy</div>
     </div>
-    <div class="card p-4 text-center">
-      <div class="text-3xl font-black text-emerald-400">${overall.right||0}</div>
-      <div class="text-xs text-slate-500 mt-1">Correct</div>
+    <div class="card p-4 text-center cursor-pointer hover:bg-emerald-950/30 hover:border-emerald-800/50 border border-transparent transition group" onclick="filterPredLog('RIGHT');document.getElementById('predLogGrid').scrollIntoView({behavior:'smooth',block:'start'})" title="Click to see correct predictions">
+      <div class="text-3xl font-black text-emerald-400 group-hover:scale-110 transition-transform inline-block">${overall.right||0}</div>
+      <div class="text-xs text-slate-500 mt-1">Correct <span class="text-slate-700 group-hover:text-emerald-700">↓ view</span></div>
     </div>
-    <div class="card p-4 text-center">
-      <div class="text-3xl font-black text-red-400">${overall.wrong||0}</div>
-      <div class="text-xs text-slate-500 mt-1">Wrong</div>
+    <div class="card p-4 text-center cursor-pointer hover:bg-red-950/30 hover:border-red-800/50 border border-transparent transition group" onclick="filterPredLog('WRONG');document.getElementById('predLogGrid').scrollIntoView({behavior:'smooth',block:'start'})" title="Click to see wrong predictions">
+      <div class="text-3xl font-black text-red-400 group-hover:scale-110 transition-transform inline-block">${overall.wrong||0}</div>
+      <div class="text-xs text-slate-500 mt-1">Wrong <span class="text-slate-700 group-hover:text-red-700">↓ view</span></div>
     </div>
-    <div class="card p-4 text-center">
-      <div class="text-3xl font-black text-blue-400">${overall.scored||overall.total_scored||overall.total||0}</div>
-      <div class="text-xs text-slate-500 mt-1">Total Scored</div>
+    <div class="card p-4 text-center cursor-pointer hover:bg-slate-800/50 border border-transparent transition group" onclick="filterPredLog('ALL');document.getElementById('predLogGrid').scrollIntoView({behavior:'smooth',block:'start'})" title="Click to see all scored predictions">
+      <div class="text-3xl font-black text-blue-400 group-hover:scale-110 transition-transform inline-block">${overall.scored||overall.total_scored||overall.total||0}</div>
+      <div class="text-xs text-slate-500 mt-1">Total Scored <span class="text-slate-700 group-hover:text-blue-700">↓ view</span></div>
     </div>
   `;
 
@@ -1426,31 +1450,32 @@ function renderL2RCA() {
     const signalMissed = r.signal_missed || r.missing_signal || '—';
     const lesson = r.lesson || '—';
     const severity = r.severity || 'MEDIUM';
-    // proposed_factor may be inline object or separate fields
     const pf = r.proposed_factor || (r.proposed_factor_id ? {id:r.proposed_factor_id, name:r.proposed_factor_name, causal_explanation:''} : null);
     return `
-    <div class="card p-5">
-      <div class="flex items-start justify-between gap-3 mb-4">
-        <div class="flex items-center gap-2 flex-wrap">
-          <span class="badge badge-WRONG">WRONG</span>
-          <span class="font-bold text-sm text-slate-100">${predId} — ${r.stock||''}</span>
-          <span class="text-xs text-slate-500">${r.date||''}</span>
+    <details class="card group">
+      <summary class="p-4 cursor-pointer select-none flex items-center gap-3 hover:bg-slate-800/40 rounded-xl transition">
+        <span class="toggle-arrow text-slate-500">▶</span>
+        <span class="badge badge-WRONG">WRONG</span>
+        <span class="font-bold text-sm text-slate-100">${predId} — ${r.stock||''}</span>
+        <span class="text-xs text-slate-500">${r.date||''}</span>
+        <span class="ml-auto text-xs text-slate-500 truncate max-w-xs hidden sm:block">${lesson !== '—' ? lesson.substring(0,80)+'…' : ''}</span>
+        <span class="badge ${severity==='HIGH'?'badge-HIGH':'badge-MEDIUM'} shrink-0">${severity}</span>
+      </summary>
+      <div class="px-5 pb-5 space-y-4">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div><div class="text-xs text-slate-500 mb-1">Root Cause</div><div class="text-sm text-slate-200">${rootCause}</div></div>
+          <div><div class="text-xs text-slate-500 mb-1">Missing Factor</div><div class="text-sm text-slate-200">${missingFactor}</div></div>
+          <div><div class="text-xs text-slate-500 mb-1">Signal Missed</div><div class="text-sm text-slate-200">${signalMissed}</div></div>
+          <div><div class="text-xs text-slate-500 mb-1">Lesson</div><div class="text-sm text-yellow-300">💡 ${lesson}</div></div>
         </div>
-        <span class="badge ${severity==='HIGH'?'badge-HIGH':'badge-MEDIUM'}">${severity}</span>
+        ${pf ? `
+          <div class="bg-blue-950/40 border border-blue-900/40 rounded-lg p-3">
+            <div class="text-xs font-semibold text-blue-400 mb-1">Proposed Factor: ${pf.id||''} — ${pf.name||''}</div>
+            ${pf.causal_explanation ? `<div class="text-xs text-slate-300">${pf.causal_explanation}</div>` : ''}
+          </div>` : ''}
+        ${r.pattern_tag ? `<div class="text-xs text-yellow-500">Pattern tag: ${r.pattern_tag}</div>` : ''}
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-        <div><div class="text-xs text-slate-500 mb-1">Root Cause</div><div class="text-sm text-slate-200">${rootCause}</div></div>
-        <div><div class="text-xs text-slate-500 mb-1">Missing Factor</div><div class="text-sm text-slate-200">${missingFactor}</div></div>
-        <div><div class="text-xs text-slate-500 mb-1">Signal Missed</div><div class="text-sm text-slate-200">${signalMissed}</div></div>
-        <div><div class="text-xs text-slate-500 mb-1">Lesson</div><div class="text-sm text-slate-200">${lesson}</div></div>
-      </div>
-      ${pf ? `
-        <div class="bg-blue-950/40 border border-blue-900/40 rounded-lg p-3">
-          <div class="text-xs font-semibold text-blue-400 mb-1">Proposed Factor: ${pf.id||''} — ${pf.name||''}</div>
-          ${pf.causal_explanation ? `<div class="text-xs text-slate-300">${pf.causal_explanation}</div>` : ''}
-        </div>` : ''}
-      ${r.pattern_tag ? `<div class="text-xs text-yellow-500 mt-2">Pattern tag: ${r.pattern_tag}</div>` : ''}
-    </div>`;
+    </details>`;
   }).join('');
 }
 
