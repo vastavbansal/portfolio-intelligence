@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-04-09",
+      "type": "morning",
+      "label": "Thu Apr 9 — Morning Briefing",
+      "file": "daily-briefings/2026-04-09-morning.md",
+      "summary": "The DE-ESCALATION_REAL regime from April 8 is STABLE. Nifty opened cautiously at ~23,856 (base case consolidation playing out afte. Brent: ~$93.76 (de-escalation confirmed, $90-97 zone)"
+    },
+    {
       "date": "2026-04-08",
       "type": "eod",
       "label": "Wed Apr 8 — EOD Wrap",

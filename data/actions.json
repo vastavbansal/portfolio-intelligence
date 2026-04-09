@@ -1,21 +1,21 @@
 {
   "schema_version": "1.0",
   "description": "Current actionable recommendations. Generated each session based on signals, predictions, and market forecasts. Accuracy is tracked to build confidence over time.",
-  "generated_at": "2026-04-08",
-  "valid_through": "2026-04-09",
+  "generated_at": "2026-04-09",
+  "valid_through": "2026-04-10",
   "market_regime": {
-    "label": "DE-ESCALATION_REAL",
-    "dominant_risk": "April 10 Islamabad talks — ceasefire is 2-week truce (April 8-22), not permanent peace. Talks failure = war premium returns and Nifty could give back 2-4%.",
-    "key_risk": "April 10 Islamabad talks could fail, collapsing the 2-week ceasefire and reversing today's rally.",
-    "crude_last": 93.13,
+    "label": "DE-ESCALATION_REAL_STABLE",
+    "dominant_risk": "April 10 Islamabad talks (10 AM IST) — both US and Iran confirmed participation. Outcome tomorrow is regime-defining. TALKS_FAIL = WAR_PREMIUM_RETURN and Nifty -2-4%.",
+    "key_risk": "Islamabad talks April 10 outcome + TCS Q4FY26 post-market results today (IT direction pivot).",
+    "crude_last": 93.76,
     "crude_threshold_for_regime_change": 100,
-    "nifty_last": 23997.35,
-    "nifty_key_support": 23800,
+    "nifty_last": 23856,
+    "nifty_key_support": 23700,
     "nifty_key_resistance": 24200,
+    "crude_level": "DE-ESCALATION_ZONE ($90-97)",
     "regime_since": "2026-04-08T05:30:00",
-    "regime_note": "CONFIRMED EOD April 8: Nifty +3.78% to 23,997.35 (best day in 11 months). Brent -17.55% to $93.13. RBI kept policy repo rate unchanged (additional tailwind). Top sectors: Aviation +8-10%, Auto +7-9%, Paints. IndiGo hit upper circuit at ₹4,614.90. TCS Q4FY26 results tomorrow (April 9) — IT catalyst on deck. Next binary event: April 10 Islamabad talks.",
-    "session_forecast_accuracy_note": "April 8 forecast WRONG (predicted DOWN -0.8%, actual UP +3.78%). FORECAST_PAT003 identified and promoted to framework.",
-    "last_updated_by": "eod_wrap_2026-04-08",
+    "regime_note": "Day 2 of ceasefire — regime unchanged from April 8. Nifty opened cautiously at ~23,856 after +3.78% rally (base case consolidation playing out). GIFT Nifty slightly in red at pre-open. Brent at ~$93.76 — stable in $90-97 de-escalation zone. TCS Q4FY26 results expected post-market today (~3:40-4:20 PM IST): estimates are Revenue ₹69,932 cr (+8% YoY), PAT ₹13,919 cr (+14% YoY), EBIT ~25.3-25.4%. Islamabad talks confirmed April 10 — both US and Iran have confirmed participation, Pakistan hosting. No breakdowns or surprise headlines overnight. Regime STABLE.",
+    "last_updated_by": "morning_brief_2026-04-09",
     "next_binary_event": "2026-04-10T04:30:00Z (Islamabad talks, 10:00 AM IST)"
   },
   "actions": [
@@ -25,23 +25,23 @@
       "urgency": "LOW",
       "stock": "SWIGGY",
       "broker": "ICICI",
-      "instruction": "DOWNGRADED from HIGH to LOW urgency. Ceasefire relief has SWIGGY at ₹281.45. A001 sell window (₹278-285) has been hit during April 8 relief rally — if you haven't sold yet, monitor on April 9. Any morning strength to ₹280-285 is still a valid partial sell opportunity. The Q4 results May 8 remain the structural catalyst.",
-      "rationale_short": "P007 scored WRONG on ceasefire, but SWIGGY still has no profitability catalyst. A001 target range (₹278-285) was reached intraday on April 8. If hadn't exited, April 9 may offer another window.",
-      "confidence": 3,
-      "confidence_basis": "Ceasefire gave A001 the sell window. P001 bearish thesis (₹260 breach) still open but requires 7.7% drop from current ₹281. Confidence reduced.",
+      "instruction": "WATCH — LOW urgency. SWIGGY at ~₹281.45 (April 8 close). A001 sell window (₹278-285) remains valid. Any session strength to ₹280-285 is a partial sell opportunity. No stock-specific catalyst until Q4 results (May 8). Regime is risk-on (ceasefire) which caps downside for now. If April 10 Islamabad talks fail → Swiggy could see modest selloff as market goes risk-off. P001 bearish thesis (₹260 breach by April 25) remains open but weakened — confidence 2.",
+      "rationale_short": "P001 target (₹260) requires -7.7% fall from ₹281. Ceasefire headwind to bearish thesis. Sell window ₹278-285 still valid intraday.",
+      "confidence": 2,
+      "confidence_basis": "Ceasefire reduces bearish conviction. ₹260 remains structural risk but timing is compressed to 16 days. Confidence maintained at 2.",
       "signals_triggered": ["T001","M003"],
       "signal_details": {
-        "T001": "₹260 52-week support held. Now ₹281 — modest bounce on relief.",
-        "M003": "April 7 FII sold ₹8,692 Cr. April 8 FII flows pending — likely net positive on ceasefire."
+        "T001": "₹260 52-week support — SWIGGY needs -7.7% to breach. Ceasefire gives partial relief.",
+        "M003": "FII April 8 provisional flows positive on ceasefire. Reduces immediate selling pressure."
       },
       "prediction_support": ["P001"],
-      "pnl_impact_if_right": "Exit at ₹280-285 protects against P001 downside to ₹260",
-      "pnl_impact_if_wrong": "If SWIGGY rallies to ₹300+ on Q4 surprise, missed upside",
-      "risk": "Q4 FY26 results May 8 — any positive surprise could trigger sharp reversal",
-      "valid_until": "2026-04-10",
+      "pnl_impact_if_right": "Exit at ₹278-285 protects against P001 downside to ₹260",
+      "pnl_impact_if_wrong": "If SWIGGY rallies to ₹295+ on market continuation, missed upside",
+      "risk": "April 10 talks failure = risk-off, SWIGGY could see broader market drag",
+      "valid_until": "2026-04-15",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     },
     {
       "action_id": "A002",
@@ -49,22 +49,22 @@
       "urgency": "LOW",
       "stock": "INDIGO",
       "broker": "GROWW",
-      "instruction": "DOWNGRADED from CRITICAL to LOW. Ceasefire has removed the acute ATF cost risk scenario. IndiGo closed at ₹4,614.90 (+8.11%) — DO NOT sell at these levels. The sell trigger (Brent >$115 OR strikes) is now INACTIVE. Next action review: April 10 Islamabad talks. If talks fail → war premium returns → Brent could spike → re-evaluate A002 sell trigger. If talks progress → hold for Q4 results (May) for next catalyst.",
-      "rationale_short": "INDIGO reversed dramatically on ceasefire. P013 thesis (₹4,100) invalidated. P015 (stabilize above ₹4,150) is tracking well above target. Hold and monitor April 10 talks.",
+      "instruction": "HOLD — LOW urgency. IndiGo at ₹4,614.90 (April 8 close). Sell trigger (Brent >$115 OR strikes) is INACTIVE. Do NOT sell. Consolidation session expected today. Key event: April 10 Islamabad talks. IF TALKS FAIL → Brent could spike → re-evaluate A002 sell trigger for Brent >$100. IF TALKS NEUTRAL → hold through Q4FY26 results (May) as next catalyst. Next review April 11 (post-talks session).",
+      "rationale_short": "IndiGo benefiting from ATF cost relief (Brent $93.76). P013 (₹4,100 target) is invalidated. P015 (>₹4,150) is far in the money. Hold for Q4 results May catalyst.",
       "confidence": 3,
-      "confidence_basis": "Regime change from WAR_PREMIUM to DE-ESCALATION removes immediate downside. Q4FY26 margin damage still a medium-term headwind (results May).",
+      "confidence_basis": "Regime de-escalation removes immediate sell trigger. Talks outcome April 10 is the next binary for INDIGO.",
       "signals_triggered": ["M001"],
       "signal_details": {
-        "M001": "Brent at $93.13 — well below ₹110 that was causing ATF concern. ATF cost relief is real."
+        "M001": "Brent at $93.76 — well below $115 sell trigger. ATF cost relief is real and durable."
       },
-      "prediction_support": ["P015","P006"],
-      "pnl_impact_if_right": "Holding INDIGO through earnings (May) — ceasefire = partial recovery in stock",
-      "pnl_impact_if_wrong": "April 10 talks fail → Brent spikes → ATF cost concern returns → INDIGO could give back 3-5%",
-      "risk": "Islamabad talks outcome (April 10) is the key binary for INDIGO now",
+      "prediction_support": ["P15","P006"],
+      "pnl_impact_if_right": "Holding INDIGO to May Q4 results. P015 already scoring RIGHT.",
+      "pnl_impact_if_wrong": "April 10 talks fail → Brent spikes → ATF concern returns → INDIGO gives back 3-5%",
+      "risk": "Islamabad talks failure = Brent spike = INDIGO headwind",
       "valid_until": "2026-04-15",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     },
     {
       "action_id": "A003",
@@ -72,23 +72,23 @@
       "urgency": "LOW",
       "stock": "COAL INDIA",
       "broker": "ICICI",
-      "instruction": "HOLD — thesis strengthened. Coal India at ~₹449.20. P005 (>₹430) is ON TRACK with ₹19 buffer. Ceasefire + Brent crash to $93.13 actually INCREASES coal's relative cost advantage vs crude. No action needed.",
-      "rationale_short": "P005 Coal India thesis is now at confidence 4★. Ceasefire strengthens the crude-coal cost differential. Domestic demand insulation intact.",
+      "instruction": "HOLD — thesis strongly on track. Coal India at ~₹449.20. P005 (>₹430 by May 28) has ₹19 buffer with 49 days remaining. Ceasefire + Brent $93.76 maintains coal's relative cost advantage vs crude. No action needed. DII buying supports PSU floor. Review only if closes below ₹440.",
+      "rationale_short": "P005 Coal India thesis at confidence 4★. ₹449.20 vs ₹430 target — very safe with 49 days remaining.",
       "confidence": 4,
-      "confidence_basis": "P005 confirming ahead of schedule. ₹449.20 vs ₹430 target with 50 days remaining.",
+      "confidence_basis": "P005 tracking comfortably. ₹19 buffer above target. Domestic demand insulation intact.",
       "signals_triggered": ["S008","M006"],
       "signal_details": {
         "S008": "Coal e-auction premiums elevated — power sector demand strong",
         "M006": "PSU rerating theme — Coal India dividend yield provides price floor"
       },
       "prediction_support": ["P005"],
-      "pnl_impact_if_right": "P005 confirms >₹430 by May 28",
-      "pnl_impact_if_wrong": "Broad market selloff could drag PSU stocks",
-      "risk": "Ceasefire reduces crude-coal differential slightly; if Brent stabilizes $90-95, coal's cost advantage narrows but doesn't disappear",
+      "pnl_impact_if_right": "P005 confirms >₹430 by May 28 — very likely",
+      "pnl_impact_if_wrong": "Broad market selloff on talks failure could drag -2% but ₹430 floor intact",
+      "risk": "Ceasefire reduces crude-coal differential slightly. But coal's cost advantage remains.",
       "valid_until": "2026-05-28",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     },
     {
       "action_id": "A004",
@@ -96,10 +96,10 @@
       "urgency": "MEDIUM",
       "stock": "ADANI PORT",
       "broker": "ICICI",
-      "instruction": "UPGRADED from WATCH to HOLD. Hormuz safe passage protocol confirmed in ceasefire terms. ADANI PORT at ₹1,453.30. P019 (test ₹1,490-1,540) is new bullish thesis. Don't sell — Hormuz reopening is a direct revenue catalyst. Monitor April 10 talks for confirmation of extended ceasefire.",
-      "rationale_short": "Hormuz safe passage = direct ADANI PORT revenue catalyst. Stock already at ₹1,453 (+from ₹1,381 pre-ceasefire). New thesis P019 predicts ₹1,490-1,540 in 7D.",
+      "instruction": "HOLD — Hormuz safe passage protocol CONFIRMED and holding. ADANI PORT at ₹1,453.30 (April 8 close). P019 (test ₹1,490-1,540) is the active bull thesis. Don't sell — Hormuz reopening is a direct revenue catalyst. April 10 Islamabad talks progress = additional upside catalyst. If talks fail → Hormuz concern returns → trim 25-30%.",
+      "rationale_short": "Hormuz safe passage = direct ADANI PORT revenue catalyst. Stock at ₹1,453, target ₹1,490-1,540 in 7D.",
       "confidence": 3,
-      "confidence_basis": "P019 thesis is multi-factor. April 10 talks are the key risk event.",
+      "confidence_basis": "P019 thesis is multi-factor. April 10 talks are the key risk. Ceasefire day 2 = holding.",
       "signals_triggered": ["M001","S005"],
       "signal_details": {
         "M001": "Hormuz safe passage protocol confirmed — shipping lanes open",
@@ -108,11 +108,11 @@
       "prediction_support": ["P019"],
       "pnl_impact_if_right": "P019 confirms ₹1,490-1,540 by April 15",
       "pnl_impact_if_wrong": "April 10 talks fail → Hormuz concern returns → give back gains",
-      "risk": "April 10 Islamabad talks — if ceasefire collapses, Hormuz concern returns",
+      "risk": "April 10 Islamabad talks outcome",
       "valid_until": "2026-04-15",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     },
     {
       "action_id": "A005",
@@ -120,23 +120,23 @@
       "urgency": "HIGH",
       "stock": "SETFGOLD",
       "broker": "GROWW",
-      "instruction": "EXIT TRIGGER ACTIVATED: (1) Ceasefire confirmed ✓ (2) Hormuz safe passage protocol ✓ (3) Gold war premium compression underway. Review position size immediately. Original exit trigger was 'ceasefire + Hormuz reopened + gold <$5,100/oz'. First two conditions are MET. If gold is at/below $5,100/oz (check April 9 morning), CONSIDER SELLING 50-75% of SETFGOLD position. Keep 25-30% as residual hedge for April 10 talks risk. P020 predicts SETFGOLD corrects to ₹120-122 (from ₹125.59) within 7 days. This is your exit window.",
-      "rationale_short": "War hedge exit trigger activated by ceasefire. Gold war premium will compress over next 7-14 days. P020 provides the prediction framework for the timing.",
+      "instruction": "EXIT TRIGGER REMAINS ACTIVE. SETFGOLD at ~₹128.21 (April 9 morning — gold holding slightly elevated vs April 8 close of ₹125.59). Conditions still met: (1) Ceasefire confirmed ✓ (2) Hormuz safe passage ✓. SELL 50-75% of SETFGOLD position TODAY if you haven't already. Note: gold is slightly elevated today (~₹128) possibly on pre-April 10 talks risk hedging. This is YOUR window — the premium compression will accelerate if April 10 talks show progress. RETAIN 25-30% as hedge for April 10 binary. P020 target: ₹120-122 within 7 days. Do NOT wait for Monday — exit before April 10 to lock in the war premium.",
+      "rationale_short": "A005 exit trigger activated April 8. Gold slightly elevated at ₹128.21 on April 9 morning (talks-hedge premium). This is the exit window. Sell 50-75% NOW.",
       "confidence": 3,
-      "confidence_basis": "Historical: gold corrects 3-7% within 1 week of major ceasefire events. P020 target ₹120-122 (4-4.5% downside). Keep partial position for April 10 binary.",
+      "confidence_basis": "Ceasefire + Hormuz = war premium compression underway. Gold elevated slightly on talks uncertainty — use this as exit opportunity, not a reason to hold.",
       "signals_triggered": ["M008","M001"],
       "signal_details": {
-        "M008": "Gold war premium being compressed by ceasefire announcement",
-        "M001": "Brent crashed to $93.13 — geopolitical risk premium removed from commodities broadly"
+        "M008": "Gold war premium partially compressed but remaining elevated on April 10 talks uncertainty — this is the EXIT window.",
+        "M001": "Brent stable $93.76 — geopolitical risk premium is NOT re-inflating."
       },
       "prediction_support": ["P020"],
-      "pnl_impact_if_right": "Exiting SETFGOLD near peak protects against 4-7% correction as war premium unwinds",
-      "pnl_impact_if_wrong": "April 10 talks fail → ceasefire collapses → gold rebounds → missed upside on the 25-30% retained",
-      "risk": "Islamabad talks failure = gold rebounds. Retain partial position as hedge.",
+      "pnl_impact_if_right": "Exiting near current ₹128 (above A005 trigger zone ₹125) = better than expected exit. P020 predicts ₹120-122 in 7D.",
+      "pnl_impact_if_wrong": "April 10 talks fail → ceasefire collapses → gold rebounds → retained 25-30% covers upside",
+      "risk": "Islamabad talks failure = gold rebounds. Retain 25-30% as hedge.",
       "valid_until": "2026-04-15",
       "status": "ACTION_REQUIRED",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     },
     {
       "action_id": "A006",
@@ -144,10 +144,10 @@
       "urgency": "MEDIUM",
       "stock": "IREDA",
       "broker": "GROWW",
-      "instruction": "Watch — earnings April 16. Ceasefire improves fiscal outlook (lower crude import bill = more government capex room). If earnings show FY26 loan book >₹70,000 Cr, consider adding. April 9-15: No action. April 16: Earnings decision day.",
-      "rationale_short": "IREDA earnings April 16 remains the catalyst. Ceasefire is a modest positive (fiscal room for capex). No action before April 16.",
+      "instruction": "WATCH — earnings April 16 is the catalyst. No action before April 16. Ceasefire improves government capex outlook (lower crude import bill = fiscal room). If April 9-15 shows positioning buildup → note it. April 16 earnings decision: if FY26 loan book >₹70,000 Cr → consider adding.",
+      "rationale_short": "IREDA earnings April 16 — no action before then. Ceasefire = modest positive for capex environment.",
       "confidence": 3,
-      "confidence_basis": "Earnings catalyst April 16. Ceasefire slightly improves the capex environment.",
+      "confidence_basis": "Earnings April 16 is the catalyst. Ceasefire is a modest positive.",
       "signals_triggered": [],
       "signal_details": {},
       "prediction_support": [],
@@ -157,7 +157,7 @@
       "valid_until": "2026-04-16",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     },
     {
       "action_id": "A007",
@@ -165,22 +165,22 @@
       "urgency": "LOW",
       "stock": "MRPL",
       "broker": "ICICI",
-      "instruction": "REVERSED from WATCH (bearish) to HOLD_FOR_RECOVERY (bullish). P002 bearish thesis (₹160-170) is INVALIDATED by Brent crashing to $93.13. New thesis P017 targets ₹200-210 in 4 weeks on GRM recovery. At ₹182.70, MRPL has meaningful upside if Brent stabilizes $95-105. Do not sell — hold for GRM recovery play. Next review: April 15.",
-      "rationale_short": "MRPL thesis completely reversed. P002 (bearish) invalidated. P017 (₹200-210 GRM recovery) is the new active thesis. Ceasefire + Brent at $93 = GRM recovery runway.",
+      "instruction": "HOLD — GRM recovery thesis active. MRPL at ₹182.70 (April 8 close). P002 bearish thesis is INVALIDATED. New thesis P017 targets ₹200-210 by May 8 on Brent stabilization $93-105 = GRM recovery runway. Brent at $93.76 today = thesis confirmed. Do not sell. Next review April 15. Risk: April 10 talks failure → Brent spike above $100 → reassess.",
+      "rationale_short": "P017 GRM recovery thesis is active. Brent stable at $93.76. MRPL entry ₹182.70, target ₹200-210 in 4W.",
       "confidence": 3,
-      "confidence_basis": "P017 multi-factor: Brent crash, GRM recovery, Q1FY27 guidance refresh. Confidence 3.",
+      "confidence_basis": "Brent staying <$100. MRPL at ₹182.70 with +10-15% to target ₹200-210. 29 days remaining.",
       "signals_triggered": ["M001"],
       "signal_details": {
-        "M001": "Brent at $93.13 — well below $100. GRM recovery thesis is now active."
+        "M001": "Brent at $93.76 — GRM recovery thesis confirmed."
       },
       "prediction_support": ["P017"],
-      "pnl_impact_if_right": "MRPL recovers to ₹200-210 (P017 target) by May 8",
-      "pnl_impact_if_wrong": "Brent spikes back above $100 → GRM compression returns → downside to ₹170",
+      "pnl_impact_if_right": "MRPL recovers to ₹200-210 by May 8",
+      "pnl_impact_if_wrong": "April 10 talks fail → Brent rebounds above $100 → GRM compression returns",
       "risk": "Islamabad talks failure → Brent rebounds → GRM thesis weakens",
       "valid_until": "2026-05-08",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     },
     {
       "action_id": "A008",
@@ -188,78 +188,78 @@
       "urgency": "HIGH",
       "stock": "ASTRA MICRO",
       "broker": "ICICI",
-      "instruction": "ASTRA MICRO at ₹1,019.45 — approaching P012 target of ₹1,050-1,080. Do NOT buy more at this level. Consider PARTIAL PROFIT-TAKING on 25-35% of position if stock approaches ₹1,050. War premium is extended by 2-week ceasefire (good for defense) but April 10 Islamabad talks are a risk event. If talks show progress toward broader deal, defense premium could unwind quickly. Monitor daily.",
-      "rationale_short": "P012 target ₹1,050-1,080 is within reach. Partial profit-taking is prudent as war premium reaches maximum in 2-week managed tension scenario. April 10 is the key risk event for defense sector.",
+      "instruction": "ASTRA MICRO at ₹1,019.45 (April 8 close) — P012 target ₹1,050-1,080 is only +3-6% away. CONSIDER PARTIAL PROFIT-TAKING (25-35% of position) if stock approaches ₹1,050 TODAY or tomorrow. CRITICAL NOTE: April 10 Islamabad talks are the key risk for defense premium. If talks show progress → defense stocks could unwind 5-10% quickly. Use today's session to set a limit sell order at ₹1,048-1,052 for 25-35% of position. This locks in significant profit (cost ~₹565). Defense sector duration premium (M012) is at maximum in current 2-week managed tension scenario.",
+      "rationale_short": "P012 target within reach. Set partial profit order at ₹1,048-1,052 BEFORE April 10 talks to protect against defense premium unwind.",
       "confidence": 4,
-      "confidence_basis": "P012 is tracking. ₹1,019.45 → ₹1,050-1,080 is +3-6% away. Defense premium maximized in current scenario (M012).",
+      "confidence_basis": "P012 tracking at confidence 4★. ₹1,019.45 → ₹1,050 is +3%. April 10 talks are the timing risk.",
       "signals_triggered": ["T001","S003"],
       "signal_details": {
-        "T001": "₹1,019.45 — approaching ₹1,050-1,080 resistance zone",
-        "S003": "Defense electronics thrive in 2-week managed tension scenario (M012)"
+        "T001": "₹1,019.45 → ₹1,050-1,080 resistance zone",
+        "S003": "Defense electronics premium maximized in 2-week managed tension (M012). April 10 talks = key risk."
       },
       "prediction_support": ["P012"],
-      "pnl_impact_if_right": "Partial exit at ₹1,050+ locks in significant gain (cost ~₹565)",
-      "pnl_impact_if_wrong": "Ceasefire extends → war premium extends further → stock tests ₹1,100+",
-      "risk": "April 10 talks progress could unwind defense premium quickly",
+      "pnl_impact_if_right": "Partial exit at ₹1,050+ locks in +86% gain on cost (~₹565). Remaining position for P012 full target ₹1,080.",
+      "pnl_impact_if_wrong": "Ceasefire extends defense premium → stock tests ₹1,100+. Only lose the upside on 25-35% portion.",
+      "risk": "April 10 talks progress = defense premium unwind. THIS is the reason to act BEFORE tomorrow.",
       "valid_until": "2026-04-14",
       "status": "OPEN",
       "created_at": "2026-04-08",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     }
   ],
   "market_actions": [
     {
       "action_id": "MA001",
       "type": "WATCH_INDEX",
-      "urgency": "HIGH",
+      "urgency": "MEDIUM",
       "index": "BRENT CRUDE",
-      "instruction": "Brent closed at $93.13 on April 8 (down 17.55%). REGIME CHANGED from WAR_PREMIUM to RELIEF. New watch levels: If Brent recovers above $100 → regime change back toward WAR_PREMIUM risk, re-evaluate MRPL P017 and INDIGO P015. If Brent stays $88-97 → de-escalation confirmed, MRPL recovery thesis strengthens.",
-      "current_level": "$93.13",
+      "instruction": "Brent at ~$93.76 (stable in $90-97 zone). De-escalation confirmed. MRPL P017 GRM recovery thesis is tracking. Watch for: above $100 = regime concern (re-evaluate INDIGO and MRPL). Below $88 = demand destruction fear (double-edged). Current zone ($90-97) = de-escalation confirmed.",
+      "current_level": "$93.76 (April 9 morning)",
       "scenarios": {
-        "above_100": "REGIME CONCERN — war premium returning? Re-evaluate A002 (INDIGO sell trigger) and A007 (MRPL recovery thesis)",
-        "95_to_100": "WATCH ZONE — Brent stabilization. MRPL GRM recovery thesis tracking. No action.",
-        "88_to_95": "CURRENT ZONE — De-escalation confirmed. MRPL recovery play (P017) is strong.",
-        "below_88": "DEMAND DESTRUCTION fear — double-edged: good for airlines/autos but signals global recession risk"
+        "above_100": "REGIME CONCERN — war premium returning? Re-evaluate A002 (INDIGO) and A007 (MRPL GRM thesis)",
+        "95_to_100": "WATCH ZONE — Brent stabilization. MRPL thesis tracking. No action.",
+        "90_to_95": "CURRENT ZONE — De-escalation confirmed. MRPL recovery (P017) strong.",
+        "below_88": "DEMAND DESTRUCTION — good for airlines/autos but signals global recession risk"
       },
       "created_at": "2026-04-08",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     },
     {
       "action_id": "MA002",
       "type": "WATCH_INDEX",
       "urgency": "CRITICAL",
-      "index": "ISLAMABAD TALKS — APRIL 10",
-      "instruction": "NEXT BINARY EVENT: April 10 Islamabad talks (10 AM IST + 12:30 PM IST sessions). This is the NEXT regime-defining event. Three outcomes: (1) Talks progress → ceasefire extends to 4+ weeks → DE-ESCALATION_DEEPENING. (2) Talks neutral/delayed → ceasefire holds 2 weeks as planned. (3) Talks fail → ceasefire collapses → WAR_PREMIUM_RETURN. Morning brief on April 10 must prioritize this before any other action.",
-      "current_level": "Scheduled for April 10 10:00 AM IST",
+      "index": "ISLAMABAD TALKS — APRIL 10 (TOMORROW)",
+      "instruction": "HIGHEST PRIORITY EVENT: April 10 Islamabad talks (10:00 AM IST + 12:30 PM IST sessions). BOTH US AND IRAN CONFIRMED PARTICIPATION. Pakistan hosting. This is the NEXT regime-defining binary. Morning brief April 10 must lead with this outcome BEFORE all else. Three outcomes: (1) Talks progress = DE-ESCALATION_DEEPENING, ceasefire extends to 4+ weeks. (2) Talks neutral/delayed = DE-ESCALATION_REAL holds, 2-week ceasefire timeline intact. (3) Talks fail = WAR_PREMIUM_RETURN, re-activate A002 INDIGO sell trigger.",
+      "current_level": "Confirmed — Both parties attending. April 10 10:00 AM IST.",
       "scenarios": {
-        "talks_progress": "BULLISH — Extend all positions. SETFGOLD exit accelerated. Defense premium compresses. P019 ADANI PORT thesis strengthens.",
-        "talks_neutral": "SIDEWAYS — Hold positions. 2-week ceasefire timeline intact. Next review April 22 (ceasefire expiry).",
-        "talks_fail": "BEARISH — WAR_PREMIUM returns. Re-activate A002 (INDIGO SELL trigger). SETFGOLD hold all. ASTRA MICRO new high. Nifty gives back 2-4%."
+        "talks_progress": "BULLISH — Extend all positions. Accelerate SETFGOLD exit. Defense premium compresses. P019 ADANI PORT strengthens.",
+        "talks_neutral": "SIDEWAYS — Hold positions. 2-week ceasefire timeline intact. Review April 22 (ceasefire expiry).",
+        "talks_fail": "BEARISH — WAR_PREMIUM returns. Re-activate A002 (INDIGO SELL). Hold all SETFGOLD. ASTRA MICRO new high potential. Nifty -2-4%."
       },
       "created_at": "2026-04-08",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     },
     {
       "action_id": "MA003",
       "type": "WATCH_INDEX",
-      "urgency": "HIGH",
-      "index": "TCS Q4FY26 RESULTS — APRIL 9",
-      "instruction": "TCS announcing Q4FY26 results on April 9. P018 predicts TCS above ₹2,600. Entry price ₹2,555.30. Key metrics to watch: (1) Revenue growth QoQ and YoY (2) EBIT margin guidance for FY27 (3) Deal wins volume and TCV (4) FY27 revenue growth guidance. If TCS beats on all 4 → IT sector rally. If guidance disappoints → IT could give back April 7-8 gains. Feeds directly into P014 (Nifty IT outperform thesis).",
-      "current_level": "TCS at ₹2,555.30 (April 8 close)",
+      "urgency": "CRITICAL",
+      "index": "TCS Q4FY26 RESULTS — TODAY POST-MARKET",
+      "instruction": "TCS Q4FY26 results TODAY post-market (~3:40-4:20 PM IST). Board meeting convened. Analyst consensus: Revenue ₹69,932 cr (+8% YoY), PAT ₹13,919 cr (+14% YoY), EBIT margin ~25.3-25.4%. Deal TCV + FY27 guidance are the KEY watch items for P018 and P014 (Nifty IT outperform). Conference call 7:00 PM IST. P018 predicts TCS above ₹2,600 within 7 days — results today will largely determine direction. CHECK RESULTS TONIGHT AND SCORE P018 IN EOD WRAP.",
+      "current_level": "TCS at ₹2,555.30 (April 8 close). Results expected ~4 PM IST.",
       "scenarios": {
-        "beats_all_metrics": "TCS above ₹2,650 → P018 RIGHT early → P014 confidence 4★",
-        "in_line": "TCS stays ₹2,520-2,600 → P018 tracking → P014 intact",
-        "misses_guidance": "TCS drops to ₹2,450-2,480 → P018 at risk → P014 confidence 2★"
+        "beats_all_metrics": "TCS above ₹2,650 → P018 RIGHT early → P014 confidence 4★ → Nifty IT gap-up April 10",
+        "in_line": "TCS stays ₹2,520-2,600 → P018 tracking → P014 intact → IT sector flat",
+        "misses_guidance": "TCS drops to ₹2,450-2,480 → P018 at risk → P014 confidence 2★ → IT sector gives back gains"
       },
       "created_at": "2026-04-08",
-      "updated_at": "2026-04-08"
+      "updated_at": "2026-04-09"
     }
   ],
   "action_summary": {
     "total_actions": 8,
     "by_urgency": {
-      "CRITICAL": 1,
-      "HIGH": 3,
+      "CRITICAL": 2,
+      "HIGH": 2,
       "MEDIUM": 2,
       "LOW": 2
     },
@@ -271,10 +271,9 @@
       "WATCH": 2,
       "ACTION_REQUIRED": 1
     },
-    "critical_action": "A005 (SETFGOLD EXIT_REVIEW) — exit trigger activated by ceasefire. Review position by April 9 morning.",
-    "highest_priority_tomorrow": "1. Check TCS Q4 results (April 9). 2. Monitor Brent for stabilization. 3. SETFGOLD position review. 4. Prepare for April 10 Islamabad talks.",
-    "regime_change_summary": "MAJOR: Regime shifted from WAR_PREMIUM_ESCALATING to DE-ESCALATION_REAL on April 8. All bearish energy/crude theses (P002, P003) invalidated. All flight/port/PSU theses now positive. Defense remains extended (managed tension premium). Gold hedge exit window open.",
-    "morning_brief_note": "April 9 priorities: (1) TCS Q4 results — key IT catalyst (2) Brent stabilization check (3) SETFGOLD exit review — ceasefire exit trigger MET (4) ASTRA MICRO ₹1,050-1,080 approach — partial profit-taking alert (5) April 10 Islamabad talks preparation"
+    "critical_action": "MA002 (Islamabad talks April 10) + MA003 (TCS results today post-market). A005 SETFGOLD exit — SELL 50-75% TODAY. A008 ASTRA MICRO — set partial profit limit at ₹1,048-1,052 BEFORE tomorrow's talks.",
+    "highest_priority_today": "1. SETFGOLD — SELL 50-75% at market open (A005). 2. ASTRA MICRO — set limit sell 25-35% at ₹1,048-1,052 (A008). 3. Monitor TCS results post-market and score P018. 4. Watch Nifty — consolidation expected (23,700-24,050 range). 5. Prepare for April 10 Islamabad talks.",
+    "regime_change_summary": "STABLE: Regime remains DE-ESCALATION_REAL from April 8. No overnight surprises. Ceasefire Day 2 holding. Islamabad talks confirmed for April 10. Nifty opened cautiously (base case). TCS results post-market today are the IT sector catalyst."
   },
-  "last_updated_by": "eod_wrap_2026-04-08"
+  "last_updated_by": "morning_brief_2026-04-09"
 }

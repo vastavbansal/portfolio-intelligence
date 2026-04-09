@@ -2,45 +2,45 @@
   "schema_version": "1.0",
   "description": "Next-session forecasts for all holdings and market indices. Generated before each trading session. Accuracy is tracked session-by-session to build a feedback loop.",
   "next_session": {
-    "date": "2026-04-09",
-    "generated_at": "2026-04-08-eod",
-    "market_bias": "FLAT_TO_SLIGHTLY_UP",
-    "confidence": 3,
-    "dominant_variable": "Profit-booking after +3.72% ceasefire rally. April 10 Islamabad talks are next binary event. TCS/INFY earnings this week.",
+    "date": "2026-04-10",
+    "generated_at": "2026-04-09-morning",
+    "market_bias": "BINARY_VOLATILE",
+    "confidence": 2,
+    "dominant_variable": "Islamabad talks outcome (10:00 AM IST) — both US and Iran confirmed. Three-way binary: talks progress, talks neutral, talks fail. This will determine the session entirely.",
     "scenarios": [
       {
         "id": "Bull",
-        "label": "Earnings Optimism",
-        "probability_pct": 25,
-        "description": "TCS/INFY results beat expectations; April 10 talks proceed without incident.",
-        "nifty_range": [24200, 24400],
-        "nifty_change_pct": 1.2,
-        "brent_range": [90, 96],
-        "market_tone": "Continued rally. IT sector leads. Financials follow on NIM beats."
+        "label": "Talks Progress — DE-ESCALATION_DEEPENING",
+        "probability_pct": 30,
+        "description": "Islamabad talks show concrete progress toward a broader peace framework. Ceasefire extended to 4+ weeks signaled. Nifty gap-up + TCS results tailwind (if beat post-market April 9).",
+        "nifty_range": [24200, 24600],
+        "nifty_change_pct": 1.5,
+        "brent_range": [87, 93],
+        "market_tone": "Gap-up open. Aviation, auto, paints lead. Defense premium compresses (ASTRA MICRO -3-5%). Gold falls. ADANI PORT re-rating."
       },
       {
         "id": "Base",
-        "label": "Profit-Booking / Consolidation",
-        "probability_pct": 50,
-        "description": "Post +3.72% rally profit-booking. Mixed earnings. April 10 talks neutral. FII flows unchanged.",
-        "nifty_range": [23800, 24100],
+        "label": "Talks Neutral / Delayed — DE-ESCALATION_REAL holds",
+        "probability_pct": 35,
+        "description": "Talks begin but no immediate breakthrough. 2-week ceasefire timeline intact. Market trades on TCS results. Nifty consolidates.",
+        "nifty_range": [23700, 24100],
         "nifty_change_pct": -0.2,
-        "brent_range": [91, 96],
-        "market_tone": "Flat session. Consolidation healthy. DII buys dips. No fresh catalyst."
+        "brent_range": [90, 96],
+        "market_tone": "Flat session. IT sector reacts to TCS results. Broad market holds recent gains. Await further talks signals."
       },
       {
         "id": "Bear",
-        "label": "Profit-Taking + Islamabad Risk",
-        "probability_pct": 25,
-        "description": "Sell-the-news after ceasefire rally. April 10 Islamabad talks signal breakdown risk.",
-        "nifty_range": [23600, 23800],
-        "nifty_change_pct": -1.0,
-        "brent_range": [92, 97],
-        "market_tone": "Gap-down open. Defense stocks give back some gains. FII selling resumes."
+        "label": "Talks Fail — WAR_PREMIUM_RETURN",
+        "probability_pct": 35,
+        "description": "Islamabad talks break down. Ceasefire collapses. War premium returns. Nifty gives back -2-3% of the April 8 rally. Brent spikes above $100.",
+        "nifty_range": [22800, 23400],
+        "nifty_change_pct": -2.5,
+        "brent_range": [98, 108],
+        "market_tone": "Sharp gap-down. Aviation sells off (INDIGO -5-7%). Gold spikes (SETFGOLD +3%). Defense stocks rally (ASTRA MICRO +5%). FII selling resumes."
       }
     ],
-    "base_case_scenario": "Base (Consolidation)",
-    "note": "Apr 8 CONFIRMED: DEAL + RBI rate hold. Nifty +3.78% to 23,997.35 (best day in 11 months). Brent -17.55% to $93.13. IndiGo hit upper circuit at ₹4,614.90. TCS Q4 results April 9. April 9 is consolidation territory — rally is priced in. Next binary event: April 10 Islamabad talks."
+    "base_case_scenario": "Base (Talks Neutral) — but probability distribution is unusually flat across all three. High binary risk.",
+    "note": "April 10 is the highest-stakes session of the week. Forecast confidence is LOW (★★) due to three-way binary on Islamabad talks. Applying FORECAST_PAT003 framework: geopolitical binary resolution — include explicit bull/bear reversal triggers. DO NOT bias toward any single scenario. The 35/35/30 split reflects genuine uncertainty. TCS Q4 results (April 9 post-market) will also shape April 10 IT sector direction independently."
   },
   "index_forecasts": [
     {
@@ -227,6 +227,19 @@
   ],
   "previous_sessions": [
     {
+      "session_date": "2026-04-09",
+      "forecasts_made": 1,
+      "nifty_forecast": 23900,
+      "nifty_forecast_range": [23800, 24100],
+      "forecast_direction": "FLAT_TO_SLIGHTLY_UP",
+      "nifty_actual_open": 23856,
+      "nifty_change_pct_at_open": -0.59,
+      "direction_correct": "PARTIAL",
+      "magnitude_in_range": true,
+      "error_analysis": "Session ongoing at morning brief time. Open at 23,856 is within forecast range (23,800-24,100) ✓. Direction was 'FLAT_TO_SLIGHTLY_UP' but open was slightly down (-0.59% from close). Base case consolidation is playing out. Full session scoring to be completed in EOD wrap. Applying FORECAST_PAT003: April 10 binary pre-positioning may cause afternoon moves.",
+      "notes": "April 9 — MORNING OPEN. TCS Q4 results post-market. April 10 Islamabad talks tomorrow. GIFT Nifty was slightly in red at pre-open. Ceasefire Day 2 — no overnight surprises. Base case consolidation scenario playing out."
+    },
+    {
       "session_date": "2026-04-02",
       "forecasts_made": 0,
       "notes": "First session of FY27. No prior forecast was generated for this session.",
@@ -264,10 +277,10 @@
     }
   ],
   "session_accuracy_summary": {
-    "total_sessions_forecasted": 3,
+    "total_sessions_forecasted": 4,
     "direction_correct": 1,
     "direction_accuracy_pct": 50,
     "magnitude_within_range_pct": 50,
-    "notes": "3 sessions now tracked. 1 correct direction (Apr 7 SIDEWAYS_UP ✓, actual +0.68%), 1 wrong (Apr 8 underweighted deal scenario ✗, actual +3.78%), 1 pending (Apr 9 FLAT_TO_SLIGHTLY_UP, actual TBD). Patterns identified: FORECAST_PAT001 (IT/USD decoupling), FORECAST_PAT003 (geopolitical binary underweighting — PROMOTED to framework). Feedback loop active."
+    "notes": "4 sessions now tracked. Apr 7: CORRECT (SIDEWAYS_UP ✓, actual +0.68%). Apr 8: WRONG (forecast DOWN -0.8%, actual +3.78% ceasefire rally). Apr 9: OPEN — range correct (open 23,856 inside 23,800-24,100), direction PARTIAL (flat bias, opened slightly down). Full Apr 9 score pending EOD wrap. Apr 10: BINARY_VOLATILE forecast generated — three-way Islamabad talks outcome. Patterns active: FORECAST_PAT001 (IT/USD decoupling), FORECAST_PAT003 (geopolitical binary underweighting — PROMOTED). Running: 1 correct of 2 scored = 50%."
   }
 }
