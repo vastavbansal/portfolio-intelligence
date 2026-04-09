@@ -2,6 +2,13 @@
   "briefings": [
     {
       "date": "2026-04-09",
+      "type": "midday",
+      "label": "Thu Apr 9 — Midday Update",
+      "file": "daily-briefings/2026-04-09-midday.md",
+      "summary": "This is the most important midday development. Brent crude has spiked from the morning's $93.76 to $98.38 — a $4.62 intraday jump,. Nifty 50 | 23,769 | -228 pts (-0.95%)"
+    },
+    {
+      "date": "2026-04-09",
       "type": "morning",
       "label": "Thu Apr 9 — Morning Briefing",
       "file": "daily-briefings/2026-04-09-morning.md",
