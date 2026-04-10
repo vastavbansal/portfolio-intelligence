@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-04-10",
+      "type": "morning",
+      "label": "Fri Apr 10 — Morning Briefing",
+      "file": "daily-briefings/2026-04-10-morning.md",
+      "summary": "Nifty has opened modestly positive at ~24,070 (+0.39%, +295 pts) — the market is in \"cautious wait-and-see\" mode ahead of talks re. Major negative surprise: FII April 8 OFFICIAL data = NET SELLERS ₹2,811.97 Cr** (provisional estimate had suggested +₹4,500 Cr buy"
+    },
+    {
       "date": "2026-04-09",
       "type": "eod",
       "label": "Thu Apr 9 — EOD Wrap",
