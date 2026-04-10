@@ -2,6 +2,13 @@
   "briefings": [
     {
       "date": "2026-04-10",
+      "type": "midday",
+      "label": "Fri Apr 10 — Midday Update",
+      "file": "daily-briefings/2026-04-10-midday.md",
+      "summary": "Nifty has given back some morning gains and is trading in the ₹23,850–23,900 zone — below the 24,070 level seen at open. The key p. Nifty 50 | 24,070 | ~23,850–23,900"
+    },
+    {
+      "date": "2026-04-10",
       "type": "morning",
       "label": "Fri Apr 10 — Morning Briefing",
       "file": "daily-briefings/2026-04-10-morning.md",
