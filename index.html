@@ -341,28 +341,46 @@
     <div class="card p-5 mt-4" id="l3FrameworkLog"></div>
   </div>
 
-  <!-- SESSION FORECAST ACCURACY — DoD History -->
+  <!-- SESSION FORECAST ACCURACY — DoD History, dual-track -->
   <div class="mb-8">
     <div class="flex items-center gap-3 mb-4">
       <h2 class="font-bold text-base text-slate-200">📅 Session Forecast Accuracy</h2>
-      <span class="text-xs text-slate-500">Day-over-day: predicted vs actual</span>
+      <span class="text-xs text-slate-500">Two independent tracks</span>
     </div>
-    <!-- Summary bar -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4" id="forecastAccSummary"></div>
-    <!-- Session history table -->
-    <div class="card overflow-x-auto mb-4">
+    <!-- Track summary cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5" id="forecastAccSummary"></div>
+    <!-- Track tabs -->
+    <div class="flex gap-2 mb-4">
+      <button onclick="switchForecastTrack('session')" id="ft-session" class="text-xs px-3 py-1.5 rounded-full bg-blue-700 text-white font-semibold">📈 Session Direction (EOD)</button>
+      <button onclick="switchForecastTrack('opening')" id="ft-opening" class="text-xs px-3 py-1.5 rounded-full bg-slate-800 text-slate-300 hover:bg-slate-700 font-semibold">🌅 Opening Bias (Morning)</button>
+    </div>
+    <!-- Session direction table -->
+    <div id="forecastTrack-session" class="card overflow-x-auto mb-4">
       <table class="w-full text-xs">
-        <thead>
-          <tr class="border-b border-slate-800">
-            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Date</th>
-            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Forecast</th>
-            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Actual</th>
-            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Direction</th>
-            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Grade</th>
-            <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Key Lesson</th>
-          </tr>
-        </thead>
+        <thead><tr class="border-b border-slate-800">
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Date</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Forecast Direction</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Actual Close</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Direction</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">In Range</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Grade</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Key Lessons</th>
+        </tr></thead>
         <tbody id="forecastAccTable"></tbody>
+      </table>
+    </div>
+    <!-- Opening bias table -->
+    <div id="forecastTrack-opening" class="card overflow-x-auto mb-4 hidden">
+      <table class="w-full text-xs">
+        <thead><tr class="border-b border-slate-800">
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Date</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Forecast Gap</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Actual Open</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Direction</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Grade</th>
+          <th class="text-left text-slate-500 font-semibold px-4 py-3 uppercase tracking-wider">Key Drivers</th>
+        </tr></thead>
+        <tbody id="forecastOpeningTable"></tbody>
       </table>
     </div>
     <!-- Patterns observed -->
@@ -915,73 +933,132 @@ function renderForecastStrip() {
 }
 
 // ═══════════════════════════════════════════════════════
-//  FORECAST ACCURACY — DoD history panel
+//  FORECAST ACCURACY — dual-track (Opening Bias + Session Direction)
 // ═══════════════════════════════════════════════════════
+let forecastTrack = 'session';
+function switchForecastTrack(t) {
+  forecastTrack = t;
+  ['session','opening'].forEach(k => {
+    const btn = document.getElementById('ft-'+k);
+    const panel = document.getElementById('forecastTrack-'+k);
+    const active = k === t;
+    btn.className = 'text-xs px-3 py-1.5 rounded-full font-semibold ' + (active ? 'bg-blue-700 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700');
+    if (panel) panel.classList.toggle('hidden', !active);
+  });
+}
+
 function renderForecastAccuracy() {
   const log = DATA.forecastLog;
   if (!log) return;
 
   const summary = log.summary || {};
-  const sessions = (log.sessions || []).filter(s => s.accuracy && s.accuracy.overall_grade !== 'PENDING');
+  const tracks = summary.tracks || {};
+  const sessionTrack = tracks.session_direction || {};
+  const openingTrack = tracks.opening_bias || {};
   const allSessions = log.sessions || [];
   const patterns = log.patterns_observed || [];
 
-  // Mini badge on Today tab
-  const miniEl = document.getElementById('forecastAccuracyMini');
-  const accBadge = document.getElementById('forecastAccBadge');
-  const accLast = document.getElementById('forecastAccLast');
-  if (miniEl && summary.total_sessions_forecasted > 0) {
-    miniEl.classList.remove('hidden');
-    const pct = summary.direction_accuracy_pct || 0;
-    const total = summary.total_sessions_forecasted;
-    const correct = summary.direction_correct || 0;
-    accBadge.textContent = correct + '/' + total + ' (' + pct.toFixed(0) + '%)';
-    accBadge.className = 'badge ' + (pct >= 60 ? 'badge-RIGHT' : pct >= 40 ? 'badge-MEDIUM' : 'badge-WRONG');
-    const lastSession = allSessions[allSessions.length - 1];
-    if (lastSession && lastSession.accuracy) {
-      const g = lastSession.accuracy.overall_grade;
-      const lastIcon = g === 'CORRECT' || g === 'PARTIAL_CORRECT' ? '✓' : g === 'WRONG' ? '✗' : '⏳';
-      accLast.textContent = 'Last: ' + lastIcon + ' ' + (lastSession.session_date || '');
-    }
-  }
-
-  // Summary cards on Intelligence tab
-  const summaryEl = document.getElementById('forecastAccSummary');
-  if (!summaryEl) return;
-  summaryEl.innerHTML = [
-    { label: 'Direction Accuracy', val: (summary.direction_accuracy_pct || 0).toFixed(0) + '%', sub: (summary.direction_correct || 0) + ' / ' + (summary.total_sessions_forecasted || 0) + ' sessions', col: summary.direction_accuracy_pct >= 60 ? 'text-emerald-400' : summary.direction_accuracy_pct >= 40 ? 'text-yellow-400' : 'text-red-400' },
-    { label: 'Current Streak', val: (summary.current_streak || 0) + ' ' + (summary.current_streak_type === 'correct' ? '✓' : '✗'), sub: summary.current_streak_type || '—', col: summary.current_streak_type === 'correct' ? 'text-emerald-400' : 'text-red-400' },
-    { label: 'Total Forecasted', val: summary.total_sessions_forecasted || 0, sub: 'sessions tracked', col: 'text-slate-200' },
-    { label: 'Patterns Found', val: patterns.length, sub: 'in observation', col: 'text-blue-400' },
-  ].map(c => `<div class="card p-4"><div class="text-xs text-slate-500 mb-1">${c.label}</div><div class="text-2xl font-bold mono ${c.col}">${c.val}</div><div class="text-xs text-slate-600 mt-1">${c.sub}</div></div>`).join('');
-
-  // Session table
-  const tbody = document.getElementById('forecastAccTable');
-  if (!tbody) return;
   const gradeStyle = g => {
-    if (!g || g === 'PENDING') return 'badge-WATCH';
+    if (!g || g === 'PENDING' || g === 'LEGACY_NO_FORECAST') return 'badge-WATCH';
     if (g === 'CORRECT') return 'badge-RIGHT';
     if (g === 'PARTIAL_CORRECT') return 'badge-MEDIUM';
     return 'badge-WRONG';
   };
-  if (!allSessions.length) { tbody.innerHTML = '<tr><td colspan="6" class="text-center text-slate-500 py-6 px-4">No forecast history yet — starts building after first EOD run</td></tr>'; return; }
-  tbody.innerHTML = [...allSessions].reverse().map(s => {
-    const a = s.accuracy || {};
-    const forecastDir = s.forecast?.direction || '—';
-    const forecastPct = s.forecast?.nifty_change_pct_forecast != null ? (s.forecast.nifty_change_pct_forecast > 0 ? '+' : '') + s.forecast.nifty_change_pct_forecast + '%' : '';
-    const actualPct = s.actual?.nifty_change_pct != null ? (s.actual.nifty_change_pct > 0 ? '+' : '') + s.actual.nifty_change_pct.toFixed(2) + '%' : '⏳ pending';
-    const lesson = s.lessons?.[0] || a.direction_note || '—';
-    return `<tr class="border-b border-slate-800/50 hover:bg-slate-800/30">
-      <td class="px-4 py-3 font-semibold text-slate-300 mono">${s.session_date || '—'}</td>
-      <td class="px-4 py-3 text-slate-400">${forecastDir.replace(/_/g,' ')} ${forecastPct}</td>
-      <td class="px-4 py-3 font-semibold ${s.actual?.nifty_change_pct > 0 ? 'text-emerald-400' : s.actual?.nifty_change_pct < 0 ? 'text-red-400' : 'text-slate-400'}">${actualPct}</td>
-      <td class="px-4 py-3"><span class="badge ${a.direction_correct === true ? 'badge-RIGHT' : a.direction_correct === false ? 'badge-WRONG' : 'badge-WATCH'}">${a.direction_correct === true ? '✓ RIGHT' : a.direction_correct === false ? '✗ WRONG' : '⏳'}</span></td>
-      <td class="px-4 py-3"><span class="badge ${gradeStyle(a.overall_grade)}">${(a.overall_grade || 'PENDING').replace(/_/g,' ')}</span></td>
-      <td class="px-4 py-3 text-slate-400 max-w-xs">
-        ${s.lessons && s.lessons.length > 1 ? `<details><summary class="cursor-pointer hover:text-slate-200 select-none">${s.lessons[0]}</summary><ul class="mt-1.5 space-y-1 list-none">${s.lessons.slice(1).map(l=>`<li class="text-xs text-slate-500 before:content-['•'] before:mr-1">${l}</li>`).join('')}</ul></details>` : `<span title="${lesson}">${lesson}</span>`}
-      </td>
-    </tr>`;
-  }).join('');
+  const pctCol = p => p == null ? 'text-slate-400' : p >= 60 ? 'text-emerald-400' : p >= 40 ? 'text-yellow-400' : 'text-red-400';
+
+  // Mini badge on Today tab (uses session direction track)
+  const miniEl = document.getElementById('forecastAccuracyMini');
+  const accBadge = document.getElementById('forecastAccBadge');
+  const accLast = document.getElementById('forecastAccLast');
+  if (miniEl) {
+    const sdPct = sessionTrack.accuracy_pct ?? summary.direction_accuracy_pct ?? 0;
+    const sdCorrect = sessionTrack.correct ?? summary.direction_correct ?? 0;
+    const sdTotal = sessionTrack.total_forecasted ?? summary.total_sessions_forecasted ?? 0;
+    if (sdTotal > 0) {
+      miniEl.classList.remove('hidden');
+      accBadge.textContent = sdCorrect + '/' + sdTotal + ' (' + sdPct.toFixed(0) + '%)';
+      accBadge.className = 'badge ' + (sdPct >= 60 ? 'badge-RIGHT' : sdPct >= 40 ? 'badge-MEDIUM' : 'badge-WRONG');
+      const lastScored = [...allSessions].reverse().find(s => s.session_direction_accuracy?.grade && s.session_direction_accuracy.grade !== 'PENDING');
+      if (lastScored) {
+        const g = lastScored.session_direction_accuracy.grade;
+        accLast.textContent = 'Last: ' + (g === 'CORRECT' ? '✓' : g === 'PARTIAL_CORRECT' ? '~' : '✗') + ' ' + lastScored.session_date;
+      }
+    }
+  }
+
+  // Summary cards
+  const summaryEl = document.getElementById('forecastAccSummary');
+  if (!summaryEl) return;
+  const sdPct = sessionTrack.accuracy_pct ?? summary.direction_accuracy_pct;
+  const obPct = openingTrack.accuracy_pct;
+  summaryEl.innerHTML = [
+    { label: '📈 Session Direction', val: sdPct != null ? sdPct.toFixed(0)+'%' : '—', sub: (sessionTrack.correct??0) + '/' + (sessionTrack.total_forecasted??0) + ' correct · scored at EOD', col: pctCol(sdPct) },
+    { label: '🌅 Opening Bias', val: obPct != null ? obPct.toFixed(0)+'%' : '—', sub: (openingTrack.correct??0) + '/' + (openingTrack.total_forecasted??0) + ' correct · scored at open', col: pctCol(obPct) },
+    { label: 'Current Streak', val: (summary.current_streak||0)+' '+(summary.current_streak_type==='correct'?'✓':'✗'), sub: summary.current_streak_type||'—', col: summary.current_streak_type==='correct'?'text-emerald-400':'text-red-400' },
+    { label: 'Patterns', val: patterns.length, sub: 'in observation', col: 'text-blue-400' },
+  ].map(c => `<div class="card p-4"><div class="text-xs text-slate-500 mb-1">${c.label}</div><div class="text-2xl font-bold mono ${c.col}">${c.val}</div><div class="text-xs text-slate-600 mt-1">${c.sub}</div></div>`).join('');
+
+  // Session Direction table
+  const tbody = document.getElementById('forecastAccTable');
+  if (tbody) {
+    if (!allSessions.length) {
+      tbody.innerHTML = '<tr><td colspan="7" class="text-center text-slate-500 py-6 px-4">No forecast history yet</td></tr>';
+    } else {
+      tbody.innerHTML = [...allSessions].reverse().map(s => {
+        const sd = s.session_direction || s.forecast || {};
+        const sda = s.session_direction_accuracy || s.accuracy || {};
+        const forecastDir = sd.direction || '—';
+        const forecastPct = sd.change_pct_estimate ?? sd.nifty_change_pct_forecast;
+        const forecastPctStr = forecastPct != null ? (forecastPct > 0 ? '+' : '') + forecastPct + '%' : '';
+        const actualPct = s.actual?.nifty_change_pct;
+        const actualStr = actualPct != null ? (actualPct > 0 ? '+' : '') + actualPct.toFixed(2) + '%' : '<span class="text-slate-600">⏳ pending</span>';
+        const actualCol = actualPct > 0 ? 'text-emerald-400' : actualPct < 0 ? 'text-red-400' : 'text-slate-400';
+        const dirCorrect = sda.direction_correct;
+        const inRange = sda.in_range ?? sda.magnitude_in_range;
+        const grade = sda.grade ?? sda.overall_grade;
+        const lessons = s.lessons || [];
+        const lesson = lessons[0] || sda.direction_note || '—';
+        return `<tr class="border-b border-slate-800/50 hover:bg-slate-800/30">
+          <td class="px-4 py-3 font-semibold text-slate-300 mono">${s.session_date||'—'}</td>
+          <td class="px-4 py-3 text-slate-400">${forecastDir.replace(/_/g,' ')} ${forecastPctStr}</td>
+          <td class="px-4 py-3 font-semibold ${actualCol}">${actualStr}</td>
+          <td class="px-4 py-3"><span class="badge ${dirCorrect===true?'badge-RIGHT':dirCorrect===false?'badge-WRONG':'badge-WATCH'}">${dirCorrect===true?'✓':dirCorrect===false?'✗':'⏳'}</span></td>
+          <td class="px-4 py-3"><span class="badge ${inRange===true?'badge-RIGHT':inRange===false?'badge-WRONG':'badge-WATCH'}">${inRange===true?'✓':inRange===false?'✗':'—'}</span></td>
+          <td class="px-4 py-3"><span class="badge ${gradeStyle(grade)}">${(grade||'PENDING').replace(/_/g,' ')}</span></td>
+          <td class="px-4 py-3 text-slate-400 max-w-xs">${lessons.length>1?`<details><summary class="cursor-pointer hover:text-slate-200 select-none">${lesson}</summary><ul class="mt-1.5 space-y-1">${lessons.slice(1).map(l=>`<li class="text-xs text-slate-500">• ${l}</li>`).join('')}</ul></details>`:`<span>${lesson}</span>`}</td>
+        </tr>`;
+      }).join('');
+    }
+  }
+
+  // Opening Bias table
+  const obTbody = document.getElementById('forecastOpeningTable');
+  if (obTbody) {
+    const obSessions = allSessions.filter(s => s.opening_bias?.direction || s.opening_bias_actual);
+    if (!obSessions.length) {
+      obTbody.innerHTML = '<tr><td colspan="6" class="text-center text-slate-500 py-6 px-4">Opening bias tracking starts from April 14 onwards — scored each morning at market open (9:15 AM IST)</td></tr>';
+    } else {
+      obTbody.innerHTML = [...obSessions].reverse().map(s => {
+        const ob = s.opening_bias || {};
+        const oba = s.opening_bias_actual || {};
+        const forecastDir = ob.direction || '—';
+        const forecastGap = ob.gap_pct_estimate != null ? (ob.gap_pct_estimate > 0 ? '+' : '') + ob.gap_pct_estimate + '%' : '—';
+        const actualOpen = oba.nifty_open ? oba.nifty_open.toLocaleString('en-IN') : '⏳';
+        const actualGap = oba.gap_pct != null ? (oba.gap_pct > 0 ? '+' : '') + oba.gap_pct.toFixed(2) + '%' : '—';
+        const dirCorrect = oba.direction_correct;
+        const grade = oba.grade || '—';
+        const drivers = (ob.key_drivers || []).join(' · ') || '—';
+        return `<tr class="border-b border-slate-800/50 hover:bg-slate-800/30">
+          <td class="px-4 py-3 font-semibold text-slate-300 mono">${s.session_date||'—'}</td>
+          <td class="px-4 py-3 text-slate-400">${forecastDir.replace(/_/g,' ')} ${forecastGap}</td>
+          <td class="px-4 py-3 font-semibold ${oba.gap_pct>0?'text-emerald-400':oba.gap_pct<0?'text-red-400':'text-slate-400'}">${actualOpen} <span class="text-xs">(${actualGap})</span></td>
+          <td class="px-4 py-3"><span class="badge ${dirCorrect===true?'badge-RIGHT':dirCorrect===false?'badge-WRONG':'badge-WATCH'}">${dirCorrect===true?'✓ RIGHT':dirCorrect===false?'✗ WRONG':'⏳'}</span></td>
+          <td class="px-4 py-3"><span class="badge ${gradeStyle(grade)}">${grade.replace(/_/g,' ')}</span></td>
+          <td class="px-4 py-3 text-slate-400 text-xs max-w-xs truncate" title="${drivers}">${drivers}</td>
+        </tr>`;
+      }).join('');
+    }
+  }
 
   // Patterns
   const patEl = document.getElementById('forecastAccPatterns');
