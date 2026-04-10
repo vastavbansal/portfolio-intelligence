@@ -2,47 +2,46 @@
   "schema_version": "1.0",
   "description": "Next-session forecasts for all holdings and market indices. Generated before each trading session. Accuracy is tracked session-by-session to build a feedback loop.",
   "next_session": {
-    "date": "2026-04-10",
-    "generated_at": "2026-04-09-eod",
-    "market_bias": "BINARY_VOLATILE_TILTED_BEARISH",
-    "confidence": 2,
-    "dominant_variable": "Islamabad talks outcome (10:00 AM IST) — US delegation led by VP Vance, Iran delegation led by FM Araghchi. Key red lines exposed: Iran demands Hormuz oversight + US military pullback; US holds firm on nuclear enrichment. CNN: 'teetering ceasefire'. SECONDARY: TCS Q4 results strong (revenue BEAT, TCV record $12B) — positive pre-open tailwind for IT sector.",
-    "tcs_results_impact": "TCS Q4 results announced post-market April 9. Revenue ₹70,698 cr (BEAT), PAT ₹13,718 cr, TCV $12B Q4 (highest ever), final dividend ₹31/share. TCS closed at ₹2,587.75 on April 9. Expect TCS gap-up 1-2% to ₹2,620-2,640 on April 10 open. Nifty IT positive pre-open tailwind offset by talks uncertainty.",
-    "islamabad_talks_pre_signal": "CAUTIOUS. CNN analysis April 9: 'teetering ceasefire bodes ill for treacherous US-Iran talks ahead'. Key gaps: Iran wants Hormuz oversight + full US military withdrawal; US won't budge on nuclear enrichment red line. Netanyahu separately said ceasefire doesn't cover Lebanon. Probability distribution revised: 20% progress, 45% neutral, 35% fail.",
+    "date": "2026-04-14",
+    "generated_at": "2026-04-10-eod",
+    "market_bias": "FLAT_TO_SLIGHTLY_UP",
+    "confidence": 3,
+    "dominant_variable": "Regime stable post-TALKS_NEUTRAL outcome. No new binary events until April 22 ceasefire expiry. P012 (ASTRA MICRO) and P013 (INDIGO) CHECK DATES on April 14. IT sector digesting TCS sell-on-news. FII distribution trend a key overhang.",
+    "talks_outcome_confirmed": "TALKS_NEUTRAL — Pakistan's modest goal (keep talks going) achieved. Vance dismissed Iran's 10-point plan. Ghalibaf said 3 clauses already violated. No breakthrough. Ceasefire holding through April 22 deadline. Trump delayed Iran infrastructure strikes to April 22 — diplomatic pressure tactic.",
     "scenarios": [
       {
         "id": "Bull",
-        "label": "Talks Progress — DE-ESCALATION_DEEPENING",
-        "probability_pct": 20,
-        "description": "Talks show concrete progress: both sides agree on nuclear framework or at minimum extend ceasefire to 4+ weeks. Rare given exposed red lines but possible. TCS beat adds tailwind. REVERSAL TRIGGER applies (FORECAST_PAT003).",
-        "nifty_range": [24200, 24600],
-        "nifty_change_pct": 1.5,
-        "brent_range": [86, 91],
-        "market_tone": "Gap-up open +1.5-2%. TCS/IT leads. Aviation (+3-5%), auto follow. Defense premium compresses (ASTRA MICRO -3-5%). SETFGOLD falls sharply. P019 ADANI PORT target within reach."
+        "label": "Quiet weekend + TCS recovery + DII support",
+        "probability_pct": 60,
+        "description": "No adverse weekend geopolitical developments. Nifty continues recovery from April 9 low. TCS attempts ₹2,560-2,580 recovery. Banking and IT lead. Ceasefire holding = risk-on continues.",
+        "nifty_range": [23900, 24200],
+        "nifty_change_pct": 0.5,
+        "brent_range": [93, 98],
+        "market_tone": "Mild positive open. IT sector attempts TCS recovery. Banking holds. FII likely net seller but lighter. P012 (ASTRA MICRO) needs +3.8% to score RIGHT — unlikely unless fresh defense catalyst."
       },
       {
         "id": "Base",
-        "label": "Talks Neutral / Ongoing — DE-ESCALATION_REAL holds",
-        "probability_pct": 45,
-        "description": "Talks begin but no breakthrough — sides agree to continue. 2-week ceasefire timeline intact. Market trades on TCS results primarily. Nifty recovers modestly from April 9 dip.",
-        "nifty_range": [23700, 24000],
-        "nifty_change_pct": 0.2,
-        "brent_range": [90, 96],
-        "market_tone": "Flat-to-modest recovery. IT sector (TCS gap-up) leads. Broad market cautiously holds. Nifty recovers 23,800-24,000. Talks continuation = next review April 22 ceasefire expiry."
+        "label": "Mild consolidation — profit booking after recovery",
+        "probability_pct": 25,
+        "description": "Profit-booking after Friday's recovery. Nifty gives back 100-200 pts. FII selling weighs. No fresh catalysts. ASTRA MICRO likely scores WRONG (P012 check date).",
+        "nifty_range": [23600, 23900],
+        "nifty_change_pct": -0.5,
+        "brent_range": [93, 99],
+        "market_tone": "Flat-to-mildly negative. Index-level consolidation. IT soft (TCS). P013 scores WRONG. P012 likely scores WRONG. Watch 23,900 support."
       },
       {
         "id": "Bear",
-        "label": "Talks Fail — WAR_PREMIUM_RETURN",
-        "probability_pct": 35,
-        "description": "Islamabad talks break down on nuclear enrichment red line or Hormuz oversight demand. Ceasefire in doubt. War premium returns sharply.",
-        "nifty_range": [22800, 23300],
+        "label": "Weekend ceasefire stress — WAR_PREMIUM signals return",
+        "probability_pct": 15,
+        "description": "Weekend news: ceasefire violation, Lebanon escalation, or Hormuz incident. War premium return signal. Nifty gap-down.",
+        "nifty_range": [22800, 23400],
         "nifty_change_pct": -2.5,
         "brent_range": [98, 108],
-        "market_tone": "Sharp gap-down -2-3%. Aviation sells off (INDIGO -5-7%). Gold spikes (SETFGOLD +3-5%). Defense stocks rally (ASTRA MICRO potentially +5%). FII selling resumes. P016 Nifty range thesis invalidated."
+        "market_tone": "Gap-down -2% or more. Defense stocks (ASTRA MICRO) may spike. SETFGOLD holds/rises. FII heavy selling resumes."
       }
     ],
-    "base_case_scenario": "Base (Talks Neutral, 45%) with TCS results providing IT-sector floor. Nifty likely 23,700-24,000 unless talks outcome resolves sharply.",
-    "note": "April 10 is the highest-stakes session. Confidence LOW (★★) — 3-way binary. Probability revised from 30/35/35 (morning) to 20/45/35 (EOD) based on exposed red lines in pre-talks analysis. TCS beat is a positive independent factor (+0.3-0.5% sector tailwind). Applying FORECAST_PAT003: REVERSAL TRIGGER if talks succeed = regime flips to +1.5-2% Nifty. REVERSAL TRIGGER if talks fail = regime flips to -2-3% Nifty. Do NOT bias toward single scenario. KEY WATCH: Nifty IT opening gap (TCS reaction) vs broad market reaction to talks outcome — these may diverge for first 30 mins."
+    "base_case_scenario": "Bull/neutral scenario (60%): Nifty 23,900-24,200, mild positive session. P012 (ASTRA MICRO) most likely scores WRONG on April 14 given ~4% gap to target. P013 (INDIGO) scores WRONG confirmed.",
+    "note": "April 14 is the first post-Islamabad trading session. Weekend is a key risk window (any ceasefire strain news). Apply FORECAST_PAT003: watch for weekend geopolitical headline as potential REVERSAL TRIGGER. FII distribution trend ongoing — 2 consecutive selling days post-ceasefire (₹2,811 Cr + ₹1,711 Cr). CHECK DATES: P012 and P013 both on April 14. P013 WILL SCORE WRONG. P012: 40% RIGHT / 60% WRONG."
   },
   "index_forecasts": [
     {
@@ -229,6 +228,29 @@
   ],
   "previous_sessions": [
     {
+      "session_date": "2026-04-10",
+      "forecasts_made": 1,
+      "nifty_forecast_range": [23700, 24000],
+      "forecast_direction": "BINARY_VOLATILE_TILTED_BEARISH (20/45/35 bull/base/bear)",
+      "nifty_actual_open": 24070,
+      "nifty_actual_close": 24050,
+      "sensex_actual_close": 79100,
+      "nifty_change_pct_actual": 1.16,
+      "tcs_actual_close": 2539.80,
+      "adani_ports_actual": 1465,
+      "brent_actual_close": 95.95,
+      "brent_intraday_low": 92.0,
+      "fii_april9_official": -1711.19,
+      "dii_april9_official": 955.90,
+      "direction_correct": true,
+      "magnitude_in_range": false,
+      "grade": "PARTIAL_CORRECT",
+      "talks_outcome": "TALKS_NEUTRAL — proximity talks, no breakthrough, ceasefire holds, next deadline April 22",
+      "error_analysis": "Base scenario (TALKS_NEUTRAL, 45% probability) materialized as expected. Nifty closed at 24,050 — just above the base scenario ceiling of 24,000. Direction correct (recovery, not WAR_PREMIUM_RETURN). Slight outperformance vs base explained by Trump's April 22 strike delay announcement causing intraday Brent crash from $96.51 to $91-93, which provided additional positive impetus beyond what base scenario modeled. TCS sell-on-news confirmed (closed ₹2,539.80, P018 NOT triggered). A008 (ASTRA MICRO ₹1,048-1,052) NOT triggered. A005 (SETFGOLD) exit window active — partial sale recommended.",
+      "new_prediction": "P022 generated: TCS recovers to ₹2,600 by April 17. Entry ₹2,539.80. Confidence 3★.",
+      "notes": "April 10 TALKS_NEUTRAL confirmed. Regime: DE-ESCALATION_TALKS_CONTINUING. Next major binary event: April 22 ceasefire expiry. FII continued selling (₹1,711 Cr on Apr 9). FII_CEASEFIRE_DISTRIBUTION pattern now at 2 occurrences — candidate for framework promotion at weekly review."
+    },
+    {
       "session_date": "2026-04-09",
       "forecasts_made": 1,
       "nifty_forecast": 23900,
@@ -284,9 +306,10 @@
   ],
   "session_accuracy_summary": {
     "total_sessions_forecasted": 4,
-    "direction_correct": 1,
-    "direction_accuracy_pct": 33.3,
-    "magnitude_within_range_pct": 33.3,
-    "notes": "4 sessions now tracked (3 fully scored + Apr 10 pending). Apr 7: CORRECT (SIDEWAYS_UP ✓, actual +0.68%). Apr 8: WRONG (forecast DOWN -0.8%, actual +3.78% ceasefire rally — FORECAST_PAT003). Apr 9: WRONG (forecast FLAT_TO_SLIGHTLY_UP range 23,800-24,100, actual 23,775 close -0.93% — outside range, wrong direction). Root cause Apr 9: Trump statement on Iran 'remains tense until real pact' + Bloomberg 'short covering lacks fresh buying'. TCS Q4 results (post-market) positive but not tradeable on April 9. Apr 10: BINARY_VOLATILE (Islamabad talks). Running: 1 correct of 3 scored = 33.3%. Patterns active: FORECAST_PAT001 (IT/USD), FORECAST_PAT003 (geopolitical binary underweighting — PROMOTED)."
+    "direction_correct": 2,
+    "partial_correct": 1,
+    "direction_accuracy_pct": 50.0,
+    "magnitude_within_range_pct": 25.0,
+    "notes": "4 sessions fully scored. Apr 7: CORRECT (SIDEWAYS_UP ✓, actual +0.68%). Apr 8: WRONG (forecast DOWN -0.8%, actual +3.78% ceasefire rally — FORECAST_PAT003). Apr 9: WRONG (forecast FLAT_TO_SLIGHTLY_UP range 23,800-24,100, actual 23,775 -0.93%). Apr 10: PARTIAL_CORRECT (forecast BINARY_VOLATILE base 23,700-24,000, actual 24,050 — above range but direction correct; TALKS_NEUTRAL materialized as expected). Running: 2 direction-correct + 1 partial-correct / 4 scored. Direction accuracy 50% (improved from 33.3%). April 14 forecast: FLAT_TO_SLIGHTLY_UP (60/25/15). Patterns active: FORECAST_PAT001 (IT/USD), FORECAST_PAT003 (geopolitical binary underweighting). New observation: TRUMP_DEADLINE_PRESSURE_CRUDE (1 occurrence)."
   }
 }

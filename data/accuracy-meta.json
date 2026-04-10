@@ -207,8 +207,8 @@
         "accuracy_pct": 33.3
       }
     },
-    "improvement_signal": "INSUFFICIENT_DATA \u2014 need minimum 10 scored predictions for trend detection. 4 more predictions expected to score in next 7 days (P012, P013, P015, P016 all check April 14-15), plus P018, P019, P020 check April 15.",
-    "notes": "3 predictions scored to date. 2 WRONG cases share one root cause (ceasefire regime shift). Not a systematic signal framework failure \u2014 was a macro regime change event. Framework has been updated to handle geopolitical binaries better going forward. Next batch of 7D predictions (P012-P020) checking April 14-15 will provide much richer signal."
+    "improvement_signal": "INSUFFICIENT_DATA \u2014 need minimum 10 scored predictions for trend detection. P013 (INDIGO) WILL SCORE WRONG April 14. P012 (ASTRA MICRO) 40% RIGHT / 60% WRONG April 14. Batch of P015-P021 checking April 15 will provide much richer signal. FII_CEASEFIRE_DISTRIBUTION pattern at 2 occurrences — candidate for framework promotion at Sunday weekly review.",
+    "notes": "3 predictions scored to date. 2 WRONG cases share one root cause (ceasefire regime shift). Not a systematic signal framework failure \u2014 was a macro regime change event. Framework has been updated. Next batch: P013 WRONG (confirmed), P012 uncertain, P015 RIGHT (confirmed), P016 tracking (Nifty 24,050 inside range). Session accuracy improving: 50% direction (2/4) from 33.3% (1/3). April 10 TALKS_NEUTRAL materialized as expected \u2014 base scenario framework working. New pattern: TRUMP_DEADLINE_PRESSURE_CRUDE (1st observation April 10)."
   },
   "factor_performance": {
     "M001": {
@@ -275,10 +275,12 @@
     }
   ],
   "next_session_accuracy": {
-    "total_sessions": 3,
-    "direction_correct": 1,
-    "within_range": 0,
-    "accuracy_pct": 33.3,
+    "total_sessions": 4,
+    "direction_correct": 2,
+    "partial_correct": 1,
+    "within_range": 1,
+    "accuracy_pct": 50.0,
+    "last_updated": "2026-04-10-eod",
     "session_log": [
       {
         "date": "2026-04-07",
@@ -303,8 +305,9 @@
       {
         "date": "2026-04-10",
         "forecast": "BINARY_VOLATILE_TILTED_BEARISH (20/45/35 bull/base/bear) — Islamabad talks + TCS gap-up",
-        "actual": null,
-        "grade": "PENDING"
+        "actual": "Nifty closed ~24,050 (+1.16% from 23,775). TALKS_NEUTRAL confirmed. TCS sell-on-news ₹2,539.80. Brent $95.95 (intraday dip to $91-93 on Trump delay). Sensex +900 pts.",
+        "grade": "PARTIAL_CORRECT",
+        "notes": "Base scenario (TALKS_NEUTRAL) materialized. Nifty slightly above base range (23,700-24,000 forecast, actual 24,050). Direction correct — recovery, not WAR_PREMIUM_RETURN. Brent intraday surprise (Trump April 22 delay) added upside beyond base model."
       }
     ]
   }

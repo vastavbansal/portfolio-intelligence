@@ -2,6 +2,13 @@
   "briefings": [
     {
       "date": "2026-04-10",
+      "type": "eod",
+      "label": "Fri Apr 10 — EOD Wrap",
+      "file": "daily-briefings/2026-04-10-eod.md",
+      "summary": "Trump key move: Announced he is delaying threatened infrastructure strikes on Iran to April 22 (exactly tied to ceasefire expiry).. Nifty 50 | 24,070 | ~24,050"
+    },
+    {
+      "date": "2026-04-10",
       "type": "midday",
       "label": "Fri Apr 10 — Midday Update",
       "file": "daily-briefings/2026-04-10-midday.md",
