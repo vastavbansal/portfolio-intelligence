@@ -1,10 +1,10 @@
 {
-  "fetched_at": "2026-04-10T17:09:54.705490+00:00",
-  "fetched_at_ist": "2026-04-10 22:40 IST",
+  "fetched_at": "2026-04-10T18:00:04.676207+00:00",
+  "fetched_at_ist": "2026-04-10 23:30 IST",
   "coverage": {
     "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
-    "indices_fetched": 2,
+    "indices_fetched": 3,
     "commodities_fetched": 5,
     "portfolio_stocks_with_pnl": 34
   },
@@ -17,6 +17,14 @@
       "volume": 0,
       "ticker": "^NSEI"
     },
+    "SENSEX": {
+      "price": 77550.25,
+      "prev_close": 76631.65,
+      "change": 918.6,
+      "change_pct": 1.2,
+      "volume": 0,
+      "ticker": "^BSESN"
+    },
     "BANKNIFTY": {
       "price": 55912.75,
       "prev_close": 54821.7,
@@ -28,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4788.1,
+      "price": 4787.4,
       "prev_close": 4792.2,
-      "change": -4.1,
-      "change_pct": -0.09,
-      "volume": 100317,
+      "change": -4.8,
+      "change_pct": -0.1,
+      "volume": 106859,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 76.36,
+      "price": 76.41,
       "prev_close": 76.28,
-      "change": 0.08,
-      "change_pct": 0.11,
-      "volume": 22967,
+      "change": 0.13,
+      "change_pct": 0.17,
+      "volume": 28620,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 98.2,
+      "price": 98.38,
       "prev_close": 97.87,
-      "change": 0.33,
-      "change_pct": 0.34,
-      "volume": 195263,
+      "change": 0.51,
+      "change_pct": 0.52,
+      "volume": 214768,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 96.78,
+      "price": 96.32,
       "prev_close": 95.92,
-      "change": 0.86,
-      "change_pct": 0.9,
-      "volume": 24008,
+      "change": 0.4,
+      "change_pct": 0.42,
+      "volume": 25874,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 2.66,
+      "price": 2.65,
       "prev_close": 2.67,
-      "change": -0.01,
-      "change_pct": -0.26,
-      "volume": 74838,
+      "change": -0.02,
+      "change_pct": -0.86,
+      "volume": 84685,
       "ticker": "NG=F"
     }
   },
