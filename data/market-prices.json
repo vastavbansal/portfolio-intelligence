@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-04-10T18:00:04.676207+00:00",
-  "fetched_at_ist": "2026-04-10 23:30 IST",
+  "fetched_at": "2026-04-10T21:06:34.343011+00:00",
+  "fetched_at_ist": "2026-04-11 02:36 IST",
   "coverage": {
     "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
@@ -10,127 +10,127 @@
   },
   "indices": {
     "NIFTY_50": {
-      "price": 24050.6,
+      "price": 23775.1,
       "prev_close": 23775.1,
-      "change": 275.5,
-      "change_pct": 1.16,
-      "volume": 0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 466600,
       "ticker": "^NSEI"
     },
     "SENSEX": {
-      "price": 77550.25,
+      "price": 76631.65,
       "prev_close": 76631.65,
-      "change": 918.6,
-      "change_pct": 1.2,
-      "volume": 0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 35500,
       "ticker": "^BSESN"
     },
     "BANKNIFTY": {
-      "price": 55912.75,
+      "price": 54821.7,
       "prev_close": 54821.7,
-      "change": 1091.05,
-      "change_pct": 1.99,
-      "volume": 0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 298800,
       "ticker": "^NSEBANK"
     }
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4787.4,
+      "price": 4772.6,
       "prev_close": 4792.2,
-      "change": -4.8,
-      "change_pct": -0.1,
-      "volume": 106859,
+      "change": -19.6,
+      "change_pct": -0.41,
+      "volume": 117580,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 76.41,
+      "price": 76.1,
       "prev_close": 76.28,
-      "change": 0.13,
-      "change_pct": 0.17,
-      "volume": 28620,
+      "change": -0.18,
+      "change_pct": -0.24,
+      "volume": 31968,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 98.38,
+      "price": 95.61,
       "prev_close": 97.87,
-      "change": 0.51,
-      "change_pct": 0.52,
-      "volume": 214768,
+      "change": -2.26,
+      "change_pct": -2.31,
+      "volume": 281295,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 96.32,
+      "price": 94.3,
       "prev_close": 95.92,
-      "change": 0.4,
-      "change_pct": 0.42,
-      "volume": 25874,
+      "change": -1.62,
+      "change_pct": -1.69,
+      "volume": 30918,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
       "price": 2.65,
       "prev_close": 2.67,
       "change": -0.02,
-      "change_pct": -0.86,
-      "volume": 84685,
+      "change_pct": -0.71,
+      "volume": 117652,
       "ticker": "NG=F"
     }
   },
   "portfolio": {
     "CDSL": {
-      "price": 1303.4,
+      "price": 1279.3,
       "prev_close": 1279.3,
-      "change": 24.1,
-      "change_pct": 1.88,
-      "volume": 2533851,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2724972,
       "symbol": "CDSL",
       "yahoo_ticker": "CDSL.NS",
       "broker": "ICICI",
       "avg_buy": 1184.8,
       "qty": 64,
       "invested": 75827.2,
-      "market_value": 83417.6,
-      "pnl": 7590.4,
-      "pnl_pct": 10.01
+      "market_value": 81875.2,
+      "pnl": 6048.0,
+      "pnl_pct": 7.98
     },
     "COCHINSHIP": {
-      "price": 1464.6,
+      "price": 1423.9,
       "prev_close": 1423.9,
-      "change": 40.7,
-      "change_pct": 2.86,
-      "volume": 3027565,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3535624,
       "symbol": "COCHINSHIP",
       "yahoo_ticker": "COCHINSHIP.NS",
       "broker": "ICICI",
       "avg_buy": 1384.09,
       "qty": 90,
       "invested": 124568.1,
-      "market_value": 131814.0,
-      "pnl": 7245.9,
-      "pnl_pct": 5.82
+      "market_value": 128151.0,
+      "pnl": 3582.9,
+      "pnl_pct": 2.88
     },
     "GODREJPROP": {
-      "price": 1716.5,
+      "price": 1695.5,
       "prev_close": 1695.5,
-      "change": 21.0,
-      "change_pct": 1.24,
-      "volume": 2202418,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 784426,
       "symbol": "GODREJPROP",
       "yahoo_ticker": "GODREJPROP.NS",
       "broker": "ICICI",
       "avg_buy": 1611.67,
       "qty": 68,
       "invested": 109593.56,
-      "market_value": 116722.0,
-      "pnl": 7128.44,
-      "pnl_pct": 6.5
+      "market_value": 115294.0,
+      "pnl": 5700.44,
+      "pnl_pct": 5.2
     },
     "IGIL": {
       "price": 340.05,
       "prev_close": 337.0,
       "change": 3.05,
       "change_pct": 0.91,
-      "volume": 299328,
+      "volume": 299331,
       "symbol": "IGIL",
       "yahoo_ticker": "IGIL.NS",
       "broker": "ICICI",
@@ -142,75 +142,75 @@
       "pnl_pct": 3.89
     },
     "INDIGO": {
-      "price": 4554.2,
+      "price": 4449.1,
       "prev_close": 4449.1,
-      "change": 105.1,
-      "change_pct": 2.36,
-      "volume": 1295907,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1904534,
       "symbol": "INDIGO",
       "yahoo_ticker": "INDIGO.NS",
       "broker": "ICICI",
       "avg_buy": 4204.69,
       "qty": 19,
       "invested": 79889.11,
-      "market_value": 86529.8,
-      "pnl": 6640.69,
-      "pnl_pct": 8.31
+      "market_value": 84532.9,
+      "pnl": 4643.79,
+      "pnl_pct": 5.81
     },
     "IRCON": {
-      "price": 136.51,
+      "price": 133.43,
       "prev_close": 133.43,
-      "change": 3.08,
-      "change_pct": 2.31,
-      "volume": 4461778,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3875557,
       "symbol": "IRCON",
       "yahoo_ticker": "IRCON.NS",
       "broker": "ICICI",
       "avg_buy": 120.97,
       "qty": 420,
       "invested": 50807.4,
-      "market_value": 57334.2,
-      "pnl": 6526.8,
-      "pnl_pct": 12.85
+      "market_value": 56040.6,
+      "pnl": 5233.2,
+      "pnl_pct": 10.3
     },
     "IREDA": {
-      "price": 123.72,
+      "price": 123.13,
       "prev_close": 123.13,
-      "change": 0.59,
-      "change_pct": 0.48,
-      "volume": 9495493,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 10836914,
       "symbol": "IREDA",
       "yahoo_ticker": "IREDA.NS",
       "broker": "ICICI",
       "avg_buy": 114.57,
       "qty": 400,
       "invested": 45828.0,
-      "market_value": 49488.0,
-      "pnl": 3660.0,
-      "pnl_pct": 7.99
+      "market_value": 49252.0,
+      "pnl": 3424.0,
+      "pnl_pct": 7.47
     },
     "ITC": {
-      "price": 304.25,
+      "price": 303.0,
       "prev_close": 303.0,
-      "change": 1.25,
-      "change_pct": 0.41,
-      "volume": 17743926,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 17691477,
       "symbol": "ITC",
       "yahoo_ticker": "ITC.NS",
       "broker": "ICICI",
       "avg_buy": 301.96,
       "qty": 520,
       "invested": 157019.2,
-      "market_value": 158210.0,
-      "pnl": 1190.8,
-      "pnl_pct": 0.76
+      "market_value": 157560.0,
+      "pnl": 540.8,
+      "pnl_pct": 0.34
     },
     "JIOFIN": {
       "price": 243.2,
       "prev_close": 238.84,
       "change": 4.36,
       "change_pct": 1.83,
-      "volume": 12029910,
+      "volume": 12039950,
       "symbol": "JIOFIN",
       "yahoo_ticker": "JIOFIN.NS",
       "broker": "ICICI",
@@ -222,75 +222,75 @@
       "pnl_pct": 3.49
     },
     "MAZDOCK": {
-      "price": 2470.2,
+      "price": 2435.5,
       "prev_close": 2435.5,
-      "change": 34.7,
-      "change_pct": 1.42,
-      "volume": 2003500,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2726784,
       "symbol": "MAZDOCK",
       "yahoo_ticker": "MAZDOCK.NS",
       "broker": "ICICI",
       "avg_buy": 2316.75,
       "qty": 20,
       "invested": 46335.0,
-      "market_value": 49404.0,
-      "pnl": 3069.0,
-      "pnl_pct": 6.62
+      "market_value": 48710.0,
+      "pnl": 2375.0,
+      "pnl_pct": 5.13
     },
     "MRPL": {
-      "price": 174.62,
+      "price": 176.24,
       "prev_close": 176.24,
-      "change": -1.62,
-      "change_pct": -0.92,
-      "volume": 4661418,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 5301448,
       "symbol": "MRPL",
       "yahoo_ticker": "MRPL.NS",
       "broker": "ICICI",
       "avg_buy": 196.4,
       "qty": 300,
       "invested": 58920.0,
-      "market_value": 52386.0,
-      "pnl": -6534.0,
-      "pnl_pct": -11.09
+      "market_value": 52872.0,
+      "pnl": -6048.0,
+      "pnl_pct": -10.26
     },
     "NCC": {
-      "price": 153.06,
+      "price": 147.95,
       "prev_close": 147.95,
-      "change": 5.11,
-      "change_pct": 3.45,
-      "volume": 3391716,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2599823,
       "symbol": "NCC",
       "yahoo_ticker": "NCC.NS",
       "broker": "ICICI",
       "avg_buy": 142.64,
       "qty": 180,
       "invested": 25675.2,
-      "market_value": 27550.8,
-      "pnl": 1875.6,
-      "pnl_pct": 7.31
+      "market_value": 26631.0,
+      "pnl": 955.8,
+      "pnl_pct": 3.72
     },
     "PREMEXPLN": {
-      "price": 460.35,
+      "price": 454.7,
       "prev_close": 454.7,
-      "change": 5.65,
-      "change_pct": 1.24,
-      "volume": 208900,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 253845,
       "symbol": "PREMEXPLN",
       "yahoo_ticker": "PREMEXPLN.NS",
       "broker": "ICICI",
       "avg_buy": 436.53,
       "qty": 150,
       "invested": 65479.5,
-      "market_value": 69052.5,
-      "pnl": 3573.0,
-      "pnl_pct": 5.46
+      "market_value": 68205.0,
+      "pnl": 2725.5,
+      "pnl_pct": 4.16
     },
     "SBISILVER": {
       "price": 232.13,
       "prev_close": 229.14,
       "change": 2.99,
       "change_pct": 1.3,
-      "volume": 1401936,
+      "volume": 1402726,
       "symbol": "SBISILVER",
       "yahoo_ticker": "SBISILVER.NS",
       "broker": "ICICI",
@@ -302,187 +302,187 @@
       "pnl_pct": 3.15
     },
     "SETFGOLD": {
-      "price": 127.31,
+      "price": 127.04,
       "prev_close": 127.04,
-      "change": 0.27,
-      "change_pct": 0.21,
-      "volume": 6647561,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 7287949,
       "symbol": "SETFGOLD",
       "yahoo_ticker": "SETFGOLD.NS",
       "broker": "ICICI",
       "avg_buy": 125.21,
       "qty": 1190,
       "invested": 148999.9,
-      "market_value": 151498.9,
-      "pnl": 2499.0,
-      "pnl_pct": 1.68
+      "market_value": 151177.6,
+      "pnl": 2177.7,
+      "pnl_pct": 1.46
     },
     "SUZLON": {
-      "price": 45.32,
+      "price": 44.23,
       "prev_close": 44.23,
-      "change": 1.09,
-      "change_pct": 2.46,
-      "volume": 67272589,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 80302508,
       "symbol": "SUZLON",
       "yahoo_ticker": "SUZLON.NS",
       "broker": "ICICI",
       "avg_buy": 40.55,
       "qty": 2000,
       "invested": 81100.0,
-      "market_value": 90640.0,
-      "pnl": 9540.0,
-      "pnl_pct": 11.76
+      "market_value": 88460.0,
+      "pnl": 7360.0,
+      "pnl_pct": 9.08
     },
     "SWIGGY": {
-      "price": 275.0,
+      "price": 271.9,
       "prev_close": 271.9,
-      "change": 3.1,
-      "change_pct": 1.14,
-      "volume": 7920670,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 8706111,
       "symbol": "SWIGGY",
       "yahoo_ticker": "SWIGGY.NS",
       "broker": "ICICI",
       "avg_buy": 298.75,
       "qty": 170,
       "invested": 50787.5,
-      "market_value": 46750.0,
-      "pnl": -4037.5,
-      "pnl_pct": -7.95
+      "market_value": 46223.0,
+      "pnl": -4564.5,
+      "pnl_pct": -8.99
     },
     "URBANCO": {
-      "price": 134.52,
+      "price": 127.14,
       "prev_close": 127.14,
-      "change": 7.38,
-      "change_pct": 5.8,
-      "volume": 15325835,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 4506548,
       "symbol": "URBANCO",
       "yahoo_ticker": "URBANCO.NS",
       "broker": "ICICI",
       "avg_buy": 122.1,
       "qty": 725,
       "invested": 88522.5,
-      "market_value": 97527.0,
-      "pnl": 9004.5,
-      "pnl_pct": 10.17
+      "market_value": 92176.5,
+      "pnl": 3654.0,
+      "pnl_pct": 4.13
     },
     "ACME SOLAR": {
-      "price": 268.65,
+      "price": 273.1,
       "prev_close": 273.1,
-      "change": -4.45,
-      "change_pct": -1.63,
-      "volume": 864141,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 632698,
       "symbol": "ACME SOLAR",
       "yahoo_ticker": "ACMESOLAR.NS",
       "broker": "Groww",
       "avg_buy": 289.0,
       "qty": 51,
       "invested": 14739.0,
-      "market_value": 13701.15,
-      "pnl": -1037.85,
-      "pnl_pct": -7.04
+      "market_value": 13928.1,
+      "pnl": -810.9,
+      "pnl_pct": -5.5
     },
     "ADANI PORT": {
-      "price": 1475.3,
+      "price": 1447.4,
       "prev_close": 1447.4,
-      "change": 27.9,
-      "change_pct": 1.93,
-      "volume": 4026543,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3159307,
       "symbol": "ADANI PORT",
       "yahoo_ticker": "ADANIPORTS.NS",
       "broker": "Groww",
       "avg_buy": 1579.0,
       "qty": 100,
       "invested": 157900.0,
-      "market_value": 147530.0,
-      "pnl": -10370.0,
-      "pnl_pct": -6.57
+      "market_value": 144740.0,
+      "pnl": -13160.0,
+      "pnl_pct": -8.33
     },
     "ADANI POWER": {
-      "price": 175.81,
+      "price": 172.33,
       "prev_close": 172.33,
-      "change": 3.48,
-      "change_pct": 2.02,
-      "volume": 51939107,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 42258124,
       "symbol": "ADANI POWER",
       "yahoo_ticker": "ADANIPOWER.NS",
       "broker": "Groww",
       "avg_buy": 157.14,
       "qty": 1245,
       "invested": 195639.3,
-      "market_value": 218883.45,
-      "pnl": 23244.15,
-      "pnl_pct": 11.88
+      "market_value": 214550.85,
+      "pnl": 18911.55,
+      "pnl_pct": 9.67
     },
     "ASTRA MICRO": {
-      "price": 1015.65,
+      "price": 1011.05,
       "prev_close": 1011.05,
-      "change": 4.6,
-      "change_pct": 0.45,
-      "volume": 226139,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 420119,
       "symbol": "ASTRA MICRO",
       "yahoo_ticker": "ASTRAMICRO.NS",
       "broker": "Groww",
       "avg_buy": 562.35,
       "qty": 20,
       "invested": 11247.0,
-      "market_value": 20313.0,
-      "pnl": 9066.0,
-      "pnl_pct": 80.61
+      "market_value": 20221.0,
+      "pnl": 8974.0,
+      "pnl_pct": 79.79
     },
     "COAL INDIA": {
-      "price": 434.1,
+      "price": 454.1,
       "prev_close": 454.1,
-      "change": -20.0,
-      "change_pct": -4.4,
-      "volume": 29601127,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 9468415,
       "symbol": "COAL INDIA",
       "yahoo_ticker": "COALINDIA.NS",
       "broker": "Groww",
       "avg_buy": 345.55,
       "qty": 55,
       "invested": 19005.25,
-      "market_value": 23875.5,
-      "pnl": 4870.25,
-      "pnl_pct": 25.63
+      "market_value": 24975.5,
+      "pnl": 5970.25,
+      "pnl_pct": 31.41
     },
     "IRFC": {
-      "price": 100.26,
+      "price": 98.49,
       "prev_close": 98.49,
-      "change": 1.77,
-      "change_pct": 1.8,
-      "volume": 20756631,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 16170504,
       "symbol": "IRFC",
       "yahoo_ticker": "IRFC.NS",
       "broker": "Groww",
       "avg_buy": 130.01,
       "qty": 200,
       "invested": 26002.0,
-      "market_value": 20052.0,
-      "pnl": -5950.0,
-      "pnl_pct": -22.88
+      "market_value": 19698.0,
+      "pnl": -6304.0,
+      "pnl_pct": -24.24
     },
     "IREDA (Groww)": {
-      "price": 123.72,
+      "price": 123.13,
       "prev_close": 123.13,
-      "change": 0.59,
-      "change_pct": 0.48,
-      "volume": 9495493,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 10836914,
       "symbol": "IREDA (Groww)",
       "yahoo_ticker": "IREDA.NS",
       "broker": "Groww",
       "avg_buy": 175.0,
       "qty": 200,
       "invested": 35000.0,
-      "market_value": 24744.0,
-      "pnl": -10256.0,
-      "pnl_pct": -29.3
+      "market_value": 24626.0,
+      "pnl": -10374.0,
+      "pnl_pct": -29.64
     },
     "IGIL (Groww)": {
       "price": 340.05,
       "prev_close": 337.0,
       "change": 3.05,
       "change_pct": 0.91,
-      "volume": 299328,
+      "volume": 299331,
       "symbol": "IGIL (Groww)",
       "yahoo_ticker": "IGIL.NS",
       "broker": "Groww",
@@ -494,27 +494,27 @@
       "pnl_pct": -8.59
     },
     "IRCON (Groww)": {
-      "price": 136.51,
+      "price": 133.43,
       "prev_close": 133.43,
-      "change": 3.08,
-      "change_pct": 2.31,
-      "volume": 4461778,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3875557,
       "symbol": "IRCON (Groww)",
       "yahoo_ticker": "IRCON.NS",
       "broker": "Groww",
       "avg_buy": 162.07,
       "qty": 350,
       "invested": 56724.5,
-      "market_value": 47778.5,
-      "pnl": -8946.0,
-      "pnl_pct": -15.77
+      "market_value": 46700.5,
+      "pnl": -10024.0,
+      "pnl_pct": -17.67
     },
     "JIOFIN (Groww)": {
       "price": 243.2,
       "prev_close": 238.84,
       "change": 4.36,
       "change_pct": 1.83,
-      "volume": 12029910,
+      "volume": 12039950,
       "symbol": "JIOFIN (Groww)",
       "yahoo_ticker": "JIOFIN.NS",
       "broker": "Groww",
@@ -526,718 +526,718 @@
       "pnl_pct": 2.06
     },
     "NHPC": {
-      "price": 77.09,
+      "price": 77.11,
       "prev_close": 77.11,
-      "change": -0.02,
-      "change_pct": -0.03,
-      "volume": 17937718,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 31334772,
       "symbol": "NHPC",
       "yahoo_ticker": "NHPC.NS",
       "broker": "Groww",
       "avg_buy": 104.28,
       "qty": 400,
       "invested": 41712.0,
-      "market_value": 30836.0,
-      "pnl": -10876.0,
-      "pnl_pct": -26.07
+      "market_value": 30844.0,
+      "pnl": -10868.0,
+      "pnl_pct": -26.05
     },
     "PI INDUSTRIES": {
-      "price": 2952.1,
+      "price": 2880.7,
       "prev_close": 2880.7,
-      "change": 71.4,
-      "change_pct": 2.48,
-      "volume": 152419,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 437619,
       "symbol": "PI INDUSTRIES",
       "yahoo_ticker": "PIIND.NS",
       "broker": "Groww",
       "avg_buy": 3877.5,
       "qty": 6,
       "invested": 23265.0,
-      "market_value": 17712.6,
-      "pnl": -5552.4,
-      "pnl_pct": -23.87
+      "market_value": 17284.2,
+      "pnl": -5980.8,
+      "pnl_pct": -25.71
     },
     "RELIANCE": {
-      "price": 1350.2,
+      "price": 1330.0,
       "prev_close": 1330.0,
-      "change": 20.2,
-      "change_pct": 1.52,
-      "volume": 19361550,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 20725390,
       "symbol": "RELIANCE",
       "yahoo_ticker": "RELIANCE.NS",
       "broker": "Groww",
       "avg_buy": 1399.1,
       "qty": 36,
       "invested": 50367.6,
-      "market_value": 48607.2,
-      "pnl": -1760.4,
-      "pnl_pct": -3.5
+      "market_value": 47880.0,
+      "pnl": -2487.6,
+      "pnl_pct": -4.94
     },
     "SATIA IND.": {
-      "price": 64.34,
+      "price": 63.21,
       "prev_close": 63.21,
-      "change": 1.13,
-      "change_pct": 1.79,
-      "volume": 90038,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 51032,
       "symbol": "SATIA IND.",
       "yahoo_ticker": "SATIA.NS",
       "broker": "Groww",
       "avg_buy": 147.6,
       "qty": 65,
       "invested": 9594.0,
-      "market_value": 4182.1,
-      "pnl": -5411.9,
-      "pnl_pct": -56.41
+      "market_value": 4108.65,
+      "pnl": -5485.35,
+      "pnl_pct": -57.17
     },
     "SUZLON (Groww)": {
-      "price": 45.32,
+      "price": 44.23,
       "prev_close": 44.23,
-      "change": 1.09,
-      "change_pct": 2.46,
-      "volume": 67272589,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 80302508,
       "symbol": "SUZLON (Groww)",
       "yahoo_ticker": "SUZLON.NS",
       "broker": "Groww",
       "avg_buy": 49.13,
       "qty": 600,
       "invested": 29478.0,
-      "market_value": 27192.0,
-      "pnl": -2286.0,
-      "pnl_pct": -7.75
+      "market_value": 26538.0,
+      "pnl": -2940.0,
+      "pnl_pct": -9.97
     },
     "SWIGGY (Groww)": {
-      "price": 275.0,
+      "price": 271.9,
       "prev_close": 271.9,
-      "change": 3.1,
-      "change_pct": 1.14,
-      "volume": 7920670,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 8706111,
       "symbol": "SWIGGY (Groww)",
       "yahoo_ticker": "SWIGGY.NS",
       "broker": "Groww",
       "avg_buy": 375.28,
       "qty": 212,
       "invested": 79559.36,
-      "market_value": 58300.0,
-      "pnl": -21259.36,
-      "pnl_pct": -26.72
+      "market_value": 57642.8,
+      "pnl": -21916.56,
+      "pnl_pct": -27.55
     }
   },
   "nse_universe": {
     "RELIANCE.NS": {
-      "price": 1350.2,
+      "price": 1330.0,
       "prev_close": 1330.0,
-      "change": 20.2,
-      "change_pct": 1.52,
-      "volume": 19361550
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 20725390
     },
     "TCS.NS": {
-      "price": 2524.3,
+      "price": 2589.0,
       "prev_close": 2589.0,
-      "change": -64.7,
-      "change_pct": -2.5,
-      "volume": 10477958
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 5628261
     },
     "HDFCBANK.NS": {
-      "price": 810.3,
+      "price": 797.7,
       "prev_close": 797.7,
-      "change": 12.6,
-      "change_pct": 1.58,
-      "volume": 38151687
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 48879392
     },
     "ICICIBANK.NS": {
-      "price": 1321.9,
+      "price": 1281.3,
       "prev_close": 1281.3,
-      "change": 40.6,
-      "change_pct": 3.17,
-      "volume": 18174361
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 22923062
     },
     "BHARTIARTL.NS": {
-      "price": 1870.0,
+      "price": 1859.4,
       "prev_close": 1859.4,
-      "change": 10.6,
-      "change_pct": 0.57,
-      "volume": 5857885
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 10113053
     },
     "SBIN.NS": {
-      "price": 1066.7,
+      "price": 1040.95,
       "prev_close": 1040.95,
-      "change": 25.75,
-      "change_pct": 2.47,
-      "volume": 17859395
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 24772948
     },
     "KOTAKBANK.NS": {
-      "price": 374.55,
+      "price": 371.9,
       "prev_close": 371.9,
-      "change": 2.65,
-      "change_pct": 0.71,
-      "volume": 23751606
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 12422256
     },
     "INFY.NS": {
-      "price": 1292.5,
+      "price": 1331.6,
       "prev_close": 1331.6,
-      "change": -39.1,
-      "change_pct": -2.94,
-      "volume": 19226920
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 14894607
     },
     "LT.NS": {
-      "price": 3959.9,
+      "price": 3896.2,
       "prev_close": 3896.2,
-      "change": 63.7,
-      "change_pct": 1.63,
-      "volume": 2821390
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 4415151
     },
     "HCLTECH.NS": {
-      "price": 1451.2,
+      "price": 1464.9,
       "prev_close": 1464.9,
-      "change": -13.7,
-      "change_pct": -0.94,
-      "volume": 3449905
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3101205
     },
     "MARUTI.NS": {
-      "price": 13709.0,
+      "price": 13589.0,
       "prev_close": 13589.0,
-      "change": 120.0,
-      "change_pct": 0.88,
-      "volume": 471803
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 549914
     },
     "AXISBANK.NS": {
-      "price": 1350.8,
+      "price": 1318.5,
       "prev_close": 1318.5,
-      "change": 32.3,
-      "change_pct": 2.45,
-      "volume": 6755579
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 6542529
     },
     "BAJFINANCE.NS": {
-      "price": 924.55,
+      "price": 903.25,
       "prev_close": 903.25,
-      "change": 21.3,
-      "change_pct": 2.36,
-      "volume": 9491097
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 9457820
     },
     "TITAN.NS": {
-      "price": 4505.0,
+      "price": 4439.8,
       "prev_close": 4439.8,
-      "change": 65.2,
-      "change_pct": 1.47,
-      "volume": 1564993
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1385274
     },
     "SUNPHARMA.NS": {
-      "price": 1654.9,
+      "price": 1717.1,
       "prev_close": 1717.1,
-      "change": -62.2,
-      "change_pct": -3.62,
-      "volume": 8088815
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3276165
     },
     "ASIANPAINT.NS": {
-      "price": 2360.7,
+      "price": 2269.6,
       "prev_close": 2269.6,
-      "change": 91.1,
-      "change_pct": 4.01,
-      "volume": 3017784
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1980060
     },
     "NTPC.NS": {
-      "price": 380.15,
+      "price": 378.65,
       "prev_close": 378.65,
-      "change": 1.5,
-      "change_pct": 0.4,
-      "volume": 14952804
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 18503665
     },
     "POWERGRID.NS": {
-      "price": 302.75,
+      "price": 298.1,
       "prev_close": 298.1,
-      "change": 4.65,
-      "change_pct": 1.56,
-      "volume": 13244451
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 17644642
     },
     "ULTRACEMCO.NS": {
-      "price": 11589.0,
+      "price": 11448.0,
       "prev_close": 11448.0,
-      "change": 141.0,
-      "change_pct": 1.23,
-      "volume": 420330
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 330553
     },
     "ONGC.NS": {
-      "price": 286.5,
+      "price": 288.6,
       "prev_close": 288.6,
-      "change": -2.1,
-      "change_pct": -0.73,
-      "volume": 12886421
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 13585661
     },
     "WIPRO.NS": {
-      "price": 204.88,
+      "price": 202.87,
       "prev_close": 202.87,
-      "change": 2.01,
-      "change_pct": 0.99,
-      "volume": 51177893
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 14540807
     },
     "HINDALCO.NS": {
-      "price": 992.1,
+      "price": 985.65,
       "prev_close": 985.65,
-      "change": 6.45,
-      "change_pct": 0.65,
-      "volume": 6013067
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 9386595
     },
     "JSWSTEEL.NS": {
-      "price": 1214.8,
+      "price": 1209.7,
       "prev_close": 1209.7,
-      "change": 5.1,
-      "change_pct": 0.42,
-      "volume": 1719610
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2563654
     },
     "TECHM.NS": {
-      "price": 1440.2,
+      "price": 1461.6,
       "prev_close": 1461.6,
-      "change": -21.4,
-      "change_pct": -1.46,
-      "volume": 2044897
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1805451
     },
     "GRASIM.NS": {
-      "price": 2742.6,
+      "price": 2740.5,
       "prev_close": 2740.5,
-      "change": 2.1,
-      "change_pct": 0.08,
-      "volume": 611392
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 788928
     },
     "INDUSINDBK.NS": {
-      "price": 830.9,
+      "price": 814.55,
       "prev_close": 814.55,
-      "change": 16.35,
-      "change_pct": 2.01,
-      "volume": 1508531
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2531440
     },
     "TATACONSUM.NS": {
-      "price": 1093.7,
+      "price": 1078.0,
       "prev_close": 1078.0,
-      "change": 15.7,
-      "change_pct": 1.46,
-      "volume": 1580153
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2167226
     },
     "BAJAJFINSV.NS": {
-      "price": 1809.2,
+      "price": 1767.7,
       "prev_close": 1767.7,
-      "change": 41.5,
-      "change_pct": 2.35,
-      "volume": 983435
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1510841
     },
     "CIPLA.NS": {
-      "price": 1229.5,
+      "price": 1224.4,
       "prev_close": 1224.4,
-      "change": 5.1,
-      "change_pct": 0.42,
-      "volume": 2086356
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2545266
     },
     "DRREDDY.NS": {
-      "price": 1232.2,
+      "price": 1211.9,
       "prev_close": 1211.9,
-      "change": 20.3,
-      "change_pct": 1.68,
-      "volume": 1931417
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2746602
     },
     "NESTLEIND.NS": {
-      "price": 1249.3,
+      "price": 1228.7,
       "prev_close": 1228.7,
-      "change": 20.6,
-      "change_pct": 1.68,
-      "volume": 1358273
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1258634
     },
     "DIVISLAB.NS": {
-      "price": 6116.5,
+      "price": 5952.5,
       "prev_close": 5952.5,
-      "change": 164.0,
-      "change_pct": 2.76,
-      "volume": 334869
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 237284
     },
     "BRITANNIA.NS": {
-      "price": 5557.5,
+      "price": 5475.0,
       "prev_close": 5475.0,
-      "change": 82.5,
-      "change_pct": 1.51,
-      "volume": 339506
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 624921
     },
     "BPCL.NS": {
-      "price": 299.35,
+      "price": 297.35,
       "prev_close": 297.35,
-      "change": 2.0,
-      "change_pct": 0.67,
-      "volume": 13852551
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 17580272
     },
     "COALINDIA.NS": {
-      "price": 434.1,
+      "price": 454.1,
       "prev_close": 454.1,
-      "change": -20.0,
-      "change_pct": -4.4,
-      "volume": 29601127
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 9468415
     },
     "SHRIRAMFIN.NS": {
-      "price": 1027.55,
+      "price": 996.3,
       "prev_close": 996.3,
-      "change": 31.25,
-      "change_pct": 3.14,
-      "volume": 8048034
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 7668209
     },
     "HDFCLIFE.NS": {
-      "price": 604.15,
+      "price": 591.2,
       "prev_close": 591.2,
-      "change": 12.95,
-      "change_pct": 2.19,
-      "volume": 4385712
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3912249
     },
     "SBILIFE.NS": {
-      "price": 1923.2,
+      "price": 1904.0,
       "prev_close": 1904.0,
-      "change": 19.2,
-      "change_pct": 1.01,
-      "volume": 763543
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1330082
     },
     "EICHERMOT.NS": {
-      "price": 7424.0,
+      "price": 7147.5,
       "prev_close": 7147.5,
-      "change": 276.5,
-      "change_pct": 3.87,
-      "volume": 705352
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 648216
     },
     "ADANIENT.NS": {
-      "price": 2086.8,
+      "price": 2040.5,
       "prev_close": 2040.5,
-      "change": 46.3,
-      "change_pct": 2.27,
-      "volume": 1699757
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2481188
     },
     "ADANIPORTS.NS": {
-      "price": 1475.3,
+      "price": 1447.4,
       "prev_close": 1447.4,
-      "change": 27.9,
-      "change_pct": 1.93,
-      "volume": 4026543
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3159307
     },
     "HEROMOTOCO.NS": {
-      "price": 5466.5,
+      "price": 5284.0,
       "prev_close": 5284.0,
-      "change": 182.5,
-      "change_pct": 3.45,
-      "volume": 855855
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 760419
     },
     "APOLLOHOSP.NS": {
-      "price": 7511.5,
+      "price": 7481.5,
       "prev_close": 7481.5,
-      "change": 30.0,
-      "change_pct": 0.4,
-      "volume": 437131
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 416753
     },
     "BAJAJ-AUTO.NS": {
-      "price": 9813.5,
+      "price": 9517.0,
       "prev_close": 9517.0,
-      "change": 296.5,
-      "change_pct": 3.12,
-      "volume": 738933
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 539407
     },
     "M&M.NS": {
-      "price": 3259.8,
+      "price": 3166.8,
       "prev_close": 3166.8,
-      "change": 93.0,
-      "change_pct": 2.94,
-      "volume": 2801347
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3039565
     },
     "TATASTEEL.NS": {
-      "price": 206.61,
+      "price": 205.2,
       "prev_close": 205.2,
-      "change": 1.41,
-      "change_pct": 0.69,
-      "volume": 28383135
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 36853400
     },
     "TRENT.NS": {
-      "price": 3916.5,
+      "price": 3850.7,
       "prev_close": 3850.7,
-      "change": 65.8,
-      "change_pct": 1.71,
-      "volume": 1186122
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 749640
     },
     "BEL.NS": {
-      "price": 442.45,
+      "price": 439.75,
       "prev_close": 439.75,
-      "change": 2.7,
-      "change_pct": 0.61,
-      "volume": 10830368
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 19917307
     },
     "JIOFIN.NS": {
       "price": 243.2,
       "prev_close": 238.84,
       "change": 4.36,
       "change_pct": 1.83,
-      "volume": 12029910
+      "volume": 12039950
     },
     "IREDA.NS": {
-      "price": 123.72,
+      "price": 123.13,
       "prev_close": 123.13,
-      "change": 0.59,
-      "change_pct": 0.48,
-      "volume": 9495493
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 10836914
     },
     "IRFC.NS": {
-      "price": 100.26,
+      "price": 98.49,
       "prev_close": 98.49,
-      "change": 1.77,
-      "change_pct": 1.8,
-      "volume": 20756631
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 16170504
     },
     "IRCON.NS": {
-      "price": 136.51,
+      "price": 133.43,
       "prev_close": 133.43,
-      "change": 3.08,
-      "change_pct": 2.31,
-      "volume": 4461778
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3875557
     },
     "NCC.NS": {
-      "price": 153.06,
+      "price": 147.95,
       "prev_close": 147.95,
-      "change": 5.11,
-      "change_pct": 3.45,
-      "volume": 3391716
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2599823
     },
     "CDSL.NS": {
-      "price": 1303.4,
+      "price": 1279.3,
       "prev_close": 1279.3,
-      "change": 24.1,
-      "change_pct": 1.88,
-      "volume": 2533851
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2724972
     },
     "SUZLON.NS": {
-      "price": 45.32,
+      "price": 44.23,
       "prev_close": 44.23,
-      "change": 1.09,
-      "change_pct": 2.46,
-      "volume": 67272589
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 80302508
     },
     "SWIGGY.NS": {
-      "price": 275.0,
+      "price": 271.9,
       "prev_close": 271.9,
-      "change": 3.1,
-      "change_pct": 1.14,
-      "volume": 7920670
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 8706111
     },
     "ETERNAL.NS": {
       "price": 240.23,
       "prev_close": 237.89,
       "change": 2.34,
       "change_pct": 0.98,
-      "volume": 40178864
+      "volume": 40180860
     },
     "NYKAA.NS": {
-      "price": 259.49,
+      "price": 254.93,
       "prev_close": 254.93,
-      "change": 4.56,
-      "change_pct": 1.79,
-      "volume": 3212164
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 4176546
     },
     "DMART.NS": {
-      "price": 4400.6,
+      "price": 4415.6,
       "prev_close": 4415.6,
-      "change": -15.0,
-      "change_pct": -0.34,
-      "volume": 441816
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 549708
     },
     "INDIGO.NS": {
-      "price": 4554.2,
+      "price": 4449.1,
       "prev_close": 4449.1,
-      "change": 105.1,
-      "change_pct": 2.36,
-      "volume": 1295907
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1904534
     },
     "COCHINSHIP.NS": {
-      "price": 1464.6,
+      "price": 1423.9,
       "prev_close": 1423.9,
-      "change": 40.7,
-      "change_pct": 2.86,
-      "volume": 3027565
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 3535624
     },
     "MAZDOCK.NS": {
-      "price": 2470.2,
+      "price": 2435.5,
       "prev_close": 2435.5,
-      "change": 34.7,
-      "change_pct": 1.42,
-      "volume": 2003500
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2726784
     },
     "GRSE.NS": {
-      "price": 2539.8,
+      "price": 2523.6,
       "prev_close": 2523.6,
-      "change": 16.2,
-      "change_pct": 0.64,
-      "volume": 2321011
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 2601637
     },
     "GODREJPROP.NS": {
-      "price": 1716.5,
+      "price": 1695.5,
       "prev_close": 1695.5,
-      "change": 21.0,
-      "change_pct": 1.24,
-      "volume": 2202418
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 784426
     },
     "PRESTIGE.NS": {
-      "price": 1322.4,
+      "price": 1319.4,
       "prev_close": 1319.4,
-      "change": 3.0,
-      "change_pct": 0.23,
-      "volume": 2399222
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 847595
     },
     "SOBHA.NS": {
-      "price": 1299.9,
+      "price": 1300.6,
       "prev_close": 1300.6,
-      "change": -0.7,
-      "change_pct": -0.05,
-      "volume": 155782
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 122599
     },
     "OBEROIRLTY.NS": {
-      "price": 1671.7,
+      "price": 1653.5,
       "prev_close": 1653.5,
-      "change": 18.2,
-      "change_pct": 1.1,
-      "volume": 631917
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1071322
     },
     "MRPL.NS": {
-      "price": 174.62,
+      "price": 176.24,
       "prev_close": 176.24,
-      "change": -1.62,
-      "change_pct": -0.92,
-      "volume": 4661418
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 5301448
     },
     "GAIL.NS": {
-      "price": 154.08,
+      "price": 152.22,
       "prev_close": 152.22,
-      "change": 1.86,
-      "change_pct": 1.22,
-      "volume": 14098605
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 10066115
     },
     "IOC.NS": {
-      "price": 142.96,
+      "price": 141.67,
       "prev_close": 141.67,
-      "change": 1.29,
-      "change_pct": 0.91,
-      "volume": 13674547
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 22052191
     },
     "HINDPETRO.NS": {
-      "price": 360.6,
+      "price": 358.0,
       "prev_close": 358.0,
-      "change": 2.6,
-      "change_pct": 0.73,
-      "volume": 6347094
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 13372048
     },
     "ACMESOLAR.NS": {
-      "price": 268.65,
+      "price": 273.1,
       "prev_close": 273.1,
-      "change": -4.45,
-      "change_pct": -1.63,
-      "volume": 864141
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 632698
     },
     "ADANIGREEN.NS": {
-      "price": 1085.35,
+      "price": 1044.55,
       "prev_close": 1044.55,
-      "change": 40.8,
-      "change_pct": 3.91,
-      "volume": 7332072
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 5921322
     },
     "ADANIPOWER.NS": {
-      "price": 175.81,
+      "price": 172.33,
       "prev_close": 172.33,
-      "change": 3.48,
-      "change_pct": 2.02,
-      "volume": 51939107
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 42258124
     },
     "TATAPOWER.NS": {
-      "price": 399.35,
+      "price": 394.7,
       "prev_close": 394.7,
-      "change": 4.65,
-      "change_pct": 1.18,
-      "volume": 6095357
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 8546666
     },
     "NHPC.NS": {
-      "price": 77.09,
+      "price": 77.11,
       "prev_close": 77.11,
-      "change": -0.02,
-      "change_pct": -0.03,
-      "volume": 17937718
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 31334772
     },
     "PREMEXPLN.NS": {
-      "price": 460.35,
+      "price": 454.7,
       "prev_close": 454.7,
-      "change": 5.65,
-      "change_pct": 1.24,
-      "volume": 208900
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 253845
     },
     "URBANCO.NS": {
-      "price": 134.52,
+      "price": 127.14,
       "prev_close": 127.14,
-      "change": 7.38,
-      "change_pct": 5.8,
-      "volume": 15325835
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 4506548
     },
     "IGIL.NS": {
       "price": 340.05,
       "prev_close": 337.0,
       "change": 3.05,
       "change_pct": 0.91,
-      "volume": 299328
+      "volume": 299331
     },
     "ASTRAMICRO.NS": {
-      "price": 1015.65,
+      "price": 1011.05,
       "prev_close": 1011.05,
-      "change": 4.6,
-      "change_pct": 0.45,
-      "volume": 226139
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 420119
     },
     "SBISILVER.NS": {
       "price": 232.13,
       "prev_close": 229.14,
       "change": 2.99,
       "change_pct": 1.3,
-      "volume": 1401936
+      "volume": 1402726
     },
     "SETFGOLD.NS": {
-      "price": 127.31,
+      "price": 127.04,
       "prev_close": 127.04,
-      "change": 0.27,
-      "change_pct": 0.21,
-      "volume": 6647561
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 7287949
     },
     "ITC.NS": {
-      "price": 304.25,
+      "price": 303.0,
       "prev_close": 303.0,
-      "change": 1.25,
-      "change_pct": 0.41,
-      "volume": 17743926
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 17691477
     },
     "PIIND.NS": {
-      "price": 2952.1,
+      "price": 2880.7,
       "prev_close": 2880.7,
-      "change": 71.4,
-      "change_pct": 2.48,
-      "volume": 152419
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 437619
     },
     "SATIA.NS": {
-      "price": 64.34,
+      "price": 63.21,
       "prev_close": 63.21,
-      "change": 1.13,
-      "change_pct": 1.79,
-      "volume": 90038
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 51032
     },
     "GOLDBEES.NS": {
-      "price": 123.49,
+      "price": 123.21,
       "prev_close": 123.21,
-      "change": 0.28,
-      "change_pct": 0.23,
-      "volume": 32217403
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 36306691
     },
     "SILVERBEES.NS": {
-      "price": 226.54,
+      "price": 223.83,
       "prev_close": 223.83,
-      "change": 2.71,
-      "change_pct": 1.21,
-      "volume": 27552286
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 34679027
     },
     "NIFTYBEES.NS": {
-      "price": 271.95,
+      "price": 269.49,
       "prev_close": 269.49,
-      "change": 2.46,
-      "change_pct": 0.91,
-      "volume": 11040034
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 10726135
     }
   }
 }

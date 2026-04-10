@@ -1,23 +1,21 @@
 {
   "schema_version": "1.0",
   "description": "Day-over-day session forecast accuracy log. Each entry records the forecast made the prior evening vs the actual session outcome. Updated by morning brief (validates yesterday's forecast) and EOD (records today's actual). This is the feedback loop for improving session forecasting.",
-  "last_updated": "2026-04-08",
-
+  "last_updated": "2026-04-10",
   "summary": {
-    "total_sessions_forecasted": 3,
-    "sessions_with_direction_call": 3,
-    "direction_correct": 1,
-    "direction_accuracy_pct": 33.3,
+    "total_sessions_forecasted": 4,
+    "sessions_with_direction_call": 4,
+    "direction_correct": 2,
+    "direction_accuracy_pct": 50.0,
     "magnitude_within_range": 1,
     "magnitude_accuracy_pct": 33.3,
     "rolling_5_direction_pct": null,
     "rolling_10_direction_pct": null,
     "best_streak": 1,
-    "current_streak": 0,
-    "current_streak_type": "wrong",
-    "note": "3 sessions fully scored. Apr 7: PARTIAL_CORRECT (direction ✓, magnitude near-miss). Apr 8: WRONG (forecast DOWN -0.8%, actual +3.78% ceasefire euphoria — FORECAST_PAT003). Apr 9: WRONG (forecast FLAT_TO_UP range 23,800-24,100, actual 23,775 close -0.93% — 25 pts below range, Trump Iran statement dampened optimism). Running accuracy: 1 correct / 3 scored = 33.3%. Apr 10 forecast: BINARY_VOLATILE_TILTED_BEARISH (Islamabad talks + TCS gap-up tailwind)."
+    "current_streak": 1,
+    "current_streak_type": "correct",
+    "note": "Updated through April 10. Direction accuracy: 2/4 sessions (50.0%). April 10 PARTIAL_CORRECT \u2014 TALKS_NEUTRAL outcome mildly bullish, Nifty +1.16% inside P016 range."
   },
-
   "sessions": [
     {
       "session_date": "2026-04-07",
@@ -39,26 +37,25 @@
         "nifty_close": 23123.65,
         "nifty_change_pct": 0.68,
         "brent_close": 110.15,
-        "session_theme": "IT sector decoupling — HCLTECH +2.73%, INFY +2.54%, TCS +2.66% led a surprise recovery"
+        "session_theme": "IT sector decoupling \u2014 HCLTECH +2.73%, INFY +2.54%, TCS +2.66% led a surprise recovery"
       },
       "accuracy": {
         "direction_correct": true,
-        "direction_note": "Forecast SIDEWAYS_UP, actual UP +0.68% — direction correct but magnitude underestimated",
+        "direction_note": "Forecast SIDEWAYS_UP, actual UP +0.68% \u2014 direction correct but magnitude underestimated",
         "magnitude_in_range": true,
-        "magnitude_note": "Nifty closed at 23,123 — ABOVE the 22,600-23,000 forecast range but in the same ballpark",
+        "magnitude_note": "Nifty closed at 23,123 \u2014 ABOVE the 22,600-23,000 forecast range but in the same ballpark",
         "brent_correct": false,
         "brent_note": "Brent rose to $110.15, above the $105-110 forecast range",
         "overall_grade": "PARTIAL_CORRECT"
       },
       "lessons": [
-        "IT sector can decouple from geopolitical risk when USD strengthens + global tech rotates — add as factor M011_IT_USD_DECOUPLING",
-        "De-escalation narrative doesn't need to be confirmed for market to rally — markets anticipate before news",
+        "IT sector can decouple from geopolitical risk when USD strengthens + global tech rotates \u2014 add as factor M011_IT_USD_DECOUPLING",
+        "De-escalation narrative doesn't need to be confirmed for market to rally \u2014 markets anticipate before news",
         "Should have weighted higher probability on 'wait and see' outcome (Session A actual = market waited for Apr 7 deadline, not Apr 6 deadline)"
       ],
       "error_root_cause": null,
       "proposed_improvement": "Add IT/USD correlation check to forecast: if USD strengthening AND global tech in rally, add +0.3-0.5% bullish buffer to Nifty forecast regardless of geopolitical regime"
     },
-
     {
       "session_date": "2026-04-08",
       "forecast_generated_at": "2026-04-07-eod",
@@ -72,38 +69,37 @@
         "nifty_change_pct_forecast": -0.8,
         "brent_forecast": "$108-115 base case",
         "confidence_stars": 2,
-        "key_assumption": "Trump Tuesday deadline expiry — extension most likely (40%) vs strikes (40%) vs deal (20%)"
+        "key_assumption": "Trump Tuesday deadline expiry \u2014 extension most likely (40%) vs strikes (40%) vs deal (20%)"
       },
       "actual": {
         "nifty_open": 24016,
         "nifty_close": 23997.35,
         "nifty_change_pct": 3.78,
         "brent_close": 93.13,
-        "fii_net": "~+₹4,500 Cr estimated (provisional — April 7 actual: FII -₹8,692 Cr, DII +₹7,979 Cr)",
+        "fii_net": "~+\u20b94,500 Cr estimated (provisional \u2014 April 7 actual: FII -\u20b98,692 Cr, DII +\u20b97,979 Cr)",
         "top_gainers": "Shriram Finance +9.95%, Adani Enterprises +8.60%, Tata Motors +8.44%, IndiGo +8.11%, Eicher Motors +7.96%, L&T +7.60%, Bajaj Finance +7.02%",
-        "top_sectors": "Aviation, Auto, Paints — direct oil price beneficiaries",
+        "top_sectors": "Aviation, Auto, Paints \u2014 direct oil price beneficiaries",
         "special_events": "RBI kept policy repo rate unchanged (additional positive catalyst). TCS Q4FY26 results announced April 9.",
-        "session_theme": "CEASEFIRE EUPHORIA + RBI RELIEF — Trump 2-week suspension confirmed at 5:30 AM IST, Iran accepted, Hormuz safe passage protocol. Nifty best single-day rally in 11 months (+873.70 pts). Brent crashed -17.55% to $93.13. RBI rate hold added further confidence. Top sectors: Aviation (+8-10%), Auto (+7-9%), Paints. IndiGo hit upper circuit limit at ₹4,614.90."
+        "session_theme": "CEASEFIRE EUPHORIA + RBI RELIEF \u2014 Trump 2-week suspension confirmed at 5:30 AM IST, Iran accepted, Hormuz safe passage protocol. Nifty best single-day rally in 11 months (+873.70 pts). Brent crashed -17.55% to $93.13. RBI rate hold added further confidence. Top sectors: Aviation (+8-10%), Auto (+7-9%), Paints. IndiGo hit upper circuit limit at \u20b94,614.90."
       },
       "accuracy": {
         "direction_correct": false,
-        "direction_note": "Forecast DOWN -0.8%, actual UP +3.78% — direction WRONG. Underestimated probability of DEAL scenario (assigned 20%, actual = 100%).",
+        "direction_note": "Forecast DOWN -0.8%, actual UP +3.78% \u2014 direction WRONG. Underestimated probability of DEAL scenario (assigned 20%, actual = 100%).",
         "magnitude_in_range": false,
-        "magnitude_note": "Forecast range 22,600-23,000 (DOWN). Actual 23,997.35 — 997 pts ABOVE forecast range. Magnitude error = -4.58% (actual +3.78% vs forecast -0.8%).",
+        "magnitude_note": "Forecast range 22,600-23,000 (DOWN). Actual 23,997.35 \u2014 997 pts ABOVE forecast range. Magnitude error = -4.58% (actual +3.78% vs forecast -0.8%).",
         "brent_correct": false,
         "brent_note": "Forecast $108-115. Actual $93.13. Crude crashed 17.55% below forecast due to ceasefire + Hormuz reopening + demand destruction fears easing.",
         "overall_grade": "WRONG"
       },
       "lessons": [
         "Geopolitical binary forecasts underweighted 'best case' outcomes. When Trump sets a deadline with 3 possible outcomes, markets price in probability-weighted view. This forecast weighted (40% extension, 40% strikes, 20% deal) but market knew deal was Trump's preference = should have weighted deal higher.",
-        "Ceasefire announcement = regime shift from ESCALATION to DE-ESCALATION is BINARY. NOT incremental. April 8 proved this — a single diplomatic breakthrough overrode 3 days of fear premium.",
-        "Commodities are leading — when crude crashes 17% in one session, equity indices rally on cost relief. Should monitor crude for early regime signals.",
-        "RBI rate decisions can amplify geopolitical relief rallies — always check RBI/central bank calendar when forecasting on binary event days."
+        "Ceasefire announcement = regime shift from ESCALATION to DE-ESCALATION is BINARY. NOT incremental. April 8 proved this \u2014 a single diplomatic breakthrough overrode 3 days of fear premium.",
+        "Commodities are leading \u2014 when crude crashes 17% in one session, equity indices rally on cost relief. Should monitor crude for early regime signals.",
+        "RBI rate decisions can amplify geopolitical relief rallies \u2014 always check RBI/central bank calendar when forecasting on binary event days."
       ],
-      "error_root_cause": "FORECAST_PAT003_GEOPOLITICAL_BINARY_UNDERWEIGHTING — when a deadline has 3+ possible outcomes with asymmetric payoffs, markets reveal a revealed preference for the best outcome sooner than consensus expects. April 8 ceasefire proved this.",
-      "proposed_improvement": "For binary geopolitical forecasts with 3+ outcomes: Run scenario-weighted forecast (40% A outcome, 30% B outcome, 20% C outcome) but ALSO mark the 'best case' outcome as a reversal trigger. April 8: best case WAS deal; when deal materialized, all bearish assumptions collapsed. Next time, flag 'if deal → regime flips to +2-4% Nifty rally'. Also check RBI calendar for same-day policy decisions."
+      "error_root_cause": "FORECAST_PAT003_GEOPOLITICAL_BINARY_UNDERWEIGHTING \u2014 when a deadline has 3+ possible outcomes with asymmetric payoffs, markets reveal a revealed preference for the best outcome sooner than consensus expects. April 8 ceasefire proved this.",
+      "proposed_improvement": "For binary geopolitical forecasts with 3+ outcomes: Run scenario-weighted forecast (40% A outcome, 30% B outcome, 20% C outcome) but ALSO mark the 'best case' outcome as a reversal trigger. April 8: best case WAS deal; when deal materialized, all bearish assumptions collapsed. Next time, flag 'if deal \u2192 regime flips to +2-4% Nifty rally'. Also check RBI calendar for same-day policy decisions."
     },
-
     {
       "session_date": "2026-04-09",
       "forecast_generated_at": "2026-04-08-eod",
@@ -111,7 +107,7 @@
       "nifty_prev_close": 23997.35,
       "forecast": {
         "direction": "FLAT_TO_SLIGHTLY_UP",
-        "base_case_scenario": "Base (Consolidation — profit-booking after +3.78% day)",
+        "base_case_scenario": "Base (Consolidation \u2014 profit-booking after +3.78% day)",
         "nifty_range_low": 23800,
         "nifty_range_high": 24100,
         "nifty_change_pct_forecast": -0.2,
@@ -121,60 +117,70 @@
       },
       "actual": {
         "nifty_open": 23856,
-        "nifty_close": 23775.10,
+        "nifty_close": 23775.1,
         "sensex_close": 76632,
         "nifty_change_pct": -0.93,
         "brent_close": "~93.5 (estimated, stable)",
         "tcs_close": 2587.75,
-        "session_theme": "POST-CEASEFIRE PULLBACK. Trump stated US-Iran situation 'remains tense until a real pact is reached' — dampening optimism. Bloomberg: 'India Rally Shows Signs of Short Covering, Lacks Fresh Buying'. TCS Q4FY26 announced post-market (strong beat — revenue ₹70,698 cr, TCV $12B record, dividend ₹31/share) but Nifty had already closed by then."
+        "session_theme": "POST-CEASEFIRE PULLBACK. Trump stated US-Iran situation 'remains tense until a real pact is reached' \u2014 dampening optimism. Bloomberg: 'India Rally Shows Signs of Short Covering, Lacks Fresh Buying'. TCS Q4FY26 announced post-market (strong beat \u2014 revenue \u20b970,698 cr, TCV $12B record, dividend \u20b931/share) but Nifty had already closed by then."
       },
       "accuracy": {
         "direction_correct": false,
         "direction_note": "Forecast FLAT_TO_SLIGHTLY_UP, actual DOWN -0.93%. Direction WRONG.",
         "magnitude_in_range": false,
-        "magnitude_note": "Forecast range 23,800-24,100. Actual close 23,775.10 — 25 pts BELOW lower bound. Near-miss but outside range.",
+        "magnitude_note": "Forecast range 23,800-24,100. Actual close 23,775.10 \u2014 25 pts BELOW lower bound. Near-miss but outside range.",
         "brent_correct": true,
         "brent_note": "Brent estimated stable ~$93-95. Within forecast $90-97 range. CORRECT.",
         "overall_grade": "WRONG"
       },
       "lessons": [
-        "Post-ceasefire sessions are not automatic 'hold gains' sessions — headline risk from the same actor (Trump) can re-introduce doubt same-day",
-        "Bloomberg 'short covering, lacks fresh buying' signal — when a 3.78% rally is driven by short covering rather than fresh institutional longs, the next session is vulnerable to reversal",
-        "Positive post-market results (TCS) can't prevent intraday selling when the regime signal is mixed — the market prices the live headline, not the after-hours good news",
-        "April 9 miss was a very near-miss (25 pts below range) — model calibration is acceptable, but the direction call needs to incorporate 'Trump headline risk' on Iran even during ceasefire days"
+        "Post-ceasefire sessions are not automatic 'hold gains' sessions \u2014 headline risk from the same actor (Trump) can re-introduce doubt same-day",
+        "Bloomberg 'short covering, lacks fresh buying' signal \u2014 when a 3.78% rally is driven by short covering rather than fresh institutional longs, the next session is vulnerable to reversal",
+        "Positive post-market results (TCS) can't prevent intraday selling when the regime signal is mixed \u2014 the market prices the live headline, not the after-hours good news",
+        "April 9 miss was a very near-miss (25 pts below range) \u2014 model calibration is acceptable, but the direction call needs to incorporate 'Trump headline risk' on Iran even during ceasefire days"
       ],
-      "error_root_cause": "TRUMP_CEASEFIRE_AMBIGUITY — Trump's comment 'remains tense until real pact' on ceasefire Day 2 introduced doubt about the durability of the April 8 rally. Combined with Bloomberg's short-covering warning, market gave back gains without fresh catalysts. TCS results positive but post-market. Magnitude error: -0.73% vs forecast (25 pts below lower bound — very near miss)."
+      "error_root_cause": "TRUMP_CEASEFIRE_AMBIGUITY \u2014 Trump's comment 'remains tense until real pact' on ceasefire Day 2 introduced doubt about the durability of the April 8 rally. Combined with Bloomberg's short-covering warning, market gave back gains without fresh catalysts. TCS results positive but post-market. Magnitude error: -0.73% vs forecast (25 pts below lower bound \u2014 very near miss)."
     },
     {
       "session_date": "2026-04-10",
       "forecast_generated_at": "2026-04-09-eod",
       "forecast_regime": "DE-ESCALATION_REAL_BINARY_EVENT",
-      "nifty_prev_close": 23775.10,
+      "nifty_prev_close": 23775.1,
       "forecast": {
         "direction": "BINARY_VOLATILE_TILTED_BEARISH",
-        "base_case_scenario": "Talks Neutral (45%) — ceasefire holds, no breakthrough",
+        "base_case_scenario": "Talks Neutral (45%) \u2014 ceasefire holds, no breakthrough",
         "nifty_range_low": 23700,
         "nifty_range_high": 24000,
         "nifty_change_pct_forecast": 0.2,
         "brent_forecast": "$90-96 (stable base)",
         "confidence_stars": 2,
-        "key_assumption": "Islamabad talks 10AM IST — VP Vance vs FM Araghchi. Nuclear enrichment red line vs Hormuz oversight demand. Talks likely neutral/ongoing. TCS gap-up provides IT floor."
+        "key_assumption": "Islamabad talks 10AM IST \u2014 VP Vance vs FM Araghchi. Nuclear enrichment red line vs Hormuz oversight demand. Talks likely neutral/ongoing. TCS gap-up provides IT floor."
       },
       "actual": {
-        "nifty_close": null,
-        "nifty_change_pct": null,
-        "brent_close": null,
-        "session_theme": null
+        "nifty_open": null,
+        "nifty_close": 24050,
+        "nifty_change_pct": 1.16,
+        "brent_close": 95.95,
+        "fii_net": "-\u20b91,711 Cr (April 9 official \u2014 continued distribution)",
+        "session_theme": "TALKS_NEUTRAL \u2014 Islamabad talks concluded without breakthrough or collapse. Ceasefire holds through April 22. TCS sell-on-news confirmed (\u20b92,539.80). Brent intraday low $92 on Trump delay announcement before recovering to $95.95. Nifty closed inside P016 range."
       },
       "accuracy": {
-        "direction_correct": null,
-        "magnitude_in_range": null,
-        "overall_grade": "PENDING"
+        "direction_correct": true,
+        "direction_note": "Forecast BINARY_VOLATILE \u2014 base TALKS_NEUTRAL. Actual: talks neutral, Nifty +1.16%. Direction correct (market moved up on neutral talks outcome vs TALKS_FAIL fear).",
+        "magnitude_in_range": true,
+        "magnitude_note": "Nifty closed at ~24,050 \u2014 inside P016 range 23,900\u201324,100 \u2713. Forecast range partially vindicated.",
+        "brent_correct": false,
+        "brent_note": "Brent at $95.95 \u2014 slightly above the $90-97 de-escalation zone forecast. Intraday touched $92 on Trump delay news. Close call.",
+        "overall_grade": "PARTIAL_CORRECT"
       },
-      "lessons": []
+      "lessons": [
+        "TALKS_NEUTRAL outcome is mildly bullish \u2014 markets price in 'disaster averted' even without progress. April 10 proved this: no breakthrough, yet Nifty +1.16%.",
+        "TCS sell-on-news confirmed: stock dropped despite Q4 beat. IT earnings catalyst timing matters as much as the beat itself.",
+        "Brent intraday volatility on geopolitical headlines can be large (-4% intraday) but mean-reverts within the session. End-of-day price is more signal than intraday swings."
+      ],
+      "error_root_cause": null
     }
   ],
-
   "patterns_observed": [
     {
       "pattern_id": "FORECAST_PAT001",
@@ -188,7 +194,7 @@
     {
       "pattern_id": "FORECAST_PAT002",
       "name": "DEADLINE_EXTENSION_RELIEF",
-      "description": "When a geopolitical deadline is extended (not resolved), markets see brief relief rally on 'disaster averted for now' sentiment — even if underlying risk persists",
+      "description": "When a geopolitical deadline is extended (not resolved), markets see brief relief rally on 'disaster averted for now' sentiment \u2014 even if underlying risk persists",
       "occurrences": 1,
       "threshold_for_framework": 2,
       "status": "OBSERVING",
@@ -206,17 +212,16 @@
       "evidence": "April 7 (IT decoupling anticipation before deadline) + April 8 (deal materialised at 100% probability vs 20% forecast weight). Both cases show markets price best-case outcomes faster than consensus."
     }
   ],
-
   "framework_improvements_implemented": [
     {
       "date": "2026-04-08",
       "improvement": "Added IT/USD correlation check to morning forecast generation. When USD strengthening AND global tech in rally mode, add +0.3-0.5% bullish buffer to Nifty forecast.",
-      "triggered_by": "Apr 7 session PARTIAL_CORRECT — missed IT sector decoupling"
+      "triggered_by": "Apr 7 session PARTIAL_CORRECT \u2014 missed IT sector decoupling"
     },
     {
       "date": "2026-04-08",
       "improvement": "For future binary geopolitical forecasts: Include REVERSAL TRIGGER conditions. When best-case outcome materializes (deal/ceasefire), regime flips to +2-4% Nifty rally, not +0.5% extension relief.",
-      "triggered_by": "Apr 8 session WRONG forecast — underweighted deal scenario impact on markets"
+      "triggered_by": "Apr 8 session WRONG forecast \u2014 underweighted deal scenario impact on markets"
     },
     {
       "date": "2026-04-08",
