@@ -275,12 +275,12 @@
     }
   ],
   "next_session_accuracy": {
-    "total_sessions": 4,
+    "total_sessions": 5,
     "direction_correct": 2,
-    "partial_correct": 1,
+    "partial_correct": 2,
     "within_range": 1,
     "accuracy_pct": 50.0,
-    "last_updated": "2026-04-10-eod",
+    "last_updated": "2026-04-12-weekly",
     "session_log": [
       {
         "date": "2026-04-07",
@@ -308,7 +308,33 @@
         "actual": "Nifty closed ~24,050 (+1.16% from 23,775). TALKS_NEUTRAL confirmed. TCS sell-on-news ₹2,539.80. Brent $95.95 (intraday dip to $91-93 on Trump delay). Sensex +900 pts.",
         "grade": "PARTIAL_CORRECT",
         "notes": "Base scenario (TALKS_NEUTRAL) materialized. Nifty slightly above base range (23,700-24,000 forecast, actual 24,050). Direction correct — recovery, not WAR_PREMIUM_RETURN. Brent intraday surprise (Trump April 22 delay) added upside beyond base model."
+      },
+      {
+        "date": "2026-04-11 (Saturday — no trading)",
+        "forecast": "N/A — weekend geopolitical update",
+        "actual": "Islamabad talks ended with NO DEAL after 21 hours (Vance left without agreement). US Navy entered Strait of Hormuz for mine-clearing. Iran IRGC: 'This is the last warning.' Ceasefire still technically holding per Pakistan FM.",
+        "grade": "REGIME_CHANGE — DE-ESCALATION_TALKS_CONTINUING → TALKS_FAILED_CEASEFIRE_FRAGILE",
+        "notes": "Weekend event significantly changes outlook for April 14 open. War premium likely to return Monday. Brent expected to spike from $95.95 toward $100+. Impact: defense stocks bullish, gold bullish, aviation/ports bearish, IT neutral, Nifty likely gap-down."
       }
     ]
+  },
+  "weekly_review_2026_04_12": {
+    "date": "2026-04-12",
+    "review_type": "SUNDAY_WEEKLY",
+    "predictions_scored_this_week": 0,
+    "note": "No predictions reached check_date during April 7-11 trading week. All scoring (P012, P013, P015, P016, P018, P019, P020, P021, P022) deferred to April 14-17 EOD runs.",
+    "regime_change": "DE-ESCALATION_TALKS_CONTINUING → TALKS_FAILED_CEASEFIRE_FRAGILE",
+    "key_developments": [
+      "Islamabad talks failed — no deal after 21 hours (April 11)",
+      "US Navy entered Strait of Hormuz for mine-clearing (April 11)",
+      "Iran IRGC issued 'last warning' to US destroyers",
+      "Ceasefire technically still holding — Pakistan FM urging both sides to maintain",
+      "FII turned net buyer on April 10 (+₹672 Cr) after 3 days of selling",
+      "Nifty weekly gain +6% — sharpest weekly move since February 2021",
+      "IRFC spiked to ₹100.25 — above P010 range ceiling of ₹95",
+      "Coal India at ₹454 — P005 buffer increased to ₹24 above ₹430 target"
+    ],
+    "framework_update": "FII_CEASEFIRE_DISTRIBUTION promoted to framework (2 confirmed occurrences). New pattern observed: TALKS_FAILED_WAR_PREMIUM_RETURN.",
+    "new_predictions_added": ["P023", "P024", "P025", "P026"]
   }
 }

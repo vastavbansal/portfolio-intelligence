@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-04-12",
+      "type": "weekly",
+      "label": "Sun Apr 12 — Weekly Review",
+      "file": "daily-briefings/weekly-2026-04-12.md",
+      "summary": "Nifty 50 | ~22,700 | 24,050. Sensex | ~74,800 | 79,100"
+    },
+    {
       "date": "2026-04-10",
       "type": "eod",
       "label": "Fri Apr 10 — EOD Wrap",

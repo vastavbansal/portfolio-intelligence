@@ -155,5 +155,83 @@
     "note": "A signal category with <40% accuracy over 8+ predictions triggers post-mortem review. Missing causal factor is identified and added to framework. Not correlation-mining — every new factor must have a fundamental causal explanation."
   },
 
-  "evolution_log": []
+  "geopolitical_patterns": [
+    {
+      "id": "FORECAST_PAT003",
+      "name": "Geopolitical Binary Underweighting",
+      "status": "PROMOTED",
+      "promoted_date": "2026-04-08",
+      "rule": "For any 3-outcome geopolitical binary (strikes/extension/deal), model explicit reversal trigger. Do not rely on probability weighting alone. 'If best-case materializes → index +2-4%, regime flips.'",
+      "confirmed_occurrences": 2
+    },
+    {
+      "id": "M012",
+      "name": "Defense Sector Duration Premium",
+      "status": "PROMOTED",
+      "promoted_date": "2026-04-08",
+      "rule": "Before making defense stock predictions, model DURATION of tension. 2-6 weeks managed tension = HOLD/ADD defense. Instant peace = REDUCE. Acute short escalation = defense spikes then reverses quickly.",
+      "confirmed_occurrences": 2
+    },
+    {
+      "id": "FII_CEASEFIRE_DISTRIBUTION",
+      "name": "FII Distribution on Geopolitical Relief Rallies",
+      "status": "PROMOTED",
+      "promoted_date": "2026-04-12",
+      "rule": "FII uses geopolitical relief rallies to distribute holdings. DII buys to support market. A ceasefire rally driven purely by DIIs (FII net sellers) is structurally fragile — assign +20-30% additional downside probability within 2-5 sessions. Confirmed: April 8 (-₹2,811 Cr), April 9 (-₹1,711 Cr).",
+      "confirmed_occurrences": 2,
+      "first_seen": "2026-04-10"
+    },
+    {
+      "id": "TALKS_FAILED_WAR_PREMIUM_RETURN",
+      "name": "Failed Peace Talks → War Premium Return",
+      "status": "OBSERVING",
+      "proposed_date": "2026-04-12",
+      "observation": "April 11: Islamabad talks ended with NO DEAL after 21 hours. US Navy entered Hormuz. Iran IRGC issued 'last warning.' Pattern: failed high-profile peace talks → Brent spike $3-7, Nifty gap-down -1.5 to -2.5%, gold +1-2%, defense stocks +2-4% at open. April 14 close will confirm or deny.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-04-12"
+    },
+    {
+      "id": "TRUMP_DEADLINE_PRESSURE_CRUDE",
+      "name": "Trump Future Strike Deadline → Crude Decline",
+      "status": "OBSERVING",
+      "proposed_date": "2026-04-10",
+      "observation": "April 10: Trump's April 22 infrastructure-strike deadline announcement caused Brent to fall from $96.51 to $91-93 intraday. Future deadlines = de-escalation signal. Needs 1 more confirmation.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-04-10"
+    },
+    {
+      "id": "SELL_ON_EARNINGS_NEWS_IT",
+      "name": "Large-Cap IT Sell-on-News After Earnings Beat",
+      "status": "OBSERVING",
+      "proposed_date": "2026-04-10",
+      "observation": "TCS Q4FY26: record $12B TCV, revenue BEAT, ₹31 dividend — stock FELL -1.85% on announcement day, continuing -0.6% next day to ₹2,524. Buy-side fully pre-priced the beat. Classic 'sell the news' after 3+ weeks of pre-earnings IT momentum.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-04-10"
+    },
+    {
+      "id": "GOLD_HEDGING_PRE_BINARY",
+      "name": "Gold Pre-Binary-Event Hedging",
+      "status": "OBSERVING",
+      "proposed_date": "2026-04-09",
+      "observation": "SETFGOLD elevated before Islamabad talks (April 9-10). Post-TALKS_NEUTRAL softened to ₹127.31. Pattern: gold retains/elevates into binary events as hedge. This is a SELL SIGNAL into events, HOLD signal when talks fail. April 11 failed talks likely to confirm gold rally leg.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-04-09"
+    }
+  ],
+
+  "evolution_log": [
+    {
+      "date": "2026-04-08",
+      "version": "v2",
+      "changes": "Added FORECAST_PAT003 (Geopolitical Binary Underweighting) and M012 (Defense Sector Duration Premium). Both promoted after 2 confirmed occurrences from RCA001 and RCA002.",
+      "accuracy_at_time": 33.3
+    },
+    {
+      "date": "2026-04-12",
+      "version": "v3",
+      "changes": "Promoted FII_CEASEFIRE_DISTRIBUTION to framework (2 occurrences: April 8 and 9). Added TALKS_FAILED_WAR_PREMIUM_RETURN as new observing pattern (April 11 Islamabad talks failure). Framework now covers 3 geopolitical regime patterns.",
+      "accuracy_at_time": 33.3,
+      "notes": "No new predictions scored this week — scoring cluster April 14-17. IRFC surprise: spiked to ₹100.25 vs P010 range ₹85-95 — ceasefire rally override pattern. Gold at ₹127.31 pre-talk failure — will likely rally toward ₹130-134 on failed talks confirmation."
+    }
+  ]
 }
