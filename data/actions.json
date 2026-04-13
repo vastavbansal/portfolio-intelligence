@@ -1,23 +1,27 @@
 {
   "schema_version": "1.0",
   "description": "Current actionable recommendations. Generated each session based on signals, predictions, and market forecasts. Accuracy is tracked to build confidence over time.",
-  "generated_at": "2026-04-09",
-  "valid_through": "2026-04-10",
-  "midday_updated_at": "2026-04-10T12:30:00",
+  "generated_at": "2026-04-13",
+  "valid_through": "2026-04-14",
+  "midday_updated_at": null,
   "market_regime": {
-    "label": "DE-ESCALATION_REAL_STABLE",
-    "dominant_risk": "April 10 Islamabad talks (10 AM IST) — both US and Iran confirmed participation. Outcome tomorrow is regime-defining. TALKS_FAIL = WAR_PREMIUM_RETURN and Nifty -2-4%.",
-    "key_risk": "Islamabad talks April 10 outcome + TCS Q4FY26 post-market results today (IT direction pivot).",
-    "crude_last": 93.76,
-    "crude_threshold_for_regime_change": 100,
-    "nifty_last": 23856,
-    "nifty_key_support": 23700,
-    "nifty_key_resistance": 24200,
-    "crude_level": "DE-ESCALATION_ZONE ($90-97)",
-    "regime_since": "2026-04-08T05:30:00",
-    "regime_note": "Day 2 of ceasefire — regime unchanged from April 8. Nifty opened cautiously at ~23,856 after +3.78% rally (base case consolidation playing out). GIFT Nifty slightly in red at pre-open. Brent at ~$93.76 — stable in $90-97 de-escalation zone. TCS Q4FY26 results expected post-market today (~3:40-4:20 PM IST): estimates are Revenue ₹69,932 cr (+8% YoY), PAT ₹13,919 cr (+14% YoY), EBIT ~25.3-25.4%. Islamabad talks confirmed April 10 — both US and Iran have confirmed participation, Pakistan hosting. No breakdowns or surprise headlines overnight. Regime STABLE.",
-    "last_updated_by": "midday_check_2026-04-10",
-    "next_binary_event": "2026-04-10T04:30:00Z (Islamabad talks, 10:00 AM IST)"
+    "label": "BLOCKADE_ESCALATION",
+    "dominant_risk": "US naval blockade of Iranian ports ACTIVE from April 13 10 AM ET. Ceasefire technically holding per Trump but under extreme stress. Brent crossed $100 ($101.82). Iran IRGC on highest alert.",
+    "key_risk": "Iran retaliation to US blockade — any Hormuz incident (ship seizure, mine, missile) = WAR_PREMIUM_PEAK. Next binary: April 22 ceasefire expiry (9 days).",
+    "crude_last": 101.82,
+    "crude_pct_change_today": 6.95,
+    "crude_threshold_for_regime_change": 110,
+    "crude_current_zone": "WAR_PREMIUM_ZONE ($100-110)",
+    "nifty_last": 24050,
+    "nifty_open_april13": 23589.6,
+    "nifty_open_pct_change": -1.91,
+    "nifty_key_support": 23200,
+    "nifty_key_resistance": 23900,
+    "gift_nifty_preopen": 23748.5,
+    "regime_since": "2026-04-13T08:59:00",
+    "regime_note": "UPGRADED April 13 morning. US blockade of Hormuz announced April 12 (effective April 13 10 AM ET). Brent +6.95% to $101.82 — crossed $100 threshold (pre-defined regime change signal). Nifty opened -1.92% at 23,589. Defense stocks rallying (Astra Micro at ₹1,132), financials/airlines selling off. Gold rallying as expected. Session forecast: DOWN -2.5% (range 23,300-23,650). P024 (Nifty 23,200-23,700 bearish thesis) is now in range at open.",
+    "last_updated_by": "morning_brief_2026-04-13",
+    "next_binary_event": "2026-04-22 — ceasefire expiry + Trump infrastructure strike deadline (9 days)"
   },
   "actions": [
     {
@@ -117,27 +121,26 @@
     },
     {
       "action_id": "A005",
-      "type": "EXIT_REVIEW",
-      "urgency": "HIGH",
+      "type": "HOLD",
+      "urgency": "MEDIUM",
       "stock": "SETFGOLD",
       "broker": "GROWW",
-      "instruction": "EXIT TRIGGER ACTIVE — MIDDAY UPDATE April 10: SETFGOLD at ~₹126-128 (slightly declining from ₹128.21 as Brent falls to $91-93). TALKS_NEUTRAL (55% midday probability) + Brent declining = war premium compression underway NOW. SELL 50-75% of SETFGOLD at ₹126-128 TODAY. Do not wait for EOD. Retain 25-30% as hedge through April 22 ceasefire deadline. P020 target ₹120-122 now has HIGHER probability given Brent tailwind. If talks fail (30% prob) → retained 25-30% covers upside.",
-      "rationale_short": "MIDDAY URGENCY CONFIRMED: Brent declining to $91-93 = geopolitical risk premium compressing. SETFGOLD at ₹126-128 — exit window still valid. Sell 50-75% TODAY.",
-      "confidence": 3,
-      "confidence_basis": "Ceasefire + Hormuz = war premium compression underway. Gold elevated slightly on talks uncertainty — use this as exit opportunity, not a reason to hold.",
-      "signals_triggered": ["M008","M001"],
+      "instruction": "HOLD — DO NOT SELL. REVISED April 13: US blockade of Hormuz announced. Brent at $101.82 (+6.95%). SETFGOLD estimated at ₹130+ (rallying from ₹127.31). P020 (bearish gold ₹120-122) is CONFIRMED WRONG — scoring WRONG April 15. P023 (gold ₹130-134 by April 17) is TRACKING ON TARGET. HOLD all SETFGOLD through April 22 ceasefire deadline. Monitor for ₹134+ as partial profit zone if war premium expands further. Next review April 22.",
+      "rationale_short": "REGIME REVERSED: Blockade + Brent $102 = war premium expanding. P020 wrong, P023 right. Hold gold — target ₹132-134 by April 17.",
+      "confidence": 5,
+      "confidence_basis": "Blockade = WAR_PREMIUM_RETURN confirmed. Gold is the primary beneficiary. P023 4★ on track. No reason to sell.",
+      "signals_triggered": ["M008"],
       "signal_details": {
-        "M008": "Gold war premium partially compressed but remaining elevated on April 10 talks uncertainty — this is the EXIT window.",
-        "M001": "Brent stable $93.76 — geopolitical risk premium is NOT re-inflating."
+        "M008": "Gold war premium EXPANDING on Hormuz blockade. SETFGOLD at ₹130+. Hold through April 22."
       },
-      "prediction_support": ["P020"],
-      "pnl_impact_if_right": "Exiting near current ₹128 (above A005 trigger zone ₹125) = better than expected exit. P020 predicts ₹120-122 in 7D.",
-      "pnl_impact_if_wrong": "April 10 talks fail → ceasefire collapses → gold rebounds → retained 25-30% covers upside",
-      "risk": "Islamabad talks failure = gold rebounds. Retain 25-30% as hedge.",
-      "valid_until": "2026-04-15",
-      "status": "ACTION_REQUIRED",
+      "prediction_support": ["P023"],
+      "pnl_impact_if_right": "SETFGOLD reaches ₹132-134 by April 17 — P023 RIGHT. Significant upside from ₹127.31.",
+      "pnl_impact_if_wrong": "If US-Iran deal announced suddenly → gold gives back gains quickly. Retain all holdings given current risk.",
+      "risk": "Surprise ceasefire breakthrough = gold pullback. Low probability given blockade escalation.",
+      "valid_until": "2026-04-22",
+      "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-09"
+      "updated_at": "2026-04-13"
     },
     {
       "action_id": "A006",
@@ -189,23 +192,23 @@
       "urgency": "HIGH",
       "stock": "ASTRA MICRO",
       "broker": "ICICI",
-      "instruction": "ASTRA MICRO at ₹1,019.45 (April 8 close) — P012 target ₹1,050-1,080 is only +3-6% away. CONSIDER PARTIAL PROFIT-TAKING (25-35% of position) if stock approaches ₹1,050 TODAY or tomorrow. CRITICAL NOTE: April 10 Islamabad talks are the key risk for defense premium. If talks show progress → defense stocks could unwind 5-10% quickly. Use today's session to set a limit sell order at ₹1,048-1,052 for 25-35% of position. This locks in significant profit (cost ~₹565). Defense sector duration premium (M012) is at maximum in current 2-week managed tension scenario.",
-      "rationale_short": "P012 target within reach. Set partial profit order at ₹1,048-1,052 BEFORE April 10 talks to protect against defense premium unwind.",
-      "confidence": 4,
-      "confidence_basis": "P012 tracking at confidence 4★. ₹1,019.45 → ₹1,050 is +3%. April 10 talks are the timing risk.",
-      "signals_triggered": ["T001","S003"],
+      "instruction": "ASTRA MICRO SURGING — April 13: Stock trading at ₹1,132.50 (day range ₹1,081-₹1,144). P012 target ₹1,050-1,080 has been EXCEEDED. P025 defense premium thesis (₹1,050-1,100 by April 22) is also ALREADY HIT on Day 1. RAISE profit trigger to ₹1,100-1,120. Consider PARTIAL PROFIT TAKING (25-35%) if stock approaches ₹1,140-1,150 today. Blockade escalation = defense premium elevated for longer (M012 framework: maximum premium in active military standoff). P012 WILL SCORE RIGHT on April 14 check. HOLD remaining position with raised stop at ₹1,080.",
+      "rationale_short": "Astra Micro surged to ₹1,132 on blockade news — P012 target exceeded. Raise profit trigger to ₹1,100-1,120. Consider 25-35% partial exit at ₹1,140+.",
+      "confidence": 5,
+      "confidence_basis": "Defense premium at MAXIMUM in active blockade regime. Stock +11.9% from ₹1,012. P012 RIGHT, P025 tracking well ahead of schedule.",
+      "signals_triggered": ["S003","M012"],
       "signal_details": {
-        "T001": "₹1,019.45 → ₹1,050-1,080 resistance zone",
-        "S003": "Defense electronics premium maximized in 2-week managed tension (M012). April 10 talks = key risk."
+        "S003": "Defense electronics premium at MAXIMUM in blockade/standoff regime. M012 framework fully active.",
+        "M012": "Active US-Iran standoff = extended defense premium duration. Not a one-day event."
       },
-      "prediction_support": ["P012"],
-      "pnl_impact_if_right": "Partial exit at ₹1,050+ locks in +86% gain on cost (~₹565). Remaining position for P012 full target ₹1,080.",
-      "pnl_impact_if_wrong": "Ceasefire extends defense premium → stock tests ₹1,100+. Only lose the upside on 25-35% portion.",
-      "risk": "April 10 talks progress = defense premium unwind. THIS is the reason to act BEFORE tomorrow.",
-      "valid_until": "2026-04-14",
+      "prediction_support": ["P012","P025"],
+      "pnl_impact_if_right": "P012 RIGHT (₹1,050-1,080 exceeded). P025 tracking ahead of schedule. Position +100%+ from cost ₹565.",
+      "pnl_impact_if_wrong": "Surprise ceasefire → defense premium collapses → stock could fall 10-15%. Set stop at ₹1,080.",
+      "risk": "Surprise diplomatic breakthrough = defense premium unwind. Currently low probability given blockade.",
+      "valid_until": "2026-04-22",
       "status": "OPEN",
       "created_at": "2026-04-08",
-      "updated_at": "2026-04-09"
+      "updated_at": "2026-04-13"
     }
   ],
   "market_actions": [
@@ -260,22 +263,22 @@
   "action_summary": {
     "total_actions": 8,
     "by_urgency": {
-      "CRITICAL": 2,
+      "CRITICAL": 0,
       "HIGH": 2,
-      "MEDIUM": 2,
-      "LOW": 2
+      "MEDIUM": 3,
+      "LOW": 3
     },
     "by_type": {
       "SELL_PARTIAL": 0,
-      "EXIT_REVIEW": 1,
-      "HOLD": 3,
+      "EXIT_REVIEW": 0,
+      "HOLD": 4,
       "HOLD_FOR_RECOVERY": 1,
-      "WATCH": 2,
-      "ACTION_REQUIRED": 1
+      "WATCH": 3,
+      "ACTION_REQUIRED": 0
     },
-    "critical_action": "MA002 (Islamabad talks April 10) + MA003 (TCS results today post-market). A005 SETFGOLD exit — SELL 50-75% TODAY. A008 ASTRA MICRO — set partial profit limit at ₹1,048-1,052 BEFORE tomorrow's talks.",
-    "highest_priority_today": "1. SETFGOLD — SELL 50-75% at market open (A005). 2. ASTRA MICRO — set limit sell 25-35% at ₹1,048-1,052 (A008). 3. Monitor TCS results post-market and score P018. 4. Watch Nifty — consolidation expected (23,700-24,050 range). 5. Prepare for April 10 Islamabad talks.",
-    "regime_change_summary": "STABLE: Regime remains DE-ESCALATION_REAL from April 8. No overnight surprises. Ceasefire Day 2 holding. Islamabad talks confirmed for April 10. Nifty opened cautiously (base case). TCS results post-market today are the IT sector catalyst."
+    "critical_action": "A008 ASTRA MICRO — raise profit trigger to ₹1,100-1,120, consider 25-35% partial exit at ₹1,140+. A002 INDIGO — Brent >$100 = review sell trigger. A004 ADANI PORT — blockade = Hormuz contested, sell 25-30% on any bounce.",
+    "highest_priority_today": "1. ASTRA MICRO (A008) — stock at ₹1,132, raise profit trigger, set stop at ₹1,080. 2. SETFGOLD (A005) — HOLD confirmed, gold rallying toward P023 target ₹130-134. 3. ADANI PORT (A004) — downgrade to sell on bounce. 4. MRPL (A007) — Brent $102 = GRM thesis at risk, monitor. 5. INDIGO (A002) — Brent >$100, review sell trigger carefully.",
+    "regime_change_summary": "UPGRADED April 13: BLOCKADE_ESCALATION. US naval blockade of Hormuz announced April 12, effective April 13 10 AM ET. Brent +6.95% to $101.82, crossed $100 threshold. Nifty gap-down -1.92% to 23,589 at open. Defense stocks surging, gold rallying, financials/airlines selling off. April 22 ceasefire deadline (9 days) remains the defining binary event."
   },
-  "last_updated_by": "midday_check_2026-04-10"
+  "last_updated_by": "morning_brief_2026-04-13"
 }

@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-04-13",
+      "type": "morning",
+      "label": "Mon Apr 13 — Morning Briefing",
+      "file": "daily-briefings/2026-04-13-morning.md",
+      "summary": "War premium: FULLY RETURNED — Brent +6.95% to $101.82. GIFT Nifty at 8:59 AM IST: 23,748.50"
+    },
+    {
       "date": "2026-04-12",
       "type": "weekly",
       "label": "Sun Apr 12 — Weekly Review",
