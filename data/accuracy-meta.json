@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-08T18:00:00",
+  "last_updated": "2026-04-13T17:00:00",
   "L1_scorecard": {
     "all_time": {
       "total": 20,
@@ -193,11 +193,12 @@
     "monthly_accuracy": [
       {
         "month": "2026-04",
-        "scored": 3,
+        "scored": 4,
         "right": 1,
         "wrong": 2,
-        "accuracy_pct": 33.3,
-        "notes": "April 7: P008 RIGHT (Nifty held 22,000). April 8: P007 WRONG (SWIGGY didn't breach \u20b9260 \u2014 ceasefire relief), P009 WRONG (ASTRA MICRO didn't pullback \u2014 2-week ceasefire extended war premium). Both failures attributable to single regime shift (ceasefire deal). Framework updated with FORECAST_PAT003 and M012."
+        "accuracy_pct": 25.0,
+        "notes": "April 7: P008 RIGHT. April 8: P007 WRONG, P009 WRONG (ceasefire regime shift). April 13 session: PARTIAL_CORRECT (direction right, magnitude underestimated). Framework promotes BLOCKADE_ESCALATION_STABILIZATION as new pattern.",
+        "partial": 1
       }
     ],
     "rolling_accuracy": {
@@ -207,7 +208,7 @@
         "accuracy_pct": 33.3
       }
     },
-    "improvement_signal": "INSUFFICIENT_DATA \u2014 need minimum 10 scored predictions for trend detection. P013 (INDIGO) WILL SCORE WRONG April 14. P012 (ASTRA MICRO) 40% RIGHT / 60% WRONG April 14. Batch of P015-P021 checking April 15 will provide much richer signal. FII_CEASEFIRE_DISTRIBUTION pattern at 2 occurrences — candidate for framework promotion at Sunday weekly review.",
+    "improvement_signal": "INSUFFICIENT_DATA \u2014 need minimum 10 scored predictions for trend detection. P013 (INDIGO) WILL SCORE WRONG April 14. P012 (ASTRA MICRO) 40% RIGHT / 60% WRONG April 14. Batch of P015-P021 checking April 15 will provide much richer signal. FII_CEASEFIRE_DISTRIBUTION pattern at 2 occurrences \u2014 candidate for framework promotion at Sunday weekly review.",
     "notes": "3 predictions scored to date. 2 WRONG cases share one root cause (ceasefire regime shift). Not a systematic signal framework failure \u2014 was a macro regime change event. Framework has been updated. Next batch: P013 WRONG (confirmed), P012 uncertain, P015 RIGHT (confirmed), P016 tracking (Nifty 24,050 inside range). Session accuracy improving: 50% direction (2/4) from 33.3% (1/3). April 10 TALKS_NEUTRAL materialized as expected \u2014 base scenario framework working. New pattern: TRUMP_DEADLINE_PRESSURE_CRUDE (1st observation April 10)."
   },
   "factor_performance": {
@@ -275,12 +276,12 @@
     }
   ],
   "next_session_accuracy": {
-    "total_sessions": 5,
-    "direction_correct": 2,
-    "partial_correct": 2,
+    "total_sessions": 6,
+    "direction_correct": 3,
+    "partial_correct": 3,
     "within_range": 1,
     "accuracy_pct": 50.0,
-    "last_updated": "2026-04-12-weekly",
+    "last_updated": "2026-04-13-eod",
     "session_log": [
       {
         "date": "2026-04-07",
@@ -304,17 +305,25 @@
       },
       {
         "date": "2026-04-10",
-        "forecast": "BINARY_VOLATILE_TILTED_BEARISH (20/45/35 bull/base/bear) — Islamabad talks + TCS gap-up",
-        "actual": "Nifty closed ~24,050 (+1.16% from 23,775). TALKS_NEUTRAL confirmed. TCS sell-on-news ₹2,539.80. Brent $95.95 (intraday dip to $91-93 on Trump delay). Sensex +900 pts.",
+        "forecast": "BINARY_VOLATILE_TILTED_BEARISH (20/45/35 bull/base/bear) \u2014 Islamabad talks + TCS gap-up",
+        "actual": "Nifty closed ~24,050 (+1.16% from 23,775). TALKS_NEUTRAL confirmed. TCS sell-on-news \u20b92,539.80. Brent $95.95 (intraday dip to $91-93 on Trump delay). Sensex +900 pts.",
         "grade": "PARTIAL_CORRECT",
-        "notes": "Base scenario (TALKS_NEUTRAL) materialized. Nifty slightly above base range (23,700-24,000 forecast, actual 24,050). Direction correct — recovery, not WAR_PREMIUM_RETURN. Brent intraday surprise (Trump April 22 delay) added upside beyond base model."
+        "notes": "Base scenario (TALKS_NEUTRAL) materialized. Nifty slightly above base range (23,700-24,000 forecast, actual 24,050). Direction correct \u2014 recovery, not WAR_PREMIUM_RETURN. Brent intraday surprise (Trump April 22 delay) added upside beyond base model."
       },
       {
-        "date": "2026-04-11 (Saturday — no trading)",
-        "forecast": "N/A — weekend geopolitical update",
+        "date": "2026-04-11 (Saturday \u2014 no trading)",
+        "forecast": "N/A \u2014 weekend geopolitical update",
         "actual": "Islamabad talks ended with NO DEAL after 21 hours (Vance left without agreement). US Navy entered Strait of Hormuz for mine-clearing. Iran IRGC: 'This is the last warning.' Ceasefire still technically holding per Pakistan FM.",
-        "grade": "REGIME_CHANGE — DE-ESCALATION_TALKS_CONTINUING → TALKS_FAILED_CEASEFIRE_FRAGILE",
+        "grade": "REGIME_CHANGE \u2014 DE-ESCALATION_TALKS_CONTINUING \u2192 TALKS_FAILED_CEASEFIRE_FRAGILE",
         "notes": "Weekend event significantly changes outlook for April 14 open. War premium likely to return Monday. Brent expected to spike from $95.95 toward $100+. Impact: defense stocks bullish, gold bullish, aviation/ports bearish, IT neutral, Nifty likely gap-down."
+      },
+      {
+        "date": "2026-04-13",
+        "forecast": "DOWN -2.5% (range 23,300-23,650)",
+        "actual": "DOWN -0.91% (close 23,830)",
+        "grade": "PARTIAL_CORRECT",
+        "root_cause": null,
+        "notes": "Direction correct but magnitude underestimated. Market held better than expected due to intraday support. Opening bias accurate (GAP_DOWN)."
       }
     ]
   },
@@ -323,18 +332,23 @@
     "review_type": "SUNDAY_WEEKLY",
     "predictions_scored_this_week": 0,
     "note": "No predictions reached check_date during April 7-11 trading week. All scoring (P012, P013, P015, P016, P018, P019, P020, P021, P022) deferred to April 14-17 EOD runs.",
-    "regime_change": "DE-ESCALATION_TALKS_CONTINUING → TALKS_FAILED_CEASEFIRE_FRAGILE",
+    "regime_change": "DE-ESCALATION_TALKS_CONTINUING \u2192 TALKS_FAILED_CEASEFIRE_FRAGILE",
     "key_developments": [
-      "Islamabad talks failed — no deal after 21 hours (April 11)",
+      "Islamabad talks failed \u2014 no deal after 21 hours (April 11)",
       "US Navy entered Strait of Hormuz for mine-clearing (April 11)",
       "Iran IRGC issued 'last warning' to US destroyers",
-      "Ceasefire technically still holding — Pakistan FM urging both sides to maintain",
-      "FII turned net buyer on April 10 (+₹672 Cr) after 3 days of selling",
-      "Nifty weekly gain +6% — sharpest weekly move since February 2021",
-      "IRFC spiked to ₹100.25 — above P010 range ceiling of ₹95",
-      "Coal India at ₹454 — P005 buffer increased to ₹24 above ₹430 target"
+      "Ceasefire technically still holding \u2014 Pakistan FM urging both sides to maintain",
+      "FII turned net buyer on April 10 (+\u20b9672 Cr) after 3 days of selling",
+      "Nifty weekly gain +6% \u2014 sharpest weekly move since February 2021",
+      "IRFC spiked to \u20b9100.25 \u2014 above P010 range ceiling of \u20b995",
+      "Coal India at \u20b9454 \u2014 P005 buffer increased to \u20b924 above \u20b9430 target"
     ],
     "framework_update": "FII_CEASEFIRE_DISTRIBUTION promoted to framework (2 confirmed occurrences). New pattern observed: TALKS_FAILED_WAR_PREMIUM_RETURN.",
-    "new_predictions_added": ["P023", "P024", "P025", "P026"]
+    "new_predictions_added": [
+      "P023",
+      "P024",
+      "P025",
+      "P026"
+    ]
   }
 }

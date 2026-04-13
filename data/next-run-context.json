@@ -1,654 +1,105 @@
 {
   "schema_version": "1.0",
-  "description": "Dynamic bridge between scheduled runs. Each run reads this file, applies its learnings, does its work, then OVERWRITES this file with updated context for the next run. This is the memory of the intelligence system.",
-  "last_updated_by": "morning_brief_2026-04-13",
-  "last_updated_at": "2026-04-13T08:59:00",
+  "description": "Dynamic bridge between scheduled runs for April 15 session",
+  "last_updated_by": "eod_wrap_2026-04-13",
+  "last_updated_at": "2026-04-13T17:00:00",
   "market_regime": {
-    "label": "BLOCKADE_ESCALATION",
-    "key_risk": "US naval blockade of Iranian ports ACTIVE from April 13 10 AM ET. Ceasefire technically holding per Trump ('holding well') but blockade represents a massive escalation. Iran IRGC on highest alert. April 22 deadline (9 days) is THE defining event.",
-    "dominant_risk": "Iran retaliation to blockade — any Hormuz incident (ship attack, mine, missile strike on US Navy vessel) triggers WAR_PREMIUM_PEAK. Brent could spike to $120-130. Nifty -5-8% in that scenario.",
-    "crude_last": 101.82,
-    "crude_pct_change_today": 6.95,
+    "label": "BLOCKADE_ESCALATION_STABILIZED",
+    "key_risk": "US naval blockade holding. Brent $102 baseline. April 22 deadline. War premium durable through week but no imminent catalysts April 15.",
+    "dominant_risk": "Any geopolitical incident over April 14-15 (even if market closed April 14) could shift regime.",
+    "crude_last": 102.26,
+    "crude_pct_change_today": 6.58,
     "crude_threshold_for_regime_change": 110,
     "crude_current_zone": "WAR_PREMIUM_ZONE ($100-110)",
-    "nifty_last": 24050,
-    "nifty_open_april13": 23589.6,
-    "nifty_open_gap_pct": -1.91,
-    "nifty_session_forecast": "DOWN -2.5% (range 23,300-23,650)",
-    "nifty_key_support": 23200,
-    "nifty_key_resistance": 23900,
-    "gift_nifty_preopen": 23748.5,
-    "setfgold_last_est": 130,
-    "irfc_last_est": 99,
-    "coal_india_last_est": 450,
-    "astra_micro_april13": 1132.5,
-    "astra_micro_day_range": "1081.30-1144.00",
-    "brent_last": 101.82,
-    "regime_since": "2026-04-13T08:59:00",
-    "regime_note": "UPGRADED April 13 morning brief. US announced naval blockade of Iranian ports (effective April 13 10 AM ET). Brent +6.95% to $101.82 — crossed $100 threshold. Nifty opened -1.92% at 23,589. Defense stocks surging (Astra Micro ₹1,132 — P012 range exceeded already). Gold rallying (P023 tracking ₹130-134). Financials/PSU banks/airlines selling. Regime BLOCKADE_ESCALATION replaces TALKS_FAILED_CEASEFIRE_FRAGILE. Note: ceasefire technically still holds per Trump 'holding well' comment — key distinction from full war.",
-    "session_forecast_accuracy_note": "5 sessions tracked (4 scored + Apr 13 pending). 2/4 direction correct (50%). April 13 forecast: DOWN -2.5% on blockade news. 4★ confidence."
+    "nifty_last": 23830.1,
+    "nifty_open_april15_forecast": 23641,
+    "nifty_session_forecast": "FLAT_TO_SIDEWAYS_UP +0.1% (range 23,700-24,000)",
+    "nifty_key_support": 23600,
+    "nifty_key_resistance": 24100,
+    "gift_nifty_preopen": 23641,
+    "regime_since": "2026-04-13T17:00:00",
+    "regime_note": "April 13 session: Nifty recovered from -1.92% gap to -0.91% close. War premium stabilized. April 14 is market holiday. April 15: Base case is range consolidation at war premium baseline."
   },
-  "open_predictions": [
-    {
-      "id": "P023",
-      "stock": "SETFGOLD",
-      "thesis": "SETFGOLD tests ₹130-134 by April 17 on failed talks / risk-off gold rally",
-      "last_price": 127.31,
-      "entry_date": "2026-04-12",
-      "confidence_current": 4,
-      "confidence_trend": "NEW_TALKS_FAILED_BULLISH",
-      "check_date": "2026-04-17",
-      "note": "NEW (April 12 weekly). Replaces invalidated P020. Islamabad talks failed → gold safe-haven demand. From ₹127.31, needs +2.1-5.3%. 4★ confidence."
-    },
-    {
-      "id": "P025",
-      "stock": "ASTRA MICRO",
-      "thesis": "ASTRA MICRO tests ₹1,050-1,100 by April 22 on defense premium return post-failed-talks",
-      "last_price": 1012,
-      "entry_date": "2026-04-12",
-      "confidence_current": 4,
-      "confidence_trend": "NEW_DEFENSE_PREMIUM_RETURN",
-      "check_date": "2026-04-22",
-      "note": "NEW (April 12 weekly). M012 fully active — extended managed tension = max defense premium. 4★ confidence. A008 trigger may need to be raised to ₹1,070-1,080 if April 14 closes above ₹1,040."
-    },
-    {
-      "id": "P024",
-      "stock": "NIFTY",
-      "thesis": "Nifty tests 23,200-23,700 range by April 16 as failed talks trigger war premium return",
-      "last_price": 24050,
-      "entry_date": "2026-04-12",
-      "confidence_current": 3,
-      "confidence_trend": "NEW_BEARISH_TALKS_FAILED",
-      "check_date": "2026-04-16",
-      "note": "NEW (April 12 weekly). Expected -1.5 to -2.5% Monday gap-down. Key support 23,900 likely breached. 3★ confidence."
-    },
-    {
-      "id": "P026",
-      "stock": "IRFC",
-      "thesis": "IRFC corrects from ₹100.25 toward ₹92-96 by April 22 as ceasefire rally mean-reverts",
-      "last_price": 100.25,
-      "entry_date": "2026-04-12",
-      "confidence_current": 3,
-      "confidence_trend": "NEW_MEAN_REVERSION",
-      "check_date": "2026-04-22",
-      "note": "NEW (April 12 weekly). IRFC spiked +11.7% in 3 sessions on ceasefire relief. At ₹100.25, above P010 range ceiling of ₹95. RSI overbought. Talks failed + FII selling = correction likely. 3★."
-    },
-    {
-      "id": "P022",
-      "stock": "TCS",
-      "thesis": "TCS recovers to ₹2,600 by April 17 on post-sell-on-news reversal",
-      "last_price": 2524,
-      "entry_date": "2026-04-10",
-      "confidence_current": 2,
-      "confidence_trend": "DOWNGRADED_TALKS_FAILED_HEADWINDS",
-      "check_date": "2026-04-17",
-      "note": "DOWNGRADED to 2★ (April 12). TCS at ₹2,524. Failed talks add macro headwinds. Needs +3% in 5 trading days. Possible but less likely. Monitor April 14-15 recovery attempt."
-    },
-    {
-      "id": "P021",
-      "stock": "TCS",
-      "thesis": "TCS tests ₹2,650-2,700 by April 16 on Q4FY26 strong beat and record TCV",
-      "last_price": 2524,
-      "entry_date": "2026-04-09",
-      "confidence_current": 2,
-      "confidence_trend": "DOWNGRADED_TALKS_FAILED",
-      "check_date": "2026-04-16",
-      "note": "DOWNGRADED to 2★ (April 12). Needs +5-7% in 4 trading days against macro headwinds. LIKELY WRONG."
-    },
-    {
-      "id": "P018",
-      "stock": "TCS",
-      "thesis": "TCS closes above ₹2,600 within 7 days on Q4FY26 results beat",
-      "last_price": 2524,
-      "entry_date": "2026-04-08",
-      "confidence_current": 2,
-      "confidence_trend": "DOWNGRADED_TALKS_FAILED",
-      "check_date": "2026-04-15",
-      "note": "DOWNGRADED to 2★ (April 12). TCS at ₹2,524. 3 days remaining. Failed talks add headwinds. LIKELY WRONG."
-    },
-    {
-      "id": "P019",
-      "stock": "ADANI PORT",
-      "thesis": "ADANI PORT tests ₹1,490-1,540 on Hormuz traffic restoration",
-      "last_price": 1465,
-      "entry_date": "2026-04-08",
-      "confidence_current": 2,
-      "confidence_trend": "DOWNGRADED_HORMUZ_CONTESTED",
-      "check_date": "2026-04-15",
-      "note": "DOWNGRADED to 2★ (April 12). US Navy vs IRGC in Hormuz. No cargo traffic normalization expected. LIKELY WRONG."
-    },
-    {
-      "id": "P020",
-      "stock": "SETFGOLD",
-      "thesis": "SETFGOLD corrects to ₹120-122 as ceasefire compresses war premium",
-      "last_price": 127.31,
-      "entry_date": "2026-04-08",
-      "confidence_current": 1,
-      "confidence_trend": "INVALIDATED_TALKS_FAILED",
-      "check_date": "2026-04-15",
-      "note": "INVALIDATED (April 12). Talks FAILED → war premium EXPANDING not compressing. WILL SCORE WRONG April 15. A005 ACTION: DO NOT SELL at April 14 open. Hold gold through April 22."
-    },
-    {
-      "id": "P016",
-      "stock": "NIFTY",
-      "thesis": "Consolidates 23,900-24,100 over 7 days",
-      "last_price": 24050,
-      "entry_date": "2026-04-08",
-      "confidence_current": 2,
-      "confidence_trend": "DOWNGRADED_RANGE_BREACH_EXPECTED",
-      "check_date": "2026-04-15",
-      "note": "DOWNGRADED to 2★ (April 12). Nifty likely gaps down below 23,900 on Monday April 14. P016 range thesis under pressure. LIKELY WRONG."
-    },
-    {
-      "id": "P015",
-      "stock": "INDIGO",
-      "thesis": "Stabilizes above ₹4,150 over 7 days",
-      "last_price": 4486,
-      "entry_date": "2026-04-08",
-      "confidence_current": 4,
-      "confidence_trend": "WILL_SCORE_RIGHT",
-      "check_date": "2026-04-15",
-      "note": "WILL SCORE RIGHT April 15. IndiGo at ₹4,486, far above ₹4,150 target. Even -7% gap-down still above target."
-    },
-    {
-      "id": "P012",
-      "stock": "ASTRA MICRO",
-      "thesis": "Breaches ₹1,000 and tests ₹1,050-1,080 by April 14",
-      "last_price": 1012,
-      "entry_date": "2026-04-07",
-      "confidence_current": 4,
-      "confidence_trend": "UPGRADED_TALKS_FAILED_DEFENSE_RALLY",
-      "check_date": "2026-04-14",
-      "note": "UPGRADED to 4★ (April 12). Failed talks → defense premium returns. Needs +3.8-6.8% in ONE session. 55% RIGHT probability on April 14. ⭐ KEY CHECK DATE MONDAY."
-    },
-    {
-      "id": "P013",
-      "stock": "INDIGO",
-      "thesis": "Falls below ₹4,100 by April 14",
-      "last_price": 4486,
-      "entry_date": "2026-04-07",
-      "confidence_current": 1,
-      "confidence_trend": "INVALIDATED_WILL_SCORE_WRONG",
-      "check_date": "2026-04-14",
-      "note": "WILL SCORE WRONG Monday April 14. IndiGo at ₹4,486 — needs -9.9% in one session. Not possible."
-    },
-    {
-      "id": "P014",
-      "stock": "NIFTY IT",
-      "thesis": "Outperforms Nifty by 5-10% over 4 weeks",
-      "last_price": 35000,
-      "entry_date": "2026-04-09",
-      "confidence_current": 4,
-      "confidence_trend": "STABLE_TCS_RECOVERY_PENDING",
-      "check_date": "2026-05-05",
-      "note": "4★ maintained. TCS sell-on-news temporary. 23 days remain. IT-USD decoupling thesis intact. If Nifty falls more than Nifty IT (likely in war premium return), this thesis gains strength."
-    },
-    {
-      "id": "P017",
-      "stock": "MRPL",
-      "thesis": "MRPL re-rates to ₹200-210 over 4 weeks on GRM recovery",
-      "last_price": 184,
-      "entry_date": "2026-04-08",
-      "confidence_current": 3,
-      "confidence_trend": "DOWNGRADED_BRENT_RE-SPIKE_RISK",
-      "check_date": "2026-05-08",
-      "note": "DOWNGRADED to 3★ (April 12). Brent re-spiking on failed talks compresses GRM recovery timeline. If Brent moves to $100+, target ₹200-210 harder in 26 days. Monitor Brent Monday open."
-    },
-    {
-      "id": "P010",
-      "stock": "IRFC",
-      "thesis": "IRFC range ₹85-95 by April 29",
-      "last_price": 100.25,
-      "entry_date": "2026-04-07",
-      "confidence_current": 2,
-      "confidence_trend": "ABOVE_RANGE_CEILING",
-      "check_date": "2026-04-29",
-      "note": "DOWNGRADED to 2★. IRFC at ₹100.25 — ABOVE ₹95 range ceiling. Will score WRONG April 29 unless IRFC corrects -5.2% back into range. P026 (correction thesis) is the replacement prediction. Monitor April 14 correction post-failed-talks."
-    },
-    {
-      "id": "P005",
-      "stock": "COAL INDIA",
-      "thesis": "Holds above ₹430 by May 28 on crude-coal substitution",
-      "last_price": 454,
-      "entry_date": "2026-04-04",
-      "confidence_current": 4,
-      "confidence_trend": "VERY_STRONG_BUFFER_INCREASED",
-      "check_date": "2026-05-28",
-      "note": "VERY STRONG. Coal at ₹454. Buffer ₹24 above ₹430 target. 46 days remaining. Talks failing → crude re-spike → coal substitution value increases. ~95%+ probability RIGHT. STRONG HOLD."
-    },
-    {
-      "id": "P001",
-      "stock": "SWIGGY",
-      "thesis": "Breaches ₹260 by April 25",
-      "last_price": 281,
-      "entry_date": "2026-04-04",
-      "confidence_current": 2,
-      "confidence_trend": "WEAKENED",
-      "check_date": "2026-04-25",
-      "note": "P001 WEAKENED. Needs -7.7% in 13 days. Failed talks → mild risk-off may pressure growth stocks. But ₹260 is a big drop. 2★ probability still low. Monitor April 14 price action."
-    },
-    {
-      "id": "P004",
-      "stock": "ASTRA MICRO",
-      "thesis": "Corrects to ₹850-900 by April 25",
-      "last_price": 1012,
-      "entry_date": "2026-04-04",
-      "confidence_current": 1,
-      "confidence_trend": "INVALIDATED",
-      "check_date": "2026-04-25",
-      "note": "INVALIDATED. Will score WRONG on April 25. Not monitoring."
-    },
-    {
-      "id": "P006",
-      "stock": "INDIGO",
-      "thesis": "Underperforms Nifty by 8-15% over 2 months",
-      "last_price": 4486,
-      "entry_date": "2026-04-07",
-      "confidence_current": 2,
-      "confidence_trend": "WEAKENED_BUT_MONITORING",
-      "check_date": "2026-05-30",
-      "note": "Weakened. IndiGo outperforming since April 8. However failed talks + Brent re-spike may revive ATF cost compression. Q4FY26 results (May) remaining catalyst. 48 days remaining. Hold at 2★."
-    },
-    {
-      "id": "P002",
-      "stock": "MRPL",
-      "thesis": "Falls to ₹160-170 if Brent stays above $100/bbl",
-      "last_price": 184,
-      "entry_date": "2026-03-28",
-      "confidence_current": 1,
-      "confidence_trend": "INVALIDATED_WATCH_BRENT",
-      "check_date": "2026-05-28",
-      "note": "INVALIDATED. BUT NOTE: If Brent re-spikes above $100 on failed talks, the bearish GRM thesis partially revives. Monitor Brent Monday. If Brent > $105 → partial reactivation of P002 logic."
-    },
-    {
-      "id": "P003",
-      "stock": "NIFTY",
-      "thesis": "Tests 22,000-22,200 within 2 months",
-      "last_price": 24050,
-      "entry_date": "2026-03-28",
-      "confidence_current": 1,
-      "confidence_trend": "INVALIDATED",
-      "check_date": "2026-05-10",
-      "note": "INVALIDATED. Nifty at 24,050 vs 22,000-22,200 target. 2,000 pts away. Not monitoring."
-    },
-    {
-      "id": "P011",
-      "stock": "NHPC",
-      "thesis": "Recovery toward ₹85-90 range within 2 months",
-      "last_price": 76.82,
-      "entry_date": "2026-04-01",
-      "confidence_current": 2,
-      "confidence_trend": "NEUTRAL_MONITORING",
-      "check_date": "2026-06-01",
-      "note": "Neutral. Ceasefire positive for capex sentiment long-term. 50 days remaining. Monitoring."
-    }
-  ],
-  "pending_outcomes_to_score": [
-    {
-      "id": "P013",
-      "resolution_date": "2026-04-14",
-      "score_condition": "Did INDIGO fall below ₹4,100?",
-      "current_status": "WILL SCORE WRONG April 14. IndiGo at ₹4,486."
-    },
-    {
-      "id": "P012",
-      "resolution_date": "2026-04-14",
-      "score_condition": "Did ASTRA MICRO test ₹1,050-1,080?",
-      "current_status": "UPGRADED to 4★ — 55% RIGHT / 45% WRONG. Defense premium returning on failed talks. Key check Monday."
-    },
-    {
-      "id": "P015",
-      "resolution_date": "2026-04-15",
-      "score_condition": "Is INDIGO above ₹4,150 on April 15?",
-      "current_status": "WILL SCORE RIGHT. IndiGo at ₹4,486."
-    },
-    {
-      "id": "P016",
-      "resolution_date": "2026-04-15",
-      "score_condition": "Is Nifty in 23,900-24,100 range on April 15?",
-      "current_status": "LIKELY WRONG. Nifty at 24,050 now but expected to gap down below 23,900 on April 14 on failed talks."
-    },
-    {
-      "id": "P018",
-      "resolution_date": "2026-04-15",
-      "score_condition": "Did TCS close above ₹2,600?",
-      "current_status": "LIKELY WRONG. TCS at ₹2,524. Needs +3%. Failed talks add headwinds. 3 days."
-    },
-    {
-      "id": "P019",
-      "resolution_date": "2026-04-15",
-      "score_condition": "Is ADANI PORT in ₹1,490-1,540 range?",
-      "current_status": "LIKELY WRONG. At ~₹1,465. Hormuz contested — US Navy vs IRGC confrontation April 11."
-    },
-    {
-      "id": "P020",
-      "resolution_date": "2026-04-15",
-      "score_condition": "Is SETFGOLD in ₹120-122 range?",
-      "current_status": "WILL SCORE WRONG. SETFGOLD at ₹127.31. Talks failed → gold rallying not falling."
-    },
-    {
-      "id": "P021",
-      "resolution_date": "2026-04-16",
-      "score_condition": "Is TCS in ₹2,650-2,700 range by April 16?",
-      "current_status": "LIKELY WRONG. TCS at ₹2,524. Needs +5-7% in 4 days."
-    },
-    {
-      "id": "P022",
-      "resolution_date": "2026-04-17",
-      "score_condition": "Did TCS recover to ₹2,600 by April 17?",
-      "current_status": "UNCERTAIN/LIKELY WRONG. TCS at ₹2,524. Needs +3% in 5 days with macro headwinds. Possible but unlikely."
-    },
-    {
-      "id": "P024",
-      "resolution_date": "2026-04-16",
-      "score_condition": "Is Nifty in 23,200-23,700 range by April 16?",
-      "current_status": "NEW — Tracks failed talks impact. 3★ confidence."
-    },
-    {
-      "id": "P023",
-      "resolution_date": "2026-04-17",
-      "score_condition": "Is SETFGOLD at ₹130-134 by April 17?",
-      "current_status": "NEW — Replaces invalidated P020. 4★ confidence on risk-off gold rally."
-    },
-    {
-      "id": "P025",
-      "resolution_date": "2026-04-22",
-      "score_condition": "Is ASTRA MICRO at ₹1,050-1,100 by April 22?",
-      "current_status": "NEW — Defense premium return thesis. 4★ confidence."
-    },
-    {
-      "id": "P026",
-      "resolution_date": "2026-04-22",
-      "score_condition": "Is IRFC in ₹92-96 range by April 22?",
-      "current_status": "NEW — IRFC mean-reversion from ₹100.25. 3★ confidence."
-    },
-    {
-      "id": "P001",
-      "resolution_date": "2026-04-25",
-      "score_condition": "Did SWIGGY breach ₹260 by April 25?",
-      "current_status": "WEAKENED — At ~₹281. Needs -7.7% in 13 days."
-    },
-    {
-      "id": "P004",
-      "resolution_date": "2026-04-25",
-      "score_condition": "Did ASTRA MICRO correct to ₹850-900?",
-      "current_status": "INVALIDATED — Will score WRONG on April 25."
-    },
-    {
-      "id": "P010",
-      "resolution_date": "2026-04-29",
-      "score_condition": "Is IRFC in ₹85-95 range?",
-      "current_status": "LIKELY WRONG — IRFC at ₹100.25, ABOVE range. Needs -5.2% to re-enter range by April 29."
-    },
-    {
-      "id": "P017",
-      "resolution_date": "2026-05-08",
-      "score_condition": "Is MRPL in ₹200-210 by May 8?",
-      "current_status": "DOWNGRADED to 3★. Brent re-spiking on failed talks. At ~₹184. +9-14% needed in 26 days."
-    },
-    {
-      "id": "P005",
-      "resolution_date": "2026-05-28",
-      "score_condition": "Is COAL INDIA above ₹430 on May 28?",
-      "current_status": "VERY STRONG — At ₹454, ₹24 buffer. ~95%+ probability RIGHT."
-    }
-  ],
-  "accuracy_state": {
-    "total_scored": 3,
-    "right": 1,
-    "wrong": 2,
-    "accuracy_pct": 33.3,
-    "last_wrong": "P007 (SWIGGY), P009 (ASTRA MICRO) — both April 8, missed ceasefire regime shift",
-    "last_right": "P008 — Nifty held above ₹22,000 (April 7)",
-    "rolling_5": null,
-    "next_batch_scoring": "April 14: P013 (WRONG confirmed), P012 (55% RIGHT/45% WRONG). April 15: P015 (RIGHT confirmed), P016 (LIKELY WRONG), P018 (LIKELY WRONG), P019 (LIKELY WRONG), P020 (WRONG confirmed). April 16: P021 (LIKELY WRONG), P024 (new Nifty bearish check). April 17: P022 (uncertain), P023 (new gold rally check). Expected: 2 confirmed RIGHT (P015, P012 maybe), 3-4 confirmed WRONG (P013, P020, P016, P018/P019 depending on Brent).",
-    "session_forecasting": {
-      "total_sessions": 5,
-      "correct_direction": 2,
-      "partial_correct": 2,
-      "accuracy_pct": 50.0,
-      "last_grade": "PARTIAL_CORRECT — April 10. Base scenario (TALKS_NEUTRAL) materialized. Nifty slightly above base range.",
-      "pending": "April 14: BEARISH OPEN forecast (-1.5 to -2.5% gap-down on failed Islamabad talks news)."
-    },
-    "pattern_alerts": [
-      {
-        "pattern_id": "FII_CEASEFIRE_DISTRIBUTION",
-        "description": "FII net SOLD on ceasefire relief rally days. DII bought to support market. Pattern promoted to framework April 12 weekly review.",
-        "occurrences": 2,
-        "status": "PROMOTED_TO_FRAMEWORK",
-        "promoted_date": "2026-04-12"
-      },
-      {
-        "pattern_id": "TALKS_FAILED_WAR_PREMIUM_RETURN",
-        "description": "Islamabad talks failed April 11 after 21 hours. US Navy entered Hormuz. Iran 'last warning.' First occurrence of peace talks failure during this conflict cycle. Expected: Brent +$3-6, Nifty -1.5-2.5%, gold +1-3%, defense +2-4% on April 14 open.",
-        "occurrences": 1,
-        "status": "OBSERVING — needs 1 more for framework promotion. April 14 will provide first data point.",
-        "first_seen": "2026-04-12"
-      },
-      {
-        "pattern_id": "IRFC_CEASEFIRE_OVERSHOOT",
-        "description": "IRFC spiked +11.7% in 3 sessions (April 8-10) purely on ceasefire sentiment — no fundamental change. PSU infrastructure stocks overbought in regime-change scenarios. P026 correction thesis targets reversion.",
-        "occurrences": 1,
-        "status": "OBSERVING — new pattern",
-        "first_seen": "2026-04-12"
-      },
-      {
-        "pattern_id": "SELL_ON_EARNINGS_NEWS_IT",
-        "description": "TCS sell-on-news persisting: TCS at ₹2,524 (down from ₹2,566 pre-results). Record Q4 results fully priced in. 2nd consecutive sell-on-news day confirmed.",
-        "occurrences": 2,
-        "status": "OBSERVING — 1 more confirmation needed for framework promotion. April 15 scoring will help.",
-        "first_seen": "2026-04-10"
-      }
+  "opening_bias": {
+    "direction": "GAP_DOWN",
+    "gap_pct_estimate": -0.8,
+    "gift_nifty_estimate": 23641,
+    "key_drivers": [
+      "Overnight S&P 500 weakness on Hormuz blockade (expect -0.5% to -1.5%)",
+      "Brent crude stable to up in $101-104 range (Asian morning risk-off buyers)",
+      "Overnight FII flow: likely continued selling (de-risking geopolitical exposure)",
+      "Domestic: No major catalysts April 14 (holiday), limited overnight news"
     ],
-    "framework_updates_implemented": [
-      {
-        "factor_id": "FORECAST_PAT003",
-        "name": "Geopolitical Binary Underweighting",
-        "implemented": "2026-04-08",
-        "rule": "For any 3-outcome binary forecast, include explicit REVERSAL TRIGGER: 'If best-case materializes → regime flips, index +2-4%'. Do not rely on probability weighting alone."
+    "confidence": 3,
+    "logic": "Gap-down expected due to geopolitical hold-steady mode. Not a crash, but cautious opening. War premium is now BASELINE expectation, not surprise shock."
+  },
+  "session_direction": {
+    "direction": "FLAT_TO_SIDEWAYS_UP",
+    "change_pct_estimate": 0.1,
+    "range_low": 23700,
+    "range_high": 24000,
+    "key_assumption": "War premium stabilized at Brent $102. No new escalation event overnight or April 15 morning. Base case: range consolidation. April 22 deadline drives next major move.",
+    "confidence": 3,
+    "regime": "BLOCKADE_ESCALATION_STABILIZED",
+    "scenario_weighted": {
+      "base_case": {
+        "probability": 60,
+        "description": "Consolidation at war premium baseline",
+        "nifty_impact": "FLAT -0.3% to +0.3%"
       },
-      {
-        "factor_id": "M012",
-        "name": "Defense Sector Duration Premium",
-        "implemented": "2026-04-08",
-        "rule": "Before making defense stock predictions, model the DURATION of tension. 2-6 weeks managed tension = HOLD/ADD defense. Instant peace = REDUCE defense. Acute escalation = defense spikes then reverses."
+      "relief_scenario": {
+        "probability": 20,
+        "description": "Trump extends talks/delay to May (offshore risk reduction)",
+        "nifty_impact": "UP +0.5% to +1.5%"
       },
-      {
-        "factor_id": "RBI_CALENDAR_CHECK",
-        "name": "Central Bank Calendar Synchronization",
-        "implemented": "2026-04-08",
-        "rule": "Always check RBI/Fed meeting calendar when forecasting on binary geopolitical event days. Same-day policy decisions can amplify moves by 1-2%."
-      },
-      {
-        "factor_id": "FII_CEASEFIRE_DISTRIBUTION",
-        "name": "FII Distribution on Geopolitical Relief Rallies",
-        "implemented": "2026-04-12",
-        "rule": "When Nifty rallies 2%+ on geopolitical positive event AND FII data shows net selling → classify rally as DII-driven, structurally fragile. Assign +20-30% additional probability of reversal within 5 sessions."
+      "escalation_scenario": {
+        "probability": 20,
+        "description": "Iranian incident or escalation headline",
+        "nifty_impact": "DOWN -1.5% to -2.5%"
       }
+    },
+    "brent_forecast": "$101-104 (war premium zone holding)",
+    "key_risks": [
+      "Iran IRGC 'last warning' \u2014 any incident triggers -$3-5 crude spike",
+      "Trump April 22 deadline \u2014 markets may frontrun hawkish positioning this week",
+      "FII flows \u2014 sustained selling on geopolitical risk could exacerbate Nifty weakness"
     ],
-    "framework_updates_pending": [
-      {
-        "factor_id": "TALKS_FAILED_WAR_PREMIUM_RETURN",
-        "name": "Failed Peace Talks → War Premium Return",
-        "proposed": "2026-04-12",
-        "observation": "Islamabad talks failed April 11. US Navy entered Hormuz. Iran 'last warning.' Expected April 14 reaction: Brent +$3-6, Nifty -1.5-2.5%, gold +1-3%, defense +2-4%. First occurrence. April 14 close will confirm or deny.",
-        "confirmations_needed": 1,
-        "ready_to_promote": false
-      },
-      {
-        "factor_id": "SELL_ON_EARNINGS_NEWS_IT",
-        "name": "Large-Cap IT Sell-on-News After Pre-Priced Earnings Beat",
-        "proposed": "2026-04-10",
-        "observation": "TCS Q4FY26 record beat → stock fell -1.85% on day, continued to ₹2,524. Buy-side pre-priced the beat. Classic sell-the-news after IT pre-rally.",
-        "confirmations_needed": 1,
-        "ready_to_promote": false
-      },
-      {
-        "factor_id": "GOLD_HEDGING_PRE_BINARY",
-        "name": "Gold Pre-Binary-Event Hedging",
-        "proposed": "2026-04-09",
-        "observation": "SETFGOLD at ₹127.31 into talks day. Post-TALKS_NEUTRAL softened slightly. Post-TALKS_FAILED — gold now expected to rally. Pattern emerging: hold gold through binary events.",
-        "confirmations_needed": 1,
-        "ready_to_promote": false
-      },
-      {
-        "factor_id": "TRUMP_DEADLINE_PRESSURE_CRUDE",
-        "name": "Trump Future Strike Deadline → Crude Decline",
-        "proposed": "2026-04-10",
-        "observation": "April 10: Trump's April 22 deadline announcement caused Brent to fall intraday $96→$91-93. Future deadlines = de-escalation signal. Needs 1 more confirmation.",
-        "confirmations_needed": 1,
-        "ready_to_promote": false
-      }
+    "key_opportunities": [
+      "Defense stocks: ASTRA_MICRO, LT, HAL likely outperformers (war premium durable)",
+      "Gold/Pharma: Safe havens tracking. PHARMA index consolidating, not selling",
+      "Banking/PSU sector: Oversold on Oil & Gas concerns. Bounce potential on consolidation"
     ]
   },
-  "tcs_q4_results_confirmed": {
-    "date": "2026-04-09",
-    "revenue": "₹70,698 crore (+9.64% YoY)",
-    "revenue_vs_est": "BEAT — estimate was ₹69,932 cr (+1.1%)",
-    "pat": "₹13,718 crore (+12.22% YoY)",
-    "pat_vs_est": "SLIGHT MISS — estimate was ₹13,919 cr (-1.4%)",
-    "ebit_margin_fy26": "25.0% full year (+70bps YoY, highest in 4 years)",
-    "deal_tcv_q4": "$12 billion (HIGHEST EVER quarterly TCV)",
-    "deal_tcv_fy26": "$40.7 billion",
-    "ai_revenue": "$2.3 billion annualized (crossed in Q4)",
-    "mega_deals_q4": 3,
-    "mega_deals_fy26": 5,
-    "final_dividend": "₹31/share",
-    "total_fy26_dividend": "₹110/share",
-    "tcs_close_april10": "₹2,539.80 (sell on news — down -1.85% from April 9 close)",
-    "tcs_close_april11_est": "~₹2,524 (continuing sell-on-news, Saturday data)",
-    "sell_on_news_pattern": "CONFIRMED — 2nd consecutive sell-on-news day. P018 not triggered. Recovery needs +3% from ₹2,524.",
-    "overall_verdict": "STRONG BEAT but market pre-priced it. Sell-on-news pattern active. Recovery possible in 3-5 sessions but macro headwinds (failed talks) making it harder."
-  },
-  "islamabad_talks_april11_final_outcome": {
-    "date": "2026-04-11",
-    "outcome": "TALKS_FAILED — NO DEAL",
-    "duration": "21 hours",
-    "us_delegation": "VP Vance, Steve Witkoff, Jared Kushner",
-    "iran_delegation": "FM Araghchi, Parliament Speaker Ghalibaf",
-    "key_sticking_points": [
-      "Nuclear enrichment (Iran refused US red line: no enrichment)",
-      "Hormuz reopening terms",
-      "Sanctions lifting conditions",
-      "War reparations"
-    ],
-    "us_navy_action": "USS Frank E. Peterson and USS Michael Murphy transited Strait of Hormuz for mine-clearing April 11",
-    "iran_response": "IRGC: 'This is the last warning.' Reportedly launched drone toward destroyers.",
-    "ceasefire_status": "TECHNICALLY STILL HOLDING — Pakistan FM Ishaq Dar urged both sides to maintain commitment",
-    "trump_comment": "Trump said 'optimistic' about eventual deal but no timeline given",
-    "regime_decision": "DE-ESCALATION_TALKS_CONTINUING → TALKS_FAILED_CEASEFIRE_FRAGILE",
-    "next_binary_event": "April 22 — ceasefire expiry + Trump infrastructure-strike deadline",
-    "days_to_deadline": 10
-  },
-  "eod_market_summary_april10": {
-    "nifty_close": 24050,
-    "nifty_pct_change": 1.16,
-    "nifty_weekly_change_pct": 6.0,
-    "sensex_close": 79100,
-    "tcs_close": 2539.80,
-    "tcs_april11_est": 2524,
-    "indigo_close": 4486,
-    "coal_india_close": 454,
-    "irfc_close": 100.25,
-    "setfgold_close": 127.31,
-    "adani_port_close_est": 1465,
-    "brent_close": 95.95,
-    "brent_expected_monday": "~99-102",
-    "mrpl_close_est": 184,
-    "astra_micro_close_est": 1012,
-    "fii_april10_official": 672.09,
-    "dii_april10_official": 410.05,
-    "fii_april9_official": -1711.19,
-    "fii_april8_official": -2811,
-    "a005_status": "REVISED — DO NOT SELL at April 14 open. Hold SETFGOLD. Islamabad talks failed → war premium → gold rallying. Monitor toward ₹132+ for partial profit.",
-    "a008_status": "HOLD — If Astra Micro closes above ₹1,040 on April 14, raise trigger to ₹1,070-1,080. P025 defense thesis upgraded."
-  },
-  "priority_checks_for_next_run": [
+  "stocks_to_watch": [
     {
-      "priority": 1,
-      "check": "REGIME STATUS: Is ceasefire still holding April 14? Any Iran retaliation to blockade overnight?",
-      "why": "US blockade active from April 13 10 AM ET. Iran IRGC on highest alert. Any Hormuz incident = WAR_PREMIUM_PEAK. Most critical regime check since April 8."
+      "stock": "ASTRA_MICRO",
+      "category": "Defense",
+      "thesis": "War premium durable. P012 target (\u20b91,050-1,080) already exceeded at \u20b91,132. Take profits on intraday rallies above \u20b91,140.",
+      "level": "Support 1,081 | Resistance 1,150"
     },
     {
-      "priority": 2,
-      "check": "SCORE P012 (ASTRA MICRO ₹1,050-1,080 by April 14) — WILL SCORE RIGHT. Confirm April 14 close.",
-      "why": "Astra Micro was at ₹1,132 on April 13 (day range ₹1,081-1,144). P012 range ₹1,050-1,080 already exceeded. Score RIGHT. Also check if P025 range needs upgrading."
+      "stock": "COALINDIA",
+      "category": "PSU/Energy",
+      "thesis": "Oversold on oil & gas weakness. April 15 consolidation bounce likely (support \u20b9430-440)",
+      "level": "Support 430 | Resistance 470"
     },
     {
-      "priority": 3,
-      "check": "SCORE P013 (INDIGO <₹4,100 by April 14) — WILL SCORE WRONG. Confirm IndiGo April 14 close.",
-      "why": "IndiGo at ₹4,486. Even Brent at $102 + blockade can't cause -9% in one session. Score WRONG."
+      "stock": "IRFC",
+      "category": "PSU Finance",
+      "thesis": "P010 range target \u20b995-100. At \u20b9100.25 already, slight pullback expected before next leg.",
+      "level": "Support 95 | Resistance 105"
     },
     {
-      "priority": 4,
-      "check": "Nifty April 13 close — confirm our DOWN -2.5% forecast. P024 range (23,200-23,700) being tested?",
-      "why": "P024 check date April 16. April 13-14 closes establish the direction. If Nifty closes near 23,300-23,600, P024 may score RIGHT."
+      "stock": "SETFGOLD",
+      "category": "Gold/Commodities",
+      "thesis": "P023 tracking \u20b9130-134 in geopolitical risk-off mode. Gold bullish on war premium sustained.",
+      "level": "Support 128 | Resistance 135"
     },
     {
-      "priority": 5,
-      "check": "Brent April 13 close — stay above $100? Impact on MRPL (P017) and IndiGo (A002)?",
-      "why": "Brent at $101.82 has crossed the $100 regime threshold. If Brent stays >$100 → P017 MRPL downgraded to WRONG, A002 IndiGo sell trigger review mandatory."
-    },
-    {
-      "priority": 6,
-      "check": "SETFGOLD April 13 close — confirm P023 (₹130-134 by April 17) tracking.",
-      "why": "Gold rallying on blockade. SETFGOLD estimated at ₹130+. P023 check date April 17 — need to confirm close trajectory."
-    },
-    {
-      "priority": 7,
-      "check": "P015 INDIGO (above ₹4,150 by April 15) — WILL SCORE RIGHT. P020 SETFGOLD (₹120-122) — WILL SCORE WRONG. Score both April 15.",
-      "why": "Both have check date April 15. P015 RIGHT confirmed (IndiGo at ₹4,486). P020 WRONG confirmed (SETFGOLD at ₹130+). Update accuracy-meta.json."
-    },
-    {
-      "priority": 8,
-      "check": "FII April 13 provisional data — resumption of selling? Magnitude?",
-      "why": "FII was net buyer +₹672 Cr on April 10. Blockade announcement = FII likely reverting to heavy selling. Confirms FII_CEASEFIRE_DISTRIBUTION framework."
-    },
-    {
-      "priority": 9,
-      "check": "IRFC April 13 close — correction from ₹100.25 accelerating on risk-off? P026 validation.",
-      "why": "P026 predicts IRFC ₹92-96 by April 22. Blockade + FII selling should accelerate the correction."
-    },
-    {
-      "priority": 10,
-      "check": "P016 NIFTY (23,900-24,100 by April 15) — WILL SCORE WRONG. Nifty opened at 23,589 on April 13.",
-      "why": "P016 range already breached at the April 13 open. Score WRONG April 15. Update predictions."
-    }
-  ],
-  "questions_to_answer_next_run": [
-    "Is ceasefire still holding April 14? Any Iran retaliation to US blockade overnight?",
-    "P012 ASTRA MICRO April 14 close — confirm RIGHT (stock at ₹1,132 on April 13)",
-    "P013 INDIGO April 14 close — confirm WRONG (stock well above ₹4,100)",
-    "Nifty April 13 close — did DOWN -2.5% forecast verify? P024 range (23,200-23,700) tested?",
-    "Brent close April 13 — above or below $100? Implications for P017 MRPL and A002 INDIGO",
-    "SETFGOLD April 13 close — P023 tracking ₹130-134? Any sign of war premium compressing?",
-    "FII April 13 provisional data — heavy selling resumed on blockade news?",
-    "IRFC April 13 — correction below ₹100 starting? P026 trajectory?",
-    "Adani Port April 13 — P019 trajectory (₹1,490-1,540 by April 15 unlikely given blockade)",
-    "TCS April 13 — recovery toward ₹2,600? P018 (check April 15) still possible?"
-  ],
-  "prompt_for_morning_brief": "You are an expert market intelligence agent. Today is {{DATE}} (Monday, April 14, 2026). ISLAMABAD TALKS FAILED — REGIME: TALKS_FAILED_CEASEFIRE_FRAGILE.\n\nFIRST ACTION — Regime check:\n- Search 'US Iran ceasefire April 13-14 2026' — is ceasefire still holding?\n- Check 'Brent crude price April 14 2026' — did Brent spike overnight?\n- If ceasefire still holding: regime = TALKS_FAILED_CEASEFIRE_FRAGILE (current)\n- If ceasefire breach confirmed: apply WAR_PREMIUM_RETURN regime immediately\n\nSECOND: P012 and P013 CHECK DATES TODAY\n- P013 (INDIGO <₹4,100): WILL SCORE WRONG. Confirm IndiGo price and score WRONG immediately.\n- P012 (ASTRA MICRO ₹1,050-1,080): Check date TODAY. Defense premium returning on failed talks — upgraded to 55% RIGHT. Confirm April 14 open and close.\n\nTHIRD: Market direction assessment\n- Expected: Nifty gaps down -1.5 to -2.5% from 24,050 → ~23,500-23,750 range\n- Brent expected ~$99-102 (spike on failed talks)\n- SETFGOLD expected to rally +1-2% toward ₹129-131\n- Defense stocks (Astra Micro) expected +2-4% gap up\n\nFOURTH: Action alerts\n- A005 REVISED: DO NOT SELL SETFGOLD. Islamabad talks failed → HOLD through April 22.\n- A008: If Astra Micro closes >₹1,040, raise profit trigger to ₹1,070-1,080.\n\nFIFTH: P016, P018, P019, P020 all check April 15 (tomorrow)\n- P016 Nifty 23,900-24,100: Likely WRONG if Nifty opens below 23,900 today\n- P020 SETFGOLD ₹120-122: WILL SCORE WRONG tomorrow (gold rallying)\n- P015 IndiGo >₹4,150: WILL SCORE RIGHT tomorrow (IndiGo at ₹4,486)\n\nCRITICAL NOTE: Do NOT run git commands. sync.sh handles git add/commit/push automatically every 5 minutes on the host machine.",
-  "prompt_for_eod_wrap": "You are an expert market intelligence agent. Run the end-of-day wrap for {{DATE}}.\n\nFIRST: Read data/next-run-context.json for full context. REGIME: TALKS_FAILED_CEASEFIRE_FRAGILE.\n\nCRITICAL CHECKS FOR THIS EOD RUN (April 14):\n1. SCORE P013 (INDIGO <₹4,100) — WILL SCORE WRONG. Update accuracy-meta.json.\n2. SCORE P012 (ASTRA MICRO ₹1,050-1,080) — CHECK DATE. Confirm April 14 close. Score RIGHT or WRONG.\n3. Nifty April 14 close — P016 range (23,900-24,100) intact? P024 direction (23,200-23,700 bearish)?\n4. TCS April 14 close — P018 and P022 progress? Recovery toward ₹2,600?\n5. SETFGOLD April 14 close — P023 tracking ₹130-134?\n6. Brent April 14 — spike above $100? GRM compression for MRPL?\n7. FII April 14 provisional — confirmed selling resumption?\n8. IRFC April 14 — correction from ₹100.25 started? P026 tracking?\n9. A005 REVISED: Confirm HOLD on SETFGOLD (DO NOT execute partial sell).\n10. A008: If Astra Micro >₹1,040, raise profit trigger to ₹1,070-1,080.\n\nTOMORROW (April 15): P015 (IndiGo, RIGHT confirmed), P016 (Nifty, LIKELY WRONG), P018 (TCS, LIKELY WRONG), P019 (Adani Ports, LIKELY WRONG), P020 (SETFGOLD, WRONG confirmed) ALL CHECK TOMORROW. Prepare scoring.\n\nCRITICAL NOTE: Do NOT run git commands. sync.sh handles git add/commit/push automatically every 5 minutes on the host machine.",
-  "prompt_for_weekly_intelligence": "You are an expert market intelligence agent running the WEEKLY INTELLIGENCE REPORT for Vastav's portfolio.\n\nWORKSPACE: /Users/shreyansh/Desktop/InvestmentIntel/Stock portfolio/\nRead data/next-run-context.json first — it contains the full context, framework state, and weekly intelligence instructions in the 'prompt_for_weekly_intelligence' field (if present). Also read data/accuracy-meta.json, data/predictions-all.json, and data/signal-framework.json for the full picture.\n\nYOUR WEEKLY TASKS:\n1. Score all predictions that reached their check_date this week — update data/predictions-all.json outcomes\n2. Run L2/L3 RCA on any WRONG predictions — update data/accuracy-meta.json\n3. Review and evolve the signal framework — promote any pending framework updates in data/signal-framework.json\n4. Generate new predictions for the week ahead (P027+) — add to data/predictions-all.json\n5. Write the weekly intelligence report to daily-briefings/weekly-YYYY-MM-DD.md\n6. Do a full update of data/next-run-context.json with the new week's context, regime, and priority checks\n\nCRITICAL: Do NOT run any git commands. Files you write to the workspace folder are automatically synced to GitHub by sync.sh, which runs every 5 minutes on this machine.",
-  "session_forecast_accuracy_note": "5 sessions tracked, 50% direction accuracy. April 14 forecast: BEARISH OPEN (-1.5 to -2.5% gap-down, 60/20/20 bear/neutral/bull scenarios). April 22 remains THE binary event for this entire conflict cycle.",
-  "scheduled_task_definitions": [
-    {
-      "name": "morning_brief",
-      "when": "Weekdays 8:00 AM IST",
-      "prompt_source": "next-run-context.json → prompt_for_morning_brief",
-      "output": "daily-briefings/YYYY-MM-DD-morning.md + actions.json update + next-run-context.json update"
-    },
-    {
-      "name": "eod_wrap",
-      "when": "Weekdays 5:30 PM IST",
-      "prompt_source": "next-run-context.json → prompt_for_eod_wrap",
-      "output": "daily-briefings/YYYY-MM-DD-eod.md + predictions-history.json update + accuracy-meta.json update + market-forecasts.json + next-run-context.json update"
-    },
-    {
-      "name": "weekly_intelligence",
-      "when": "Sundays 9:00 AM IST",
-      "prompt_source": "next-run-context.json → prompt_for_weekly_intelligence",
-      "output": "daily-briefings/weekly-YYYY-MM-DD.md + signal-framework.json update + next-run-context.json major update"
+      "stock": "INDIGOAIRWAYS",
+      "category": "Aviation",
+      "thesis": "Oversold on oil spike. P015 support \u20b94,150. Bounce potential if Brent stabilizes.",
+      "level": "Support 4,150 | Resistance 4,350"
     }
   ]
 }
