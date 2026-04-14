@@ -350,5 +350,11 @@
       "P025",
       "P026"
     ]
-  }
+  },
+  "total": 20,
+  "scored": 5,
+  "right": 1,
+  "wrong": 3,
+  "partial": 1,
+  "note": "Track record starts March 28 2026. April 14: P012 PARTIAL_CORRECT (ASTRA peaked 1132, closed 1019), P013 WRONG (IndiGo never below 4100). Total scored: 5. 1 RIGHT, 3 WRONG, 1 PARTIAL. April 15 predictions batch: P015, P016, P018, P019, P020 all check Apr 15."
 }

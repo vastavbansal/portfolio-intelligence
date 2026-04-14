@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
-  "last_updated": "2026-04-09",
+  "last_updated": "2026-04-14",
   "predictions": [
     {
       "pred_id": "P007",
@@ -356,11 +356,11 @@
         "T006"
       ],
       "check_date": "2026-04-14",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
+      "outcome": "PARTIAL_CORRECT",
+      "outcome_price": 1019.25,
+      "outcome_evidence": "April 14 holiday. Last close (April 13): \u20b91,019.25. Stock peaked at \u20b91,132 during prediction window (exceeded target 1050-1080) but profit-booking on Iran outreach signal pushed it below target range at check date.",
       "postmortem": null,
-      "scored_on": null,
+      "scored_on": "2026-04-14",
       "confidence_note": "ON TRACK: ASTRA MICRO at \u20b91,019.45 \u2014 already breached \u20b91,000. Now needs +3-6% more to hit \u20b91,050-1,080 target. April 10 Islamabad talks are key risk. 2-week ceasefire = managed tension = defense premium extended. Confidence raised to 4."
     },
     {
@@ -386,11 +386,11 @@
         "T005"
       ],
       "check_date": "2026-04-14",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
+      "outcome": "WRONG",
+      "outcome_price": 4427.2,
+      "outcome_evidence": "April 14 holiday. Last close (April 13): \u20b94,427.20. IndiGo never came close to \u20b94,100 target. Despite crude spike, airline demand resilience held stock well above target.",
       "postmortem": null,
-      "scored_on": null,
+      "scored_on": "2026-04-14",
       "confidence_note": "THESIS INVALIDATED: IndiGo closed at \u20b94,614.90 on April 8 \u2014 UP 8.11% from April 7. Stock is 12.6% ABOVE the \u20b94,100 target. Ceasefire + Brent crash to $93 completely reversed the ATF cost thesis. Requires -11.2% fall by April 14 which is very unlikely. Will score WRONG at check_date April 14. Confidence downgraded to 1."
     },
     {
@@ -540,7 +540,7 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "confidence_note": "UPGRADED TO 4★ — TCS Q4FY26 results beat on revenue (₹70,698 cr vs ₹69,932 est), record TCV $12B Q4, ₹31 final dividend. TCS closed ₹2,587.75 on April 9 (before results). Expected gap-up on April 10 to ₹2,620-2,640. P018 target ₹2,600 very likely to be breached on April 10 open. With 6 more days to check_date April 15, probability RIGHT: ~90%+. Confidence raised from 3 to 4★."
+      "confidence_note": "UPGRADED TO 4\u2605 \u2014 TCS Q4FY26 results beat on revenue (\u20b970,698 cr vs \u20b969,932 est), record TCV $12B Q4, \u20b931 final dividend. TCS closed \u20b92,587.75 on April 9 (before results). Expected gap-up on April 10 to \u20b92,620-2,640. P018 target \u20b92,600 very likely to be breached on April 10 open. With 6 more days to check_date April 15, probability RIGHT: ~90%+. Confidence raised from 3 to 4\u2605."
     },
     {
       "pred_id": "P019",
@@ -604,14 +604,23 @@
       "horizon": "7D",
       "date": "2026-04-09",
       "stock": "TCS",
-      "prediction": "TCS will test ₹2,650-2,700 by April 16 following strong Q4FY26 beat — record $12B quarterly TCV, revenue beat, AI narrative, ₹31 dividend",
+      "prediction": "TCS will test \u20b92,650-2,700 by April 16 following strong Q4FY26 beat \u2014 record $12B quarterly TCV, revenue beat, AI narrative, \u20b931 dividend",
       "entry_price": 2587.75,
       "target": "2650-2700",
       "confidence": 4,
       "category": "HIGH",
-      "reasoning": "TCS Q4FY26 actual results beat analyst estimates on revenue (₹70,698 cr vs ₹69,932 est, +1.1%), announced record quarterly TCV of $12 billion (highest ever), signed 3 mega deals in Q4 (5 in FY26), AI revenue crossed $2.3B annualized, FY26 full-year EBIT margin at 25% (+70bps YoY, highest in 4 years), final dividend ₹31/share (total FY26: ₹110/share). Strong across all key investor metrics. IT sector had already decoupled positively. USD strength tailwind. US earnings season positive context. TCS at ₹2,587.75 — needs +2.4-4.3% to reach target. Confidence 4★ based on multiple positive catalysts converging.",
-      "factors_checked": ["M004", "M005", "T001", "T002", "S003", "M009"],
-      "factors_not_checked": ["T006"],
+      "reasoning": "TCS Q4FY26 actual results beat analyst estimates on revenue (\u20b970,698 cr vs \u20b969,932 est, +1.1%), announced record quarterly TCV of $12 billion (highest ever), signed 3 mega deals in Q4 (5 in FY26), AI revenue crossed $2.3B annualized, FY26 full-year EBIT margin at 25% (+70bps YoY, highest in 4 years), final dividend \u20b931/share (total FY26: \u20b9110/share). Strong across all key investor metrics. IT sector had already decoupled positively. USD strength tailwind. US earnings season positive context. TCS at \u20b92,587.75 \u2014 needs +2.4-4.3% to reach target. Confidence 4\u2605 based on multiple positive catalysts converging.",
+      "factors_checked": [
+        "M004",
+        "M005",
+        "T001",
+        "T002",
+        "S003",
+        "M009"
+      ],
+      "factors_not_checked": [
+        "T006"
+      ],
       "check_date": "2026-04-16",
       "outcome": null,
       "outcome_price": null,
@@ -641,6 +650,40 @@
         "nifty_outcome": "UP 1.12% (DII offset FII that day)",
         "pattern_note": "PAT001 applies more to NEXT DAY reversal risk than same-day \u2014 Nifty fell at open Apr 7 confirming delayed effect"
       }
+    },
+    {
+      "rca_id": "RCA003",
+      "pred_id": "P013",
+      "date": "2026-04-14",
+      "stock": "INDIGO",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "IndiGo demand resilience vastly underestimated. $100+ Brent causes ATF cost concern but IndiGo has strong pricing power and forward-sold capacity. The 4,100 target required an -8.9% drawdown in 7 days \u2014 far too aggressive for a stock with no fundamental deterioration.",
+      "missing_signal": "T001 (52-week proximity) failed because IndiGo was in an uptrend, not near support. A stock at \u20b94,500 needs a catalyst to drop \u20b9400 in 7 days.",
+      "factor_gap": "DEMAND_RESILIENCE_FACTOR missing: India aviation demand is inelastic at current ATF levels. Airlines pass costs to consumers. Need quantitative trigger for bearish aviation call.",
+      "proposed_factor_id": "S009",
+      "proposed_factor_name": "Aviation Demand Resilience",
+      "pattern_tag": "AVIATION_DEMAND_RESILIENCE_UNDERESTIMATION",
+      "framework_promoted": false,
+      "lesson": "For bearish aviation calls: require Brent sustained >$110 for 2+ weeks OR demand shock signal (advance bookings down >20%) OR technical breakdown below key support. Single crude spike insufficient trigger.",
+      "promoted_date": null
+    },
+    {
+      "rca_id": "RCA004",
+      "pred_id": "P012",
+      "date": "2026-04-14",
+      "stock": "ASTRA MICRO",
+      "horizon": "7D",
+      "outcome": "PARTIAL_CORRECT",
+      "root_cause_summary": "Defense war premium thesis correct (stock hit \u20b91,132, target was 1,050-1,080). BUT intraday reversal on Iran diplomatic outreach (April 14) caused close below target range. FORECAST_PAT003 triggered: Iran outreach = partial de-escalation signal even without formal deal.",
+      "missing_signal": "DIPLOMATIC_SIGNAL_DEFENSE_OVERRIDE: Any Iran-US outreach (even informal) triggers defense profit-booking. Market frontrunning the potential deal.",
+      "factor_gap": "No EXIT TRIGGER in defense stock predictions for 'diplomatic signal' scenarios. Need to add partial exit rule.",
+      "proposed_factor_id": "M015",
+      "proposed_factor_name": "Defense Stock Diplomatic Signal Override",
+      "pattern_tag": "DIPLOMATIC_SIGNAL_DEFENSE_OVERRIDE",
+      "framework_promoted": false,
+      "lesson": "For defense stock targets in escalation scenarios: ALWAYS include exit trigger for any diplomatic signal (even informal). At \u20b91,100+ profit target: place limit sell at +5% above max target range to auto-lock profits.",
+      "promoted_date": null
     }
   ]
 }
