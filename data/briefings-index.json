@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-04-15",
+      "type": "morning",
+      "label": "Wed Apr 15 — Morning Briefing",
+      "file": "daily-briefings/2026-04-15-morning.md",
+      "summary": "The overnight game-changer: On April 14 (Indian holiday), Trump said Iran called and \"wants to work a deal.\" Brent crude responded. Nifty opened: ~23,772 (gap-down -0.25%** vs. the -0.8% forecast — much better than expected)"
+    },
+    {
       "date": "2026-04-13",
       "type": "morning",
       "label": "Mon Apr 13 — Morning Briefing",
