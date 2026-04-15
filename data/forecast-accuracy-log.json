@@ -498,80 +498,93 @@
         ]
       },
       "session_direction_accuracy": {
-        "direction_correct": null,
-        "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-15 at 5:30 PM IST"
+        "direction_correct": true,
+        "direction_note": "Forecast FLAT_TO_SIDEWAYS_UP (+0.3%), actual STRONG_UP (+1.63%). Direction correct (positive), but magnitude significantly underestimated. The 30% probability relief rally scenario (24,000-24,200) materialized and exceeded even that range (close 24,231). Primary base case was too conservative at FLAT_TO_SIDEWAYS.",
+        "in_range": false,
+        "range_note": "Nifty closed at 24,231.30. Forecast range was 23,700-24,100. Close was 131 pts ABOVE upper bound. Even the relief rally scenario (24,000-24,200) underestimated by 31 pts. Session exceeded all modeled upside scenarios.",
+        "brent_correct": true,
+        "brent_note": "Brent forecast $95-100. Actual $96.70. Within forecast band.",
+        "grade": "PARTIAL_CORRECT",
+        "opening_bias_grade": "WRONG",
+        "opening_bias_note": "Forecast GAP_DOWN -0.8%, actual GAP_UP +1.08% (scored in morning brief)"
       },
       "actual": {
         "nifty_open": 24100,
-        "nifty_close": null,
-        "nifty_change_pct": null,
-        "brent_close": null,
-        "session_theme": "STRONG GAP_UP RALLY \u2014 Iran-US second round talks expected within 2 days (Trump April 14 statement). Brent declined to $95.94. GIFT Nifty opened 24,054, NSE opened ~24,100 (+1.08% gap). Nifty at 24,239 at 3PM (+1.67% from prev_close 23,842.65). Session FAR EXCEEDED FLAT_TO_SIDEWAYS_UP forecast range 23,700-24,100. Relief rally scenario (30% probability) fully materialized.",
-        "nifty_intraday_at_3pm": 24239.65
-      }
+        "nifty_close": 24231.3,
+        "nifty_change_pct": 1.63,
+        "brent_close": 96.7,
+        "session_theme": "STRONG RELIEF RALLY \u2014 Iran-US second round talks imminent (Trump: within 2 days). Brent $96.70 (+2.01% on WTI supply concerns but war premium declining). Nifty opened 24,100 GAP_UP +1.08%, rallied through session to close 24,231 (+1.63%). All sectors positive. Aviation (+4.76%), Defense/Infra/PSU strong. SUZLON +7.13%. Session FAR EXCEEDED FLAT_TO_SIDEWAYS_UP forecast range (23,700-24,100).",
+        "nifty_open_actual": 24100,
+        "banknifty_close": 56301.95,
+        "banknifty_change_pct": 1.25
+      },
+      "lessons": [
+        "When Trump explicitly signals talks \"within 2 days\" + Brent already declining, assign 50%+ probability to the relief rally scenario, not 30%",
+        "If opening bias forecast is WRONG (GAP_DOWN forecast but GAP_UP actual by >1%), immediately revise session direction upward \u2014 strong opens signal institutional conviction that overrides individual analyst conservatism",
+        "BLOCKADE_ESCALATION_STABILIZED regime + diplomatic optionality = markets run ahead of fundamentals; Nifty can trade 24,200+ even with Brent $96+ if diplomatic narrative is positive"
+      ]
     },
     {
       "session_date": "2026-04-16",
       "session_type": "TRADING",
       "opening_bias": {
-        "direction": "FLAT_TO_SLIGHT_GAP_UP",
-        "gap_pct_estimate": 0.2,
-        "gift_nifty_estimate": 23890,
+        "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
+        "gap_pct_estimate": -0.25,
+        "gift_nifty_estimate": 24170,
         "key_drivers": [
-          "Brent declining on Iran outreach \u2014 from $102.26 to ~$97.76",
-          "Iran-US diplomatic channel opened April 14",
-          "April 22 blockade deadline 7 days away",
-          "IREDA earnings April 16 \u2014 PSU finance catalyst"
+          "Nifty closed +1.63% at 24,231 \u2014 profit booking likely at open",
+          "Brent $96.70 (+2.01%) \u2014 slightly elevated, adds caution",
+          "Iran-US second round talks \"within 2 days\" from April 14 \u2014 could be today (April 16)",
+          "IREDA Q4 earnings: FY26 loan book \u20b993,075 Cr (+22% YoY) \u2014 potential PSU catalyst",
+          "April 22 ceasefire expiry = 6 days \u2014 urgency factor"
         ],
-        "confidence": 2,
-        "generated_at": "eod_wrap_2026-04-14",
-        "note": "PRELIMINARY \u2014 April 15 EOD wrap will refine/overwrite with final forecast."
+        "confidence": 3,
+        "generated_at": "eod_wrap_2026-04-15",
+        "note": "Final EOD April 15 forecast. Revised from preliminary FLAT_TO_SLIGHT_GAP_UP 23,890 to FLAT_TO_SLIGHT_GAP_DOWN 24,170 given actual April 15 close of 24,231. Profit booking after strong +1.63% session expected at open."
       },
-      "opening_bias_pct_estimate": 0.2,
+      "opening_bias_pct_estimate": -0.25,
       "opening_bias_rationale": "Brent eased to $97.76 on Iran outreach. GIFT Nifty expected ~23,900-24,000. No overnight negative catalyst. Iran-US dialogue optionality positive. April 22 deadline still 8 days away \u2014 not yet panic-inducing.",
       "opening_bias_actual": null,
       "session_direction": {
-        "direction": "BULLISH_TO_SIDEWAYS",
-        "change_pct_estimate": 0.5,
-        "range_low": 24000,
+        "direction": "SIDEWAYS_TO_BULLISH",
+        "change_pct_estimate": 0.3,
+        "range_low": 24050,
         "range_high": 24500,
-        "key_assumption": "Second round Iran-US talks possibly today (April 16/Thursday) or Friday. Brent at ~$93-96 (declined from $102.26 peak). IREDA earnings catalyst. April 22 ceasefire expiry = 6 days \u2014 urgency building but market still pricing in talks.",
+        "key_assumption": "Second round Iran-US talks could be confirmed today (April 16) or tomorrow. Brent at $96.70 \u2014 manageable but not benign. After strong +1.63% rally, some consolidation expected but no major reversal without negative catalyst. IREDA earnings outcome will drive PSU energy space. Market has priced in \"talks happening soon\" \u2014 actual confirmation of talks could add +0.5-1%.",
         "confidence": 3,
-        "generated_at": "eod_wrap_2026-04-14_preliminary",
+        "generated_at": "eod_wrap_2026-04-15",
         "regime": "BLOCKADE_ESCALATION_DIPLOMACY_ACCELERATING",
         "scenario_weighted": {
-          "talks_today_confirmed": {
+          "talks_confirmed_today": {
             "probability": 35,
-            "description": "Second round Iran-US talks confirmed for today/Friday. Brent falls toward $90. Markets rally.",
-            "nifty_impact": "UP +1.0% to +1.5% (24,400-24,750)"
+            "description": "Second round Iran-US talks officially confirmed for April 16/17. Brent falls toward $92-94. Markets extend rally.",
+            "nifty_impact": "UP +0.8% to +1.5% (24,400-24,600)"
           },
-          "base_case": {
-            "probability": 40,
-            "description": "Talks delayed but expected soon. Brent holds $93-96. IREDA earnings in-line.",
-            "nifty_impact": "FLAT to +0.5% (24,150-24,450)"
+          "base_case_wait": {
+            "probability": 45,
+            "description": "Talks expected but not yet confirmed. Brent holds $95-97. Consolidation above 24,100.",
+            "nifty_impact": "FLAT to +0.4% (24,150-24,450)"
           },
-          "disappointment": {
-            "probability": 25,
-            "description": "Talks delayed past April 22. IRGC provocation OR Trump reversal. Brent spikes >$98.",
-            "nifty_impact": "DOWN -1.0% to -2.0% (23,700-24,000)"
+          "disappointment_or_incident": {
+            "probability": 20,
+            "description": "Talks delayed or IRGC incident. Brent spikes >$100. Sharp reversal.",
+            "nifty_impact": "DOWN -1.5% to -2.5% (23,600-24,000)"
           }
         },
-        "brent_forecast": "$90-96 (declining trend continues if talks progress)",
+        "brent_forecast": "$93-97 (flat to slightly declining if talks progress)",
         "key_risks": [
-          "Iran IRGC autonomous action \u2014 'last warning' still not formally retracted",
-          "Trump Twitter reversal \u2014 historically volatile on Iran policy",
-          "FII continued selling pressure if crude stays elevated",
-          "April 22 ceasefire expiry \u2014 6 days = increasing urgency"
+          "Iran IRGC 'last warning' not retracted \u2014 autonomous action risk persists",
+          "Trump reversal on Iran talks \u2014 volatile Twitter diplomacy",
+          "Profit booking after 2 consecutive up days (+1.63% today, +1.67% at 3PM)",
+          "April 22 ceasefire expiry now 6 days away \u2014 urgency increasing"
         ],
         "key_opportunities": [
-          "IREDA earnings: FY26 loan book \u20b993,075 Cr (22% growth, well above \u20b970,000 Cr ADD trigger)",
-          "SETFGOLD: Iran talks confirmation = exit trigger (sell 30-40% at \u20b9130+)",
-          "IndiGo: ATF cost relief sustained if Brent holds <$96",
-          "MRPL: GRM recovery at Brent $93-96 = strong margin environment",
-          "TCS: P021 WRONG but fundamental support at \u20b92,420-2,500 creates ADD opportunity on dips"
-        ],
-        "note": "Preliminary forecast. April 15 EOD wrap will overwrite with final forecast tonight."
+          "SETFGOLD: Exit trigger at \u20b9130+ if talks confirmed (P023 target \u20b9130-134). SETFGOLD today \u20b9129.31.",
+          "IREDA: Q4 earnings out \u2014 FY26 loan book \u20b993,075 Cr beat; watch for guidance",
+          "SUZLON: Continued momentum (+7.13% today) if renewable energy narrative sustains",
+          "ADANI PORT: P019 target \u20b91,490-1,540 achieved (\u20b91,511 today) \u2014 monitor for continuation",
+          "MRPL: GRM recovery thesis intact at $96.70 Brent \u2014 approaching cost-neutral zone"
+        ]
       },
       "session_direction_change_pct_estimate": 0.3,
       "session_direction_rationale": "IREDA earnings key catalyst. Brent declining trend continues. Iran outreach = base case of TALKS_NEUTRAL (50%) or TALKS_PROGRESS (20%). No major negative catalyst unless IRGC incident.",

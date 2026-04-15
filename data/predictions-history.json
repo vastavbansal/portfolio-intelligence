@@ -685,5 +685,95 @@
       "lesson": "For defense stock targets in escalation scenarios: ALWAYS include exit trigger for any diplomatic signal (even informal). At \u20b91,100+ profit target: place limit sell at +5% above max target range to auto-lock profits.",
       "promoted_date": null
     }
+  ],
+  "rca_log": [
+    {
+      "rca_id": "RCA003",
+      "pred_id": "P018",
+      "scored_date": "2026-04-15",
+      "stock": "TCS",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "Macro regime override \u2014 BLOCKADE_ESCALATION_STABILIZED suppressed IT sector despite strong Q4FY26 earnings beat (profit +12%, $12B deals, \u20b931 dividend).",
+      "missing_signal": "Sell-on-news pattern in risk-off macro regimes. IT stocks face FII selling + USD/INR uncertainty even when fundamentals beat.",
+      "factor_gap": "No regime filter for IT prediction confidence \u2014 predictions should be auto-downgraded to confidence 1-2 during active geopolitical blockades",
+      "proposed_factor_id": "M013",
+      "proposed_factor_name": "IT Regime Risk Filter",
+      "pattern_tag": "MACRO_REGIME_OVERRIDE_IT_FUNDAMENTALS",
+      "lesson": "In BLOCKADE_ESCALATION regimes: IT stocks face triple headwind (risk-off FII, USD/INR uncertainty, macro fear > sector fundamentals). Do not predict IT breakouts during active geopolitical crises regardless of earnings quality.",
+      "framework_promoted": false,
+      "notes": "TCS closed \u20b92,542 vs \u20b92,600 target. Needs 2 more similar observations before M013 promoted to framework."
+    },
+    {
+      "rca_id": "RCA004",
+      "pred_id": "P020",
+      "scored_date": "2026-04-15",
+      "stock": "SETFGOLD",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "Ceasefire fragility underestimated. Islamabad talks failed April 11 (Day 3 of 7-day prediction window), reversing the war premium compression thesis completely.",
+      "missing_signal": "CEASEFIRE_STABILITY_PRECONDITION \u2014 bullish ceasefire thesis requires 3+ day stability before acting on war premium compression. Used single-point ceasefire announcement.",
+      "factor_gap": "No \"ceasefire hold probability\" decay model. April 8 ceasefire had <3 day stability before talks collapsed.",
+      "proposed_factor_id": "FORECAST_PAT004",
+      "proposed_factor_name": "Ceasefire Stability Precondition",
+      "pattern_tag": "CEASEFIRE_FRAGILITY_UNDERESTIMATED",
+      "lesson": "Before making bearish gold/safe-haven predictions on ceasefire news: (1) Wait 3+ trading days to confirm ceasefire holds. (2) Model at 60%+ probability that ceasefire is temporary. (3) Only reduce gold hedge once formal written agreement signed, not verbal announcement.",
+      "framework_promoted": true,
+      "promoted_date": "2026-04-15",
+      "notes": "This is the 2nd occurrence of ceasefire fragility causing a wrong call (April 8-11 cycle). FORECAST_PAT004 promoted to framework."
+    },
+    {
+      "rca_id": "RCA_P015_PARTIAL",
+      "pred_id": "P015",
+      "scored_date": "2026-04-15",
+      "stock": "INDIGO",
+      "horizon": "7D",
+      "outcome": "RIGHT",
+      "root_cause_summary": "N/A \u2014 RIGHT prediction. Target range (\u20b94,150-4,300) was too conservative but directional call correct.",
+      "missing_signal": "ATF relief rally magnitude underestimated. INDIGO hit \u20b94,638 vs \u20b94,300 range ceiling.",
+      "factor_gap": "Aviation stocks benefit non-linearly from Brent decline: every $10 Brent decline = ~\u20b9200-300 INDIGO appreciation given operational leverage",
+      "proposed_factor_id": null,
+      "pattern_tag": "TARGET_RANGE_TOO_CONSERVATIVE",
+      "lesson": "For aviation stocks: Brent sensitivity is non-linear. At $10 Brent decline from peak ($102\u2192$92), INDIGO can see 8-10% rally from ATF cost relief + sentiment. Set aviation targets at least 2\u00d7 the initial estimate when Brent decline thesis is active.",
+      "framework_promoted": false,
+      "notes": "Scored RIGHT but lesson noted for target calibration"
+    }
+  ],
+  "scored_predictions": [
+    {
+      "pred_id": "P015",
+      "stock": "INDIGO",
+      "outcome": "RIGHT",
+      "scored_date": "2026-04-15",
+      "outcome_price": 4638.0
+    },
+    {
+      "pred_id": "P016",
+      "stock": "NIFTY",
+      "outcome": "PARTIAL_CORRECT",
+      "scored_date": "2026-04-15",
+      "outcome_price": 24231.3
+    },
+    {
+      "pred_id": "P018",
+      "stock": "TCS",
+      "outcome": "WRONG",
+      "scored_date": "2026-04-15",
+      "outcome_price": 2542.4
+    },
+    {
+      "pred_id": "P019",
+      "stock": "ADANI PORT",
+      "outcome": "RIGHT",
+      "scored_date": "2026-04-15",
+      "outcome_price": 1511.8
+    },
+    {
+      "pred_id": "P020",
+      "stock": "SETFGOLD",
+      "outcome": "WRONG",
+      "scored_date": "2026-04-15",
+      "outcome_price": 129.31
+    }
   ]
 }

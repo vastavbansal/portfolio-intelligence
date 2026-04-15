@@ -507,11 +507,15 @@
         "T004"
       ],
       "check_date": "2026-04-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "RIGHT",
+      "outcome_price": 4638.0,
+      "outcome_evidence": "INDIGO closed \u20b94,638.00 on April 15, well above the \u20b94,150 stabilization target. Stock held above \u20b94,150 throughout the 7-day window (April 8-15). The relief rally scenario materialized fully \u2014 ATF cost relief on declining Brent + Iran diplomacy. Target range of \u20b94,150-4,300 was massively conservative \u2014 INDIGO surged to \u20b94,614+ on April 8 itself. Core directional thesis CORRECT: stock stabilized and continued higher, not lower.",
+      "postmortem": {
+        "root_cause": "Target range too conservative (\u20b94,150-4,300). Should have been \u20b94,400-4,700 given ceasefire + ATF relief",
+        "lesson": "When relief rally scenario is possible, set target range at 70th-80th percentile outcome, not median. ATF cost as % of aviation revenue = direct Brent multiplier.",
+        "grade_rationale": "RIGHT on directional call (stabilize above \u20b94,150). WRONG on range (4,150-4,300 was too narrow). Scoring as RIGHT because the prediction said \"stabilize above \u20b94,150\" which was fully achieved."
+      },
+      "scored_on": "2026-04-15",
       "confidence_note": "TARGET EXCEEDED ON ENTRY DAY: IndiGo closed at \u20b94,614.90 on April 8, far above the \u20b94,150-4,300 target range. This suggests target was too conservative. Will score as RIGHT (stable above \u20b94,150) but the range was blown out by the ATF relief rally. Confidence raised to 4. Updating target band upward mentally to \u20b94,500-4,700 to track consolidation."
     },
     {
@@ -537,11 +541,15 @@
         "M009"
       ],
       "check_date": "2026-04-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "PARTIAL_CORRECT",
+      "outcome_price": 24231.3,
+      "outcome_evidence": "Nifty closed at 24,231.30 on April 15. Prediction was \"consolidate in 23,900-24,100 range.\" The 23,900 floor held perfectly \u2014 Nifty never breached that level. But the 24,100 ceiling was broken significantly, closing 131 pts above. Iran-US talks imminent drove a relief rally that exceeded the consolidation band. Direction (no major selloff, market held) correct, but range was too tight on the upside.",
+      "postmortem": {
+        "root_cause": "Range ceiling (24,100) set at April 8 ceasefire close level \u2014 did not account for continued rally from Iran-US diplomatic momentum",
+        "lesson": "After a major geopolitical relief rally, \"consolidation\" can mean higher consolidation at a new level. Add 200-300 pts to the upper bound in DIPLOMACY_ACCELERATING regime.",
+        "grade_rationale": "PARTIAL_CORRECT \u2014 floor held but ceiling broken. Market consolidated but at a higher level than predicted."
+      },
+      "scored_on": "2026-04-15",
       "confidence_note": "ON TRACK as of April 8 close (23,997.35). Thesis: consolidation 23,900-24,100. TCS earnings and April 10 talks are key risks. Confidence 3."
     },
     {
@@ -596,11 +604,16 @@
         "T005"
       ],
       "check_date": "2026-04-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null
+      "outcome": "WRONG",
+      "outcome_price": 2542.4,
+      "outcome_evidence": "TCS closed at \u20b92,542.40 on April 15, below the \u20b92,600 target. Despite strong Q4FY26 results (profit +12% YoY, $12B deal wins, \u20b931 final dividend), the stock failed to sustain above \u20b92,600. Geopolitical macro headwinds (blockade, crude elevated) and broad IT sector pressure weighed. P021 already identified this as WRONG \u2014 TCS sell-on-news pattern prevailed. Note: TCS 52-week range \u20b92,346-3,630 \u2014 stock is at depressed levels, fundamental support at \u20b92,420-2,500.",
+      "postmortem": {
+        "root_cause": "Earnings beat + strong deal wins were not enough to overcome macro headwinds (Brent $96+, USD/INR uncertainty, IT sector risk-off in current regime). Sell-on-news pattern overrode fundamentals.",
+        "lesson": "In BLOCKADE_ESCALATION_STABILIZED regime, IT stocks face headwinds from: (1) risk-off FII selling, (2) USD/INR uncertainty reducing confidence in export revenue forecasts, (3) macro fear overrides sector fundamentals. Do not predict IT breakouts during active geopolitical crises.",
+        "rca_tag": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS",
+        "grade_rationale": "WRONG \u2014 TCS closed \u20b92,542 vs \u20b92,600 target. Results beat but stock underperformed thesis."
+      },
+      "scored_on": "2026-04-15"
     },
     {
       "pred_id": "P019",
@@ -625,11 +638,15 @@
         "T006"
       ],
       "check_date": "2026-04-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null
+      "outcome": "RIGHT",
+      "outcome_price": 1511.8,
+      "outcome_evidence": "ADANI PORT closed \u20b91,511.80 on April 15, squarely INSIDE the \u20b91,490-1,540 target range. Hormuz safe passage protocol thesis played out correctly \u2014 port traffic restoration beneficiary. Stock also sustained above \u20b91,430 throughout the 7-day window as predicted. April 15 session: ADANI PORT +3.17%, in line with broader PSU infrastructure re-rating.",
+      "postmortem": {
+        "root_cause": "N/A \u2014 prediction was RIGHT",
+        "lesson": "Hormuz Protocol thesis (Adani port traffic restoration) was well-identified. Infrastructure/PSU names with direct geopolitical beneficiary status outperform in DIPLOMACY_ACCELERATING regime. Keep this framework.",
+        "grade_rationale": "RIGHT \u2014 stock hit \u20b91,511 inside \u20b91,490-1,540 target range. Core thesis (Hormuz reopening = port traffic) confirmed."
+      },
+      "scored_on": "2026-04-15"
     },
     {
       "pred_id": "P020",
@@ -653,11 +670,16 @@
         "T005"
       ],
       "check_date": "2026-04-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 129.31,
+      "outcome_evidence": "SETFGOLD closed \u20b9129.31 on April 15, well ABOVE the \u20b9120-122 target. The thesis was that ceasefire would compress gold's war premium toward \u20b9120-122. Instead, Islamabad talks failed (April 11), blockade expanded, and Iran IRGC issued 'last warning'. Gold war premium INCREASED, not decreased. SETFGOLD is now \u20b9129.31 vs entry \u20b9125.59. The A005 exit signal (gold <$5,100) was NOT triggered \u2014 gold is at $4,816 with war premium sustained. Confidence was downgraded to 1\u2605 on April 12 weekly review \u2014 prediction correctly pre-identified as WRONG.",
+      "postmortem": {
+        "root_cause": "Ceasefire fragility underestimated. April 11 Islamabad failure + blockade expansion reversed gold war premium compression completely. The 7-day prediction was made on April 8 assuming ceasefire durability \u2014 that assumption failed within 3 days.",
+        "lesson": "Gold war premium predictions require 3-day ceasefire stability confirmation before making bearish calls. In TALKS_FAILED regime, gold remains elevated. The April 12 regime change (TALKS_FAILED) should have triggered an early position review \u2014 the weekly review correctly identified this as WRONG.",
+        "rca_tag": "CEASEFIRE_FRAGILITY_UNDERESTIMATED",
+        "grade_rationale": "WRONG \u2014 gold war premium sustained, SETFGOLD \u20b9129.31 vs target \u20b9120-122."
+      },
+      "scored_on": "2026-04-15",
       "confidence_note": "THESIS INVALIDATED (April 12 weekly review): Islamabad talks FAILED April 11. Ceasefire fragile. War premium not compressing \u2014 REVERSING. SETFGOLD at \u20b9127.31 on April 10. Gold safe-haven demand likely INCREASES with failed talks. Target \u20b9120-122 requires -4 to -5.7% drop in 3 days while macro headwinds push GOLD UP. Confidence downgraded to 1\u2605 \u2014 WILL SCORE WRONG April 15. A005 exit: DO NOT SELL at open April 14 \u2014 hold gold position as hedge."
     },
     {

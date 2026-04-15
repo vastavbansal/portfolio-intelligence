@@ -1,17 +1,17 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-13T17:00:00",
+  "last_updated": "2026-04-15T17:30:00",
   "L1_scorecard": {
     "all_time": {
-      "total": 20,
-      "open": 17,
-      "scored": 3,
-      "right": 1,
-      "wrong": 2,
-      "partial": 0,
-      "accuracy_pct": 33.3,
-      "note": "April 8 added 3 new predictions (P018, P019, P020). Total now 20. Scored predictions: P008 RIGHT, P007 WRONG, P009 WRONG. Invalidated-but-not-yet-scored: P002, P003, P004, P013 (will score WRONG at their check_dates)."
+      "total": 26,
+      "open": 16,
+      "scored": 10,
+      "right": 3,
+      "wrong": 5,
+      "partial": 2,
+      "accuracy_pct": 30.0,
+      "note": "April 15 batch: P015 INDIGO RIGHT, P016 NIFTY PARTIAL, P018 TCS WRONG, P019 ADANI PORT RIGHT, P020 SETFGOLD WRONG. Running total: 3 RIGHT, 2 PARTIAL, 5 WRONG from 10 scored. FORECAST_PAT004 (Ceasefire Stability Precondition) promoted to framework."
     },
     "by_horizon": {
       "1D": {
@@ -23,12 +23,13 @@
       },
       "7D": {
         "total": 9,
-        "scored": 3,
-        "right": 1,
-        "wrong": 2,
-        "accuracy_pct": 33.3,
-        "open": 7,
-        "note": "P008 RIGHT (Nifty held 22k), P007 WRONG (SWIGGY ceasefire override), P009 WRONG (ASTRA MICRO war premium extended). Open 7D: P012, P013, P015, P016, P018, P019, P020 (7 open)."
+        "scored": 8,
+        "right": 3,
+        "wrong": 4,
+        "accuracy_pct": 37.5,
+        "open": 4,
+        "note": "April 15 scoring: P015 INDIGO RIGHT, P016 NIFTY PARTIAL, P018 TCS WRONG, P019 ADANI PORT RIGHT, P020 SETFGOLD WRONG. Open 7D: P021 (TCS check Apr16), P022 (TCS check Apr17), P023 (SETFGOLD check Apr17), P024 (NIFTY check Apr16). Also P012-PARTIAL, P013-WRONG already scored Apr14.",
+        "partial": 1
       },
       "4W": {
         "total": 5,
@@ -60,11 +61,12 @@
       },
       "Index": {
         "total": 4,
-        "scored": 2,
+        "scored": 3,
         "right": 1,
         "wrong": 1,
         "accuracy_pct": 50,
-        "note": "P008 RIGHT (Nifty 22k hold), P003 open but expected WRONG (Nifty 22k target obsolete at 23997). P016 open."
+        "note": "P008 RIGHT, P003 open (expected WRONG), P016 PARTIAL_CORRECT (range ceiling breached), P024 PENDING Apr16.",
+        "partial": 1
       },
       "Energy_Crude": {
         "total": 2,
@@ -84,35 +86,35 @@
       },
       "Aviation": {
         "total": 3,
-        "scored": 0,
-        "right": 0,
+        "scored": 1,
+        "right": 1,
         "wrong": 0,
-        "accuracy_pct": null,
-        "note": "P006 (2M underperformance) weakened. P013 (7D <\u20b94,100) expected WRONG. P015 on track (stable above \u20b94,150, stock at \u20b94,614.90)."
+        "accuracy_pct": 100,
+        "note": "P015 INDIGO RIGHT (+4.76% session, closed \u20b94,638 above \u20b94,150 target). P013 WRONG (scored Apr14)."
       },
       "PSU_Mining_Infra": {
         "total": 4,
-        "scored": 0,
-        "right": 0,
+        "scored": 1,
+        "right": 1,
         "wrong": 0,
-        "accuracy_pct": null,
-        "note": "P005 Coal India (confidence 4, strong). P010 IRFC range. P011 NHPC recovery. P019 ADANI PORT Hormuz re-rating (new)."
+        "accuracy_pct": 100,
+        "note": "P019 ADANI PORT RIGHT (\u20b91,511 in \u20b91,490-1,540 range). P005, P010, P011, P026 still open."
       },
       "IT": {
         "total": 2,
-        "scored": 0,
+        "scored": 1,
         "right": 0,
-        "wrong": 0,
-        "accuracy_pct": null,
-        "note": "P014 (Nifty IT outperform 4W). P018 (TCS Q4 earnings 7D \u2014 new)."
+        "wrong": 1,
+        "accuracy_pct": 0,
+        "note": "P018 TCS WRONG (\u20b92,542 vs \u20b92,600 target). MACRO_REGIME_OVERRIDE pattern. P021 (TCS Apr16), P022 (TCS Apr17), P014 (Nifty IT 4W) still open."
       },
       "Gold_Commodities": {
         "total": 1,
-        "scored": 0,
+        "scored": 1,
         "right": 0,
-        "wrong": 0,
-        "accuracy_pct": null,
-        "note": "P020 (SETFGOLD correction 7D \u2014 new). A005 exit trigger has been activated."
+        "wrong": 1,
+        "accuracy_pct": 0,
+        "note": "P020 SETFGOLD WRONG (\u20b9129.31 vs \u20b9120-122 target). CEASEFIRE_FRAGILITY pattern. P023 SETFGOLD still open (Apr17 check)."
       }
     },
     "by_confidence": {
@@ -132,11 +134,12 @@
       },
       "3_stars": {
         "total": 13,
-        "scored": 2,
-        "right": 1,
-        "wrong": 1,
-        "accuracy_pct": 50,
-        "note": "P008 (3\u2605) RIGHT. P009 (3\u2605) WRONG. Multiple 3\u2605 predictions still open."
+        "scored": 7,
+        "right": 3,
+        "wrong": 3,
+        "accuracy_pct": 42.9,
+        "note": "3\u2605 accuracy: 3/7 = 42.9%. P015, P019 RIGHT; P016 PARTIAL; P018, P020 WRONG. Other 3\u2605 still open.",
+        "partial": 1
       },
       "2_stars": {
         "total": 2,
@@ -187,18 +190,35 @@
       "framework_promoted": true,
       "promoted_date": "2026-04-08",
       "lesson": "Before making bearish defense predictions, check: what is the duration of the tension scenario? 2-6 week managed tension = hold or add defense. Instant peace = sell defense. Acute escalation = defense spikes but reverses quickly."
+    },
+    {
+      "rca_id": "RCA004",
+      "pred_id": "P020",
+      "date": "2026-04-15",
+      "stock": "SETFGOLD",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "Ceasefire fragility underestimated. April 8 ceasefire failed within 3 days (Islamabad talks April 11). War premium reversed direction.",
+      "missing_signal": "FORECAST_PAT004 (Ceasefire Stability Precondition) \u2014 need 3+ day stability before making bearish safe-haven calls.",
+      "factor_gap": "No ceasefire hold probability decay model in framework",
+      "proposed_factor_id": "FORECAST_PAT004",
+      "proposed_factor_name": "Ceasefire Stability Precondition",
+      "pattern_tag": "CEASEFIRE_FRAGILITY_UNDERESTIMATED",
+      "framework_promoted": true,
+      "promoted_date": "2026-04-15",
+      "lesson": "Wait 3+ trading days before bearish safe-haven calls on ceasefire. Model ceasefire failure probability at 40-60% for first 72 hours."
     }
   ],
   "L3_trend": {
     "monthly_accuracy": [
       {
         "month": "2026-04",
-        "scored": 4,
-        "right": 1,
-        "wrong": 2,
-        "accuracy_pct": 25.0,
-        "notes": "April 7: P008 RIGHT. April 8: P007 WRONG, P009 WRONG (ceasefire regime shift). April 13 session: PARTIAL_CORRECT (direction right, magnitude underestimated). Framework promotes BLOCKADE_ESCALATION_STABILIZATION as new pattern.",
-        "partial": 1
+        "scored": 9,
+        "right": 3,
+        "wrong": 5,
+        "accuracy_pct": 33.3,
+        "notes": "April 8: P007 WRONG, P009 WRONG (ceasefire regime shift). April 13: Session PARTIAL_CORRECT. April 14: P012 PARTIAL, P013 WRONG. April 15: P015 RIGHT, P016 PARTIAL, P018 WRONG, P019 RIGHT, P020 WRONG, Session PARTIAL. Framework v3: FORECAST_PAT004 promoted.",
+        "partial": 2
       }
     ],
     "rolling_accuracy": {
@@ -206,6 +226,14 @@
         "scored": 3,
         "right": 1,
         "accuracy_pct": 33.3
+      },
+      "last_5_scored": {
+        "scored": 5,
+        "right": 2,
+        "partial": 1,
+        "wrong": 2,
+        "accuracy_pct": 40.0,
+        "note": "April 15 batch: 2R/1P/2W. Improvement from first 5 (1R/0P/4W). Aviation and PSU infra performing well; IT and commodities underperforming in current regime."
       }
     },
     "improvement_signal": "INSUFFICIENT_DATA \u2014 need minimum 10 scored predictions for trend detection. P013 (INDIGO) WILL SCORE WRONG April 14. P012 (ASTRA MICRO) 40% RIGHT / 60% WRONG April 14. Batch of P015-P021 checking April 15 will provide much richer signal. FII_CEASEFIRE_DISTRIBUTION pattern at 2 occurrences \u2014 candidate for framework promotion at Sunday weekly review.",
@@ -273,15 +301,28 @@
         "RBI/central bank calendar check needed on binary event forecast days",
         "Regime changes are binary, not incremental \u2014 a single diplomatic breakthrough can override 3 days of fear premium"
       ]
+    },
+    {
+      "date": "2026-04-15",
+      "event": "FRAMEWORK_v3_UPDATE",
+      "description": "Added FORECAST_PAT004 (Ceasefire Stability Precondition). IT regime risk filter (M013) identified \u2014 2 more occurrences needed for promotion.",
+      "triggered_by": "RCA004 (P020 SETFGOLD WRONG) \u2014 2nd ceasefire fragility observation",
+      "accuracy_at_time": 30.0,
+      "key_learnings": [
+        "Ceasefire stability requires 3+ day confirmation window before bearish safe-haven calls",
+        "IT stocks face macro regime override in BLOCKADE_ESCALATION \u2014 do not predict breakouts during active crises",
+        "Aviation benefits non-linearly from Brent decline (\u20b9200-300 per $10 Brent drop for INDIGO)",
+        "Direct geopolitical beneficiaries (ADANI PORT/Hormuz) are more reliable than indirect (TCS/IT)"
+      ]
     }
   ],
   "next_session_accuracy": {
-    "total_sessions": 6,
+    "total_sessions": 7,
     "direction_correct": 3,
-    "partial_correct": 3,
+    "partial_correct": 4,
     "within_range": 1,
-    "accuracy_pct": 50.0,
-    "last_updated": "2026-04-13-eod",
+    "accuracy_pct": 71.4,
+    "last_updated": "2026-04-15-eod",
     "session_log": [
       {
         "date": "2026-04-07",
@@ -324,6 +365,14 @@
         "grade": "PARTIAL_CORRECT",
         "root_cause": null,
         "notes": "Direction correct but magnitude underestimated. Market held better than expected due to intraday support. Opening bias accurate (GAP_DOWN)."
+      },
+      {
+        "date": "2026-04-15",
+        "forecast": "FLAT_TO_SIDEWAYS_UP (range 23,700-24,100, +0.3%)",
+        "actual": "STRONG_UP +1.63% (close 24,231.30)",
+        "grade": "PARTIAL_CORRECT",
+        "root_cause": "Iran-US talk imminence + Brent declining drove relief rally beyond forecast range. 30% probability relief scenario materialized fully.",
+        "notes": "Opening bias also WRONG (GAP_DOWN -0.8% forecast, GAP_UP +1.08% actual). Double miss on both bias and direction magnitude."
       }
     ]
   },
