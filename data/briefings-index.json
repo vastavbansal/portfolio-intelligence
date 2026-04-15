@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-04-16",
+      "type": "morning",
+      "label": "Thu Apr 16 — Morning Briefing",
+      "file": "daily-briefings/2026-04-16-morning.md",
+      "summary": "GIFT Nifty (8:09 AM) | ~24,205 | -0.02%. Nifty Apr 15 Close (est.) | ~24,075 | +0.97% from Apr 13"
+    },
+    {
       "date": "2026-04-15",
       "type": "morning",
       "label": "Wed Apr 15 — Morning Briefing",

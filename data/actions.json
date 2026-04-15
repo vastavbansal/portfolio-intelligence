@@ -1,28 +1,28 @@
 {
   "schema_version": "1.0",
   "description": "Current actionable recommendations. Generated each session based on signals, predictions, and market forecasts. Accuracy is tracked to build confidence over time.",
-  "generated_at": "2026-04-15",
-  "valid_through": "2026-04-16",
+  "generated_at": "2026-04-16",
+  "valid_through": "2026-04-16 EOD",
   "midday_updated_at": null,
   "market_regime": {
-    "label": "BLOCKADE_ESCALATION_STABILIZED",
-    "dominant_risk": "US naval blockade ACTIVE (Day 3) but Iran outreach signal on April 14: Trump says Iran called and wants to negotiate. Brent fell from $102.26 to ~$97.50 on April 14. No formal ceasefire \u2014 blockade still in effect. April 22 deadline = 7 days.",
-    "key_risk": "Iran IRGC response to blockade \u2014 any Hormuz incident (ship seizure, mine, missile) = war premium resurge. But diplomacy window is open. April 22 ceasefire deadline is next binary.",
-    "crude_last": 97.5,
-    "crude_pct_change_today": -4.66,
-    "crude_threshold_for_regime_change": 110,
-    "crude_current_zone": "WATCH_ZONE ($95-100 \u2014 declining from war premium)",
-    "nifty_last": 23830.1,
-    "nifty_open_april13": 23589.6,
-    "nifty_open_pct_change": -0.25,
-    "nifty_key_support": 23600,
-    "nifty_key_resistance": 24100,
-    "gift_nifty_preopen": 23820,
-    "regime_since": "2026-04-13T08:59:00",
-    "regime_note": "April 15: Regime STABILIZED from ESCALATION. On April 14 (Indian holiday), Brent fell from $102.26 to ~$97.50 as Trump said Iran called wanting to negotiate. Still no formal deal \u2014 blockade in effect. Nifty opened ~-0.25% gap-down at 23,772 (much better than -0.8% forecast). Session bias: FLAT_TO_SIDEWAYS_UP with diplomatic optionality.",
-    "last_updated_by": "morning_brief_2026-04-15",
-    "next_binary_event": "2026-04-22 \u2014 ceasefire expiry + Trump infrastructure strike deadline (9 days)",
-    "nifty_open_april15": 23772
+    "label": "BLOCKADE_ESCALATION_DIPLOMACY_ACCELERATING",
+    "dominant_risk": "US naval blockade ACTIVE but diplomacy accelerating. Second round Iran-US talks expected today/tomorrow (April 16-17). April 21-22 ceasefire expiry = 5-6 days. Trump says war 'close to over'. IRGC 'last warning' not formally retracted.",
+    "key_risk": "IRGC autonomous action \u2014 any Hormuz incident (mine, seizure, missile) overrides diplomatic progress completely. April 22 deadline is the next binary event.",
+    "crude_last": 94.5,
+    "crude_pct_change_today": -3.3,
+    "crude_threshold_for_regime_change": 103,
+    "crude_current_zone": "DECLINING_WATCH_ZONE ($92-96 \u2014 declining from blockade peak of $102.26, -8% in 2 sessions)",
+    "nifty_last": 24075,
+    "nifty_open_april16": 24150,
+    "nifty_gift_preopen": 24205,
+    "nifty_key_support": 23900,
+    "nifty_key_resistance": 24400,
+    "gift_nifty_preopen": 24205,
+    "regime_since": "2026-04-16T00:00:00",
+    "regime_note": "April 15: Nifty opened at 23,772 (gap -0.29%) but rallied to close ~24,075 (+0.97% from Apr 13 close). Brent fell to ~$93-96 (from $102.26 peak = -8%). Trump says war 'close to over'. Second round Iran-US talks expected this week (possibly today April 16 = Thursday). April 22 ceasefire expiry = 5-6 days \u2014 urgency building. IREDA earnings today = PSU green energy catalyst. P021 TCS WRONG, P024 Nifty 23200-23700 WRONG \u2014 both scored today.",
+    "last_updated_by": "morning_brief_2026-04-16",
+    "next_binary_event": "2026-04-22 ceasefire expiry + April 16-17 = Second round Iran-US talks (if confirmed)",
+    "nifty_prev_close": 24075
   },
   "actions": [
     {
@@ -31,7 +31,7 @@
       "urgency": "LOW",
       "stock": "SWIGGY",
       "broker": "ICICI",
-      "instruction": "WATCH \u2014 LOW urgency. SWIGGY at ~\u20b9281.45 (April 8 close). A001 sell window (\u20b9278-285) remains valid. Any session strength to \u20b9280-285 is a partial sell opportunity. No stock-specific catalyst until Q4 results (May 8). Regime is risk-on (ceasefire) which caps downside for now. If April 10 Islamabad talks fail \u2192 Swiggy could see modest selloff as market goes risk-off. P001 bearish thesis (\u20b9260 breach by April 25) remains open but weakened \u2014 confidence 2.",
+      "instruction": "WATCH \u2014 LOW urgency. Regime shifted to DIPLOMACY_ACCELERATING. SWIGGY remains depressed (~\u20b9280 range, April 13). P001 bearish thesis (\u20b9260) still open but further weakened. Market at 24,150 (April 16 open) = risk-on environment. Bearish conviction for P001 very low now. No stock-specific catalyst until Q4 results (May 8). If market continues rallying on Iran talks, SWIGGY likely to drift up. Keep WATCH but lower priority. Valid until April 22 binary event.",
       "rationale_short": "P001 target (\u20b9260) requires -7.7% fall from \u20b9281. Ceasefire headwind to bearish thesis. Sell window \u20b9278-285 still valid intraday.",
       "confidence": 2,
       "confidence_basis": "Ceasefire reduces bearish conviction. \u20b9260 remains structural risk but timing is compressed to 16 days. Confidence maintained at 2.",
@@ -49,10 +49,10 @@
       "pnl_impact_if_right": "Exit at \u20b9278-285 protects against P001 downside to \u20b9260",
       "pnl_impact_if_wrong": "If SWIGGY rallies to \u20b9295+ on market continuation, missed upside",
       "risk": "April 10 talks failure = risk-off, SWIGGY could see broader market drag",
-      "valid_until": "2026-04-15",
+      "valid_until": "2026-04-22",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-09"
+      "updated_at": "2026-04-16"
     },
     {
       "action_id": "A002",
@@ -60,9 +60,9 @@
       "urgency": "LOW",
       "stock": "INDIGO",
       "broker": "GROWW",
-      "instruction": "HOLD \u2014 Upgraded thesis. April 15: Brent fell to $97.50 (from $102.26) on Iran outreach. ATF cost relief RETURNING. A002 sell trigger (Brent >$115 OR strikes) remains INACTIVE. DO NOT SELL. P015 support $4,150 still the floor. Indigoairways benefits from Brent <$100. Monitor: If Iran-US talks confirmed \u2192 Brent could fall to $90-95 \u2192 IndiGo +5-8%. If IRGC incident \u2192 Brent >$100 again \u2192 re-evaluate sell trigger. Next review April 22.",
+      "instruction": "HOLD \u2014 Thesis strongly intact. April 16: Brent ~$93-96 (down from $102.26). ATF cost relief FULLY RESTORED below $100. IndiGo is a major beneficiary. Iran talks progressing = base case Brent holds below $96 near term. Sell trigger (Brent >$115) remains INACTIVE. DO NOT SELL. Watch: Iran second round talks today \u2014 if formal deal announced, Brent could fall to $85-90 \u2192 IndiGo +8-12%. Hard stop: only if IRGC incident causes Brent spike >$110.",
       "rationale_short": "Brent at $97.50 = ATF relief returning. Hold \u2014 thesis strengthened on Iran outreach.",
-      "confidence": 4,
+      "confidence": 5,
       "confidence_basis": "Regime de-escalation removes immediate sell trigger. Talks outcome April 10 is the next binary for INDIGO.",
       "signals_triggered": [
         "M001"
@@ -77,10 +77,10 @@
       "pnl_impact_if_right": "Holding INDIGO to May Q4 results. P015 already scoring RIGHT.",
       "pnl_impact_if_wrong": "April 10 talks fail \u2192 Brent spikes \u2192 ATF concern returns \u2192 INDIGO gives back 3-5%",
       "risk": "Islamabad talks failure = Brent spike = INDIGO headwind",
-      "valid_until": "2026-04-15",
+      "valid_until": "2026-04-22",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-15"
+      "updated_at": "2026-04-16"
     },
     {
       "action_id": "A003",
@@ -88,7 +88,7 @@
       "urgency": "LOW",
       "stock": "COAL INDIA",
       "broker": "ICICI",
-      "instruction": "HOLD \u2014 thesis strongly on track. Coal India at ~\u20b9449.20. P005 (>\u20b9430 by May 28) has \u20b919 buffer with 49 days remaining. Ceasefire + Brent $93.76 maintains coal's relative cost advantage vs crude. No action needed. DII buying supports PSU floor. Review only if closes below \u20b9440.",
+      "instruction": "HOLD \u2014 P005 (>\u20b9430 by May 28) very comfortable. Coal India at ~\u20b9449 (April 13). Buffer of \u20b919 with 42 days remaining. Oil price decline has no direct negative impact on coal demand. Domestic power sector demand strong. DII buying supporting PSU floor. No action needed. Review only if closes below \u20b9440.",
       "rationale_short": "P005 Coal India thesis at confidence 4\u2605. \u20b9449.20 vs \u20b9430 target \u2014 very safe with 49 days remaining.",
       "confidence": 4,
       "confidence_basis": "P005 tracking comfortably. \u20b919 buffer above target. Domestic demand insulation intact.",
@@ -106,10 +106,10 @@
       "pnl_impact_if_right": "P005 confirms >\u20b9430 by May 28 \u2014 very likely",
       "pnl_impact_if_wrong": "Broad market selloff on talks failure could drag -2% but \u20b9430 floor intact",
       "risk": "Ceasefire reduces crude-coal differential slightly. But coal's cost advantage remains.",
-      "valid_until": "2026-05-28",
+      "valid_until": "2026-04-22",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-09"
+      "updated_at": "2026-04-16"
     },
     {
       "action_id": "A004",
@@ -135,18 +135,18 @@
       "pnl_impact_if_right": "P019 confirms \u20b91,490-1,540 by April 15",
       "pnl_impact_if_wrong": "April 10 talks fail \u2192 Hormuz concern returns \u2192 give back gains",
       "risk": "April 10 Islamabad talks outcome",
-      "valid_until": "2026-04-15",
+      "valid_until": "2026-04-22",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-15"
+      "updated_at": "2026-04-16"
     },
     {
       "action_id": "A005",
       "type": "HOLD",
-      "urgency": "MEDIUM",
+      "urgency": "HIGH",
       "stock": "SETFGOLD",
       "broker": "GROWW",
-      "instruction": "HOLD \u2014 Monitor for partial profit. April 15: Brent fell to $97.50 on Iran outreach. War premium EASING slightly but NOT eliminated (blockade still in effect). P023 target \u20b9130-134 still active. HOLD all SETFGOLD but prepare to trim 25-30% if Iran-US formal talks announced (that would trigger Brent $90-95 = gold war premium collapses). Current: Hold with stop at \u20b9127. Partial profit zone: \u20b9132-134. Next review April 22.",
+      "instruction": "SETFGOLD \u2014 UPGRADED to HIGH urgency. PARTIAL PROFIT TRIGGER IMMINENT. Iran second round talks expected TODAY (April 16) or Friday. P023 target \u20b9130-134: if SETFGOLD is at or above \u20b9130, this is the EXIT TRIGGER. Action: If SETFGOLD \u2265 \u20b9130, SELL 30-40% of position TODAY. Rationale: Iran formal talks = war premium easing \u2192 gold demand as safe haven REDUCING. Keep 60-70% position as hedge against IRGC incident risk until April 22 ceasefire expiry. Do NOT hold full position into Iran deal confirmation \u2014 war premium exit = gold decline of 3-5%. Entry was ~\u20b9120 (estimated). Current ~\u20b9127.6 (April 13). Check current price vs \u20b9130 trigger.",
       "rationale_short": "War premium easing but alive at Brent $97.50. Hold \u2014 watch for formal talks (exit signal).",
       "confidence": 4,
       "confidence_basis": "Blockade = WAR_PREMIUM_RETURN confirmed. Gold is the primary beneficiary. P023 4\u2605 on track. No reason to sell.",
@@ -162,20 +162,20 @@
       "pnl_impact_if_right": "SETFGOLD reaches \u20b9132-134 by April 17 \u2014 P023 RIGHT. Significant upside from \u20b9127.31.",
       "pnl_impact_if_wrong": "If US-Iran deal announced suddenly \u2192 gold gives back gains quickly. Retain all holdings given current risk.",
       "risk": "Surprise ceasefire breakthrough = gold pullback. Low probability given blockade escalation.",
-      "valid_until": "2026-04-22",
+      "valid_until": "2026-04-16",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-15"
+      "updated_at": "2026-04-16"
     },
     {
       "action_id": "A006",
       "type": "WATCH",
-      "urgency": "MEDIUM",
+      "urgency": "HIGH",
       "stock": "IREDA",
       "broker": "GROWW",
-      "instruction": "WATCH \u2014 earnings April 16 is the catalyst. No action before April 16. Ceasefire improves government capex outlook (lower crude import bill = fiscal room). If April 9-15 shows positioning buildup \u2192 note it. April 16 earnings decision: if FY26 loan book >\u20b970,000 Cr \u2192 consider adding.",
+      "instruction": "IREDA \u2014 EARNINGS DAY. HIGH urgency. FY26 provisional data already strong: Loan book \u20b993,075 Cr (22% growth, well above \u20b970,000 Cr ADD trigger). Disbursements \u20b934,946 Cr (+16% YoY). Sanctions \u20b951,883 Cr (+9% YoY). Action triggers on Q4 earnings: (1) If Q4 net profit growth \u226525% YoY AND NPA stable/declining \u2192 ADD at \u20b9120-125 range. Target \u20b9132-135. (2) If Q4 results in-line with FY26 trend \u2192 HOLD, current price \u20b9123.35 is fair value. (3) If Q4 shows NPA deterioration or loan book guidance cut \u2192 AVOID adding. IREDA at \u20b9123.35 (April 13). FY26 loan book confirmation \u20b993,075 Cr = strong fundamental case. Green energy tailwind: lower crude = government fiscal space for renewable capex.",
       "rationale_short": "IREDA earnings April 16 \u2014 no action before then. Ceasefire = modest positive for capex environment.",
-      "confidence": 3,
+      "confidence": 4,
       "confidence_basis": "Earnings April 16 is the catalyst. Ceasefire is a modest positive.",
       "signals_triggered": [],
       "signal_details": {},
@@ -186,17 +186,17 @@
       "valid_until": "2026-04-16",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-09"
+      "updated_at": "2026-04-16"
     },
     {
       "action_id": "A007",
       "type": "HOLD_FOR_RECOVERY",
-      "urgency": "LOW",
+      "urgency": "MEDIUM",
       "stock": "MRPL",
       "broker": "ICICI",
-      "instruction": "HOLD \u2014 GRM recovery thesis BACK ON TRACK. April 15: Brent fell to $97.50 (from $102.26). This is STRONGLY POSITIVE for MRPL P017 GRM recovery thesis. Lower input crude = higher gross refining margins. MRPL entry \u20b9182.70, target \u20b9200-210 in 4W \u2014 still on track. P017 confidence UPGRADED to 5\u2605 on Iran outreach + Brent decline. DO NOT SELL. Risk: Iran rejects outreach \u2192 Brent resurges \u2192 GRM compression returns. Stop loss: MRPL closes below \u20b9178. Next review April 22.",
+      "instruction": "HOLD_FOR_RECOVERY \u2014 GRM thesis STRONGLY back on track. Brent at ~$93-96 vs $102.26 peak = SIGNIFICANT positive for gross refining margins. P017 target \u20b9200-210 (entry \u20b9182.70). MRPL at ~\u20b9170.85 (April 13) \u2014 BELOW entry. Current scenario analysis: Brent $93-96 = wide GRM spread vs $102 peak. MRPL at \u20b9170.85 is undervalued if GRM recovery materializes in Q1FY27. Consider ADDING at \u20b9168-172 if Brent holds below \u20b995 this week. Hard stop: \u20b9165 (if Brent spikes back above $100 on IRGC incident). Watch: MRPL Q4 results timing \u2014 any pre-results positioning opportunity.",
       "rationale_short": "MRPL GRM thesis strongest ever \u2014 Brent $97.50 = GRM recovery runway widening. Hold.",
-      "confidence": 5,
+      "confidence": 4,
       "confidence_basis": "UPGRADED to 4\u2605 (April 10 midday). Brent at $91-93 = strong GRM recovery signal. MRPL at \u20b9182.70 with +10-15% to target \u20b9200-210. 28 days remaining. Talks neutral = no Brent spike risk.",
       "signals_triggered": [
         "M001"
@@ -210,10 +210,10 @@
       "pnl_impact_if_right": "MRPL recovers to \u20b9200-210 by May 8 \u2014 now higher confidence given Brent decline",
       "pnl_impact_if_wrong": "Talks fail \u2192 Brent rebounds above $100 \u2192 GRM compression returns (now lower probability)",
       "risk": "Islamabad talks failure \u2192 Brent rebounds \u2192 GRM thesis weakens. Probability now ~30% (down from 35%).",
-      "valid_until": "2026-05-08",
+      "valid_until": "2026-04-22",
       "status": "OPEN",
       "created_at": "2026-04-06",
-      "updated_at": "2026-04-15"
+      "updated_at": "2026-04-16"
     },
     {
       "action_id": "A008",
@@ -221,9 +221,9 @@
       "urgency": "MEDIUM",
       "stock": "ASTRA MICRO",
       "broker": "ICICI",
-      "instruction": "WATCH \u2014 REDUCE monitoring intensity. April 15: Iran outreach signal (Trump says Iran wants deal) reduces defense premium urgency. ASTRA MICRO may see profit-taking on diplomatic news. MAINTAIN raised stop at \u20b91,080. IF stock at \u20b91,100+ = TAKE 25-35% partial profit TODAY. P012 already RIGHT (\u20b91,050-1,080 exceeded at \u20b91,132). P025 tracking ahead of schedule. New stop: \u20b91,080. If formal Iran talks announced \u2192 defense premium collapses \u2192 EXIT 50-75% quickly. Urgency: MEDIUM (reduced from HIGH \u2014 diplomatic signal reduces imminent strike risk).",
+      "instruction": "WATCH \u2014 Iran talks accelerating = defense premium REDUCING. HIGH urgency on exit timing. P025 target \u20b91,050-1,100 by April 22. ASTRA MICRO at ~\u20b91,019 (April 13). Risk: If Iran second round talks confirmed today (April 16) and market rallies, ASTRA MICRO may see 3-5% profit-booking as defense sector rotates out. ASTRA MICRO needs +3% to reach \u20b91,050 target \u2014 possible but DECREASING probability. Action: If stock bounces to \u20b91,040-1,050 on market rally \u2192 PARTIAL EXIT 30-40%. Hard stop: \u20b9980 (from P012). Below \u20b91,000 = momentum turning. P025 grade likely WRONG if talks confirmed before April 22 \u2014 reassess April 17.",
       "rationale_short": "Astra Micro surged to \u20b91,132 on blockade news \u2014 P012 target exceeded. Raise profit trigger to \u20b91,100-1,120. Consider 25-35% partial exit at \u20b91,140+.",
-      "confidence": 5,
+      "confidence": 3,
       "confidence_basis": "Defense premium at MAXIMUM in active blockade regime. Stock +11.9% from \u20b91,012. P012 RIGHT, P025 tracking well ahead of schedule.",
       "signals_triggered": [
         "S003",
@@ -240,10 +240,10 @@
       "pnl_impact_if_right": "P012 RIGHT (\u20b91,050-1,080 exceeded). P025 tracking ahead of schedule. Position +100%+ from cost \u20b9565.",
       "pnl_impact_if_wrong": "Surprise ceasefire \u2192 defense premium collapses \u2192 stock could fall 10-15%. Set stop at \u20b91,080.",
       "risk": "Surprise diplomatic breakthrough = defense premium unwind. Currently low probability given blockade.",
-      "valid_until": "2026-04-22",
+      "valid_until": "2026-04-17",
       "status": "OPEN",
       "created_at": "2026-04-08",
-      "updated_at": "2026-04-15"
+      "updated_at": "2026-04-16"
     }
   ],
   "market_actions": [
