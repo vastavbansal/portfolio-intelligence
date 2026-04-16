@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
-  "last_updated": "2026-04-14",
+  "last_updated": "2026-04-16",
   "predictions": [
     {
       "pred_id": "P007",
@@ -446,11 +446,11 @@
         "T004"
       ],
       "check_date": "2026-04-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
+      "outcome": "RIGHT",
+      "outcome_price": 4638.0,
+      "outcome_evidence": "INDIGO closed \u20b94,638.00 on April 15, well above the \u20b94,150 stabilization target. Stock held above \u20b94,150 throughout the 7-day window (April 8-15). The relief rally scenario materialized fully \u2014 ATF cost relief on declining Brent + Iran diplomacy. Target range of \u20b94,150-4,300 was massively conservative \u2014 INDIGO surged to \u20b94,614+ on April 8 itself. Core directional thesis CORRECT: stock stabilized and continued higher, not lower.",
       "postmortem": null,
-      "scored_on": null,
+      "scored_on": "2026-04-15",
       "confidence_note": "TARGET EXCEEDED ON ENTRY DAY: IndiGo closed at \u20b94,614.90 on April 8, far above the \u20b94,150-4,300 target range. This suggests target was too conservative. Will score as RIGHT (stable above \u20b94,150) but the range was blown out by the ATF relief rally. Confidence raised to 4. Updating target band upward mentally to \u20b94,500-4,700 to track consolidation."
     },
     {
@@ -476,11 +476,11 @@
         "M009"
       ],
       "check_date": "2026-04-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
+      "outcome": "PARTIAL_CORRECT",
+      "outcome_price": 24231.3,
+      "outcome_evidence": "Nifty closed at 24,231.30 on April 15. Prediction was \"consolidate in 23,900-24,100 range.\" The 23,900 floor held perfectly \u2014 Nifty never breached that level. But the 24,100 ceiling was broken significantly, closing 131 pts above. Iran-US talks imminent drove a relief rally that exceeded the consolidation band. Direction (no major selloff, market held) correct, but range was too tight on the upside.",
       "postmortem": null,
-      "scored_on": null,
+      "scored_on": "2026-04-15",
       "confidence_note": "ON TRACK as of April 8 close (23,997.35). Thesis: consolidation 23,900-24,100. TCS earnings and April 10 talks are key risks. Confidence 3."
     },
     {
@@ -535,11 +535,11 @@
         "T005"
       ],
       "check_date": "2026-04-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
+      "outcome": "WRONG",
+      "outcome_price": 2542.4,
+      "outcome_evidence": "TCS closed at \u20b92,542.40 on April 15, below the \u20b92,600 target. Despite strong Q4FY26 results (profit +12% YoY, $12B deal wins, \u20b931 final dividend), the stock failed to sustain above \u20b92,600. Geopolitical macro headwinds (blockade, crude elevated) and broad IT sector pressure weighed. P021 already identified this as WRONG \u2014 TCS sell-on-news pattern prevailed. Note: TCS 52-week range \u20b92,346-3,630 \u2014 stock is at depressed levels, fundamental support at \u20b92,420-2,500.",
       "postmortem": null,
-      "scored_on": null,
+      "scored_on": "2026-04-15",
       "confidence_note": "UPGRADED TO 4\u2605 \u2014 TCS Q4FY26 results beat on revenue (\u20b970,698 cr vs \u20b969,932 est), record TCV $12B Q4, \u20b931 final dividend. TCS closed \u20b92,587.75 on April 9 (before results). Expected gap-up on April 10 to \u20b92,620-2,640. P018 target \u20b92,600 very likely to be breached on April 10 open. With 6 more days to check_date April 15, probability RIGHT: ~90%+. Confidence raised from 3 to 4\u2605."
     },
     {
@@ -565,11 +565,11 @@
         "T006"
       ],
       "check_date": "2026-04-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
+      "outcome": "RIGHT",
+      "outcome_price": 1511.8,
+      "outcome_evidence": "ADANI PORT closed \u20b91,511.80 on April 15, squarely INSIDE the \u20b91,490-1,540 target range. Hormuz safe passage protocol thesis played out correctly \u2014 port traffic restoration beneficiary. Stock also sustained above \u20b91,430 throughout the 7-day window as predicted. April 15 session: ADANI PORT +3.17%, in line with broader PSU infrastructure re-rating.",
       "postmortem": null,
-      "scored_on": null
+      "scored_on": "2026-04-15"
     },
     {
       "pred_id": "P020",
@@ -593,11 +593,11 @@
         "T005"
       ],
       "check_date": "2026-04-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
+      "outcome": "WRONG",
+      "outcome_price": 129.31,
+      "outcome_evidence": "SETFGOLD closed \u20b9129.31 on April 15, well ABOVE the \u20b9120-122 target. The thesis was that ceasefire would compress gold's war premium toward \u20b9120-122. Instead, Islamabad talks failed (April 11), blockade expanded, and Iran IRGC issued 'last warning'. Gold war premium INCREASED, not decreased. SETFGOLD is now \u20b9129.31 vs entry \u20b9125.59. The A005 exit signal (gold <$5,100) was NOT triggered \u2014 gold is at $4,816 with war premium sustained. Confidence was downgraded to 1\u2605 on April 12 weekly review \u2014 prediction correctly pre-identified as WRONG.",
       "postmortem": null,
-      "scored_on": null
+      "scored_on": "2026-04-15"
     },
     {
       "pred_id": "P021",
@@ -737,6 +737,40 @@
       "lesson": "For aviation stocks: Brent sensitivity is non-linear. At $10 Brent decline from peak ($102\u2192$92), INDIGO can see 8-10% rally from ATF cost relief + sentiment. Set aviation targets at least 2\u00d7 the initial estimate when Brent decline thesis is active.",
       "framework_promoted": false,
       "notes": "Scored RIGHT but lesson noted for target calibration"
+    },
+    {
+      "rca_id": "RCA_P021",
+      "pred_id": "P021",
+      "scored_date": "2026-04-16",
+      "stock": "TCS",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS \u2014 2nd confirmation. Strong Q4FY26 beat (record $12B TCV, revenue \u20b970,698 Cr) could not overcome BLOCKADE_ESCALATION regime. Sell-on-news pattern persisted for full 7-day window. TCS closed \u20b92,576.90 vs \u20b92,650-2,700 target.",
+      "missing_signal": "M013 (IT Regime Risk Filter) \u2014 now 2 occurrences (P018, P021). IT stocks need regime change before fundamentals-driven breakout calls succeed.",
+      "factor_gap": "No automatic confidence downgrade for IT predictions during active geopolitical blockades. Framework should auto-cap IT prediction confidence at 2\u2605 during BLOCKADE_ESCALATION.",
+      "proposed_factor_id": "M013",
+      "proposed_factor_name": "IT Regime Risk Filter",
+      "pattern_tag": "MACRO_REGIME_OVERRIDE_IT_FUNDAMENTALS",
+      "lesson": "2nd occurrence of IT WRONG during blockade. M013 pattern now at 2 confirmations \u2014 candidate for framework promotion. Auto-cap IT predictions at confidence 2\u2605 in BLOCKADE_ESCALATION regime.",
+      "framework_promoted": false,
+      "notes": "M013 at 2 occurrences (P018 + P021). Needs 1 more for framework promotion OR can be promoted at next weekly review given strong signal."
+    },
+    {
+      "rca_id": "RCA_P024",
+      "pred_id": "P024",
+      "scored_date": "2026-04-16",
+      "stock": "NIFTY",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "DIPLOMATIC_RESTART_NOT_ANTICIPATED \u2014 bearish Nifty prediction (23,200-23,700) made on April 12 after Islamabad talks failure. Within 2 days, Trump signaled deal optimism and diplomatic restart. Nifty closed 24,196 on April 16 \u2014 500+ pts above target range upper bound.",
+      "missing_signal": "No auto-invalidation clause for diplomatic restart signals. When Trump reverses stance on negotiations, bearish thesis can collapse within 1-2 sessions.",
+      "factor_gap": "Framework lacks DIPLOMATIC_RESTART_TRIGGER \u2014 need pattern that monitors Trump statements for deal optimism signals and auto-invalidates bearish predictions.",
+      "proposed_factor_id": "FORECAST_PAT005",
+      "proposed_factor_name": "Diplomatic Restart Trigger",
+      "pattern_tag": "DIPLOMATIC_RESTART_NOT_ANTICIPATED",
+      "lesson": "Bearish predictions after talk failures should have 48-hour auto-review trigger. If Trump signals willingness to resume talks within 48 hours of failure, immediately invalidate bearish thesis.",
+      "framework_promoted": false,
+      "notes": "1st occurrence. Watching for 2nd to promote. Related to FORECAST_PAT003 (binary underweighting) \u2014 diplomatic restart is a variant of \"best case scenario materializing faster than expected.\""
     }
   ],
   "scored_predictions": [
@@ -774,6 +808,20 @@
       "outcome": "WRONG",
       "scored_date": "2026-04-15",
       "outcome_price": 129.31
+    },
+    {
+      "pred_id": "P021",
+      "stock": "TCS",
+      "outcome": "WRONG",
+      "scored_date": "2026-04-16",
+      "outcome_price": 2576.9
+    },
+    {
+      "pred_id": "P024",
+      "stock": "NIFTY",
+      "outcome": "WRONG",
+      "scored_date": "2026-04-16",
+      "outcome_price": 24196.75
     }
   ]
 }

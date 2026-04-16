@@ -1,7 +1,7 @@
 {
   "accuracy_meta": {
-    "total": 20,
-    "scored": 3,
+    "total": 26,
+    "scored": 12,
     "accuracy_pct": null,
     "by_horizon": {
       "1D": {
@@ -49,7 +49,7 @@
         "partial": 0
       }
     },
-    "note": "Track record starts March 28 2026. Short-term (7D) predictions added April 1 2026 to build faster feedback loops. 3 new predictions added April 8 2026 (P018, P019, P020)."
+    "note": "Updated eod_wrap_2026-04-16. P021 WRONG (TCS), P024 WRONG (Nifty). Running: 12 scored from 26 total."
   },
   "predictions": [
     {
@@ -321,7 +321,7 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "confidence_note": "THESIS STRENGTHENED: Coal India at ~\u20b9449.20 on April 8. Ceasefire + Brent crash to $93.13 further increases coal's cost advantage vs crude. \u20b919 buffer above \u20b9430 target. 50 days remaining, confidence raised to 4."
+      "confidence_note": "Coal India at \u20b9432.75 (-0.70% today). Only \u20b92.75 buffer above \u20b9430 target. Brent at $95.85 \u2014 coal substitution thesis still intact but buffer narrowing. 42 days remaining. Confidence 3\u2605 \u2014 downgraded from 4 due to thin buffer."
     },
     {
       "pred_id": "P006",
@@ -705,16 +705,17 @@
       ],
       "check_date": "2026-04-16",
       "outcome": "WRONG",
-      "outcome_price": 2554.9,
-      "outcome_evidence": "TCS closed \u20b92,554.90 on April 15, below the \u20b92,600 target. Despite strong Q4FY26 results (profit +12% YoY, $12B deal wins), sell-on-news pattern persisted through April 15. Macro headwinds (Brent $96+, Hormuz blockade) overrode fundamentals. TCS rallied to \u20b92,554.90 (+3.33% on April 15 relief rally) but failed to reach \u20b92,600. Scoring on April 16 morning.",
+      "outcome_price": 2576.9,
+      "outcome_evidence": "TCS closed \u20b92576.9 on April 16 (check_date). Target was \u20b92,650-2,700. Stock rallied +0.86% today but remained well below target. Despite strong Q4FY26 results, sell-on-news persisted through the full 7-day window. BLOCKADE_ESCALATION regime overrode earnings-driven breakout thesis.",
       "postmortem": {
-        "root_cause": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS \u2014 strong Q4 beat and record TCV could not overcome BLOCKADE_ESCALATION regime headwinds. Sell-on-news pattern extended beyond typical 5-7 day reversal window.",
-        "lesson": "In BLOCKADE_ESCALATION regime, do not predict IT stock breakouts even on strong earnings. Wait for regime change to DE_ESCALATION_CONFIRMED before making bullish IT calls.",
+        "root_cause": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS \u2014 2nd occurrence. Strong Q4 beat ($12B TCV, record revenue) could not overcome BLOCKADE_ESCALATION regime headwinds. Sell-on-news extended beyond typical 5-7 day reversal.",
+        "lesson": "In BLOCKADE_ESCALATION regime, IT stocks need regime change (ceasefire confirmed + Brent <$92) before fundamentals-driven breakout calls. 2nd confirmation of M013 pattern (IT Regime Risk Filter).",
         "rca_tag": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS",
-        "grade_rationale": "WRONG \u2014 TCS closed \u20b92,554.90 vs \u20b92,600 target on check_date April 16."
+        "grade_rationale": "WRONG \u2014 TCS closed \u20b92576.9 vs \u20b92,650-2,700 target. 2nd consecutive TCS WRONG prediction (P018, P021)."
       },
-      "scored_on": "2026-04-16T09:00:00",
-      "confidence_note": "DOWNGRADED to 2\u2605 (April 12 weekly review): TCS at ~\u20b92,524 on April 10-11. Needs +5-7% in 4 trading days. Failed Islamabad talks add macro headwinds. Sell-on-news persists. Possible WRONG unless strong IT sector catalyst emerges."
+      "scored_on": "2026-04-16T17:30:00",
+      "confidence_note": "DOWNGRADED to 2\u2605 (April 12 weekly review): TCS at ~\u20b92,524 on April 10-11. Needs +5-7% in 4 trading days. Failed Islamabad talks add macro headwinds. Sell-on-news persists. Possible WRONG unless strong IT sector catalyst emerges.",
+      "status": "WRONG"
     },
     {
       "pred_id": "P022",
@@ -742,7 +743,7 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "confidence_note": "DOWNGRADED to 2\u2605 (April 12 weekly review): TCS at ~\u20b92,524. Failed talks add macro uncertainty. War premium return could drag IT stocks on risk-off selling. Needs +3% from current levels. 5 trading days. Still possible but less likely."
+      "confidence_note": "TCS at \u20b92576.9 (+0.86% today). Needs +0.9% to reach \u20b92,600 by Apr 17. Possible but unlikely \u2014 P018 and P021 both scored WRONG on same thesis. Confidence 1\u2605."
     },
     {
       "pred_id": "P023",
@@ -770,7 +771,8 @@
       "outcome_price": null,
       "outcome_evidence": null,
       "postmortem": null,
-      "scored_on": null
+      "scored_on": null,
+      "confidence_note": "SETFGOLD at \u20b9129.45 (+0.11% today). Gold $4,839 (+0.81%). Target \u20b9130-134 is very close \u2014 needs just +0.4% to breach lower bound. Iran counter-threats (Gulf/Red Sea blockade) sustaining gold war premium. Friday + weekend risk ahead of April 22 = gold likely to hold/rise. Confidence 4\u2605 \u2014 likely RIGHT."
     },
     {
       "pred_id": "P024",
@@ -796,15 +798,16 @@
       ],
       "check_date": "2026-04-16",
       "outcome": "WRONG",
-      "outcome_price": 24231.3,
-      "outcome_evidence": "Nifty closed 24,231.30 on April 15 and opened 24,150 on April 16, both FAR above the 23,200-23,700 target range. The prediction assumed failed talks would trigger war premium return and FII selling. Instead, Trump signaled talks \"close to over,\" Brent declined to $94.66, and markets rallied strongly. Diplomacy accelerated instead of collapsing. Direction completely WRONG \u2014 market went UP, not DOWN.",
+      "outcome_price": 24196.75,
+      "outcome_evidence": "Nifty closed 24196.75 on April 16 (check_date). Target was 23,200-23,700. Market went strongly opposite direction \u2014 diplomacy acceleration (Trump: war \"very close to over\") drove sustained rally instead of war premium return. Nifty is ~500 pts ABOVE the upper bound of the target range.",
       "postmortem": {
-        "root_cause": "FORECAST_PAT003 (Geopolitical Binary Underweighting) applied in reverse \u2014 predicted worst case but best case materialized. Trump April 14 statement (\"war close to over\") drove risk-on sentiment. Brent declined from $102 to $94 instead of spiking.",
-        "lesson": "Bearish predictions on failed talks must include a REVERSAL TRIGGER for diplomatic restart. When Trump signals willingness to negotiate, the bearish thesis can collapse within 1-2 sessions. Include auto-invalidation clause for diplomatic outreach.",
+        "root_cause": "DIPLOMATIC_RESTART_NOT_ANTICIPATED \u2014 prediction assumed failed Islamabad talks would sustain bearish momentum. Instead, Trump signaled willingness to negotiate within 2 days of talks failure, completely reversing the bearish thesis.",
+        "lesson": "Bearish Nifty predictions on talk failures must include auto-invalidation clause for diplomatic restart signals. When Trump signals deal optimism, bearish thesis can collapse within 1-2 sessions.",
         "rca_tag": "DIPLOMATIC_RESTART_NOT_ANTICIPATED",
-        "grade_rationale": "WRONG \u2014 Nifty 24,231 vs target 23,200-23,700. Market went strongly opposite direction."
+        "grade_rationale": "WRONG \u2014 Nifty 24196.75 vs target 23,200-23,700. Market went UP instead of DOWN."
       },
-      "scored_on": "2026-04-16T09:00:00"
+      "scored_on": "2026-04-16T17:30:00",
+      "status": "WRONG"
     },
     {
       "pred_id": "P025",
@@ -833,7 +836,8 @@
       "outcome_price": null,
       "outcome_evidence": null,
       "postmortem": null,
-      "scored_on": null
+      "scored_on": null,
+      "confidence_note": "ASTRA MICRO at \u20b91074.7 (+4.09% today). Already INSIDE target range \u20b91,050-1,100! Defense stocks rallying on Iran counter-threats and sustained war premium. Confidence 5\u2605 \u2014 effectively RIGHT already, 4 trading days remaining."
     },
     {
       "pred_id": "P026",
@@ -862,7 +866,8 @@
       "outcome_price": null,
       "outcome_evidence": null,
       "postmortem": null,
-      "scored_on": null
+      "scored_on": null,
+      "confidence_note": "IRFC at \u20b9103.24 (+1.49% today). Moving AWAY from target \u20b992-96. IRFC continues to rally on PSU infra momentum. Needs -10.8% drop in 4 days. Confidence 1\u2605 \u2014 likely WRONG."
     }
   ]
 }

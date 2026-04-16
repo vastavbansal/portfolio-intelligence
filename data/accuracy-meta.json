@@ -1,17 +1,17 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-15T17:30:00",
+  "last_updated": "2026-04-16T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 26,
       "open": 16,
-      "scored": 10,
+      "scored": 12,
       "right": 3,
-      "wrong": 5,
+      "wrong": 7,
       "partial": 2,
-      "accuracy_pct": 30.0,
-      "note": "April 15 batch: P015 INDIGO RIGHT, P016 NIFTY PARTIAL, P018 TCS WRONG, P019 ADANI PORT RIGHT, P020 SETFGOLD WRONG. Running total: 3 RIGHT, 2 PARTIAL, 5 WRONG from 10 scored. FORECAST_PAT004 (Ceasefire Stability Precondition) promoted to framework."
+      "accuracy_pct": 25.0,
+      "note": "April 16 EOD: P021 TCS WRONG, P024 Nifty WRONG. Running total: 3 RIGHT, 2 PARTIAL, 7 WRONG from 12 scored. Accuracy 25.0%. M013 (IT Regime Risk Filter) at 2 occurrences. FORECAST_PAT005 (Diplomatic Restart Trigger) first observed."
     },
     "by_horizon": {
       "1D": {
@@ -23,12 +23,12 @@
       },
       "7D": {
         "total": 9,
-        "scored": 8,
+        "scored": 10,
         "right": 3,
-        "wrong": 4,
-        "accuracy_pct": 37.5,
-        "open": 4,
-        "note": "April 15 scoring: P015 INDIGO RIGHT, P016 NIFTY PARTIAL, P018 TCS WRONG, P019 ADANI PORT RIGHT, P020 SETFGOLD WRONG. Open 7D: P021 (TCS check Apr16), P022 (TCS check Apr17), P023 (SETFGOLD check Apr17), P024 (NIFTY check Apr16). Also P012-PARTIAL, P013-WRONG already scored Apr14.",
+        "wrong": 6,
+        "accuracy_pct": 30.0,
+        "open": 3,
+        "note": "April 16: P021 TCS WRONG, P024 Nifty WRONG. Open 7D: P022 (TCS Apr17), P023 (SETFGOLD Apr17). P025/P026 are 10D horizon.",
         "partial": 1
       },
       "4W": {
@@ -61,11 +61,11 @@
       },
       "Index": {
         "total": 4,
-        "scored": 3,
+        "scored": 4,
         "right": 1,
-        "wrong": 1,
-        "accuracy_pct": 50,
-        "note": "P008 RIGHT, P003 open (expected WRONG), P016 PARTIAL_CORRECT (range ceiling breached), P024 PENDING Apr16.",
+        "wrong": 2,
+        "accuracy_pct": 25,
+        "note": "P008 RIGHT, P016 PARTIAL, P024 WRONG (diplomatic restart), P003 open (expected WRONG).",
         "partial": 1
       },
       "Energy_Crude": {
@@ -102,11 +102,11 @@
       },
       "IT": {
         "total": 2,
-        "scored": 1,
+        "scored": 2,
         "right": 0,
-        "wrong": 1,
+        "wrong": 2,
         "accuracy_pct": 0,
-        "note": "P018 TCS WRONG (\u20b92,542 vs \u20b92,600 target). MACRO_REGIME_OVERRIDE pattern. P021 (TCS Apr16), P022 (TCS Apr17), P014 (Nifty IT 4W) still open."
+        "note": "P018 TCS WRONG, P021 TCS WRONG. Both MACRO_REGIME_OVERRIDE. M013 pattern at 2 occurrences. P022 (TCS Apr17) still open."
       },
       "Gold_Commodities": {
         "total": 1,
@@ -207,6 +207,23 @@
       "framework_promoted": true,
       "promoted_date": "2026-04-15",
       "lesson": "Wait 3+ trading days before bearish safe-haven calls on ceasefire. Model ceasefire failure probability at 40-60% for first 72 hours."
+    },
+    {
+      "rca_id": "RCA_P021",
+      "pred_id": "P021",
+      "date": "2026-04-16",
+      "stock": "TCS",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "2nd MACRO_REGIME_OVERRIDE for IT. M013 at 2 occurrences \u2014 candidate for promotion.",
+      "missing_signal": "M013 IT Regime Risk Filter",
+      "factor_gap": "Auto-cap IT confidence at 2\u2605 during blockade",
+      "proposed_factor_id": "M013",
+      "proposed_factor_name": "IT Regime Risk Filter",
+      "pattern_tag": "MACRO_REGIME_OVERRIDE_IT_FUNDAMENTALS",
+      "framework_promoted": false,
+      "promoted_date": null,
+      "lesson": "IT predictions fail during active geopolitical crises regardless of earnings quality. 2 confirmations."
     }
   ],
   "L3_trend": {
@@ -224,16 +241,18 @@
     "rolling_accuracy": {
       "last_3_scored": {
         "scored": 3,
-        "right": 1,
-        "accuracy_pct": 33.3
+        "right": 0,
+        "wrong": 3,
+        "accuracy_pct": 0,
+        "note": "Last 3: P020 WRONG, P021 WRONG, P024 WRONG. Cold streak."
       },
       "last_5_scored": {
         "scored": 5,
-        "right": 2,
-        "partial": 1,
-        "wrong": 2,
-        "accuracy_pct": 40.0,
-        "note": "April 15 batch: 2R/1P/2W. Improvement from first 5 (1R/0P/4W). Aviation and PSU infra performing well; IT and commodities underperforming in current regime."
+        "right": 1,
+        "partial": 0,
+        "wrong": 4,
+        "accuracy_pct": 20.0,
+        "note": "Last 5: P019 RIGHT, P020 WRONG, P018 WRONG, P021 WRONG, P024 WRONG. Only ADANI PORT prediction was right."
       }
     },
     "improvement_signal": "INSUFFICIENT_DATA \u2014 need minimum 10 scored predictions for trend detection. P013 (INDIGO) WILL SCORE WRONG April 14. P012 (ASTRA MICRO) 40% RIGHT / 60% WRONG April 14. Batch of P015-P021 checking April 15 will provide much richer signal. FII_CEASEFIRE_DISTRIBUTION pattern at 2 occurrences \u2014 candidate for framework promotion at Sunday weekly review.",
@@ -317,12 +336,12 @@
     }
   ],
   "next_session_accuracy": {
-    "total_sessions": 7,
+    "total_sessions": 8,
     "direction_correct": 3,
-    "partial_correct": 4,
+    "partial_correct": 5,
     "within_range": 1,
-    "accuracy_pct": 71.4,
-    "last_updated": "2026-04-15-eod",
+    "accuracy_pct": 100.0,
+    "last_updated": "2026-04-16-eod",
     "session_log": [
       {
         "date": "2026-04-07",
@@ -373,6 +392,14 @@
         "grade": "PARTIAL_CORRECT",
         "root_cause": "Iran-US talk imminence + Brent declining drove relief rally beyond forecast range. 30% probability relief scenario materialized fully.",
         "notes": "Opening bias also WRONG (GAP_DOWN -0.8% forecast, GAP_UP +1.08% actual). Double miss on both bias and direction magnitude."
+      },
+      {
+        "date": "2026-04-16",
+        "forecast": "BULLISH +0.5% (range 24,150-24,500)",
+        "actual": "DOWN -0.14% (close 24,196.75)",
+        "grade": "PARTIAL_CORRECT",
+        "root_cause": "Intraday reversal \u2014 opened strong but profit-booking + Iran counter-threats (Gulf/Red Sea shipping) + Friday risk-off erased gains. Heavyweight banks dragged (HDFC -1.78%). Close was within range but direction wrong.",
+        "notes": "Opening bias CORRECT (gap-down). Session direction PARTIAL (in range, direction wrong)."
       }
     ]
   },
