@@ -704,11 +704,16 @@
         "T005"
       ],
       "check_date": "2026-04-16",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 2554.9,
+      "outcome_evidence": "TCS closed \u20b92,554.90 on April 15, below the \u20b92,600 target. Despite strong Q4FY26 results (profit +12% YoY, $12B deal wins), sell-on-news pattern persisted through April 15. Macro headwinds (Brent $96+, Hormuz blockade) overrode fundamentals. TCS rallied to \u20b92,554.90 (+3.33% on April 15 relief rally) but failed to reach \u20b92,600. Scoring on April 16 morning.",
+      "postmortem": {
+        "root_cause": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS \u2014 strong Q4 beat and record TCV could not overcome BLOCKADE_ESCALATION regime headwinds. Sell-on-news pattern extended beyond typical 5-7 day reversal window.",
+        "lesson": "In BLOCKADE_ESCALATION regime, do not predict IT stock breakouts even on strong earnings. Wait for regime change to DE_ESCALATION_CONFIRMED before making bullish IT calls.",
+        "rca_tag": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS",
+        "grade_rationale": "WRONG \u2014 TCS closed \u20b92,554.90 vs \u20b92,600 target on check_date April 16."
+      },
+      "scored_on": "2026-04-16T09:00:00",
       "confidence_note": "DOWNGRADED to 2\u2605 (April 12 weekly review): TCS at ~\u20b92,524 on April 10-11. Needs +5-7% in 4 trading days. Failed Islamabad talks add macro headwinds. Sell-on-news persists. Possible WRONG unless strong IT sector catalyst emerges."
     },
     {
@@ -790,11 +795,16 @@
         "T004"
       ],
       "check_date": "2026-04-16",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null
+      "outcome": "WRONG",
+      "outcome_price": 24231.3,
+      "outcome_evidence": "Nifty closed 24,231.30 on April 15 and opened 24,150 on April 16, both FAR above the 23,200-23,700 target range. The prediction assumed failed talks would trigger war premium return and FII selling. Instead, Trump signaled talks \"close to over,\" Brent declined to $94.66, and markets rallied strongly. Diplomacy accelerated instead of collapsing. Direction completely WRONG \u2014 market went UP, not DOWN.",
+      "postmortem": {
+        "root_cause": "FORECAST_PAT003 (Geopolitical Binary Underweighting) applied in reverse \u2014 predicted worst case but best case materialized. Trump April 14 statement (\"war close to over\") drove risk-on sentiment. Brent declined from $102 to $94 instead of spiking.",
+        "lesson": "Bearish predictions on failed talks must include a REVERSAL TRIGGER for diplomatic restart. When Trump signals willingness to negotiate, the bearish thesis can collapse within 1-2 sessions. Include auto-invalidation clause for diplomatic outreach.",
+        "rca_tag": "DIPLOMATIC_RESTART_NOT_ANTICIPATED",
+        "grade_rationale": "WRONG \u2014 Nifty 24,231 vs target 23,200-23,700. Market went strongly opposite direction."
+      },
+      "scored_on": "2026-04-16T09:00:00"
     },
     {
       "pred_id": "P025",
