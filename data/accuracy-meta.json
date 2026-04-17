@@ -1,17 +1,17 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-16T17:30:00",
+  "last_updated": "2026-04-17T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 26,
-      "open": 16,
-      "scored": 12,
+      "open": 14,
+      "scored": 14,
       "right": 3,
-      "wrong": 7,
+      "wrong": 9,
       "partial": 2,
-      "accuracy_pct": 25.0,
-      "note": "April 16 EOD: P021 TCS WRONG, P024 Nifty WRONG. Running total: 3 RIGHT, 2 PARTIAL, 7 WRONG from 12 scored. Accuracy 25.0%. M013 (IT Regime Risk Filter) at 2 occurrences. FORECAST_PAT005 (Diplomatic Restart Trigger) first observed."
+      "accuracy_pct": 21.4,
+      "note": "April 17 EOD: P022 TCS WRONG (3rd consecutive TCS post-earnings reversion miss), P023 SETFGOLD WRONG (diplomatic restart overrode war premium thesis). Running total: 3 RIGHT, 2 PARTIAL, 9 WRONG from 14 scored. Accuracy 21.4%. M013 (IT Regime Risk Filter) at 3 occurrences \u2014 PROMOTED. FORECAST_PAT005 (Diplomatic Restart Trigger) at 2 occurrences \u2014 PROMOTED."
     },
     "by_horizon": {
       "1D": {
@@ -23,12 +23,12 @@
       },
       "7D": {
         "total": 9,
-        "scored": 10,
+        "scored": 12,
         "right": 3,
-        "wrong": 6,
-        "accuracy_pct": 30.0,
-        "open": 3,
-        "note": "April 16: P021 TCS WRONG, P024 Nifty WRONG. Open 7D: P022 (TCS Apr17), P023 (SETFGOLD Apr17). P025/P026 are 10D horizon.",
+        "wrong": 8,
+        "accuracy_pct": 25.0,
+        "open": 1,
+        "note": "April 17: P022 TCS WRONG, P023 SETFGOLD WRONG. Open 7D: P025 ASTRA MICRO (still tracking; 10D actually). P022/P023 closed.",
         "partial": 1
       },
       "4W": {
@@ -102,19 +102,19 @@
       },
       "IT": {
         "total": 2,
+        "scored": 3,
+        "right": 0,
+        "wrong": 3,
+        "accuracy_pct": 0,
+        "note": "P018, P021, P022 all TCS WRONG \u2014 3x MACRO_REGIME_OVERRIDE. M013 pattern at 3 occurrences \u2014 PROMOTED to validated factor. HALT TCS short-horizon reversion calls."
+      },
+      "Gold_Commodities": {
+        "total": 1,
         "scored": 2,
         "right": 0,
         "wrong": 2,
         "accuracy_pct": 0,
-        "note": "P018 TCS WRONG, P021 TCS WRONG. Both MACRO_REGIME_OVERRIDE. M013 pattern at 2 occurrences. P022 (TCS Apr17) still open."
-      },
-      "Gold_Commodities": {
-        "total": 1,
-        "scored": 1,
-        "right": 0,
-        "wrong": 1,
-        "accuracy_pct": 0,
-        "note": "P020 SETFGOLD WRONG (\u20b9129.31 vs \u20b9120-122 target). CEASEFIRE_FRAGILITY pattern. P023 SETFGOLD still open (Apr17 check)."
+        "note": "P020 SETFGOLD WRONG, P023 SETFGOLD WRONG. 2/2 wrong. Pattern: gold bid collapses when diplomacy restarts. FORECAST_PAT005 (Diplomatic Restart Trigger) promoted."
       }
     },
     "by_confidence": {
@@ -126,19 +126,19 @@
       },
       "4_stars": {
         "total": 3,
-        "scored": 1,
+        "scored": 2,
         "right": 0,
-        "wrong": 1,
+        "wrong": 2,
         "accuracy_pct": 0,
-        "note": "P007 (SWIGGY 4\u2605) WRONG. Open 4\u2605: P005 (Coal India, very strong), P012 (ASTRA MICRO, approaching target)."
+        "note": "P007 SWIGGY 4\u2605 WRONG, P023 SETFGOLD 4\u2605 WRONG. 0/2. High-confidence geopolitical safe-haven calls remain fragile to diplomatic restarts. Open 4\u2605: P005 Coal India."
       },
       "3_stars": {
         "total": 13,
-        "scored": 7,
+        "scored": 8,
         "right": 3,
-        "wrong": 3,
-        "accuracy_pct": 42.9,
-        "note": "3\u2605 accuracy: 3/7 = 42.9%. P015, P019 RIGHT; P016 PARTIAL; P018, P020 WRONG. Other 3\u2605 still open.",
+        "wrong": 4,
+        "accuracy_pct": 37.5,
+        "note": "3\u2605 accuracy: 3/8 = 37.5%. P022 TCS WRONG added. P015, P019 RIGHT; P016 PARTIAL; P018, P020, P022 WRONG. P024 WRONG.",
         "partial": 1
       },
       "2_stars": {
@@ -224,6 +224,36 @@
       "framework_promoted": false,
       "promoted_date": null,
       "lesson": "IT predictions fail during active geopolitical crises regardless of earnings quality. 2 confirmations."
+    },
+    {
+      "rca_id": "RCA_P022",
+      "pred_id": "P022",
+      "date": "2026-04-17",
+      "stock": "TCS",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "MACRO_REGIME_OVERRIDE (3rd occurrence). IT sector weakness + sell-on-news persistence. TCS +0.18% on Nifty +0.65% day.",
+      "pattern_tag": "MACRO_REGIME_OVERRIDE",
+      "proposed_factor_id": "M013",
+      "proposed_factor_name": "IT Regime Risk Filter",
+      "framework_promoted": true,
+      "promoted_date": "2026-04-17",
+      "lesson": "Halt TCS short-horizon reversion calls until IT sector regime resets."
+    },
+    {
+      "rca_id": "RCA_P023",
+      "pred_id": "P023",
+      "date": "2026-04-17",
+      "stock": "SETFGOLD",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "DIPLOMATIC_RESTART_NOT_ANTICIPATED (2nd occurrence). Gold bid collapsed as Trump reversed stance on Iran talks. Brent -6% from peak. SETFGOLD \u20b9128.69 vs \u20b9130-134 target.",
+      "pattern_tag": "DIPLOMATIC_RESTART_NOT_ANTICIPATED",
+      "proposed_factor_id": "FORECAST_PAT005",
+      "proposed_factor_name": "Diplomatic Restart Trigger",
+      "framework_promoted": true,
+      "promoted_date": "2026-04-17",
+      "lesson": "Safe-haven thesis after talks failure must auto-invalidate within 48h if diplomatic reversal signal emerges."
     }
   ],
   "L3_trend": {

@@ -738,11 +738,11 @@
         "T004"
       ],
       "check_date": "2026-04-17",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 2581.5,
+      "outcome_evidence": "TCS closed \u20b92,581.50 on 2026-04-17 (+0.18% today). Target was >\u20b92,600. Short by \u20b918.50 (0.71% below target). Needed +0.74% from yesterday close \u20b92,576.9; actual move only +0.18%. Sell-on-news pattern persisted through full 7D window. 3rd consecutive TCS post-earnings reversion prediction WRONG (P018, P021, P022).",
+      "postmortem": "MACRO_REGIME_OVERRIDE + PERSISTENT_SELL_ON_NEWS \u2014 Even with broader market rallying +0.65% on Brent collapse and ceasefire progress, TCS failed to participate in the rally. Closed only +0.18% while Nifty +0.65%. IT sector weak (WIPRO -2.83% on guidance; INFY -0.04%). Post-earnings sell-on-news persisted 9+ sessions. M013 (IT Regime Risk Filter) now at 3 occurrences \u2014 PROMOTE to validated pattern.",
+      "scored_on": "2026-04-17",
       "confidence_note": "TCS at \u20b92576.9 (+0.86% today). Needs +0.9% to reach \u20b92,600 by Apr 17. Possible but unlikely \u2014 P018 and P021 both scored WRONG on same thesis. Confidence 1\u2605."
     },
     {
@@ -767,11 +767,11 @@
         "T004"
       ],
       "check_date": "2026-04-17",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 128.69,
+      "outcome_evidence": "SETFGOLD closed \u20b9128.69 on 2026-04-17 (-0.59% today). Target was \u20b9130-134. Short by \u20b91.31 (1.0% below lower bound). Gold USD $4,813 (+0.58%) rose only marginally \u2014 safe-haven bid faded as Brent collapsed -3.19% and ceasefire extension \"in principle agreement\" was reported. War premium unwinding reduced gold hedging demand.",
+      "postmortem": "DIPLOMATIC_MOMENTUM_OVERRODE_WAR_PREMIUM \u2014 Prediction assumed failed Islamabad talks + blockade escalation = sustained gold bid through April 22 deadline. Instead, by April 15-17 Trump signaled deal optimism, US-Iran second round talks announced, ceasefire extension \"in principle\" reported, and Brent collapsed from $102 peak to $96.22. Gold bid faded despite April 22 expiry proximity. Pattern: GEOPOLITICAL_BINARY_UNDERWEIGHTING continuation \u2014 binary resolution toward diplomacy was undersized. Related to P020 SETFGOLD (also WRONG) and P024 NIFTY (also WRONG) \u2014 same pattern of bearish-thesis-after-failure being invalidated by diplomatic restart.",
+      "scored_on": "2026-04-17",
       "confidence_note": "SETFGOLD at \u20b9129.45 (+0.11% today). Gold $4,839 (+0.81%). Target \u20b9130-134 is very close \u2014 needs just +0.4% to breach lower bound. Iran counter-threats (Gulf/Red Sea blockade) sustaining gold war premium. Friday + weekend risk ahead of April 22 = gold likely to hold/rise. Confidence 4\u2605 \u2014 likely RIGHT."
     },
     {

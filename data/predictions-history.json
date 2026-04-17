@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
-  "last_updated": "2026-04-16",
+  "last_updated": "2026-04-17T17:30:00",
   "predictions": [
     {
       "pred_id": "P007",
@@ -771,6 +771,42 @@
       "lesson": "Bearish predictions after talk failures should have 48-hour auto-review trigger. If Trump signals willingness to resume talks within 48 hours of failure, immediately invalidate bearish thesis.",
       "framework_promoted": false,
       "notes": "1st occurrence. Watching for 2nd to promote. Related to FORECAST_PAT003 (binary underweighting) \u2014 diplomatic restart is a variant of \"best case scenario materializing faster than expected.\""
+    },
+    {
+      "rca_id": "RCA_P022",
+      "pred_id": "P022",
+      "scored_date": "2026-04-17",
+      "stock": "TCS",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "MACRO_REGIME_OVERRIDE_PERSISTENT \u2014 3rd consecutive TCS post-earnings reversion prediction WRONG (P018, P021, P022). Even on a +0.65% Nifty rally day with Brent collapsing -3.19% and ceasefire progress, TCS moved only +0.18%. IT sector remained regime-trapped: WIPRO -2.83% (guidance hangover), INFY -0.04%. Target >\u20b92,600 missed by \u20b918.50 (0.71%).",
+      "missing_signal": "IT sector regime override was under-weighted. Sell-on-news pattern + IT cyclical weakness + guidance concerns combined to suppress any reversion through the full 7D window.",
+      "factor_gap": "M013 (IT Regime Risk Filter) now at 3 occurrences \u2014 PROMOTE to validated framework factor. Rule: during IT sector regime weakness (defined as sector down 3%+ in rolling 5D AND heavyweight guidance concerns), do NOT forecast post-earnings reversion on IT heavyweights for horizons <10D.",
+      "proposed_factor_id": "M013",
+      "proposed_factor_name": "IT Regime Risk Filter",
+      "pattern_tag": "MACRO_REGIME_OVERRIDE",
+      "framework_promoted": true,
+      "promoted_date": "2026-04-17",
+      "lesson": "IT sell-on-news reversion predictions are structurally unfit when the IT regime itself is bearish. Stop generating short-horizon IT reversion calls until sector regime resets (e.g., a 3D+ sector rally with positive guidance catalyst). Keep TCS watchlist but no new 7D calls until sector re-opens.",
+      "notes": "3rd occurrence \u2014 promoting from pattern to validated factor. Aligns with L1 IT sector accuracy 0/2 (0%)."
+    },
+    {
+      "rca_id": "RCA_P023",
+      "pred_id": "P023",
+      "scored_date": "2026-04-17",
+      "stock": "SETFGOLD",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "DIPLOMATIC_MOMENTUM_OVERRODE_WAR_PREMIUM \u2014 Prediction made on April 12 after Islamabad talks failure assumed sustained gold bid through April 22 deadline. By April 14-17 Trump signaled deal optimism, US-Iran second round talks announced, ceasefire extension \"in principle agreement\" reported, Brent collapsed -6% from $102 peak to $96.22. Gold bid faded: SETFGOLD \u20b9128.69 vs \u20b9130-134 target (short \u20b91.31, 1.0%).",
+      "missing_signal": "No auto-invalidation clause for diplomatic restart signals after talks failures. Gold safe-haven thesis collapsed within 48h of Trump reversing stance on Iran talks. Same pattern as P024 (NIFTY bearish after talks failure) and P020 (SETFGOLD earlier WRONG).",
+      "factor_gap": "FORECAST_PAT005 (Diplomatic Restart Trigger) now at 2nd occurrence \u2014 PROMOTE to validated framework. Rule: any bearish/safe-haven thesis predicated on a talks failure should auto-invalidate within 48h if the same principal (Trump/VP) reverses stance or announces new talks round.",
+      "proposed_factor_id": "FORECAST_PAT005",
+      "proposed_factor_name": "Diplomatic Restart Trigger",
+      "pattern_tag": "DIPLOMATIC_RESTART_NOT_ANTICIPATED",
+      "framework_promoted": true,
+      "promoted_date": "2026-04-17",
+      "lesson": "When a geopolitical crisis has a \"talks failed\" event, ANY safe-haven/bearish call with horizon >48h must assume 30%+ probability of diplomatic reversal. For gold specifically, when Brent falls >5% from crisis peak AND new talks round announced, close gold bullish thesis immediately.",
+      "notes": "2nd occurrence of FORECAST_PAT005 (1st was RCA_P024 NIFTY April 16). PROMOTING to validated framework pattern."
     }
   ],
   "scored_predictions": [
@@ -822,6 +858,20 @@
       "outcome": "WRONG",
       "scored_date": "2026-04-16",
       "outcome_price": 24196.75
+    },
+    {
+      "pred_id": "P022",
+      "stock": "TCS",
+      "outcome": "WRONG",
+      "scored_date": "2026-04-17",
+      "outcome_price": 2581.5
+    },
+    {
+      "pred_id": "P023",
+      "stock": "SETFGOLD",
+      "outcome": "WRONG",
+      "scored_date": "2026-04-17",
+      "outcome_price": 128.69
     }
   ]
 }

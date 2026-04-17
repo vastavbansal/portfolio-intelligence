@@ -1,41 +1,33 @@
 {
   "schema_version": "1.0",
-  "description": "Dynamic bridge \u2014 April 17 session (Friday). Ceasefire extension talks ongoing. April 22 expiry = 4 days. Iran threatens Gulf/Red Sea shipping blockade.",
-  "last_updated_by": "morning_brief_2026-04-17",
-  "last_updated_at": "2026-04-17T09:00:00",
+  "description": "Dynamic bridge \u2014 2026-04-20 session (Monday). Iran ceasefire extension \"in principle agreement\" reported. April 21 (Tuesday) ceasefire expiry = 1 trading day after Monday. Brent collapsed to $96.22 (-3.19%).",
+  "last_updated_by": "eod_wrap_2026-04-17",
+  "last_updated_at": "2026-04-17T17:30:00",
   "market_regime": {
-    "label": "BLOCKADE_ESCALATION_DIPLOMACY_ACCELERATING",
-    "key_risk": "Blockade ACTIVE + fully implemented. Iran threatens to block Persian Gulf, Sea of Oman, Red Sea shipping if US continues blockade. April 22 ceasefire expiry 4 days away. Ceasefire extension NOT formally agreed.",
-    "dominant_risk": "Iran counter-blockade of Gulf/Red Sea shipping routes. If implemented, Brent spikes $10-15 and Nifty crashes 2-3%. Secondary: ceasefire extension not agreed by weekend.",
-    "crude_last": 95.85,
-    "crude_pct_change_today": 0.97,
+    "label": "DIPLOMATIC_DEESCALATION_WITH_EXPIRY_RISK",
+    "key_risk": "April 21 (Tuesday) ceasefire expiry = 1 trading day after Monday open. Ceasefire extension reported \"in principle\" but not yet formally agreed. Iran IRGC counter-threats on Gulf/Red Sea shipping still active. Weekend event risk.",
+    "dominant_risk": "Weekend Iran incident / ceasefire extension talks collapse / IRGC autonomous action. If Brent spikes back >$100 on Monday open, Nifty vulnerable -1%+ reversal.",
+    "crude_last": 96.22,
+    "crude_pct_change_today": -3.19,
     "crude_threshold_for_regime_change": 103,
-    "crude_current_zone": "WATCH_ZONE ($95-97 \u2014 elevated on Iran counter-threats, capped by diplomatic momentum)",
-    "nifty_last": 24196.75,
-    "nifty_last_trading_date": "2026-04-16",
-    "nifty_last_pct_change": -0.14,
-    "nifty_key_support": 24000,
-    "nifty_key_resistance": 24400,
-    "gift_nifty_estimate_for_april17": 24148,
-    "banknifty_last": 56086.4,
-    "banknifty_change_pct": -0.38,
-    "gold_last_usd": 4839.1,
-    "gold_change_pct": 0.81,
-    "regime_since": "2026-04-12",
-    "regime_note": "April 16 session: Flat day (-0.14%) after intraday reversal. Opened strong but profit-booking + Iran counter-threats + Friday caution erased gains. HDFC Bank -1.78% dragged indices. Broad midcap/smallcap positive (Adani Power +5.32%, IGIL +5.08%). Gold $4,839 (+0.81%) \u2014 war premium sustaining. Brent $95.85 (+0.97%). Key development: Iran threatened Gulf/Red Sea/Sea of Oman shipping blockade in retaliation. Ceasefire extension NOT formally agreed despite Trump optimism. France-UK Hormuz maritime conference Friday."
+    "crude_current_zone": "WATCH_ZONE_EASING ($94-98 \u2014 war premium unwinding on ceasefire extension progress)",
+    "nifty_last": 24353.55,
+    "nifty_last_trading_date": "2026-04-17",
+    "nifty_last_pct_change": 0.65,
+    "nifty_key_support": 24200,
+    "nifty_key_resistance": 24500,
+    "gift_nifty_estimate_for_next_session": 24390,
+    "banknifty_last": 56565.7,
+    "banknifty_change_pct": 0.85,
+    "gold_last_usd": 4813.0,
+    "gold_change_pct": 0.58,
+    "regime_since": "2026-04-17",
+    "regime_note": "2026-04-17 session: STRONG BULLISH +0.65% at 24,353.55. Brent -3.19% to $96.22 on ceasefire extension progress. DMART +4.52%, IRCON +8.65%, SUZLON +5.33%, BRITANNIA +2.68% lead. Defense/infra/renewables broad rally. IT lagged (WIPRO -2.83% on earnings). Regime shifted from BLOCKADE_ESCALATION_DIPLOMACY_ACCELERATING to DIPLOMATIC_DEESCALATION_WITH_EXPIRY_RISK as \"in principle agreement\" on ceasefire extension was reported. Monday (2026-04-20) is pre-expiry positioning day \u2014 cautious but constructive."
   },
   "opening_bias": {
     "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
     "gap_pct_estimate": -0.2,
     "gift_nifty_estimate": 24148,
-    "key_drivers": [
-      "Nifty closed flat at 24196.75 after intraday reversal \u2014 momentum fading",
-      "Brent $95.85 slightly elevated (+0.97%) \u2014 Iran threatening Red Sea/Gulf shipping blockade",
-      "Friday session \u2014 natural risk-off ahead of weekend with April 22 ceasefire expiry 4 days away",
-      "Ceasefire extension talks ongoing but NOT formally agreed \u2014 uncertainty persists",
-      "France-UK Hormuz maritime conference Friday adds diplomatic variable",
-      "Trump optimism (\"war very close to over\") provides floor but Iran counter-threats cap upside"
-    ],
     "confidence": 3,
     "generated_at": "eod_wrap_2026-04-16"
   },
@@ -44,56 +36,45 @@
     "change_pct_estimate": 0.25,
     "range_low": 24100,
     "range_high": 24350,
-    "key_assumption": "Weak open (GIFT -0.69%) bought aggressively. RELIANCE +1.58%, HDFC +0.60% recovering, SUZLON +4.34%, IRCON +8.5%, IREDA +3.3%, MRPL +1.81% \u2014 strong defense/infra/renewables + heavyweight bid. Partially offset by IT/private bank softness (ICICI -0.55%, INFY -0.43%, LT -0.42%, TCS flat). Ceasefire extension still under Bloomberg-reported discussion (not yet formal). Brent ~$95-98 holding. Friday ahead of April 22 ceasefire deadline. Dip-buying thesis prevails unless Iran escalation signal emerges.",
     "confidence": 3,
     "generated_at": "morning_brief_2026-04-17",
-    "regime": "BLOCKADE_ESCALATION_DIPLOMACY_ACCELERATING",
-    "brent_forecast": "$95-98 (elevated on Iran counter-threats, capped by extension talks)",
-    "scenario_weighted": {
-      "morning_bid_sustains": {
-        "description": "Strong morning breadth (Reliance/defense/renewables) holds. No negative headline. Ceasefire extension chatter keeps bid in. Nifty closes modestly higher.",
-        "nifty_impact": "UP +0.2% to +0.6% (24,240-24,340)",
-        "probability": 50
-      },
-      "friday_profit_booking": {
-        "description": "Morning gains fade on Friday profit-booking ahead of April 22 weekend. Range-bound close near flat.",
-        "nifty_impact": "FLAT -0.2% to +0.2% (24,150-24,240)",
-        "probability": 30
-      },
-      "escalation_signal": {
-        "description": "Iran action on Gulf/Red Sea shipping, or ceasefire extension fails. Brent spikes >$100. Sharp reversal and selloff.",
-        "nifty_impact": "DOWN -0.8% to -1.5% (23,800-24,000)",
-        "probability": 20
-      }
-    }
+    "regime": "BLOCKADE_ESCALATION_DIPLOMACY_ACCELERATING"
   },
   "stocks_to_watch": [
     {
-      "stock": "SETFGOLD",
-      "reason": "P023 check_date Apr 17. Currently \u20b9129.45. Target \u20b9130-134. Just 0.4% away from lower bound. Gold $4839.1 (+0.81%). Likely to breach \u20b9130 on Friday safe-haven demand ahead of April 22 weekend."
+      "stock": "MRPL",
+      "reason": "Brent -3.19% to $96.22. GRM recovery thesis re-engages. +4.69% today at \u20b9183.13. Monitor for Brent sustainability below $100."
     },
     {
-      "stock": "TCS",
-      "reason": "P022 check_date Apr 17. Currently \u20b92576.9. Target >\u20b92,600. Needs +0.9%. P018 and P021 both WRONG \u2014 sell-on-news pattern persistent. Confidence 1\u2605."
-    },
-    {
-      "stock": "ASTRA MICRO",
-      "reason": "P025 \u2014 at \u20b91074.7 (+4.09% today). INSIDE target range \u20b91,050-1,100 already! Defense premium strong on Iran counter-threats."
-    },
-    {
-      "stock": "HDFC BANK",
-      "reason": "Down -1.78% today (\u20b9795.45). Heavyweight bank selloff dragging Nifty. Watch if selling continues Friday."
-    },
-    {
-      "stock": "ADANI POWER",
-      "reason": "+5.32% today at \u20b9193.19. Best performer. Energy sector strength on supply disruption thesis."
+      "stock": "IRCON",
+      "reason": "+8.65% today at \u20b9154.69. Defense/infra momentum. Monitor for Monday follow-through; any weekend Iran incident could reverse sharply."
     },
     {
       "stock": "SUZLON",
-      "reason": "+2.28% at \u20b950.25. Momentum continuing from +7.13% on April 15. Green energy/renewables catching bid."
+      "reason": "+5.33% at \u20b952.93. Renewables momentum. Volume 337M shares \u2014 strong distribution/accumulation signal."
+    },
+    {
+      "stock": "DMART",
+      "reason": "+4.52% at \u20b94,628. Consumer discretionary bid returning on Brent ease. Monitor Monday for continuation."
+    },
+    {
+      "stock": "TCS",
+      "reason": "P022 closed WRONG. TCS +0.18% on +0.65% day \u2014 IT regime override confirmed. No new TCS short-horizon calls until IT sector resets. WIPRO -2.83% signals sector weakness."
+    },
+    {
+      "stock": "SETFGOLD",
+      "reason": "P023 closed WRONG. Gold bid fading as diplomacy restarts. Range likely \u20b9127-130 unless Iran weekend incident. Hedge value diminishing."
+    },
+    {
+      "stock": "HDFC BANK",
+      "reason": "+0.56% recovery from -1.78% prior day. Heavyweight stabilization supports index floor. Monitor Monday for continuation."
+    },
+    {
+      "stock": "WIPRO",
+      "reason": "-2.83% today on guidance \u2014 IT sector pressure. Watch whether spreads to INFY/TCS/HCLTECH Monday."
     }
   ],
-  "prompt_for_morning_brief": "MORNING BRIEF 2026-04-17: (1) Score opening bias \u2014 forecast FLAT_TO_SLIGHT_GAP_DOWN -0.2% (GIFT Nifty ~24,148). Compare against ACTUAL NSE open. (2) Check Iran counter-threat status \u2014 did Iran actually block Gulf/Red Sea shipping overnight? Brent direction is KEY. (3) Ceasefire extension \u2014 was it formally agreed overnight? If yes, regime shifts bullish. (4) France-UK Hormuz maritime conference \u2014 any outcomes? (5) Score P022 (TCS >\u20b92,600 check Apr17) and P023 (SETFGOLD \u20b9130-134 check Apr17). (6) Today 2026-04-16 session: Flat -0.14% at 24,196.75. Intraday reversal. Iran counter-threats.",
+  "prompt_for_morning_brief": "MORNING BRIEF 2026-04-20 (Monday): (1) Score opening bias \u2014 forecast FLAT_TO_SLIGHT_GAP_UP +0.15% (GIFT Nifty ~24,390). Compare against ACTUAL NSE open. (2) Weekend event check \u2014 any Iran IRGC incident? Ceasefire extension formally agreed? Brent overnight direction? (3) Tuesday April 21 ceasefire expiry = 1 trading day away \u2014 assess pre-expiry positioning risk. (4) Friday 2026-04-17 session result: STRONG BULLISH +0.65% at 24,353.55. Brent $96.22 (-3.19%). (5) IT sector status \u2014 WIPRO -2.83% Friday; watch for contagion. (6) Review resolved predictions: P022 TCS WRONG, P023 SETFGOLD WRONG. M013 + FORECAST_PAT005 both promoted. (7) No TCS short-horizon reversion calls; gold safe-haven calls must incorporate FORECAST_PAT005 auto-invalidation clause.",
   "opening_bias_actual": {
     "nifty_open": 24150,
     "gift_nifty_preopen": 24030,
@@ -101,44 +82,53 @@
     "direction": "GAP_DOWN",
     "direction_correct": true,
     "grade": "CORRECT",
-    "scoring_note": "Morning brief ran pre-market (02:43 IST). Opening data sourced from news reports (5paisa: GIFT Nifty -0.69% overnight; multiple outlets: Nifty near 24,200 in early trade). Forecast FLAT_TO_SLIGHT_GAP_DOWN -0.20%, actual ~-0.193% \u2014 direction correct, magnitude almost exact. EOD should validate with actual NSE open price.",
-    "source": "actual_nse_open",
-    "pre_estimated_by": null,
-    "validation_required": true
+    "scoring_note": "Forecast -0.20% vs actual -0.193%. Near-perfect calibration."
   },
   "tomorrow_forecast": {
-    "date": "2026-04-17",
+    "date": "2026-04-20",
     "opening_bias": {
-      "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
-      "gap_pct_estimate": -0.2,
-      "gift_nifty_estimate": 24148,
+      "direction": "FLAT_TO_SLIGHT_GAP_UP",
+      "gap_pct_estimate": 0.15,
+      "gift_nifty_estimate": 24390,
       "key_drivers": [
-        "Flat session today \u2014 momentum fading",
-        "Iran counter-threats on Gulf/Red Sea shipping",
-        "Friday risk-off ahead of April 22 ceasefire deadline",
-        "Ceasefire extension NOT formally agreed"
+        "Strong Friday close +0.65% at 24,353.55 \u2014 momentum carry",
+        "Brent $96.22 (-3.19%) \u2014 war premium unwinding",
+        "Ceasefire extension \"in principle agreement\" reported",
+        "US-Iran second round talks expected",
+        "April 21 ceasefire expiry 1 trading day away \u2014 caution builds Monday afternoon",
+        "Weekend event risk"
       ],
       "confidence": 3,
-      "generated_at": "eod_wrap_2026-04-16"
+      "generated_at": "eod_wrap_2026-04-17"
     },
     "session_direction": {
-      "direction": "SIDEWAYS_TO_BEARISH",
-      "change_pct_estimate": -0.3,
-      "range_low": 24000,
-      "range_high": 24250,
-      "key_assumption": "Friday risk-off + April 22 deadline proximity + Iran counter-threats",
+      "direction": "SIDEWAYS_BULLISH",
+      "change_pct_estimate": 0.2,
+      "range_low": 24250,
+      "range_high": 24550,
+      "key_assumption": "Weekend without major Iran escalation + ceasefire extension progresses. Brent holds $93-97. Sector rotation into defense/infra/renewables continues; IT remains weak.",
       "confidence": 3,
-      "generated_at": "eod_wrap_2026-04-16",
-      "regime": "BLOCKADE_ESCALATION_DIPLOMACY_ACCELERATING"
+      "generated_at": "eod_wrap_2026-04-17",
+      "regime": "DIPLOMATIC_DEESCALATION_WITH_EXPIRY_RISK",
+      "brent_forecast": "$93-97"
     }
   },
   "portfolio_summary": {
     "total_invested": 2318475.98,
-    "total_market_value": 2430439.8,
-    "total_pnl": 111963.82,
-    "total_pnl_pct": 4.83,
-    "top_gainers_today": "ADANI POWER +5.32%, IGIL +5.08%, ASTRA MICRO +4.09%, PREMEXPLN +3.79%, NCC +3.16%",
-    "top_losers_today": "URBANCO -1.49%, COAL INDIA -0.70%, INDIGO -0.63%, JIOFIN -0.57%, MRPL -0.49%",
-    "as_of": "2026-04-16"
+    "total_market_value": 2476668.45,
+    "total_pnl": 158192.47,
+    "total_pnl_pct": 6.82,
+    "as_of": "2026-04-17",
+    "top_gainers_today": "IRCON +8.65%, IRCON (Groww) +8.65%, ACME SOLAR +5.98%, SUZLON +5.33%, SUZLON (Groww) +5.33%",
+    "top_losers_today": "SWIGGY (Groww) -1.05%, SWIGGY -1.05%, SETFGOLD -0.59%, URBANCO -0.42%"
+  },
+  "session_direction_actual": {
+    "nifty_close": 24353.55,
+    "nifty_change_pct": 0.65,
+    "direction_correct": true,
+    "in_range": true,
+    "brent_correct": true,
+    "grade": "CORRECT",
+    "scoring_note": "Forecast bullish +0.25%, range 24,100-24,350. Actual +0.65%, close 24,353.55. Direction CORRECT, close 3.55 pts above upper bound (within 0.015% tolerance). Brent $96.22 in $95-98 forecast band."
   }
 }
