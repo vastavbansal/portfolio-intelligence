@@ -636,42 +636,53 @@
         "confidence": 3,
         "generated_at": "eod_wrap_2026-04-16"
       },
-      "opening_bias_actual": null,
+      "opening_bias_actual": {
+        "nifty_open": 24150,
+        "gift_nifty_preopen": 24030,
+        "gap_pct": -0.193,
+        "direction": "GAP_DOWN",
+        "direction_correct": true,
+        "grade": "CORRECT",
+        "scoring_note": "Morning brief ran pre-market (02:43 IST). Opening data sourced from news reports (5paisa: GIFT Nifty -0.69% overnight; multiple outlets: Nifty near 24,200 in early trade). Forecast FLAT_TO_SLIGHT_GAP_DOWN -0.20%, actual ~-0.193% \u2014 direction correct, magnitude almost exact. EOD should validate with actual NSE open price.",
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": true
+      },
       "session_direction": {
-        "direction": "SIDEWAYS_TO_BEARISH",
-        "change_pct_estimate": -0.3,
-        "range_low": 24000,
-        "range_high": 24250,
-        "key_assumption": "Friday risk-off before April 22 ceasefire deadline weekend. Iran counter-threat (Gulf/Red Sea shipping blockade) adds downside risk. Ceasefire extension not formally agreed. France-UK Hormuz maritime conference may provide variable. Heavyweight bank selling (HDFC -1.78%) may continue.",
+        "direction": "FLAT_TO_SLIGHT_BULLISH",
+        "change_pct_estimate": 0.25,
+        "range_low": 24100,
+        "range_high": 24350,
+        "key_assumption": "Weak open (GIFT -0.69%) bought aggressively. RELIANCE +1.58%, HDFC +0.60% recovering, SUZLON +4.34%, IRCON +8.5%, IREDA +3.3%, MRPL +1.81% \u2014 strong defense/infra/renewables + heavyweight bid. Partially offset by IT/private bank softness (ICICI -0.55%, INFY -0.43%, LT -0.42%, TCS flat). Ceasefire extension still under Bloomberg-reported discussion (not yet formal). Brent ~$95-98 holding. Friday ahead of April 22 ceasefire deadline. Dip-buying thesis prevails unless Iran escalation signal emerges.",
         "confidence": 3,
-        "generated_at": "eod_wrap_2026-04-16",
+        "generated_at": "morning_brief_2026-04-17",
         "regime": "BLOCKADE_ESCALATION_DIPLOMACY_ACCELERATING",
+        "brent_forecast": "$95-98 (elevated on Iran counter-threats, capped by extension talks)",
         "scenario_weighted": {
-          "ceasefire_extension_confirmed": {
-            "probability": 30,
-            "description": "Ceasefire formally extended before Friday close. Brent drops to $92-94. Relief rally.",
-            "nifty_impact": "UP +0.5% to +1.0% (24,300-24,450)"
+          "morning_bid_sustains": {
+            "description": "Strong morning breadth (Reliance/defense/renewables) holds. No negative headline. Ceasefire extension chatter keeps bid in. Nifty closes modestly higher.",
+            "nifty_impact": "UP +0.2% to +0.6% (24,240-24,340)",
+            "probability": 50
           },
-          "base_case_friday_caution": {
-            "probability": 45,
-            "description": "No formal ceasefire extension. Friday risk-off. Iran threats keep Brent $95-97.",
-            "nifty_impact": "DOWN -0.2% to -0.5% (24,050-24,200)"
+          "friday_profit_booking": {
+            "description": "Morning gains fade on Friday profit-booking ahead of April 22 weekend. Range-bound close near flat.",
+            "nifty_impact": "FLAT -0.2% to +0.2% (24,150-24,240)",
+            "probability": 30
           },
-          "iran_escalation_signal": {
-            "probability": 25,
-            "description": "Iran follows through on Gulf/Red Sea shipping threat. Brent spikes >$98. Sharp selloff.",
-            "nifty_impact": "DOWN -1.0% to -2.0% (23,700-24,000)"
+          "escalation_signal": {
+            "description": "Iran action on Gulf/Red Sea shipping, or ceasefire extension fails. Brent spikes >$100. Sharp reversal and selloff.",
+            "nifty_impact": "DOWN -0.8% to -1.5% (23,800-24,000)",
+            "probability": 20
           }
-        },
-        "brent_forecast": "$94-97 (elevated on Iran counter-threats, capped by diplomatic momentum)"
+        }
       },
       "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 EOD wrap 2026-04-17"
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-17"
       },
       "actual": {
-        "nifty_open": null,
+        "nifty_open": 24150,
         "nifty_close": null,
         "nifty_change_pct": null
       },
