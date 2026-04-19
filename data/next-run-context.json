@@ -1,134 +1,153 @@
 {
   "schema_version": "1.0",
-  "description": "Dynamic bridge \u2014 2026-04-20 session (Monday). Iran ceasefire extension \"in principle agreement\" reported. April 21 (Tuesday) ceasefire expiry = 1 trading day after Monday. Brent collapsed to $96.22 (-3.19%).",
-  "last_updated_by": "eod_wrap_2026-04-17",
-  "last_updated_at": "2026-04-17T17:30:00",
+  "description": "Dynamic bridge — 2026-04-20 session (Monday). Ceasefire expires TUESDAY April 21 — 1 trading day from Monday open. Trump accused Iran of 'total violation' (firing at French/UK ships). Kushner + Witkoff dispatched to Islamabad for Monday talks. Brent at $97-98 (weekend rebound from $90.38 Friday US-close after Hormuz briefly opened then re-closed). April 21 = most critical binary event since April 8 ceasefire announcement.",
+  "last_updated_by": "weekly_review_2026-04-19",
+  "last_updated_at": "2026-04-19T09:00:00",
   "market_regime": {
-    "label": "DIPLOMATIC_DEESCALATION_WITH_EXPIRY_RISK",
-    "key_risk": "April 21 (Tuesday) ceasefire expiry = 1 trading day after Monday open. Ceasefire extension reported \"in principle\" but not yet formally agreed. Iran IRGC counter-threats on Gulf/Red Sea shipping still active. Weekend event risk.",
-    "dominant_risk": "Weekend Iran incident / ceasefire extension talks collapse / IRGC autonomous action. If Brent spikes back >$100 on Monday open, Nifty vulnerable -1%+ reversal.",
-    "crude_last": 96.22,
-    "crude_pct_change_today": -3.19,
-    "crude_threshold_for_regime_change": 103,
-    "crude_current_zone": "WATCH_ZONE_EASING ($94-98 \u2014 war premium unwinding on ceasefire extension progress)",
+    "label": "CRITICAL_EXPIRY_BINARY",
+    "key_risk": "April 21 (Tuesday) ceasefire EXPIRY — 1 trading day from Monday open. Trump declared 'total violation' Sunday. Iran re-closed Hormuz Saturday after briefly opening Friday. Ceasefire status: CRITICAL but technically holding.",
+    "dominant_risk": "Binary outcome April 21: (A) Ceasefire extends — Nifty +1.5-2.5%, Brent $88-93, defense corrects; (B) Ceasefire collapses — Nifty -3 to -5%, Brent $108-118, gold spikes. No middle ground — either outcome is sharp.",
+    "crude_last": 97.5,
+    "crude_pct_change_weekend": "+1.34% (weekend rebound from $90.38 US-close Friday to $97-98 Sunday)",
+    "crude_note": "VOLATILE: Brent whipsawed $96 → $90 (Hormuz opens Friday after IST close) → $97-98 (Hormuz re-closes Saturday). India could NOT price the $90 level — Monday open reflects $97-98.",
+    "crude_threshold_for_regime_change": 90,
+    "crude_current_zone": "WATCH_ZONE_CRITICAL ($95-100 — pre-expiry uncertainty, bouncing from Hormuz open/close whipsaw)",
     "nifty_last": 24353.55,
     "nifty_last_trading_date": "2026-04-17",
     "nifty_last_pct_change": 0.65,
-    "nifty_key_support": 24200,
-    "nifty_key_resistance": 24500,
-    "gift_nifty_estimate_for_next_session": 24390,
+    "nifty_key_support": 24000,
+    "nifty_key_resistance": 24600,
+    "gift_nifty_estimate_for_next_session": 24270,
     "banknifty_last": 56565.7,
     "banknifty_change_pct": 0.85,
     "gold_last_usd": 4813.0,
     "gold_change_pct": 0.58,
-    "regime_since": "2026-04-17",
-    "regime_note": "2026-04-17 session: STRONG BULLISH +0.65% at 24,353.55. Brent -3.19% to $96.22 on ceasefire extension progress. DMART +4.52%, IRCON +8.65%, SUZLON +5.33%, BRITANNIA +2.68% lead. Defense/infra/renewables broad rally. IT lagged (WIPRO -2.83% on earnings). Regime shifted from BLOCKADE_ESCALATION_DIPLOMACY_ACCELERATING to DIPLOMATIC_DEESCALATION_WITH_EXPIRY_RISK as \"in principle agreement\" on ceasefire extension was reported. Monday (2026-04-20) is pre-expiry positioning day \u2014 cautious but constructive."
+    "setfgold_last_inr": 128.69,
+    "regime_since": "2026-04-19",
+    "regime_note": "Weekend shock: Iran FM briefly opened Hormuz Friday after IST close (Brent crashed $96→$90), then Iran re-closed Hormuz Saturday ($90→$97-98 rebound). Trump Sunday accused Iran of 'total violation' — firing at French/UK ships in Strait. Kushner + Witkoff dispatched to Islamabad for Monday talks. Regime: CRITICAL_EXPIRY_BINARY — ceasefire expires TUESDAY, pre-positioning day Monday."
   },
   "opening_bias": {
     "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
-    "gap_pct_estimate": -0.2,
-    "gift_nifty_estimate": 24148,
-    "confidence": 3,
-    "generated_at": "eod_wrap_2026-04-16"
+    "gap_pct_estimate": -0.25,
+    "gift_nifty_estimate": 24270,
+    "confidence": 2,
+    "rationale": "Brent at $97-98 = near Friday IST close level ($96.22) — not dramatically worse. BUT Trump violation accusation is negative sentiment. Kushner talks are positive signal. Net: flat-to-slight gap down. High uncertainty — could flip positive if overnight Kushner talks produce early signal.",
+    "generated_at": "weekly_review_2026-04-19",
+    "key_morning_variable": "Any statement from Kushner/Witkoff or Iran FM before NSE open (9:15am IST). If positive = gap up instead. If Iran hostile = gap down -0.5 to -1%."
   },
   "session_direction": {
-    "direction": "FLAT_TO_SLIGHT_BULLISH",
-    "change_pct_estimate": 0.25,
-    "range_low": 24100,
-    "range_high": 24350,
-    "confidence": 3,
-    "generated_at": "morning_brief_2026-04-17",
-    "regime": "BLOCKADE_ESCALATION_DIPLOMACY_ACCELERATING"
+    "direction": "VOLATILE_SIDEWAYS",
+    "change_pct_estimate": 0.0,
+    "range_low": 23900,
+    "range_high": 24600,
+    "confidence": 2,
+    "rationale": "Pre-binary positioning day. Market will trade cautiously with directional moves dependent on intraday Kushner-talks signals. Expect high intraday volatility. No sustained trend until April 21 resolution.",
+    "generated_at": "weekly_review_2026-04-19",
+    "regime": "CRITICAL_EXPIRY_BINARY"
+  },
+  "ceasefire_binary_matrix": {
+    "extension_probability": 0.55,
+    "collapse_probability": 0.25,
+    "stalemate_probability": 0.20,
+    "extension_nifty_impact": "+1.5 to +2.5% (targets 24,600-25,000)",
+    "collapse_nifty_impact": "-3 to -5% (targets 22,800-23,500)",
+    "stalemate_nifty_impact": "±0.5% flat",
+    "extension_brent": "$88-93",
+    "collapse_brent": "$108-118",
+    "key_signal": "April 20 Kushner/Witkoff talks in Islamabad — any positive signal = pre-pricing of extension",
+    "ceasefire_expiry": "2026-04-21T00:00:00"
   },
   "stocks_to_watch": [
     {
-      "stock": "MRPL",
-      "reason": "Brent -3.19% to $96.22. GRM recovery thesis re-engages. +4.69% today at \u20b9183.13. Monitor for Brent sustainability below $100."
+      "stock": "ASTRA MICRO",
+      "reason": "P025 check date April 22. Estimated at ~₹1,120-1,140 on April 17 — already above P025 target range ₹1,050-1,100. Binary outcome: ceasefire extends → likely corrects to ₹1,050-1,100 (P025 RIGHT), ceasefire collapses → spikes ₹1,150-1,200+ (P025 WRONG/ABOVE). P030 correction thesis active (target ₹1,010-1,060 by April 30 if extension confirmed)."
     },
     {
-      "stock": "IRCON",
-      "reason": "+8.65% today at \u20b9154.69. Defense/infra momentum. Monitor for Monday follow-through; any weekend Iran incident could reverse sharply."
-    },
-    {
-      "stock": "SUZLON",
-      "reason": "+5.33% at \u20b952.93. Renewables momentum. Volume 337M shares \u2014 strong distribution/accumulation signal."
-    },
-    {
-      "stock": "DMART",
-      "reason": "+4.52% at \u20b94,628. Consumer discretionary bid returning on Brent ease. Monitor Monday for continuation."
-    },
-    {
-      "stock": "TCS",
-      "reason": "P022 closed WRONG. TCS +0.18% on +0.65% day \u2014 IT regime override confirmed. No new TCS short-horizon calls until IT sector resets. WIPRO -2.83% signals sector weakness."
+      "stock": "HCLTECH",
+      "reason": "Q4FY26 results announced April 21 POST-MARKET (simultaneously with ceasefire expiry day). M013 applies. SELL_ON_EARNINGS_NEWS_IT confirmed 3x. Prediction P028: stays below ₹1,430 by April 28. Monitor closely — double event risk (ceasefire + results same day)."
     },
     {
       "stock": "SETFGOLD",
-      "reason": "P023 closed WRONG. Gold bid fading as diplomacy restarts. Range likely \u20b9127-130 unless Iran weekend incident. Hedge value diminishing."
+      "reason": "P029 active (target ₹123-127 by April 26 if ceasefire extends 3+ days). HOLD full position through April 21. DO NOT SELL before ceasefire resolution. If ceasefire collapses: gold ₹136-145. If extension confirmed + stable 3 days: sell 30-40% of position near ₹126-128."
     },
     {
-      "stock": "HDFC BANK",
-      "reason": "+0.56% recovery from -1.78% prior day. Heavyweight stabilization supports index floor. Monitor Monday for continuation."
+      "stock": "IRFC",
+      "reason": "P026 check date April 22 (target ₹92-96) — WILL SCORE WRONG. IRFC at ₹104.80. P010 check April 29 (target ₹85-95) — also heading WRONG. Monitor whether ceasefire extension brings PSU infrastructure re-rating toward ₹110+."
     },
     {
-      "stock": "WIPRO",
-      "reason": "-2.83% today on guidance \u2014 IT sector pressure. Watch whether spreads to INFY/TCS/HCLTECH Monday."
+      "stock": "MRPL",
+      "reason": "P017 target ₹200-210 by May 8. If ceasefire extends and Brent falls to $88-93, GRM recovery accelerates — P017 probability rises to 4★. If Brent hits $90, MRPL could see strong recovery from ₹183 toward ₹195-205."
+    },
+    {
+      "stock": "INFOSYS",
+      "reason": "Q4FY26 results April 23 (Thursday). M013 applies. SELL_ON_EARNINGS_NEWS_IT pattern. With WIPRO -2.83% on guidance and IT sector down 25% YTD, consensus expectations reset lower — less sell-on-news risk than TCS but M013 cap still applies. Monitor FY27 guidance for direction signal."
+    },
+    {
+      "stock": "SWIGGY",
+      "reason": "P001 check date April 25 (target <₹260). WILL SCORE WRONG — SWIGGY at ₹271-273. No catalyst for breach. Note: P001 was the earliest prediction; its failure marks the end of the near-52wk-low technical thesis."
+    },
+    {
+      "stock": "SUZLON",
+      "reason": "+5.33% April 17 at ₹52.93. If ceasefire extends and Brent falls below $90, renewables sector gets tailwind. No active prediction. Consider P031 (SUZLON tests ₹58-62 on ceasefire extension + Brent <$90) at next morning brief if ceasefire extends."
     }
   ],
-  "prompt_for_morning_brief": "MORNING BRIEF 2026-04-20 (Monday): (1) Score opening bias \u2014 forecast FLAT_TO_SLIGHT_GAP_UP +0.15% (GIFT Nifty ~24,390). Compare against ACTUAL NSE open. (2) Weekend event check \u2014 any Iran IRGC incident? Ceasefire extension formally agreed? Brent overnight direction? (3) Tuesday April 21 ceasefire expiry = 1 trading day away \u2014 assess pre-expiry positioning risk. (4) Friday 2026-04-17 session result: STRONG BULLISH +0.65% at 24,353.55. Brent $96.22 (-3.19%). (5) IT sector status \u2014 WIPRO -2.83% Friday; watch for contagion. (6) Review resolved predictions: P022 TCS WRONG, P023 SETFGOLD WRONG. M013 + FORECAST_PAT005 both promoted. (7) No TCS short-horizon reversion calls; gold safe-haven calls must incorporate FORECAST_PAT005 auto-invalidation clause.",
-  "opening_bias_actual": {
-    "nifty_open": 24150,
-    "gift_nifty_preopen": 24030,
-    "gap_pct": -0.193,
-    "direction": "GAP_DOWN",
-    "direction_correct": true,
-    "grade": "CORRECT",
-    "scoring_note": "Forecast -0.20% vs actual -0.193%. Near-perfect calibration."
-  },
-  "tomorrow_forecast": {
-    "date": "2026-04-20",
-    "opening_bias": {
-      "direction": "FLAT_TO_SLIGHT_GAP_UP",
-      "gap_pct_estimate": 0.15,
-      "gift_nifty_estimate": 24390,
-      "key_drivers": [
-        "Strong Friday close +0.65% at 24,353.55 \u2014 momentum carry",
-        "Brent $96.22 (-3.19%) \u2014 war premium unwinding",
-        "Ceasefire extension \"in principle agreement\" reported",
-        "US-Iran second round talks expected",
-        "April 21 ceasefire expiry 1 trading day away \u2014 caution builds Monday afternoon",
-        "Weekend event risk"
-      ],
-      "confidence": 3,
-      "generated_at": "eod_wrap_2026-04-17"
+  "prompt_for_morning_brief": "MORNING BRIEF 2026-04-20 (Monday): (1) REGIME CHECK FIRST: Any overnight statement from Kushner/Witkoff from Islamabad? Any Iran FM response? Ceasefire still holding? (2) Score opening bias — forecast FLAT_TO_SLIGHT_GAP_DOWN ~-0.25% (GIFT Nifty ~24,270). Compare against actual NSE open. (3) Brent direction at Asia open — is it at $97-98 (negative) or moving lower on diplomacy signal (positive)? (4) ASTRA MICRO open price — above or below ₹1,100? (P025 pre-assessment). (5) SETFGOLD direction — is gold retreating on extension optimism or holding on violation news? (6) FII April 17 official data and April 20 provisional — net buyer or seller? (7) HCLTECH price action ahead of April 21 results. (8) CRITICAL NOTE: April 21 = ceasefire expiry + HCLTECH Q4 results — double binary. Pre-position carefully. (9) P025 and P026 check April 22 — pre-assess with April 20 close. (10) Any Hormuz vessel traffic update — has Hormuz re-opened or is it still contested?",
+  "key_events_this_week": [
+    {
+      "date": "2026-04-20",
+      "event": "Kushner + Witkoff Islamabad talks",
+      "impact": "HIGH — pre-ceasefire expiry diplomatic effort. Positive signal = Nifty recovers to 24,500. Failure = pre-expiry gap down Tuesday."
     },
-    "session_direction": {
-      "direction": "SIDEWAYS_BULLISH",
-      "change_pct_estimate": 0.2,
-      "range_low": 24250,
-      "range_high": 24550,
-      "key_assumption": "Weekend without major Iran escalation + ceasefire extension progresses. Brent holds $93-97. Sector rotation into defense/infra/renewables continues; IT remains weak.",
-      "confidence": 3,
-      "generated_at": "eod_wrap_2026-04-17",
-      "regime": "DIPLOMATIC_DEESCALATION_WITH_EXPIRY_RISK",
-      "brent_forecast": "$93-97"
+    {
+      "date": "2026-04-21",
+      "event": "⚡ CEASEFIRE EXPIRY + HCL Tech Q4 results (post-market)",
+      "impact": "CRITICAL — most important day since April 8. Dual binary: geopolitical resolution AND IT earnings. Expect extreme volatility."
+    },
+    {
+      "date": "2026-04-22",
+      "event": "P025 (ASTRA MICRO) + P026 (IRFC) check dates + Tech Mahindra Q4 results",
+      "impact": "HIGH — P025 likely RIGHT/ABOVE, P026 certain WRONG."
+    },
+    {
+      "date": "2026-04-23",
+      "event": "Infosys Q4FY26 results",
+      "impact": "HIGH — M013 applies. Sell-on-news base case. FY27 guidance is key variable."
+    },
+    {
+      "date": "2026-04-25",
+      "event": "P001 (SWIGGY) + P004 (ASTRA MICRO) check dates",
+      "impact": "MEDIUM — Both expected WRONG. Scorecard update."
     }
-  },
+  ],
+  "framework_version": "v4",
+  "active_promoted_patterns": [
+    "FORECAST_PAT003 (Geopolitical Binary Underweighting)",
+    "M012 (Defense Sector Duration Premium)",
+    "FII_CEASEFIRE_DISTRIBUTION",
+    "FORECAST_PAT004 (Ceasefire Stability Precondition — 3-day wait)",
+    "M013 (IT Regime Risk Filter — cap IT confidence at 2★ in active geopolitical regime)",
+    "FORECAST_PAT005 (Diplomatic Restart Trigger — 25-30% probability after talks failure)",
+    "SELL_ON_EARNINGS_NEWS_IT (no post-earnings IT breakout predictions)"
+  ],
+  "observing_patterns": [
+    "TALKS_FAILED_WAR_PREMIUM_RETURN (AMENDED — 1-2 day swing pattern only, not 7D+)",
+    "TRUMP_DEADLINE_PRESSURE_CRUDE (1 occurrence — needs 1 more)"
+  ],
   "portfolio_summary": {
     "total_invested": 2318475.98,
-    "total_market_value": 2476668.45,
-    "total_pnl": 158192.47,
-    "total_pnl_pct": 6.82,
+    "total_market_value_est": 2512000,
+    "total_pnl_est": 193500,
+    "total_pnl_pct_est": 8.3,
     "as_of": "2026-04-17",
-    "top_gainers_today": "IRCON +8.65%, IRCON (Groww) +8.65%, ACME SOLAR +5.98%, SUZLON +5.33%, SUZLON (Groww) +5.33%",
-    "top_losers_today": "SWIGGY (Groww) -1.05%, SWIGGY -1.05%, SETFGOLD -0.59%, URBANCO -0.42%"
+    "note": "Estimated values — pending official mark-to-market. Nifty +1.26% week, defense/renewables outperformed. Key drivers: IRCON +8.65%, SUZLON +5.33%, DMART +4.52%, MRPL +4.69% on Friday.",
+    "biggest_position_risks": "IRFC (₹105 vs ₹130 avg = -19.2% loss, 200 shares), SWIGGY (₹271 vs ₹299 avg = -9.3% loss), MRPL (₹183 vs ₹196 avg = -6.8% loss)",
+    "biggest_winners": "ASTRA MICRO (₹1,130 est vs ₹562 avg = +101% gain), SUZLON (₹53 vs ₹41 avg = +30.6%), COAL INDIA (₹432 vs ₹346 avg = +24.9%)"
   },
-  "session_direction_actual": {
-    "nifty_close": 24353.55,
-    "nifty_change_pct": 0.65,
-    "direction_correct": true,
-    "in_range": true,
-    "brent_correct": true,
-    "grade": "CORRECT",
-    "scoring_note": "Forecast bullish +0.25%, range 24,100-24,350. Actual +0.65%, close 24,353.55. Direction CORRECT, close 3.55 pts above upper bound (within 0.015% tolerance). Brent $96.22 in $95-98 forecast band."
-  }
+  "scoring_queue": [
+    {"pred_id": "P025", "check_date": "2026-04-22", "stock": "ASTRA MICRO", "target": "1050-1100", "expected": "ABOVE_RANGE or RIGHT depending on ceasefire outcome"},
+    {"pred_id": "P026", "check_date": "2026-04-22", "stock": "IRFC", "target": "92-96", "expected": "WRONG"},
+    {"pred_id": "P001", "check_date": "2026-04-25", "stock": "SWIGGY", "target": "<260", "expected": "WRONG"},
+    {"pred_id": "P004", "check_date": "2026-04-25", "stock": "ASTRA MICRO", "target": "850-900", "expected": "WRONG"},
+    {"pred_id": "P010", "check_date": "2026-04-29", "stock": "IRFC", "target": "85-95 range", "expected": "WRONG"}
+  ]
 }

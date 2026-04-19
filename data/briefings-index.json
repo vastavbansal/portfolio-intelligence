@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-04-19",
+      "type": "weekly",
+      "label": "Sun Apr 19 — Weekly Review",
+      "file": "daily-briefings/weekly-2026-04-19.md",
+      "summary": "Weekend Shock:** Iran re-closed Hormuz after briefly opening Friday → Brent rebounded $90 → $97-98. Nifty 50 | 24,050 | 24,353.55"
+    },
+    {
       "date": "2026-04-16",
       "type": "morning",
       "label": "Thu Apr 16 — Morning Briefing",

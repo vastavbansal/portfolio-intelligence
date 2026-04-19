@@ -219,6 +219,47 @@
     }
   ],
 
+  "promoted_patterns_v4": [
+    {
+      "id": "M013",
+      "name": "IT Regime Risk Filter",
+      "status": "PROMOTED",
+      "promoted_date": "2026-04-17",
+      "rule": "During any active geopolitical risk regime where Brent >$98 OR Hormuz is actively contested, cap all IT stock prediction confidence at maximum 2\u2605. Macro regime systematically overrides earnings fundamentals for IT exporters. No TCS/INFY/HCLTECH short-horizon reversion calls until Brent sustained <$92 and Hormuz fully open 5+ trading days.",
+      "confirmed_occurrences": 3,
+      "confirmed_predictions": ["P018 TCS WRONG", "P021 TCS WRONG", "P022 TCS WRONG"]
+    },
+    {
+      "id": "FORECAST_PAT005",
+      "name": "Diplomatic Restart Trigger",
+      "status": "PROMOTED",
+      "promoted_date": "2026-04-17",
+      "rule": "After failed peace talks, ALWAYS assign 25-30% probability to diplomatic restart within 48-72 hours. If Trump or any major party signals willingness to negotiate within 72h of talks failure, bearish Nifty/war-premium thesis immediately invalidates. All bearish Nifty predictions after talks failure must include explicit auto-invalidation: 'If diplomatic restart signal within 72h \u2192 confidence drops to 1\u2605.'",
+      "confirmed_occurrences": 2,
+      "confirmed_predictions": ["P023 SETFGOLD WRONG", "P024 Nifty WRONG"]
+    },
+    {
+      "id": "SELL_ON_EARNINGS_NEWS_IT",
+      "name": "Large-Cap IT Sell-on-News After Earnings Beat",
+      "status": "PROMOTED",
+      "promoted_date": "2026-04-19",
+      "rule": "Large-cap Indian IT stocks systematically underperform expectations for 5-10 trading sessions after earnings beats. Pre-announcement run-up fully prices in consensus beats. Do NOT predict post-earnings breakouts for large-cap IT (TCS, INFY, HCLTECH, WIPRO). Confirmed: TCS Q4FY26 record beat \u2192 stock fell for 9+ sessions.",
+      "confirmed_occurrences": 3,
+      "confirmed_predictions": ["P018 TCS WRONG", "P021 TCS WRONG", "P022 TCS WRONG"]
+    }
+  ],
+  "amended_patterns_v4": [
+    {
+      "id": "TALKS_FAILED_WAR_PREMIUM_RETURN",
+      "name": "Failed Peace Talks \u2192 War Premium Return",
+      "status": "OBSERVING_AMENDED",
+      "original_status": "OBSERVING",
+      "amendment_date": "2026-04-19",
+      "original_rule": "Failed high-profile peace talks \u2192 Brent spike $3-7, Nifty gap-down -1.5 to -2.5%, gold +1-2%, defense +2-4%.",
+      "amended_rule": "War premium DOES return for 24-48 hours after talks failure, but AUTO-EXPIRES if diplomatic restart signal emerges within 72 hours. This is a 1-2 day intraday/swing pattern ONLY. NOT suitable for 7D+ predictions. Any 7D+ prediction built on this pattern must include FORECAST_PAT005 auto-invalidation clause.",
+      "amendment_reason": "P024 Nifty WRONG: Nifty went UP instead of DOWN within 7 days of Islamabad talks failure because Trump signaled deal optimism within 48h. P023 SETFGOLD WRONG: Same mechanism. Pattern works for day-traders but fails for medium-horizon predictions."
+    }
+  ],
   "evolution_log": [
     {
       "date": "2026-04-08",
@@ -231,7 +272,20 @@
       "version": "v3",
       "changes": "Promoted FII_CEASEFIRE_DISTRIBUTION to framework (2 occurrences: April 8 and 9). Added TALKS_FAILED_WAR_PREMIUM_RETURN as new observing pattern (April 11 Islamabad talks failure). Framework now covers 3 geopolitical regime patterns.",
       "accuracy_at_time": 33.3,
-      "notes": "No new predictions scored this week — scoring cluster April 14-17. IRFC surprise: spiked to ₹100.25 vs P010 range ₹85-95 — ceasefire rally override pattern. Gold at ₹127.31 pre-talk failure — will likely rally toward ₹130-134 on failed talks confirmation."
+      "notes": "No new predictions scored this week \u2014 scoring cluster April 14-17. IRFC surprise: spiked to \u20b9100.25 vs P010 range \u20b985-95 \u2014 ceasefire rally override pattern. Gold at \u20b9127.31 pre-talk failure \u2014 will likely rally toward \u20b9130-134 on failed talks confirmation."
+    },
+    {
+      "date": "2026-04-19",
+      "version": "v4",
+      "changes": "PROMOTED: M013 (IT Regime Risk Filter, 3 confirmations), FORECAST_PAT005 (Diplomatic Restart Trigger, 2 confirmations), SELL_ON_EARNINGS_NEWS_IT (3 confirmations). AMENDED: TALKS_FAILED_WAR_PREMIUM_RETURN \u2014 duration constraint added (1-2 day swing pattern only, not 7D+). New predictions P027-P030 all include explicit auto-invalidation clauses.",
+      "accuracy_at_time": 21.4,
+      "key_learnings": [
+        "Diplomatic restart after failed talks is faster than anticipated \u2014 FORECAST_PAT005 now active guard",
+        "IT sector systematically fails in active geopolitical regimes regardless of earnings quality \u2014 M013 cap enforced",
+        "Sell-on-news for large-cap IT is structural (5-10 sessions) not tactical \u2014 do not predict post-earnings IT breakouts",
+        "Gold war premium is highly sensitive to diplomatic signals \u2014 use 2\u2605 max until diplomatic situation is stable 3+ days",
+        "Best predictions have ONE direct causal link between catalyst and stock outcome"
+      ]
     }
   ]
 }
