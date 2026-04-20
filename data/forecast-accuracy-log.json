@@ -724,52 +724,67 @@
         "confidence": 3,
         "generated_at": "eod_wrap_2026-04-17"
       },
-      "opening_bias_actual": null,
+      "opening_bias_actual": {
+        "nifty_open": 24338.15,
+        "nifty_prev_close": 24353.55,
+        "gift_nifty_preopen": 24449,
+        "gap_pct": -0.063,
+        "direction": "FLAT_SLIGHT_GAP_DOWN",
+        "direction_correct": false,
+        "grade": "PARTIAL",
+        "scoring_note": "Logged forecast (eod_wrap_2026-04-17): FLAT_TO_SLIGHT_GAP_UP +0.15% (GIFT est 24,390). Actual: Nifty opened 24,338.15 (-0.063% gap-down from 24,353.55). GIFT Nifty preopen was ~24,449 (would have suggested gap-up +0.39%). Direction tilt was wrong (predicted up, got down) but magnitude within FLAT band (|actual|<0.1%) \u2014 PARTIAL credit. NOTE: a mid-cycle weekly_review_2026-04-19 update flipped the forecast to FLAT_TO_SLIGHT_GAP_DOWN -0.25% after weekend Trump-violation / Hormuz re-close news; that revised view had the correct direction but also overstated magnitude (-0.25% vs actual -0.063%).",
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": false,
+        "data_provenance": "News reports 2026-04-20 AM (Republic World, News24, Open Magazine) \u2014 GIFT Nifty 24,449, Nifty open 24,338.15, Sensex open 78,442.18."
+      },
       "session_direction": {
-        "direction": "SIDEWAYS_BULLISH",
+        "direction": "VOLATILE_SIDEWAYS_MILDLY_BULLISH",
         "change_pct_estimate": 0.2,
-        "range_low": 24250,
-        "range_high": 24550,
-        "key_assumption": "Weekend without major Iran escalation + ceasefire extension either formally agreed by Monday open OR \"in principle\" status sustained. Brent holds $93-97 range. Monday session is pre-expiry positioning \u2014 cautious but constructive. Sector rotation into defense/infra/renewables continues. IT remains weak (WIPRO -2.83% guidance hangover). Heavyweight banks (HDFC Bank +0.56%, SBIN +1.23%) stabilizing supports floor.",
-        "confidence": 3,
-        "generated_at": "eod_wrap_2026-04-17",
-        "regime": "DIPLOMATIC_DEESCALATION_WITH_EXPIRY_RISK",
-        "brent_forecast": "$93-97 (declining on ceasefire extension progress; capped by Tuesday expiry uncertainty)",
+        "range_low": 24180,
+        "range_high": 24480,
+        "key_assumption": "Monday is pre-ceasefire-expiry positioning day. Early session has already shown high intraday vol (Nifty swung 24,241 -> 24,420, ~180pt range within first hour). Constructive factors: Friday momentum carryover (DMART, IRCON, SUZLON), financial heavyweights supportive (NIFTY Financial Services +0.67%), GIFT Nifty 24,449 suggested bulls were positioned. Negative factors: Brent rebound to $97-98 on Hormuz re-close, Trump \"total violation\" accusation, Kushner/Witkoff Islamabad talks still in progress (outcome unknown intraday). Expect choppy range with modest upside bias as market pre-prices ceasefire extension (55% probability per binary matrix), but hedging into Tuesday expiry will cap upside. HCLTECH results Tuesday PM add event-risk overlay.",
+        "confidence": 2,
+        "generated_at": "morning_brief_2026-04-20",
+        "regime": "CRITICAL_EXPIRY_BINARY",
+        "brent_forecast": "$96-99 intraday (elevated on Hormuz re-close, capped by Kushner diplomacy signal)",
         "scenario_weighted": {
-          "extension_confirmed": {
-            "probability": 45,
-            "description": "Ceasefire extension formally agreed over weekend or Monday AM. Brent falls to $92-94. Nifty tests 24,500+.",
-            "nifty_impact": "UP +0.5% to +1.0% (24,470-24,600)"
-          },
-          "pre_expiry_consolidation": {
+          "extension_signal_midday": {
             "probability": 35,
-            "description": "Extension \"in principle\" but not formally inked. Traders hedge ahead of Tuesday expiry. Range-bound near flat.",
-            "nifty_impact": "FLAT -0.1% to +0.3% (24,300-24,450)"
+            "description": "Kushner/Witkoff Islamabad talks leak positive by Indian close. Brent slips to $95-96. Nifty rallies into close.",
+            "nifty_impact": "UP +0.4% to +0.8% (24,450-24,550)"
           },
-          "escalation_or_deal_collapse": {
+          "choppy_range_bound": {
+            "probability": 45,
+            "description": "Talks ongoing with no clear signal by close. Market drifts sideways with large intraday swings. FIIs wait-and-see.",
+            "nifty_impact": "FLAT -0.2% to +0.3% (24,280-24,430)"
+          },
+          "escalation_or_talks_fail": {
             "probability": 20,
-            "description": "IRGC incident over weekend / extension talks fail by Monday. Brent spikes >$100. Sharp reversal.",
+            "description": "Negative leak from Islamabad, Iran FM rejects extension, Brent spikes to $100+. Sharp intraday reversal.",
             "nifty_impact": "DOWN -0.8% to -1.5% (23,990-24,150)"
           }
         },
         "key_risks": [
-          "Iran IRGC autonomous Hormuz or Red Sea action over weekend",
-          "Ceasefire extension not formalized by Monday AM \u2014 Tuesday expiry risk lingers",
-          "US pre-weekend market weakness if headlines turn (watch Friday US close)",
-          "FII flows \u2014 sustained DII support still fragile"
+          "Kushner/Witkoff talks outcome \u2014 any negative leak before 3:30 PM IST close",
+          "Iran FM response to Trump \"total violation\" accusation",
+          "Hormuz vessel-traffic status (re-closed Saturday; tracking needed)",
+          "HCLTECH pre-results jitters (April 21 PM, M013 applies)",
+          "FII April 17 official and April 20 provisional data",
+          "Brent above $100 would trigger defensive rotation"
         ],
         "key_opportunities": [
-          "MRPL / Refiners: Brent $96 vs $102 peak \u2014 GRM recovery thesis re-engages if Brent holds below $100",
-          "IndiGo / Airlines: ATF cost relief; Brent decline is primary tailwind",
-          "SUZLON / Renewables: Momentum strong (+5.33% today); carry into Monday",
-          "Defense (IRCON, MAZDOCK, PREMEXPLN): Still bid even as war premium eases \u2014 structural order book story",
-          "SETFGOLD: Likely range-bound \u2014 gold $4,813 consolidating, Brent decline reduces hedging demand"
+          "SUZLON/Renewables: momentum intact \u2014 if Brent softens, additional leg up",
+          "Defense (IRCON, MAZDOCK, PREMEXPLN): structural orderbook underpins even as war premium eases",
+          "MRPL / Refiners: Brent at $97-98 (not $90) caps GRM recovery \u2014 P017 still 3\u2605",
+          "IndiGo: slight beneficiary of stable (not spiking) crude",
+          "SETFGOLD: HOLD into April 21 \u2014 do NOT sell ahead of binary"
         ]
       },
       "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 EOD wrap 2026-04-20"
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-20"
       },
       "actual": {
         "nifty_open": null,
