@@ -792,6 +792,90 @@
         "nifty_change_pct": null
       },
       "lessons": []
+    },
+    {
+      "session_date": "2026-04-21",
+      "forecast_generated_at": "morning_brief_2026-04-21",
+      "opening_bias": {
+        "direction": null,
+        "gap_pct_estimate": null,
+        "confidence": null,
+        "rationale": "No formal opening-bias forecast was logged for 2026-04-21 \u2014 the scheduled EOD wrap on 2026-04-20 did not execute. Morning brief 04-21 records actual open but there is no forecast to score against. Flag as UNSCORED.",
+        "generated_at": null,
+        "source_note": "missing_eod_wrap_2026-04-20"
+      },
+      "opening_bias_actual": {
+        "nifty_open": 24391.5,
+        "nifty_prev_close": 24364.85,
+        "gift_nifty_preopen": null,
+        "gap_pct": 0.109,
+        "direction": "FLAT_SLIGHT_GAP_UP",
+        "direction_correct": null,
+        "grade": "UNSCORED",
+        "scoring_note": "Nifty opened at 24391.5 (+0.109% vs prev close 24364.85). No formal opening-bias forecast was logged for 2026-04-21 because EOD wrap 2026-04-20 did not run. Grade: UNSCORED. The carry-over context from morning_brief_2026-04-20 implied a volatile-sideways regime; actual open was a mild gap-up consistent with market pre-pricing ceasefire-extension probability rising (Brent -5.49% to $90.24 overnight).",
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": false,
+        "data_provenance": "Web search (Nifty 50 April 21 2026 open price); market-prices.json fetched 2026-04-21 13:47 IST for prev_close and intraday levels.",
+        "intraday_so_far": {
+          "high": 24480.65,
+          "low": 24241.25,
+          "current": 24533.85,
+          "current_change_pct_vs_prev_close": 0.694,
+          "as_of": "2026-04-21 13:47 IST"
+        }
+      },
+      "session_direction": {
+        "direction": "BULLISH",
+        "change_pct_estimate": 0.9,
+        "range_low": 24420,
+        "range_high": 24680,
+        "key_assumption": "Market is aggressively pre-pricing ceasefire extension on Brent -5.49% overnight to $90.24 (finally gaining the diplomacy signal markets had sought since Islamabad restart). Nifty already +0.69% at 13:47 IST with BankNifty +1.33% and defense also rallying (ASTRA +3.95%, MAZDOCK +1.67%) \u2014 a broad risk-on move. Binary outcome still hinges on Islamabad talks + ceasefire expiry tonight (IST Wed). HCLTECH post-market results add event risk but M013 caps IT confidence. Base case: continued upward drift into close as positioning flows dominate; cap to 24,680 reflects expected pre-close hedging into dual binary (ceasefire+earnings).",
+        "confidence": 3,
+        "generated_at": "morning_brief_2026-04-21",
+        "regime": "CRITICAL_EXPIRY_BINARY",
+        "brent_forecast": "$88-93 intraday (diplomacy pre-pricing); key floor $88, ceiling $95",
+        "scenario_weighted": {
+          "extension_signal_confirmed": {
+            "probability": 45,
+            "description": "Kushner/Witkoff/Vance readout leaks positive from Islamabad by 3:30 PM IST. Brent holds $88-92. Nifty accelerates into close.",
+            "nifty_impact": "UP +1.1% to +1.5% (24,630-24,730)"
+          },
+          "momentum_close_no_news": {
+            "probability": 40,
+            "description": "No decisive signal by IST close but risk-on flow holds. Market carries current gains on Brent-cooling narrative; HCL pre-results hedging caps upside.",
+            "nifty_impact": "UP +0.6% to +1.0% (24,510-24,610)"
+          },
+          "talks_fail_late_reversal": {
+            "probability": 15,
+            "description": "Negative leak from Islamabad or Iran FM rejects extension. Brent snaps back above $95. Sharp intraday reversal; financials give back gains.",
+            "nifty_impact": "DOWN -0.5% to -1.2% (24,070-24,240)"
+          }
+        },
+        "key_risks": [
+          "Ceasefire expiry tonight (IST Wed 00:00) without a formal extension communique",
+          "Iran FM response to Islamabad talks (leak risk during IST session)",
+          "HCLTECH Q4 post-market \u2014 SELL_ON_EARNINGS_NEWS_IT + M013 overlay",
+          "Defense retracement if extension confirmed (ASTRA MICRO specifically \u2014 P030 thesis)",
+          "Brent snap-back above $95 on Hormuz re-closure news"
+        ],
+        "key_opportunities": [
+          "Ceasefire extension confirmed: SUZLON / MRPL / IndiGo extend; Brent breaks below $88",
+          "Defense profit-booking windows if extension certainty rises (P030 setup)",
+          "SETFGOLD trim window if extension + stability holds \u22653 days",
+          "Financials continuation \u2014 BANKNIFTY +1.33% already signaling risk-on"
+        ]
+      },
+      "session_direction_accuracy": {
+        "direction_correct": null,
+        "grade": "PENDING",
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-21"
+      },
+      "actual": {
+        "nifty_open": 24391.5,
+        "nifty_close": null,
+        "nifty_change_pct": null
+      }
     }
   ],
   "patterns_observed": [

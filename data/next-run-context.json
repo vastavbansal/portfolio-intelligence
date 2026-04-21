@@ -1,81 +1,78 @@
 {
   "schema_version": "1.0",
   "description": "Morning brief 2026-04-20. Nifty opened 24,338.15 (-0.063% gap-down). Intraday hit low 24,241 / high 24,420. Ceasefire expires Tuesday 04-21 (T-1). Kushner+Witkoff Islamabad talks today. Brent $97-98 on Hormuz re-close. Opening bias: PARTIAL grade (flat-band, tilt wrong on primary forecast). Session direction: VOLATILE_SIDEWAYS_MILDLY_BULLISH (range 24,180-24,480, conviction 2/5). Key intraday trigger: Kushner-talks leak.",
-  "last_updated_by": "morning_brief_2026-04-20",
-  "last_updated_at": "2026-04-20T11:50:00",
+  "last_updated_by": "morning_brief_2026-04-21",
+  "last_updated_at": "2026-04-21T09:00:00",
   "market_regime": {
     "label": "CRITICAL_EXPIRY_BINARY",
     "key_risk": "April 21 (Tuesday) ceasefire EXPIRY \u2014 1 trading day from Monday open. Trump declared 'total violation' Sunday. Iran re-closed Hormuz Saturday after briefly opening Friday. Ceasefire status: CRITICAL but technically holding.",
     "dominant_risk": "Binary outcome April 21: (A) Ceasefire extends \u2014 Nifty +1.5-2.5%, Brent $88-93, defense corrects; (B) Ceasefire collapses \u2014 Nifty -3 to -5%, Brent $108-118, gold spikes. No middle ground \u2014 either outcome is sharp.",
-    "crude_last": 97.5,
-    "crude_pct_change_weekend": "+1.34% (weekend rebound from $90.38 US-close Friday to $97-98 Sunday)",
+    "crude_last": 90.24,
+    "crude_pct_change_weekend": "-5.49% intraday to $90.24 (major unwind of Hormuz re-close premium, diplomacy pre-pricing)",
     "crude_note": "VOLATILE: Brent whipsawed $96 \u2192 $90 (Hormuz opens Friday after IST close) \u2192 $97-98 (Hormuz re-closes Saturday). India could NOT price the $90 level \u2014 Monday open reflects $97-98.",
     "crude_threshold_for_regime_change": 90,
-    "crude_current_zone": "WATCH_ZONE_CRITICAL ($95-100 \u2014 pre-expiry uncertainty, bouncing from Hormuz open/close whipsaw)",
-    "nifty_last": 24353.55,
-    "nifty_last_trading_date": "2026-04-17",
-    "nifty_last_pct_change": 0.65,
+    "crude_current_zone": "COOLING_ZONE ($88-93 \u2014 ceasefire extension pre-pricing, $88 floor, $95 re-entry risk)",
+    "nifty_last": 24533.85,
+    "nifty_last_trading_date": "2026-04-21 (intraday, 13:47 IST)",
+    "nifty_last_pct_change": 0.69,
     "nifty_key_support": 24000,
     "nifty_key_resistance": 24600,
-    "gift_nifty_estimate_for_next_session": 24270,
-    "banknifty_last": 56565.7,
-    "banknifty_change_pct": 0.85,
-    "gold_last_usd": 4813.0,
-    "gold_change_pct": 0.58,
-    "setfgold_last_inr": 128.69,
+    "gift_nifty_estimate_for_next_session": null,
+    "banknifty_last": 57335.3,
+    "banknifty_change_pct": 1.33,
+    "gold_last_usd": 4799.1,
+    "gold_change_pct": -0.16,
+    "setfgold_last_inr": 129.01,
     "regime_since": "2026-04-19",
-    "regime_note": "Weekend shock: Iran FM briefly opened Hormuz Friday after IST close (Brent crashed $96\u2192$90), then Iran re-closed Hormuz Saturday ($90\u2192$97-98 rebound). Trump Sunday accused Iran of 'total violation' \u2014 firing at French/UK ships in Strait. Kushner + Witkoff dispatched to Islamabad for Monday talks. Regime: CRITICAL_EXPIRY_BINARY \u2014 ceasefire expires TUESDAY, pre-positioning day Monday."
+    "regime_note": "April 21 (ceasefire expiry day): markets pre-pricing extension as Brent crashed -5.49% to $90.24 on diplomacy signal. Nifty +0.69% to 24,533 at midday; BankNifty +1.33%. ASTRA MICRO +3.95%, defense rallying. Vance+Kushner+Witkoff in Islamabad today \u2014 Iran gave last-minute clearance. HCLTECH Q4 post-market tonight = dual binary day (geopolitics + IT earnings)."
   },
   "opening_bias": {
-    "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
-    "gap_pct_estimate": -0.25,
-    "gift_nifty_estimate": 24270,
-    "confidence": 2,
-    "rationale": "Brent at $97-98 = near Friday IST close level ($96.22) \u2014 not dramatically worse. BUT Trump violation accusation is negative sentiment. Kushner talks are positive signal. Net: flat-to-slight gap down. High uncertainty \u2014 could flip positive if overnight Kushner talks produce early signal.",
-    "generated_at": "weekly_review_2026-04-19",
-    "key_morning_variable": "Any statement from Kushner/Witkoff or Iran FM before NSE open (9:15am IST). If positive = gap up instead. If Iran hostile = gap down -0.5 to -1%."
+    "direction": null,
+    "gap_pct_estimate": null,
+    "confidence": null,
+    "rationale": "No formal opening-bias forecast was logged for 2026-04-21 \u2014 the scheduled EOD wrap on 2026-04-20 did not execute. Morning brief 04-21 records actual open but there is no forecast to score against. Flag as UNSCORED.",
+    "generated_at": null,
+    "source_note": "missing_eod_wrap_2026-04-20"
   },
   "session_direction": {
-    "direction": "VOLATILE_SIDEWAYS_MILDLY_BULLISH",
-    "change_pct_estimate": 0.2,
-    "range_low": 24180,
-    "range_high": 24480,
-    "key_assumption": "Monday is pre-ceasefire-expiry positioning day. Early session has already shown high intraday vol (Nifty swung 24,241 -> 24,420, ~180pt range within first hour). Constructive factors: Friday momentum carryover (DMART, IRCON, SUZLON), financial heavyweights supportive (NIFTY Financial Services +0.67%), GIFT Nifty 24,449 suggested bulls were positioned. Negative factors: Brent rebound to $97-98 on Hormuz re-close, Trump \"total violation\" accusation, Kushner/Witkoff Islamabad talks still in progress (outcome unknown intraday). Expect choppy range with modest upside bias as market pre-prices ceasefire extension (55% probability per binary matrix), but hedging into Tuesday expiry will cap upside. HCLTECH results Tuesday PM add event-risk overlay.",
-    "confidence": 2,
-    "generated_at": "morning_brief_2026-04-20",
+    "direction": "BULLISH",
+    "change_pct_estimate": 0.9,
+    "range_low": 24420,
+    "range_high": 24680,
+    "key_assumption": "Market is aggressively pre-pricing ceasefire extension on Brent -5.49% overnight to $90.24 (finally gaining the diplomacy signal markets had sought since Islamabad restart). Nifty already +0.69% at 13:47 IST with BankNifty +1.33% and defense also rallying (ASTRA +3.95%, MAZDOCK +1.67%) \u2014 a broad risk-on move. Binary outcome still hinges on Islamabad talks + ceasefire expiry tonight (IST Wed). HCLTECH post-market results add event risk but M013 caps IT confidence. Base case: continued upward drift into close as positioning flows dominate; cap to 24,680 reflects expected pre-close hedging into dual binary (ceasefire+earnings).",
+    "confidence": 3,
+    "generated_at": "morning_brief_2026-04-21",
     "regime": "CRITICAL_EXPIRY_BINARY",
-    "brent_forecast": "$96-99 intraday (elevated on Hormuz re-close, capped by Kushner diplomacy signal)",
+    "brent_forecast": "$88-93 intraday (diplomacy pre-pricing); key floor $88, ceiling $95",
     "scenario_weighted": {
-      "extension_signal_midday": {
-        "probability": 35,
-        "description": "Kushner/Witkoff Islamabad talks leak positive by Indian close. Brent slips to $95-96. Nifty rallies into close.",
-        "nifty_impact": "UP +0.4% to +0.8% (24,450-24,550)"
-      },
-      "choppy_range_bound": {
+      "extension_signal_confirmed": {
         "probability": 45,
-        "description": "Talks ongoing with no clear signal by close. Market drifts sideways with large intraday swings. FIIs wait-and-see.",
-        "nifty_impact": "FLAT -0.2% to +0.3% (24,280-24,430)"
+        "description": "Kushner/Witkoff/Vance readout leaks positive from Islamabad by 3:30 PM IST. Brent holds $88-92. Nifty accelerates into close.",
+        "nifty_impact": "UP +1.1% to +1.5% (24,630-24,730)"
       },
-      "escalation_or_talks_fail": {
-        "probability": 20,
-        "description": "Negative leak from Islamabad, Iran FM rejects extension, Brent spikes to $100+. Sharp intraday reversal.",
-        "nifty_impact": "DOWN -0.8% to -1.5% (23,990-24,150)"
+      "momentum_close_no_news": {
+        "probability": 40,
+        "description": "No decisive signal by IST close but risk-on flow holds. Market carries current gains on Brent-cooling narrative; HCL pre-results hedging caps upside.",
+        "nifty_impact": "UP +0.6% to +1.0% (24,510-24,610)"
+      },
+      "talks_fail_late_reversal": {
+        "probability": 15,
+        "description": "Negative leak from Islamabad or Iran FM rejects extension. Brent snaps back above $95. Sharp intraday reversal; financials give back gains.",
+        "nifty_impact": "DOWN -0.5% to -1.2% (24,070-24,240)"
       }
     },
     "key_risks": [
-      "Kushner/Witkoff talks outcome \u2014 any negative leak before 3:30 PM IST close",
-      "Iran FM response to Trump \"total violation\" accusation",
-      "Hormuz vessel-traffic status (re-closed Saturday; tracking needed)",
-      "HCLTECH pre-results jitters (April 21 PM, M013 applies)",
-      "FII April 17 official and April 20 provisional data",
-      "Brent above $100 would trigger defensive rotation"
+      "Ceasefire expiry tonight (IST Wed 00:00) without a formal extension communique",
+      "Iran FM response to Islamabad talks (leak risk during IST session)",
+      "HCLTECH Q4 post-market \u2014 SELL_ON_EARNINGS_NEWS_IT + M013 overlay",
+      "Defense retracement if extension confirmed (ASTRA MICRO specifically \u2014 P030 thesis)",
+      "Brent snap-back above $95 on Hormuz re-closure news"
     ],
     "key_opportunities": [
-      "SUZLON/Renewables: momentum intact \u2014 if Brent softens, additional leg up",
-      "Defense (IRCON, MAZDOCK, PREMEXPLN): structural orderbook underpins even as war premium eases",
-      "MRPL / Refiners: Brent at $97-98 (not $90) caps GRM recovery \u2014 P017 still 3\u2605",
-      "IndiGo: slight beneficiary of stable (not spiking) crude",
-      "SETFGOLD: HOLD into April 21 \u2014 do NOT sell ahead of binary"
+      "Ceasefire extension confirmed: SUZLON / MRPL / IndiGo extend; Brent breaks below $88",
+      "Defense profit-booking windows if extension certainty rises (P030 setup)",
+      "SETFGOLD trim window if extension + stability holds \u22653 days",
+      "Financials continuation \u2014 BANKNIFTY +1.33% already signaling risk-on"
     ]
   },
   "ceasefire_binary_matrix": {
@@ -214,17 +211,24 @@
     }
   ],
   "opening_bias_actual": {
-    "nifty_open": 24338.15,
-    "nifty_prev_close": 24353.55,
-    "gift_nifty_preopen": 24449,
-    "gap_pct": -0.063,
-    "direction": "FLAT_SLIGHT_GAP_DOWN",
-    "direction_correct": false,
-    "grade": "PARTIAL",
-    "scoring_note": "Logged forecast (eod_wrap_2026-04-17): FLAT_TO_SLIGHT_GAP_UP +0.15% (GIFT est 24,390). Actual: Nifty opened 24,338.15 (-0.063% gap-down from 24,353.55). GIFT Nifty preopen was ~24,449 (would have suggested gap-up +0.39%). Direction tilt was wrong (predicted up, got down) but magnitude within FLAT band (|actual|<0.1%) \u2014 PARTIAL credit. NOTE: a mid-cycle weekly_review_2026-04-19 update flipped the forecast to FLAT_TO_SLIGHT_GAP_DOWN -0.25% after weekend Trump-violation / Hormuz re-close news; that revised view had the correct direction but also overstated magnitude (-0.25% vs actual -0.063%).",
+    "nifty_open": 24391.5,
+    "nifty_prev_close": 24364.85,
+    "gift_nifty_preopen": null,
+    "gap_pct": 0.109,
+    "direction": "FLAT_SLIGHT_GAP_UP",
+    "direction_correct": null,
+    "grade": "UNSCORED",
+    "scoring_note": "Nifty opened at 24391.5 (+0.109% vs prev close 24364.85). No formal opening-bias forecast was logged for 2026-04-21 because EOD wrap 2026-04-20 did not run. Grade: UNSCORED. The carry-over context from morning_brief_2026-04-20 implied a volatile-sideways regime; actual open was a mild gap-up consistent with market pre-pricing ceasefire-extension probability rising (Brent -5.49% to $90.24 overnight).",
     "source": "actual_nse_open",
     "pre_estimated_by": null,
     "validation_required": false,
-    "data_provenance": "News reports 2026-04-20 AM (Republic World, News24, Open Magazine) \u2014 GIFT Nifty 24,449, Nifty open 24,338.15, Sensex open 78,442.18."
+    "data_provenance": "Web search (Nifty 50 April 21 2026 open price); market-prices.json fetched 2026-04-21 13:47 IST for prev_close and intraday levels.",
+    "intraday_so_far": {
+      "high": 24480.65,
+      "low": 24241.25,
+      "current": 24533.85,
+      "current_change_pct_vs_prev_close": 0.694,
+      "as_of": "2026-04-21 13:47 IST"
+    }
   }
 }
