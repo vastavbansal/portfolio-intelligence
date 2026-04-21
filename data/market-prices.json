@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-04-21T10:44:05.608386+00:00",
-  "fetched_at_ist": "2026-04-21 16:30 IST",
+  "fetched_at": "2026-04-21T18:00:05.116193+00:00",
+  "fetched_at_ist": "2026-04-21 23:30 IST",
   "coverage": {
-    "nse_stocks_fetched": 88,
+    "nse_stocks_fetched": 87,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 34
+    "portfolio_stocks_with_pnl": 33
   },
   "indices": {
     "NIFTY_50": {
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4806.5,
+      "price": 4731.5,
       "prev_close": 4806.6,
-      "change": -0.1,
-      "change_pct": -0.0,
-      "volume": 49169,
+      "change": -75.1,
+      "change_pct": -1.56,
+      "volume": 145919,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 79.06,
+      "price": 76.78,
       "prev_close": 79.95,
-      "change": -0.89,
-      "change_pct": -1.11,
-      "volume": 10327,
+      "change": -3.18,
+      "change_pct": -3.97,
+      "volume": 43923,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 86.36,
+      "price": 89.84,
       "prev_close": 89.61,
-      "change": -3.25,
-      "change_pct": -3.63,
-      "volume": 53621,
+      "change": 0.23,
+      "change_pct": 0.26,
+      "volume": 243944,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 89.93,
+      "price": 93.22,
       "prev_close": 95.48,
-      "change": -5.55,
-      "change_pct": -5.81,
-      "volume": 10716,
+      "change": -2.26,
+      "change_pct": -2.37,
+      "volume": 35005,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 2.67,
+      "price": 2.69,
       "prev_close": 2.69,
-      "change": -0.02,
-      "change_pct": -0.74,
-      "volume": 7397,
+      "change": 0.0,
+      "change_pct": 0.04,
+      "volume": 66464,
       "ticker": "NG=F"
     }
   },
@@ -348,22 +348,6 @@
       "market_value": 48246.0,
       "pnl": -2541.5,
       "pnl_pct": -5.0
-    },
-    "URBANCO": {
-      "price": 137.24,
-      "prev_close": 134.34,
-      "change": 2.9,
-      "change_pct": 2.16,
-      "volume": 3883352,
-      "symbol": "URBANCO",
-      "yahoo_ticker": "URBANCO.NS",
-      "broker": "ICICI",
-      "avg_buy": 122.1,
-      "qty": 725,
-      "invested": 88522.5,
-      "market_value": 99499.0,
-      "pnl": 10976.5,
-      "pnl_pct": 12.4
     },
     "ACME SOLAR": {
       "price": 296.25,
@@ -1161,13 +1145,6 @@
       "change": 9.1,
       "change_pct": 1.86,
       "volume": 221750
-    },
-    "URBANCO.NS": {
-      "price": 137.24,
-      "prev_close": 134.34,
-      "change": 2.9,
-      "change_pct": 2.16,
-      "volume": 3883352
     },
     "IGIL.NS": {
       "price": 362.3,
