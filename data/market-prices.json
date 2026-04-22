@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-04-22T14:43:14.739672+00:00",
-  "fetched_at_ist": "2026-04-22 20:13 IST",
+  "fetched_at": "2026-04-22T18:00:07.942239+00:00",
+  "fetched_at_ist": "2026-04-22 23:30 IST",
   "coverage": {
     "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4756.3,
+      "price": 4755.2,
       "prev_close": 4698.4,
-      "change": 57.9,
-      "change_pct": 1.23,
-      "volume": 70669,
+      "change": 56.8,
+      "change_pct": 1.21,
+      "volume": 88240,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 77.95,
+      "price": 77.93,
       "prev_close": 76.41,
-      "change": 1.54,
-      "change_pct": 2.01,
-      "volume": 21933,
+      "change": 1.52,
+      "change_pct": 1.99,
+      "volume": 30545,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 91.77,
+      "price": 92.68,
       "prev_close": 92.13,
-      "change": -0.36,
-      "change_pct": -0.39,
-      "volume": 152638,
+      "change": 0.55,
+      "change_pct": 0.6,
+      "volume": 246833,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 95.36,
+      "price": 101.57,
       "prev_close": 98.48,
-      "change": -3.12,
-      "change_pct": -3.17,
-      "volume": 20418,
+      "change": 3.09,
+      "change_pct": 3.14,
+      "volume": 33241,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 2.74,
+      "price": 2.72,
       "prev_close": 2.7,
-      "change": 0.04,
-      "change_pct": 1.59,
-      "volume": 34560,
+      "change": 0.02,
+      "change_pct": 0.78,
+      "volume": 62956,
       "ticker": "NG=F"
     }
   },
