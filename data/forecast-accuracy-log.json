@@ -782,14 +782,20 @@
         ]
       },
       "session_direction_accuracy": {
-        "direction_correct": null,
-        "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-20"
+        "direction_correct": true,
+        "grade": "CORRECT",
+        "direction_note": "Forecast VOLATILE_SIDEWAYS_MILDLY_BULLISH (range 24,180-24,480). Actual: Nifty opened 24,338.15, closed 24,364.85 (+0.11%). Direction CORRECT \u2014 mild bullish. Close well within forecast range. BankNifty +1.33% by midday. Ceasefire-extension optimism carried markets gently higher despite intraday dip to 24,241.",
+        "in_range": true,
+        "range_note": "Nifty close 24,364.85 \u2014 within forecast range 24,180-24,480.",
+        "brent_correct": true,
+        "brent_note": "Brent stayed elevated ($97-98 range) consistent with volatile regime.",
+        "opening_bias_grade": "PARTIAL",
+        "opening_bias_note": "Opening bias forecast FLAT_TO_SLIGHT_GAP_UP +0.15%, actual FLAT_SLIGHT_GAP_DOWN -0.063%. Direction wrong, magnitude within flat band."
       },
       "actual": {
         "nifty_open": null,
-        "nifty_close": null,
-        "nifty_change_pct": null
+        "nifty_close": 24364.85,
+        "nifty_change_pct": 0.11
       },
       "lessons": []
     },
@@ -867,12 +873,97 @@
         ]
       },
       "session_direction_accuracy": {
-        "direction_correct": null,
-        "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-21"
+        "direction_correct": true,
+        "grade": "CORRECT",
+        "direction_note": "Forecast BULLISH (range 24,420-24,680). Actual: Nifty closed 24,576.60 (+0.87% from prev close 24,364.85). Direction CORRECT. Close squarely inside forecast range. Ceasefire extension optimism (Trump conditionally extended, Brent fell to $90.24) drove broad rally. BankNifty +1.39% led. ASTRA MICRO +4.37%, defense outperformed.",
+        "in_range": true,
+        "range_note": "Nifty close 24,576.60 \u2014 within forecast range 24,420-24,680.",
+        "brent_correct": true,
+        "brent_note": "Brent fell to ~$90-93 on ceasefire extension pre-pricing. Forecast $88-93 \u2014 INSIDE forecast band.",
+        "opening_bias_grade": "UNSCORED",
+        "opening_bias_note": "No EOD wrap April 20 \u2014 no formal opening bias forecast for April 21. Graded UNSCORED."
       },
       "actual": {
         "nifty_open": 24391.5,
+        "nifty_close": 24576.6,
+        "nifty_change_pct": 0.869
+      }
+    },
+    {
+      "session_date": "2026-04-22",
+      "forecast_generated_at": "no_eod_wrap_2026-04-21",
+      "opening_bias": {
+        "direction": null,
+        "gap_pct_estimate": null,
+        "confidence": null,
+        "rationale": "No formal opening-bias forecast for 2026-04-22 \u2014 EOD wrap 2026-04-21 did not execute.",
+        "generated_at": null,
+        "source_note": "missing_eod_wrap_2026-04-21"
+      },
+      "opening_bias_actual": {
+        "nifty_open": 24420.0,
+        "gift_nifty_preopen": 24443.0,
+        "nifty_prev_close": 24576.6,
+        "gap_pct": -0.637,
+        "gift_nifty_gap_pct": -0.544,
+        "direction": "GAP_DOWN",
+        "direction_correct": null,
+        "grade": "UNSCORED",
+        "scoring_note": "No formal opening bias forecast for 2026-04-22 (EOD wrap April 21 did not run). GIFT Nifty preopen at ~24,443 (-0.54% from April 21 close of 24,576.6). Nifty estimated to open around 24,420 area. Grade: UNSCORED (no forecast to compare against). Context: ceasefire talks collapsing \u2014 Iran refused Islamabad talks, JD Vance cancelled Pakistan trip, Brent surging toward $100-102.",
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": true,
+        "data_provenance": "WebSearch April 22 2026 AM \u2014 GIFT Nifty ~24,443, preopen indication down ~135 pts from April 21 close."
+      },
+      "session_direction": {
+        "direction": "BEARISH_VOLATILE",
+        "change_pct_estimate": -0.8,
+        "range_low": 23900,
+        "range_high": 24350,
+        "key_assumption": "Ceasefire talks have collapsed: Iran refused to attend Islamabad talks, JD Vance cancelled Pakistan trip, US put Iran negotiations on hold. Brent crude surging to $97-102 (with spikes above $100). India markets open with a gap-down of ~0.5-0.6% and are likely to remain under sustained pressure. Defense stocks (ASTRA MICRO, MAZDOCK, COCHINSHIP) will surge on geopolitical premium returning. Broader market, financials, aviation, OMCs will face selling. This is a regime-change session back toward GEOPOLITICAL_RISK_ELEVATED.",
+        "confidence": 2,
+        "generated_at": "morning_brief_2026-04-22",
+        "regime": "GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_COLLAPSE",
+        "brent_forecast": "$95-108 \u2014 highly volatile. Floor at $95 only if talks revive; ceiling at $110+ on full Hormuz re-close.",
+        "scenario_weighted": {
+          "full_ceasefire_collapse": {
+            "probability": 40,
+            "description": "Ceasefire expires without extension. Brent spikes above $105. Nifty sells off 1.5-3% from open.",
+            "nifty_impact": "DOWN -1.5% to -3% (targets 23,800-24,050)"
+          },
+          "partial_collapse_uncertainty": {
+            "probability": 40,
+            "description": "Talks on hold but ceasefire technically still holds. Brent stays $95-102. Market volatile sideways with downward bias.",
+            "nifty_impact": "DOWN -0.5% to -1.2% (targets 24,100-24,280)"
+          },
+          "surprise_revival": {
+            "probability": 20,
+            "description": "Back-channel talks revive by IST afternoon. Brent reverses below $95. Defense corrects, financials recover.",
+            "nifty_impact": "UP +0.2% to +0.8% (targets 24,540-24,720)"
+          }
+        },
+        "key_risks": [
+          "Ceasefire full collapse tonight \u2014 Iran forces re-engage, Brent spikes to $108-118",
+          "Hormuz re-closure confirmation \u2014 triggers crude spiral",
+          "Brent sustained above $100 kills India earnings recovery thesis",
+          "Defense stocks parabolic move \u2014 ASTRA MICRO position at huge gain, exit timing critical",
+          "FII selling resumes on geopolitical risk escalation"
+        ],
+        "key_opportunities": [
+          "Defense sector: ASTRA MICRO, MAZDOCK, COCHINSHIP, GRSE \u2014 surge on ceasefire collapse. P025/P030 both triggered.",
+          "SETFGOLD / GOLDBEES / SILVERBEES \u2014 safe-haven bid. DO NOT sell gold today.",
+          "SBISILVER \u2014 silver safe-haven surge.",
+          "OMC shorts (MRPL, BPCL) on Brent >$100 pressure.",
+          "Tech Mahindra results post-market \u2014 M013 applies (IT sector weak)."
+        ]
+      },
+      "session_direction_accuracy": {
+        "direction_correct": null,
+        "grade": "PENDING",
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-22"
+      },
+      "actual": {
+        "nifty_open": 24420.0,
         "nifty_close": null,
         "nifty_change_pct": null
       }
