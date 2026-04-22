@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
-  "last_updated": "2026-04-17T17:30:00",
+  "last_updated": "2026-04-22",
   "predictions": [
     {
       "pred_id": "P007",
@@ -807,6 +807,23 @@
       "promoted_date": "2026-04-17",
       "lesson": "When a geopolitical crisis has a \"talks failed\" event, ANY safe-haven/bearish call with horizon >48h must assume 30%+ probability of diplomatic reversal. For gold specifically, when Brent falls >5% from crisis peak AND new talks round announced, close gold bullish thesis immediately.",
       "notes": "2nd occurrence of FORECAST_PAT005 (1st was RCA_P024 NIFTY April 16). PROMOTING to validated framework pattern."
+    },
+    {
+      "rca_id": "RCA_P026",
+      "pred_id": "P026",
+      "date": "2026-04-22",
+      "stock": "IRFC",
+      "horizon": "10D",
+      "outcome": "WRONG",
+      "root_cause_summary": "PSU infrastructure stock DII support overrode mean-reversion thesis. IRFC stayed above \u20b9103-106 throughout the 10D horizon despite RSI overbought. No negative PSU catalyst materialized.",
+      "missing_signal": "PSU_DII_SUPPORT_FILTER \u2014 DII flows into PSU names create persistent price support that overrides technical mean-reversion signals",
+      "factor_gap": "No DII flow durability check in framework for PSU calls",
+      "proposed_factor_id": "PSU_DII_FILTER",
+      "proposed_factor_name": "PSU DII Support Filter",
+      "pattern_tag": "PSU_DII_OVERRIDE_MEAN_REVERSION",
+      "framework_promoted": false,
+      "promoted_date": null,
+      "lesson": "For government PSU stocks, RSI overbought alone is insufficient for mean-reversion call. Require a specific negative catalyst: capex cut, FY guidance miss, credit event, or sector derating. Count: 1 occurrence (P026). 1 more needed for promotion."
     }
   ],
   "scored_predictions": [
@@ -872,6 +889,28 @@
       "outcome": "WRONG",
       "scored_date": "2026-04-17",
       "outcome_price": 128.69
+    },
+    {
+      "pred_id": "P025",
+      "stock": "ASTRA MICRO",
+      "outcome": "ABOVE_RANGE",
+      "scored_date": "2026-04-22",
+      "outcome_price": 1129.75,
+      "target": "1050-1100",
+      "entry_price": 1012.0,
+      "horizon": "10D",
+      "note": "Defense run accelerated beyond target on ceasefire collapse. Non-linear regime breakout."
+    },
+    {
+      "pred_id": "P026",
+      "stock": "IRFC",
+      "outcome": "WRONG",
+      "scored_date": "2026-04-22",
+      "outcome_price": 105.82,
+      "target": "92-96",
+      "entry_price": 100.25,
+      "horizon": "10D",
+      "note": "PSU mean-reversion thesis failed. DII support + government capex narrative sustained elevated price."
     }
   ]
 }

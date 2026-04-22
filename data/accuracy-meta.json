@@ -1,17 +1,17 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-17T17:30:00",
+  "last_updated": "2026-04-22T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 30,
-      "open": 16,
-      "scored": 14,
+      "open": 14,
+      "scored": 16,
       "right": 3,
-      "wrong": 9,
+      "wrong": 11,
       "partial": 2,
-      "accuracy_pct": 21.4,
-      "note": "April 19 Sunday Weekly: P022 TCS WRONG, P023 SETFGOLD WRONG (both scored Apr 17 EOD). Added P027-P030 new predictions. Running: 3 RIGHT, 2 PARTIAL, 9 WRONG from 14 scored. Accuracy 21.4%. Framework v4: M013 PROMOTED, FORECAST_PAT005 PROMOTED, SELL_ON_EARNINGS_NEWS_IT PROMOTED. Next check dates: P025/P026 Apr 22, P001/P004 Apr 25. Both expected to score: P025 RIGHT/ABOVE, P026 WRONG, P001 WRONG, P004 WRONG."
+      "accuracy_pct": 18.8,
+      "note": "April 22 EOD: P025 ASTRA MICRO ABOVE_RANGE (1129.75 vs 1050-1100), P026 IRFC WRONG (105.82 vs 92-96). Running totals: 3 RIGHT, 2 PARTIAL, 11 WRONG from 16 scored. Accuracy 18.8%. PSU_DII_FILTER proposed (1 occurrence, 1 more needed)."
     },
     "by_horizon": {
       "1D": {
@@ -78,11 +78,11 @@
       },
       "Defense": {
         "total": 3,
-        "scored": 1,
+        "scored": 2,
         "right": 0,
-        "wrong": 1,
+        "wrong": 2,
         "accuracy_pct": 0,
-        "note": "P009 WRONG (pullback thesis invalidated by war premium extension). P012 on track (breach \u20b91,000 done, targeting \u20b91,050-1,080). P004 open, expected WRONG."
+        "note": "P025 ABOVE_RANGE (1129.75 vs target 1050-1100). P009 WRONG. P012 PARTIAL. P004 expected WRONG. Defense directional thesis correct but range-capping fails in regime-breakout scenarios."
       },
       "Aviation": {
         "total": 3,
@@ -94,11 +94,11 @@
       },
       "PSU_Mining_Infra": {
         "total": 4,
-        "scored": 1,
+        "scored": 2,
         "right": 1,
-        "wrong": 0,
-        "accuracy_pct": 100,
-        "note": "P019 ADANI PORT RIGHT (\u20b91,511 in \u20b91,490-1,540 range). P005, P010, P011, P026 still open."
+        "wrong": 1,
+        "accuracy_pct": 50.0,
+        "note": "P019 ADANI PORT RIGHT. P026 IRFC WRONG (DII support overrode mean-reversion). P010 still open (IRFC target 85-95 by Apr 29 \u2014 heading WRONG). P005 Coal India still open. P011 NHPC open."
       },
       "IT": {
         "total": 2,
@@ -254,6 +254,22 @@
       "framework_promoted": true,
       "promoted_date": "2026-04-17",
       "lesson": "Safe-haven thesis after talks failure must auto-invalidate within 48h if diplomatic reversal signal emerges."
+    },
+    {
+      "rca_id": "RCA_P025",
+      "pred_id": "P025",
+      "date": "2026-04-22",
+      "stock": "ASTRA MICRO",
+      "horizon": "10D",
+      "outcome": "ABOVE_RANGE",
+      "root_cause_summary": "Defense stock non-linear breakout on regime change. Target range 1050-1100 was correct directionally but too conservative for ceasefire-collapse acceleration.",
+      "missing_signal": "REGIME_BREAKOUT_MULTIPLIER \u2014 in GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_COLLAPSE, defense stocks can exceed 'fundamental' war-premium levels by 10-20% on momentum",
+      "factor_gap": "No defense range multiplier for regime-breakout scenarios vs fragile-ceasefire scenarios",
+      "proposed_factor_id": "DEFENSE_REGIME_BREAKOUT",
+      "proposed_factor_name": "Defense Regime Breakout Multiplier",
+      "pattern_tag": "DEFENSE_RANGE_TOO_CONSERVATIVE_ON_COLLAPSE",
+      "framework_promoted": false,
+      "lesson": "In ceasefire collapse (vs fragile ceasefire), defense targets should add +15-20% buffer. P025 directional thesis was right but range too conservative. Count: 1 occurrence (observe)."
     }
   ],
   "L3_trend": {
@@ -274,18 +290,18 @@
         "right": 0,
         "wrong": 3,
         "accuracy_pct": 0,
-        "note": "Last 3: P022 TCS WRONG, P023 SETFGOLD WRONG, P024 Nifty WRONG. Systematic failure on post-talks-failure predictions due to FORECAST_PAT005 (diplomatic restart speed underestimated)."
+        "note": "Last 3: P025 ASTRA MICRO ABOVE_RANGE, P026 IRFC WRONG, P024 Nifty WRONG. Cold streak continues."
       },
       "last_5_scored": {
         "scored": 5,
         "right": 0,
-        "partial": 1,
-        "wrong": 4,
+        "partial": 0,
+        "wrong": 5,
         "accuracy_pct": 0,
-        "note": "Last 5: P016 PARTIAL, P022 WRONG, P023 WRONG, P024 WRONG, P021 WRONG. Cold streak continues. Core failure: all predictions built on post-talks-failure war-premium sustainability."
+        "note": "Last 5: P022 TCS WRONG, P023 SETFGOLD WRONG, P024 Nifty WRONG, P025 ABOVE_RANGE, P026 WRONG. Deep cold streak \u2014 no correct predictions in last 5 scored."
       }
     },
-    "improvement_signal": "SYSTEMATIC_FAILURE_DETECTED — Diplomatic Restart Speed. All 5 most recent predictions failed due to underestimating how quickly Trump/US pivots to diplomatic restart after talks failure. FORECAST_PAT005 now promoted to framework. Expected recovery: predictions that directly track ceasefire resolution (P027 Nifty rally, P030 Astra Micro correction) are better structured with explicit auto-invalidation clauses. Framework v4 changes should improve accuracy in week ahead.",
+    "improvement_signal": "SYSTEMATIC_FAILURE_DETECTED \u2014 Diplomatic Restart Speed. All 5 most recent predictions failed due to underestimating how quickly Trump/US pivots to diplomatic restart after talks failure. FORECAST_PAT005 now promoted to framework. Expected recovery: predictions that directly track ceasefire resolution (P027 Nifty rally, P030 Astra Micro correction) are better structured with explicit auto-invalidation clauses. Framework v4 changes should improve accuracy in week ahead.",
     "key_failure_patterns": {
       "DIPLOMATIC_RESTART_SPEED": "3/5 wrong predictions (P022, P023, P024) failed because diplomatic restart after Islamabad failure was faster than model assumed. Now codified in FORECAST_PAT005.",
       "IT_MACRO_REGIME_OVERRIDE": "3 consecutive TCS predictions (P018, P021, P022) WRONG. M013 now promoted. No more short-horizon IT bullish calls during active geopolitical regimes.",
@@ -298,7 +314,7 @@
     "framework_evolution_log_update": {
       "date": "2026-04-19",
       "version": "v4",
-      "changes": "PROMOTED: M013 (IT Regime Risk Filter — 3 occurrences), FORECAST_PAT005 (Diplomatic Restart Trigger — 2 occurrences), SELL_ON_EARNINGS_NEWS_IT (3 occurrences). AMENDED: TALKS_FAILED_WAR_PREMIUM_RETURN — duration constraint added (1-2 day pattern only, not suitable for 7D+ predictions). Added P027-P030 new predictions with explicit auto-invalidation clauses.",
+      "changes": "PROMOTED: M013 (IT Regime Risk Filter \u2014 3 occurrences), FORECAST_PAT005 (Diplomatic Restart Trigger \u2014 2 occurrences), SELL_ON_EARNINGS_NEWS_IT (3 occurrences). AMENDED: TALKS_FAILED_WAR_PREMIUM_RETURN \u2014 duration constraint added (1-2 day pattern only, not suitable for 7D+ predictions). Added P027-P030 new predictions with explicit auto-invalidation clauses.",
       "accuracy_at_time": 21.4
     }
   },

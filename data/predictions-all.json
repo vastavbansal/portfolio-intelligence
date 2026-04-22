@@ -832,12 +832,13 @@
         "M008"
       ],
       "check_date": "2026-04-22",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
-      "confidence_note": "ASTRA MICRO at \u20b91074.7 (+4.09% today). Already INSIDE target range \u20b91,050-1,100! Defense stocks rallying on Iran counter-threats and sustained war premium. Confidence 5\u2605 \u2014 effectively RIGHT already, 4 trading days remaining."
+      "outcome": "ABOVE_RANGE",
+      "outcome_price": 1129.75,
+      "outcome_evidence": "ASTRA MICRO closed at \u20b91129.75 on 2026-04-22. Target range was \u20b91,050-1,100. Stock is +2.7% above range top (\u20b91,100). Ceasefire collapse accelerated defense rally beyond forecast target. Stock had been inside range briefly April 14-16 but resumed upward trajectory on continued geopolitical premium.",
+      "postmortem": "P025 ABOVE_RANGE: Direction was correct (defense stocks surge on ceasefire collapse), but target range 1050-1100 was too conservative. When a true ceasefire collapse occurs (vs fragile ceasefire), defense stocks break out non-linearly. Range cap underestimated the new equilibrium price. Lesson: In GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_COLLAPSE regime, defense ranges should use +15-20% buffers, not +8%.",
+      "scored_on": "2026-04-22",
+      "confidence_note": "ASTRA MICRO at \u20b91074.7 (+4.09% today). Already INSIDE target range \u20b91,050-1,100! Defense stocks rallying on Iran counter-threats and sustained war premium. Confidence 5\u2605 \u2014 effectively RIGHT already, 4 trading days remaining.",
+      "status": "ABOVE_RANGE"
     },
     {
       "pred_id": "P026",
@@ -862,12 +863,13 @@
         "T005"
       ],
       "check_date": "2026-04-22",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
-      "confidence_note": "IRFC at \u20b9104.80-105.03 (Apr 17). Needs -10.5% to reach target \u20b992-96 in 5 days. Confidence 1\u2605 \u2014 WILL SCORE WRONG Apr 22."
+      "outcome": "WRONG",
+      "outcome_price": 105.82,
+      "outcome_evidence": "IRFC closed at \u20b9105.82 on 2026-04-22. Target range was \u20b992-96. Stock is \u20b99.82 above range top. IRFC never corrected from the post-ceasefire rally. PSU infra names held up on continued government capex narrative. RSI overbought thesis failed: government PSU stocks defied mean-reversion in a broad government-capex support environment.",
+      "postmortem": "P026 WRONG: Mean-reversion thesis failed for government PSU stocks. IRFC's elevated price (\u20b9103-106) was sustained because: (1) DII flows supported PSU names throughout; (2) no negative government capex news; (3) ceasefire collapse actually helped PSU defense/infra sentiment. Lesson: For PSU infrastructure names with DII support, mean-reversion calls require a specific negative catalyst (capex cuts, credit downgrade), not just RSI overbought. Add PSU_DII_SUPPORT_FILTER to framework.",
+      "scored_on": "2026-04-22",
+      "confidence_note": "IRFC at \u20b9104.80-105.03 (Apr 17). Needs -10.5% to reach target \u20b992-96 in 5 days. Confidence 1\u2605 \u2014 WILL SCORE WRONG Apr 22.",
+      "status": "WRONG"
     },
     {
       "pred_id": "P027",
@@ -905,12 +907,12 @@
       "horizon": "7D",
       "date": "2026-04-19",
       "stock": "HCLTECH",
-      "prediction": "HCL Technologies will fail to sustain above \u20b91,430 post Q4FY26 results by April 28 — M013 sell-on-news pattern applies",
+      "prediction": "HCL Technologies will fail to sustain above \u20b91,430 post Q4FY26 results by April 28 \u2014 M013 sell-on-news pattern applies",
       "entry_price": 1356,
       "target": "below 1430",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "M013 (IT Regime Risk Filter) confirmed at 3 occurrences. HCLTECH Q4 results April 21 post-market. Sell-on-news IT pattern is systematic (confirmed P018, P021, P022). From ~\u20b91,356, breakout above \u20b91,430 requires +5.4% — M013 bars this until Hormuz fully clear 5+ days. IT sector down 25% YTD on AI disruption fears. April 21 also = ceasefire binary day, adding macro uncertainty overlay.",
+      "reasoning": "M013 (IT Regime Risk Filter) confirmed at 3 occurrences. HCLTECH Q4 results April 21 post-market. Sell-on-news IT pattern is systematic (confirmed P018, P021, P022). From ~\u20b91,356, breakout above \u20b91,430 requires +5.4% \u2014 M013 bars this until Hormuz fully clear 5+ days. IT sector down 25% YTD on AI disruption fears. April 21 also = ceasefire binary day, adding macro uncertainty overlay.",
       "factors_checked": [
         "M013",
         "SELL_ON_EARNINGS_NEWS_IT",
@@ -940,7 +942,7 @@
       "target": "123-127",
       "confidence": 2,
       "category": "MEDIUM",
-      "reasoning": "Applying FORECAST_PAT005 (Diplomatic Restart) + FORECAST_PAT004 (Ceasefire Stability Precondition — wait 3+ days before bearish safe-haven calls). If ceasefire extends April 21 and holds through April 24, war premium should compress 2-5%. Gold USD $4,813 has $200-300 war premium above fundamental support ($4,500-4,600). Clean extension removes 30-40% of that premium in week 1. SETFGOLD \u20b9128.69 \u2192 \u20b9123-127 requires -1.3 to -4.4%.",
+      "reasoning": "Applying FORECAST_PAT005 (Diplomatic Restart) + FORECAST_PAT004 (Ceasefire Stability Precondition \u2014 wait 3+ days before bearish safe-haven calls). If ceasefire extends April 21 and holds through April 24, war premium should compress 2-5%. Gold USD $4,813 has $200-300 war premium above fundamental support ($4,500-4,600). Clean extension removes 30-40% of that premium in week 1. SETFGOLD \u20b9128.69 \u2192 \u20b9123-127 requires -1.3 to -4.4%.",
       "factors_checked": [
         "FORECAST_PAT005",
         "FORECAST_PAT004",
@@ -957,8 +959,8 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "auto_invalidation": "Ceasefire collapses → prediction WRONG, gold spikes to \u20b9136-145. Stalemate → range \u20b9126-129.",
-      "confidence_note": "2\u2605 deliberately — P020 and P023 both WRONG on gold after ceasefires. Learned: humility required. Auto-invalidation clause active."
+      "auto_invalidation": "Ceasefire collapses \u2192 prediction WRONG, gold spikes to \u20b9136-145. Stalemate \u2192 range \u20b9126-129.",
+      "confidence_note": "2\u2605 deliberately \u2014 P020 and P023 both WRONG on gold after ceasefires. Learned: humility required. Auto-invalidation clause active."
     },
     {
       "pred_id": "P030",
@@ -970,7 +972,7 @@
       "target": "1010-1060",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "M012 (Defense Duration Premium) REVERSE: formal ceasefire extension transitions from 'managed tension' (optimal for defense) to 'negotiated de-escalation' (reduces defense premium). ASTRA MICRO at ~\u20b91,120-1,140 has incorporated both M012 duration premium AND ceasefire-expiry risk premium. If ceasefire extends formally, expect profit-booking as duration premium exits. Target \u20b91,010-1,060 = -6.5 to -11.4% retracement. P009 showed 10%+ unwind on ceasefire news. Entry estimated at \u20b91,130 (April 17 est. close — above P025 target range).",
+      "reasoning": "M012 (Defense Duration Premium) REVERSE: formal ceasefire extension transitions from 'managed tension' (optimal for defense) to 'negotiated de-escalation' (reduces defense premium). ASTRA MICRO at ~\u20b91,120-1,140 has incorporated both M012 duration premium AND ceasefire-expiry risk premium. If ceasefire extends formally, expect profit-booking as duration premium exits. Target \u20b91,010-1,060 = -6.5 to -11.4% retracement. P009 showed 10%+ unwind on ceasefire news. Entry estimated at \u20b91,130 (April 17 est. close \u2014 above P025 target range).",
       "factors_checked": [
         "M012",
         "FORECAST_PAT005",
@@ -987,8 +989,9 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "auto_invalidation": "Ceasefire collapses → prediction invalidated; ASTRA MICRO spikes \u20b91,150-1,200+.",
+      "auto_invalidation": "Ceasefire collapses \u2192 prediction invalidated; ASTRA MICRO spikes \u20b91,150-1,200+.",
       "confidence_note": "NEW Apr 19. Entry \u20b91,130 (estimated). 3\u2605 conditional on ceasefire extension. S003 (defense budget) provides floor support so not predicting below \u20b91,010."
     }
-  ]
+  ],
+  "last_updated": "2026-04-22"
 }
