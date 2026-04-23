@@ -1,33 +1,48 @@
 {
   "schema_version": "1.0",
-  "description": "Dynamic bridge \u2014 2026-04-23 session",
-  "last_updated_by": "morning_brief_2026-04-23",
-  "last_updated_at": "2026-04-23T11:45:00",
+  "description": "Dynamic bridge \u2014 2026-04-24 session",
+  "last_updated_by": "eod_wrap_2026-04-23",
+  "last_updated_at": "2026-04-23T17:30:00",
   "market_regime": {
-    "label": "GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_COLLAPSE",
-    "key_risk": "Ceasefire collapsed April 22. Iran refused Islamabad talks, JD Vance cancelled Pakistan trip. Brent still at $94.86 (above $90 threshold for India import pain) but fell -3.68% on partial Hormuz easing signals.",
-    "dominant_risk": "Overnight ceasefire escalation \u2014 if Iran forces engage, Brent re-spikes >$100, Nifty -1.5 to -3%",
-    "crude_last": 94.86,
-    "crude_note": "Brent $94.86 \u2014 fell below $95 for first time since collapse day. Still elevated. Below $95 is technically constructive but geopolitical risk remains.",
+    "label": "GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_UNCERTAIN_HORMUZ_BINARY",
+    "key_risk": "Ceasefire still in collapse/uncertain phase. Brent intraday -4.07% to $97.76 (after overnight spike to $101.57 on Iran ship seizures) suggests partial Hormuz de-escalation signals or commercial traffic resuming. Binary overnight: fresh escalation flips bullish bounce thesis.",
+    "dominant_risk": "Weekend event risk ahead of Apr 25-26 \u2014 any fresh Iran/Hormuz action spikes Brent and flips Friday positioning. Two-day cumulative -1.65% leaves Nifty oversold, bounce candidate.",
+    "crude_last": 97.76,
+    "crude_prev_close": 101.91,
+    "crude_change_pct": -4.07,
+    "crude_note": "Brent $97.76 intraday recovery after overnight spike. Below $100 is constructive but well above $90 threshold for regime relief. Watch for sustained break <$95 as signal of partial resolution.",
     "crude_threshold_for_regime_change": 90,
-    "crude_current_zone": "WATCH_ZONE ($90-97 \u2014 elevated but receding from danger)",
-    "nifty_last": 24378.1,
-    "nifty_last_trading_date": "2026-04-22",
-    "nifty_last_pct_change": -0.81,
-    "nifty_key_support": 24100,
-    "nifty_key_resistance": 24580,
-    "gift_nifty_estimate_for_next_session": 24330,
-    "banknifty_last": 57124.45,
-    "banknifty_change_pct": -0.43,
-    "gold_last_usd": 4768.1,
-    "gold_change_pct": 1.48,
+    "crude_current_zone": "WATCH_ZONE ($95-100 \u2014 elevated but cooling)",
+    "nifty_last": 24173.05,
+    "nifty_last_trading_date": "2026-04-23",
+    "nifty_last_pct_change": -0.84,
+    "nifty_key_support": 24000,
+    "nifty_key_resistance": 24400,
+    "gift_nifty_estimate_for_next_session": 24210,
+    "banknifty_last": 56305.0,
+    "banknifty_change_pct": -1.43,
+    "sensex_last": 77664.0,
+    "sensex_change_pct": -1.09,
+    "gold_last_usd": 4709.0,
+    "gold_change_pct": -0.5,
+    "silver_last_usd": 74.46,
+    "silver_change_pct": -4.4,
     "setfgold_last_inr": 128.87,
     "regime_since": "2026-04-22",
-    "regime_note": "Regime maintained GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_COLLAPSE. Brent declining suggests partial Hormuz resolution or diplomatic back-channel. Watch if Brent breaks below $92 \u2014 would signal regime shift to TALKS_REVIVING."
+    "regime_note": "Regime shifted slightly from CEASEFIRE_COLLAPSE to CEASEFIRE_UNCERTAIN_HORMUZ_BINARY. Brent intraday crash (-4.07%) suggests commercial/diplomatic signals, not a full regime change. Watch: sustained Brent break <$95 = TALKS_REVIVING shift; Brent back >$100 = collapse confirmation."
   },
   "opening_bias": {
-    "direction": null,
-    "note": "No EOD wrap April 21 \u2014 no formal opening bias for April 22. UNSCORED."
+    "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
+    "gap_pct_estimate": -0.2,
+    "gift_nifty_estimate": 24330,
+    "key_drivers": [
+      "Brent cooled to $94.86 (-3.68%) \u2014 relative positive vs prior $98+ but still elevated vs <$90 comfort zone",
+      "Infosys Q4FY26 results day \u2014 M013 applies, IT sector sentiment sets tone",
+      "Ceasefire still technically in collapse phase \u2014 overnight geopolitical headlines could spike",
+      "HCLTECH Q4 results post-market Apr 22 \u2014 results out overnight will influence gap"
+    ],
+    "confidence": 2,
+    "generated_at": "eod_wrap_2026-04-22"
   },
   "session_direction": {
     "direction": "VOLATILE_SIDEWAYS_SLIGHT_BEARISH",
@@ -60,48 +75,61 @@
     }
   },
   "ceasefire_binary_matrix": {
-    "extension_probability": 0.55,
-    "collapse_probability": 0.25,
-    "stalemate_probability": 0.2,
-    "extension_nifty_impact": "+1.5 to +2.5% (targets 24,600-25,000)",
-    "collapse_nifty_impact": "-3 to -5% (targets 22,800-23,500)",
-    "stalemate_nifty_impact": "\u00b10.5% flat",
-    "extension_brent": "$88-93",
-    "collapse_brent": "$108-118",
-    "key_signal": "April 20 Kushner/Witkoff talks in Islamabad \u2014 any positive signal = pre-pricing of extension",
-    "ceasefire_expiry": "2026-04-21T00:00:00"
+    "extension_probability": 0.4,
+    "collapse_probability": 0.35,
+    "stalemate_probability": 0.25,
+    "extension_nifty_impact": "+1.0 to +2.0% (targets 24,400-24,500)",
+    "collapse_nifty_impact": "-2.0 to -3.5% (targets 23,300-23,700)",
+    "stalemate_nifty_impact": "\u00b10.3% flat to mild positive",
+    "extension_brent": "$88-94",
+    "collapse_brent": "$105-115",
+    "key_signal": "Overnight Apr 23-24: any fresh Hormuz escalation or diplomatic breakthrough. Brent intraday crash to $97.76 suggests partial Hormuz easing (back-channel) \u2014 watch for confirmation in Friday pre-open.",
+    "ceasefire_expiry": "2026-04-21T00:00:00",
+    "ceasefire_status_note": "Ceasefire technically extended Apr 22 AM by Trump. Iran seized 2 ships in Hormuz Apr 22 PM after extension. Intraday Apr 23 Brent crash suggests partial easing not reflected in headlines yet."
   },
   "stocks_to_watch": [
     {
       "stock": "INFOSYS",
-      "reason": "Q4FY26 results day 2026-04-23. M013 applies. Watch FY27 guidance. SELL_ON_EARNINGS_NEWS_IT pattern. Key: management tone on US IT spending."
+      "reason": "Q4 result (+20.87% YoY profit beat) but FY27 guidance 1.5-3.5% CC in-line. Watch for overnight US ADR reaction and Friday opening \u2014 M013 suggests sell-on-news persists. Whether Infosys holds Thursday low is key IT tape read."
     },
     {
       "stock": "HCLTECH",
-      "reason": "Results post-market April 22 \u2014 impact on gap for April 23. M013. Watch for IT sector read-through."
+      "reason": "Post-market Apr 22 guidance miss caused -10% move. P028 (target <1430 by Apr 28) now strongly ON TRACK. Monitor for further gap-down Friday if bounce fails."
     },
     {
-      "stock": "ASTRA MICRO",
-      "reason": "P025 closed ABOVE_RANGE (1129.75). P030 thesis (correction to 1010-1060 on ceasefire extension) still live but ceasefire extension not confirmed. Monitor for regime shift."
-    },
-    {
-      "stock": "IREDA",
-      "reason": "Surged +8.99% today (\u20b9140.45). Strong renewable energy momentum. P (no open prediction) \u2014 note for potential P031."
+      "stock": "NIFTY BANK",
+      "reason": "-1.43% today, worst performer. Mean-reversion candidate Friday if oversold bounce materializes. Watch if it leads or lags the bounce."
     },
     {
       "stock": "MRPL",
-      "reason": "P017 target 200-210 by May 8. Closed 187.22 (+3.63% today). Brent at $94.86 is still above breakeven \u2014 watch if MRPL holds gains."
+      "reason": "Brent at $97.76 (down from $101.57 overnight) supports OMC margins. P017 target 200-210 by May 8 still live. Monitor 185-190 for entry signal."
     },
     {
-      "stock": "SWIGGY",
-      "reason": "P001 check April 25 (target <260). Closed 294.7 today. WILL SCORE WRONG. Swiggy outperforming despite Nifty down."
+      "stock": "INDIGO",
+      "reason": "Aviation relief if Brent holds <$100 into weekend. Monitor for breakout from recent consolidation."
+    },
+    {
+      "stock": "ASTRA MICRO",
+      "reason": "P025 closed ABOVE_RANGE at 1129.75. P030 thesis (1010-1060 on ceasefire extension) is live. Watch for consolidation/profit-booking; +101% portfolio gain argues for trim on strength."
+    },
+    {
+      "stock": "SETFGOLD",
+      "reason": "Closed 128.87 (gold -0.50% in USD today). P029 target 123-127 by Apr 26 \u2014 near range already. Monitor Friday close vs target."
+    },
+    {
+      "stock": "IREDA",
+      "reason": "Consolidated after +8.99% Wed surge. Renewable sector momentum still in play \u2014 watch for next leg up or pullback to support."
     },
     {
       "stock": "BRENT CRUDE",
-      "reason": "Critical level \u2014 $94.86 (broke below $95 today). If it holds below $95 for 3+ days, watch for regime shift trigger. India macro sensitive."
+      "reason": "Most important single macro read. $97.76 close. Break below $95 = regime shift to TALKS_REVIVING; back above $100 = collapse confirmation. Overnight binary."
+    },
+    {
+      "stock": "SWIGGY",
+      "reason": "P001 check Apr 25 (target <260). Still at ~294. Will score WRONG."
     }
   ],
-  "prompt_for_morning_brief": "MORNING BRIEF 2026-04-23: (1) Score opening bias \u2014 forecast FLAT_TO_SLIGHT_GAP_DOWN (-0.2%, GIFT ~24,330). Compare against ACTUAL NSE open. (2) Infosys Q4FY26 results day \u2014 M013 applies. Score sell-on-news pattern. (3) Check HCLTECH results (post-market Apr 22) \u2014 IT sector impact. (4) Today 2026-04-22 session result: Nifty -0.81% (24,378.1). PARTIAL_CORRECT. (5) Brent monitoring \u2014 did it close below $94? Regime shift watch. (6) Ceasefire overnight update \u2014 any escalation? (7) P001/P004 Apr 25 pre-assess: SWIGGY 294.7 (vs target <260 = WRONG trend), ASTRA MICRO 1129.75 (vs 850-900 = WRONG). (8) P010 IRFC Apr 29 \u2014 105.82 vs target 85-95 = WRONG trend confirmed.",
+  "prompt_for_morning_brief": "MORNING BRIEF 2026-04-24: (1) Score opening bias \u2014 forecast FLAT_TO_SLIGHT_GAP_UP (+0.15%, GIFT est 24,210). Compare against ACTUAL NSE open. (2) Scan for overnight Hormuz/Iran headlines \u2014 critical binary overnight. Brent $97.76 close is cooling \u2014 did it hold <$100 or re-spike? (3) Today 2026-04-23 session result: Nifty -0.84% to 24,173.05 (second bearish day). Forecast was VOLATILE_SIDEWAYS_SLIGHT_BEARISH (-0.2%) \u2014 graded PARTIAL_CORRECT (in range, direction right, magnitude 4.2x off). (4) M013 confirmed 5th time on Infosys \u2014 IT sells the news regardless of earnings beat. (5) Oversold bounce base case for Friday; weekend positioning skews mildly positive; BankNifty -1.43% leaves room for mean-reversion.",
   "key_events_this_week": [
     {
       "date": "2026-04-22",
@@ -150,39 +178,53 @@
   },
   "scoring_queue": [
     {
-      "pred_id": "P025",
-      "check_date": "2026-04-22",
-      "stock": "ASTRA MICRO",
-      "target": "1050-1100",
-      "expected": "ABOVE_RANGE or RIGHT depending on ceasefire outcome"
-    },
-    {
-      "pred_id": "P026",
-      "check_date": "2026-04-22",
-      "stock": "IRFC",
-      "target": "92-96",
-      "expected": "WRONG"
-    },
-    {
       "pred_id": "P001",
       "check_date": "2026-04-25",
       "stock": "SWIGGY",
       "target": "<260",
-      "expected": "WRONG"
+      "expected": "WRONG (closed in ~290s)"
     },
     {
       "pred_id": "P004",
       "check_date": "2026-04-25",
       "stock": "ASTRA MICRO",
       "target": "850-900",
-      "expected": "WRONG"
+      "expected": "WRONG (closed ~1,100+)"
+    },
+    {
+      "pred_id": "P027",
+      "check_date": "2026-04-25",
+      "stock": "NIFTY",
+      "target": "24600-25000",
+      "expected": "WRONG (Nifty 24,173 after 2-day selloff)"
+    },
+    {
+      "pred_id": "P029",
+      "check_date": "2026-04-26",
+      "stock": "SETFGOLD",
+      "target": "123-127",
+      "expected": "On the edge \u2014 closed 128.87, needs mild decline"
+    },
+    {
+      "pred_id": "P028",
+      "check_date": "2026-04-28",
+      "stock": "HCLTECH",
+      "target": "<1430",
+      "expected": "ON TRACK (-10% on Apr 22 guidance miss)"
     },
     {
       "pred_id": "P010",
       "check_date": "2026-04-29",
       "stock": "IRFC",
       "target": "85-95 range",
-      "expected": "WRONG"
+      "expected": "WRONG (103+ range)"
+    },
+    {
+      "pred_id": "P030",
+      "check_date": "2026-04-30",
+      "stock": "ASTRA MICRO",
+      "target": "1010-1060",
+      "expected": "Tracking (above range, consolidation underway)"
     }
   ],
   "opening_bias_actual": {
@@ -208,57 +250,57 @@
     "validation_required": false
   },
   "tomorrow_forecast": {
-    "date": "2026-04-23",
+    "date": "2026-04-24",
     "opening_bias": {
-      "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
-      "gap_pct_estimate": -0.2,
-      "gift_nifty_estimate": 24330,
+      "direction": "FLAT_TO_SLIGHT_GAP_UP",
+      "gap_pct_estimate": 0.15,
+      "gift_nifty_estimate": 24210,
       "key_drivers": [
-        "Brent cooled to $94.86 (-3.68%) \u2014 relative positive vs prior $98+ but still elevated",
-        "Infosys Q4FY26 results day (April 23) \u2014 M013 applies, IT sector sentiment dominates",
-        "Ceasefire status still uncertain \u2014 overnight geopolitical headlines key",
-        "HCLTECH Q4 results post-market April 22 \u2014 overnight impact on IT"
+        "Brent cooled sharply intraday to $97.76 (-4.07%) \u2014 constructive signal after two-day selloff",
+        "Oversold technical conditions after cumulative -1.65% over Apr 22-23; Friday positioning typically sees short-covering",
+        "Infosys result now behind (risk resolved); IT sector digestion rather than fresh drag expected",
+        "Hormuz de-escalation intraday signals (Brent crash) may continue overnight",
+        "BankNifty -1.43% sharp drop suggests positioning reset already under way \u2014 reversal candidates for Friday",
+        "Weekend risk: any fresh Hormuz escalation could flip sentiment negative; currently skew is mildly positive"
       ],
       "confidence": 2,
-      "generated_at": "eod_wrap_2026-04-22"
+      "generated_at": "eod_wrap_2026-04-23"
     },
     "session_direction": {
-      "direction": "VOLATILE_SIDEWAYS_SLIGHT_BEARISH",
-      "change_pct_estimate": -0.2,
-      "range_low": 24100,
-      "range_high": 24580,
-      "key_assumption": "Infosys Q4FY26 results post-market Apr 22 / AM Apr 23 dominate IT sector. M013 applies \u2014 SELL_ON_EARNINGS_NEWS_IT likely. Brent at $94.86 is constructive but needs <$90 for regime relief. Ceasefire status binary overnight. Defense likely consolidates after surge. Key: whether Brent holds below $95 or re-spikes.",
+      "direction": "VOLATILE_SIDEWAYS_MILD_BULLISH",
+      "change_pct_estimate": 0.3,
+      "range_low": 24000,
+      "range_high": 24450,
+      "key_assumption": "Technical oversold bounce is base case after two-day -1.65% selloff. Brent at $97.76 is constructive if it holds below $100 overnight. Friday positioning typically sees short-covering into weekend; however, weekend event risk on Hormuz keeps bounce muted. IT sector has absorbed the Infosys/HCLTECH shock \u2014 no fresh negative catalyst expected. Defense likely consolidates. Banking could lead a mean-reversion bounce after -1.43% drop today. Key risk: overnight Hormuz re-escalation spikes Brent back above $100.",
       "confidence": 2,
-      "generated_at": "eod_wrap_2026-04-22",
-      "regime": "GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_COLLAPSE",
-      "brent_forecast": "$92-98 \u2014 cooling trend if no Hormuz re-escalation",
+      "generated_at": "eod_wrap_2026-04-23",
+      "regime": "GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_UNCERTAIN_HORMUZ_BINARY",
+      "brent_forecast": "$94-100 \u2014 continued cooling if no fresh Hormuz escalation; re-spike above $100 remains binary risk",
       "key_risks": [
-        "Infosys Q4 miss or weak FY27 guidance \u2014 IT selloff",
-        "Overnight ceasefire collapse news \u2014 Brent re-spikes above $100",
-        "HCLTECH results negative surprise"
+        "Overnight Hormuz re-escalation (ship seizure / IRGC action) \u2014 Brent spikes >$100, Nifty gaps down -0.5% to -1%",
+        "Weekend event risk drives risk-off positioning \u2014 bounce capped or reverses in afternoon",
+        "FII net selling continuation \u2014 2-day cumulative outflow overhangs",
+        "Fresh IT sector news (US economic data, earnings from peers) extends the drag"
+      ],
+      "key_opportunities": [
+        "Oversold bounce breadth \u2014 mid/smallcap reversal if Brent holds <$100",
+        "BankNifty mean-reversion \u2014 after -1.43%, positioning reset creates buy-the-dip opportunity if risk-off eases",
+        "OMC/Aviation relief trade if Brent prints <$95 intraday (MRPL, BPCL, INDIGO)",
+        "Gold/silver dip-buy if haven trade re-enters on geopolitical noise (SETFGOLD near P029 range 123-127)"
       ]
     }
   },
   "session_direction_accuracy_today": {
     "grade": "PARTIAL_CORRECT",
     "direction_correct": true,
-    "in_range": false,
-    "note": "Forecast BEARISH_VOLATILE range 23900-24350. Actual -0.81% close 24378.1. Direction right, 28 pts above range top due to Brent surprise ($94.86 vs $95+ floor)."
+    "in_range": true,
+    "magnitude_off": true,
+    "note": "Forecast VOLATILE_SIDEWAYS_SLIGHT_BEARISH (-0.2%, range 24,100-24,580). Actual -0.84% close 24,173.05. Direction correct, in range, Brent correct \u2014 but magnitude 4.2x off. HCLTECH post-market -10% and Infosys sell-on-news (M013 5th confirmation) drove deeper decline."
   },
-  "predictions_scored_today": [
-    {
-      "pred_id": "P025",
-      "outcome": "ABOVE_RANGE",
-      "stock": "ASTRA MICRO",
-      "price": 1129.75,
-      "target": "1050-1100"
-    },
-    {
-      "pred_id": "P026",
-      "outcome": "WRONG",
-      "stock": "IRFC",
-      "price": 105.82,
-      "target": "92-96"
-    }
-  ]
+  "predictions_scored_today": [],
+  "portfolio_snapshot": {
+    "as_of": "2026-04-23",
+    "note": "Estimated values pending mark-to-market. Two-day bearish sequence: Nifty Apr 22 -0.81%, Apr 23 -0.84% (-1.65% cumulative). Defense consolidated after Wed surge; IT under pressure; financials sharp drop. Brent cooling to $97.76 supportive for OMC/aviation exposures.",
+    "session_swing": "Nifty -205 pts. BankNifty -819 pts (-1.43%). Sensex -852 pts (-1.09%). Breadth negative; mid/smallcap mixed."
+  }
 }

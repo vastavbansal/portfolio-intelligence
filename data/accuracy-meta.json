@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-22T17:30:00",
+  "last_updated": "2026-04-23T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 30,
@@ -11,7 +11,7 @@
       "wrong": 11,
       "partial": 2,
       "accuracy_pct": 18.8,
-      "note": "April 22 EOD: P025 ASTRA MICRO ABOVE_RANGE (1129.75 vs 1050-1100), P026 IRFC WRONG (105.82 vs 92-96). Running totals: 3 RIGHT, 2 PARTIAL, 11 WRONG from 16 scored. Accuracy 18.8%. PSU_DII_FILTER proposed (1 occurrence, 1 more needed)."
+      "note": "April 22 EOD: P025 ASTRA MICRO ABOVE_RANGE (1129.75 vs 1050-1100), P026 IRFC WRONG (105.82 vs 92-96). Running totals: 3 RIGHT, 2 PARTIAL, 11 WRONG from 16 scored. Accuracy 18.8%. PSU_DII_FILTER proposed (1 occurrence, 1 more needed). | Apr 23 EOD: no predictions resolved (none had check_date 2026-04-23). Session direction PARTIAL_CORRECT. M013 confirmed on Infosys (5th occurrence pattern-wise)."
     },
     "by_horizon": {
       "1D": {
@@ -396,12 +396,12 @@
     }
   ],
   "next_session_accuracy": {
-    "total_sessions": 8,
-    "direction_correct": 3,
-    "partial_correct": 5,
+    "total_sessions": 9,
+    "direction_correct": 0,
+    "partial_correct": 6,
     "within_range": 1,
     "accuracy_pct": 100.0,
-    "last_updated": "2026-04-16-eod",
+    "last_updated": "2026-04-23-eod",
     "session_log": [
       {
         "date": "2026-04-07",
@@ -460,6 +460,14 @@
         "grade": "PARTIAL_CORRECT",
         "root_cause": "Intraday reversal \u2014 opened strong but profit-booking + Iran counter-threats (Gulf/Red Sea shipping) + Friday risk-off erased gains. Heavyweight banks dragged (HDFC -1.78%). Close was within range but direction wrong.",
         "notes": "Opening bias CORRECT (gap-down). Session direction PARTIAL (in range, direction wrong)."
+      },
+      {
+        "date": "2026-04-23",
+        "forecast": "VOLATILE_SIDEWAYS_SLIGHT_BEARISH (-0.2%, range 24,100-24,580)",
+        "actual": "DOWN -0.84% (close 24,173.05)",
+        "grade": "PARTIAL_CORRECT",
+        "root_cause": null,
+        "notes": "Direction correct (bearish), in range (24,173 within 24,100-24,580), Brent in forecast range ($97.76 in $92-98). Magnitude ~4.2x off (-0.84% vs -0.2%) \u2014 HCLTECH post-market -10% guidance miss and Infosys FY27 CC in-line guidance (1.5-3.5%) triggered SELL_ON_EARNINGS_NEWS_IT (M013 5th confirmation). BankNifty -1.43% signalled broad risk-off in financials."
       }
     ]
   },
