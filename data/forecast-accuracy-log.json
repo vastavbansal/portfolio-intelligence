@@ -1000,7 +1000,28 @@
         "confidence": 2,
         "generated_at": "eod_wrap_2026-04-22"
       },
-      "opening_bias_actual": null,
+      "opening_bias_actual": {
+        "nifty_open": 24391.5,
+        "nifty_prev_close": 24378.1,
+        "gift_nifty_preopen": 24433,
+        "gift_nifty_note": "GIFT Nifty at 02:24 IST showed ~24,433 (prev close 24,364), signalling a modest positive bias overnight \u2014 ~100pts above EOD forecast (24,330)",
+        "gap_pct": 0.055,
+        "direction": "FLAT_SLIGHT_GAP_UP",
+        "direction_correct": false,
+        "magnitude_within_50pct": false,
+        "grade": "PARTIAL",
+        "scoring_note": "Forecast FLAT_TO_SLIGHT_GAP_DOWN (-0.2%). Actual gap +0.055% (24391.5 vs prev close 24378.1). The FLAT portion of the forecast was CORRECT \u2014 magnitude is tiny (<0.1%). The SLIGHT_GAP_DOWN directional bias was WRONG \u2014 market opened slightly positive. Overnight: Trump extended ceasefire (positive) but Iran seized 2 ships in Hormuz (negative) \u2014 net tiny positive. Brent re-spiked +3.14% to $101.57, negating some tailwind. Graded PARTIAL: regime (flat) correct, directional tilt flipped, magnitude within noise band.",
+        "overnight_delta_vs_forecast": {
+          "ceasefire_status": "EXTENDED (vs EOD assumption of uncertain/collapse) \u2014 POSITIVE",
+          "hormuz_status": "Iran seized 2 ships after extension announcement \u2014 NEGATIVE",
+          "brent_usd": 101.57,
+          "brent_vs_eod": "+$6.71 vs EOD ($94.86) \u2014 regime DID NOT shift to TALKS_REVIVING; Brent back above $100",
+          "net_effect": "Crosscurrents cancelled out; market opened flat/+0.05%"
+        },
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": false
+      },
       "session_direction": {
         "direction": "VOLATILE_SIDEWAYS_SLIGHT_BEARISH",
         "change_pct_estimate": -0.2,
@@ -1021,12 +1042,20 @@
           "Infosys beat + strong guidance: could lift IT, counter M013 for 1 session",
           "Brent continuing to fall below $92: OMC relief (MRPL, BPCL, IOC) + Aviation (INDIGO)",
           "Renewable energy names (IREDA, ACMESOLAR, SUZLON) if global risk-off eases"
-        ]
+        ],
+        "intraday_observed_so_far": {
+          "low": 24241.25,
+          "high": 24480.65,
+          "low_pct": -0.56,
+          "high_pct": 0.42,
+          "observed_at_ist": "~11:45 IST",
+          "note": "Intraday range so far well within forecast 24,100-24,580. Infosys results at 15:45 IST will drive final hour."
+        }
       },
       "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 EOD wrap 2026-04-23"
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-23"
       },
       "actual": {
         "nifty_open": null,
