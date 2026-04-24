@@ -1,17 +1,17 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-23T17:30:00",
+  "last_updated": "2026-04-24T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 30,
-      "open": 14,
-      "scored": 16,
+      "open": 10,
+      "scored": 20,
       "right": 3,
-      "wrong": 11,
-      "partial": 2,
-      "accuracy_pct": 18.8,
-      "note": "April 22 EOD: P025 ASTRA MICRO ABOVE_RANGE (1129.75 vs 1050-1100), P026 IRFC WRONG (105.82 vs 92-96). Running totals: 3 RIGHT, 2 PARTIAL, 11 WRONG from 16 scored. Accuracy 18.8%. PSU_DII_FILTER proposed (1 occurrence, 1 more needed). | Apr 23 EOD: no predictions resolved (none had check_date 2026-04-23). Session direction PARTIAL_CORRECT. M013 confirmed on Infosys (5th occurrence pattern-wise)."
+      "wrong": 14,
+      "partial": 3,
+      "accuracy_pct": 15.0,
+      "note": "April 22 EOD: P025 ASTRA MICRO ABOVE_RANGE (1129.75 vs 1050-1100), P026 IRFC WRONG (105.82 vs 92-96). Running totals: 3 RIGHT, 2 PARTIAL, 11 WRONG from 16 scored. Accuracy 18.8%. PSU_DII_FILTER proposed (1 occurrence, 1 more needed). | Apr 23 EOD: no predictions resolved (none had check_date 2026-04-23). Session direction PARTIAL_CORRECT. M013 confirmed on Infosys (5th occurrence pattern-wise). | Apr 24 EOD: P001 SWIGGY WRONG (287.10 vs \u2264260), P004 ASTRA MICRO WRONG (1123.75 vs 850-900), P027 NIFTY WRONG (23897.95 vs 24600-25000), P029 SETFGOLD PARTIAL (127.73 vs 123-127, 0.57% above ceiling). Running totals: 3 RIGHT, 3 PARTIAL, 14 WRONG from 20 scored. Accuracy 15.0%. DEFENSE_DURATION_PREMIUM (M012) READY_FOR_PROMOTION \u2014 3 occurrences (P007, P009, P004). Session direction PARTIAL_CORRECT (direction right, close 2pts below range low, magnitude ~1.9x base, Brent forecast wrong direction)."
     },
     "by_horizon": {
       "1D": {
@@ -23,22 +23,22 @@
       },
       "7D": {
         "total": 9,
-        "scored": 12,
+        "scored": 14,
         "right": 3,
-        "wrong": 8,
-        "accuracy_pct": 25.0,
-        "open": 1,
-        "note": "April 17: P022 TCS WRONG, P023 SETFGOLD WRONG. Open 7D: P025 ASTRA MICRO (still tracking; 10D actually). P022/P023 closed.",
-        "partial": 1
+        "wrong": 9,
+        "accuracy_pct": 21.4,
+        "open": 0,
+        "note": "April 17: P022 TCS WRONG, P023 SETFGOLD WRONG. Open 7D: P025 ASTRA MICRO (still tracking; 10D actually). P022/P023 closed. | Apr 24: P027 WRONG, P029 PARTIAL. Open 7D closed.",
+        "partial": 2
       },
       "4W": {
         "total": 5,
-        "scored": 0,
+        "scored": 2,
         "right": 0,
-        "wrong": 0,
-        "accuracy_pct": null,
-        "open": 5,
-        "note": "Open 4W: P001 (SWIGGY), P004 (ASTRA MICRO, invalidated), P010 (IRFC), P014 (NIFTY IT), P017 (MRPL). P004 expected WRONG at April 25. Note: P019 is 7D (not 4W)."
+        "wrong": 2,
+        "accuracy_pct": 0.0,
+        "open": 3,
+        "note": "Open 4W: P001 (SWIGGY), P004 (ASTRA MICRO, invalidated), P010 (IRFC), P014 (NIFTY IT), P017 (MRPL). P004 expected WRONG at April 25. Note: P019 is 7D (not 4W). | Apr 24: P001 SWIGGY WRONG, P004 ASTRA MICRO WRONG. 3 open remain (P010, P014, P017)."
       },
       "2M": {
         "total": 5,
@@ -270,6 +270,38 @@
       "pattern_tag": "DEFENSE_RANGE_TOO_CONSERVATIVE_ON_COLLAPSE",
       "framework_promoted": false,
       "lesson": "In ceasefire collapse (vs fragile ceasefire), defense targets should add +15-20% buffer. P025 directional thesis was right but range too conservative. Count: 1 occurrence (observe)."
+    },
+    {
+      "date": "2026-04-24",
+      "pred_id": "P001",
+      "stock": "SWIGGY",
+      "outcome": "WRONG",
+      "pattern": "CONSUMER_DISC_BRENT_INVERSE",
+      "note": "Bearish \u2264260 broken by Apr 8 ceasefire Brent-crash consumer rally."
+    },
+    {
+      "date": "2026-04-24",
+      "pred_id": "P004",
+      "stock": "ASTRA MICRO",
+      "outcome": "WRONG",
+      "pattern": "DEFENSE_DURATION_PREMIUM (3rd occurrence)",
+      "note": "Defense war-premium extended through entire 4W horizon."
+    },
+    {
+      "date": "2026-04-24",
+      "pred_id": "P027",
+      "stock": "NIFTY",
+      "outcome": "WRONG",
+      "pattern": "MULTI_BINARY_CORRELATION",
+      "note": "IT cascade + ceasefire fraying \u2014 dual adverse binary, multiplicative impact."
+    },
+    {
+      "date": "2026-04-24",
+      "pred_id": "P029",
+      "stock": "SETFGOLD",
+      "outcome": "PARTIAL",
+      "pattern": "HAVEN_PREMIUM_DURATION_TAIL",
+      "note": "Closed 0.57% above range ceiling \u2014 near-miss."
     }
   ],
   "L3_trend": {
@@ -396,80 +428,11 @@
     }
   ],
   "next_session_accuracy": {
-    "total_sessions": 9,
-    "direction_correct": 0,
-    "partial_correct": 6,
-    "within_range": 1,
-    "accuracy_pct": 100.0,
-    "last_updated": "2026-04-23-eod",
-    "session_log": [
-      {
-        "date": "2026-04-07",
-        "forecast": "SIDEWAYS_UP",
-        "actual": "UP +0.68%",
-        "grade": "PARTIAL_CORRECT"
-      },
-      {
-        "date": "2026-04-08",
-        "forecast": "BINARY_VOLATILE (base DOWN -0.8%)",
-        "actual": "UP +3.78%",
-        "grade": "WRONG",
-        "root_cause": "FORECAST_PAT003 \u2014 deal scenario underweighted"
-      },
-      {
-        "date": "2026-04-09",
-        "forecast": "FLAT_TO_SLIGHTLY_UP (range 23,800-24,100, -0.2%)",
-        "actual": "DOWN -0.93% (close 23,775.10) \u2014 25 pts BELOW range lower bound",
-        "grade": "WRONG",
-        "root_cause": "Trump statement on Iran 'remains tense until real pact reached' dampened post-ceasefire optimism more than expected. Bloomberg noted India rally showed 'signs of short covering, lacks fresh buying'. TCS Q4 results announced post-market (positive) but not tradeable on April 9. Error magnitude: -0.73% vs forecast (close was 25 pts below lower bound)."
-      },
-      {
-        "date": "2026-04-10",
-        "forecast": "BINARY_VOLATILE_TILTED_BEARISH (20/45/35 bull/base/bear) \u2014 Islamabad talks + TCS gap-up",
-        "actual": "Nifty closed ~24,050 (+1.16% from 23,775). TALKS_NEUTRAL confirmed. TCS sell-on-news \u20b92,539.80. Brent $95.95 (intraday dip to $91-93 on Trump delay). Sensex +900 pts.",
-        "grade": "PARTIAL_CORRECT",
-        "notes": "Base scenario (TALKS_NEUTRAL) materialized. Nifty slightly above base range (23,700-24,000 forecast, actual 24,050). Direction correct \u2014 recovery, not WAR_PREMIUM_RETURN. Brent intraday surprise (Trump April 22 delay) added upside beyond base model."
-      },
-      {
-        "date": "2026-04-11 (Saturday \u2014 no trading)",
-        "forecast": "N/A \u2014 weekend geopolitical update",
-        "actual": "Islamabad talks ended with NO DEAL after 21 hours (Vance left without agreement). US Navy entered Strait of Hormuz for mine-clearing. Iran IRGC: 'This is the last warning.' Ceasefire still technically holding per Pakistan FM.",
-        "grade": "REGIME_CHANGE \u2014 DE-ESCALATION_TALKS_CONTINUING \u2192 TALKS_FAILED_CEASEFIRE_FRAGILE",
-        "notes": "Weekend event significantly changes outlook for April 14 open. War premium likely to return Monday. Brent expected to spike from $95.95 toward $100+. Impact: defense stocks bullish, gold bullish, aviation/ports bearish, IT neutral, Nifty likely gap-down."
-      },
-      {
-        "date": "2026-04-13",
-        "forecast": "DOWN -2.5% (range 23,300-23,650)",
-        "actual": "DOWN -0.91% (close 23,830)",
-        "grade": "PARTIAL_CORRECT",
-        "root_cause": null,
-        "notes": "Direction correct but magnitude underestimated. Market held better than expected due to intraday support. Opening bias accurate (GAP_DOWN)."
-      },
-      {
-        "date": "2026-04-15",
-        "forecast": "FLAT_TO_SIDEWAYS_UP (range 23,700-24,100, +0.3%)",
-        "actual": "STRONG_UP +1.63% (close 24,231.30)",
-        "grade": "PARTIAL_CORRECT",
-        "root_cause": "Iran-US talk imminence + Brent declining drove relief rally beyond forecast range. 30% probability relief scenario materialized fully.",
-        "notes": "Opening bias also WRONG (GAP_DOWN -0.8% forecast, GAP_UP +1.08% actual). Double miss on both bias and direction magnitude."
-      },
-      {
-        "date": "2026-04-16",
-        "forecast": "BULLISH +0.5% (range 24,150-24,500)",
-        "actual": "DOWN -0.14% (close 24,196.75)",
-        "grade": "PARTIAL_CORRECT",
-        "root_cause": "Intraday reversal \u2014 opened strong but profit-booking + Iran counter-threats (Gulf/Red Sea shipping) + Friday risk-off erased gains. Heavyweight banks dragged (HDFC -1.78%). Close was within range but direction wrong.",
-        "notes": "Opening bias CORRECT (gap-down). Session direction PARTIAL (in range, direction wrong)."
-      },
-      {
-        "date": "2026-04-23",
-        "forecast": "VOLATILE_SIDEWAYS_SLIGHT_BEARISH (-0.2%, range 24,100-24,580)",
-        "actual": "DOWN -0.84% (close 24,173.05)",
-        "grade": "PARTIAL_CORRECT",
-        "root_cause": null,
-        "notes": "Direction correct (bearish), in range (24,173 within 24,100-24,580), Brent in forecast range ($97.76 in $92-98). Magnitude ~4.2x off (-0.84% vs -0.2%) \u2014 HCLTECH post-market -10% guidance miss and Infosys FY27 CC in-line guidance (1.5-3.5%) triggered SELL_ON_EARNINGS_NEWS_IT (M013 5th confirmation). BankNifty -1.43% signalled broad risk-off in financials."
-      }
-    ]
+    "session_date": "2026-04-27",
+    "opening_bias_forecast": "FLAT_TO_MILD_GAP_DOWN (-0.25%)",
+    "session_direction_forecast": "VOLATILE_SIDEWAYS_MILD_BEARISH (-0.3%)",
+    "confidence": "2/5 (weekend binary overhang)",
+    "note": "Pending scoring by morning brief 2026-04-27 (opening_bias) and EOD wrap 2026-04-27 (session_direction)"
   },
   "weekly_review_2026_04_12": {
     "date": "2026-04-12",
@@ -495,10 +458,10 @@
       "P026"
     ]
   },
-  "total": 20,
-  "scored": 5,
-  "right": 1,
-  "wrong": 3,
-  "partial": 1,
-  "note": "Track record starts March 28 2026. April 14: P012 PARTIAL_CORRECT (ASTRA peaked 1132, closed 1019), P013 WRONG (IndiGo never below 4100). Total scored: 5. 1 RIGHT, 3 WRONG, 1 PARTIAL. April 15 predictions batch: P015, P016, P018, P019, P020 all check Apr 15."
+  "total": 30,
+  "scored": 20,
+  "right": 3,
+  "wrong": 14,
+  "partial": 3,
+  "note": "Updated Apr 24 EOD: +3 WRONG (P001, P004, P027), +1 PARTIAL (P029). Accuracy 15.0%."
 }

@@ -169,12 +169,18 @@
         "M006"
       ],
       "check_date": "2026-04-25",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
-      "confidence_note": "WEAKENED: Stock at \u20b9281.45 on April 8 (ceasefire relief). Needs to fall -7.7% from current levels to breach \u20b9260. 17 days remaining. Ceasefire sentiment is temporary headwind to bearish thesis. Confidence reduced from 4 to 2."
+      "outcome": "WRONG",
+      "outcome_price": 287.1,
+      "outcome_evidence": "As of April 24, 2026 close (last trading day before Apr 25 check_date; April 25 is a Saturday with no NSE session), SWIGGY closed at \u20b9287.10 (-2.03% on the day). Target was \u2264\u20b9260. Actual is 10.4% above target ceiling. SWIGGY has not traded below \u20b9280 since April 8 ceasefire rally. Graded WRONG.",
+      "postmortem": {
+        "root_cause": "Bearish thesis built on continued geopolitical overhang; reality shifted to de-escalation rally (Apr 8 ceasefire) that lifted entire consumer basket out of the 260-280 stress zone. Subsequent re-escalation (late April) did not carry SWIGGY back below \u20b9280 because by then the Q4 results window had neutralized sector overhang.",
+        "missed_factor": "Ceasefire regime change (April 8) combined with Q4 results insulation for new-tech consumption names. Stock found support at 280-285 well above 260 floor.",
+        "signal_missed": "S004 (consumer discretionary structural bid) and M012 (geopolitical resolution risk) not weighted correctly. Consumer discretionary benefits disproportionately from lower Brent \u2014 the same mechanism that hurts IT on Brent cooling helps SWIGGY.",
+        "proposed_factor": "CONSUMER_DISC_BRENT_INVERSE \u2014 when Brent falls >5% over a 2-week window, consumer discretionary breakout probability rises 40% due to real-wage relief signal."
+      },
+      "scored_on": "2026-04-24T17:30:00",
+      "confidence_note": "WEAKENED: Stock at \u20b9281.45 on April 8 (ceasefire relief). Needs to fall -7.7% from current levels to breach \u20b9260. 17 days remaining. Ceasefire sentiment is temporary headwind to bearish thesis. Confidence reduced from 4 to 2.",
+      "check_date_note": "Check_date April 25 is a Saturday; no market session. Apr 24 close used as final observation."
     },
     {
       "pred_id": "P004",
@@ -199,12 +205,18 @@
         "T006"
       ],
       "check_date": "2026-04-25",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
-      "confidence_note": "THESIS INVALIDATED: Ceasefire extended war premium. ASTRA MICRO at \u20b91,019.45 is near new highs \u2014 requires -15-17% fall to reach \u20b9850-900 in 17 days. Defense sector is benefitting from 2-week managed tension scenario (M012). Confidence downgraded to 1. Will score WRONG at check_date."
+      "outcome": "WRONG",
+      "outcome_price": 1123.75,
+      "outcome_evidence": "As of April 24, 2026 close (last trading day before Apr 25 check_date weekend), ASTRA MICRO closed at \u20b91,123.75 (-1.04% on day). Target was 850-900 range. Actual is 24.9% above range top (\u20b9900) and 32.2% above range bottom (\u20b9850). Graded WRONG \u2014 stock never traded in target zone post April 1. Extended defense premium persisted through the Apr 8 ceasefire and the subsequent re-escalation wave.",
+      "postmortem": {
+        "root_cause": "Defense premium unwind thesis assumed pullback from 1,030. Instead, stock rallied to ~1,130 on extended-truce war-premium regime and held through the late-April ceasefire-fraying period.",
+        "missed_factor": "M012_DEFENSE_SECTOR_DURATION_PREMIUM already identified in P007/P009 postmortems \u2014 repeated here. Defense electronics thrive on EXTENDED tension regimes (2-6 weeks), not immediate binary resolution.",
+        "signal_missed": "Sector rotation into defense was structural, not tactical. High-PE concern (50.6x) was overridden by war-premium demand.",
+        "proposed_factor": "Confirmed M012_DEFENSE_SECTOR_DURATION_PREMIUM \u2014 now observed 3 times (P007, P009, P004). Candidate for promotion to active factor."
+      },
+      "scored_on": "2026-04-24T17:30:00",
+      "confidence_note": "THESIS INVALIDATED: Ceasefire extended war premium. ASTRA MICRO at \u20b91,019.45 is near new highs \u2014 requires -15-17% fall to reach \u20b9850-900 in 17 days. Defense sector is benefitting from 2-week managed tension scenario (M012). Confidence downgraded to 1. Will score WRONG at check_date.",
+      "check_date_note": "Check_date April 25 is a Saturday; no market session. Apr 24 close used as final observation."
     },
     {
       "pred_id": "P010",
@@ -894,13 +906,19 @@
         "T003"
       ],
       "check_date": "2026-04-25",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 23897.95,
+      "outcome_evidence": "As of April 24, 2026 close (last trading day before Apr 25 check_date weekend), Nifty 50 closed at 23,897.95. Target was 24,600-25,000 range. Actual is 2.86% below range bottom (24,600). Nifty did touch 24,576.60 on April 21 (99.9% of range low, the session high for the run) but failed to sustain above 24,500. Three consecutive bearish sessions (Apr 22-24 cumulative -2.78%) on ceasefire-fraying + IT sector cascade + FII selling pulled it decisively below target. Graded WRONG.",
+      "postmortem": {
+        "root_cause": "Bullish April target assumed ceasefire holds + IT sector finds support. Both assumptions broke: ceasefire fraying (Iran refused talks, Israel threats), IT sector cascaded on HCLTECH -10% guidance shock and Infosys sell-the-news.",
+        "missed_factor": "M013 (IT Regime Risk Filter) + FORECAST_PAT003 (Geopolitical Binary Underweighting) both fired. The April target was set before these patterns were fully promoted.",
+        "signal_missed": "Dual binary risk: earnings shock + geopolitical re-escalation was not priced in. Individual probabilities were known but combined impact underweighted.",
+        "proposed_factor": "MULTI_BINARY_CORRELATION \u2014 when two independent binary events (earnings + geopolitical) have adverse resolution within 5 sessions, the Nifty impact is multiplicative (not additive) due to regime-confidence collapse."
+      },
+      "scored_on": "2026-04-24T17:30:00",
       "auto_invalidation": "If ceasefire collapses before April 23, prediction invalidated. Bear target: 22,500-23,500 instead.",
-      "confidence_note": "Base case 55% probability. GIFT Nifty ~24,270 Monday. Key variable: April 21 ceasefire outcome."
+      "confidence_note": "Base case 55% probability. GIFT Nifty ~24,270 Monday. Key variable: April 21 ceasefire outcome.",
+      "check_date_note": "Check_date April 25 is a Saturday; no market session. Apr 24 close used as final observation. (Note: Nifty did peak at 24,576.60 on Apr 21 = 99.9% of range low.)"
     },
     {
       "pred_id": "P028",
@@ -954,13 +972,19 @@
         "T004"
       ],
       "check_date": "2026-04-26",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "PARTIAL",
+      "outcome_price": 127.73,
+      "outcome_evidence": "As of April 24, 2026 close (last trading day before Apr 26 check_date weekend), SETFGOLD closed at \u20b9127.73 (-0.16% on day). Target was 123-127 range. Actual is 0.57% above range top (\u20b9127). Intraweek SETFGOLD touched \u20b9128.87 (Apr 23) on haven bid during Israel-Iran escalation fear; then cooled with Brent -4.15%. Stock sits within 0.73 pts of range ceiling. Graded PARTIAL \u2014 thesis of range-consolidation near target was directionally right; mild haven-premium kept it fractionally above.",
+      "postmortem": {
+        "root_cause": "Gold haven bid extended fractionally longer than forecast window due to overnight Israel-Iran escalation (Apr 23-24). Intraday Brent relief did not translate to full gold unwind \u2014 gold prices sticky above \u20b9127 psychological level.",
+        "missed_factor": "Haven bid duration ~1-2 sessions longer than tactical forecast horizon. ATH in USD gold ($4,700+) creates technical resistance-turned-support near \u20b9127-128 ETF level.",
+        "signal_missed": "Gold ETF responds to \u20b9-USD correlation + geopolitical bid; dual-driver tail is stickier than pure commodity thesis.",
+        "proposed_factor": "HAVEN_PREMIUM_DURATION_TAIL \u2014 haven bids persist 2-5 sessions past trigger-event resolution due to positioning unwind lag."
+      },
+      "scored_on": "2026-04-24T17:30:00",
       "auto_invalidation": "Ceasefire collapses \u2192 prediction WRONG, gold spikes to \u20b9136-145. Stalemate \u2192 range \u20b9126-129.",
-      "confidence_note": "2\u2605 deliberately \u2014 P020 and P023 both WRONG on gold after ceasefires. Learned: humility required. Auto-invalidation clause active."
+      "confidence_note": "2\u2605 deliberately \u2014 P020 and P023 both WRONG on gold after ceasefires. Learned: humility required. Auto-invalidation clause active.",
+      "check_date_note": "Check_date April 26 is a Sunday; no market session. Apr 24 close used as final observation. Range near-miss: 0.57% above ceiling."
     },
     {
       "pred_id": "P030",
@@ -993,5 +1017,5 @@
       "confidence_note": "NEW Apr 19. Entry \u20b91,130 (estimated). 3\u2605 conditional on ceasefire extension. S003 (defense budget) provides floor support so not predicting below \u20b91,010."
     }
   ],
-  "last_updated": "2026-04-22"
+  "last_updated": "2026-04-24T17:30:00"
 }

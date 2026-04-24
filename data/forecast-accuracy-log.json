@@ -1172,16 +1172,45 @@
         ]
       },
       "session_direction_accuracy": {
-        "direction_correct": null,
-        "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-24"
+        "direction_correct": true,
+        "direction_note": "Forecast BEARISH_VOLATILE (morning-brief revision, -0.6%, range 23,900-24,220). Actual: Nifty closed 23,897.95 (-1.14% from 24,173.05). Direction CORRECT (bearish confirmed). Close 23,897.95 is 2 pts BELOW range low (23,900) \u2014 essentially AT the forecast range edge. Magnitude ~1.9x stronger than -0.6% base case; actual fell into the ESCALATION_SPIRAL scenario range (23,850-23,950, 15% prob). NOTE: Escalation scenario trigger (Brent >$110) did NOT fire \u2014 Brent actually cooled -4.15% intraday to $100.71. Driver was IT sector cascade (INFY -6.93%, HCLTECH -4.02% follow-through) + weekend risk-off positioning, not geopolitical re-escalation.",
+        "in_range": false,
+        "range_note": "Close 23,897.95 vs forecast range 23,900-24,220. 2.05 pts below range low \u2014 ESSENTIALLY AT edge. Counts as marginal range breach (within 0.01%).",
+        "magnitude_correct": false,
+        "magnitude_note": "Forecast -0.6% base, scenarios spanned -0.3% to -1.3%. Actual -1.14% falls in escalation-spiral scenario but exceeded base case by ~0.54pts.",
+        "brent_correct": false,
+        "brent_note": "Forecast Brent $103-108 sustained. Actual $100.71 (-4.15% intraday). Brent forecast WRONG on direction \u2014 cooled rather than stayed elevated. Yet Nifty still sold off \u2014 key insight: session was dominated by IT sector cascade, not crude macro. FORECAST_PAT007 candidate: idiosyncratic sector drag overrides macro thesis.",
+        "grade": "PARTIAL_CORRECT",
+        "scoring_note": "Direction CORRECT (bearish). Close marginally below range low (2 pts, 0.01%). Magnitude ~1.9x base case but within scenario envelope. Brent forecast WRONG on direction. Overall PARTIAL_CORRECT \u2014 the session-direction call held but macro driver attribution was off.",
+        "scenarios_hit": "ESCALATION_SPIRAL range (23,850-23,950) \u2014 close 23,897.95 sits squarely inside. Scenario was assigned 15% prob; reality triggered via IT cascade rather than Brent spike (different mechanism, same price path)."
       },
       "actual": {
-        "nifty_open": null,
-        "nifty_close": null,
-        "nifty_change_pct": null
+        "nifty_open": 24115.55,
+        "nifty_close": 23897.95,
+        "nifty_change": -275.1,
+        "nifty_change_pct": -1.14,
+        "nifty_prev_close": 24173.05,
+        "banknifty_close": 56089.75,
+        "banknifty_change_pct": -0.38,
+        "sensex_close": 76664.21,
+        "sensex_change_pct": -1.29,
+        "brent_close": 100.71,
+        "brent_change_pct": -4.15,
+        "gold_close_usd": 4691.6,
+        "silver_close_usd": 74.69,
+        "infy_close": 1154.6,
+        "infy_change_pct": -6.93,
+        "hcltech_close": 1203.2,
+        "hcltech_change_pct": -4.02,
+        "session_theme": "Third consecutive bearish session. IT sector cascade dominated (INFY -6.93%, HCLTECH -4.02%) after post-market HCLTECH guidance shock + Infosys sell-the-news. Brent cooled -4.15% to $100.71 (below morning forecast floor) but Nifty ignored macro relief and followed idiosyncratic sector drag. Defense basket mixed (COCHINSHIP +4.51% standout, MAZDOCK -0.50%, ASTRA MICRO -1.04%). Weekend risk-off positioning into Israel-Iran binary. Cumulative 3-day decline: Apr 22-24 Nifty -2.78%."
       },
-      "lessons": [],
+      "lessons": [
+        "IT sector cascade can override macro (Brent cooling) thesis when earnings-driven drag is active \u2014 INFY -6.93% + HCLTECH -4.02% drove Nifty below 23,900 despite Brent -4.15%.",
+        "FORECAST_PAT007 candidate: when multiple large-cap sector-leader stocks have recent earnings shock (HCLTECH Apr 22 -10%, INFY Apr 23 -3.28%), follow-through selling continues for 2-3 sessions regardless of broader regime.",
+        "ESCALATION_SPIRAL scenario (15%) nailed the price path but via wrong mechanism (IT cascade, not Brent spike) \u2014 a reminder that probability-weighted scenarios should list multiple triggers per price outcome, not just one.",
+        "COCHINSHIP +4.51% was the defense standout (not ASTRA MICRO as modelled) \u2014 P030 target 1,010-1,060 still well off (actual 1,123.75), but defense basket rotation within the group more meaningful than the headline ticker.",
+        "Friday \"sell into weekend\" hypothesis confirmed: FII selling extended to 4th day; defensive close just below psychological 24,000 / 23,900 forecast floor primes Monday for binary-event-driven open."
+      ],
       "eod_session_direction_for_audit": {
         "direction": "VOLATILE_SIDEWAYS_MILD_BULLISH",
         "change_pct_estimate": 0.3,
@@ -1191,6 +1220,79 @@
         "confidence": 2,
         "note": "Preserved EOD forecast for audit \u2014 morning brief revised to BEARISH_VOLATILE after overnight Brent surge to $105-106 and geopolitical re-escalation."
       }
+    },
+    {
+      "session_date": "2026-04-27",
+      "forecast_generated_at": "2026-04-24",
+      "opening_bias": {
+        "direction": "FLAT_TO_MILD_GAP_DOWN",
+        "gap_pct_estimate": -0.25,
+        "gift_nifty_estimate": 23840,
+        "key_drivers": [
+          "Friday close 23,897.95 (-1.14%) below psychological 24,000 \u2014 pressure persists",
+          "Weekend BINARY event: Israel strike threats vs Iran + Hormuz shipping disruption still active",
+          "Brent closed $100.71 (-4.15% intraday) \u2014 cooled but remains in elevated $100-108 zone. Weekend spike to $108+ on any fresh headline = -0.5% to -1.0% gap down; pullback <$95 = flat to mildly positive open",
+          "FII selling 4th consecutive day (~\u20b93,254 cr Apr 24) \u2014 structural flow overhang",
+          "IT sector: INFY -6.93%, HCLTECH -4.02% Friday. Monday cash market likely to gap down further in IT unless weekend tech guidance improves",
+          "Defense basket firm (COCHINSHIP +4.51%) \u2014 expect further geopolitical premium bid if weekend headlines adverse",
+          "US Fri session + SGX/Nikkei Monday open will shape overnight sentiment \u2014 check GIFT Nifty 06:00 IST Monday"
+        ],
+        "confidence": 2,
+        "rationale_note": "Confidence 2/5 because weekend binary risk (Israel-Iran escalation) can swing open \u00b11% in either direction. Base case leans mildly negative on continued FII outflow + below-psychological close. Any ceasefire re-affirmation overnight could flip to gap-up.",
+        "generated_at": "eod_wrap_2026-04-24"
+      },
+      "opening_bias_actual": null,
+      "session_direction": {
+        "direction": "VOLATILE_SIDEWAYS_MILD_BEARISH",
+        "change_pct_estimate": -0.3,
+        "range_low": 23700,
+        "range_high": 24100,
+        "key_assumption": "Oversold after 3 consecutive bearish sessions (Apr 22-24 cumulative -2.78%). Monday typically sees either continuation-capitulation (breakdown of 23,800-23,900) or mean-reversion bounce (reclaim 24,000). Base case assumes weekend passes without major Israel-Iran strike, Brent holds $98-105, and IT sector stabilizes near lows without fresh negative guidance. Mean-reversion bounce likely intraday but upside capped at 24,100 without a fresh positive catalyst. FII selling 5th day possible; DII support at 23,800 expected. Key binary: weekend geopolitical headlines.",
+        "confidence": 2,
+        "generated_at": "eod_wrap_2026-04-24",
+        "regime": "GEOPOLITICAL_RISK_ELEVATED_OVERSOLD_WEEKEND_BINARY_PENDING",
+        "brent_forecast": "$97-105 \u2014 base case Brent drifts in this band on status-quo weekend. Break <$95 = constructive (gap-up Monday); break >$108 = escalation (gap-down \u22650.7%).",
+        "key_risks": [
+          "Israel strikes Iran over weekend \u2014 Brent to $110+, Monday gap down -1% to -2%",
+          "FII selling accelerates to 5th day; BankNifty breakdown below 55,800 \u2014 credit rotation worsens",
+          "IT sector further negative guidance (TCS/Wipro pre-announcements) \u2014 Nifty IT drops another 2-3%",
+          "Break of 23,800 support triggers algo stops \u2014 23,600 opens up"
+        ],
+        "key_opportunities": [
+          "Weekend passes quietly \u2192 Monday relief rally; short-covering bounce 23,950-24,100",
+          "Brent cooling continues (<$97) \u2192 OMC (MRPL, BPCL) relief + Nifty upside",
+          "Defense basket continuation (COCHINSHIP, MAZDOCK) on geopolitical premium",
+          "SETFGOLD haven bid if escalation headlines emerge; P029 target 123-127 still within reach on relief"
+        ],
+        "scenarios": [
+          {
+            "name": "OVERSOLD_BOUNCE_BASE (45%)",
+            "description": "Weekend passes quietly, Brent holds $98-103. Monday opens mildly negative then recovers through session on short-covering + DII buying. Closes 24,000-24,100 (-0.2 to +0.3%).",
+            "nifty_close_range": "23,950-24,100"
+          },
+          {
+            "name": "CONTINUATION_BEARISH (35%)",
+            "description": "FII selling 5th day, IT weak, Brent drifts higher on tepid weekend headlines. Nifty breaks 23,800, tests 23,700. Closes -0.4 to -0.8%.",
+            "nifty_close_range": "23,700-23,850"
+          },
+          {
+            "name": "ESCALATION_GAP_DOWN (20%)",
+            "description": "Weekend Israel-Iran escalation, Brent >$108. Monday gaps down -1 to -2%, tests 23,500-23,600. Defense ripper, IT/OMC smashed.",
+            "nifty_close_range": "23,450-23,650"
+          }
+        ]
+      },
+      "session_direction_accuracy": {
+        "direction_correct": null,
+        "grade": "PENDING",
+        "direction_note": "Pending \u2014 EOD wrap 2026-04-27"
+      },
+      "actual": {
+        "nifty_open": null,
+        "nifty_close": null,
+        "nifty_change_pct": null
+      },
+      "lessons": []
     }
   ],
   "patterns_observed": [

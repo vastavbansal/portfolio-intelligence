@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
-  "last_updated": "2026-04-22",
+  "last_updated": "2026-04-24T17:30:00",
   "predictions": [
     {
       "pred_id": "P007",
@@ -684,6 +684,60 @@
       "framework_promoted": false,
       "lesson": "For defense stock targets in escalation scenarios: ALWAYS include exit trigger for any diplomatic signal (even informal). At \u20b91,100+ profit target: place limit sell at +5% above max target range to auto-lock profits.",
       "promoted_date": null
+    },
+    {
+      "pattern_id": "PAT_DEFENSE_DURATION",
+      "pattern_tag": "DEFENSE_DURATION_PREMIUM",
+      "description": "Defense electronics war-premium persists in extended-truce regimes (2-6 weeks), inverting standard mean-reversion thesis.",
+      "occurrences": [
+        "P007",
+        "P009",
+        "P004"
+      ],
+      "occurrences_needed_for_framework_update": 3,
+      "current_count": 3,
+      "status": "READY_FOR_PROMOTION \u2014 3 occurrences",
+      "proposed_framework_factor": "M012",
+      "notes": "April 24: P004 ASTRA MICRO confirmed as 3rd WRONG instance of this pattern (previously P007 SWIGGY-context, P009 ASTRA MICRO). Promotion candidate for next framework revision."
+    },
+    {
+      "pattern_id": "PAT_MULTI_BINARY",
+      "pattern_tag": "MULTI_BINARY_CORRELATION",
+      "description": "When two independent binary events (earnings + geopolitical) have adverse resolution within 5 sessions, Nifty impact is multiplicative not additive.",
+      "occurrences": [
+        "P027"
+      ],
+      "occurrences_needed_for_framework_update": 2,
+      "current_count": 1,
+      "status": "WATCHING \u2014 1 occurrence",
+      "proposed_framework_factor": "MULTI_BINARY_CORRELATION",
+      "notes": "Apr 24: first observation. P027 NIFTY target 24,600-25,000 breached by -2.86% when IT earnings shock (HCLTECH -10%) + ceasefire-fraying overlapped within 3 sessions."
+    },
+    {
+      "pattern_id": "PAT_HAVEN_DURATION",
+      "pattern_tag": "HAVEN_PREMIUM_DURATION_TAIL",
+      "description": "Haven-asset premium persists 2-5 sessions past trigger-event resolution due to positioning unwind lag.",
+      "occurrences": [
+        "P029"
+      ],
+      "occurrences_needed_for_framework_update": 2,
+      "current_count": 1,
+      "status": "WATCHING \u2014 1 occurrence",
+      "proposed_framework_factor": "HAVEN_PREMIUM_DURATION_TAIL",
+      "notes": "Apr 24: SETFGOLD PARTIAL \u2014 closed 0.57% above range ceiling. Haven bid extended through weekend-risk window despite intraday Brent -4.15%."
+    },
+    {
+      "pattern_id": "PAT_CONSUMER_DISC_BRENT",
+      "pattern_tag": "CONSUMER_DISC_BRENT_INVERSE",
+      "description": "Consumer discretionary names benefit disproportionately from Brent cooling over 2-week windows (real-wage relief signal).",
+      "occurrences": [
+        "P001"
+      ],
+      "occurrences_needed_for_framework_update": 2,
+      "current_count": 1,
+      "status": "WATCHING \u2014 1 occurrence",
+      "proposed_framework_factor": "CONSUMER_DISC_BRENT_INVERSE",
+      "notes": "Apr 24: P001 SWIGGY WRONG. Bearish \u2264260 thesis broken by Apr 8 ceasefire Brent-crash rally. Consumer disc basket buoyed for the remainder of 4W window."
     }
   ],
   "rca_log": [
@@ -824,6 +878,74 @@
       "framework_promoted": false,
       "promoted_date": null,
       "lesson": "For government PSU stocks, RSI overbought alone is insufficient for mean-reversion call. Require a specific negative catalyst: capex cut, FY guidance miss, credit event, or sector derating. Count: 1 occurrence (P026). 1 more needed for promotion."
+    },
+    {
+      "rca_id": "RCA_P001",
+      "pred_id": "P001",
+      "date": "2026-04-24",
+      "stock": "SWIGGY",
+      "horizon": "4W",
+      "outcome": "WRONG",
+      "root_cause_summary": "Bearish thesis \u2264\u20b9260 invalidated by April 8 ceasefire rally which lifted consumer discretionary. Subsequent Apr 22-24 re-escalation did not carry SWIGGY back below \u20b9280 because Q4 results window neutralized sector overhang. Stock closed \u20b9287.10, 10.4% above target ceiling.",
+      "missing_signal": "CONSUMER_DISC_BRENT_INVERSE \u2014 consumer discretionary benefits disproportionately from Brent cooling; the same mechanism that hurts IT helps SWIGGY.",
+      "factor_gap": "S004 consumer discretionary structural bid not weighted against Brent inverse correlation.",
+      "proposed_factor_id": "CONSUMER_DISC_BRENT_INVERSE",
+      "proposed_factor_name": "Consumer Discretionary Brent Inverse Correlation",
+      "pattern_tag": "CONSUMER_DISC_BRENT_INVERSE",
+      "framework_promoted": false,
+      "promoted_date": null,
+      "lesson": "Bearish calls on consumer discretionary during elevated-Brent regimes must price in Brent-cooling optionality. 4-week horizon is long enough to capture a ceasefire regime flip."
+    },
+    {
+      "rca_id": "RCA_P004",
+      "pred_id": "P004",
+      "date": "2026-04-24",
+      "stock": "ASTRA MICRO",
+      "horizon": "4W",
+      "outcome": "WRONG",
+      "root_cause_summary": "Defense premium unwind thesis (target 850-900) failed. Stock rallied to ~\u20b91,130 on extended-truce war-premium regime and held through the ceasefire-fraying wave. 3rd observation of M012_DEFENSE_SECTOR_DURATION_PREMIUM pattern (P007, P009, P004) \u2014 candidate for factor promotion.",
+      "missing_signal": "M012_DEFENSE_SECTOR_DURATION_PREMIUM \u2014 defense electronics thrive on EXTENDED tension regimes (2-6 weeks), not binary resolution.",
+      "factor_gap": "High-PE concern (50.6x) was used as a bear thesis without sector rotation durability check.",
+      "proposed_factor_id": "M012",
+      "proposed_factor_name": "Defense Sector Duration Premium",
+      "pattern_tag": "DEFENSE_DURATION_PREMIUM",
+      "framework_promoted": false,
+      "promoted_date": null,
+      "lesson": "3 occurrences now observed (P007, P009, P004). Ready for formal framework promotion to active factor. Defense pullback calls need a specific trigger: sector PE contraction, budget disappointment, or ceasefire >4 weeks."
+    },
+    {
+      "rca_id": "RCA_P027",
+      "pred_id": "P027",
+      "date": "2026-04-24",
+      "stock": "NIFTY",
+      "horizon": "1W",
+      "outcome": "WRONG",
+      "root_cause_summary": "Nifty target 24,600-25,000 breached by -2.86%. Three bearish sessions Apr 22-24 (cumulative -2.78%) driven by: (1) ceasefire-fraying (Iran refused talks, Israel threats), (2) IT sector cascade (HCLTECH -10% Apr 22, Infosys -6.93% Apr 24), (3) FII 4-day selling.",
+      "missing_signal": "MULTI_BINARY_CORRELATION \u2014 when two independent binary events (earnings + geopolitical) have adverse resolution within 5 sessions, Nifty impact is multiplicative, not additive.",
+      "factor_gap": "M013 (IT Regime Risk Filter) + FORECAST_PAT003 (Geopolitical Binary Underweighting) were not fully promoted when target was set.",
+      "proposed_factor_id": "MULTI_BINARY_CORRELATION",
+      "proposed_factor_name": "Multi-Binary Correlation (Earnings + Geopolitical)",
+      "pattern_tag": "MULTI_BINARY_CORRELATION",
+      "framework_promoted": false,
+      "promoted_date": null,
+      "lesson": "Nifty targets need scenario-matrix with multi-binary cases. Single-point range forecasts fail when two adverse binaries resolve within one week."
+    },
+    {
+      "rca_id": "RCA_P029",
+      "pred_id": "P029",
+      "date": "2026-04-24",
+      "stock": "SETFGOLD",
+      "horizon": "1W",
+      "outcome": "PARTIAL",
+      "root_cause_summary": "SETFGOLD \u20b9127.73 closed 0.57% above range ceiling (127). Gold haven bid persisted fractionally longer than tactical forecast due to Apr 23-24 Israel-Iran escalation. Intraday touched \u20b9128.87 Apr 23 then cooled with Brent -4.15% Apr 24. Range near-miss.",
+      "missing_signal": "HAVEN_PREMIUM_DURATION_TAIL \u2014 haven bids persist 2-5 sessions past trigger-event resolution due to positioning unwind lag.",
+      "factor_gap": "Gold ETF dual-driver (USD-gold + geopolitical bid) stickier than modeled tactical-horizon unwind.",
+      "proposed_factor_id": "HAVEN_PREMIUM_DURATION_TAIL",
+      "proposed_factor_name": "Haven Premium Duration Tail",
+      "pattern_tag": "HAVEN_PREMIUM_DURATION_TAIL",
+      "framework_promoted": false,
+      "promoted_date": null,
+      "lesson": "Haven-asset range calls should extend the upper bound by 0.5-1% when a geopolitical binary is still active during the forecast window. Partial grading appropriate when within 1% of range."
     }
   ],
   "scored_predictions": [
@@ -911,6 +1033,50 @@
       "entry_price": 100.25,
       "horizon": "10D",
       "note": "PSU mean-reversion thesis failed. DII support + government capex narrative sustained elevated price."
+    },
+    {
+      "pred_id": "P001",
+      "stock": "SWIGGY",
+      "outcome": "WRONG",
+      "scored_date": "2026-04-24",
+      "outcome_price": 287.1,
+      "target": "<260",
+      "entry_price": 293.0,
+      "horizon": "4W",
+      "note": "Consumer disc Brent-inverse override. Ceasefire rally kept stock above 280."
+    },
+    {
+      "pred_id": "P004",
+      "stock": "ASTRA MICRO",
+      "outcome": "WRONG",
+      "scored_date": "2026-04-24",
+      "outcome_price": 1123.75,
+      "target": "850-900",
+      "entry_price": 1030.0,
+      "horizon": "4W",
+      "note": "Defense duration premium \u2014 3rd occurrence. M012 promotion candidate."
+    },
+    {
+      "pred_id": "P027",
+      "stock": "NIFTY",
+      "outcome": "WRONG",
+      "scored_date": "2026-04-24",
+      "outcome_price": 23897.95,
+      "target": "24600-25000",
+      "entry_price": 24173.0,
+      "horizon": "1W",
+      "note": "Multi-binary (IT cascade + ceasefire fraying) dragged Nifty -2.86% below target."
+    },
+    {
+      "pred_id": "P029",
+      "stock": "SETFGOLD",
+      "outcome": "PARTIAL",
+      "scored_date": "2026-04-24",
+      "outcome_price": 127.73,
+      "target": "123-127",
+      "entry_price": 128.87,
+      "horizon": "1W",
+      "note": "Range near-miss 0.57% above ceiling. Haven bid duration tail."
     }
   ]
 }
