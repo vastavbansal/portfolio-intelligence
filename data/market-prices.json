@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-04-24T15:05:53.080842+00:00",
-  "fetched_at_ist": "2026-04-24 20:35 IST",
+  "fetched_at": "2026-04-24T18:00:05.230480+00:00",
+  "fetched_at_ist": "2026-04-24 23:46 IST",
   "coverage": {
-    "nse_stocks_fetched": 88,
+    "nse_stocks_fetched": 82,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 34
+    "portfolio_stocks_with_pnl": 32
   },
   "indices": {
     "NIFTY_50": {
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4742.3,
+      "price": 4737.1,
       "prev_close": 4705.1,
-      "change": 37.2,
-      "change_pct": 0.79,
-      "volume": 78314,
+      "change": 32.0,
+      "change_pct": 0.68,
+      "volume": 93820,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 75.84,
+      "price": 76.36,
       "prev_close": 75.46,
-      "change": 0.38,
-      "change_pct": 0.5,
-      "volume": 29435,
+      "change": 0.9,
+      "change_pct": 1.19,
+      "volume": 40387,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 95.04,
+      "price": 94.12,
       "prev_close": 95.85,
-      "change": -0.81,
-      "change_pct": -0.85,
-      "volume": 173526,
+      "change": -1.73,
+      "change_pct": -1.8,
+      "volume": 271128,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 99.03,
+      "price": 98.78,
       "prev_close": 105.07,
-      "change": -6.04,
-      "change_pct": -5.75,
-      "volume": 33286,
+      "change": -6.29,
+      "change_pct": -5.99,
+      "volume": 49122,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 2.67,
+      "price": 2.7,
       "prev_close": 2.61,
-      "change": 0.06,
-      "change_pct": 2.18,
-      "volume": 62016,
+      "change": 0.08,
+      "change_pct": 3.14,
+      "volume": 99923,
       "ticker": "NG=F"
     }
   },
@@ -285,22 +285,6 @@
       "pnl": 11995.5,
       "pnl_pct": 18.32
     },
-    "SBISILVER": {
-      "price": 233.18,
-      "prev_close": 234.86,
-      "change": -1.68,
-      "change_pct": -0.72,
-      "volume": 1499765,
-      "symbol": "SBISILVER",
-      "yahoo_ticker": "SBISILVER.NS",
-      "broker": "ICICI",
-      "avg_buy": 225.05,
-      "qty": 730,
-      "invested": 164286.5,
-      "market_value": 170221.4,
-      "pnl": 5934.9,
-      "pnl_pct": 3.61
-    },
     "SETFGOLD": {
       "price": 127.73,
       "prev_close": 127.93,
@@ -412,22 +396,6 @@
       "market_value": 265060.5,
       "pnl": 69421.2,
       "pnl_pct": 35.48
-    },
-    "ASTRA MICRO": {
-      "price": 1123.75,
-      "prev_close": 1135.55,
-      "change": -11.8,
-      "change_pct": -1.04,
-      "volume": 282579,
-      "symbol": "ASTRA MICRO",
-      "yahoo_ticker": "ASTRAMICRO.NS",
-      "broker": "Groww",
-      "avg_buy": 562.35,
-      "qty": 20,
-      "invested": 11247.0,
-      "market_value": 22475.0,
-      "pnl": 11228.0,
-      "pnl_pct": 99.83
     },
     "COAL INDIA": {
       "price": 456.0,
@@ -763,13 +731,6 @@
       "change_pct": -0.51,
       "volume": 11788014
     },
-    "WIPRO.NS": {
-      "price": 199.36,
-      "prev_close": 202.76,
-      "change": -3.4,
-      "change_pct": -1.68,
-      "volume": 39328138
-    },
     "HINDALCO.NS": {
       "price": 1048.35,
       "prev_close": 1041.35,
@@ -909,27 +870,6 @@
       "change": -17.8,
       "change_pct": -1.11,
       "volume": 2290073
-    },
-    "HEROMOTOCO.NS": {
-      "price": 4961.5,
-      "prev_close": 5032.0,
-      "change": -70.5,
-      "change_pct": -1.4,
-      "volume": 520179
-    },
-    "APOLLOHOSP.NS": {
-      "price": 7732.5,
-      "prev_close": 7781.0,
-      "change": -48.5,
-      "change_pct": -0.62,
-      "volume": 407309
-    },
-    "BAJAJ-AUTO.NS": {
-      "price": 9576.0,
-      "prev_close": 9550.5,
-      "change": 25.5,
-      "change_pct": 0.27,
-      "volume": 190443
     },
     "M&M.NS": {
       "price": 3038.4,
@@ -1175,20 +1115,6 @@
       "change": -7.8,
       "change_pct": -2.19,
       "volume": 221700
-    },
-    "ASTRAMICRO.NS": {
-      "price": 1123.75,
-      "prev_close": 1135.55,
-      "change": -11.8,
-      "change_pct": -1.04,
-      "volume": 282579
-    },
-    "SBISILVER.NS": {
-      "price": 233.18,
-      "prev_close": 234.86,
-      "change": -1.68,
-      "change_pct": -0.72,
-      "volume": 1499765
     },
     "SETFGOLD.NS": {
       "price": 127.73,
