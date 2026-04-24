@@ -1,24 +1,24 @@
 {
   "schema_version": "1.0",
   "description": "Dynamic bridge \u2014 2026-04-24 session",
-  "last_updated_by": "eod_wrap_2026-04-23",
-  "last_updated_at": "2026-04-23T17:30:00",
+  "last_updated_by": "morning_brief_2026-04-24",
+  "last_updated_at": "2026-04-24T09:20:00",
   "market_regime": {
-    "label": "GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_UNCERTAIN_HORMUZ_BINARY",
-    "key_risk": "Ceasefire still in collapse/uncertain phase. Brent intraday -4.07% to $97.76 (after overnight spike to $101.57 on Iran ship seizures) suggests partial Hormuz de-escalation signals or commercial traffic resuming. Binary overnight: fresh escalation flips bullish bounce thesis.",
-    "dominant_risk": "Weekend event risk ahead of Apr 25-26 \u2014 any fresh Iran/Hormuz action spikes Brent and flips Friday positioning. Two-day cumulative -1.65% leaves Nifty oversold, bounce candidate.",
-    "crude_last": 97.76,
-    "crude_prev_close": 101.91,
-    "crude_change_pct": -4.07,
-    "crude_note": "Brent $97.76 intraday recovery after overnight spike. Below $100 is constructive but well above $90 threshold for regime relief. Watch for sustained break <$95 as signal of partial resolution.",
+    "label": "GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_FRAYING_HORMUZ_ACTIVE",
+    "key_risk": "Brent surge overnight +7.5% to $105.07 on Israel strike threats and Hormuz shipping disruption. US-Iran ceasefire fraying. Weekend binary event risk elevated \u2014 Israel-Iran escalation could push Brent to $110+ on Monday gap.",
+    "dominant_risk": "Weekend escalation risk \u2014 Israel threats of strikes against Iran, Hormuz shipping blocked, FII selling 4th day. Nifty opened gap-down -0.24%, below psychological 24,150. 24,000 pivotal support.",
+    "crude_last": 105.07,
+    "crude_prev_close": 97.76,
+    "crude_change_pct": 7.48,
+    "crude_note": "Brent surged $7.31 overnight (+7.48%) to $105.07 on Israel strike threats vs Iran + persistent Hormuz blockade. Back firmly in RISK_ELEVATED zone. Break above $108 = escalation signal; need <$95 for regime relief.",
     "crude_threshold_for_regime_change": 90,
-    "crude_current_zone": "WATCH_ZONE ($95-100 \u2014 elevated but cooling)",
+    "crude_current_zone": "RISK_ELEVATED ($103-108 \u2014 escalation zone)",
     "nifty_last": 24173.05,
     "nifty_last_trading_date": "2026-04-23",
     "nifty_last_pct_change": -0.84,
     "nifty_key_support": 24000,
     "nifty_key_resistance": 24400,
-    "gift_nifty_estimate_for_next_session": 24210,
+    "gift_nifty_estimate_for_next_session": null,
     "banknifty_last": 56305.0,
     "banknifty_change_pct": -1.43,
     "sensex_last": 77664.0,
@@ -28,62 +28,74 @@
     "silver_last_usd": 74.46,
     "silver_change_pct": -4.4,
     "setfgold_last_inr": 128.87,
-    "regime_since": "2026-04-22",
-    "regime_note": "Regime shifted slightly from CEASEFIRE_COLLAPSE to CEASEFIRE_UNCERTAIN_HORMUZ_BINARY. Brent intraday crash (-4.07%) suggests commercial/diplomatic signals, not a full regime change. Watch: sustained Brent break <$95 = TALKS_REVIVING shift; Brent back >$100 = collapse confirmation."
+    "regime_since": "2026-04-24",
+    "regime_note": "Regime shifted back to RISK_ELEVATED / HORMUZ_ACTIVE on overnight Brent surge. Friday positioning decidedly risk-off. Watch for weekend catalyst: Israel action, Iran response, US diplomatic moves."
   },
   "opening_bias": {
-    "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
-    "gap_pct_estimate": -0.2,
-    "gift_nifty_estimate": 24330,
+    "direction": "FLAT_TO_SLIGHT_GAP_UP",
+    "gap_pct_estimate": 0.15,
+    "gift_nifty_estimate": 24210,
     "key_drivers": [
-      "Brent cooled to $94.86 (-3.68%) \u2014 relative positive vs prior $98+ but still elevated vs <$90 comfort zone",
-      "Infosys Q4FY26 results day \u2014 M013 applies, IT sector sentiment sets tone",
-      "Ceasefire still technically in collapse phase \u2014 overnight geopolitical headlines could spike",
-      "HCLTECH Q4 results post-market Apr 22 \u2014 results out overnight will influence gap"
+      "Brent cooled sharply intraday to $97.76 (-4.07%) \u2014 constructive signal after two-day selloff",
+      "Oversold technical conditions after cumulative -1.65% over Apr 22-23; Friday positioning typically sees short-covering",
+      "Infosys result now behind (risk resolved); IT sector digestion rather than fresh drag expected",
+      "Hormuz de-escalation intraday signals (Brent crash) may continue overnight",
+      "BankNifty -1.43% sharp drop suggests positioning reset already under way \u2014 reversal candidates for Friday",
+      "Weekend risk: any fresh Hormuz escalation could flip sentiment negative; currently skew is mildly positive"
     ],
     "confidence": 2,
-    "generated_at": "eod_wrap_2026-04-22"
+    "generated_at": "eod_wrap_2026-04-23"
   },
   "session_direction": {
-    "direction": "VOLATILE_SIDEWAYS_SLIGHT_BEARISH",
-    "change_pct_estimate": -0.2,
-    "range_low": 24100,
-    "range_high": 24580,
-    "key_assumption": "Infosys Q4FY26 results post-market on April 22 and intraday on April 23 will dominate IT sector. M013 (IT Regime Risk Filter) applies \u2014 do NOT expect IT breakout regardless of earnings quality. Brent cooling to $94.86 is constructive but needs 3+ days below $90 for regime relief. Ceasefire status remains binary overnight \u2014 any fresh escalation spikes Brent and triggers defense rotation. Defense stocks (ASTRA MICRO, MAZDOCK, COCHINSHIP) likely to consolidate after today's gains. BankNifty mildly bearish at -0.43% suggests credit risk premium still elevated. Session will be Infosys-led \u2014 watch for 'sell the print' vs 'beat and hold' dynamic in IT.",
-    "confidence": 2,
-    "generated_at": "eod_wrap_2026-04-22",
-    "regime": "GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_COLLAPSE",
-    "brent_forecast": "$92-98 \u2014 Brent cooling trend continues if no fresh Hormuz escalation; reversal risk if ceasefire collapses fully overnight",
+    "direction": "BEARISH_VOLATILE",
+    "change_pct_estimate": -0.6,
+    "range_low": 23900,
+    "range_high": 24220,
+    "key_assumption": "Brent surge to $105-106 overnight negates EOD 'oversold bounce' thesis. Regime back to RISK_ELEVATED with Israel-Iran escalation concerns. Weekend binary event risk (Israel attacks threatened, Hormuz shipping blocked) drives Friday risk-off positioning \u2014 typical 'sell into weekend' flow. IT sector continues under pressure (Nifty IT -4.95% post-HCLTech guidance shock), no fresh catalyst to reverse. FII selling extended to 4th consecutive day (~\u20b93,254 cr). Key support 24,000 (psychological + recent swing); if breaks, 23,900 next. Upside capped at 24,200-24,220. Defense (ASTRA MICRO, MAZDOCK) likely to firm on geopolitical premium. OMC/Aviation (MRPL, INDIGO) under pressure from Brent surge. Mean-reversion bounce possible intraday but unlikely to hold into close.",
+    "confidence": 3,
+    "generated_at": "morning_brief_2026-04-24",
+    "regime": "GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_FRAYING_HORMUZ_ACTIVE",
+    "brent_forecast": "$103-108 \u2014 sustained above $100 with binary upside on any fresh Israel/Iran headline; pullback to $100 needs ceasefire re-affirmation",
     "key_risks": [
-      "Infosys Q4 miss or weak FY27 guidance \u2014 IT sector selloff amplified by M013 effect",
-      "Overnight ceasefire collapse news \u2014 Brent re-spikes above $100",
-      "HCLTECH results -ve surprise post-market Apr 22 \u2014 adds IT drag on Apr 23 open",
-      "FII net selling continuation"
+      "Israel strikes on Iran over weekend \u2014 Brent spikes to $110-120, Monday gap-down -2% to -3%",
+      "FII selling accelerates on 4th consecutive day \u2014 \u20b95,000+ cr outflow scenario",
+      "BankNifty breakdown below 56,000 \u2014 credit risk rotation amplifies",
+      "IT sector further deterioration (TCS/Wipro next guidance) \u2014 Nifty IT -6% session"
     ],
     "key_opportunities": [
-      "Infosys beat + strong guidance: could lift IT, counter M013 for 1 session",
-      "Brent continuing to fall below $92: OMC relief (MRPL, BPCL, IOC) + Aviation (INDIGO)",
-      "Renewable energy names (IREDA, ACMESOLAR, SUZLON) if global risk-off eases"
+      "Defense basket (ASTRA MICRO, MAZDOCK, COCHINSHIP) \u2014 geopolitical premium trade",
+      "Gold/silver (SETFGOLD) \u2014 haven bid if escalation fears intensify (P029 target 123-127)",
+      "Short-covering bounce intraday if Brent pulls back below $103",
+      "Selective pharma/FMCG defensives on any flight-to-quality flow"
     ],
-    "intraday_observed_so_far": {
-      "low": 24241.25,
-      "high": 24480.65,
-      "low_pct": -0.56,
-      "high_pct": 0.42,
-      "observed_at_ist": "~11:45 IST",
-      "note": "Intraday range so far well within forecast 24,100-24,580. Infosys results at 15:45 IST will drive final hour."
-    }
+    "scenarios": [
+      {
+        "name": "BEARISH_BASE (55%)",
+        "description": "Nifty drifts lower through session, BankNifty leads down, closes 23,950-24,100. IT weak, defense strong. Friday risk-off into weekend confirmed.",
+        "nifty_close_range": "23,950-24,100"
+      },
+      {
+        "name": "MID_SESSION_BOUNCE_FADE (30%)",
+        "description": "Morning weakness bottoms 24,050-24,080, mid-session short-cover bounce to 24,180-24,200, fades in last hour on weekend positioning. Closes flat to -0.3%.",
+        "nifty_close_range": "24,100-24,200"
+      },
+      {
+        "name": "ESCALATION_SPIRAL (15%)",
+        "description": "Fresh Israel-Iran headline intraday, Brent to $110+, Nifty breaks 24,000 decisively, closes 23,850-23,950. Defense ripper, IT decimated.",
+        "nifty_close_range": "23,850-23,950"
+      }
+    ]
   },
   "ceasefire_binary_matrix": {
-    "extension_probability": 0.4,
-    "collapse_probability": 0.35,
+    "extension_probability": 0.2,
+    "collapse_probability": 0.55,
     "stalemate_probability": 0.25,
     "extension_nifty_impact": "+1.0 to +2.0% (targets 24,400-24,500)",
     "collapse_nifty_impact": "-2.0 to -3.5% (targets 23,300-23,700)",
     "stalemate_nifty_impact": "\u00b10.3% flat to mild positive",
     "extension_brent": "$88-94",
     "collapse_brent": "$105-115",
-    "key_signal": "Overnight Apr 23-24: any fresh Hormuz escalation or diplomatic breakthrough. Brent intraday crash to $97.76 suggests partial Hormuz easing (back-channel) \u2014 watch for confirmation in Friday pre-open.",
+    "key_signal": "Overnight shift: Israel threatening attacks, Brent surged +7.5% to $105+. Ceasefire fraying rapidly. Next 72 hours binary \u2014 fresh escalation flips to collapse.",
     "ceasefire_expiry": "2026-04-21T00:00:00",
     "ceasefire_status_note": "Ceasefire technically extended Apr 22 AM by Trump. Iran seized 2 ships in Hormuz Apr 22 PM after extension. Intraday Apr 23 Brent crash suggests partial easing not reflected in headlines yet."
   },
@@ -228,22 +240,22 @@
     }
   ],
   "opening_bias_actual": {
-    "nifty_open": 24391.5,
-    "nifty_prev_close": 24378.1,
-    "gift_nifty_preopen": 24433,
-    "gift_nifty_note": "GIFT Nifty at 02:24 IST showed ~24,433 (prev close 24,364), signalling a modest positive bias overnight \u2014 ~100pts above EOD forecast (24,330)",
-    "gap_pct": 0.055,
-    "direction": "FLAT_SLIGHT_GAP_UP",
+    "nifty_open": 24115.55,
+    "nifty_prev_close": 24173.05,
+    "gift_nifty_preopen": 24124.5,
+    "gift_nifty_note": "GIFT Nifty showed 24,124.5 (-0.79% on its own reference) pre-open on April 24 02:30 IST, signalling GAP DOWN vs prev Nifty close 24,173.05. Materially below EOD forecast estimate (24,210).",
+    "gap_pct": -0.238,
+    "direction": "GAP_DOWN",
     "direction_correct": false,
     "magnitude_within_50pct": false,
-    "grade": "PARTIAL",
-    "scoring_note": "Forecast FLAT_TO_SLIGHT_GAP_DOWN (-0.2%). Actual gap +0.055% (24391.5 vs prev close 24378.1). The FLAT portion of the forecast was CORRECT \u2014 magnitude is tiny (<0.1%). The SLIGHT_GAP_DOWN directional bias was WRONG \u2014 market opened slightly positive. Overnight: Trump extended ceasefire (positive) but Iran seized 2 ships in Hormuz (negative) \u2014 net tiny positive. Brent re-spiked +3.14% to $101.57, negating some tailwind. Graded PARTIAL: regime (flat) correct, directional tilt flipped, magnitude within noise band.",
+    "grade": "WRONG",
+    "scoring_note": "Forecast FLAT_TO_SLIGHT_GAP_UP (+0.15%, GIFT est 24,210). Actual gap -0.24% (24,115.55 vs prev close 24,173.05) \u2014 GAP_DOWN direction opposite of forecast. Overnight regime change: Brent surged +7-8% from $97.76 close to $105-106 (Israel threatens Iran attacks, Hormuz shipping remains blocked, US-Iran ceasefire fraying). The constructive 'oversold bounce' thesis collapsed on Brent surge. FII selling extended to 4th session (~\u20b93,254 cr). Graded WRONG \u2014 direction opposite, magnitude off by 0.4pts. Missed signal: overnight Hormuz escalation risk materialized despite modeled 35% probability.",
     "overnight_delta_vs_forecast": {
-      "ceasefire_status": "EXTENDED (vs EOD assumption of uncertain/collapse) \u2014 POSITIVE",
-      "hormuz_status": "Iran seized 2 ships after extension announcement \u2014 NEGATIVE",
-      "brent_usd": 101.57,
-      "brent_vs_eod": "+$6.71 vs EOD ($94.86) \u2014 regime DID NOT shift to TALKS_REVIVING; Brent back above $100",
-      "net_effect": "Crosscurrents cancelled out; market opened flat/+0.05%"
+      "ceasefire_status": "FRAYING \u2014 US-Iran ceasefire under strain, Israel threatens attacks, Hormuz shipping blocked",
+      "hormuz_status": "Escalated \u2014 Iran seized 2 more cargo ships; US maintains naval blockade",
+      "brent_usd": 105.07,
+      "brent_vs_eod": "+$7.31 vs EOD ($97.76). Brent UP 7.5% overnight \u2014 opposite of cooling thesis.",
+      "net_effect": "Overnight geopolitical re-escalation (binary risk) triggered \u2014 regime shifted back to RISK_ELEVATED / CEASEFIRE_COLLAPSE_IMMINENT"
     },
     "source": "actual_nse_open",
     "pre_estimated_by": null,
