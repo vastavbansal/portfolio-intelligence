@@ -65,12 +65,12 @@
       "horizon": "7D",
       "date": "2026-04-01",
       "stock": "SWIGGY",
-      "prediction": "SWIGGY will test or breach the \u20b9260 52-week low within 7 days given no positive catalyst and continued broader market weakness",
+      "prediction": "SWIGGY will test or breach the ₹260 52-week low within 7 days given no positive catalyst and continued broader market weakness",
       "entry_price": 268.55,
-      "target": "\u2264260",
+      "target": "≤260",
       "confidence": 4,
       "category": "CRITICAL",
-      "reasoning": "SWIGGY sits 3.2% above its 52wk low of \u20b9266.30. Nifty fell 2.14% on March 30. FII selling continues. No earnings catalyst until Q4 results. At \u20b9260 stop-loss clusters will trigger forced selling. Short timeframe validates/invalidates the technical setup quickly.",
+      "reasoning": "SWIGGY sits 3.2% above its 52wk low of ₹266.30. Nifty fell 2.14% on March 30. FII selling continues. No earnings catalyst until Q4 results. At ₹260 stop-loss clusters will trigger forced selling. Short timeframe validates/invalidates the technical setup quickly.",
       "factors_checked": [
         "T001",
         "T002",
@@ -84,12 +84,12 @@
       "check_date": "2026-04-08",
       "outcome": "WRONG",
       "outcome_price": 281.45,
-      "outcome_evidence": "On April 8, SWIGGY closed at \u20b9281.45 (+4.51% vs April 7). Market rallied on ceasefire news. SWIGGY failed to breach \u20b9260 target. Instead, the stock recovered as Brent crude crashed and broader market sentiment turned positive.",
+      "outcome_evidence": "On April 8, SWIGGY closed at ₹281.45 (+4.51% vs April 7). Market rallied on ceasefire news. SWIGGY failed to breach ₹260 target. Instead, the stock recovered as Brent crude crashed and broader market sentiment turned positive.",
       "postmortem": {
         "root_cause": "Regime change from DEADLINE_EVE_BINARY to DE-ESCALATION_REAL was NOT anticipated",
         "missed_factor": "Ceasefire agreement was not incorporated into the bearish case. The prediction was built on the assumption of either strikes or extended war premium. A 2-week ceasefire + Hormuz protocol agreement was an unexpected positive catalyst.",
         "signal_missed": "Geopolitical binary resolution typically creates regime shifts that override technical setup. The broader market relief on ceasefire overwhelmed stop-loss selling pressure.",
-        "proposed_factor": "M012_GEOPOLITICAL_RESOLUTION_RISK \u2014 when a major deadline has THREE possible outcomes (strikes/extension/deal), range the probability-weighted outcome. This prediction underweighted the 'deal' scenario."
+        "proposed_factor": "M012_GEOPOLITICAL_RESOLUTION_RISK — when a major deadline has THREE possible outcomes (strikes/extension/deal), range the probability-weighted outcome. This prediction underweighted the 'deal' scenario."
       },
       "scored_on": "2026-04-08T11:35:00"
     },
@@ -98,7 +98,7 @@
       "horizon": "7D",
       "date": "2026-04-01",
       "stock": "NIFTY",
-      "prediction": "Nifty will attempt to hold above 22,000 this week \u2014 DII buying will provide support even as FIIs continue selling",
+      "prediction": "Nifty will attempt to hold above 22,000 this week — DII buying will provide support even as FIIs continue selling",
       "entry_price": 22331,
       "target": ">22000",
       "confidence": 3,
@@ -126,12 +126,12 @@
       "horizon": "7D",
       "date": "2026-04-01",
       "stock": "ASTRA MICRO",
-      "prediction": "ASTRA MICRO will see profit-booking pullback to \u20b9950-980 range this week as defence sector sees rotation after the run",
+      "prediction": "ASTRA MICRO will see profit-booking pullback to ₹950-980 range this week as defence sector sees rotation after the run",
       "entry_price": 1030,
       "target": "950-980",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "ASTRA MICRO at \u20b91,030 (+83% vs avg). Defence sector PE at 50.6x vs 10yr avg 36.6x. Broad market in selloff. When Nifty falls, high-PE high-gain stocks see disproportionate selling as investors book profits. Short-term momentum reversal likely.",
+      "reasoning": "ASTRA MICRO at ₹1,030 (+83% vs avg). Defence sector PE at 50.6x vs 10yr avg 36.6x. Broad market in selloff. When Nifty falls, high-PE high-gain stocks see disproportionate selling as investors book profits. Short-term momentum reversal likely.",
       "factors_checked": [
         "T001",
         "T004",
@@ -145,12 +145,12 @@
       "check_date": "2026-04-08",
       "outcome": "WRONG",
       "outcome_price": 1019.45,
-      "outcome_evidence": "On April 8, ASTRA MICRO closed at \u20b91,019.45 (+2.31% vs April 7). Stock BREACHED \u20b91,000 resistance and hit new highs. No pullback to \u20b9950-980 occurred. Instead, war premium extended as ceasefire is 2-week duration (best outcome for defense electronics).",
+      "outcome_evidence": "On April 8, ASTRA MICRO closed at ₹1,019.45 (+2.31% vs April 7). Stock BREACHED ₹1,000 resistance and hit new highs. No pullback to ₹950-980 occurred. Instead, war premium extended as ceasefire is 2-week duration (best outcome for defense electronics).",
       "postmortem": {
         "root_cause": "Regime change: Trump's 2-week ceasefire + Hormuz protocol agreement was perceived as stabilizing the geopolitical situation SHORT-TERM. This extended war premium instead of unwinding it.",
         "missed_factor": "The ceasefire is a 2-week truce, not a permanent peace. Markets are treating it as 'stable with ongoing negotiations', which EXTENDS war premium demand for defense stocks rather than unwinding it.",
         "signal_missed": "Defense electronics thrive on 'extended tension' scenarios more than 'immediate escalation' or 'instant deal' scenarios. The 2-week ceasefire = best outcome for defense stocks (premium lasts longer).",
-        "proposed_factor": "M012_DEFENSE_SECTOR_DURATION_PREMIUM \u2014 War premium benefit is MAXIMIZED in 'extended truce' scenarios (2-6 weeks), not in 'strikes' (acute but short) or 'deal' (unwound immediately) scenarios."
+        "proposed_factor": "M012_DEFENSE_SECTOR_DURATION_PREMIUM — War premium benefit is MAXIMIZED in 'extended truce' scenarios (2-6 weeks), not in 'strikes' (acute but short) or 'deal' (unwound immediately) scenarios."
       },
       "scored_on": "2026-04-08T11:36:00"
     },
@@ -159,12 +159,12 @@
       "horizon": "4W",
       "date": "2026-03-28",
       "stock": "SWIGGY",
-      "prediction": "SWIGGY will breach \u20b9260 (near 52-week low area) within 4 weeks if no positive earnings catalyst emerges",
+      "prediction": "SWIGGY will breach ₹260 (near 52-week low area) within 4 weeks if no positive earnings catalyst emerges",
       "entry_price": 268.55,
       "target": "<260",
       "confidence": 4,
       "category": "CRITICAL",
-      "reasoning": "At \u20b9268.55, just 3.2% above 52wk low of \u20b9266.30. No profitability catalyst visible. Quick-commerce war ongoing. 382 combined shares at significant loss.",
+      "reasoning": "At ₹268.55, just 3.2% above 52wk low of ₹266.30. No profitability catalyst visible. Quick-commerce war ongoing. 382 combined shares at significant loss.",
       "factors_checked": [
         "T001",
         "T002",
@@ -179,15 +179,15 @@
       "check_date": "2026-04-25",
       "outcome": "WRONG",
       "outcome_price": 287.1,
-      "outcome_evidence": "As of April 24, 2026 close (last trading day before Apr 25 check_date; April 25 is a Saturday with no NSE session), SWIGGY closed at \u20b9287.10 (-2.03% on the day). Target was \u2264\u20b9260. Actual is 10.4% above target ceiling. SWIGGY has not traded below \u20b9280 since April 8 ceasefire rally. Graded WRONG.",
+      "outcome_evidence": "As of April 24, 2026 close (last trading day before Apr 25 check_date; April 25 is a Saturday with no NSE session), SWIGGY closed at ₹287.10 (-2.03% on the day). Target was ≤₹260. Actual is 10.4% above target ceiling. SWIGGY has not traded below ₹280 since April 8 ceasefire rally. Graded WRONG.",
       "postmortem": {
-        "root_cause": "Bearish thesis built on continued geopolitical overhang; reality shifted to de-escalation rally (Apr 8 ceasefire) that lifted entire consumer basket out of the 260-280 stress zone. Subsequent re-escalation (late April) did not carry SWIGGY back below \u20b9280 because by then the Q4 results window had neutralized sector overhang.",
+        "root_cause": "Bearish thesis built on continued geopolitical overhang; reality shifted to de-escalation rally (Apr 8 ceasefire) that lifted entire consumer basket out of the 260-280 stress zone. Subsequent re-escalation (late April) did not carry SWIGGY back below ₹280 because by then the Q4 results window had neutralized sector overhang.",
         "missed_factor": "Ceasefire regime change (April 8) combined with Q4 results insulation for new-tech consumption names. Stock found support at 280-285 well above 260 floor.",
-        "signal_missed": "S004 (consumer discretionary structural bid) and M012 (geopolitical resolution risk) not weighted correctly. Consumer discretionary benefits disproportionately from lower Brent \u2014 the same mechanism that hurts IT on Brent cooling helps SWIGGY.",
-        "proposed_factor": "CONSUMER_DISC_BRENT_INVERSE \u2014 when Brent falls >5% over a 2-week window, consumer discretionary breakout probability rises 40% due to real-wage relief signal."
+        "signal_missed": "S004 (consumer discretionary structural bid) and M012 (geopolitical resolution risk) not weighted correctly. Consumer discretionary benefits disproportionately from lower Brent — the same mechanism that hurts IT on Brent cooling helps SWIGGY.",
+        "proposed_factor": "CONSUMER_DISC_BRENT_INVERSE — when Brent falls >5% over a 2-week window, consumer discretionary breakout probability rises 40% due to real-wage relief signal."
       },
       "scored_on": "2026-04-24T17:30:00",
-      "confidence_note": "WEAKENED: Stock at \u20b9281.45 on April 8 (ceasefire relief). Needs to fall -7.7% from current levels to breach \u20b9260. 17 days remaining. Ceasefire sentiment is temporary headwind to bearish thesis. Confidence reduced from 4 to 2.",
+      "confidence_note": "WEAKENED: Stock at ₹281.45 on April 8 (ceasefire relief). Needs to fall -7.7% from current levels to breach ₹260. 17 days remaining. Ceasefire sentiment is temporary headwind to bearish thesis. Confidence reduced from 4 to 2.",
       "check_date_note": "Check_date April 25 is a Saturday; no market session. Apr 24 close used as final observation."
     },
     {
@@ -195,12 +195,12 @@
       "horizon": "4W",
       "date": "2026-03-28",
       "stock": "ASTRA MICRO",
-      "prediction": "ASTRA MICRO will face profit-booking correction to \u20b9850\u2013\u20b9900 range within 4 weeks as defence sector PE remains stretched",
+      "prediction": "ASTRA MICRO will face profit-booking correction to ₹850–₹900 range within 4 weeks as defence sector PE remains stretched",
       "entry_price": 1030,
       "target": "850-900",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "At \u20b91,030, +83% gain. Nifty Defence at 50.6x TTM PE. Broad market selling pressure. Profit-booking likely at these levels.",
+      "reasoning": "At ₹1,030, +83% gain. Nifty Defence at 50.6x TTM PE. Broad market selling pressure. Profit-booking likely at these levels.",
       "factors_checked": [
         "T001",
         "T004",
@@ -215,15 +215,15 @@
       "check_date": "2026-04-25",
       "outcome": "WRONG",
       "outcome_price": 1123.75,
-      "outcome_evidence": "As of April 24, 2026 close (last trading day before Apr 25 check_date weekend), ASTRA MICRO closed at \u20b91,123.75 (-1.04% on day). Target was 850-900 range. Actual is 24.9% above range top (\u20b9900) and 32.2% above range bottom (\u20b9850). Graded WRONG \u2014 stock never traded in target zone post April 1. Extended defense premium persisted through the Apr 8 ceasefire and the subsequent re-escalation wave.",
+      "outcome_evidence": "As of April 24, 2026 close (last trading day before Apr 25 check_date weekend), ASTRA MICRO closed at ₹1,123.75 (-1.04% on day). Target was 850-900 range. Actual is 24.9% above range top (₹900) and 32.2% above range bottom (₹850). Graded WRONG — stock never traded in target zone post April 1. Extended defense premium persisted through the Apr 8 ceasefire and the subsequent re-escalation wave.",
       "postmortem": {
         "root_cause": "Defense premium unwind thesis assumed pullback from 1,030. Instead, stock rallied to ~1,130 on extended-truce war-premium regime and held through the late-April ceasefire-fraying period.",
-        "missed_factor": "M012_DEFENSE_SECTOR_DURATION_PREMIUM already identified in P007/P009 postmortems \u2014 repeated here. Defense electronics thrive on EXTENDED tension regimes (2-6 weeks), not immediate binary resolution.",
+        "missed_factor": "M012_DEFENSE_SECTOR_DURATION_PREMIUM already identified in P007/P009 postmortems — repeated here. Defense electronics thrive on EXTENDED tension regimes (2-6 weeks), not immediate binary resolution.",
         "signal_missed": "Sector rotation into defense was structural, not tactical. High-PE concern (50.6x) was overridden by war-premium demand.",
-        "proposed_factor": "Confirmed M012_DEFENSE_SECTOR_DURATION_PREMIUM \u2014 now observed 3 times (P007, P009, P004). Candidate for promotion to active factor."
+        "proposed_factor": "Confirmed M012_DEFENSE_SECTOR_DURATION_PREMIUM — now observed 3 times (P007, P009, P004). Candidate for promotion to active factor."
       },
       "scored_on": "2026-04-24T17:30:00",
-      "confidence_note": "THESIS INVALIDATED: Ceasefire extended war premium. ASTRA MICRO at \u20b91,019.45 is near new highs \u2014 requires -15-17% fall to reach \u20b9850-900 in 17 days. Defense sector is benefitting from 2-week managed tension scenario (M012). Confidence downgraded to 1. Will score WRONG at check_date.",
+      "confidence_note": "THESIS INVALIDATED: Ceasefire extended war premium. ASTRA MICRO at ₹1,019.45 is near new highs — requires -15-17% fall to reach ₹850-900 in 17 days. Defense sector is benefitting from 2-week managed tension scenario (M012). Confidence downgraded to 1. Will score WRONG at check_date.",
       "check_date_note": "Check_date April 25 is a Saturday; no market session. Apr 24 close used as final observation."
     },
     {
@@ -231,7 +231,7 @@
       "horizon": "4W",
       "date": "2026-04-01",
       "stock": "IRFC",
-      "prediction": "IRFC will remain range-bound \u20b985\u2013\u20b995 for the next 4 weeks with no re-rating catalyst until Q4FY26 results",
+      "prediction": "IRFC will remain range-bound ₹85–₹95 for the next 4 weeks with no re-rating catalyst until Q4FY26 results",
       "entry_price": 90,
       "target": "85-95 range",
       "confidence": 3,
@@ -260,12 +260,12 @@
       "horizon": "2M",
       "date": "2026-03-28",
       "stock": "MRPL",
-      "prediction": "MRPL will fall to \u20b9160\u2013\u20b9170 range within 2 months if Brent crude stays above $100/bbl",
+      "prediction": "MRPL will fall to ₹160–₹170 range within 2 months if Brent crude stays above $100/bbl",
       "entry_price": 181.65,
       "target": "160-170",
       "confidence": 4,
       "category": "CRITICAL",
-      "reasoning": "MRPL at \u20b9181.65 already down -7.5%. Crude at $104\u2013$122 = GRM compression. Government blocking pass-through. Q4 results will show damage.",
+      "reasoning": "MRPL at ₹181.65 already down -7.5%. Crude at $104–$122 = GRM compression. Government blocking pass-through. Q4 results will show damage.",
       "factors_checked": [
         "M001",
         "S001",
@@ -290,12 +290,12 @@
       "horizon": "2M",
       "date": "2026-03-28",
       "stock": "NIFTY",
-      "prediction": "Nifty will test the 22,000\u201322,200 range within 4\u20136 weeks given continued FII outflows and PMI weakness",
+      "prediction": "Nifty will test the 22,000–22,200 range within 4–6 weeks given continued FII outflows and PMI weakness",
       "entry_price": 22819,
       "target": "22000-22200",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "FIIs -\u20b91.04L cr CY2026, PMI at 3.5yr low, Nifty at 22,819. No near-term FII reversal catalyst. DII support insufficient to offset.",
+      "reasoning": "FIIs -₹1.04L cr CY2026, PMI at 3.5yr low, Nifty at 22,819. No near-term FII reversal catalyst. DII support insufficient to offset.",
       "factors_checked": [
         "M004",
         "M005",
@@ -312,19 +312,19 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "confidence_note": "THESIS INVALIDATED: Nifty gapped to 23,997.35 on April 8 \u2014 1,800 pts ABOVE the 22,000-22,200 target zone. Would require -9% fall from current levels to reach target. Confidence downgraded to 1. This is expected WRONG at check_date unless geopolitical risk returns sharply."
+      "confidence_note": "THESIS INVALIDATED: Nifty gapped to 23,997.35 on April 8 — 1,800 pts ABOVE the 22,000-22,200 target zone. Would require -9% fall from current levels to reach target. Confidence downgraded to 1. This is expected WRONG at check_date unless geopolitical risk returns sharply."
     },
     {
       "pred_id": "P005",
       "horizon": "2M",
       "date": "2026-03-28",
       "stock": "COAL INDIA",
-      "prediction": "COAL INDIA will hold above \u20b9430 for the next 2 months as crude-coal substitution demand continues",
+      "prediction": "COAL INDIA will hold above ₹430 for the next 2 months as crude-coal substitution demand continues",
       "entry_price": 462.25,
       "target": ">430",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "Coal India at \u20b9462. Crude at $104\u2013$122 makes coal a cheaper industrial fuel alternative. JM Financial included in buy basket. Support at \u20b9430.",
+      "reasoning": "Coal India at ₹462. Crude at $104–$122 makes coal a cheaper industrial fuel alternative. JM Financial included in buy basket. Support at ₹430.",
       "factors_checked": [
         "M001",
         "S007",
@@ -341,19 +341,19 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "confidence_note": "Coal India at \u20b9432.75 (-0.70% today). Only \u20b92.75 buffer above \u20b9430 target. Brent at $95.85 \u2014 coal substitution thesis still intact but buffer narrowing. 42 days remaining. Confidence 3\u2605 \u2014 downgraded from 4 due to thin buffer."
+      "confidence_note": "Coal India at ₹432.75 (-0.70% today). Only ₹2.75 buffer above ₹430 target. Brent at $95.85 — coal substitution thesis still intact but buffer narrowing. 42 days remaining. Confidence 3★ — downgraded from 4 due to thin buffer."
     },
     {
       "pred_id": "P006",
       "horizon": "2M",
       "date": "2026-03-28",
       "stock": "INDIGO",
-      "prediction": "INDIGO will underperform Nifty by 8\u201315% over 2 months as ATF cost spike hits Q4FY26 and Q1FY27 margins",
+      "prediction": "INDIGO will underperform Nifty by 8–15% over 2 months as ATF cost spike hits Q4FY26 and Q1FY27 margins",
       "entry_price": 4294.7,
       "target": "underperform Nifty by 8-15%",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "ATF = 35\u201340% of operating cost. Brent at $104\u2013$122, up 50\u201375% from $70. Government ATF excise reform is separate from petrol/diesel cuts. Q4 margins will show the damage when results are announced.",
+      "reasoning": "ATF = 35–40% of operating cost. Brent at $104–$122, up 50–75% from $70. Government ATF excise reform is separate from petrol/diesel cuts. Q4 margins will show the damage when results are announced.",
       "factors_checked": [
         "M001",
         "S002",
@@ -371,14 +371,14 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "confidence_note": "THESIS WEAKENED: IndiGo at \u20b94,614.90 on April 8 (+7.5% from entry \u20b94,294.7). Nifty also up +5.1% from entry. P6 requires INDIGO to underperform by 8-15% = INDIGO must fall -3-10% relative to Nifty over remaining 52 days. Q4FY26 results (May) will show ATF margin damage \u2014 that remains the catalyst. But ceasefire has reduced the immediate pressure. Confidence maintained at 2. May resolve WRONG if Q4 results show less damage than feared."
+      "confidence_note": "THESIS WEAKENED: IndiGo at ₹4,614.90 on April 8 (+7.5% from entry ₹4,294.7). Nifty also up +5.1% from entry. P6 requires INDIGO to underperform by 8-15% = INDIGO must fall -3-10% relative to Nifty over remaining 52 days. Q4FY26 results (May) will show ATF margin damage — that remains the catalyst. But ceasefire has reduced the immediate pressure. Confidence maintained at 2. May resolve WRONG if Q4 results show less damage than feared."
     },
     {
       "pred_id": "P011",
       "horizon": "2M",
       "date": "2026-04-01",
       "stock": "NHPC",
-      "prediction": "NHPC will begin recovery toward \u20b985\u2013\u20b990 range within 2 months once FY27 budget capex visibility improves",
+      "prediction": "NHPC will begin recovery toward ₹85–₹90 range within 2 months once FY27 budget capex visibility improves",
       "entry_price": 76.82,
       "target": "85-90",
       "confidence": 2,
@@ -401,19 +401,19 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "confidence_note": "NEUTRAL: Ceasefire positive for PSU capex sentiment long-term. NHPC benefits from reduced fiscal pressure if crude prices stay down. Still early \u2014 54 days remaining."
+      "confidence_note": "NEUTRAL: Ceasefire positive for PSU capex sentiment long-term. NHPC benefits from reduced fiscal pressure if crude prices stay down. Still early — 54 days remaining."
     },
     {
       "pred_id": "P012",
       "horizon": "7D",
       "date": "2026-04-07",
       "stock": "ASTRA MICRO",
-      "prediction": "ASTRA MICRO will breach \u20b91,000 and test \u20b91,050\u2013\u20b91,080 within 7 days if war premium sustains post-deadline",
+      "prediction": "ASTRA MICRO will breach ₹1,000 and test ₹1,050–₹1,080 within 7 days if war premium sustains post-deadline",
       "entry_price": 996.9,
       "target": "1050-1080",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "ASTRA MICRO at \u20b9997, +77% from cost, approaching \u20b91,000 psychological level. If Trump deadline results in strikes or extended war premium, defense electronics stocks benefit directly. Stock already showing +5.61% momentum today. However if Iran deal materializes, defense premium unwinds \u2014 hence confidence 3.",
+      "reasoning": "ASTRA MICRO at ₹997, +77% from cost, approaching ₹1,000 psychological level. If Trump deadline results in strikes or extended war premium, defense electronics stocks benefit directly. Stock already showing +5.61% momentum today. However if Iran deal materializes, defense premium unwinds — hence confidence 3.",
       "factors_checked": [
         "T001",
         "T004",
@@ -427,15 +427,15 @@
       "check_date": "2026-04-14",
       "outcome": "PARTIAL_CORRECT",
       "outcome_price": 1019.25,
-      "outcome_evidence": "April 14 is a market holiday (Ambedkar Jayanti). Using April 13 close price of \u20b91,019.25. ASTRA MICRO peaked at \u20b91,132 during the period (well above target 1050-1080) as war premium extended with Hormuz blockade. However, stock sold off intraday on profit booking and fear of Iran diplomatic outreach (April 14) potentially easing war premium. Closed at \u20b91,019 \u2014 below target range of \u20b91,050-1,080. Target was exceeded during the prediction window but not at check date.",
+      "outcome_evidence": "April 14 is a market holiday (Ambedkar Jayanti). Using April 13 close price of ₹1,019.25. ASTRA MICRO peaked at ₹1,132 during the period (well above target 1050-1080) as war premium extended with Hormuz blockade. However, stock sold off intraday on profit booking and fear of Iran diplomatic outreach (April 14) potentially easing war premium. Closed at ₹1,019 — below target range of ₹1,050-1,080. Target was exceeded during the prediction window but not at check date.",
       "postmortem": {
         "root_cause": "War premium duration premium correctly predicted (stock hit 1,132), but intraday reversal on Iran-US outreach news caused close below target range",
         "missed_factor": "Diplomatic signal effect on defense stocks: Trump-Iran outreach on April 14 triggered profit-booking in defense names even before formal deal",
-        "signal_missed": "FORECAST_PAT003 (geopolitical binary) \u2014 Iran outreach is a partial de-escalation signal that triggers defense stock rotation even before formal deal",
+        "signal_missed": "FORECAST_PAT003 (geopolitical binary) — Iran outreach is a partial de-escalation signal that triggers defense stock rotation even before formal deal",
         "lesson": "For defense stock targets in geopolitical escalation: Add EXIT TRIGGER for any diplomatic outreach signal. Even informal talks = partial take-profit."
       },
       "scored_on": "2026-04-14",
-      "confidence_note": "ON TRACK: ASTRA MICRO at \u20b91,019.45 \u2014 already breached \u20b91,000. Now needs +3-6% more to hit \u20b91,050-1,080 target. April 10 Islamabad talks are key risk. 2-week ceasefire = managed tension = defense premium extended. Confidence raised to 4.",
+      "confidence_note": "ON TRACK: ASTRA MICRO at ₹1,019.45 — already breached ₹1,000. Now needs +3-6% more to hit ₹1,050-1,080 target. April 10 Islamabad talks are key risk. 2-week ceasefire = managed tension = defense premium extended. Confidence raised to 4.",
       "status": "PARTIAL"
     },
     {
@@ -443,12 +443,12 @@
       "horizon": "7D",
       "date": "2026-04-07",
       "stock": "INDIGO",
-      "prediction": "INDIGO will fall below \u20b94,100 within 7 days as ATF costs and war premium weigh, regardless of Hormuz outcome",
+      "prediction": "INDIGO will fall below ₹4,100 within 7 days as ATF costs and war premium weigh, regardless of Hormuz outcome",
       "entry_price": 4251.0,
       "target": "<4100",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "INDIGO already down -1.01% today to ~\u20b94,251. ATF is 35-40% of operating costs. Brent at $110.15 \u2014 even if Hormuz deal reduces crude, current ATF costs are locking in margin compression for Q4FY26 results.",
+      "reasoning": "INDIGO already down -1.01% today to ~₹4,251. ATF is 35-40% of operating costs. Brent at $110.15 — even if Hormuz deal reduces crude, current ATF costs are locking in margin compression for Q4FY26 results.",
       "factors_checked": [
         "M001",
         "S002",
@@ -463,15 +463,15 @@
       "check_date": "2026-04-14",
       "outcome": "WRONG",
       "outcome_price": 4427.2,
-      "outcome_evidence": "April 14 is a market holiday. Using April 13 close of \u20b94,427.20. INDIGO never came close to \u20b94,100 target. IndiGo was stable in the \u20b94,300-4,600 range throughout the prediction window. Despite crude oil spike (+6.95% to \u20b9102.26 on April 13) and Hormuz blockade fears, IndiGo held well above \u20b94,100. Stock fell -2.79% on April 13 but remained far above target.",
+      "outcome_evidence": "April 14 is a market holiday. Using April 13 close of ₹4,427.20. INDIGO never came close to ₹4,100 target. IndiGo was stable in the ₹4,300-4,600 range throughout the prediction window. Despite crude oil spike (+6.95% to ₹102.26 on April 13) and Hormuz blockade fears, IndiGo held well above ₹4,100. Stock fell -2.79% on April 13 but remained far above target.",
       "postmortem": {
         "root_cause": "Magnitude of crude oil impact on IndiGo was overestimated. Stock has hedged fuel costs and forward-sold capacity. $100+ Brent causes concern but IndiGo has pricing power and demand resilience.",
         "missed_factor": "IndiGo demand resilience: Post-COVID India aviation demand is inelastic at this ATF level. Airline passed costs to passengers faster than expected.",
-        "signal_missed": "T001 (52-week high proximity) \u2014 IndiGo was well above its support levels and had no trigger to drop to 4,100 in a 7-day window",
-        "lesson": "For bearish aviation calls, require either: (1) Brent sustained >$110 for 2+ weeks, or (2) Demand shock signal, or (3) Technical breakdown. \u20b94,100 target from \u20b94,500 = -8.9% move needing a catalyst beyond single crude spike."
+        "signal_missed": "T001 (52-week high proximity) — IndiGo was well above its support levels and had no trigger to drop to 4,100 in a 7-day window",
+        "lesson": "For bearish aviation calls, require either: (1) Brent sustained >$110 for 2+ weeks, or (2) Demand shock signal, or (3) Technical breakdown. ₹4,100 target from ₹4,500 = -8.9% move needing a catalyst beyond single crude spike."
       },
       "scored_on": "2026-04-14",
-      "confidence_note": "THESIS INVALIDATED: IndiGo closed at \u20b94,614.90 on April 8 \u2014 UP 8.11% from April 7. Stock is 12.6% ABOVE the \u20b94,100 target. Ceasefire + Brent crash to $93 completely reversed the ATF cost thesis. Requires -11.2% fall by April 14 which is very unlikely. Will score WRONG at check_date April 14. Confidence downgraded to 1.",
+      "confidence_note": "THESIS INVALIDATED: IndiGo closed at ₹4,614.90 on April 8 — UP 8.11% from April 7. Stock is 12.6% ABOVE the ₹4,100 target. Ceasefire + Brent crash to $93 completely reversed the ATF cost thesis. Requires -11.2% fall by April 14 which is very unlikely. Will score WRONG at check_date April 14. Confidence downgraded to 1.",
       "status": "WRONG"
     },
     {
@@ -479,10 +479,10 @@
       "horizon": "4W",
       "date": "2026-04-07",
       "stock": "NIFTY IT",
-      "prediction": "Nifty IT index will outperform Nifty 50 by 5\u201310% over the next 4 weeks as USD strength + US Q1 earnings season drives global tech rotation into Indian IT",
+      "prediction": "Nifty IT index will outperform Nifty 50 by 5–10% over the next 4 weeks as USD strength + US Q1 earnings season drives global tech rotation into Indian IT",
       "entry_price": 35000,
       "target": "outperform Nifty by 5-10%",
-      "confidence": 3,
+      "confidence": 1,
       "category": "HIGH",
       "reasoning": "April 7 session revealed IT-USD decoupling pattern (PAT002): HCLTECH +2.73%, INFY +2.54%, TCS +2.66% led market recovery despite war premium. USD strengthening makes Indian IT exporters more competitive. US Q1 earnings season (April-May) typically positive for IT sentiment. Even in Iran escalation scenario, IT stocks provide portfolio insulation as USD appreciates. Multi-factor thesis: USD strength + earnings season + defensive quality.",
       "factors_checked": [
@@ -502,14 +502,19 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "confidence_note": "INTACT: TCS Q4 results on April 9. IT sector decoupling confirmed on April 7+8. TCS at \u20b92,555.30. Thesis has 27 days remaining. If TCS Q4 results beat expectations, confidence raises to 4."
+      "confidence_note": "DOWNGRADED 1★ (Apr 26 weekly audit): M013 + IT_CASCADE_OVERRIDES_MACRO both active. SELL_ON_EARNINGS_NEWS_IT 4th occurrence (HCLTECH). AUDIT_LEGACY_ON_PROMOTION rule applied — IT outperformance impossible in GEOPOLITICAL_RISK_ELEVATED regime with Brent >$100. P039 supersedes directional thesis.",
+      "auto_audit_flag": [
+        "M013",
+        "IT_CASCADE_OVERRIDES_MACRO",
+        "SELL_ON_EARNINGS_NEWS_IT"
+      ]
     },
     {
       "pred_id": "P015",
       "horizon": "7D",
       "date": "2026-04-08",
       "stock": "INDIGO",
-      "prediction": "INDIGO will stabilize above \u20b94,150 over next 7 days as ceasefire relief reduces ATF cost panic, but stock remains pressured by Q4FY26 margin headwinds",
+      "prediction": "INDIGO will stabilize above ₹4,150 over next 7 days as ceasefire relief reduces ATF cost panic, but stock remains pressured by Q4FY26 margin headwinds",
       "entry_price": 4180,
       "target": "4150-4300",
       "confidence": 3,
@@ -529,14 +534,14 @@
       "check_date": "2026-04-15",
       "outcome": "RIGHT",
       "outcome_price": 4638.0,
-      "outcome_evidence": "INDIGO closed \u20b94,638.00 on April 15, well above the \u20b94,150 stabilization target. Stock held above \u20b94,150 throughout the 7-day window (April 8-15). The relief rally scenario materialized fully \u2014 ATF cost relief on declining Brent + Iran diplomacy. Target range of \u20b94,150-4,300 was massively conservative \u2014 INDIGO surged to \u20b94,614+ on April 8 itself. Core directional thesis CORRECT: stock stabilized and continued higher, not lower.",
+      "outcome_evidence": "INDIGO closed ₹4,638.00 on April 15, well above the ₹4,150 stabilization target. Stock held above ₹4,150 throughout the 7-day window (April 8-15). The relief rally scenario materialized fully — ATF cost relief on declining Brent + Iran diplomacy. Target range of ₹4,150-4,300 was massively conservative — INDIGO surged to ₹4,614+ on April 8 itself. Core directional thesis CORRECT: stock stabilized and continued higher, not lower.",
       "postmortem": {
-        "root_cause": "Target range too conservative (\u20b94,150-4,300). Should have been \u20b94,400-4,700 given ceasefire + ATF relief",
+        "root_cause": "Target range too conservative (₹4,150-4,300). Should have been ₹4,400-4,700 given ceasefire + ATF relief",
         "lesson": "When relief rally scenario is possible, set target range at 70th-80th percentile outcome, not median. ATF cost as % of aviation revenue = direct Brent multiplier.",
-        "grade_rationale": "RIGHT on directional call (stabilize above \u20b94,150). WRONG on range (4,150-4,300 was too narrow). Scoring as RIGHT because the prediction said \"stabilize above \u20b94,150\" which was fully achieved."
+        "grade_rationale": "RIGHT on directional call (stabilize above ₹4,150). WRONG on range (4,150-4,300 was too narrow). Scoring as RIGHT because the prediction said \"stabilize above ₹4,150\" which was fully achieved."
       },
       "scored_on": "2026-04-15",
-      "confidence_note": "TARGET EXCEEDED ON ENTRY DAY: IndiGo closed at \u20b94,614.90 on April 8, far above the \u20b94,150-4,300 target range. This suggests target was too conservative. Will score as RIGHT (stable above \u20b94,150) but the range was blown out by the ATF relief rally. Confidence raised to 4. Updating target band upward mentally to \u20b94,500-4,700 to track consolidation."
+      "confidence_note": "TARGET EXCEEDED ON ENTRY DAY: IndiGo closed at ₹4,614.90 on April 8, far above the ₹4,150-4,300 target range. This suggests target was too conservative. Will score as RIGHT (stable above ₹4,150) but the range was blown out by the ATF relief rally. Confidence raised to 4. Updating target band upward mentally to ₹4,500-4,700 to track consolidation."
     },
     {
       "pred_id": "P016",
@@ -563,11 +568,11 @@
       "check_date": "2026-04-15",
       "outcome": "PARTIAL_CORRECT",
       "outcome_price": 24231.3,
-      "outcome_evidence": "Nifty closed at 24,231.30 on April 15. Prediction was \"consolidate in 23,900-24,100 range.\" The 23,900 floor held perfectly \u2014 Nifty never breached that level. But the 24,100 ceiling was broken significantly, closing 131 pts above. Iran-US talks imminent drove a relief rally that exceeded the consolidation band. Direction (no major selloff, market held) correct, but range was too tight on the upside.",
+      "outcome_evidence": "Nifty closed at 24,231.30 on April 15. Prediction was \"consolidate in 23,900-24,100 range.\" The 23,900 floor held perfectly — Nifty never breached that level. But the 24,100 ceiling was broken significantly, closing 131 pts above. Iran-US talks imminent drove a relief rally that exceeded the consolidation band. Direction (no major selloff, market held) correct, but range was too tight on the upside.",
       "postmortem": {
-        "root_cause": "Range ceiling (24,100) set at April 8 ceasefire close level \u2014 did not account for continued rally from Iran-US diplomatic momentum",
+        "root_cause": "Range ceiling (24,100) set at April 8 ceasefire close level — did not account for continued rally from Iran-US diplomatic momentum",
         "lesson": "After a major geopolitical relief rally, \"consolidation\" can mean higher consolidation at a new level. Add 200-300 pts to the upper bound in DIPLOMACY_ACCELERATING regime.",
-        "grade_rationale": "PARTIAL_CORRECT \u2014 floor held but ceiling broken. Market consolidated but at a higher level than predicted."
+        "grade_rationale": "PARTIAL_CORRECT — floor held but ceiling broken. Market consolidated but at a higher level than predicted."
       },
       "scored_on": "2026-04-15",
       "confidence_note": "ON TRACK as of April 8 close (23,997.35). Thesis: consolidation 23,900-24,100. TCS earnings and April 10 talks are key risks. Confidence 3."
@@ -599,19 +604,19 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "confidence_note": "NEW: Entry at \u20b9182.70 (April 8 close). Brent at $93.13 = GRM recovery thesis active. 30 days to target \u20b9200-210. Confidence 3."
+      "confidence_note": "NEW: Entry at ₹182.70 (April 8 close). Brent at $93.13 = GRM recovery thesis active. 30 days to target ₹200-210. Confidence 3."
     },
     {
       "pred_id": "P018",
       "horizon": "7D",
       "date": "2026-04-08",
       "stock": "TCS",
-      "prediction": "TCS will close above \u20b92,600 within 7 days following Q4FY26 results (announced April 9), supported by IT-USD decoupling pattern and stable margin guidance",
+      "prediction": "TCS will close above ₹2,600 within 7 days following Q4FY26 results (announced April 9), supported by IT-USD decoupling pattern and stable margin guidance",
       "entry_price": 2555.3,
       "target": ">2600",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "TCS announcing Q4FY26 results on April 9. IT sector has shown strong momentum (April 7: +2.66%, broad market IT decoupling confirmed). USD strength supports Indian IT export revenue. Ceasefire removes rupee depreciation risk. US Q1 earnings season positive sentiment. Q4 deal wins + revenue guidance will likely provide upside catalyst. TCS at \u20b92,555.30 \u2014 \u20b92,600 target is +1.7% which is modest given earnings beat potential. Multi-factor: IT-USD decoupling (FORECAST_PAT001), Q4 earnings, USD strength, de-escalation regime.",
+      "reasoning": "TCS announcing Q4FY26 results on April 9. IT sector has shown strong momentum (April 7: +2.66%, broad market IT decoupling confirmed). USD strength supports Indian IT export revenue. Ceasefire removes rupee depreciation risk. US Q1 earnings season positive sentiment. Q4 deal wins + revenue guidance will likely provide upside catalyst. TCS at ₹2,555.30 — ₹2,600 target is +1.7% which is modest given earnings beat potential. Multi-factor: IT-USD decoupling (FORECAST_PAT001), Q4 earnings, USD strength, de-escalation regime.",
       "factors_checked": [
         "M004",
         "M005",
@@ -626,12 +631,12 @@
       "check_date": "2026-04-15",
       "outcome": "WRONG",
       "outcome_price": 2542.4,
-      "outcome_evidence": "TCS closed at \u20b92,542.40 on April 15, below the \u20b92,600 target. Despite strong Q4FY26 results (profit +12% YoY, $12B deal wins, \u20b931 final dividend), the stock failed to sustain above \u20b92,600. Geopolitical macro headwinds (blockade, crude elevated) and broad IT sector pressure weighed. P021 already identified this as WRONG \u2014 TCS sell-on-news pattern prevailed. Note: TCS 52-week range \u20b92,346-3,630 \u2014 stock is at depressed levels, fundamental support at \u20b92,420-2,500.",
+      "outcome_evidence": "TCS closed at ₹2,542.40 on April 15, below the ₹2,600 target. Despite strong Q4FY26 results (profit +12% YoY, $12B deal wins, ₹31 final dividend), the stock failed to sustain above ₹2,600. Geopolitical macro headwinds (blockade, crude elevated) and broad IT sector pressure weighed. P021 already identified this as WRONG — TCS sell-on-news pattern prevailed. Note: TCS 52-week range ₹2,346-3,630 — stock is at depressed levels, fundamental support at ₹2,420-2,500.",
       "postmortem": {
         "root_cause": "Earnings beat + strong deal wins were not enough to overcome macro headwinds (Brent $96+, USD/INR uncertainty, IT sector risk-off in current regime). Sell-on-news pattern overrode fundamentals.",
         "lesson": "In BLOCKADE_ESCALATION_STABILIZED regime, IT stocks face headwinds from: (1) risk-off FII selling, (2) USD/INR uncertainty reducing confidence in export revenue forecasts, (3) macro fear overrides sector fundamentals. Do not predict IT breakouts during active geopolitical crises.",
         "rca_tag": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS",
-        "grade_rationale": "WRONG \u2014 TCS closed \u20b92,542 vs \u20b92,600 target. Results beat but stock underperformed thesis."
+        "grade_rationale": "WRONG — TCS closed ₹2,542 vs ₹2,600 target. Results beat but stock underperformed thesis."
       },
       "scored_on": "2026-04-15"
     },
@@ -640,12 +645,12 @@
       "horizon": "7D",
       "date": "2026-04-08",
       "stock": "ADANI PORT",
-      "prediction": "ADANI PORT will sustain above \u20b91,430 and test \u20b91,490-1,540 within 7 days as Hormuz safe passage protocol confirms cargo traffic restoration",
+      "prediction": "ADANI PORT will sustain above ₹1,430 and test ₹1,490-1,540 within 7 days as Hormuz safe passage protocol confirms cargo traffic restoration",
       "entry_price": 1453.3,
       "target": "1490-1540",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "Hormuz safe passage protocol was confirmed in ceasefire terms on April 8. ADANI PORT benefits directly from shipping traffic restoration through Strait of Hormuz \u2014 oil tankers, LNG, cargo. Stock already rallied on April 8 from pre-conflict levels. April 10 Islamabad talks progress = additional catalyst. If talks extend ceasefire to 4+ weeks, port traffic visibility improves significantly. Multi-factor: Hormuz protocol (direct revenue catalyst), rupee stability, PSU infrastructure re-rating, April 10 talks progress.",
+      "reasoning": "Hormuz safe passage protocol was confirmed in ceasefire terms on April 8. ADANI PORT benefits directly from shipping traffic restoration through Strait of Hormuz — oil tankers, LNG, cargo. Stock already rallied on April 8 from pre-conflict levels. April 10 Islamabad talks progress = additional catalyst. If talks extend ceasefire to 4+ weeks, port traffic visibility improves significantly. Multi-factor: Hormuz protocol (direct revenue catalyst), rupee stability, PSU infrastructure re-rating, April 10 talks progress.",
       "factors_checked": [
         "M001",
         "M003",
@@ -660,11 +665,11 @@
       "check_date": "2026-04-15",
       "outcome": "RIGHT",
       "outcome_price": 1511.8,
-      "outcome_evidence": "ADANI PORT closed \u20b91,511.80 on April 15, squarely INSIDE the \u20b91,490-1,540 target range. Hormuz safe passage protocol thesis played out correctly \u2014 port traffic restoration beneficiary. Stock also sustained above \u20b91,430 throughout the 7-day window as predicted. April 15 session: ADANI PORT +3.17%, in line with broader PSU infrastructure re-rating.",
+      "outcome_evidence": "ADANI PORT closed ₹1,511.80 on April 15, squarely INSIDE the ₹1,490-1,540 target range. Hormuz safe passage protocol thesis played out correctly — port traffic restoration beneficiary. Stock also sustained above ₹1,430 throughout the 7-day window as predicted. April 15 session: ADANI PORT +3.17%, in line with broader PSU infrastructure re-rating.",
       "postmortem": {
-        "root_cause": "N/A \u2014 prediction was RIGHT",
+        "root_cause": "N/A — prediction was RIGHT",
         "lesson": "Hormuz Protocol thesis (Adani port traffic restoration) was well-identified. Infrastructure/PSU names with direct geopolitical beneficiary status outperform in DIPLOMACY_ACCELERATING regime. Keep this framework.",
-        "grade_rationale": "RIGHT \u2014 stock hit \u20b91,511 inside \u20b91,490-1,540 target range. Core thesis (Hormuz reopening = port traffic) confirmed."
+        "grade_rationale": "RIGHT — stock hit ₹1,511 inside ₹1,490-1,540 target range. Core thesis (Hormuz reopening = port traffic) confirmed."
       },
       "scored_on": "2026-04-15"
     },
@@ -673,12 +678,12 @@
       "horizon": "7D",
       "date": "2026-04-08",
       "stock": "SETFGOLD",
-      "prediction": "SETFGOLD will correct toward \u20b9120-122 within 7 days as US-Iran ceasefire progressively compresses gold's geopolitical war premium",
+      "prediction": "SETFGOLD will correct toward ₹120-122 within 7 days as US-Iran ceasefire progressively compresses gold's geopolitical war premium",
       "entry_price": 125.59,
       "target": "120-122",
       "confidence": 3,
       "category": "MEDIUM",
-      "reasoning": "SETFGOLD has been the portfolio's war hedge. Gold was at near-ATH on Iranian war premium. April 8 ceasefire + Hormuz safe passage protocol removes the primary geopolitical driver of gold's elevated level. Historical pattern: gold corrects 3-7% within 1 week of confirmed ceasefires in major geopolitical crises. April 10 Islamabad talks may re-introduce some risk premium but overall trajectory is now downward. A005 action exit trigger (ceasefire + Hormuz reopened + gold <$5,100/oz) has now been triggered \u2014 this prediction also serves as an A005 exit signal validation. Multi-factor: ceasefire de-escalation, gold war premium compression, risk-on regime (safe-haven demand falling), USD behavior post-ceasefire.",
+      "reasoning": "SETFGOLD has been the portfolio's war hedge. Gold was at near-ATH on Iranian war premium. April 8 ceasefire + Hormuz safe passage protocol removes the primary geopolitical driver of gold's elevated level. Historical pattern: gold corrects 3-7% within 1 week of confirmed ceasefires in major geopolitical crises. April 10 Islamabad talks may re-introduce some risk premium but overall trajectory is now downward. A005 action exit trigger (ceasefire + Hormuz reopened + gold <$5,100/oz) has now been triggered — this prediction also serves as an A005 exit signal validation. Multi-factor: ceasefire de-escalation, gold war premium compression, risk-on regime (safe-haven demand falling), USD behavior post-ceasefire.",
       "factors_checked": [
         "M008",
         "M001",
@@ -692,27 +697,27 @@
       "check_date": "2026-04-15",
       "outcome": "WRONG",
       "outcome_price": 129.31,
-      "outcome_evidence": "SETFGOLD closed \u20b9129.31 on April 15, well ABOVE the \u20b9120-122 target. The thesis was that ceasefire would compress gold's war premium toward \u20b9120-122. Instead, Islamabad talks failed (April 11), blockade expanded, and Iran IRGC issued 'last warning'. Gold war premium INCREASED, not decreased. SETFGOLD is now \u20b9129.31 vs entry \u20b9125.59. The A005 exit signal (gold <$5,100) was NOT triggered \u2014 gold is at $4,816 with war premium sustained. Confidence was downgraded to 1\u2605 on April 12 weekly review \u2014 prediction correctly pre-identified as WRONG.",
+      "outcome_evidence": "SETFGOLD closed ₹129.31 on April 15, well ABOVE the ₹120-122 target. The thesis was that ceasefire would compress gold's war premium toward ₹120-122. Instead, Islamabad talks failed (April 11), blockade expanded, and Iran IRGC issued 'last warning'. Gold war premium INCREASED, not decreased. SETFGOLD is now ₹129.31 vs entry ₹125.59. The A005 exit signal (gold <$5,100) was NOT triggered — gold is at $4,816 with war premium sustained. Confidence was downgraded to 1★ on April 12 weekly review — prediction correctly pre-identified as WRONG.",
       "postmortem": {
-        "root_cause": "Ceasefire fragility underestimated. April 11 Islamabad failure + blockade expansion reversed gold war premium compression completely. The 7-day prediction was made on April 8 assuming ceasefire durability \u2014 that assumption failed within 3 days.",
-        "lesson": "Gold war premium predictions require 3-day ceasefire stability confirmation before making bearish calls. In TALKS_FAILED regime, gold remains elevated. The April 12 regime change (TALKS_FAILED) should have triggered an early position review \u2014 the weekly review correctly identified this as WRONG.",
+        "root_cause": "Ceasefire fragility underestimated. April 11 Islamabad failure + blockade expansion reversed gold war premium compression completely. The 7-day prediction was made on April 8 assuming ceasefire durability — that assumption failed within 3 days.",
+        "lesson": "Gold war premium predictions require 3-day ceasefire stability confirmation before making bearish calls. In TALKS_FAILED regime, gold remains elevated. The April 12 regime change (TALKS_FAILED) should have triggered an early position review — the weekly review correctly identified this as WRONG.",
         "rca_tag": "CEASEFIRE_FRAGILITY_UNDERESTIMATED",
-        "grade_rationale": "WRONG \u2014 gold war premium sustained, SETFGOLD \u20b9129.31 vs target \u20b9120-122."
+        "grade_rationale": "WRONG — gold war premium sustained, SETFGOLD ₹129.31 vs target ₹120-122."
       },
       "scored_on": "2026-04-15",
-      "confidence_note": "THESIS INVALIDATED (April 12 weekly review): Islamabad talks FAILED April 11. Ceasefire fragile. War premium not compressing \u2014 REVERSING. SETFGOLD at \u20b9127.31 on April 10. Gold safe-haven demand likely INCREASES with failed talks. Target \u20b9120-122 requires -4 to -5.7% drop in 3 days while macro headwinds push GOLD UP. Confidence downgraded to 1\u2605 \u2014 WILL SCORE WRONG April 15. A005 exit: DO NOT SELL at open April 14 \u2014 hold gold position as hedge."
+      "confidence_note": "THESIS INVALIDATED (April 12 weekly review): Islamabad talks FAILED April 11. Ceasefire fragile. War premium not compressing — REVERSING. SETFGOLD at ₹127.31 on April 10. Gold safe-haven demand likely INCREASES with failed talks. Target ₹120-122 requires -4 to -5.7% drop in 3 days while macro headwinds push GOLD UP. Confidence downgraded to 1★ — WILL SCORE WRONG April 15. A005 exit: DO NOT SELL at open April 14 — hold gold position as hedge."
     },
     {
       "pred_id": "P021",
       "horizon": "7D",
       "date": "2026-04-09",
       "stock": "TCS",
-      "prediction": "TCS will test \u20b92,650-2,700 by April 16 on Q4FY26 strong beat and record TCV",
+      "prediction": "TCS will test ₹2,650-2,700 by April 16 on Q4FY26 strong beat and record TCV",
       "entry_price": 2587.75,
       "target": "2650-2700",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "TCS Q4FY26 results beat: TCV $12B (highest ever), revenue \u20b970,698 Cr (+9.64% YoY beat), EBIT margin 25%. 18+ brokerages maintain buy. Sell-on-news reversal expected in 5-7 sessions.",
+      "reasoning": "TCS Q4FY26 results beat: TCV $12B (highest ever), revenue ₹70,698 Cr (+9.64% YoY beat), EBIT margin 25%. 18+ brokerages maintain buy. Sell-on-news reversal expected in 5-7 sessions.",
       "factors_checked": [
         "S009",
         "M002",
@@ -726,15 +731,15 @@
       "check_date": "2026-04-16",
       "outcome": "WRONG",
       "outcome_price": 2576.9,
-      "outcome_evidence": "TCS closed \u20b92576.9 on April 16 (check_date). Target was \u20b92,650-2,700. Stock rallied +0.86% today but remained well below target. Despite strong Q4FY26 results, sell-on-news persisted through the full 7-day window. BLOCKADE_ESCALATION regime overrode earnings-driven breakout thesis.",
+      "outcome_evidence": "TCS closed ₹2576.9 on April 16 (check_date). Target was ₹2,650-2,700. Stock rallied +0.86% today but remained well below target. Despite strong Q4FY26 results, sell-on-news persisted through the full 7-day window. BLOCKADE_ESCALATION regime overrode earnings-driven breakout thesis.",
       "postmortem": {
-        "root_cause": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS \u2014 2nd occurrence. Strong Q4 beat ($12B TCV, record revenue) could not overcome BLOCKADE_ESCALATION regime headwinds. Sell-on-news extended beyond typical 5-7 day reversal.",
+        "root_cause": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS — 2nd occurrence. Strong Q4 beat ($12B TCV, record revenue) could not overcome BLOCKADE_ESCALATION regime headwinds. Sell-on-news extended beyond typical 5-7 day reversal.",
         "lesson": "In BLOCKADE_ESCALATION regime, IT stocks need regime change (ceasefire confirmed + Brent <$92) before fundamentals-driven breakout calls. 2nd confirmation of M013 pattern (IT Regime Risk Filter).",
         "rca_tag": "MACRO_REGIME_OVERRIDE_FUNDAMENTALS",
-        "grade_rationale": "WRONG \u2014 TCS closed \u20b92576.9 vs \u20b92,650-2,700 target. 2nd consecutive TCS WRONG prediction (P018, P021)."
+        "grade_rationale": "WRONG — TCS closed ₹2576.9 vs ₹2,650-2,700 target. 2nd consecutive TCS WRONG prediction (P018, P021)."
       },
       "scored_on": "2026-04-16T17:30:00",
-      "confidence_note": "DOWNGRADED to 2\u2605 (April 12 weekly review): TCS at ~\u20b92,524 on April 10-11. Needs +5-7% in 4 trading days. Failed Islamabad talks add macro headwinds. Sell-on-news persists. Possible WRONG unless strong IT sector catalyst emerges.",
+      "confidence_note": "DOWNGRADED to 2★ (April 12 weekly review): TCS at ~₹2,524 on April 10-11. Needs +5-7% in 4 trading days. Failed Islamabad talks add macro headwinds. Sell-on-news persists. Possible WRONG unless strong IT sector catalyst emerges.",
       "status": "WRONG"
     },
     {
@@ -742,12 +747,12 @@
       "horizon": "7D",
       "date": "2026-04-10",
       "stock": "TCS",
-      "prediction": "TCS recovers to \u20b92,600 by April 17 on post-sell-on-news reversal",
+      "prediction": "TCS recovers to ₹2,600 by April 17 on post-sell-on-news reversal",
       "entry_price": 2539.8,
       "target": ">2600",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "TCS sell-on-news pattern after record Q4 beat. 18+ brokerages retain positive view. Sell-on-news typically reverses in 5-7 sessions when fundamentals support. Needs +2.4% from \u20b92,539.80.",
+      "reasoning": "TCS sell-on-news pattern after record Q4 beat. 18+ brokerages retain positive view. Sell-on-news typically reverses in 5-7 sessions when fundamentals support. Needs +2.4% from ₹2,539.80.",
       "factors_checked": [
         "S009",
         "M002",
@@ -760,22 +765,22 @@
       "check_date": "2026-04-17",
       "outcome": "WRONG",
       "outcome_price": 2581.5,
-      "outcome_evidence": "TCS closed \u20b92,581.50 on 2026-04-17 (+0.18% today). Target was >\u20b92,600. Short by \u20b918.50 (0.71% below target). Needed +0.74% from yesterday close \u20b92,576.9; actual move only +0.18%. Sell-on-news pattern persisted through full 7D window. 3rd consecutive TCS post-earnings reversion prediction WRONG (P018, P021, P022).",
-      "postmortem": "MACRO_REGIME_OVERRIDE + PERSISTENT_SELL_ON_NEWS \u2014 Even with broader market rallying +0.65% on Brent collapse and ceasefire progress, TCS failed to participate in the rally. Closed only +0.18% while Nifty +0.65%. IT sector weak (WIPRO -2.83% on guidance; INFY -0.04%). Post-earnings sell-on-news persisted 9+ sessions. M013 (IT Regime Risk Filter) now at 3 occurrences \u2014 PROMOTE to validated pattern.",
+      "outcome_evidence": "TCS closed ₹2,581.50 on 2026-04-17 (+0.18% today). Target was >₹2,600. Short by ₹18.50 (0.71% below target). Needed +0.74% from yesterday close ₹2,576.9; actual move only +0.18%. Sell-on-news pattern persisted through full 7D window. 3rd consecutive TCS post-earnings reversion prediction WRONG (P018, P021, P022).",
+      "postmortem": "MACRO_REGIME_OVERRIDE + PERSISTENT_SELL_ON_NEWS — Even with broader market rallying +0.65% on Brent collapse and ceasefire progress, TCS failed to participate in the rally. Closed only +0.18% while Nifty +0.65%. IT sector weak (WIPRO -2.83% on guidance; INFY -0.04%). Post-earnings sell-on-news persisted 9+ sessions. M013 (IT Regime Risk Filter) now at 3 occurrences — PROMOTE to validated pattern.",
       "scored_on": "2026-04-17",
-      "confidence_note": "TCS at \u20b92576.9 (+0.86% today). Needs +0.9% to reach \u20b92,600 by Apr 17. Possible but unlikely \u2014 P018 and P021 both scored WRONG on same thesis. Confidence 1\u2605."
+      "confidence_note": "TCS at ₹2576.9 (+0.86% today). Needs +0.9% to reach ₹2,600 by Apr 17. Possible but unlikely — P018 and P021 both scored WRONG on same thesis. Confidence 1★."
     },
     {
       "pred_id": "P023",
       "horizon": "7D",
       "date": "2026-04-12",
       "stock": "SETFGOLD",
-      "prediction": "SETFGOLD will rally to \u20b9130-134 by April 17 as failed Islamabad talks drive gold safe-haven demand and war premium re-expansion",
+      "prediction": "SETFGOLD will rally to ₹130-134 by April 17 as failed Islamabad talks drive gold safe-haven demand and war premium re-expansion",
       "entry_price": 127.31,
       "target": "130-134",
       "confidence": 4,
       "category": "HIGH",
-      "reasoning": "Islamabad talks FAILED April 11 after 21 hours (VP Vance left without deal). US Navy entered Hormuz \u2014 Iran IRGC 'last warning.' Ceasefire fragile ahead of April 22 deadline. Gold is the primary safe-haven in geopolitical crises. From \u20b9127.31 to \u20b9130-134 requires +2.1-5.3%. With Brent expected to spike on Monday and war premium returning, gold demand increases. FII selling likely to resume \u2014 DII support fragile. Risk-off positioning. SETFGOLD is portfolio hedge. Keep 25-30% of gold position intact (or reinstate A005 exit) through April 22 ceasefire deadline. Multi-factor: failed peace talks (TALKS_FAILED pattern), Brent re-spike, risk-off regime, GOLD_HEDGING_PRE_BINARY pattern continuation.",
+      "reasoning": "Islamabad talks FAILED April 11 after 21 hours (VP Vance left without deal). US Navy entered Hormuz — Iran IRGC 'last warning.' Ceasefire fragile ahead of April 22 deadline. Gold is the primary safe-haven in geopolitical crises. From ₹127.31 to ₹130-134 requires +2.1-5.3%. With Brent expected to spike on Monday and war premium returning, gold demand increases. FII selling likely to resume — DII support fragile. Risk-off positioning. SETFGOLD is portfolio hedge. Keep 25-30% of gold position intact (or reinstate A005 exit) through April 22 ceasefire deadline. Multi-factor: failed peace talks (TALKS_FAILED pattern), Brent re-spike, risk-off regime, GOLD_HEDGING_PRE_BINARY pattern continuation.",
       "factors_checked": [
         "M001",
         "TALKS_FAILED_WAR_PREMIUM_RETURN",
@@ -789,10 +794,10 @@
       "check_date": "2026-04-17",
       "outcome": "WRONG",
       "outcome_price": 128.69,
-      "outcome_evidence": "SETFGOLD closed \u20b9128.69 on 2026-04-17 (-0.59% today). Target was \u20b9130-134. Short by \u20b91.31 (1.0% below lower bound). Gold USD $4,813 (+0.58%) rose only marginally \u2014 safe-haven bid faded as Brent collapsed -3.19% and ceasefire extension \"in principle agreement\" was reported. War premium unwinding reduced gold hedging demand.",
-      "postmortem": "DIPLOMATIC_MOMENTUM_OVERRODE_WAR_PREMIUM \u2014 Prediction assumed failed Islamabad talks + blockade escalation = sustained gold bid through April 22 deadline. Instead, by April 15-17 Trump signaled deal optimism, US-Iran second round talks announced, ceasefire extension \"in principle\" reported, and Brent collapsed from $102 peak to $96.22. Gold bid faded despite April 22 expiry proximity. Pattern: GEOPOLITICAL_BINARY_UNDERWEIGHTING continuation \u2014 binary resolution toward diplomacy was undersized. Related to P020 SETFGOLD (also WRONG) and P024 NIFTY (also WRONG) \u2014 same pattern of bearish-thesis-after-failure being invalidated by diplomatic restart.",
+      "outcome_evidence": "SETFGOLD closed ₹128.69 on 2026-04-17 (-0.59% today). Target was ₹130-134. Short by ₹1.31 (1.0% below lower bound). Gold USD $4,813 (+0.58%) rose only marginally — safe-haven bid faded as Brent collapsed -3.19% and ceasefire extension \"in principle agreement\" was reported. War premium unwinding reduced gold hedging demand.",
+      "postmortem": "DIPLOMATIC_MOMENTUM_OVERRODE_WAR_PREMIUM — Prediction assumed failed Islamabad talks + blockade escalation = sustained gold bid through April 22 deadline. Instead, by April 15-17 Trump signaled deal optimism, US-Iran second round talks announced, ceasefire extension \"in principle\" reported, and Brent collapsed from $102 peak to $96.22. Gold bid faded despite April 22 expiry proximity. Pattern: GEOPOLITICAL_BINARY_UNDERWEIGHTING continuation — binary resolution toward diplomacy was undersized. Related to P020 SETFGOLD (also WRONG) and P024 NIFTY (also WRONG) — same pattern of bearish-thesis-after-failure being invalidated by diplomatic restart.",
       "scored_on": "2026-04-17",
-      "confidence_note": "SETFGOLD at \u20b9129.45 (+0.11% today). Gold $4,839 (+0.81%). Target \u20b9130-134 is very close \u2014 needs just +0.4% to breach lower bound. Iran counter-threats (Gulf/Red Sea blockade) sustaining gold war premium. Friday + weekend risk ahead of April 22 = gold likely to hold/rise. Confidence 4\u2605 \u2014 likely RIGHT."
+      "confidence_note": "SETFGOLD at ₹129.45 (+0.11% today). Gold $4,839 (+0.81%). Target ₹130-134 is very close — needs just +0.4% to breach lower bound. Iran counter-threats (Gulf/Red Sea blockade) sustaining gold war premium. Friday + weekend risk ahead of April 22 = gold likely to hold/rise. Confidence 4★ — likely RIGHT."
     },
     {
       "pred_id": "P024",
@@ -804,7 +809,7 @@
       "target": "23200-23700",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "Islamabad talks FAILED April 11 \u2014 no deal after 21 hours. US Navy entered Hormuz. Iran 'last warning.' Ceasefire still holds but war premium is returning. Nifty at 24,050 (April 10 close). Expected Monday April 14 gap-down of -0.8 to -2% on overnight news. FII distribution pattern (FII_CEASEFIRE_DISTRIBUTION) means FII resuming selling after April 10's +\u20b9672 Cr anomaly. Brent likely to spike from $95.95 toward $100 on Monday. Nifty key support at 23,900 \u2014 if breached, next support at 23,500-23,600. P016 range (23,900-24,100) likely to be breached on April 14. Target 23,200-23,700 by April 16 (2-day confirmation). Multi-factor: TALKS_FAILED pattern, FII_CEASEFIRE_DISTRIBUTION, Brent spike risk, P016 range breach.",
+      "reasoning": "Islamabad talks FAILED April 11 — no deal after 21 hours. US Navy entered Hormuz. Iran 'last warning.' Ceasefire still holds but war premium is returning. Nifty at 24,050 (April 10 close). Expected Monday April 14 gap-down of -0.8 to -2% on overnight news. FII distribution pattern (FII_CEASEFIRE_DISTRIBUTION) means FII resuming selling after April 10's +₹672 Cr anomaly. Brent likely to spike from $95.95 toward $100 on Monday. Nifty key support at 23,900 — if breached, next support at 23,500-23,600. P016 range (23,900-24,100) likely to be breached on April 14. Target 23,200-23,700 by April 16 (2-day confirmation). Multi-factor: TALKS_FAILED pattern, FII_CEASEFIRE_DISTRIBUTION, Brent spike risk, P016 range breach.",
       "factors_checked": [
         "TALKS_FAILED_WAR_PREMIUM_RETURN",
         "FII_CEASEFIRE_DISTRIBUTION",
@@ -819,12 +824,12 @@
       "check_date": "2026-04-16",
       "outcome": "WRONG",
       "outcome_price": 24196.75,
-      "outcome_evidence": "Nifty closed 24196.75 on April 16 (check_date). Target was 23,200-23,700. Market went strongly opposite direction \u2014 diplomacy acceleration (Trump: war \"very close to over\") drove sustained rally instead of war premium return. Nifty is ~500 pts ABOVE the upper bound of the target range.",
+      "outcome_evidence": "Nifty closed 24196.75 on April 16 (check_date). Target was 23,200-23,700. Market went strongly opposite direction — diplomacy acceleration (Trump: war \"very close to over\") drove sustained rally instead of war premium return. Nifty is ~500 pts ABOVE the upper bound of the target range.",
       "postmortem": {
-        "root_cause": "DIPLOMATIC_RESTART_NOT_ANTICIPATED \u2014 prediction assumed failed Islamabad talks would sustain bearish momentum. Instead, Trump signaled willingness to negotiate within 2 days of talks failure, completely reversing the bearish thesis.",
+        "root_cause": "DIPLOMATIC_RESTART_NOT_ANTICIPATED — prediction assumed failed Islamabad talks would sustain bearish momentum. Instead, Trump signaled willingness to negotiate within 2 days of talks failure, completely reversing the bearish thesis.",
         "lesson": "Bearish Nifty predictions on talk failures must include auto-invalidation clause for diplomatic restart signals. When Trump signals deal optimism, bearish thesis can collapse within 1-2 sessions.",
         "rca_tag": "DIPLOMATIC_RESTART_NOT_ANTICIPATED",
-        "grade_rationale": "WRONG \u2014 Nifty 24196.75 vs target 23,200-23,700. Market went UP instead of DOWN."
+        "grade_rationale": "WRONG — Nifty 24196.75 vs target 23,200-23,700. Market went UP instead of DOWN."
       },
       "scored_on": "2026-04-16T17:30:00",
       "status": "WRONG"
@@ -834,12 +839,12 @@
       "horizon": "10D",
       "date": "2026-04-12",
       "stock": "ASTRA MICRO",
-      "prediction": "ASTRA MICRO will test \u20b91,050-1,100 by April 22 as failed peace talks restore defense premium and extended ceasefire preserves M012 duration effect",
+      "prediction": "ASTRA MICRO will test ₹1,050-1,100 by April 22 as failed peace talks restore defense premium and extended ceasefire preserves M012 duration effect",
       "entry_price": 1012,
       "target": "1050-1100",
       "confidence": 4,
       "category": "HIGH",
-      "reasoning": "Islamabad talks FAILED \u2014 no deal. War premium returning. Ceasefire still holds but is fragile ahead of April 22 deadline. This is the OPTIMAL scenario for defense electronics stocks: extended managed tension without immediate peace. M012 (Defense Duration Premium) fully applies. Astra Micro at ~\u20b91,012 already broke \u20b91,000 resistance. Target \u20b91,050-1,100 requires +3.8-8.7% over 10 days to April 22. Consistent with P012 check date April 14 providing directional confirmation. Even if ceasefire holds through April 22, war premium sustained. If ceasefire breaks, defense stocks spike further. Defense is a HEADS-I-WIN, TAILS-I-WIN-MORE scenario until April 22 resolution. Multi-factor: M012 (defense duration premium), TALKS_FAILED_WAR_PREMIUM_RETURN, P012 confirmation expected.",
+      "reasoning": "Islamabad talks FAILED — no deal. War premium returning. Ceasefire still holds but is fragile ahead of April 22 deadline. This is the OPTIMAL scenario for defense electronics stocks: extended managed tension without immediate peace. M012 (Defense Duration Premium) fully applies. Astra Micro at ~₹1,012 already broke ₹1,000 resistance. Target ₹1,050-1,100 requires +3.8-8.7% over 10 days to April 22. Consistent with P012 check date April 14 providing directional confirmation. Even if ceasefire holds through April 22, war premium sustained. If ceasefire breaks, defense stocks spike further. Defense is a HEADS-I-WIN, TAILS-I-WIN-MORE scenario until April 22 resolution. Multi-factor: M012 (defense duration premium), TALKS_FAILED_WAR_PREMIUM_RETURN, P012 confirmation expected.",
       "factors_checked": [
         "M012",
         "S003",
@@ -854,10 +859,10 @@
       "check_date": "2026-04-22",
       "outcome": "ABOVE_RANGE",
       "outcome_price": 1129.75,
-      "outcome_evidence": "ASTRA MICRO closed at \u20b91129.75 on 2026-04-22. Target range was \u20b91,050-1,100. Stock is +2.7% above range top (\u20b91,100). Ceasefire collapse accelerated defense rally beyond forecast target. Stock had been inside range briefly April 14-16 but resumed upward trajectory on continued geopolitical premium.",
+      "outcome_evidence": "ASTRA MICRO closed at ₹1129.75 on 2026-04-22. Target range was ₹1,050-1,100. Stock is +2.7% above range top (₹1,100). Ceasefire collapse accelerated defense rally beyond forecast target. Stock had been inside range briefly April 14-16 but resumed upward trajectory on continued geopolitical premium.",
       "postmortem": "P025 ABOVE_RANGE: Direction was correct (defense stocks surge on ceasefire collapse), but target range 1050-1100 was too conservative. When a true ceasefire collapse occurs (vs fragile ceasefire), defense stocks break out non-linearly. Range cap underestimated the new equilibrium price. Lesson: In GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_COLLAPSE regime, defense ranges should use +15-20% buffers, not +8%.",
       "scored_on": "2026-04-22",
-      "confidence_note": "ASTRA MICRO at \u20b91074.7 (+4.09% today). Already INSIDE target range \u20b91,050-1,100! Defense stocks rallying on Iran counter-threats and sustained war premium. Confidence 5\u2605 \u2014 effectively RIGHT already, 4 trading days remaining.",
+      "confidence_note": "ASTRA MICRO at ₹1074.7 (+4.09% today). Already INSIDE target range ₹1,050-1,100! Defense stocks rallying on Iran counter-threats and sustained war premium. Confidence 5★ — effectively RIGHT already, 4 trading days remaining.",
       "status": "ABOVE_RANGE"
     },
     {
@@ -865,12 +870,12 @@
       "horizon": "10D",
       "date": "2026-04-12",
       "stock": "IRFC",
-      "prediction": "IRFC corrects from \u20b9100.25 toward \u20b992-96 by April 22 as ceasefire relief rally mean-reverts and FII selling resumes",
+      "prediction": "IRFC corrects from ₹100.25 toward ₹92-96 by April 22 as ceasefire relief rally mean-reverts and FII selling resumes",
       "entry_price": 100.25,
       "target": "92-96",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "IRFC spiked from \u20b989.75 (April 7) to \u20b9100.25 (April 10) \u2014 a +11.7% jump in 3 sessions driven by ceasefire relief rally and broader market recovery. IRFC is now above P010's predicted range ceiling of \u20b995, meaning P010 (\u20b985-95 by April 29) will SCORE WRONG if IRFC stays above \u20b995. However, with talks failing and FII distribution resuming, the ceasefire rally overshoot is likely to mean-revert. IRFC's fundamentals (government capex, rate environment) haven't changed \u2014 this was a sentiment-driven spike. RSI likely overbought after 11.7% in 3 sessions. Target \u20b992-96 = a partial retracement (-4.2 to -8.2%). Multi-factor: T004 (RSI overbought after sharp recovery), FII_CEASEFIRE_DISTRIBUTION, TALKS_FAILED macro risk, T002 (key resistance test at \u20b9100+).",
+      "reasoning": "IRFC spiked from ₹89.75 (April 7) to ₹100.25 (April 10) — a +11.7% jump in 3 sessions driven by ceasefire relief rally and broader market recovery. IRFC is now above P010's predicted range ceiling of ₹95, meaning P010 (₹85-95 by April 29) will SCORE WRONG if IRFC stays above ₹95. However, with talks failing and FII distribution resuming, the ceasefire rally overshoot is likely to mean-revert. IRFC's fundamentals (government capex, rate environment) haven't changed — this was a sentiment-driven spike. RSI likely overbought after 11.7% in 3 sessions. Target ₹92-96 = a partial retracement (-4.2 to -8.2%). Multi-factor: T004 (RSI overbought after sharp recovery), FII_CEASEFIRE_DISTRIBUTION, TALKS_FAILED macro risk, T002 (key resistance test at ₹100+).",
       "factors_checked": [
         "T004",
         "FII_CEASEFIRE_DISTRIBUTION",
@@ -885,10 +890,10 @@
       "check_date": "2026-04-22",
       "outcome": "WRONG",
       "outcome_price": 105.82,
-      "outcome_evidence": "IRFC closed at \u20b9105.82 on 2026-04-22. Target range was \u20b992-96. Stock is \u20b99.82 above range top. IRFC never corrected from the post-ceasefire rally. PSU infra names held up on continued government capex narrative. RSI overbought thesis failed: government PSU stocks defied mean-reversion in a broad government-capex support environment.",
-      "postmortem": "P026 WRONG: Mean-reversion thesis failed for government PSU stocks. IRFC's elevated price (\u20b9103-106) was sustained because: (1) DII flows supported PSU names throughout; (2) no negative government capex news; (3) ceasefire collapse actually helped PSU defense/infra sentiment. Lesson: For PSU infrastructure names with DII support, mean-reversion calls require a specific negative catalyst (capex cuts, credit downgrade), not just RSI overbought. Add PSU_DII_SUPPORT_FILTER to framework.",
+      "outcome_evidence": "IRFC closed at ₹105.82 on 2026-04-22. Target range was ₹92-96. Stock is ₹9.82 above range top. IRFC never corrected from the post-ceasefire rally. PSU infra names held up on continued government capex narrative. RSI overbought thesis failed: government PSU stocks defied mean-reversion in a broad government-capex support environment.",
+      "postmortem": "P026 WRONG: Mean-reversion thesis failed for government PSU stocks. IRFC's elevated price (₹103-106) was sustained because: (1) DII flows supported PSU names throughout; (2) no negative government capex news; (3) ceasefire collapse actually helped PSU defense/infra sentiment. Lesson: For PSU infrastructure names with DII support, mean-reversion calls require a specific negative catalyst (capex cuts, credit downgrade), not just RSI overbought. Add PSU_DII_SUPPORT_FILTER to framework.",
       "scored_on": "2026-04-22",
-      "confidence_note": "IRFC at \u20b9104.80-105.03 (Apr 17). Needs -10.5% to reach target \u20b992-96 in 5 days. Confidence 1\u2605 \u2014 WILL SCORE WRONG Apr 22.",
+      "confidence_note": "IRFC at ₹104.80-105.03 (Apr 17). Needs -10.5% to reach target ₹92-96 in 5 days. Confidence 1★ — WILL SCORE WRONG Apr 22.",
       "status": "WRONG"
     },
     {
@@ -921,7 +926,7 @@
         "root_cause": "Bullish April target assumed ceasefire holds + IT sector finds support. Both assumptions broke: ceasefire fraying (Iran refused talks, Israel threats), IT sector cascaded on HCLTECH -10% guidance shock and Infosys sell-the-news.",
         "missed_factor": "M013 (IT Regime Risk Filter) + FORECAST_PAT003 (Geopolitical Binary Underweighting) both fired. The April target was set before these patterns were fully promoted.",
         "signal_missed": "Dual binary risk: earnings shock + geopolitical re-escalation was not priced in. Individual probabilities were known but combined impact underweighted.",
-        "proposed_factor": "MULTI_BINARY_CORRELATION \u2014 when two independent binary events (earnings + geopolitical) have adverse resolution within 5 sessions, the Nifty impact is multiplicative (not additive) due to regime-confidence collapse."
+        "proposed_factor": "MULTI_BINARY_CORRELATION — when two independent binary events (earnings + geopolitical) have adverse resolution within 5 sessions, the Nifty impact is multiplicative (not additive) due to regime-confidence collapse."
       },
       "scored_on": "2026-04-24T17:30:00",
       "auto_invalidation": "If ceasefire collapses before April 23, prediction invalidated. Bear target: 22,500-23,500 instead.",
@@ -933,12 +938,12 @@
       "horizon": "7D",
       "date": "2026-04-19",
       "stock": "HCLTECH",
-      "prediction": "HCL Technologies will fail to sustain above \u20b91,430 post Q4FY26 results by April 28 \u2014 M013 sell-on-news pattern applies",
+      "prediction": "HCL Technologies will fail to sustain above ₹1,430 post Q4FY26 results by April 28 — M013 sell-on-news pattern applies",
       "entry_price": 1356,
       "target": "below 1430",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "M013 (IT Regime Risk Filter) confirmed at 3 occurrences. HCLTECH Q4 results April 21 post-market. Sell-on-news IT pattern is systematic (confirmed P018, P021, P022). From ~\u20b91,356, breakout above \u20b91,430 requires +5.4% \u2014 M013 bars this until Hormuz fully clear 5+ days. IT sector down 25% YTD on AI disruption fears. April 21 also = ceasefire binary day, adding macro uncertainty overlay.",
+      "reasoning": "M013 (IT Regime Risk Filter) confirmed at 3 occurrences. HCLTECH Q4 results April 21 post-market. Sell-on-news IT pattern is systematic (confirmed P018, P021, P022). From ~₹1,356, breakout above ₹1,430 requires +5.4% — M013 bars this until Hormuz fully clear 5+ days. IT sector down 25% YTD on AI disruption fears. April 21 also = ceasefire binary day, adding macro uncertainty overlay.",
       "factors_checked": [
         "M013",
         "SELL_ON_EARNINGS_NEWS_IT",
@@ -956,19 +961,19 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "confidence_note": "Entry ~\u20b91,356 estimated from market cap data. M013 cap at 2\u2605 for IT bullish calls; this is a BEARISH/neutral call so 3\u2605 applies. Strong FY27 guidance could challenge thesis."
+      "confidence_note": "Entry ~₹1,356 estimated from market cap data. M013 cap at 2★ for IT bullish calls; this is a BEARISH/neutral call so 3★ applies. Strong FY27 guidance could challenge thesis."
     },
     {
       "pred_id": "P029",
       "horizon": "7D",
       "date": "2026-04-19",
       "stock": "SETFGOLD",
-      "prediction": "SETFGOLD corrects to \u20b9123-127 by April 26 if ceasefire extends AND holds stable for 3+ trading days",
+      "prediction": "SETFGOLD corrects to ₹123-127 by April 26 if ceasefire extends AND holds stable for 3+ trading days",
       "entry_price": 128.69,
       "target": "123-127",
       "confidence": 2,
       "category": "MEDIUM",
-      "reasoning": "Applying FORECAST_PAT005 (Diplomatic Restart) + FORECAST_PAT004 (Ceasefire Stability Precondition \u2014 wait 3+ days before bearish safe-haven calls). If ceasefire extends April 21 and holds through April 24, war premium should compress 2-5%. Gold USD $4,813 has $200-300 war premium above fundamental support ($4,500-4,600). Clean extension removes 30-40% of that premium in week 1. SETFGOLD \u20b9128.69 \u2192 \u20b9123-127 requires -1.3 to -4.4%.",
+      "reasoning": "Applying FORECAST_PAT005 (Diplomatic Restart) + FORECAST_PAT004 (Ceasefire Stability Precondition — wait 3+ days before bearish safe-haven calls). If ceasefire extends April 21 and holds through April 24, war premium should compress 2-5%. Gold USD $4,813 has $200-300 war premium above fundamental support ($4,500-4,600). Clean extension removes 30-40% of that premium in week 1. SETFGOLD ₹128.69 → ₹123-127 requires -1.3 to -4.4%.",
       "factors_checked": [
         "FORECAST_PAT005",
         "FORECAST_PAT004",
@@ -982,16 +987,16 @@
       "check_date": "2026-04-26",
       "outcome": "PARTIAL",
       "outcome_price": 127.73,
-      "outcome_evidence": "As of April 24, 2026 close (last trading day before Apr 26 check_date weekend), SETFGOLD closed at \u20b9127.73 (-0.16% on day). Target was 123-127 range. Actual is 0.57% above range top (\u20b9127). Intraweek SETFGOLD touched \u20b9128.87 (Apr 23) on haven bid during Israel-Iran escalation fear; then cooled with Brent -4.15%. Stock sits within 0.73 pts of range ceiling. Graded PARTIAL \u2014 thesis of range-consolidation near target was directionally right; mild haven-premium kept it fractionally above.",
+      "outcome_evidence": "As of April 24, 2026 close (last trading day before Apr 26 check_date weekend), SETFGOLD closed at ₹127.73 (-0.16% on day). Target was 123-127 range. Actual is 0.57% above range top (₹127). Intraweek SETFGOLD touched ₹128.87 (Apr 23) on haven bid during Israel-Iran escalation fear; then cooled with Brent -4.15%. Stock sits within 0.73 pts of range ceiling. Graded PARTIAL — thesis of range-consolidation near target was directionally right; mild haven-premium kept it fractionally above.",
       "postmortem": {
-        "root_cause": "Gold haven bid extended fractionally longer than forecast window due to overnight Israel-Iran escalation (Apr 23-24). Intraday Brent relief did not translate to full gold unwind \u2014 gold prices sticky above \u20b9127 psychological level.",
-        "missed_factor": "Haven bid duration ~1-2 sessions longer than tactical forecast horizon. ATH in USD gold ($4,700+) creates technical resistance-turned-support near \u20b9127-128 ETF level.",
-        "signal_missed": "Gold ETF responds to \u20b9-USD correlation + geopolitical bid; dual-driver tail is stickier than pure commodity thesis.",
-        "proposed_factor": "HAVEN_PREMIUM_DURATION_TAIL \u2014 haven bids persist 2-5 sessions past trigger-event resolution due to positioning unwind lag."
+        "root_cause": "Gold haven bid extended fractionally longer than forecast window due to overnight Israel-Iran escalation (Apr 23-24). Intraday Brent relief did not translate to full gold unwind — gold prices sticky above ₹127 psychological level.",
+        "missed_factor": "Haven bid duration ~1-2 sessions longer than tactical forecast horizon. ATH in USD gold ($4,700+) creates technical resistance-turned-support near ₹127-128 ETF level.",
+        "signal_missed": "Gold ETF responds to ₹-USD correlation + geopolitical bid; dual-driver tail is stickier than pure commodity thesis.",
+        "proposed_factor": "HAVEN_PREMIUM_DURATION_TAIL — haven bids persist 2-5 sessions past trigger-event resolution due to positioning unwind lag."
       },
       "scored_on": "2026-04-24T17:30:00",
-      "auto_invalidation": "Ceasefire collapses \u2192 prediction WRONG, gold spikes to \u20b9136-145. Stalemate \u2192 range \u20b9126-129.",
-      "confidence_note": "2\u2605 deliberately \u2014 P020 and P023 both WRONG on gold after ceasefires. Learned: humility required. Auto-invalidation clause active.",
+      "auto_invalidation": "Ceasefire collapses → prediction WRONG, gold spikes to ₹136-145. Stalemate → range ₹126-129.",
+      "confidence_note": "2★ deliberately — P020 and P023 both WRONG on gold after ceasefires. Learned: humility required. Auto-invalidation clause active.",
       "check_date_note": "Check_date April 26 is a Sunday; no market session. Apr 24 close used as final observation. Range near-miss: 0.57% above ceiling."
     },
     {
@@ -999,12 +1004,12 @@
       "horizon": "10D",
       "date": "2026-04-19",
       "stock": "ASTRA MICRO",
-      "prediction": "ASTRA MICRO corrects to \u20b91,010-1,060 by April 30 following ceasefire extension as M012 defense duration premium unwinds",
+      "prediction": "ASTRA MICRO corrects to ₹1,010-1,060 by April 30 following ceasefire extension as M012 defense duration premium unwinds",
       "entry_price": 1130,
       "target": "1010-1060",
       "confidence": 1,
       "category": "HIGH",
-      "reasoning": "M012 (Defense Duration Premium) REVERSE: formal ceasefire extension transitions from 'managed tension' (optimal for defense) to 'negotiated de-escalation' (reduces defense premium). ASTRA MICRO at ~\u20b91,120-1,140 has incorporated both M012 duration premium AND ceasefire-expiry risk premium. If ceasefire extends formally, expect profit-booking as duration premium exits. Target \u20b91,010-1,060 = -6.5 to -11.4% retracement. P009 showed 10%+ unwind on ceasefire news. Entry estimated at \u20b91,130 (April 17 est. close \u2014 above P025 target range).",
+      "reasoning": "M012 (Defense Duration Premium) REVERSE: formal ceasefire extension transitions from 'managed tension' (optimal for defense) to 'negotiated de-escalation' (reduces defense premium). ASTRA MICRO at ~₹1,120-1,140 has incorporated both M012 duration premium AND ceasefire-expiry risk premium. If ceasefire extends formally, expect profit-booking as duration premium exits. Target ₹1,010-1,060 = -6.5 to -11.4% retracement. P009 showed 10%+ unwind on ceasefire news. Entry estimated at ₹1,130 (April 17 est. close — above P025 target range).",
       "factors_checked": [
         "M012",
         "FORECAST_PAT005",
@@ -1021,21 +1026,21 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "auto_invalidation": "Ceasefire collapses \u2192 prediction invalidated; ASTRA MICRO spikes \u20b91,150-1,200+.",
-      "confidence_note": "DOWNGRADED to 1\u2605 at v5 audit (Apr 26): Ceasefire extension premise FAILED \u2014 Iran refused next-round talks Apr 22, Vance cancelled Islamabad. Regime is now CEASEFIRE_FRAYING not extension. M012 STRENGTHENED v5 says defense premium extends through fragile-ceasefire scenarios \u2014 needs Brent <$92 + Hormuz fully open 5 days for defense unwind, neither condition met. ASTRA MICRO at \u20b91,123.75 (Apr 24) \u2014 would need -5.7 to -10.1% in 4 sessions. Highly unlikely. WILL LIKELY SCORE WRONG OR ABOVE_RANGE.",
-      "auto_audit_flag": "M012_v5_STRENGTHENED \u2014 conflict with bearish 10D defense thesis in fragile-ceasefire regime"
+      "auto_invalidation": "Ceasefire collapses → prediction invalidated; ASTRA MICRO spikes ₹1,150-1,200+.",
+      "confidence_note": "DOWNGRADED to 1★ at v5 audit (Apr 26): Ceasefire extension premise FAILED — Iran refused next-round talks Apr 22, Vance cancelled Islamabad. Regime is now CEASEFIRE_FRAYING not extension. M012 STRENGTHENED v5 says defense premium extends through fragile-ceasefire scenarios — needs Brent <$92 + Hormuz fully open 5 days for defense unwind, neither condition met. ASTRA MICRO at ₹1,123.75 (Apr 24) — would need -5.7 to -10.1% in 4 sessions. Highly unlikely. WILL LIKELY SCORE WRONG OR ABOVE_RANGE.",
+      "auto_audit_flag": "M012_v5_STRENGTHENED — conflict with bearish 10D defense thesis in fragile-ceasefire regime"
     },
     {
       "pred_id": "P031",
       "horizon": "7D",
       "date": "2026-04-26",
       "stock": "NIFTY",
-      "prediction": "Nifty mean-reversion bounce to 24,050-24,300 by May 1 \u2014 oversold conditions after -2.78% 3-day decline + DII support at 23,800, conditional on weekend passing without major Israel-Iran strike",
+      "prediction": "Nifty mean-reversion bounce to 24,050-24,300 by May 1 — oversold conditions after -2.78% 3-day decline + DII support at 23,800, conditional on weekend passing without major Israel-Iran strike",
       "entry_price": 23897.95,
       "target": "24050-24300",
       "confidence": 2,
       "category": "HIGH",
-      "reasoning": "Nifty Apr 22-24 cumulative -2.78% leaves market technically oversold. RSI weekly likely in 30-35 zone. DII has been net buyer on every dip in 2026; support floor at 23,800 likely to hold. Brent cooled to $100.71 Friday; if weekend passes quietly (extension probability 30%, stalemate 30% = 60% non-collapse), short-covering bounce typical Monday-Tuesday. Target 24,050-24,300 = +0.6 to +1.7% from Friday close. Cap upside at 24,300 because: (a) FII selling momentum (4 days), (b) IT cascade unresolved, (c) MULTI_BINARY_DOWNGRADE meta-rule applies \u2014 both Israel-Iran resolution AND TCS/Wipro guidance binary still pending in next 7D. AUTO-INVALIDATION: Israel strikes Iran weekend \u2192 Brent >$108 \u2192 Nifty gaps down -1 to -2%, target invalid.",
+      "reasoning": "Nifty Apr 22-24 cumulative -2.78% leaves market technically oversold. RSI weekly likely in 30-35 zone. DII has been net buyer on every dip in 2026; support floor at 23,800 likely to hold. Brent cooled to $100.71 Friday; if weekend passes quietly (extension probability 30%, stalemate 30% = 60% non-collapse), short-covering bounce typical Monday-Tuesday. Target 24,050-24,300 = +0.6 to +1.7% from Friday close. Cap upside at 24,300 because: (a) FII selling momentum (4 days), (b) IT cascade unresolved, (c) MULTI_BINARY_DOWNGRADE meta-rule applies — both Israel-Iran resolution AND TCS/Wipro guidance binary still pending in next 7D. AUTO-INVALIDATION: Israel strikes Iran weekend → Brent >$108 → Nifty gaps down -1 to -2%, target invalid.",
       "factors_checked": [
         "T004",
         "M005",
@@ -1053,8 +1058,8 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "auto_invalidation": "Weekend Israel-Iran escalation (strike OR Hormuz blockade extended) \u2192 confidence drops to 1\u2605, target invalid; if break of 23,800 by Tuesday \u2192 confidence drops to 1\u2605. If Brent >$108 by Monday \u2192 reverse thesis to 23,500-23,800.",
-      "confidence_note": "2\u2605 deliberately \u2014 applying MULTI_BINARY_DOWNGRADE meta-rule. Two binary events in 7D window: (1) weekend geopolitical resolution, (2) TCS/Wipro guidance follow-through. Mean-reversion thesis is base case but downgraded by binary overhang."
+      "auto_invalidation": "Weekend Israel-Iran escalation (strike OR Hormuz blockade extended) → confidence drops to 1★, target invalid; if break of 23,800 by Tuesday → confidence drops to 1★. If Brent >$108 by Monday → reverse thesis to 23,500-23,800.",
+      "confidence_note": "2★ deliberately — applying MULTI_BINARY_DOWNGRADE meta-rule. Two binary events in 7D window: (1) weekend geopolitical resolution, (2) TCS/Wipro guidance follow-through. Mean-reversion thesis is base case but downgraded by binary overhang."
     },
     {
       "pred_id": "P032",
@@ -1066,7 +1071,7 @@
       "target": ">56500",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "BankNifty 56,089.75 sits 90 pts above the 56,000 psychological + technical support. Banking heavyweights (HDFC Bank, ICICI Bank, SBI) have not seen significant earnings deterioration. April 24 -0.38% drop was much milder than Nifty -1.14% \u2014 banks were the relative outperformer. DII's own cost basis on bank index is below current \u2014 unlikely to capitulate. If Nifty mean-reversion plays (P031), BankNifty reclaims 56,500 (-0.74% reclaim). Single direct factor: bank earnings season starts late April with HDFC Bank Q4 expected ~April 29-May 1. Strong PPOP + asset quality stable = BankNifty reclaim. AUTO-INVALIDATION: HDFC Bank Q4 disappointment OR break of 55,800 = thesis invalid.",
+      "reasoning": "BankNifty 56,089.75 sits 90 pts above the 56,000 psychological + technical support. Banking heavyweights (HDFC Bank, ICICI Bank, SBI) have not seen significant earnings deterioration. April 24 -0.38% drop was much milder than Nifty -1.14% — banks were the relative outperformer. DII's own cost basis on bank index is below current — unlikely to capitulate. If Nifty mean-reversion plays (P031), BankNifty reclaims 56,500 (-0.74% reclaim). Single direct factor: bank earnings season starts late April with HDFC Bank Q4 expected ~April 29-May 1. Strong PPOP + asset quality stable = BankNifty reclaim. AUTO-INVALIDATION: HDFC Bank Q4 disappointment OR break of 55,800 = thesis invalid.",
       "factors_checked": [
         "T002",
         "M005",
@@ -1083,20 +1088,20 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "auto_invalidation": "Break below 55,800 OR HDFC Bank Q4 NPL deterioration \u2192 confidence drops to 1\u2605, exit thesis.",
-      "confidence_note": "3\u2605 \u2014 single direct catalyst (HDFC Bank Q4) + clear technical level + DII support pattern. Aligns with 'best predictions have ONE direct causal link' lesson from L3."
+      "auto_invalidation": "Break below 55,800 OR HDFC Bank Q4 NPL deterioration → confidence drops to 1★, exit thesis.",
+      "confidence_note": "3★ — single direct catalyst (HDFC Bank Q4) + clear technical level + DII support pattern. Aligns with 'best predictions have ONE direct causal link' lesson from L3."
     },
     {
       "pred_id": "P033",
       "horizon": "7D",
       "date": "2026-04-26",
       "stock": "COCHINSHIP",
-      "prediction": "COCHINSHIP continues defense breakout to \u20b91,720-1,800 by May 1 as M012 v5 (defense premium extends through fragile-ceasefire) supports follow-through; +4.51% Friday momentum + geopolitical premium intact",
+      "prediction": "COCHINSHIP continues defense breakout to ₹1,720-1,800 by May 1 as M012 v5 (defense premium extends through fragile-ceasefire) supports follow-through; +4.51% Friday momentum + geopolitical premium intact",
       "entry_price": 1664.7,
       "target": "1720-1800",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "COCHINSHIP +4.51% Friday Apr 24 \u2014 defense basket standout on geopolitical premium. M012 v5 STRENGTHENED rule: defense premium extends through fragile-ceasefire scenarios for 3-4 weeks if re-escalation risk material. Iran refused next-round talks Apr 22 + Vance cancelled = re-escalation risk material. COCHINSHIP order book (CMA CGM, defence vessels) provides fundamental floor; sentiment driver geopolitical. Target \u20b91,720-1,800 = +3.3 to +8.1% over 7D. Defense basket momentum (ASTRA MICRO held \u20b91,100+ all week) suggests further rotation. AUTO-INVALIDATION: clean ceasefire re-affirmation (Iran reverses Apr 22 stance) + Brent <$95 \u2192 target invalid, thesis reverses.",
+      "reasoning": "COCHINSHIP +4.51% Friday Apr 24 — defense basket standout on geopolitical premium. M012 v5 STRENGTHENED rule: defense premium extends through fragile-ceasefire scenarios for 3-4 weeks if re-escalation risk material. Iran refused next-round talks Apr 22 + Vance cancelled = re-escalation risk material. COCHINSHIP order book (CMA CGM, defence vessels) provides fundamental floor; sentiment driver geopolitical. Target ₹1,720-1,800 = +3.3 to +8.1% over 7D. Defense basket momentum (ASTRA MICRO held ₹1,100+ all week) suggests further rotation. AUTO-INVALIDATION: clean ceasefire re-affirmation (Iran reverses Apr 22 stance) + Brent <$95 → target invalid, thesis reverses.",
       "factors_checked": [
         "M012",
         "S006",
@@ -1114,20 +1119,20 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "auto_invalidation": "Clean ceasefire re-affirmation + Iran returns to talks + Brent <$95 \u2192 confidence drops to 1\u2605.",
-      "confidence_note": "3\u2605 \u2014 single direct causal link (geopolitical premium for defense) + M012 v5 framework support. Defense direct-beneficiary pattern (P019 ADANI PORT, P015 INDIGO worked because direct linkage) \u2014 applying that lesson here."
+      "auto_invalidation": "Clean ceasefire re-affirmation + Iran returns to talks + Brent <$95 → confidence drops to 1★.",
+      "confidence_note": "3★ — single direct causal link (geopolitical premium for defense) + M012 v5 framework support. Defense direct-beneficiary pattern (P019 ADANI PORT, P015 INDIGO worked because direct linkage) — applying that lesson here."
     },
     {
       "pred_id": "P034",
       "horizon": "10D",
       "date": "2026-04-26",
       "stock": "SETFGOLD",
-      "prediction": "SETFGOLD range-trades \u20b9125-130 by May 6 \u2014 haven premium tail extends per HAVEN_PREMIUM_DURATION_TAIL but caps at \u20b9130 absent fresh strike; balanced bias",
+      "prediction": "SETFGOLD range-trades ₹125-130 by May 6 — haven premium tail extends per HAVEN_PREMIUM_DURATION_TAIL but caps at ₹130 absent fresh strike; balanced bias",
       "entry_price": 127.73,
       "target": "125-130",
       "confidence": 2,
       "category": "MEDIUM",
-      "reasoning": "Applying HAVEN_PREMIUM_DURATION_TAIL (new v5 observing pattern): haven bid persists 2-5 sessions past trigger-event resolution. P029 PARTIAL showed gold sticky at \u20b9127-128 even after Brent -4.15% Friday. Range thesis: floor \u20b9125 (positioning unwind absent fresh trigger), ceiling \u20b9130 (any meaningful escalation breaks higher). Gold USD $4,800-4,850 zone is the war-premium-extended-but-not-spike level. Range-bound bias because: (a) Iran-Israel binary unresolved (haven floor), (b) no fresh strike yet (haven ceiling). Wider range than P029 to incorporate v5 lesson \u2014 tail extension. AUTO-INVALIDATION: Israel strikes Iran \u2192 SETFGOLD spikes \u20b9133-140 (range-break upside); clean ceasefire confirmation \u2192 \u20b9122-125 (range-break downside).",
+      "reasoning": "Applying HAVEN_PREMIUM_DURATION_TAIL (new v5 observing pattern): haven bid persists 2-5 sessions past trigger-event resolution. P029 PARTIAL showed gold sticky at ₹127-128 even after Brent -4.15% Friday. Range thesis: floor ₹125 (positioning unwind absent fresh trigger), ceiling ₹130 (any meaningful escalation breaks higher). Gold USD $4,800-4,850 zone is the war-premium-extended-but-not-spike level. Range-bound bias because: (a) Iran-Israel binary unresolved (haven floor), (b) no fresh strike yet (haven ceiling). Wider range than P029 to incorporate v5 lesson — tail extension. AUTO-INVALIDATION: Israel strikes Iran → SETFGOLD spikes ₹133-140 (range-break upside); clean ceasefire confirmation → ₹122-125 (range-break downside).",
       "factors_checked": [
         "HAVEN_PREMIUM_DURATION_TAIL",
         "FORECAST_PAT004",
@@ -1144,20 +1149,20 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "auto_invalidation": "Israel strikes Iran \u2192 spikes >\u20b9130 (WRONG above range); clean ceasefire confirmation + Brent <$92 \u2192 drops <\u20b9125 (WRONG below range).",
-      "confidence_note": "2\u2605 deliberately \u2014 gold has been WRONG in 3 of 4 recent calls (P020, P023 WRONG; P029 PARTIAL). Range thesis is the humble version of P029's bearish thesis, widened to incorporate HAVEN_PREMIUM_DURATION_TAIL learning."
+      "auto_invalidation": "Israel strikes Iran → spikes >₹130 (WRONG above range); clean ceasefire confirmation + Brent <$92 → drops <₹125 (WRONG below range).",
+      "confidence_note": "2★ deliberately — gold has been WRONG in 3 of 4 recent calls (P020, P023 WRONG; P029 PARTIAL). Range thesis is the humble version of P029's bearish thesis, widened to incorporate HAVEN_PREMIUM_DURATION_TAIL learning."
     },
     {
       "pred_id": "P035",
       "horizon": "4W",
       "date": "2026-04-26",
       "stock": "MRPL",
-      "prediction": "MRPL recovers to \u20b9190-200 by May 25 as Brent stabilizes $98-105 (CONTAINED REGIME) providing GRM visibility + Q1FY27 guidance positive",
+      "prediction": "MRPL recovers to ₹190-200 by May 25 as Brent stabilizes $98-105 (CONTAINED REGIME) providing GRM visibility + Q1FY27 guidance positive",
       "entry_price": 186.38,
       "target": "190-200",
       "confidence": 3,
       "category": "HIGH",
-      "reasoning": "MRPL \u20b9186.38 (Apr 24, -6.8% from avg cost \u20b9196). Brent at $100.71 \u2014 near the 'sweet spot' for refiner GRM (high enough for inventory gains, contained enough to not trigger pass-through restrictions). If Brent holds $98-105 zone for 4 weeks: (a) GRM expands $1-2/bbl, (b) inventory mark-to-market positive, (c) Q1FY27 guidance likely flag margin recovery. Target \u20b9190-200 = +1.9 to +7.3% over 4W. Direct single-causal link: Brent stable + no government pass-through restriction = MRPL margin expansion. P017 (target \u20b9200-210 by May 8) is similar thesis \u2014 P035 is a more conservative refresh with new entry/target reflecting Apr 24 regime. AUTO-INVALIDATION: Brent breaks <$92 (margin pressure from inventory loss) OR Brent breaks >$108 (government caps + GRM compression).",
+      "reasoning": "MRPL ₹186.38 (Apr 24, -6.8% from avg cost ₹196). Brent at $100.71 — near the 'sweet spot' for refiner GRM (high enough for inventory gains, contained enough to not trigger pass-through restrictions). If Brent holds $98-105 zone for 4 weeks: (a) GRM expands $1-2/bbl, (b) inventory mark-to-market positive, (c) Q1FY27 guidance likely flag margin recovery. Target ₹190-200 = +1.9 to +7.3% over 4W. Direct single-causal link: Brent stable + no government pass-through restriction = MRPL margin expansion. P017 (target ₹200-210 by May 8) is similar thesis — P035 is a more conservative refresh with new entry/target reflecting Apr 24 regime. AUTO-INVALIDATION: Brent breaks <$92 (margin pressure from inventory loss) OR Brent breaks >$108 (government caps + GRM compression).",
       "factors_checked": [
         "M001",
         "S001",
@@ -1174,9 +1179,163 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null,
-      "auto_invalidation": "Brent <$92 sustained 5 days \u2192 confidence drops to 1\u2605 (inventory loss scenario); Brent >$108 sustained 5 days \u2192 confidence drops to 1\u2605 (pass-through restriction scenario).",
-      "confidence_note": "3\u2605 \u2014 single direct causal link (Brent in $98-105 sweet spot for GRM). Replaces ambitious P017 (\u20b9200-210 by May 8) which is also still open but P017 needs +9-14% in 12 days vs P035's +1.9-7.3% in 4W."
+      "auto_invalidation": "Brent <$92 sustained 5 days → confidence drops to 1★ (inventory loss scenario); Brent >$108 sustained 5 days → confidence drops to 1★ (pass-through restriction scenario).",
+      "confidence_note": "3★ — single direct causal link (Brent in $98-105 sweet spot for GRM). Replaces ambitious P017 (₹200-210 by May 8) which is also still open but P017 needs +9-14% in 12 days vs P035's +1.9-7.3% in 4W."
+    },
+    {
+      "pred_id": "P036",
+      "horizon": "10D",
+      "date": "2026-04-26",
+      "stock": "ASTRA MICRO",
+      "prediction": "ASTRA MICRO will hold above ₹1,050 through May 5 as M012 v5 defense premium conditions for unwind (Brent <$92 sustained 5 days AND Hormuz fully open 5 days) are not met. Defense bid continues with Brent $105 and Hormuz actively contested.",
+      "entry_price": 1123.75,
+      "target": ">1050",
+      "confidence": 3,
+      "category": "Defense_Premium",
+      "reasoning": "M012 v5 (STRENGTHENED) requires BOTH Brent <$92 AND Hormuz fully open 5+ trading days before defense premium unwinds. Current: Brent $105, Hormuz blockade active. Even if P030 (target 1010-1060) scores WRONG, stock won't breach ₹1,050 support without regime change. Three consecutive weeks of holding ₹1,100+ confirms defense duration premium is structural in this regime.",
+      "factors_checked": [
+        "M012 v5 (defense premium floor at Brent $105 + Hormuz blockade)",
+        "Brent $105.33 (above $92 threshold by ₹13+)",
+        "Hormuz actively contested (IRGC ships seized, US Navy present)",
+        "Technical support at ₹1,100-1,123 zone (3 weeks of consolidation)",
+        "ASTRA MICRO fundamental: defense capex pipeline strong"
+      ],
+      "factors_not_checked": [
+        "ASTRA MICRO Q4FY26 results (due May — results could shock either way)",
+        "Order book announcements / MoD contract awards",
+        "Broader defense sector rotation (MAZDOCK/COCHINSHIP vs ASTRA MICRO)"
+      ],
+      "check_date": "2026-05-05",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null
+    },
+    {
+      "pred_id": "P037",
+      "horizon": "3W",
+      "date": "2026-04-26",
+      "stock": "COAL INDIA",
+      "prediction": "Coal India will test ₹448-470 by May 15 as sustained Brent $103-108 drives coal-substitution energy security demand, PSU capex re-rating momentum, and DII institutional buying.",
+      "entry_price": 432,
+      "target": "448-470",
+      "confidence": 3,
+      "category": "PSU_Mining_Infra",
+      "reasoning": "P005 (>₹430 through May 28) tracking correctly. Upgrading to targeted range. Thesis: (1) Brent $105 makes coal competitive as alternative baseload energy — thermal power plants prefer coal over gas at these spreads. (2) Coal India exports benefit from Asian energy security buying. (3) DII systematic support for PSU dividend stocks in FII-selling regime. Single direct causal link: Brent sustained >$100 = coal substitute demand = Coal India outperforms. Target +3.7 to +8.8% from entry.",
+      "factors_checked": [
+        "Brent $105+ (coal-crude substitution economics actively favorable)",
+        "P005 buffer intact (₹432 vs ₹430 floor — positive confirmation)",
+        "DII net buyers ₹9,782 cr this week (supporting PSU names)",
+        "Coal India avg cost ₹345.55 — portfolio gain 25% — no near-term stop risk",
+        "No adverse mine safety / regulatory news in recent sessions"
+      ],
+      "factors_not_checked": [
+        "Coal India Q4FY26 results timing and expectations",
+        "Ministry of Coal auction volumes / pricing",
+        "Domestic power demand data (Mon-Fri grid figures)",
+        "Monsoon premonsoon coal stocking patterns"
+      ],
+      "check_date": "2026-05-15",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null
+    },
+    {
+      "pred_id": "P038",
+      "horizon": "7D",
+      "date": "2026-04-26",
+      "stock": "BANKNIFTY",
+      "prediction": "BankNifty will fail to close above 57,000 by May 5 as FII systematic selling (5th consecutive week), credit rotation risk from geopolitical stress, and the Apr 24 breakdown below 56,000 (close 55,956) create structural headwind. Range-bound between 54,500-56,500.",
+      "entry_price": 55956.85,
+      "target": "below 57000",
+      "confidence": 3,
+      "category": "Index_Banking",
+      "reasoning": "BankNifty lost 56,000 critical support Apr 24 (close 55,956). FII net selling ₹17,140 cr for the week — structural outflow not tactical. Credit rotation: geopolitical uncertainty → NBFCs + mid-cap banks see tighter credit conditions → BankNifty compression. HDFC Bank Q4 (due Apr 28-29) could provide short-term bounce but insufficient to clear 57,000 given macro headwinds. 57,000 resistance = Apr 17 close level; reclaiming requires either FII reversal OR clean ceasefire.",
+      "factors_checked": [
+        "BankNifty Apr 24 close 55,956 (below 56,000 support — structural break)",
+        "FII net selling ₹17,140 cr for week (5th consecutive selling week risk)",
+        "Credit rotation risk in GEOPOLITICAL_RISK_ELEVATED regime",
+        "USD/INR depreciation 1.8% week (tighter net interest margins for import-heavy banks)"
+      ],
+      "factors_not_checked": [
+        "HDFC Bank Q4FY26 results (due ~Apr 28-29) — beat could fuel bounce toward 56,500-57,000 but not 57,000+ without macro support",
+        "RBI minutes / governor guidance mid-week",
+        "KOTAK BANK / AXIS BANK Q4 results dates"
+      ],
+      "auto_invalidation": "HDFC Bank Q4 beat + guidance upgrade AND Brent <$98 → confidence drops to 1★ (rally could push 57,000+)",
+      "check_date": "2026-05-05",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null
+    },
+    {
+      "pred_id": "P039",
+      "horizon": "2W",
+      "date": "2026-04-26",
+      "stock": "NIFTY IT",
+      "prediction": "Nifty IT index will underperform Nifty 50 by 3-5% in the 2-week window April 28 - May 8, as M013 (IT Regime Risk Filter), SELL_ON_EARNINGS_NEWS_IT, and IT_CASCADE_OVERRIDES_MACRO all apply simultaneously. Post-HCLTECH/INFY shock cascade not fully digested; WIPRO results (expected May) likely to trigger another sell-on-news round.",
+      "entry_price": null,
+      "target": "Nifty IT underperforms Nifty 50 by 3-5%",
+      "confidence": 3,
+      "category": "IT_Sector",
+      "reasoning": "Three framework patterns simultaneously active: (1) M013 — IT regime risk filter, no IT confidence >2★ while Brent >$98. (2) SELL_ON_EARNINGS_NEWS_IT — HCLTECH is the 4th confirmed occurrence (guidance shock -10% → cascade -4.02% post-announcement, ₹1,300 → ₹1,203). (3) IT_CASCADE_OVERRIDES_MACRO (OBSERVING) — Apr 24 session proved IT idiosyncratic shocks drag Nifty independent of Brent. WIPRO Q4FY26 results due in this window — likely to trigger 5th SELL_ON_EARNINGS_NEWS_IT occurrence. Conflicts with P014 (IT outperforms); P014 auto-downgraded to 1★ per AUDIT_LEGACY_ON_PROMOTION.",
+      "factors_checked": [
+        "M013 active (Brent $105 >> $98 threshold, Hormuz blocked)",
+        "SELL_ON_EARNINGS_NEWS_IT — HCLTECH 4th occurrence confirmed",
+        "INFY sell-on-news Apr 24 (-6.93%) = 5th occurrence (M013 confirms)",
+        "USD/INR 94.23 (weakened) — mixed for IT (helps revenue, but margin FX hedging complex)",
+        "IT sector cumulative -4.95% over 2 sessions vs Nifty -2.78% — already underperforming"
+      ],
+      "factors_not_checked": [
+        "WIPRO Q4FY26 results exact date and analyst estimates",
+        "TCS mid-quarter update or analyst conference",
+        "US tech sector direction (Friday US close) — indirect IT sentiment"
+      ],
+      "note": "SUPERSEDES P014 directional thesis (IT outperforms). P014 downgraded to 1★ per AUDIT_LEGACY_ON_PROMOTION. This prediction uses framework-aligned anti-IT directional call.",
+      "check_date": "2026-05-08",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null
+    },
+    {
+      "pred_id": "P040",
+      "horizon": "4W",
+      "date": "2026-04-26",
+      "stock": "SWIGGY",
+      "prediction": "SWIGGY will decline to ₹265-278 by May 20 as Brent sustained $103-108 for 3+ weeks pressures consumer discretionary spending (real-wage squeeze, last-mile delivery cost pressure). CONSUMER_DISC_BRENT_INVERSE pattern confirms bearish regime when Brent >$100 sustained 2+ weeks.",
+      "entry_price": 287.1,
+      "target": "265-278",
+      "confidence": 2,
+      "category": "Consumer_QComm",
+      "reasoning": "CONSUMER_DISC_BRENT_INVERSE pattern (OBSERVING): bearish consumer-disc thesis requires Brent >$100 sustained 2+ weeks. Confirmed: Brent has been $100-108 for Apr 22-26 (4-5 sessions), building on the Apr 22+ regime. Swiggy at ₹287 (avg ₹298.75 = -3.9% loss). Target -7.7% to -2.5% from current. Q1FY27 results due ~July — no near-term positive catalyst. P001 failed (ceasefire + Brent crash provided support); this prediction applies the updated CONSUMER_DISC_BRENT_INVERSE rule in reverse (Brent sustained HIGH = bearish consumer disc). Confidence 2★ (pattern has only 1 observation; broader market downturn needed to materialize the full target).",
+      "factors_checked": [
+        "Brent $105.33 sustained (>$100 for 4+ sessions, CONSUMER_DISC_BRENT_INVERSE bearish regime active)",
+        "FII selling — risk-off reduces high-PE speculative retail buying",
+        "No near-term positive catalyst (Q1FY27 results ~July)",
+        "Swiggy technical support at ₹280 (recent floor); break below = target 265-278"
+      ],
+      "factors_not_checked": [
+        "Zomato Q4FY26 results (sector rerate if Zomato beats on margins)",
+        "Swiggy-specific operational data (dark store expansion, order frequency)",
+        "Government food subsidy / ONDC competitive dynamics"
+      ],
+      "auto_invalidation": "Brent falls <$95 sustained 3 days → CONSUMER_DISC_BRENT_INVERSE flips positive → confidence drops to 1★",
+      "check_date": "2026-05-20",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null
     }
   ],
-  "last_updated": "2026-04-26T15:00:00"
+  "last_updated": "2026-04-26T09:00:00",
+  "total_predictions": 40,
+  "last_updated_by": "weekly_intelligence_2026-04-26"
 }

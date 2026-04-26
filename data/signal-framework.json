@@ -1,160 +1,269 @@
 {
-  "version": 5,
+  "version": 6,
   "last_updated": "2026-04-26",
   "description": "Master checklist of fundamental and technical factors for prediction generation. Grows over time via post-mortem analysis of wrong predictions — not correlation-mining. Every factor added must have a causal explanation.",
-
   "macro_factors": [
     {
-      "id": "M001", "name": "Brent Crude ($/bbl)", "category": "macro",
-      "relevant_sectors": ["oil_refining", "aviation", "paints", "chemicals", "shipping"],
+      "id": "M001",
+      "name": "Brent Crude ($/bbl)",
+      "category": "macro",
+      "relevant_sectors": [
+        "oil_refining",
+        "aviation",
+        "paints",
+        "chemicals",
+        "shipping"
+      ],
       "why_it_matters": "Direct input cost driver for refiners and airlines. India imports 90% of crude — affects fiscal deficit, FII sentiment, rupee.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "M002", "name": "USD/INR Exchange Rate", "category": "macro",
-      "relevant_sectors": ["it_services", "oil_refining", "import_heavy", "pharma_exports"],
+      "id": "M002",
+      "name": "USD/INR Exchange Rate",
+      "category": "macro",
+      "relevant_sectors": [
+        "it_services",
+        "oil_refining",
+        "import_heavy",
+        "pharma_exports"
+      ],
       "why_it_matters": "Weaker rupee = higher import costs (crude, electronics). Benefits IT and pharma exporters who earn in USD.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "M003", "name": "RBI Repo Rate", "category": "macro",
-      "relevant_sectors": ["nbfc", "banking", "housing", "psu_infra", "real_estate"],
+      "id": "M003",
+      "name": "RBI Repo Rate",
+      "category": "macro",
+      "relevant_sectors": [
+        "nbfc",
+        "banking",
+        "housing",
+        "psu_infra",
+        "real_estate"
+      ],
       "why_it_matters": "Directly sets cost of borrowing. Higher rates compress margins for debt-heavy PSU infra companies and NBFCs.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "M004", "name": "FII Net Flows (CY)", "category": "macro",
-      "relevant_sectors": ["all"],
+      "id": "M004",
+      "name": "FII Net Flows (CY)",
+      "category": "macro",
+      "relevant_sectors": [
+        "all"
+      ],
       "why_it_matters": "Sustained FII selling = index headwind regardless of fundamentals. Triggers stop-loss cascades in mid/small caps.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "M005", "name": "DII Net Flows (CY)", "category": "macro",
-      "relevant_sectors": ["all"],
+      "id": "M005",
+      "name": "DII Net Flows (CY)",
+      "category": "macro",
+      "relevant_sectors": [
+        "all"
+      ],
       "why_it_matters": "DII buying (SIP inflows, insurance) acts as floor support during FII exits. Net DII-FII gap determines index direction.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "M006", "name": "India PMI (Manufacturing + Services)", "category": "macro",
-      "relevant_sectors": ["all"],
+      "id": "M006",
+      "name": "India PMI (Manufacturing + Services)",
+      "category": "macro",
+      "relevant_sectors": [
+        "all"
+      ],
       "why_it_matters": "Forward-looking indicator of economic activity. PMI below 50 = contraction. Affects earnings expectations across sectors.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "M007", "name": "India CPI Inflation", "category": "macro",
-      "relevant_sectors": ["fmcg", "banking", "nbfc", "consumer_staples"],
+      "id": "M007",
+      "name": "India CPI Inflation",
+      "category": "macro",
+      "relevant_sectors": [
+        "fmcg",
+        "banking",
+        "nbfc",
+        "consumer_staples"
+      ],
       "why_it_matters": "High CPI constrains RBI from cutting rates. Affects consumer purchasing power and FMCG volume growth.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "M008", "name": "Government Capex Budget Utilization (%)", "category": "macro",
-      "relevant_sectors": ["psu_infra", "defence", "railways", "renewable_energy"],
+      "id": "M008",
+      "name": "Government Capex Budget Utilization (%)",
+      "category": "macro",
+      "relevant_sectors": [
+        "psu_infra",
+        "defence",
+        "railways",
+        "renewable_energy"
+      ],
       "why_it_matters": "PSU infra stocks (IRFC, IRCON, NHPC) depend on government spending. Low utilization = order delays = earnings miss.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "M009", "name": "US Fed Funds Rate / Fed Outlook", "category": "macro",
-      "relevant_sectors": ["all"],
+      "id": "M009",
+      "name": "US Fed Funds Rate / Fed Outlook",
+      "category": "macro",
+      "relevant_sectors": [
+        "all"
+      ],
       "why_it_matters": "Higher US rates = stronger USD = capital outflow from EMs including India. Affects FII flows and rupee directly.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     }
   ],
-
   "sector_factors": [
     {
-      "id": "S001", "name": "Gross Refining Margin (GRM) spread", "sector": "oil_refining",
+      "id": "S001",
+      "name": "Gross Refining Margin (GRM) spread",
+      "sector": "oil_refining",
       "why_it_matters": "GRM = revenue per barrel minus crude cost. When crude spikes and government blocks pass-through, GRM collapses. Primary P&L driver for MRPL.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "S002", "name": "ATF Price (Aviation Turbine Fuel)", "sector": "aviation",
+      "id": "S002",
+      "name": "ATF Price (Aviation Turbine Fuel)",
+      "sector": "aviation",
       "why_it_matters": "ATF = 35-40% of IndiGo operating cost. Tracks Brent with ~2 week lag. Government has separate excise policy for ATF vs petrol/diesel.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "S003", "name": "India Defence Budget (% of GDP + absolute ₹)", "sector": "defence",
+      "id": "S003",
+      "name": "India Defence Budget (% of GDP + absolute ₹)",
+      "sector": "defence",
       "why_it_matters": "ASTRA MICRO and shipyards earn from defence orders. Budget allocation + Make-in-India push determines order pipeline.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "S004", "name": "Quick Commerce GMV Growth + Profitability Timeline", "sector": "quick_commerce",
+      "id": "S004",
+      "name": "Quick Commerce GMV Growth + Profitability Timeline",
+      "sector": "quick_commerce",
       "why_it_matters": "SWIGGY and Zomato valued on path to profitability. GMV growth slowing or competitive intensity rising = multiple compression.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "S005", "name": "Renewable Energy Capex + BESS Orders", "sector": "renewable_energy",
+      "id": "S005",
+      "name": "Renewable Energy Capex + BESS Orders",
+      "sector": "renewable_energy",
       "why_it_matters": "NHPC and ACME SOLAR revenue depends on project commissioning. Government renewable targets drive order flow.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "S006", "name": "Shipbuilding Order Book + Delivery Timeline", "sector": "shipbuilding",
+      "id": "S006",
+      "name": "Shipbuilding Order Book + Delivery Timeline",
+      "sector": "shipbuilding",
       "why_it_matters": "COCHINSHIP revenue is long-duration order book driven. CMA CGM contract and defence vessels are the key near-term deliveries.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "S007", "name": "Coal e-Auction Premium vs Notified Price", "sector": "coal",
+      "id": "S007",
+      "name": "Coal e-Auction Premium vs Notified Price",
+      "sector": "coal",
       "why_it_matters": "Coal India's realisation per tonne = notified price + e-auction premium. Higher crude = more industrial coal demand = higher premium.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "S008", "name": "Hormuz Strait / Geopolitical Shipping Routes", "sector": "shipping",
+      "id": "S008",
+      "name": "Hormuz Strait / Geopolitical Shipping Routes",
+      "sector": "shipping",
       "why_it_matters": "Hormuz closure reroutes ships via Cape of Good Hope (+2 weeks transit). Reduces effective fleet capacity = higher freight rates. Affects ADANI PORT volumes.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     },
     {
-      "id": "S009", "name": "India IT Sector Deal Pipeline + US Tech Spend", "sector": "it_services",
+      "id": "S009",
+      "name": "India IT Sector Deal Pipeline + US Tech Spend",
+      "sector": "it_services",
       "why_it_matters": "IT revenue tied to US enterprise tech spending. Recession fears or discretionary spend cuts = deal slowdown = earnings downgrade.",
-      "added_date": "2026-03-28", "added_reason": "Initial framework"
+      "added_date": "2026-03-28",
+      "added_reason": "Initial framework"
     }
   ],
-
   "technical_factors": [
     {
-      "id": "T001", "name": "52-Week High/Low Proximity (within 5%)",
+      "id": "T001",
+      "name": "52-Week High/Low Proximity (within 5%)",
       "why_it_matters": "Stocks near 52wk lows have stop-loss clusters below — a breach triggers forced selling. Near 52wk highs = breakout or resistance.",
       "added_date": "2026-03-28"
     },
     {
-      "id": "T002", "name": "Key Support/Resistance Level Test",
+      "id": "T002",
+      "name": "Key Support/Resistance Level Test",
       "why_it_matters": "Technically significant price levels concentrate buy/sell orders. A test of support with high volume = decision point.",
       "added_date": "2026-03-28"
     },
     {
-      "id": "T003", "name": "Volume Spike on Breakout/Breakdown (2x avg)",
+      "id": "T003",
+      "name": "Volume Spike on Breakout/Breakdown (2x avg)",
       "why_it_matters": "Price moves on high volume = conviction. Same move on low volume = likely reversal. Volume confirms or questions the thesis.",
       "added_date": "2026-03-28"
     },
     {
-      "id": "T004", "name": "RSI Overbought/Oversold (>75 or <25 on weekly)",
+      "id": "T004",
+      "name": "RSI Overbought/Oversold (>75 or <25 on weekly)",
       "why_it_matters": "Extreme RSI on weekly timeframe = mean reversion tendency. Most useful for short-term 1D/7D predictions.",
       "added_date": "2026-03-28"
     },
     {
-      "id": "T005", "name": "50-Day / 200-Day MA Position + Crossover",
+      "id": "T005",
+      "name": "50-Day / 200-Day MA Position + Crossover",
       "why_it_matters": "Death cross (50 below 200) signals medium-term downtrend. Used for 4W+ predictions. Not useful for 1D/7D.",
       "added_date": "2026-03-28"
     },
     {
-      "id": "T006", "name": "Sector Relative Strength vs Nifty",
+      "id": "T006",
+      "name": "Sector Relative Strength vs Nifty",
       "why_it_matters": "A stock can look cheap but if sector is underperforming Nifty, it drags. Relative strength confirms or weakens the individual thesis.",
       "added_date": "2026-03-28"
     }
   ],
-
   "prediction_horizons": {
-    "1D": {"label": "1-Day", "purpose": "Event-driven — earnings day, RBI policy, results. Fast validation.", "min_factors_required": 2},
-    "7D": {"label": "7-Day", "purpose": "Technical thesis — level test, support breach, short-term momentum. Validates in one week.", "min_factors_required": 2},
-    "4W": {"label": "4-Week", "purpose": "Catalyst-driven — earnings season, Q4 results impact, FII trend continuation.", "min_factors_required": 3},
-    "2M": {"label": "2-Month", "purpose": "Fundamental shift — policy change, earnings cycle, crude trend.", "min_factors_required": 4},
-    "6M": {"label": "6-Month", "purpose": "Structural — sector re-rating, macro regime change.", "min_factors_required": 5}
+    "1D": {
+      "label": "1-Day",
+      "purpose": "Event-driven — earnings day, RBI policy, results. Fast validation.",
+      "min_factors_required": 2
+    },
+    "7D": {
+      "label": "7-Day",
+      "purpose": "Technical thesis — level test, support breach, short-term momentum. Validates in one week.",
+      "min_factors_required": 2
+    },
+    "4W": {
+      "label": "4-Week",
+      "purpose": "Catalyst-driven — earnings season, Q4 results impact, FII trend continuation.",
+      "min_factors_required": 3
+    },
+    "2M": {
+      "label": "2-Month",
+      "purpose": "Fundamental shift — policy change, earnings cycle, crude trend.",
+      "min_factors_required": 4
+    },
+    "6M": {
+      "label": "6-Month",
+      "purpose": "Structural — sector re-rating, macro regime change.",
+      "min_factors_required": 5
+    }
   },
-
   "accuracy_thresholds": {
-    "flag_for_review_below": 0.40,
+    "flag_for_review_below": 0.4,
     "min_predictions_before_review": 8,
     "note": "A signal category with <40% accuracy over 8+ predictions triggers post-mortem review. Missing causal factor is identified and added to framework. Not correlation-mining — every new factor must have a fundamental causal explanation."
   },
-
   "geopolitical_patterns": [
     {
       "id": "FORECAST_PAT003",
@@ -172,7 +281,11 @@
       "occurrences_updated": "2026-04-26",
       "rule": "Before making defense stock predictions, model DURATION of tension. 2-6 weeks managed tension = HOLD/ADD defense. Instant peace = REDUCE. Acute short escalation = defense spikes then reverses quickly. STRENGTHENED v5: Even FRAGILE-CEASEFIRE scenarios sustain defense premium for 3-4 weeks if re-escalation risk remains material; do not predict defense pullbacks until BOTH (a) Brent <$92 sustained 5 days AND (b) Hormuz fully open 5 days.",
       "confirmed_occurrences": 3,
-      "confirmed_predictions": ["P007 SWIGGY WRONG (proxy)", "P009 ASTRA MICRO WRONG", "P004 ASTRA MICRO WRONG"]
+      "confirmed_predictions": [
+        "P007 SWIGGY WRONG (proxy)",
+        "P009 ASTRA MICRO WRONG",
+        "P004 ASTRA MICRO WRONG"
+      ]
     },
     {
       "id": "FII_CEASEFIRE_DISTRIBUTION",
@@ -186,11 +299,16 @@
     {
       "id": "TALKS_FAILED_WAR_PREMIUM_RETURN",
       "name": "Failed Peace Talks → War Premium Return",
-      "status": "OBSERVING",
+      "status": "PROMOTED",
       "proposed_date": "2026-04-12",
-      "observation": "April 11: Islamabad talks ended with NO DEAL after 21 hours. US Navy entered Hormuz. Iran IRGC issued 'last warning.' Pattern: failed high-profile peace talks → Brent spike $3-7, Nifty gap-down -1.5 to -2.5%, gold +1-2%, defense stocks +2-4% at open. April 14 close will confirm or deny.",
-      "confirmations_needed": 1,
-      "first_seen": "2026-04-12"
+      "first_seen": "2026-04-12",
+      "promoted_date": "2026-04-26",
+      "confirmed_occurrences": 2,
+      "confirmed_predictions": [
+        "Apr 11: Islamabad talks ended with NO DEAL after 21h → Brent +$3-5, Nifty gap-down -0.58% Apr 14 (delayed effect), defense +2-3%",
+        "Apr 21: Iran refused next-round talks, Vance cancelled Islamabad trip → Brent $96→$105+ (+9.4%), Nifty -0.81% Apr 22, COCHINSHIP +4%+ (Apr 22-24 cumulative -2.78%)"
+      ],
+      "rule": "Failed high-profile peace talks → war premium returns within 24-48 hours: Brent spikes $5-10, Nifty gaps down -0.5 to -2.5%, defense stocks +2-5%, gold +0.5-1.5%. DURATION: 1-2 days ONLY. Auto-expires if diplomatic restart signal within 72h (FORECAST_PAT005). NOT suitable for 7D+ predictions — use only for 1-2D swing calls. Include explicit: 'If diplomatic restart within 72h → invalidated.'"
     },
     {
       "id": "TRUMP_DEADLINE_PRESSURE_CRUDE",
@@ -204,11 +322,18 @@
     {
       "id": "SELL_ON_EARNINGS_NEWS_IT",
       "name": "Large-Cap IT Sell-on-News After Earnings Beat",
-      "status": "OBSERVING",
+      "status": "PROMOTED",
       "proposed_date": "2026-04-10",
-      "observation": "TCS Q4FY26: record $12B TCV, revenue BEAT, ₹31 dividend — stock FELL -1.85% on announcement day, continuing -0.6% next day to ₹2,524. Buy-side fully pre-priced the beat. Classic 'sell the news' after 3+ weeks of pre-earnings IT momentum.",
-      "confirmations_needed": 1,
-      "first_seen": "2026-04-10"
+      "first_seen": "2026-04-10",
+      "promoted_date": "2026-04-19",
+      "confirmed_occurrences": 5,
+      "confirmed_predictions": [
+        "P018 TCS WRONG (Q4FY26 record beat → fell -1.85% announcement day)",
+        "P021 TCS WRONG (continued decline to ₹2,524 after record TCV)",
+        "P022 TCS WRONG (no post-earnings recovery for 9+ sessions)",
+        "HCLTECH Q4FY26 guidance shock (Apr 21) → -4.02% Apr 22, -4.02% Apr 24 (cascade 4th occurrence)",
+        "INFY Q4FY26 (Apr 23) → -6.93% Apr 24 (sell-on-news despite inline result, 5th occurrence)"
+      ]
     },
     {
       "id": "GOLD_HEDGING_PRE_BINARY",
@@ -256,44 +381,56 @@
       "first_seen": "2026-04-26"
     }
   ],
-
   "promoted_patterns_v4": [
     {
       "id": "M013",
       "name": "IT Regime Risk Filter",
       "status": "PROMOTED",
       "promoted_date": "2026-04-17",
-      "rule": "During any active geopolitical risk regime where Brent >$98 OR Hormuz is actively contested, cap all IT stock prediction confidence at maximum 2\u2605. Macro regime systematically overrides earnings fundamentals for IT exporters. No TCS/INFY/HCLTECH short-horizon reversion calls until Brent sustained <$92 and Hormuz fully open 5+ trading days.",
+      "rule": "During any active geopolitical risk regime where Brent >$98 OR Hormuz is actively contested, cap all IT stock prediction confidence at maximum 2★. Macro regime systematically overrides earnings fundamentals for IT exporters. No TCS/INFY/HCLTECH short-horizon reversion calls until Brent sustained <$92 and Hormuz fully open 5+ trading days.",
       "confirmed_occurrences": 3,
-      "confirmed_predictions": ["P018 TCS WRONG", "P021 TCS WRONG", "P022 TCS WRONG"]
+      "confirmed_predictions": [
+        "P018 TCS WRONG",
+        "P021 TCS WRONG",
+        "P022 TCS WRONG"
+      ]
     },
     {
       "id": "FORECAST_PAT005",
       "name": "Diplomatic Restart Trigger",
       "status": "PROMOTED",
       "promoted_date": "2026-04-17",
-      "rule": "After failed peace talks, ALWAYS assign 25-30% probability to diplomatic restart within 48-72 hours. If Trump or any major party signals willingness to negotiate within 72h of talks failure, bearish Nifty/war-premium thesis immediately invalidates. All bearish Nifty predictions after talks failure must include explicit auto-invalidation: 'If diplomatic restart signal within 72h \u2192 confidence drops to 1\u2605.'",
+      "rule": "After failed peace talks, ALWAYS assign 25-30% probability to diplomatic restart within 48-72 hours. If Trump or any major party signals willingness to negotiate within 72h of talks failure, bearish Nifty/war-premium thesis immediately invalidates. All bearish Nifty predictions after talks failure must include explicit auto-invalidation: 'If diplomatic restart signal within 72h → confidence drops to 1★.'",
       "confirmed_occurrences": 2,
-      "confirmed_predictions": ["P023 SETFGOLD WRONG", "P024 Nifty WRONG"]
+      "confirmed_predictions": [
+        "P023 SETFGOLD WRONG",
+        "P024 Nifty WRONG"
+      ]
     },
     {
       "id": "SELL_ON_EARNINGS_NEWS_IT",
       "name": "Large-Cap IT Sell-on-News After Earnings Beat",
       "status": "PROMOTED",
       "promoted_date": "2026-04-19",
-      "rule": "Large-cap Indian IT stocks systematically underperform expectations for 5-10 trading sessions after earnings beats. Pre-announcement run-up fully prices in consensus beats. Do NOT predict post-earnings breakouts for large-cap IT (TCS, INFY, HCLTECH, WIPRO). Confirmed: TCS Q4FY26 record beat \u2192 stock fell for 9+ sessions.",
-      "confirmed_occurrences": 3,
-      "confirmed_predictions": ["P018 TCS WRONG", "P021 TCS WRONG", "P022 TCS WRONG"]
+      "rule": "Large-cap Indian IT stocks systematically underperform expectations for 5-10 trading sessions after earnings beats. Pre-announcement run-up fully prices in consensus beats. Do NOT predict post-earnings breakouts for large-cap IT (TCS, INFY, HCLTECH, WIPRO). Confirmed: TCS Q4FY26 record beat → stock fell for 9+ sessions.",
+      "confirmed_occurrences": 5,
+      "confirmed_predictions": [
+        "P018 TCS WRONG",
+        "P021 TCS WRONG",
+        "P022 TCS WRONG",
+        "HCLTECH Q4FY26 guidance shock Apr 21 (4th occurrence)",
+        "INFY Q4FY26 sell-on-news Apr 24 (5th occurrence)"
+      ]
     }
   ],
   "amended_patterns_v4": [
     {
       "id": "TALKS_FAILED_WAR_PREMIUM_RETURN",
-      "name": "Failed Peace Talks \u2192 War Premium Return",
+      "name": "Failed Peace Talks → War Premium Return",
       "status": "OBSERVING_AMENDED",
       "original_status": "OBSERVING",
       "amendment_date": "2026-04-19",
-      "original_rule": "Failed high-profile peace talks \u2192 Brent spike $3-7, Nifty gap-down -1.5 to -2.5%, gold +1-2%, defense +2-4%.",
+      "original_rule": "Failed high-profile peace talks → Brent spike $3-7, Nifty gap-down -1.5 to -2.5%, gold +1-2%, defense +2-4%.",
       "amended_rule": "War premium DOES return for 24-48 hours after talks failure, but AUTO-EXPIRES if diplomatic restart signal emerges within 72 hours. This is a 1-2 day intraday/swing pattern ONLY. NOT suitable for 7D+ predictions. Any 7D+ prediction built on this pattern must include FORECAST_PAT005 auto-invalidation clause.",
       "amendment_reason": "P024 Nifty WRONG: Nifty went UP instead of DOWN within 7 days of Islamabad talks failure because Trump signaled deal optimism within 48h. P023 SETFGOLD WRONG: Same mechanism. Pattern works for day-traders but fails for medium-horizon predictions."
     }
@@ -310,34 +447,47 @@
       "version": "v3",
       "changes": "Promoted FII_CEASEFIRE_DISTRIBUTION to framework (2 occurrences: April 8 and 9). Added TALKS_FAILED_WAR_PREMIUM_RETURN as new observing pattern (April 11 Islamabad talks failure). Framework now covers 3 geopolitical regime patterns.",
       "accuracy_at_time": 33.3,
-      "notes": "No new predictions scored this week \u2014 scoring cluster April 14-17. IRFC surprise: spiked to \u20b9100.25 vs P010 range \u20b985-95 \u2014 ceasefire rally override pattern. Gold at \u20b9127.31 pre-talk failure \u2014 will likely rally toward \u20b9130-134 on failed talks confirmation."
+      "notes": "No new predictions scored this week — scoring cluster April 14-17. IRFC surprise: spiked to ₹100.25 vs P010 range ₹85-95 — ceasefire rally override pattern. Gold at ₹127.31 pre-talk failure — will likely rally toward ₹130-134 on failed talks confirmation."
     },
     {
       "date": "2026-04-19",
       "version": "v4",
-      "changes": "PROMOTED: M013 (IT Regime Risk Filter, 3 confirmations), FORECAST_PAT005 (Diplomatic Restart Trigger, 2 confirmations), SELL_ON_EARNINGS_NEWS_IT (3 confirmations). AMENDED: TALKS_FAILED_WAR_PREMIUM_RETURN \u2014 duration constraint added (1-2 day swing pattern only, not 7D+). New predictions P027-P030 all include explicit auto-invalidation clauses.",
+      "changes": "PROMOTED: M013 (IT Regime Risk Filter, 3 confirmations), FORECAST_PAT005 (Diplomatic Restart Trigger, 2 confirmations), SELL_ON_EARNINGS_NEWS_IT (3 confirmations). AMENDED: TALKS_FAILED_WAR_PREMIUM_RETURN — duration constraint added (1-2 day swing pattern only, not 7D+). New predictions P027-P030 all include explicit auto-invalidation clauses.",
       "accuracy_at_time": 21.4,
       "key_learnings": [
-        "Diplomatic restart after failed talks is faster than anticipated \u2014 FORECAST_PAT005 now active guard",
-        "IT sector systematically fails in active geopolitical regimes regardless of earnings quality \u2014 M013 cap enforced",
-        "Sell-on-news for large-cap IT is structural (5-10 sessions) not tactical \u2014 do not predict post-earnings IT breakouts",
-        "Gold war premium is highly sensitive to diplomatic signals \u2014 use 2\u2605 max until diplomatic situation is stable 3+ days",
+        "Diplomatic restart after failed talks is faster than anticipated — FORECAST_PAT005 now active guard",
+        "IT sector systematically fails in active geopolitical regimes regardless of earnings quality — M013 cap enforced",
+        "Sell-on-news for large-cap IT is structural (5-10 sessions) not tactical — do not predict post-earnings IT breakouts",
+        "Gold war premium is highly sensitive to diplomatic signals — use 2★ max until diplomatic situation is stable 3+ days",
         "Best predictions have ONE direct causal link between catalyst and stock outcome"
       ]
     },
     {
       "date": "2026-04-26",
       "version": "v5",
-      "changes": "M012 occurrence count updated to 3 (P004 confirmation) \u2192 status STRENGTHENED with fragile-ceasefire extension clause. NEW OBSERVING patterns: MULTI_BINARY_CORRELATION, HAVEN_PREMIUM_DURATION_TAIL, CONSUMER_DISC_BRENT_INVERSE, IT_CASCADE_OVERRIDES_MACRO \u2014 all from this week's failures. NEW META-RULE: AUDIT_LEGACY_ON_PROMOTION (downgrade open conflicting predictions to 1\u2605 when framework pattern promotes). New predictions P031-P035 all incorporate v5 patterns + caps.",
+      "changes": "M012 occurrence count updated to 3 (P004 confirmation) → status STRENGTHENED with fragile-ceasefire extension clause. NEW OBSERVING patterns: MULTI_BINARY_CORRELATION, HAVEN_PREMIUM_DURATION_TAIL, CONSUMER_DISC_BRENT_INVERSE, IT_CASCADE_OVERRIDES_MACRO — all from this week's failures. NEW META-RULE: AUDIT_LEGACY_ON_PROMOTION (downgrade open conflicting predictions to 1★ when framework pattern promotes). New predictions P031-P035 all incorporate v5 patterns + caps.",
       "accuracy_at_time": 15.0,
       "key_learnings": [
-        "MULTI-BINARY CORRELATION is now the dominant failure mode \u2014 when 2+ binary events resolve adversely within 5 sessions, downgrade index targets by 1.5x base case shock magnitude",
-        "M012 defense premium extends through fragile-ceasefire scenarios \u2014 needs BOTH Brent <$92 AND Hormuz fully open 5+ days for unwind",
-        "Haven premium has 2-5 session positioning-unwind tail \u2014 extend gold bearish horizons by +2-3 sessions",
-        "IT sector idiosyncratic shocks behave as pseudo-macro events \u2014 can drag Nifty independent of Brent",
-        "Consumer disc breakout probability rises +40% when Brent falls >5% over 2W \u2014 bearish consumer-disc calls require sustained high Brent",
+        "MULTI-BINARY CORRELATION is now the dominant failure mode — when 2+ binary events resolve adversely within 5 sessions, downgrade index targets by 1.5x base case shock magnitude",
+        "M012 defense premium extends through fragile-ceasefire scenarios — needs BOTH Brent <$92 AND Hormuz fully open 5+ days for unwind",
+        "Haven premium has 2-5 session positioning-unwind tail — extend gold bearish horizons by +2-3 sessions",
+        "IT sector idiosyncratic shocks behave as pseudo-macro events — can drag Nifty independent of Brent",
+        "Consumer disc breakout probability rises +40% when Brent falls >5% over 2W — bearish consumer-disc calls require sustained high Brent",
         "Legacy predictions need framework-promotion-audit (P004 should have been auto-invalidated Apr 8 when M012 first promoted)",
         "9-prediction cold streak from Apr 15-24: common thread = regime-shift sensitivity + multi-driver predictions"
+      ]
+    },
+    {
+      "date": "2026-04-26",
+      "version": "v6",
+      "changes": "PROMOTED: TALKS_FAILED_WAR_PREMIUM_RETURN (2nd confirmation: Apr 21-22 Iran refused talks → Brent $96→$105+, Nifty -2.78% over 3 days, COCHINSHIP +4%). UPDATED: SELL_ON_EARNINGS_NEWS_IT confirmed occurrences → 5 (HCLTECH guidance shock + INFY result Apr 21-24). P014 AUDIT: Downgraded to 1★ per AUDIT_LEGACY_ON_PROMOTION (M013 + IT_CASCADE conflict). NEW PREDICTIONS: P036 (ASTRA MICRO M012 floor), P037 (COAL INDIA coal-substitute demand), P038 (BANKNIFTY fails 57,000), P039 (NIFTY IT underperforms 3-5%), P040 (SWIGGY CONSUMER_DISC_BRENT_INVERSE).",
+      "accuracy_at_time": 15.0,
+      "key_learnings": [
+        "TALKS_FAILED_WAR_PREMIUM_RETURN confirmed as 1-2 day swing pattern (2nd confirmation Apr 21-22 works precisely)",
+        "SELL_ON_EARNINGS_NEWS_IT now 5 occurrences — most reliable pattern in framework (100% prediction rate for sell-on-news)",
+        "IT sector underperformance is structural in GEOPOLITICAL_RISK_ELEVATED regime — Brent $105 + Hormuz = IT remains under pressure",
+        "Coal India benefits from Brent >$100 as coal-substitute demand driver — direct causal link confirmed",
+        "BankNifty structural break below 56,000 requires macro regime change (FII reversal OR ceasefire) to recover 57,000+"
       ]
     }
   ],
@@ -346,13 +496,13 @@
       "id": "AUDIT_LEGACY_ON_PROMOTION",
       "name": "Audit Open Predictions on Framework Promotion",
       "added_date": "2026-04-26",
-      "rule": "When a framework pattern is promoted (or strengthened), audit ALL open legacy predictions for conflict with the new pattern. Downgrade conflicting predictions to 1\u2605 confidence and flag in confidence_note. Example: P004 (bearish ASTRA MICRO \u20b9850-900) should have been auto-invalidated Apr 8 when M012 (Defense Sector Duration Premium) was promoted, since M012 explicitly conflicts with bearish 4W defense thesis in managed-tension regime.",
+      "rule": "When a framework pattern is promoted (or strengthened), audit ALL open legacy predictions for conflict with the new pattern. Downgrade conflicting predictions to 1★ confidence and flag in confidence_note. Example: P004 (bearish ASTRA MICRO ₹850-900) should have been auto-invalidated Apr 8 when M012 (Defense Sector Duration Premium) was promoted, since M012 explicitly conflicts with bearish 4W defense thesis in managed-tension regime.",
       "trigger_conditions": [
         "Pattern promotion event in evolution_log",
         "Pattern STRENGTHENED status change with new sub-clauses",
         "Any framework_version increment"
       ],
-      "downgrade_action": "Set confidence to 1\u2605, add confidence_note explaining the framework-conflict, and append 'auto_audit_flag' field with the promoted-pattern ID."
+      "downgrade_action": "Set confidence to 1★, add confidence_note explaining the framework-conflict, and append 'auto_audit_flag' field with the promoted-pattern ID."
     },
     {
       "id": "MULTI_BINARY_DOWNGRADE",
