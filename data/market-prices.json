@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-04-26T10:44:05.085143+00:00",
-  "fetched_at_ist": "2026-04-26 16:14 IST",
+  "fetched_at": "2026-04-26T15:44:56.721334+00:00",
+  "fetched_at_ist": "2026-04-26 21:15 IST",
   "coverage": {
     "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
@@ -60,19 +60,19 @@
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 99.13,
-      "prev_close": 99.13,
+      "price": 105.33,
+      "prev_close": 105.33,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 54534,
+      "volume": 54489,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 2.68,
-      "prev_close": 2.68,
+      "price": 2.52,
+      "prev_close": 2.52,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 126442,
+      "volume": 79279,
       "ticker": "NG=F"
     }
   },
