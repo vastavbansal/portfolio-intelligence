@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "last_updated": "2026-04-01",
+  "version": 5,
+  "last_updated": "2026-04-26",
   "description": "Master checklist of fundamental and technical factors for prediction generation. Grows over time via post-mortem analysis of wrong predictions — not correlation-mining. Every factor added must have a causal explanation.",
 
   "macro_factors": [
@@ -167,10 +167,12 @@
     {
       "id": "M012",
       "name": "Defense Sector Duration Premium",
-      "status": "PROMOTED",
+      "status": "PROMOTED_STRENGTHENED",
       "promoted_date": "2026-04-08",
-      "rule": "Before making defense stock predictions, model DURATION of tension. 2-6 weeks managed tension = HOLD/ADD defense. Instant peace = REDUCE. Acute short escalation = defense spikes then reverses quickly.",
-      "confirmed_occurrences": 2
+      "occurrences_updated": "2026-04-26",
+      "rule": "Before making defense stock predictions, model DURATION of tension. 2-6 weeks managed tension = HOLD/ADD defense. Instant peace = REDUCE. Acute short escalation = defense spikes then reverses quickly. STRENGTHENED v5: Even FRAGILE-CEASEFIRE scenarios sustain defense premium for 3-4 weeks if re-escalation risk remains material; do not predict defense pullbacks until BOTH (a) Brent <$92 sustained 5 days AND (b) Hormuz fully open 5 days.",
+      "confirmed_occurrences": 3,
+      "confirmed_predictions": ["P007 SWIGGY WRONG (proxy)", "P009 ASTRA MICRO WRONG", "P004 ASTRA MICRO WRONG"]
     },
     {
       "id": "FII_CEASEFIRE_DISTRIBUTION",

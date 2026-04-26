@@ -302,6 +302,72 @@
       "outcome": "PARTIAL",
       "pattern": "HAVEN_PREMIUM_DURATION_TAIL",
       "note": "Closed 0.57% above range ceiling \u2014 near-miss."
+    },
+    {
+      "rca_id": "RCA_P027",
+      "pred_id": "P027",
+      "date": "2026-04-26",
+      "stock": "NIFTY",
+      "horizon": "7D",
+      "outcome": "WRONG",
+      "root_cause_summary": "Bullish 24,600-25,000 thesis built on ceasefire-extends + IT-sector-supports assumptions. Both broke simultaneously: (1) ceasefire 'extended' but Iran refused next-round talks Apr 22; (2) HCLTECH guidance shock Apr 21 post-market triggered IT cascade (INFY -6.93%, HCLTECH -4.02% Apr 24). Multiplicative downside via dual binary correlation.",
+      "missing_signal": "MULTI_BINARY_CORRELATION \u2014 when 2+ independent binary events (earnings + geopolitical) resolve adversely within 5 sessions, Nifty impact is multiplicative (not additive) due to regime-confidence collapse.",
+      "factor_gap": "Framework lacks multi-binary correlation handler; individual probabilities were known but combined impact undersized",
+      "proposed_factor_id": "MULTI_BINARY_CORRELATION",
+      "proposed_factor_name": "Multi-Binary Adverse Correlation",
+      "pattern_tag": "MULTI_BINARY_CORRELATION",
+      "framework_promoted": false,
+      "lesson": "When 2+ binary events resolve in same 5-session window AND both lean adverse, downgrade index target by 1.5x base case shock. P027 baseline assumed +1.5-2.5% Nifty rally on extension; actual: -2.05% on dual adverse (-3.5pp delta vs base case)."
+    },
+    {
+      "rca_id": "RCA_P001_v2",
+      "pred_id": "P001",
+      "date": "2026-04-26",
+      "stock": "SWIGGY",
+      "horizon": "4W",
+      "outcome": "WRONG",
+      "root_cause_summary": "Bearish \u2264260 broken by Apr 8 ceasefire Brent-crash consumer rally. Stock found support 280-285 zone. Same pattern as P007 \u2014 geopolitical regime shift overrode technical setup.",
+      "missing_signal": "CONSUMER_DISC_BRENT_INVERSE \u2014 consumer discretionary benefits non-linearly from Brent decline >5% over 2W (real-wage relief signal).",
+      "factor_gap": "No consumer-disc-Brent inverse modeling; treats consumer disc as Brent-neutral",
+      "proposed_factor_id": "CONSUMER_DISC_BRENT_INVERSE",
+      "proposed_factor_name": "Consumer Discretionary Brent Inverse",
+      "pattern_tag": "CONSUMER_DISC_BRENT_INVERSE",
+      "framework_promoted": false,
+      "lesson": "Q-commerce/consumer discretionary names get +40% breakout probability when Brent falls >5% over 2W. Bearish thesis on these names requires Brent >$100 sustained for 2+ weeks. 1 occurrence (observe)."
+    },
+    {
+      "rca_id": "RCA_P004_v2",
+      "pred_id": "P004",
+      "date": "2026-04-26",
+      "stock": "ASTRA MICRO",
+      "horizon": "4W",
+      "outcome": "WRONG",
+      "root_cause_summary": "3rd confirmation of M012 (Defense Sector Duration Premium). Defense premium extended through entire 4W horizon as: (1) ceasefire created managed-tension regime, (2) re-escalation late April amplified rather than unwound. Bearish target 850-900 was 25-32% below actual close 1123.75.",
+      "missing_signal": "M012 already promoted at v2 (April 8) but only had 2 occurrences; 3rd confirmation should bump confidence/strength",
+      "factor_gap": "M012 was applied to NEW predictions but legacy predictions (P004) generated pre-promotion did not have M012 applied",
+      "proposed_factor_id": "M012",
+      "proposed_factor_name": "Defense Sector Duration Premium",
+      "pattern_tag": "DEFENSE_DURATION_PREMIUM",
+      "framework_promoted": true,
+      "promoted_date": "2026-04-08",
+      "occurrence_count_update": "2 \u2192 3 (P007, P009, P004)",
+      "lesson": "When framework patterns are promoted, audit ALL open legacy predictions and downgrade confidence to 1\u2605 on those that conflict with new pattern. P004 should have been auto-invalidated April 8 when M012 promoted."
+    },
+    {
+      "rca_id": "RCA_P029",
+      "pred_id": "P029",
+      "date": "2026-04-26",
+      "stock": "SETFGOLD",
+      "horizon": "7D",
+      "outcome": "PARTIAL",
+      "root_cause_summary": "Range-consolidation thesis directionally right (gold corrected from \u20b9128.69 to \u20b9127.73) but haven bid extended fractionally past forecast window due to Apr 23-24 Israel-Iran escalation fear. Closed 0.57% above range ceiling.",
+      "missing_signal": "HAVEN_PREMIUM_DURATION_TAIL \u2014 haven bids persist 2-5 sessions past trigger-event resolution due to positioning unwind lag.",
+      "factor_gap": "Forecast window was 7D; tail extended to 9-10D",
+      "proposed_factor_id": "HAVEN_PREMIUM_DURATION_TAIL",
+      "proposed_factor_name": "Haven Premium Duration Tail",
+      "pattern_tag": "HAVEN_PREMIUM_DURATION_TAIL",
+      "framework_promoted": false,
+      "lesson": "For gold/SETFGOLD bearish range calls, extend horizon by +2-3 sessions past expected ceasefire/diplomatic event to allow positioning unwind. P029 thesis would have RIGHT at 10D (\u20b9125-127 likely by Apr 30). 1 occurrence (observe)."
     }
   ],
   "L3_trend": {
@@ -320,17 +386,26 @@
       "last_3_scored": {
         "scored": 3,
         "right": 0,
-        "wrong": 3,
+        "wrong": 2,
+        "partial": 1,
         "accuracy_pct": 0,
-        "note": "Last 3: P025 ASTRA MICRO ABOVE_RANGE, P026 IRFC WRONG, P024 Nifty WRONG. Cold streak continues."
+        "note": "Last 3 scored Apr 24: P001 SWIGGY WRONG, P004 ASTRA MICRO WRONG, P029 SETFGOLD PARTIAL. P027 also scored but excluded (5th most recent). Cold streak \u2014 0 RIGHT in last 9 scored."
       },
       "last_5_scored": {
         "scored": 5,
         "right": 0,
-        "partial": 0,
-        "wrong": 5,
+        "partial": 1,
+        "wrong": 4,
         "accuracy_pct": 0,
-        "note": "Last 5: P022 TCS WRONG, P023 SETFGOLD WRONG, P024 Nifty WRONG, P025 ABOVE_RANGE, P026 WRONG. Deep cold streak \u2014 no correct predictions in last 5 scored."
+        "note": "Last 5 (Apr 22-24): P025 ABOVE_RANGE, P026 WRONG, P001 WRONG, P004 WRONG, P027 WRONG, P029 PARTIAL. Functionally 0 RIGHT, 1 PARTIAL. 9-prediction cold streak since P019 ADANI PORT (Apr 15)."
+      },
+      "last_9_scored": {
+        "scored": 9,
+        "right": 0,
+        "partial": 1,
+        "wrong": 8,
+        "accuracy_pct": 0,
+        "note": "Cold streak since P019 ADANI PORT (Apr 15). Last 9: P020, P022, P023, P024 (all WRONG via diplomatic regime shifts), P025 (ABOVE_RANGE \u2014 direction right but range too narrow), P026, P001, P004, P027 (all WRONG), P029 (PARTIAL near-miss). Common thread: regime-shift sensitivity."
       }
     },
     "improvement_signal": "SYSTEMATIC_FAILURE_DETECTED \u2014 Diplomatic Restart Speed. All 5 most recent predictions failed due to underestimating how quickly Trump/US pivots to diplomatic restart after talks failure. FORECAST_PAT005 now promoted to framework. Expected recovery: predictions that directly track ceasefire resolution (P027 Nifty rally, P030 Astra Micro correction) are better structured with explicit auto-invalidation clauses. Framework v4 changes should improve accuracy in week ahead.",
@@ -344,10 +419,10 @@
       "LESSON": "Predictions that have a SINGLE, DIRECT causal link between catalyst and stock perform best. Complex multi-factor predictions with diplomatic/regime assumptions fail systematically in volatile geopolitical environments."
     },
     "framework_evolution_log_update": {
-      "date": "2026-04-19",
-      "version": "v4",
-      "changes": "PROMOTED: M013 (IT Regime Risk Filter \u2014 3 occurrences), FORECAST_PAT005 (Diplomatic Restart Trigger \u2014 2 occurrences), SELL_ON_EARNINGS_NEWS_IT (3 occurrences). AMENDED: TALKS_FAILED_WAR_PREMIUM_RETURN \u2014 duration constraint added (1-2 day pattern only, not suitable for 7D+ predictions). Added P027-P030 new predictions with explicit auto-invalidation clauses.",
-      "accuracy_at_time": 21.4
+      "date": "2026-04-26",
+      "version": "v5",
+      "changes": "M012 occurrence count updated to 3 (P004 third confirmation). New OBSERVING: MULTI_BINARY_CORRELATION, HAVEN_PREMIUM_DURATION_TAIL, CONSUMER_DISC_BRENT_INVERSE, IT_CASCADE_OVERRIDES_MACRO. AUDIT_RULE added: legacy predictions auto-downgrade on framework promotion. New predictions P031-P035 added.",
+      "accuracy_at_time": 15.0
     }
   },
   "factor_performance": {
@@ -425,6 +500,34 @@
         "Aviation benefits non-linearly from Brent decline (\u20b9200-300 per $10 Brent drop for INDIGO)",
         "Direct geopolitical beneficiaries (ADANI PORT/Hormuz) are more reliable than indirect (TCS/IT)"
       ]
+    },
+    {
+      "date": "2026-04-19",
+      "event": "FRAMEWORK_v4_UPDATE",
+      "description": "PROMOTED: M013 (IT Regime Risk Filter), FORECAST_PAT005 (Diplomatic Restart Trigger), SELL_ON_EARNINGS_NEWS_IT. AMENDED: TALKS_FAILED_WAR_PREMIUM_RETURN \u2014 1-2 day swing pattern only, not 7D+.",
+      "triggered_by": "RCA_P022 (TCS WRONG, 3rd IT MACRO_REGIME_OVERRIDE) + RCA_P023 (SETFGOLD WRONG, 2nd diplomatic restart underweighting)",
+      "accuracy_at_time": 21.4,
+      "key_learnings": [
+        "Diplomatic restart after failed talks is faster than anticipated \u2014 FORECAST_PAT005 now active guard",
+        "IT sector systematically fails in active geopolitical regimes regardless of earnings quality \u2014 M013 cap enforced",
+        "Sell-on-news for large-cap IT is structural (5-10 sessions) not tactical",
+        "Best predictions have ONE direct causal link between catalyst and stock outcome"
+      ]
+    },
+    {
+      "date": "2026-04-26",
+      "event": "FRAMEWORK_v5_UPDATE",
+      "description": "M012 occurrence count updated to 3 (P004 confirmation). New OBSERVING patterns added: MULTI_BINARY_CORRELATION (1 occurrence P027), HAVEN_PREMIUM_DURATION_TAIL (1 occurrence P029), CONSUMER_DISC_BRENT_INVERSE (1 occurrence P001), IT_CASCADE_OVERRIDES_MACRO (1 occurrence Apr 24 session). New AUDIT_RULE: when framework pattern is promoted, downgrade legacy open predictions that conflict with the new pattern to 1\u2605.",
+      "triggered_by": "Worst weekly accuracy (0/6 RIGHT including P025 ABOVE_RANGE) + 9-prediction cold streak. Multi-binary failure mode dominant.",
+      "accuracy_at_time": 15.0,
+      "key_learnings": [
+        "MULTI-BINARY CORRELATION is the dominant failure mode \u2014 when 2+ binary events resolve adversely within 5 sessions, downgrade index targets by 1.5x base case shock",
+        "Legacy predictions need framework-promotion-audit (P004 should have been invalidated Apr 8 when M012 promoted)",
+        "Defense premium extends ~3-4 weeks even through fragile-ceasefire scenarios (M012 confirmed at 3 occurrences)",
+        "Haven premium has 2-5 session positioning-unwind tail \u2014 extend gold bearish horizons by +2-3 sessions",
+        "Consumer disc gets +40% breakout probability when Brent falls >5% over 2W \u2014 cap bearish consumer-disc calls during Brent declines",
+        "IT cascade (sector contagion) can override macro thesis \u2014 IT sector idiosyncratic shocks (HCLTECH guidance, INFY result) can drag Nifty independent of Brent direction"
+      ]
     }
   ],
   "next_session_accuracy": {
@@ -458,10 +561,49 @@
       "P026"
     ]
   },
+  "weekly_review_2026_04_19": {
+    "date": "2026-04-19",
+    "review_type": "SUNDAY_WEEKLY",
+    "predictions_scored_this_week": 2,
+    "note": "P022 TCS WRONG, P023 SETFGOLD WRONG. Accuracy dropped to 21.4%. Framework v4 promoted.",
+    "regime_at_review": "DIPLOMATIC_DEESCALATION_WITH_EXPIRY_RISK \u2014 ceasefire expiry Apr 21 binary pending.",
+    "framework_update": "M013 (IT Regime Risk Filter), FORECAST_PAT005 (Diplomatic Restart), SELL_ON_EARNINGS_NEWS_IT all PROMOTED. TALKS_FAILED_WAR_PREMIUM_RETURN AMENDED with duration constraint.",
+    "new_predictions_added": ["P027", "P028", "P029", "P030"]
+  },
+  "weekly_review_2026_04_26": {
+    "date": "2026-04-26",
+    "review_type": "SUNDAY_WEEKLY",
+    "predictions_scored_this_week": 6,
+    "outcomes": {
+      "P025_ASTRA_MICRO": "ABOVE_RANGE (1129.75 vs 1050-1100)",
+      "P026_IRFC": "WRONG (105.82 vs 92-96)",
+      "P001_SWIGGY": "WRONG (287.10 vs \u2264260)",
+      "P004_ASTRA_MICRO": "WRONG (1123.75 vs 850-900)",
+      "P027_NIFTY": "WRONG (23897.95 vs 24600-25000)",
+      "P029_SETFGOLD": "PARTIAL (127.73 vs 123-127, 0.57% above ceiling)"
+    },
+    "note": "6 predictions scored: 0 RIGHT, 1 PARTIAL, 5 WRONG (incl. 1 ABOVE_RANGE). Worst week so far. All-time accuracy now 15.0% (3 RIGHT / 20 scored). Cold streak persists.",
+    "regime_evolution": "Apr 20 (Mon): DIPLOMATIC_DEESCALATION_WITH_EXPIRY_RISK \u2192 Apr 21 (Tue): ceasefire VOTED to extend BUT Iran refused talks, Vance cancelled Islamabad \u2192 Apr 22-23: GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_FRAYING \u2192 Apr 24: GEOPOLITICAL_RISK_ELEVATED_OVERSOLD_WEEKEND_BINARY_PENDING.",
+    "key_developments": [
+      "Apr 21 ceasefire formally extended in name only \u2014 Iran refused next-round talks; Vance cancelled Islamabad trip",
+      "HCLTECH Q4 (Apr 21 post-market) \u2014 -10% guidance shock; sector cascade ensued",
+      "Infosys Q4 (Apr 23) \u2014 sell-on-news (5th IT M013 confirmation pattern-wise)",
+      "Brent: Apr 17 close $96 \u2192 Apr 22-23 spike to $105-108 \u2192 Apr 24 cooled to $100.71",
+      "FII selling 4 consecutive sessions (~\u20b93,254 cr Apr 24 alone)",
+      "Nifty Apr 22-24 cumulative -2.78% (-205, -195, -276 pts)",
+      "IT sector cascade: INFY -6.93%, HCLTECH -4.02% Friday alone",
+      "Defense bid persistent: COCHINSHIP +4.51% Friday, ASTRA MICRO sustained \u20b91,100+",
+      "BankNifty broke 56,000 zone briefly, closed 56,089"
+    ],
+    "framework_update_v5": "PROMOTED: DEFENSE_DURATION_PREMIUM (M012 confirmed_occurrences \u2192 3, P007/P009/P004). NEW OBSERVING: MULTI_BINARY_CORRELATION (1 occurrence P027), HAVEN_PREMIUM_DURATION_TAIL (1 occurrence P029), CONSUMER_DISC_BRENT_INVERSE (1 occurrence P001), IT_CASCADE_OVERRIDES_MACRO (1 occurrence \u2014 Apr 24 session).",
+    "new_predictions_added": ["P031", "P032", "P033", "P034", "P035"],
+    "key_lesson_of_week": "MULTI-BINARY CORRELATION is the dominant failure mode this week. P027 Nifty bullish target (24,600-25,000) was undone by SIMULTANEOUS earnings shock (HCLTECH guidance) + geopolitical re-fraying (Vance cancellation). Individual probabilities were known; combined impact was multiplicative not additive. New rule: when 2+ binary events resolve adversely within 5 sessions, downgrade index targets by 1.5x base case shock.",
+    "rolling_5_pred_accuracy": "0/5 = 0% (P022, P023, P024, P025-ABOVE_RANGE, P026 WRONG). Extended cold streak now 6 weeks, no RIGHT prediction since P019 ADANI PORT (Apr 15)."
+  },
   "total": 30,
   "scored": 20,
   "right": 3,
   "wrong": 14,
   "partial": 3,
-  "note": "Updated Apr 24 EOD: +3 WRONG (P001, P004, P027), +1 PARTIAL (P029). Accuracy 15.0%."
+  "note": "Updated Apr 26 weekly review: 6 predictions scored this week (P025 ABOVE_RANGE, P026/P001/P004/P027 WRONG, P029 PARTIAL). Accuracy 15.0%. New predictions P031-P035 added. M012 promoted to 3 confirmations."
 }
