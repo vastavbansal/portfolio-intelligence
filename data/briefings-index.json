@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-04-26",
+      "type": "weekly",
+      "label": "Sun Apr 26 — Weekly Review",
+      "file": "daily-briefings/weekly-2026-04-26.md",
+      "summary": "Brent:** $100.71 (Apr 24 close, -4.15% intraday) — cooled but in elevated $100-108 zone. Nifty:** 23,897.95 (Apr 24 close, -1.14% on day, -2.78% over Apr 22-24)"
+    },
+    {
       "date": "2026-04-19",
       "type": "weekly",
       "label": "Sun Apr 19 — Weekly Review",

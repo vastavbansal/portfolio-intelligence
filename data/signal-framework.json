@@ -218,6 +218,42 @@
       "observation": "SETFGOLD elevated before Islamabad talks (April 9-10). Post-TALKS_NEUTRAL softened to ₹127.31. Pattern: gold retains/elevates into binary events as hedge. This is a SELL SIGNAL into events, HOLD signal when talks fail. April 11 failed talks likely to confirm gold rally leg.",
       "confirmations_needed": 1,
       "first_seen": "2026-04-09"
+    },
+    {
+      "id": "MULTI_BINARY_CORRELATION",
+      "name": "Multi-Binary Adverse Correlation",
+      "status": "OBSERVING",
+      "proposed_date": "2026-04-26",
+      "observation": "P027 Nifty (target 24,600-25,000) WRONG: simultaneous adverse resolution of (a) ceasefire fraying (Iran refused next-round talks Apr 22), (b) HCLTECH guidance shock Apr 21 post-market driving IT cascade (Apr 22-24 cumulative -2.78%). Combined impact ~3.5pp below base case (single-binary expected). Hypothesized rule: when 2+ binary events resolve adversely within 5 sessions, downgrade index targets by 1.5x base case shock magnitude.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-04-26"
+    },
+    {
+      "id": "HAVEN_PREMIUM_DURATION_TAIL",
+      "name": "Haven Premium Duration Tail",
+      "status": "OBSERVING",
+      "proposed_date": "2026-04-26",
+      "observation": "P029 SETFGOLD PARTIAL: range-consolidation thesis directionally right but haven bid extended fractionally past 7D forecast window. Closed 0.57% above ₹127 ceiling. Hypothesized rule: gold/SETFGOLD haven premium has 2-5 session positioning-unwind tail past trigger-event resolution. Extend bearish horizons by +2-3 sessions.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-04-26"
+    },
+    {
+      "id": "CONSUMER_DISC_BRENT_INVERSE",
+      "name": "Consumer Discretionary Brent Inverse",
+      "status": "OBSERVING",
+      "proposed_date": "2026-04-26",
+      "observation": "P001 SWIGGY WRONG: bearish ≤260 broken by Apr 8 ceasefire Brent crash (-17.5% to $93.13). Stock found support 280-285 zone — same mechanism as P007. Hypothesized rule: Q-commerce/consumer discretionary names get +40% breakout probability when Brent falls >5% over 2W window (real-wage relief signal). Bearish thesis on these names requires Brent >$100 sustained for 2+ weeks.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-04-26"
+    },
+    {
+      "id": "IT_CASCADE_OVERRIDES_MACRO",
+      "name": "IT Cascade Overrides Macro Thesis",
+      "status": "OBSERVING",
+      "proposed_date": "2026-04-26",
+      "observation": "Apr 24 session: Brent COOLED -4.15% to $100.71 (constructive macro signal), but Nifty still fell -1.14% (close 23,897.95) driven primarily by IT sector cascade (INFY -6.93%, HCLTECH -4.02%). Forecast-day Brent thesis was WRONG on direction yet session-direction call held — driver attribution off. Hypothesized rule: IT sector idiosyncratic shocks (HCLTECH guidance, INFY result) can drag Nifty -0.8 to -1.5% INDEPENDENT of Brent direction when sector cascade triggers. Treat IT-sector earnings shocks as pseudo-macro events.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-04-26"
     }
   ],
 
@@ -288,6 +324,42 @@
         "Gold war premium is highly sensitive to diplomatic signals \u2014 use 2\u2605 max until diplomatic situation is stable 3+ days",
         "Best predictions have ONE direct causal link between catalyst and stock outcome"
       ]
+    },
+    {
+      "date": "2026-04-26",
+      "version": "v5",
+      "changes": "M012 occurrence count updated to 3 (P004 confirmation) \u2192 status STRENGTHENED with fragile-ceasefire extension clause. NEW OBSERVING patterns: MULTI_BINARY_CORRELATION, HAVEN_PREMIUM_DURATION_TAIL, CONSUMER_DISC_BRENT_INVERSE, IT_CASCADE_OVERRIDES_MACRO \u2014 all from this week's failures. NEW META-RULE: AUDIT_LEGACY_ON_PROMOTION (downgrade open conflicting predictions to 1\u2605 when framework pattern promotes). New predictions P031-P035 all incorporate v5 patterns + caps.",
+      "accuracy_at_time": 15.0,
+      "key_learnings": [
+        "MULTI-BINARY CORRELATION is now the dominant failure mode \u2014 when 2+ binary events resolve adversely within 5 sessions, downgrade index targets by 1.5x base case shock magnitude",
+        "M012 defense premium extends through fragile-ceasefire scenarios \u2014 needs BOTH Brent <$92 AND Hormuz fully open 5+ days for unwind",
+        "Haven premium has 2-5 session positioning-unwind tail \u2014 extend gold bearish horizons by +2-3 sessions",
+        "IT sector idiosyncratic shocks behave as pseudo-macro events \u2014 can drag Nifty independent of Brent",
+        "Consumer disc breakout probability rises +40% when Brent falls >5% over 2W \u2014 bearish consumer-disc calls require sustained high Brent",
+        "Legacy predictions need framework-promotion-audit (P004 should have been auto-invalidated Apr 8 when M012 first promoted)",
+        "9-prediction cold streak from Apr 15-24: common thread = regime-shift sensitivity + multi-driver predictions"
+      ]
+    }
+  ],
+  "meta_rules": [
+    {
+      "id": "AUDIT_LEGACY_ON_PROMOTION",
+      "name": "Audit Open Predictions on Framework Promotion",
+      "added_date": "2026-04-26",
+      "rule": "When a framework pattern is promoted (or strengthened), audit ALL open legacy predictions for conflict with the new pattern. Downgrade conflicting predictions to 1\u2605 confidence and flag in confidence_note. Example: P004 (bearish ASTRA MICRO \u20b9850-900) should have been auto-invalidated Apr 8 when M012 (Defense Sector Duration Premium) was promoted, since M012 explicitly conflicts with bearish 4W defense thesis in managed-tension regime.",
+      "trigger_conditions": [
+        "Pattern promotion event in evolution_log",
+        "Pattern STRENGTHENED status change with new sub-clauses",
+        "Any framework_version increment"
+      ],
+      "downgrade_action": "Set confidence to 1\u2605, add confidence_note explaining the framework-conflict, and append 'auto_audit_flag' field with the promoted-pattern ID."
+    },
+    {
+      "id": "MULTI_BINARY_DOWNGRADE",
+      "name": "Multi-Binary Adverse Index Target Downgrade",
+      "added_date": "2026-04-26",
+      "rule": "When generating any 7D+ index prediction, identify all binary events scheduled within the prediction window (earnings shocks, ceasefire decisions, central bank decisions, geopolitical deadlines). If 2+ have material downside skew (>30% adverse probability each), apply 1.5x downgrade to the base-case shock magnitude in the bearish scenario AND raise the bearish scenario probability by +10pp.",
+      "based_on_pattern": "MULTI_BINARY_CORRELATION (1 occurrence; observe but apply preemptively)"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "accuracy_meta": {
-    "total": 26,
-    "scored": 12,
-    "accuracy_pct": null,
+    "total": 35,
+    "scored": 20,
+    "accuracy_pct": 15.0,
     "by_horizon": {
       "1D": {
         "total": 0,
@@ -11,18 +11,18 @@
         "partial": 0
       },
       "7D": {
-        "total": 9,
-        "right": 1,
-        "wrong": 2,
-        "partial": 0,
-        "open": 6
+        "total": 14,
+        "right": 3,
+        "wrong": 9,
+        "partial": 2,
+        "open": 0
       },
       "4W": {
-        "total": 6,
+        "total": 5,
         "right": 0,
-        "wrong": 0,
+        "wrong": 2,
         "partial": 0,
-        "open": 6
+        "open": 3
       },
       "2M": {
         "total": 5,
@@ -30,26 +30,34 @@
         "wrong": 0,
         "partial": 0,
         "open": 5
+      },
+      "10D": {
+        "total": 3,
+        "right": 0,
+        "wrong": 1,
+        "partial": 0,
+        "above_range": 1,
+        "open": 1
       }
     },
     "by_category": {
       "CRITICAL": {
         "right": 0,
-        "wrong": 1,
-        "partial": 0
-      },
-      "HIGH": {
-        "right": 1,
         "wrong": 2,
         "partial": 0
       },
+      "HIGH": {
+        "right": 3,
+        "wrong": 11,
+        "partial": 2
+      },
       "MEDIUM": {
         "right": 0,
-        "wrong": 0,
-        "partial": 0
+        "wrong": 1,
+        "partial": 1
       }
     },
-    "note": "Updated eod_wrap_2026-04-16. P021 WRONG (TCS), P024 WRONG (Nifty). Running: 12 scored from 26 total."
+    "note": "Updated eod_wrap_2026-04-26 weekly review. P027 WRONG (Nifty 23897.95 vs 24600-25000), P001 WRONG (Swiggy 287.10 vs <260), P004 WRONG (Astra 1123.75 vs 850-900), P029 PARTIAL (SETFGOLD 127.73 vs 123-127), P025 ABOVE_RANGE (Astra 1129.75 vs 1050-1100), P026 WRONG (IRFC 105.82 vs 92-96). New predictions P031-P035 added. Running: 20 scored from 35 total. Accuracy 15.0%. Cold streak 9 predictions since P019 ADANI PORT."
   },
   "predictions": [
     {
@@ -994,7 +1002,7 @@
       "prediction": "ASTRA MICRO corrects to \u20b91,010-1,060 by April 30 following ceasefire extension as M012 defense duration premium unwinds",
       "entry_price": 1130,
       "target": "1010-1060",
-      "confidence": 3,
+      "confidence": 1,
       "category": "HIGH",
       "reasoning": "M012 (Defense Duration Premium) REVERSE: formal ceasefire extension transitions from 'managed tension' (optimal for defense) to 'negotiated de-escalation' (reduces defense premium). ASTRA MICRO at ~\u20b91,120-1,140 has incorporated both M012 duration premium AND ceasefire-expiry risk premium. If ceasefire extends formally, expect profit-booking as duration premium exits. Target \u20b91,010-1,060 = -6.5 to -11.4% retracement. P009 showed 10%+ unwind on ceasefire news. Entry estimated at \u20b91,130 (April 17 est. close \u2014 above P025 target range).",
       "factors_checked": [
@@ -1014,8 +1022,161 @@
       "postmortem": null,
       "scored_on": null,
       "auto_invalidation": "Ceasefire collapses \u2192 prediction invalidated; ASTRA MICRO spikes \u20b91,150-1,200+.",
-      "confidence_note": "NEW Apr 19. Entry \u20b91,130 (estimated). 3\u2605 conditional on ceasefire extension. S003 (defense budget) provides floor support so not predicting below \u20b91,010."
+      "confidence_note": "DOWNGRADED to 1\u2605 at v5 audit (Apr 26): Ceasefire extension premise FAILED \u2014 Iran refused next-round talks Apr 22, Vance cancelled Islamabad. Regime is now CEASEFIRE_FRAYING not extension. M012 STRENGTHENED v5 says defense premium extends through fragile-ceasefire scenarios \u2014 needs Brent <$92 + Hormuz fully open 5 days for defense unwind, neither condition met. ASTRA MICRO at \u20b91,123.75 (Apr 24) \u2014 would need -5.7 to -10.1% in 4 sessions. Highly unlikely. WILL LIKELY SCORE WRONG OR ABOVE_RANGE.",
+      "auto_audit_flag": "M012_v5_STRENGTHENED \u2014 conflict with bearish 10D defense thesis in fragile-ceasefire regime"
+    },
+    {
+      "pred_id": "P031",
+      "horizon": "7D",
+      "date": "2026-04-26",
+      "stock": "NIFTY",
+      "prediction": "Nifty mean-reversion bounce to 24,050-24,300 by May 1 \u2014 oversold conditions after -2.78% 3-day decline + DII support at 23,800, conditional on weekend passing without major Israel-Iran strike",
+      "entry_price": 23897.95,
+      "target": "24050-24300",
+      "confidence": 2,
+      "category": "HIGH",
+      "reasoning": "Nifty Apr 22-24 cumulative -2.78% leaves market technically oversold. RSI weekly likely in 30-35 zone. DII has been net buyer on every dip in 2026; support floor at 23,800 likely to hold. Brent cooled to $100.71 Friday; if weekend passes quietly (extension probability 30%, stalemate 30% = 60% non-collapse), short-covering bounce typical Monday-Tuesday. Target 24,050-24,300 = +0.6 to +1.7% from Friday close. Cap upside at 24,300 because: (a) FII selling momentum (4 days), (b) IT cascade unresolved, (c) MULTI_BINARY_DOWNGRADE meta-rule applies \u2014 both Israel-Iran resolution AND TCS/Wipro guidance binary still pending in next 7D. AUTO-INVALIDATION: Israel strikes Iran weekend \u2192 Brent >$108 \u2192 Nifty gaps down -1 to -2%, target invalid.",
+      "factors_checked": [
+        "T004",
+        "M005",
+        "M001",
+        "FORECAST_PAT003",
+        "MULTI_BINARY_DOWNGRADE"
+      ],
+      "factors_not_checked": [
+        "T003",
+        "M009"
+      ],
+      "check_date": "2026-05-01",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "auto_invalidation": "Weekend Israel-Iran escalation (strike OR Hormuz blockade extended) \u2192 confidence drops to 1\u2605, target invalid; if break of 23,800 by Tuesday \u2192 confidence drops to 1\u2605. If Brent >$108 by Monday \u2192 reverse thesis to 23,500-23,800.",
+      "confidence_note": "2\u2605 deliberately \u2014 applying MULTI_BINARY_DOWNGRADE meta-rule. Two binary events in 7D window: (1) weekend geopolitical resolution, (2) TCS/Wipro guidance follow-through. Mean-reversion thesis is base case but downgraded by binary overhang."
+    },
+    {
+      "pred_id": "P032",
+      "horizon": "7D",
+      "date": "2026-04-26",
+      "stock": "BANKNIFTY",
+      "prediction": "BankNifty holds above 56,000 critical support and reclaims 56,500 by May 1 on DII buying as credit-rotation fears overstated",
+      "entry_price": 56089.75,
+      "target": ">56500",
+      "confidence": 3,
+      "category": "HIGH",
+      "reasoning": "BankNifty 56,089.75 sits 90 pts above the 56,000 psychological + technical support. Banking heavyweights (HDFC Bank, ICICI Bank, SBI) have not seen significant earnings deterioration. April 24 -0.38% drop was much milder than Nifty -1.14% \u2014 banks were the relative outperformer. DII's own cost basis on bank index is below current \u2014 unlikely to capitulate. If Nifty mean-reversion plays (P031), BankNifty reclaims 56,500 (-0.74% reclaim). Single direct factor: bank earnings season starts late April with HDFC Bank Q4 expected ~April 29-May 1. Strong PPOP + asset quality stable = BankNifty reclaim. AUTO-INVALIDATION: HDFC Bank Q4 disappointment OR break of 55,800 = thesis invalid.",
+      "factors_checked": [
+        "T002",
+        "M005",
+        "T006",
+        "S009"
+      ],
+      "factors_not_checked": [
+        "M003",
+        "T004"
+      ],
+      "check_date": "2026-05-01",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "auto_invalidation": "Break below 55,800 OR HDFC Bank Q4 NPL deterioration \u2192 confidence drops to 1\u2605, exit thesis.",
+      "confidence_note": "3\u2605 \u2014 single direct catalyst (HDFC Bank Q4) + clear technical level + DII support pattern. Aligns with 'best predictions have ONE direct causal link' lesson from L3."
+    },
+    {
+      "pred_id": "P033",
+      "horizon": "7D",
+      "date": "2026-04-26",
+      "stock": "COCHINSHIP",
+      "prediction": "COCHINSHIP continues defense breakout to \u20b91,720-1,800 by May 1 as M012 v5 (defense premium extends through fragile-ceasefire) supports follow-through; +4.51% Friday momentum + geopolitical premium intact",
+      "entry_price": 1664.7,
+      "target": "1720-1800",
+      "confidence": 3,
+      "category": "HIGH",
+      "reasoning": "COCHINSHIP +4.51% Friday Apr 24 \u2014 defense basket standout on geopolitical premium. M012 v5 STRENGTHENED rule: defense premium extends through fragile-ceasefire scenarios for 3-4 weeks if re-escalation risk material. Iran refused next-round talks Apr 22 + Vance cancelled = re-escalation risk material. COCHINSHIP order book (CMA CGM, defence vessels) provides fundamental floor; sentiment driver geopolitical. Target \u20b91,720-1,800 = +3.3 to +8.1% over 7D. Defense basket momentum (ASTRA MICRO held \u20b91,100+ all week) suggests further rotation. AUTO-INVALIDATION: clean ceasefire re-affirmation (Iran reverses Apr 22 stance) + Brent <$95 \u2192 target invalid, thesis reverses.",
+      "factors_checked": [
+        "M012",
+        "S006",
+        "S003",
+        "T001",
+        "T006"
+      ],
+      "factors_not_checked": [
+        "T004",
+        "M009"
+      ],
+      "check_date": "2026-05-01",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "auto_invalidation": "Clean ceasefire re-affirmation + Iran returns to talks + Brent <$95 \u2192 confidence drops to 1\u2605.",
+      "confidence_note": "3\u2605 \u2014 single direct causal link (geopolitical premium for defense) + M012 v5 framework support. Defense direct-beneficiary pattern (P019 ADANI PORT, P015 INDIGO worked because direct linkage) \u2014 applying that lesson here."
+    },
+    {
+      "pred_id": "P034",
+      "horizon": "10D",
+      "date": "2026-04-26",
+      "stock": "SETFGOLD",
+      "prediction": "SETFGOLD range-trades \u20b9125-130 by May 6 \u2014 haven premium tail extends per HAVEN_PREMIUM_DURATION_TAIL but caps at \u20b9130 absent fresh strike; balanced bias",
+      "entry_price": 127.73,
+      "target": "125-130",
+      "confidence": 2,
+      "category": "MEDIUM",
+      "reasoning": "Applying HAVEN_PREMIUM_DURATION_TAIL (new v5 observing pattern): haven bid persists 2-5 sessions past trigger-event resolution. P029 PARTIAL showed gold sticky at \u20b9127-128 even after Brent -4.15% Friday. Range thesis: floor \u20b9125 (positioning unwind absent fresh trigger), ceiling \u20b9130 (any meaningful escalation breaks higher). Gold USD $4,800-4,850 zone is the war-premium-extended-but-not-spike level. Range-bound bias because: (a) Iran-Israel binary unresolved (haven floor), (b) no fresh strike yet (haven ceiling). Wider range than P029 to incorporate v5 lesson \u2014 tail extension. AUTO-INVALIDATION: Israel strikes Iran \u2192 SETFGOLD spikes \u20b9133-140 (range-break upside); clean ceasefire confirmation \u2192 \u20b9122-125 (range-break downside).",
+      "factors_checked": [
+        "HAVEN_PREMIUM_DURATION_TAIL",
+        "FORECAST_PAT004",
+        "M001",
+        "M008"
+      ],
+      "factors_not_checked": [
+        "M009",
+        "T004"
+      ],
+      "check_date": "2026-05-06",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "auto_invalidation": "Israel strikes Iran \u2192 spikes >\u20b9130 (WRONG above range); clean ceasefire confirmation + Brent <$92 \u2192 drops <\u20b9125 (WRONG below range).",
+      "confidence_note": "2\u2605 deliberately \u2014 gold has been WRONG in 3 of 4 recent calls (P020, P023 WRONG; P029 PARTIAL). Range thesis is the humble version of P029's bearish thesis, widened to incorporate HAVEN_PREMIUM_DURATION_TAIL learning."
+    },
+    {
+      "pred_id": "P035",
+      "horizon": "4W",
+      "date": "2026-04-26",
+      "stock": "MRPL",
+      "prediction": "MRPL recovers to \u20b9190-200 by May 25 as Brent stabilizes $98-105 (CONTAINED REGIME) providing GRM visibility + Q1FY27 guidance positive",
+      "entry_price": 186.38,
+      "target": "190-200",
+      "confidence": 3,
+      "category": "HIGH",
+      "reasoning": "MRPL \u20b9186.38 (Apr 24, -6.8% from avg cost \u20b9196). Brent at $100.71 \u2014 near the 'sweet spot' for refiner GRM (high enough for inventory gains, contained enough to not trigger pass-through restrictions). If Brent holds $98-105 zone for 4 weeks: (a) GRM expands $1-2/bbl, (b) inventory mark-to-market positive, (c) Q1FY27 guidance likely flag margin recovery. Target \u20b9190-200 = +1.9 to +7.3% over 4W. Direct single-causal link: Brent stable + no government pass-through restriction = MRPL margin expansion. P017 (target \u20b9200-210 by May 8) is similar thesis \u2014 P035 is a more conservative refresh with new entry/target reflecting Apr 24 regime. AUTO-INVALIDATION: Brent breaks <$92 (margin pressure from inventory loss) OR Brent breaks >$108 (government caps + GRM compression).",
+      "factors_checked": [
+        "M001",
+        "S001",
+        "M008",
+        "T002"
+      ],
+      "factors_not_checked": [
+        "M003",
+        "T005"
+      ],
+      "check_date": "2026-05-25",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "auto_invalidation": "Brent <$92 sustained 5 days \u2192 confidence drops to 1\u2605 (inventory loss scenario); Brent >$108 sustained 5 days \u2192 confidence drops to 1\u2605 (pass-through restriction scenario).",
+      "confidence_note": "3\u2605 \u2014 single direct causal link (Brent in $98-105 sweet spot for GRM). Replaces ambitious P017 (\u20b9200-210 by May 8) which is also still open but P017 needs +9-14% in 12 days vs P035's +1.9-7.3% in 4W."
     }
   ],
-  "last_updated": "2026-04-24T17:30:00"
+  "last_updated": "2026-04-26T15:00:00"
 }
