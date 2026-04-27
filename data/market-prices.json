@@ -1,8 +1,8 @@
 {
-  "fetched_at": "2026-04-27T13:22:59.565110+00:00",
-  "fetched_at_ist": "2026-04-27 18:53 IST",
+  "fetched_at": "2026-04-27T18:00:04.420633+00:00",
+  "fetched_at_ist": "2026-04-27 23:46 IST",
   "coverage": {
-    "nse_stocks_fetched": 88,
+    "nse_stocks_fetched": 86,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4713.0,
-      "prev_close": 4713.0,
+      "price": 4693.9,
+      "prev_close": 4693.9,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 44628,
+      "volume": 78567,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 75.25,
-      "prev_close": 75.25,
+      "price": 75.18,
+      "prev_close": 75.18,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 20165,
+      "volume": 35115,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 96.01,
-      "prev_close": 96.01,
+      "price": 96.96,
+      "prev_close": 96.96,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 76913,
+      "volume": 170764,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 100.79,
-      "prev_close": 100.79,
+      "price": 102.34,
+      "prev_close": 102.34,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 16272,
+      "volume": 34273,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 2.8,
-      "prev_close": 2.8,
+      "price": 2.75,
+      "prev_close": 2.75,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 51714,
+      "volume": 130521,
       "ticker": "NG=F"
     }
   },
@@ -770,13 +770,6 @@
       "change_pct": 2.85,
       "volume": 42612583
     },
-    "HINDALCO.NS": {
-      "price": 1061.8,
-      "prev_close": 1048.35,
-      "change": 13.45,
-      "change_pct": 1.28,
-      "volume": 4241048
-    },
     "JSWSTEEL.NS": {
       "price": 1282.7,
       "prev_close": 1255.7,
@@ -1140,13 +1133,6 @@
       "change": 5.15,
       "change_pct": 2.42,
       "volume": 57524107
-    },
-    "TATAPOWER.NS": {
-      "price": 453.2,
-      "prev_close": 435.0,
-      "change": 18.2,
-      "change_pct": 4.18,
-      "volume": 16395908
     },
     "NHPC.NS": {
       "price": 83.23,
