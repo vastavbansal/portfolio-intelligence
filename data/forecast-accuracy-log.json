@@ -1297,9 +1297,95 @@
         ]
       },
       "session_direction_accuracy": {
+        "direction_correct": true,
+        "direction_note": "Forecast BULLISH (+0.5% from open). Actual: Nifty closed 24,092.7 (+194.75 / +0.81%), open 23,945.45. Direction CORRECT \u2014 index closed firmly higher in line with oversold-bounce thesis.",
+        "in_range": true,
+        "range_note": "Forecast range 23,900-24,200. Actual close 24,092.7 sits squarely in upper half of range (mid-band 24,050). CONTINUATION_BOUNCE base case (50% probability, range 24,000-24,150) materialized almost exactly as scripted.",
+        "magnitude_within_50pct": true,
+        "magnitude_note": "Forecast +0.5% from open; actual +0.62% from open (close 24,092.7 vs open 23,945.45). Magnitude error +0.12pp \u2014 within 50% tolerance band. From prev close 23,897.95: +0.81% (close-to-close), still within forecast band.",
+        "brent_correct": true,
+        "brent_note": "Forecast $98-103. Actual Brent $101.03 \u2014 squarely in band. Sub-$103 ceiling held; afternoon-reversal risk did not trigger.",
+        "scenario_match": "CONTINUATION_BOUNCE (50% base case) \u2014 DII defended morning low 23,940; short-covering built through morning; IT/Banking stabilized; Brent held $100-101.",
+        "grade": "CORRECT"
+      },
+      "actual": {
+        "nifty_open": 23945.45,
+        "nifty_close": 24092.7,
+        "nifty_change_pct": 0.81,
+        "nifty_change_pts": 194.75,
+        "sensex_close": 77303.63,
+        "sensex_change_pct": 0.83,
+        "banknifty_close": 56264.3,
+        "banknifty_change_pct": 0.31,
+        "brent_close": 101.03,
+        "brent_change_pct": -4.27,
+        "brent_note": "Brent cooled $4-5 from Apr 25 settle ($105.33) to $101.03 \u2014 held in elevated $100-105 zone, regime-change threshold (<$95 sustained) NOT triggered.",
+        "session_theme": "Oversold bounce day-1 plays out cleanly \u2014 DII-driven recovery from 4-day -2.78% decline. BankNifty reclaimed 56,000. Sensex outperformed Nifty (+0.83% vs +0.81%). IT sector stabilization at lows. No fresh Israel-Iran escalation; Brent cooled $4 despite stalled US-Iran talks. Framework v6 forecast vindicated \u2014 base-case CONTINUATION_BOUNCE scenario materialized."
+      },
+      "lessons": [
+        "OVERSOLD_BOUNCE_PROBABILITY_UPGRADE candidate validated: After 4 consecutive bearish sessions with cumulative -2.78%, oversold mean-reversion + DII activation + Brent cooling combined to drive the base-case CONTINUATION_BOUNCE outcome (50% probability scenario). Recommend lifting baseline probability of bounce-day base case from ~50% to ~60% when this trifecta of conditions is present.",
+        "Morning brief conviction-bump (2 \u2192 3) on early intraday tape was correct adaptive behavior. Framework added value by reading actual open + early high (24,107) and Brent cooling, allowing higher-confidence forecast than the prior-night EOD assessment. Codify this: when actual opening tape diverges from EOD base case in direction of override scenario, conviction should increase one notch as override probability rises.",
+        "The EOD-Apr-24 \u2192 Morning-Apr-27 forecast pipeline showed framework asymmetry: EOD-Apr-24 forecast was WRONG on direction (FLAT_TO_MILD_GAP_DOWN vs actual GAP_UP), but Morning-Apr-27 session-direction forecast was CORRECT. Net: framework reads intraday tape better than overnight macro divergence \u2014 Brent overnight shifts (-$4) are still systematically under-modeled. Action: build overnight Brent delta vs prev settle into opening_bias model with explicit cutoffs (e.g., Brent down >3% overnight = upgrade override probability)."
+      ]
+    },
+    {
+      "session_date": "2026-04-28",
+      "forecast_generated_at": "2026-04-27",
+      "opening_bias": {
+        "direction": "FLAT_TO_SLIGHT_GAP_UP",
+        "gap_pct_estimate": 0.1,
+        "gift_nifty_estimate": 24115,
+        "key_drivers": [
+          "Today closed 24,092.7 (+0.81%) \u2014 strong day-1 bounce; day-2 typically sees consolidation/digestion rather than continuation",
+          "Brent cooled to $101.03 \u2014 held in $100-105 elevated zone; no fresh Israel-Iran escalation Monday session",
+          "BankNifty reclaimed 56,000 (close 56,264.30) \u2014 P032 trajectory toward 56,500 by May 1 better positioned but still ~250 pts away",
+          "HDFC Bank Q4 already digested (NIM compression yellow flag); P028 HCLTECH check tomorrow EXPECTED RIGHT (\u20b91,203 vs <\u20b91,430 target)",
+          "Sensex (+0.83%) outperformed Nifty (+0.81%) \u2014 heavyweight resilience signal",
+          "FII print for Apr 27 flows TBD overnight \u2014 5th-day FII selling streak risk if continued; possible relief if covering begins",
+          "No major overnight US data; SGX/Nikkei Tuesday open + GIFT Nifty 06:00 IST will calibrate the gap"
+        ],
+        "confidence": 3,
+        "rationale_note": "Confidence 3/5: solid base case for digestion/mild positive open after day-1 bounce, but day-2-of-bounce historically shows fade tendency 35-40% of time. Latent Israel-Iran weekend binary still unresolved.",
+        "generated_at": "eod_wrap_2026-04-27"
+      },
+      "opening_bias_actual": null,
+      "session_direction": {
+        "direction": "SIDEWAYS_TO_MILDLY_BULLISH",
+        "change_pct_estimate": 0.15,
+        "range_low": 23950,
+        "range_high": 24250,
+        "key_assumption": "Day-2 of oversold bounce typically consolidates rather than extends \u2014 Nifty pauses around 24,100-24,150 to digest Monday gain. Three near-term resistances bunched (24,107 Apr 27 intraday high / 24,150 Apr 27 close cluster / 24,200 forecast cap / 24,300 P031 ceiling) cap upside without fresh catalyst. Floor at 23,950-24,000 (Apr 27 mid-band; psychological 24,000). HDFC Bank NIM compression news already absorbed \u2014 BankNifty 56,000 reclaim sustains. P028 HCLTECH score day \u2014 expected RIGHT outcome supports IT-sector floor (validates HCLTECH below \u20b91,430 ceiling). Brent base case $99-103. Conviction tempered by FII flow uncertainty (5th-day risk) and unresolved Israel-Iran latent binary. Base case: Nifty closes 24,050-24,200, mid-band 24,125. Session-theme: BOUNCE_DIGESTION.",
+        "confidence": 3,
+        "generated_at": "eod_wrap_2026-04-27",
+        "regime": "GEOPOLITICAL_RISK_ELEVATED_BOUNCE_DAY2_DIGESTION",
+        "brent_forecast": "$99-103 \u2014 base case Brent holds the band as Iran talks halted but no fresh strike. Break <$98 sustained = constructive structural shift; break >$105 on fresh headline = afternoon reversal risk.",
+        "scenarios": [
+          {
+            "name": "BOUNCE_DIGESTION (45%)",
+            "description": "Mild gap up consolidates between 24,050-24,200. Day-2 sideways action. P028 HCLTECH expected RIGHT outcome. Brent stays $99-103. BankNifty holds 56,000. IT consolidates. Closes 24,080-24,180.",
+            "nifty_close_range": "24,080-24,180"
+          },
+          {
+            "name": "BOUNCE_CONTINUATION (25%)",
+            "description": "Strong follow-through buying. FII covers part of week net short. BankNifty pushes toward 56,500. Nifty breaks 24,200 and tags 24,300 P031 ceiling. Closes 24,200-24,300.",
+            "nifty_close_range": "24,200-24,300"
+          },
+          {
+            "name": "INTRADAY_FADE (20%)",
+            "description": "Bounce fades as FII selling resumes. Brent ticks up >$103 mid-session. BankNifty fails to hold 56,200. IT gives back gains. Closes 23,950-24,070 (mild loss to flat).",
+            "nifty_close_range": "23,950-24,070"
+          },
+          {
+            "name": "ESCALATION_REVERSAL (10%)",
+            "description": "Fresh Iran-Israel headline mid-session or overnight. Brent re-spikes >$105. Defense ripper, banking/IT smashed. Nifty reverses to red close 23,800-23,950.",
+            "nifty_close_range": "23,800-23,950"
+          }
+        ]
+      },
+      "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-27"
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-28"
       },
       "actual": {
         "nifty_open": null,
