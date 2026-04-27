@@ -1241,51 +1241,65 @@
         "rationale_note": "Confidence 2/5 because weekend binary risk (Israel-Iran escalation) can swing open \u00b11% in either direction. Base case leans mildly negative on continued FII outflow + below-psychological close. Any ceasefire re-affirmation overnight could flip to gap-up.",
         "generated_at": "eod_wrap_2026-04-24"
       },
-      "opening_bias_actual": null,
+      "opening_bias_actual": {
+        "nifty_open": 23945.45,
+        "nifty_prev_close": 23897.95,
+        "gift_nifty_preopen": 23930,
+        "gift_nifty_note": "GIFT Nifty pre-open Apr 27 ~23,920-23,940 zone (estimated from open). GIFT signaled flat-to-mildly-positive open vs. forecast 23,840 estimate (-0.45% miss to upside).",
+        "gap_pct": 0.199,
+        "direction": "GAP_UP",
+        "direction_correct": false,
+        "magnitude_within_50pct": false,
+        "grade": "WRONG",
+        "scoring_note": "Forecast FLAT_TO_MILD_GAP_DOWN (-0.25%, GIFT est 23,840). Actual gap +0.199% (open 23945.45 vs prev close 23897.95) \u2014 GAP_UP direction OPPOSITE of forecast. Override condition partially triggered: Brent cooled below $100 (WTI above $96 = Brent ~$99-100), enabling oversold bounce + DII activation. The override scenario predicted +0.5 to +1.0% gap up but actual was milder +0.20% \u2014 markets cautious due to lingering Israel-Iran weekend tensions (Trump halted talks, Iran FM left Pakistan without meeting US). Graded WRONG \u2014 direction opposite, magnitude smaller than override scenario. Missed signal: framework correctly mapped override conditions (Brent cooling) but base case underweighted the oversold-bounce probability after 4-day decline (cumulative -2.78%).",
+        "overnight_delta_vs_forecast": {
+          "ceasefire_status": "STALEMATE \u2014 Trump halted negotiations; Iran FM left Pakistan without meeting US officials Sunday; no deal, no strike confirmed yet",
+          "hormuz_status": "Strait of Hormuz remains effectively closed; tensions persist but no fresh strike",
+          "brent_usd": 99.5,
+          "brent_vs_eod": "~-$1 to -$2 vs Apr 25 settle ($105.33). Brent cooled to ~$99-100 zone overnight despite stalled talks \u2014 divergence from war-premium thesis.",
+          "net_effect": "Weekend passed without escalation strike. Brent cooled despite stalled talks (positioning unwind / supply expectations). Combined with 4-day oversold conditions, drove modest gap-up open. FORECAST_PAT005 (Diplomatic Restart Trigger) candidate did not fire \u2014 talks halted not restarted."
+        },
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": false
+      },
       "session_direction": {
-        "direction": "VOLATILE_SIDEWAYS_MILD_BEARISH",
-        "change_pct_estimate": -0.3,
-        "range_low": 23700,
-        "range_high": 24100,
-        "key_assumption": "Oversold after 3 consecutive bearish sessions (Apr 22-24 cumulative -2.78%). Monday typically sees either continuation-capitulation (breakdown of 23,800-23,900) or mean-reversion bounce (reclaim 24,000). Base case assumes weekend passes without major Israel-Iran strike, Brent holds $98-105, and IT sector stabilizes near lows without fresh negative guidance. Mean-reversion bounce likely intraday but upside capped at 24,100 without a fresh positive catalyst. FII selling 5th day possible; DII support at 23,800 expected. Key binary: weekend geopolitical headlines.",
-        "confidence": 2,
-        "generated_at": "eod_wrap_2026-04-24",
-        "regime": "GEOPOLITICAL_RISK_ELEVATED_OVERSOLD_WEEKEND_BINARY_PENDING",
-        "brent_forecast": "$97-105 \u2014 base case Brent drifts in this band on status-quo weekend. Break <$95 = constructive (gap-up Monday); break >$108 = escalation (gap-down \u22650.7%).",
-        "key_risks": [
-          "Israel strikes Iran over weekend \u2014 Brent to $110+, Monday gap down -1% to -2%",
-          "FII selling accelerates to 5th day; BankNifty breakdown below 55,800 \u2014 credit rotation worsens",
-          "IT sector further negative guidance (TCS/Wipro pre-announcements) \u2014 Nifty IT drops another 2-3%",
-          "Break of 23,800 support triggers algo stops \u2014 23,600 opens up"
-        ],
-        "key_opportunities": [
-          "Weekend passes quietly \u2192 Monday relief rally; short-covering bounce 23,950-24,100",
-          "Brent cooling continues (<$97) \u2192 OMC (MRPL, BPCL) relief + Nifty upside",
-          "Defense basket continuation (COCHINSHIP, MAZDOCK) on geopolitical premium",
-          "SETFGOLD haven bid if escalation headlines emerge; P029 target 123-127 still within reach on relief"
-        ],
+        "direction": "BULLISH",
+        "change_pct_estimate": 0.5,
+        "range_low": 23900,
+        "range_high": 24200,
+        "key_assumption": "Oversold bounce sustains after 4-day cumulative -2.78% decline. DII support firm at 23,800-23,900 (already tested intraday low 23,936). Brent cooled to $99-100 zone reduces import-cost overhang. IT sector stabilization at lows without fresh negative catalyst (HCLTECH, INFY consolidating). HDFC Bank Q4 already digested (NII +3.2% YoY, NIM 3.38% \u2014 modest beat on profit, margin compression a yellow flag for BankNifty). Mid-session short-covering capped at 24,150-24,200 by FII overhang and unresolved Israel-Iran weekend binary still latent. Base case: Nifty closes 24,000-24,150 (+0.4 to +1.0% from open). DII-driven recovery, not structural shift.",
+        "confidence": 3,
+        "generated_at": "morning_brief_2026-04-27",
+        "regime": "GEOPOLITICAL_RISK_ELEVATED_OVERSOLD_BOUNCE_DAY",
+        "brent_forecast": "$98-103 \u2014 base case Brent holds in this band as Iran talks halted but no fresh strike. Break <$95 sustained 2 sessions = constructive structural shift; break >$105 on fresh headline = afternoon reversal risk.",
         "scenarios": [
           {
-            "name": "OVERSOLD_BOUNCE_BASE (45%)",
-            "description": "Weekend passes quietly, Brent holds $98-103. Monday opens mildly negative then recovers through session on short-covering + DII buying. Closes 24,000-24,100 (-0.2 to +0.3%).",
-            "nifty_close_range": "23,950-24,100"
+            "name": "CONTINUATION_BOUNCE (50%)",
+            "description": "Oversold bounce sustains. DII buying defends 23,940 morning low. Short-covering builds through morning. IT/Banking stabilize. Brent holds $99-101. Closes 24,000-24,150.",
+            "nifty_close_range": "24,000-24,150"
           },
           {
-            "name": "CONTINUATION_BEARISH (35%)",
-            "description": "FII selling 5th day, IT weak, Brent drifts higher on tepid weekend headlines. Nifty breaks 23,800, tests 23,700. Closes -0.4 to -0.8%.",
-            "nifty_close_range": "23,700-23,850"
+            "name": "INTRADAY_FADE (30%)",
+            "description": "Morning bounce fades by afternoon as FII selling resumes (5th day risk). HDFC Bank margin compression (3.38% NIM) weighs on banking. IT no recovery. Closes 23,940-24,030 (mild gain or flat).",
+            "nifty_close_range": "23,940-24,030"
           },
           {
-            "name": "ESCALATION_GAP_DOWN (20%)",
-            "description": "Weekend Israel-Iran escalation, Brent >$108. Monday gaps down -1 to -2%, tests 23,500-23,600. Defense ripper, IT/OMC smashed.",
-            "nifty_close_range": "23,450-23,650"
+            "name": "ESCALATION_REVERSAL (15%)",
+            "description": "Fresh Iran-Israel headline drops mid-session. Brent re-spikes >$103. Defense ripper, banking/IT smashed. Nifty reverses to red close 23,800-23,940.",
+            "nifty_close_range": "23,800-23,940"
+          },
+          {
+            "name": "RIPPING_OVERSOLD_BOUNCE (5%)",
+            "description": "Strong short-covering compounds with DII buying. FII covers part of week net short. Brent stays cool. Nifty rips to 24,200+. P031 (24,050-24,300 by May 1) suddenly back in play.",
+            "nifty_close_range": "24,200-24,350"
           }
         ]
       },
       "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 EOD wrap 2026-04-27"
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-27"
       },
       "actual": {
         "nifty_open": null,
