@@ -1348,36 +1348,59 @@
         "rationale_note": "Confidence 3/5: solid base case for digestion/mild positive open after day-1 bounce, but day-2-of-bounce historically shows fade tendency 35-40% of time. Latent Israel-Iran weekend binary still unresolved.",
         "generated_at": "eod_wrap_2026-04-27"
       },
-      "opening_bias_actual": null,
+      "opening_bias_actual": {
+        "nifty_open": 24040.0,
+        "nifty_prev_close": 24092.7,
+        "gift_nifty_preopen": 24042,
+        "gift_nifty_note": "GIFT Nifty pre-open April 28 at 24,042 \u2014 discount of 74 pts to Nifty futures previous close. Forecast was GIFT est 24,115 (+0.10% gap up). Actual GIFT showed -0.21% gap down signal.",
+        "gap_pct": -0.219,
+        "direction": "GAP_DOWN",
+        "direction_correct": false,
+        "magnitude_within_50pct": false,
+        "grade": "WRONG",
+        "scoring_note": "Forecast FLAT_TO_SLIGHT_GAP_UP (+0.10%, GIFT est 24,115). Actual GIFT pre-open 24,042 \u2014 indicated slight gap DOWN of ~0.22%. NSE open estimated at ~24,040 (-0.22% from 24,092.7). Direction WRONG (forecast up, actual down). Contributing factors: Iran submitted new proposal overnight (cautious optimism vs EOD stalemate thesis), but Brent remaining elevated at 01-102 capped upside. Nifty opened cautiously on monthly expiry day. Market subsequently recovered \u2014 by 11am IST trading at 24,170 (+0.33% from prev close), showing intraday resilience despite gap-down open.",
+        "overnight_delta_vs_forecast": {
+          "iran_ceasefire_status": "CEASEFIRE EXTENDED INDEFINITELY by Trump (April 21). Iran submitted new proposal to US (April 27 evening) \u2014 US unlikely to accept per CNN sources. Talks mediated by Pakistan; stalled on Hormuz-nuclear program disagreement.",
+          "hormuz_status": "Strait of Hormuz remains effectively closed. Iran demands US lift blockade first. Dual blockade continues.",
+          "brent_usd": 101.93,
+          "brent_note": "Brent ~01-102 on April 28 (eased from 08 intraday high on April 27 after Iran proposal news). April 27 closed ~01.03. April 28 trading around 01.93.",
+          "fii_apr27_net": -1151.48,
+          "dii_apr27_net": 4123.92,
+          "net_effect": "Despite 5th consecutive FII selling day (net -\u20b91,151 Cr Apr 27), DII bought \u20b94,124 Cr providing strong floor. Monthly expiry day creating volatility. Nifty opened cautiously but bounced."
+        },
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": false
+      },
       "session_direction": {
-        "direction": "SIDEWAYS_TO_MILDLY_BULLISH",
-        "change_pct_estimate": 0.15,
-        "range_low": 23950,
-        "range_high": 24250,
-        "key_assumption": "Day-2 of oversold bounce typically consolidates rather than extends \u2014 Nifty pauses around 24,100-24,150 to digest Monday gain. Three near-term resistances bunched (24,107 Apr 27 intraday high / 24,150 Apr 27 close cluster / 24,200 forecast cap / 24,300 P031 ceiling) cap upside without fresh catalyst. Floor at 23,950-24,000 (Apr 27 mid-band; psychological 24,000). HDFC Bank NIM compression news already absorbed \u2014 BankNifty 56,000 reclaim sustains. P028 HCLTECH score day \u2014 expected RIGHT outcome supports IT-sector floor (validates HCLTECH below \u20b91,430 ceiling). Brent base case $99-103. Conviction tempered by FII flow uncertainty (5th-day risk) and unresolved Israel-Iran latent binary. Base case: Nifty closes 24,050-24,200, mid-band 24,125. Session-theme: BOUNCE_DIGESTION.",
+        "direction": "MILDLY_BULLISH_WITH_EXPIRY_VOLATILITY",
+        "change_pct_estimate": 0.3,
+        "range_low": 24000,
+        "range_high": 24280,
+        "key_assumption": "Monthly F&O expiry (April 28) creates two-way chop but net tendency toward short-covering into close. Nifty already showing resilience \u2014 opened gap-down to ~24,040 but reclaimed 24,170 by 11am IST. DII very strong support (\u20b94,124 Cr Apr 27). Brent stable at 01-102 \u2014 not escalating. Iran submitted new proposal (cautious de-escalation optimism) though US unlikely to accept in current form. FII 6th day selling but marginal (\u20b91,100 Cr) vs DII firepower. Resistance at 24,220-24,320 (50-DMA zone). P028 HCLTECH expected RIGHT \u2014 HCLTECH ~\u20b91,226 well below \u20b91,430 ceiling. Monthly expiry caps extreme moves but net bias tilts mildly bullish given gap-down open already absorbed by 11am. Base case: close 24,100-24,280.",
         "confidence": 3,
-        "generated_at": "eod_wrap_2026-04-27",
-        "regime": "GEOPOLITICAL_RISK_ELEVATED_BOUNCE_DAY2_DIGESTION",
-        "brent_forecast": "$99-103 \u2014 base case Brent holds the band as Iran talks halted but no fresh strike. Break <$98 sustained = constructive structural shift; break >$105 on fresh headline = afternoon reversal risk.",
+        "generated_at": "morning_brief_2026-04-28",
+        "regime": "GEOPOLITICAL_RISK_ELEVATED_CEASEFIRE_FRAGILE_EXPIRY_DAY",
+        "brent_forecast": "$100-104 \u2014 base case Brent consolidates in this band. Iran proposal creates modest downside pressure on crude. Break below $98 on Hormuz reopening signal = structural shift; spike above $106 on proposal rejection = afternoon risk-off.",
         "scenarios": [
           {
-            "name": "BOUNCE_DIGESTION (45%)",
-            "description": "Mild gap up consolidates between 24,050-24,200. Day-2 sideways action. P028 HCLTECH expected RIGHT outcome. Brent stays $99-103. BankNifty holds 56,000. IT consolidates. Closes 24,080-24,180.",
-            "nifty_close_range": "24,080-24,180"
+            "name": "EXPIRY_SHORT_COVER (35%)",
+            "description": "Monthly expiry short-covering drives afternoon rally. Nifty holds 24,100+ floor; breaks 24,200. Brent stays $100-103. DII continues buying. Closes 24,200-24,280.",
+            "nifty_close_range": "24,200-24,280"
           },
           {
-            "name": "BOUNCE_CONTINUATION (25%)",
-            "description": "Strong follow-through buying. FII covers part of week net short. BankNifty pushes toward 56,500. Nifty breaks 24,200 and tags 24,300 P031 ceiling. Closes 24,200-24,300.",
-            "nifty_close_range": "24,200-24,300"
+            "name": "EXPIRY_DIGESTION (35%)",
+            "description": "Choppy expiry session \u2014 morning gains fade as FII selling continues. Nifty oscillates 24,050-24,170. Closes near previous close +/- 0.1%. Range-bound day.",
+            "nifty_close_range": "24,050-24,170"
           },
           {
             "name": "INTRADAY_FADE (20%)",
-            "description": "Bounce fades as FII selling resumes. Brent ticks up >$103 mid-session. BankNifty fails to hold 56,200. IT gives back gains. Closes 23,950-24,070 (mild loss to flat).",
-            "nifty_close_range": "23,950-24,070"
+            "description": "Iran proposal rejected harshly by Trump mid-session. Brent ticks up to $103-105. FII selling accelerates. Nifty fades to close 23,950-24,050.",
+            "nifty_close_range": "23,950-24,050"
           },
           {
             "name": "ESCALATION_REVERSAL (10%)",
-            "description": "Fresh Iran-Israel headline mid-session or overnight. Brent re-spikes >$105. Defense ripper, banking/IT smashed. Nifty reverses to red close 23,800-23,950.",
+            "description": "US rejects Iran proposal + fresh military headline. Brent spikes above $106. Defense bid, banking/IT smashed. Nifty reverses hard below 24,000.",
             "nifty_close_range": "23,800-23,950"
           }
         ]
@@ -1388,7 +1411,7 @@
         "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-28"
       },
       "actual": {
-        "nifty_open": null,
+        "nifty_open": 24040.0,
         "nifty_close": null,
         "nifty_change_pct": null
       },
