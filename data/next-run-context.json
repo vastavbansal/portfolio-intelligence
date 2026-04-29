@@ -1,44 +1,47 @@
 {
   "schema_version": "1.1",
-  "description": "Dynamic bridge \u2014 2026-04-29 (Wednesday) session / Week of Apr 28 - May 2",
-  "last_updated_by": "morning_brief_2026-04-29",
-  "last_updated_at": "2026-04-29T09:00:00",
+  "description": "Dynamic bridge \u2014 2026-04-30 (Thursday) session | SCORING DAY: P030/P031/P032/P033 | Maharashtra Day May 1 holiday",
+  "last_updated_by": "eod_wrap_2026-04-29",
+  "last_updated_at": "2026-04-29T17:30:00",
   "market_regime": {
-    "label": "GEOPOLITICAL_RISK_EXTREME_CRUDE_ELEVATED_ECL_FRAMEWORK",
-    "key_risk": "Brent $111.16 (+9% Apr 28) \u2014 Trump rejected Iran proposal; Hormuz blockade Week 9. RBI ECL framework finalised (banking provisioning headwind from Apr 2027 but front-loading now). US Nasdaq -0.9%, S&P -0.49%. BankNifty -1.54% Apr 28 (-864 pts to 55,400). Nifty closed below 24,000 for first time since Apr 17.",
-    "dominant_risk": "(1) Brent staying >$108 \u2014 regime now EXTREME_ELEVATED vs prior ELEVATED. Regime-change threshold $95 now very distant. (2) RBI ECL structural banking headwind now active. (3) P031/P032/P033 May 1 triple check increasingly at risk. (4) WIPRO Q4 tomorrow \u2014 SELL_ON_EARNINGS_NEWS_IT 6th occurrence.",
-    "crude_last": 111.16,
-    "crude_prev_close": 101.93,
-    "crude_change_pct": 9.05,
-    "crude_note": "Brent $111.16 on April 28 \u2014 spiked +9% in single session as Trump rejected Iran ceasefire proposal. Hormuz blockade continues Week 9. Now in EXTREME_ELEVATED zone ($110+). Regime change threshold $95 \u2014 currently $16 away.",
+    "label": "GEOPOLITICAL_RISK_EXTREME_CRUDE_ELEVATED_RESISTANCE_ZONE",
+    "key_risk": "Brent at $110-115 \u2014 EXTREME_ELEVATED zone continues (Hormuz closure Week 9). UAE exited OPEC effective May 1 \u2014 long-term bearish crude signal but Hormuz dominates near-term. Nifty hit 24,334 intraday Apr 29 but closed 24,177 \u2014 resistance at 24,200-24,320 (50-DMA) confirmed. BankNifty +0.01% (flat) despite Nifty +0.76% \u2014 structural banking weakness persists (RBI ECL framework headwind).",
+    "dominant_risk": "(1) Brent $110-115 \u2014 EXTREME_ELEVATED; regime change threshold $95, still $15+ away. (2) Nifty 50-DMA resistance at 24,200-24,320 \u2014 faded from 24,334 intraday to 24,177 close. (3) BankNifty structural weakness \u2014 ECL framework + HDFC Bank NIM compression + no BankNifty participation in Apr 29 rally. (4) May 1 Maharashtra Day holiday \u2014 P031/P032/P033 score on April 30 close.",
+    "crude_last": 110.69,
+    "crude_intraday_high": 114.6,
+    "crude_prev_close": 111.26,
+    "crude_change_pct": -0.51,
+    "crude_note": "Brent closed ~$110.69 (slightly down from $111.26 prev close) but hit $114.60 intraday on UAE OPEC exit news + Hormuz closure. Long-term Brent outlook shifts bearish on UAE supply, but Hormuz closure near-term keeps it elevated.",
     "crude_threshold_for_regime_change": 95,
     "crude_current_zone": "EXTREME_ELEVATED ($110+)",
-    "nifty_last": 23995.7,
-    "banknifty_last": 55400.35,
-    "banknifty_reclaimed_56000": false,
-    "sensex_last": 76886.91,
-    "fii_apr28_est": "NET SELLING (7th consecutive day estimated)",
-    "dii_apr28_est": "Strong buying expected to continue",
-    "usdinr": 94.23,
-    "regime_shift_note": "Nifty broke below 24,000 support on Apr 28 close (23,995.70). BankNifty at 55,400 \u2014 reclaimed 56,000 on Apr 27 but lost it again Apr 28. P031 (24,050-24,300 by May 1) now OUT_OF_RANGE. P032 (>56,500 by May 1) trajectory broken again. Regime upgraded from ELEVATED to EXTREME_ELEVATED on Brent $111."
+    "nifty_last": 24177.65,
+    "nifty_intraday_high_apr29": 24334.7,
+    "nifty_key_resistance": "24,200-24,320 (50-DMA zone)",
+    "banknifty_last": 55403.6,
+    "banknifty_note": "Essentially flat on Apr 29 (+0.01%). RBI ECL framework structural headwind. BankNifty needs reclaim of 56,000+ for bullish setup.",
+    "sensex_last": 77496.36,
+    "uae_opec_exit": {
+      "announced": "2026-04-28 evening",
+      "effective": "2026-05-01",
+      "impact": "Long-term bearish crude (UAE spare capacity ~1M bpd+ can be deployed post-Hormuz). Near-term: already priced in on Apr 29. Short-term Brent still driven by Hormuz closure.",
+      "india_implication": "Positive for India as UAE is key bilateral partner \u2014 potential preferential supply terms post-conflict"
+    },
+    "bajaj_finance_q4": {
+      "pat_yoy": "+22-23%",
+      "aum_milestone": "\u20b95.1 lakh cr (22% YoY)",
+      "npa_gross": "1.01%",
+      "dividend": "\u20b96 per share declared",
+      "impact": "Positive for NBFC sector sentiment. Key catalyst for Apr 29 rally. Provisions did NOT surge as feared."
+    }
   },
   "opening_bias": {
-    "direction": "FLAT_TO_SLIGHT_GAP_UP",
-    "gap_pct_estimate": 0.1,
-    "gift_nifty_estimate": 24115,
-    "generated_at": "eod_wrap_2026-04-27",
-    "note": "This was forecast for Apr 28. Actual: GAP_DOWN -0.22% (WRONG). Carried for reference."
+    "direction": "NO_PRIOR_FORECAST",
+    "note": "No EOD wrap ran for Apr 28. Morning brief created Apr 29 entry from scratch with GIFT Nifty -0.52%."
   },
   "session_direction": {
     "direction": "BEARISH",
-    "change_pct_estimate": -0.9,
-    "range_low": 23650,
-    "range_high": 23950,
-    "key_assumption": "Brent $111.16, Hormuz Week 9, RBI ECL framework, US tech selloff, GIFT Nifty -0.52%.",
-    "confidence": 3,
-    "generated_at": "morning_brief_2026-04-29",
-    "regime": "GEOPOLITICAL_RISK_EXTREME_CRUDE_ELEVATED_ECL_FRAMEWORK",
-    "brent_forecast": "$108-114 \u2014 base case Brent elevated; no deal pathway visible."
+    "actual": "BULLISH +0.76% (WRONG \u2014 Bajaj Finance Q4 beat + UAE OPEC exit)",
+    "note": "Apr 29 session direction forecast WRONG. RELIEF_RALLY scenario (15%) materialized."
   },
   "ceasefire_binary_matrix": {
     "extension_probability": 0.3,
@@ -47,18 +50,17 @@
     "note": "Stalemate probability raised 20\u219230 after weekend passed without escalation strike AND without any deal restart. Brent cooled to $101.03 despite stalled talks suggests market pricing in narrow stalemate path. Collapse probability nudged 45\u219240 (fewer fresh negative catalysts overnight); extension 35\u219230 (talks halted by Trump, no restart in sight)."
   },
   "stocks_to_watch": [
-    "IRFC: P010 SCORE DAY (Apr 29) vs \u20b985-95. IRFC at ~\u20b9101-105. EXPECTED WRONG \u2014 target missed by wide margin. Portfolio position: -20.5% loss at \u20b9130 avg.",
-    "BAJAJ FINANCE: Q4FY26 results today. Provisioning risk (macro uncertainty provision \u2014 Axis Bank set \u20b92,001 Cr precedent). NIM resilience vs Brent headwind. Key for NBFC/financials sector.",
-    "ADANI POWER: Q4 results today. Power sector + defense premium \u2014 watch for Brent impact on fuel cost margins.",
-    "VEDANTA: Q4 results today. Metal sector \u2014 commodity price bellwether.",
-    "ASTRA MICRO: P030 SCORE TOMORROW (Apr 30). At ~\u20b91,124 vs target \u20b91,010-1,060. ABOVE_RANGE expected. Watch defense bid on Brent $111 geopolitical backdrop.",
-    "HCLTECH: \u20b91,196 (Apr 28 close). P028 CORRECT scored. Watch for further IT cascade pre-WIPRO (WIPRO Q4 Apr 30).",
-    "COCHINSHIP: \u20b91,638 last. P033 (\u20b91,720-1,800 by May 1) needs +5-10%. Defense premium revival on Brent spike = possible but tight.",
-    "MRPL: \u20b9186 range. Brent $111 = OMC margin pressure (refining margins squeezed at high crude). P035 (\u20b9190-200 by May 25) and P017 (\u20b9200-210 by May 8) both at risk.",
-    "SETFGOLD: P034 (\u20b9125-130). Haven bid on Brent spike = gold positive. Watch for gold continuation.",
-    "BANKNIFTY 55,000 SUPPORT: ECL framework + BankNifty at 55,400. Break below 55,000 = P032 (>56,500) definitively WRONG early; P038 (fails 57,000 by May 5) confirmed CORRECT."
+    "ASTRA MICRO: P030 SCORE DAY vs \u20b91,010-1,060 \u2014 stock at ~\u20b91,096-1,124. EXPECTED WRONG (ABOVE_RANGE). Defense premium sustained.",
+    "BANKNIFTY 55,400: P032 SCORE DAY vs >56,500. Needs +1,097 pts (+2%) in one day. EXPECTED WRONG. Watch for ECL framework intraday news.",
+    "COCHINSHIP: P033 SCORE DAY vs \u20b91,720-1,800. Last known close \u20b91,695 \u2014 tight call (+1.5% needed). Defense bid on Brent $114 intraday could help.",
+    "BAJAJ FINANCE: Post-results consolidation or continuation? Apr 29 was strong (+0.76% Nifty). Watch NBFC sector.",
+    "NIFTY 24,050-24,300: P031 SCORE DAY. Must close ABOVE 24,050 for CORRECT. Key support: 24,000 psychological level.",
+    "MRPL/OMC: Brent $110-115 sustained \u2014 GRM margin squeeze. P035 (\u20b9190-200 by May 25) under pressure. P017 (\u20b9200-210 by May 8) likely WRONG.",
+    "SETFGOLD: P034 (\u20b9125-130) \u2014 haven bid with Brent elevated. Apr 29 gold -0.81% ($4,554). Watch haven demand vs haven unwind.",
+    "INDIGO: Brent $110-115 = ATF pressure. P006 (underperform Nifty 8-15%) direction correct \u2014 track cumulative differential.",
+    "NOTE: WIPRO Q4 results were April 16 (NOT April 30 as previously noted) \u2014 no IT earnings event today."
   ],
-  "prompt_for_morning_brief": "MORNING BRIEF 2026-04-28 (Tuesday): (1) SCORE OPENING BIAS \u2014 forecast FLAT_TO_SLIGHT_GAP_UP (+0.10%, GIFT est ~24,115). Compare against actual NSE open vs prev close 24,092.7. (2) CRITICAL: P028 HCLTECH SCORE DAY \u2014 Apr 28 close vs <\u20b91,430 ceiling (currently \u20b91,203.20). Confirm RIGHT outcome. Look for any HDFC Bank Q4-aftermath cleanup or Axis Bank pre-announcement. (3) Overnight check: Israel-Iran headlines, Brent overnight (key threshold $103 ceiling / $98 floor), GIFT Nifty 06:00 IST, FII/DII flow Apr 27 print. (4) Apr 27 SESSION RESULT (CORRECT): forecast BULLISH +0.5% range 23,900-24,200; actual close 24,092.7 +0.81% (mid-range). Base case CONTINUATION_BOUNCE (50%) materialized cleanly. (5) Day-2 of bounce assessment \u2014 was the gap consolidation or fade? (6) BankNifty 56,500 reclaim watch (currently 56,264, needs +236) \u2192 P032 trajectory check. (7) Regime tag: GEOPOLITICAL_RISK_ELEVATED_BOUNCE_DAY2_DIGESTION \u2014 update based on actual open + Brent overnight.",
+  "prompt_for_morning_brief": "MORNING BRIEF 2026-04-30 (THURSDAY \u2014 SCORING DAY): (1) Score opening bias \u2014 forecast FLAT_TO_SLIGHT_GAP_DOWN (-0.25%, GIFT est 24,117). Compare against actual NSE open vs Nifty prev close 24,177.65. (2) CRITICAL SCORING: P030 ASTRA MICRO \u2014 score at Apr 30 close vs target \u20b91,010-1,060 (EXPECTED WRONG, stock ~\u20b91,096+). P031 NIFTY \u2014 score at Apr 30 close vs 24,050-24,300 (EXPECTED RIGHT, current 24,177 \u2014 IN RANGE; May 1 holiday). P032 BANKNIFTY \u2014 score at Apr 30 close vs >56,500 (EXPECTED WRONG, current 55,403). P033 COCHINSHIP \u2014 score at Apr 30 close vs \u20b91,720-1,800 (UNCERTAIN, Apr 28 close \u20b91,695). (3) Overnight check: Brent (was $110-115 Apr 29), GIFT Nifty current (est 24,117), FII/DII flows Apr 29 print. (4) Apr 29 SESSION RESULT (WRONG): forecast BEARISH -0.9% range 23,650-23,950; actual BULLISH +0.76% close 24,177.65. RELIEF_RALLY scenario (15%) materialized via Bajaj Finance Q4 beat + UAE OPEC exit signal. (5) P031 is the key positive watch \u2014 Nifty at 24,177 already IN RANGE for 24,050-24,300 target.",
   "key_events_this_week": [
     {
       "date": "2026-04-29",
@@ -268,56 +270,29 @@
     }
   },
   "tomorrow_forecast": {
-    "date": "2026-04-28",
+    "date": "2026-04-30",
     "opening_bias": {
-      "direction": "FLAT_TO_SLIGHT_GAP_UP",
-      "gap_pct_estimate": 0.1,
-      "gift_nifty_estimate": 24115,
+      "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
+      "gap_pct_estimate": -0.25,
+      "gift_nifty_estimate": 24117,
       "key_drivers": [
-        "Today closed 24,092.7 (+0.81%) \u2014 strong day-1 bounce; day-2 typically sees consolidation/digestion rather than continuation",
-        "Brent cooled to $101.03 \u2014 held in $100-105 elevated zone; no fresh Israel-Iran escalation Monday session",
-        "BankNifty reclaimed 56,000 (close 56,264.30) \u2014 P032 trajectory toward 56,500 by May 1 better positioned but still ~250 pts away",
-        "HDFC Bank Q4 already digested (NIM compression yellow flag); P028 HCLTECH check tomorrow EXPECTED RIGHT (\u20b91,203 vs <\u20b91,430 target)",
-        "Sensex (+0.83%) outperformed Nifty (+0.81%) \u2014 heavyweight resilience signal",
-        "FII print for Apr 27 flows TBD overnight \u2014 5th-day FII selling streak risk if continued; possible relief if covering begins",
-        "No major overnight US data; SGX/Nikkei Tuesday open + GIFT Nifty 06:00 IST will calibrate the gap"
+        "GIFT Nifty 24,117 (+0.20% vs own reference but -60 pts vs cash Nifty close 24,177)",
+        "Brent $110-115 EXTREME_ELEVATED \u2014 headwind persists",
+        "Apr 29 intraday fade from 24,334 to 24,177 \u2014 profit-taking tendency likely to continue",
+        "P031/P032/P033 SCORING DAY (May 1 holiday \u2192 score on Apr 30 close)"
       ],
       "confidence": 3,
-      "rationale_note": "Confidence 3/5: solid base case for digestion/mild positive open after day-1 bounce, but day-2-of-bounce historically shows fade tendency 35-40% of time. Latent Israel-Iran weekend binary still unresolved.",
-      "generated_at": "eod_wrap_2026-04-27"
+      "generated_at": "eod_wrap_2026-04-29"
     },
     "session_direction": {
-      "direction": "SIDEWAYS_TO_MILDLY_BULLISH",
-      "change_pct_estimate": 0.15,
-      "range_low": 23950,
+      "direction": "RANGE_BOUND_TO_MILDLY_BEARISH",
+      "change_pct_estimate": -0.3,
+      "range_low": 23850,
       "range_high": 24250,
-      "key_assumption": "Day-2 of oversold bounce typically consolidates rather than extends \u2014 Nifty pauses around 24,100-24,150 to digest Monday gain. Three near-term resistances bunched (24,107 Apr 27 intraday high / 24,150 Apr 27 close cluster / 24,200 forecast cap / 24,300 P031 ceiling) cap upside without fresh catalyst. Floor at 23,950-24,000 (Apr 27 mid-band; psychological 24,000). HDFC Bank NIM compression news already absorbed \u2014 BankNifty 56,000 reclaim sustains. P028 HCLTECH score day \u2014 expected RIGHT outcome supports IT-sector floor (validates HCLTECH below \u20b91,430 ceiling). Brent base case $99-103. Conviction tempered by FII flow uncertainty (5th-day risk) and unresolved Israel-Iran latent binary. Base case: Nifty closes 24,050-24,200, mid-band 24,125. Session-theme: BOUNCE_DIGESTION.",
+      "key_assumption": "Nifty consolidates after +0.76% rally. 50-DMA resistance capping upside. Brent headwind.",
       "confidence": 3,
-      "generated_at": "eod_wrap_2026-04-27",
-      "regime": "GEOPOLITICAL_RISK_ELEVATED_BOUNCE_DAY2_DIGESTION",
-      "brent_forecast": "$99-103 \u2014 base case Brent holds the band as Iran talks halted but no fresh strike. Break <$98 sustained = constructive structural shift; break >$105 on fresh headline = afternoon reversal risk.",
-      "scenarios": [
-        {
-          "name": "BOUNCE_DIGESTION (45%)",
-          "description": "Mild gap up consolidates between 24,050-24,200. Day-2 sideways action. P028 HCLTECH expected RIGHT outcome. Brent stays $99-103. BankNifty holds 56,000. IT consolidates. Closes 24,080-24,180.",
-          "nifty_close_range": "24,080-24,180"
-        },
-        {
-          "name": "BOUNCE_CONTINUATION (25%)",
-          "description": "Strong follow-through buying. FII covers part of week net short. BankNifty pushes toward 56,500. Nifty breaks 24,200 and tags 24,300 P031 ceiling. Closes 24,200-24,300.",
-          "nifty_close_range": "24,200-24,300"
-        },
-        {
-          "name": "INTRADAY_FADE (20%)",
-          "description": "Bounce fades as FII selling resumes. Brent ticks up >$103 mid-session. BankNifty fails to hold 56,200. IT gives back gains. Closes 23,950-24,070 (mild loss to flat).",
-          "nifty_close_range": "23,950-24,070"
-        },
-        {
-          "name": "ESCALATION_REVERSAL (10%)",
-          "description": "Fresh Iran-Israel headline mid-session or overnight. Brent re-spikes >$105. Defense ripper, banking/IT smashed. Nifty reverses to red close 23,800-23,950.",
-          "nifty_close_range": "23,800-23,950"
-        }
-      ]
+      "generated_at": "eod_wrap_2026-04-29",
+      "regime": "GEOPOLITICAL_RISK_EXTREME_CRUDE_ELEVATED_RESISTANCE_ZONE"
     }
   },
   "todays_session_recap": {
@@ -420,5 +395,22 @@
       "scenario_match": "CONTINUATION_BOUNCE (50% base case) \u2014 DII defended morning low 23,940; short-covering built through morning; IT/Banking stabilized; Brent held $100-101.",
       "grade": "CORRECT"
     }
-  }
+  },
+  "key_events_this_week_updated": [
+    {
+      "date": "2026-04-30",
+      "event": "SCORING DAY: P030 (ASTRA MICRO), P031 (NIFTY), P032 (BANKNIFTY), P033 (COCHINSHIP) \u2014 all effective due to May 1 Maharashtra Day holiday",
+      "impact": "CRITICAL"
+    },
+    {
+      "date": "2026-05-01",
+      "event": "Maharashtra Day \u2014 NSE HOLIDAY. No trading.",
+      "impact": "N/A"
+    },
+    {
+      "date": "2026-05-04",
+      "event": "Next trading day after holiday. FII flows Apr 30 print. Geopolitical week-end binary.",
+      "impact": "HIGH"
+    }
+  ]
 }

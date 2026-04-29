@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
-  "last_updated": "2026-04-24T17:30:00",
+  "last_updated": "2026-04-29T17:30:00",
   "predictions": [
     {
       "pred_id": "P007",
@@ -946,6 +946,24 @@
       "framework_promoted": false,
       "promoted_date": null,
       "lesson": "Haven-asset range calls should extend the upper bound by 0.5-1% when a geopolitical binary is still active during the forecast window. Partial grading appropriate when within 1% of range."
+    },
+    {
+      "rca_id": "RCA_SESSION_APR29",
+      "type": "SESSION_DIRECTION_WRONG",
+      "session_date": "2026-04-29",
+      "forecast": "BEARISH (-0.9%, range 23,650-23,950)",
+      "actual": "BULLISH (+0.76%, close 24,177.65)",
+      "grade": "WRONG",
+      "root_cause_summary": "Forecast built on Brent $111.16 EXTREME_ELEVATED regime and feared Bajaj Finance provisions surge. Neither adverse catalyst materialized: (1) Bajaj Finance PAT +22-23% YoY \u2014 no provisions surge. (2) UAE OPEC exit (effective May 1) sent structural supply-increase signal, capping Brent upside. RELIEF_RALLY scenario (15% prob, range 24,000-24,200) materialized via earnings surprise mechanism rather than Hormuz reopening as scripted. Close 24,177 was within RELIEF_RALLY range.",
+      "missing_signal": "EARNINGS_SURPRISE_OVERRIDES_MACRO_FEAR: Strong large-cap financial result (Bajaj Finance) can trigger sector-wide recovery even in EXTREME_ELEVATED crude regime. Pattern candidate.",
+      "factor_gap": "Bajaj Finance provisions risk was 'feared but not quantified' \u2014 P010-level concern without systematic estimate of upside scenario probability.",
+      "proposed_pattern": {
+        "tag": "EARNINGS_SURPRISE_BEATS_MACRO_FEAR",
+        "description": "When a major feared earnings catalyst (provisions, NIM collapse, guidance shock) does NOT materialize, the reversal can be 1.0-1.5% vs the macro headwind expectation.",
+        "count": 1,
+        "status": "OBSERVING"
+      },
+      "date": "2026-04-29"
     }
   ],
   "scored_predictions": [
@@ -1077,6 +1095,35 @@
       "entry_price": 128.87,
       "horizon": "1W",
       "note": "Range near-miss 0.57% above ceiling. Haven bid duration tail."
+    },
+    {
+      "pred_id": "P028",
+      "stock": "HCLTECH",
+      "horizon": "7D",
+      "date_generated": "2026-04-22",
+      "check_date": "2026-04-28",
+      "scored_on": "2026-04-28",
+      "outcome": "CORRECT",
+      "outcome_price": 1196.0,
+      "target": "HCLTECH fails to sustain above \u20b91,430 post Q4FY26 (M013 sell-on-news pattern)",
+      "evidence": "HCLTECH closed \u20b91,196 on April 28 \u2014 \u20b9234 below \u20b91,430 ceiling. SELL_ON_EARNINGS_NEWS_IT 5th confirmation.",
+      "pattern_tag": "SELL_ON_EARNINGS_NEWS_IT",
+      "lesson": "M013 IT Regime Risk Filter performing as expected. 5 confirmations of post-earnings IT weakness in active geopolitical regime."
+    },
+    {
+      "pred_id": "P010",
+      "stock": "IRFC",
+      "horizon": "4W",
+      "date_generated": "2026-04-01",
+      "check_date": "2026-04-29",
+      "scored_on": "2026-04-29",
+      "outcome": "WRONG",
+      "outcome_price": 105.14,
+      "target": "IRFC range-bound \u20b985-95 for 4 weeks (bearish thesis)",
+      "evidence": "IRFC at \u20b9105.14 on April 29 \u2014 10.7% above range ceiling \u20b995. DII infrastructure buying support intact throughout period.",
+      "pattern_tag": "PSU_DII_FILTER",
+      "root_cause": "DII systematic infrastructure mandates create consistent support floor well above fundamental fair-value for PSU rail-finance names. Second consecutive IRFC bearish call failure (P026 was also WRONG).",
+      "lesson": "PSU_DII_FILTER: Avoid bearish PSU infra calls when DII systematic buying is active. IRFC 2x confirmed as DII-supported. Do not make bearish IRFC/IRCON range calls in current regime."
     }
   ]
 }

@@ -1,17 +1,17 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-04-27T17:30:00",
+  "last_updated": "2026-04-29T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 40,
-      "open": 15,
-      "scored": 20,
-      "right": 3,
-      "wrong": 14,
+      "open": 13,
+      "scored": 22,
+      "right": 4,
+      "wrong": 15,
       "partial": 3,
-      "accuracy_pct": 15.0,
-      "note": "April 22 EOD: P025 ASTRA MICRO ABOVE_RANGE (1129.75 vs 1050-1100), P026 IRFC WRONG (105.82 vs 92-96). Running totals: 3 RIGHT, 2 PARTIAL, 11 WRONG from 16 scored. Accuracy 18.8%. PSU_DII_FILTER proposed (1 occurrence, 1 more needed). | Apr 23 EOD: no predictions resolved (none had check_date 2026-04-23). Session direction PARTIAL_CORRECT. M013 confirmed on Infosys (5th occurrence pattern-wise). | Apr 24 EOD: P001 SWIGGY WRONG (287.10 vs \u2264260), P004 ASTRA MICRO WRONG (1123.75 vs 850-900), P027 NIFTY WRONG (23897.95 vs 24600-25000), P029 SETFGOLD PARTIAL (127.73 vs 123-127, 0.57% above ceiling). Running totals: 3 RIGHT, 3 PARTIAL, 14 WRONG from 20 scored. Accuracy 15.0%. DEFENSE_DURATION_PREMIUM (M012) READY_FOR_PROMOTION \u2014 3 occurrences (P007, P009, P004). Session direction PARTIAL_CORRECT (direction right, close 2pts below range low, magnitude ~1.9x base, Brent forecast wrong direction). | Apr 26 weekly: P036-P040 added (ASTRA MICRO M012 floor, COAL INDIA coal-substitute, BANKNIFTY cap, NIFTY IT underperform, SWIGGY). P014 DOWNGRADED to 1\u2605 (AUDIT_LEGACY_ON_PROMOTION). TALKS_FAILED_WAR_PREMIUM_RETURN PROMOTED v6. SELL_ON_EARNINGS_NEWS_IT = 5 occurrences. | Apr 27 EOD: No predictions had check_date=2026-04-27 \u2014 none resolved. Session direction CORRECT (forecast BULLISH +0.5% range 23,900-24,200; actual close 24,092.7 +0.81%, in mid-range). Brent forecast CORRECT ($98-103 \u2192 actual $101.03). Base-case CONTINUATION_BOUNCE scenario (50%) materialized cleanly. Running prediction totals unchanged: 3 RIGHT, 3 PARTIAL, 14 WRONG from 20 scored. Accuracy 15.0%. Next scoring event: P028 HCLTECH (Apr 28) \u2014 EXPECTED RIGHT (\u20b91,203 vs <\u20b91,430)."
+      "accuracy_pct": 18.2,
+      "note": "Apr 28 EOD: P028 HCLTECH CORRECT (5th SELL_ON_EARNINGS_NEWS_IT confirmation \u2014 \u20b91,196 vs <\u20b91,430). Apr 29 EOD: P010 IRFC WRONG (\u20b9105.14 vs \u20b985-95 range \u2014 2nd consecutive IRFC bearish failure). Running totals: 4 RIGHT, 3 PARTIAL, 15 WRONG from 22 scored. Accuracy 18.2%. Session direction Apr 29 WRONG (forecast BEARISH -0.9%, actual BULLISH +0.76%). Key miss: Bajaj Finance Q4 beat expectations + UAE OPEC exit signal. Next scoring: P030 ASTRA MICRO (Apr 30 \u2014 EXPECTED WRONG); P031 NIFTY (Apr 30 effective, IN RANGE at 24,177); P032 BANKNIFTY (Apr 30 effective, EXPECTED WRONG at 55,403 vs >56,500 target); P033 COCHINSHIP (Apr 30 effective, tight call at \u20b91,695 vs \u20b91,720-1,800)."
     },
     "by_horizon": {
       "1D": {
@@ -33,7 +33,7 @@
       },
       "4W": {
         "total": 5,
-        "scored": 2,
+        "scored": 3,
         "right": 0,
         "wrong": 2,
         "accuracy_pct": 0.0,
@@ -94,19 +94,19 @@
       },
       "PSU_Mining_Infra": {
         "total": 4,
-        "scored": 2,
+        "scored": 3,
         "right": 1,
-        "wrong": 1,
-        "accuracy_pct": 50.0,
-        "note": "P019 ADANI PORT RIGHT. P026 IRFC WRONG (DII support overrode mean-reversion). P010 still open (IRFC target 85-95 by Apr 29 \u2014 heading WRONG). P005 Coal India still open. P011 NHPC open."
+        "wrong": 2,
+        "accuracy_pct": 33.3,
+        "note": "P019 ADANI PORT RIGHT. P026 IRFC WRONG. P010 IRFC WRONG (2nd consecutive). P005 Coal India open. P011 NHPC open. PSU_DII_FILTER needed for bearish PSU infra calls."
       },
       "IT": {
         "total": 2,
-        "scored": 3,
-        "right": 0,
+        "scored": 4,
+        "right": 1,
         "wrong": 3,
-        "accuracy_pct": 0,
-        "note": "P018, P021, P022 all TCS WRONG \u2014 3x MACRO_REGIME_OVERRIDE. M013 pattern at 3 occurrences \u2014 PROMOTED to validated factor. HALT TCS short-horizon reversion calls."
+        "accuracy_pct": 25,
+        "note": "P018, P021, P022 WRONG (MACRO_REGIME_OVERRIDE). P028 CORRECT (SELL_ON_EARNINGS_NEWS_IT \u2014 M013 confirmation). IT bearish calls work; bullish recovery calls don't."
       },
       "Gold_Commodities": {
         "total": 1,
@@ -394,11 +394,11 @@
     "rolling_accuracy": {
       "last_3_scored": {
         "scored": 3,
-        "right": 0,
+        "right": 1,
         "wrong": 2,
-        "partial": 1,
-        "accuracy_pct": 0,
-        "note": "Last 3 scored Apr 24: P001 SWIGGY WRONG, P004 ASTRA MICRO WRONG, P029 SETFGOLD PARTIAL. P027 also scored but excluded (5th most recent). Cold streak \u2014 0 RIGHT in last 9 scored."
+        "partial": 0,
+        "accuracy_pct": 33.3,
+        "note": "Last 3 (Apr 28-29): P028 HCLTECH CORRECT (+1 RIGHT), P010 IRFC WRONG, session direction Apr 29 WRONG (bearish forecast, bullish actual on Bajaj Finance beat + UAE OPEC exit)."
       },
       "last_5_scored": {
         "scored": 5,
@@ -540,24 +540,19 @@
     }
   ],
   "next_session_accuracy": {
-    "session_date": "2026-04-28 (Tuesday)",
-    "key_scoring_event": "P028 HCLTECH <\u20b91,430 (check Apr 28)",
-    "expected_outcome": "RIGHT \u2014 HCLTECH at \u20b91,203.20 Apr 24 (well below \u20b91,430). Apr 27 IT sector stabilized.",
-    "this_week_scoring_queue": [
-      "P028 (Apr 28): HCLTECH <\u20b91,430 \u2014 EXPECTED RIGHT",
-      "P010 (Apr 29): IRFC \u20b985-95 \u2014 EXPECTED WRONG (at \u20b9103.36)",
-      "P030 (Apr 30): ASTRA MICRO \u20b91,010-1,060 \u2014 EXPECTED ABOVE_RANGE (at \u20b91,123.75)",
-      "P031 (May 1): NIFTY 24,050-24,300 \u2014 IN_RANGE_NOW (at 24,092.7 after Apr 27 +0.81%; needs to hold/extend through May 1)",
-      "P032 (May 1): BANKNIFTY >56,500 \u2014 UNCERTAIN (at 56,264 after +0.31%; needs +236pts more)",
-      "P033 (May 1): COCHINSHIP \u20b91,720-1,800 \u2014 UNCERTAIN (at \u20b91,638 Apr 24; defense premium softening with Brent cool)"
+    "session_date": "2026-04-30 (Thursday) \u2014 SCORING DAY",
+    "key_scoring_events": [
+      "P030 ASTRA MICRO \u20b91,010-1,060 check \u2014 EXPECTED WRONG (stock ~\u20b91,096-1,124, above range)",
+      "P031 NIFTY 24,050-24,300 check \u2014 EXPECTED RIGHT (Nifty closed 24,177, IN RANGE; May 1 holiday so Apr 30 is effective score date)",
+      "P032 BANKNIFTY >56,500 check \u2014 EXPECTED WRONG (BankNifty at 55,403, +2% needed in 1 day)",
+      "P033 COCHINSHIP \u20b91,720-1,800 check \u2014 UNCERTAIN (Apr 28 close \u20b91,695, needs +1.5%)"
     ],
-    "projected_accuracy_after_week": {
-      "if_only_P028_right": "4 RIGHT / 23 scored = 17.4%",
-      "if_P028_and_P031_right": "5 RIGHT / 26 scored = 19.2%",
-      "if_P028_P031_P032_right": "6 RIGHT / 27 scored = 22.2%",
-      "worst_case_0_more_right": "3 RIGHT / 26 scored = 11.5%"
+    "projected_accuracy_after_apr30": {
+      "if_P031_right_rest_wrong": "5 RIGHT / 26 scored = 19.2%",
+      "if_P031_and_P033_right": "6 RIGHT / 26 scored = 23.1%",
+      "if_all_wrong": "4 RIGHT / 26 scored = 15.4%"
     },
-    "note": "P031 (NIFTY 24,050-24,300) now IN_RANGE after Apr 27 bounce \u2014 biggest swing factor for week accuracy. P032 BankNifty close-call at 56,264 (needs +236 to clear 56,500). Framework v6 test continues."
+    "note": "P031 is the biggest swing factor \u2014 Nifty already at 24,177 (IN RANGE for 24,050-24,300). If Nifty holds above 24,050 on Apr 30 close, P031 scores CORRECT \u2014 would be the 2nd RIGHT prediction in 10 sessions and first index call RIGHT since P008 (very early in the framework)."
   },
   "weekly_review_2026_04_12": {
     "date": "2026-04-12",
@@ -712,5 +707,21 @@
         "risk_of_continued_cold_streak": "P031/P032/P033 (May 1) all require market recovery that current macro regime makes difficult. 40% probability all three score WRONG, extending cold streak to 12-13 predictions."
       }
     }
-  ]
+  ],
+  "observing_patterns": {
+    "EARNINGS_SURPRISE_BEATS_MACRO_FEAR": {
+      "description": "Strong earnings beat from major index heavyweight can override EXTREME_ELEVATED crude macro fear, triggering 0.75%+ session reversal.",
+      "count": 1,
+      "triggered_by": "Bajaj Finance Q4 FY26 \u2014 PAT +22-23% YoY vs feared provisions surge",
+      "status": "OBSERVING",
+      "date_added": "2026-04-29"
+    },
+    "PSU_DII_FILTER_CONFIRMED_2X": {
+      "description": "DII systematic infrastructure mandates create support floor for PSU rail-finance names (IRFC, IRCON) well above fundamental fair-value. Avoid bearish range calls.",
+      "count": 2,
+      "triggered_by": "P026 WRONG + P010 WRONG (both IRFC bearish calls failed at \u20b992-96 and \u20b985-95 respectively)",
+      "status": "NEAR_PROMOTION_3_NEEDED",
+      "date_added": "2026-04-29"
+    }
+  }
 }

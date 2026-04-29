@@ -1499,9 +1499,105 @@
         ]
       },
       "session_direction_accuracy": {
+        "direction_correct": false,
+        "direction_note": "Forecast BEARISH (-0.9%, range 23,650-23,950, generated morning_brief_2026-04-29). Actual: Nifty closed 24,177.65 (+181.95 pts, +0.76% from prev close 23,995.70). Direction WRONG \u2014 forecast bearish, actual strongly bullish. Close 227 pts ABOVE forecast range high (23,950). RELIEF_RALLY scenario (15% probability) was closest in price outcome (forecast range 24,000-24,200; actual 24,177 is within this). Key miss: Bajaj Finance Q4 beat expectations (PAT +22-23% YoY, AUM crossed \u20b95 lakh cr) instead of feared provisioning surge. UAE announced OPEC exit effective May 1 \u2014 long-term crude supply signal capped Brent upside. BankNifty essentially flat (+0.01%, +3.25 pts) as ECL headwind balanced by strong Bajaj Finance print. FMCG, auto, realty sectors led. Defense/IT not highlighted. Intraday high 24,334 \u2014 significant fade from high to close (157 pts) as Brent ticked up to $114 intraday.",
+        "in_range": false,
+        "range_note": "Forecast range 23,650-23,950. Actual close 24,177.65 \u2014 227 pts above range high. WELL OUT_OF_RANGE on bullish side.",
+        "magnitude_correct": false,
+        "magnitude_note": "Forecast -0.9%; actual +0.76%. Delta 1.66pp in opposite direction. RELIEF_RALLY scenario (+0.3 to +1.0% from prev close) was closest.",
+        "brent_correct": false,
+        "brent_note": "Forecast Brent $108-114 elevated zone. Actual Brent ~$110.69 at data fetch (prev close $111.26) \u2014 within forecast band. Brent rose to $114.60 intraday on UAE OPEC exit + Hormuz closure news but cooled. Band technically correct but Brent did not cause the predicted bearish session.",
+        "scenario_hit": "RELIEF_RALLY scenario (15% probability) closest \u2014 final close 24,177.65 within 24,000-24,200 RELIEF_RALLY range. Trigger was different (Bajaj Finance beat + UAE OPEC exit, not Hormuz partial reopening as scenario described).",
+        "grade": "WRONG"
+      },
+      "actual": {
+        "nifty_open": null,
+        "nifty_close": 24177.65,
+        "nifty_change": 181.95,
+        "nifty_change_pct": 0.76,
+        "nifty_prev_close": 23995.7,
+        "nifty_intraday_high": 24334.7,
+        "sensex_close": 77496.36,
+        "sensex_change_pct": 0.79,
+        "banknifty_close": 55403.6,
+        "banknifty_change_pct": 0.01,
+        "brent_close": 110.69,
+        "brent_change_pct": -0.51,
+        "brent_intraday_note": "Rose to $114.60 intraday on UAE OPEC exit + Hormuz closure. Closed ~$110-111 range.",
+        "gold_close_usd": 4554.5,
+        "silver_close_usd": 72.08,
+        "session_theme": "Recovery rally despite elevated crude \u2014 Bajaj Finance Q4 beat (PAT +22-23% YoY, AUM \u20b95.1L cr) anchored NBFC/financials. UAE announced OPEC exit effective May 1 \u2014 long-term supply signal capped crude upside. FMCG, auto, realty outperformed; BankNifty flat (+0.01%). Hormuz blockade continues Week 9; Brent intraday $114 but session closed ~$111. Intraday high 24,334 sold off in final hour \u2014 resistance at 24,200-24,320 (50-DMA zone) held. P031 (24,050-24,300) now IN RANGE with Nifty closing at 24,177."
+      },
+      "lessons": [
+        "BAJAJ_FINANCE_PROVISIONS_FEARED_NOT_MATERIALIZED: Predicted provisioning surge (Axis Bank \u20b92,001 Cr precedent) did not apply \u2014 Bajaj Finance Q4 PAT +22-23%, AUM crossed \u20b95L Cr milestone. When a feared catalyst does not materialize, the sector can outperform significantly.",
+        "UAE_OPEC_EXIT_BINARY_EVENT: UAE leaving OPEC is a structural supply catalyst (1M bpd+ freed from quotas post-Hormuz). Market correctly read this as long-term Brent-bearish despite short-term Hormuz dominance. Framework needs to model 'structural supply shift' events separately from 'near-term geopolitical'.",
+        "BEARISH_EXTREME_REGIME_DOSE_NOT_PREVENT_RELIEF_RALLY: Even with Brent at $111+ (EXTREME_ELEVATED regime), positive earnings surprise + structural supply catalyst can trigger 0.75%+ session. Lesson: EXTREME_ELEVATED crude regime should NOT set maximum bearish scenario \u2014 relief rally remains possible at 15-20% probability.",
+        "INTRADAY_FADE_AT_RESISTANCE: Nifty hit 24,334 intraday but closed 24,177 (-157 pts fade). 50-DMA resistance at 24,200-24,320 acted as ceiling. Strong resistance fades are common in regime-stressed markets \u2014 high probability open/gap-up gets faded in afternoon session.",
+        "P031_NOW_IN_RANGE: With April 29 close 24,177, P031 (Nifty 24,050-24,300 by May 1) is IN RANGE. Since May 1 is Maharashtra Day holiday, P031 effectively scores on April 30. Framework now has highest probability of a CORRECT prediction since P019 (April 15)."
+      ]
+    },
+    {
+      "session_date": "2026-04-30",
+      "forecast_generated_at": "2026-04-29",
+      "opening_bias": {
+        "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
+        "gap_pct_estimate": -0.25,
+        "gift_nifty_estimate": 24117,
+        "key_drivers": [
+          "GIFT Nifty at 24,117 (~-0.25% vs Nifty cash close 24,177) \u2014 muted start expected per 5paisa pre-market",
+          "Brent rose to $114.60 intraday on April 29 \u2014 EXTREME_ELEVATED zone maintained; Hormuz closure Week 9 continues",
+          "UAE OPEC exit effective May 1 already priced in on April 29 \u2014 no fresh catalyst from same event",
+          "April 29 intraday fade from 24,334 to 24,177 (157 pts) \u2014 resistance at 24,200-24,320 (50-DMA) confirmed, likely to cap opening bounce",
+          "P031/P032/P033 SCORING DAY \u2014 May 1 is Maharashtra Day (NSE holiday), so scores effective on April 30 close",
+          "Assembly election exit poll results \u2014 possible volatility catalyst (state election results)"
+        ],
+        "confidence": 3,
+        "generated_at": "eod_wrap_2026-04-29"
+      },
+      "opening_bias_actual": null,
+      "session_direction": {
+        "direction": "RANGE_BOUND_TO_MILDLY_BEARISH",
+        "change_pct_estimate": -0.3,
+        "range_low": 23850,
+        "range_high": 24250,
+        "key_assumption": "Nifty at 24,177 faces strong technical resistance at 24,200-24,320 (50-DMA zone) confirmed by Apr 29 intraday fade. Brent $110-115 remains structural headwind. UAE OPEC exit partially priced in. P031 (24,050-24,300) scoring day \u2014 Nifty needs to hold this range for CORRECT verdict. P032 (BankNifty >56,500) almost certainly WRONG \u2014 BankNifty at 55,403, needs +2% more. P030 ASTRA MICRO (\u20b91,010-1,060) scoring day \u2014 WRONG expected (stock at ~\u20b91,096-1,124 range). Bajaj Finance results positive catalyst \u2014 NBFC/financials sector may sustain Apr 29 gains. BankNifty: ECL framework headwind balanced by strong Bajaj Finance print; likely flat-to-mild gains. No major IT earnings event (WIPRO Q4 was April 16, not April 30 as previously noted \u2014 correction). Assembly election exit polls (state) could provide intraday volatility. FII likely to continue selling; DII defensive support. Base case: Nifty consolidates 24,000-24,200, digests yesterday's +0.76% gain.",
+        "confidence": 3,
+        "generated_at": "eod_wrap_2026-04-29",
+        "regime": "GEOPOLITICAL_RISK_EXTREME_CRUDE_ELEVATED_RESISTANCE_ZONE",
+        "brent_forecast": "$109-116 \u2014 base case Brent elevated in this band; UAE OPEC exit introduces long-term supply expectations but Hormuz closure dominates near-term. Break >$116 on Iran military action = extreme risk-off; break <$108 on surprise Hormuz signal = regime shift.",
+        "scoring_events": {
+          "P030": "ASTRA MICRO \u20b91,010-1,060 \u2014 EXPECTED WRONG (stock ~\u20b91,096+, above range)",
+          "P031": "NIFTY 24,050-24,300 \u2014 EXPECTED RIGHT (current 24,177, within range) \u2014 May 1 holiday means Apr 30 close is effective",
+          "P032": "BANKNIFTY >56,500 \u2014 EXPECTED WRONG (at 55,403, needs +2%)",
+          "P033": "COCHINSHIP \u20b91,720-1,800 \u2014 UNCERTAIN (Apr 28 close \u20b91,695, needs +1.5%)"
+        },
+        "scenarios": [
+          {
+            "name": "CONSOLIDATION_IN_RANGE (40%)",
+            "description": "Nifty digests Apr 29 gain. Flat to -0.2% session. P031 scores CORRECT. BankNifty holds 55,200-55,800. Brent $110-113. No fresh escalation. Close 24,000-24,200.",
+            "nifty_close_range": "24,000-24,200"
+          },
+          {
+            "name": "RESISTANCE_REJECTION (30%)",
+            "description": "Nifty tries 24,200 early, gets rejected hard. Brent ticks up to $114-116. FII selling accelerates. Close 23,850-24,000.",
+            "nifty_close_range": "23,850-24,000"
+          },
+          {
+            "name": "BREAKOUT_ABOVE_RESISTANCE (15%)",
+            "description": "Bajaj Finance momentum continues. NBFC + FMCG lead. Brent pulls back to $108-109. Nifty breaks 24,200 decisively, closes 24,250-24,400. P032 BankNifty gets closer to target.",
+            "nifty_close_range": "24,250-24,400"
+          },
+          {
+            "name": "ELECTION_SURPRISE (15%)",
+            "description": "Assembly election exit polls cause major swing \u2014 either sharp rally (pro-growth result) or sharp fall (anti-incumbent). Binary 2% swing in either direction.",
+            "nifty_close_range": "23,600-24,600"
+          }
+        ]
+      },
+      "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-29"
+        "direction_note": "Pending \u2014 EOD wrap 2026-04-30"
       },
       "actual": {
         "nifty_open": null,
