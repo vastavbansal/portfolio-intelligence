@@ -1406,12 +1406,105 @@
         ]
       },
       "session_direction_accuracy": {
-        "direction_correct": null,
-        "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-28"
+        "direction_correct": false,
+        "direction_note": "Forecast MILDLY_BULLISH_WITH_EXPIRY_VOLATILITY (range 24,000-24,280, +0.3% est). Actual: Nifty closed 23,995.70 (-97 pts, -0.40% close-to-close). Direction WRONG. Close below range low (24,000) by 4.3 pts. Market fell as Brent spiked from ~$102 to $111.16 (+9%) on Trump rejecting Iran proposal \u2014 far more severe than the INTRADAY_FADE scenario (which assumed Brent $103-105). Actual scenario: INTRADAY_FADE range (23,950-24,050) materialized at 23,995.70. RBI ECL framework announcement also hit BankNifty hard (-864 pts, -1.54%). P028 HCLTECH scored CORRECT: \u20b91,196 close < \u20b91,430 ceiling.",
+        "in_range": false,
+        "range_note": "Forecast range 24,000-24,280. Actual 23,995.70 \u2014 4.3 pts below range low. Barely missed range.",
+        "magnitude_correct": false,
+        "magnitude_note": "Forecast +0.3% from prev close (24,092.7). Actual -0.40%. Direction opposite. Miss = -0.7pp on direction.",
+        "brent_correct": false,
+        "brent_note": "Forecast Brent $100-104. Actual Brent spiked to $111.16 (+9%). Massive undershoot \u2014 Iran proposal rejected by Trump; Hormuz blockade continues week 9. Brent now in EXTREME ELEVATED zone.",
+        "grade": "WRONG",
+        "scoring_note": "Direction WRONG. Close below range. Brent forecast wrong. INTRADAY_FADE scenario (20% prob) materialized via Brent spike mechanism rather than gradual FII pressure. Key insight: Brent spike from $102\u2192$111 in single session is non-linear geopolitical re-pricing. Pattern candidate: CRUDE_SPIKE_OVERRIDES_EXPIRY_SUPPORT."
       },
       "actual": {
         "nifty_open": 24040.0,
+        "nifty_close": 23995.7,
+        "nifty_change_pct": -0.403
+      },
+      "lessons": [
+        "Brent spiked +9% ($102\u2192$111) on Trump rejecting Iran proposal \u2014 expiry-day support thesis overridden by crude shock",
+        "RBI ECL framework surprise announcement compounded BankNifty weakness (-1.54%, -864 pts)",
+        "SELL_ON_EARNINGS_NEWS_IT pattern continues: HCLTECH \u20b91,196 confirmed P028 CORRECT (5th IT consecutive validation)",
+        "When Brent > $108, DII support thesis weakens \u2014 import cost shock overrides domestic buying",
+        "Monthly expiry did NOT provide short-covering support \u2014 regime too elevated for technical patterns to dominate"
+      ]
+    },
+    {
+      "session_date": "2026-04-29",
+      "forecast_generated_at": "morning_brief_2026-04-29",
+      "opening_bias": {
+        "direction": "NO_PRIOR_FORECAST",
+        "gap_pct_estimate": null,
+        "gift_nifty_estimate": null,
+        "key_drivers": [
+          "EOD wrap for 2026-04-28 did not run \u2014 no opening bias forecast was generated for 2026-04-29"
+        ],
+        "confidence": null,
+        "rationale_note": "No EOD wrap ran on 2026-04-28. Morning brief creating today entry from scratch.",
+        "generated_at": "morning_brief_2026-04-29"
+      },
+      "opening_bias_actual": {
+        "nifty_open": null,
+        "nifty_prev_close": 23995.7,
+        "gift_nifty_preopen": 23871,
+        "gift_nifty_note": "GIFT Nifty Session 2 indicating -0.52% gap down \u2192 estimated open ~23,870-23,895. Sources: 5paisa pre-market cues. (Time of brief: 03:52 IST, before Session 1 opens at 06:30)",
+        "gap_pct": -0.52,
+        "direction": "GAP_DOWN",
+        "direction_correct": null,
+        "grade": "NO_PRIOR_FORECAST",
+        "scoring_note": "No opening_bias forecast from EOD wrap \u2014 no grade possible. GIFT Nifty -0.52% indicates gap-down open. US S&P -0.49%, Nasdaq -0.9% overnight; Brent $111.16 (+9% on Apr 28); Iran talks stalled; Hormuz closed Week 9.",
+        "source": "actual_nse_open",
+        "pre_estimated_by": "morning_brief_gap_down_0.52pct",
+        "validation_required": true
+      },
+      "session_direction": {
+        "direction": "BEARISH",
+        "change_pct_estimate": -0.9,
+        "range_low": 23650,
+        "range_high": 23950,
+        "key_assumption": "Brent spiked to $111.16 on April 28 (+9% single session) \u2014 now in EXTREME_ELEVATED zone ($110+) as Trump rejected Iran proposal and Hormuz blockade enters Week 9. US Nasdaq -0.9%, S&P -0.49% overnight. RBI ECL framework (finalised Apr 28) compounds BankNifty structural headwind. GIFT Nifty -0.52% \u2192 gap-down open ~23,870. Bajaj Finance Q4 results due today \u2014 provisioning surge risk (ref Axis Bank \u20b92,001 Cr macro provision). FII selling likely 7th+ consecutive session. DII support probable but capacity tested at $111 crude. No geopolitical resolution catalyst visible.",
+        "confidence": 3,
+        "generated_at": "morning_brief_2026-04-29",
+        "regime": "GEOPOLITICAL_RISK_EXTREME_CRUDE_ELEVATED_ECL_FRAMEWORK",
+        "brent_forecast": "$108-114 \u2014 base case Brent consolidates in this elevated band; Hormuz closed, no deal pathway visible. Break <$105 on surprise Hormuz signal = regime shift; break >$115 on Trump military statement = extreme risk-off.",
+        "scenarios": [
+          {
+            "name": "CRUDE_DRIVEN_SELLOFF (40%)",
+            "description": "Brent stays $109-113. FII sells 7th+ day. BankNifty breaks 55,000 on ECL framework concerns. Nifty slides to 23,650-23,850. Bajaj Finance provisions weigh on financials. No recovery. Closes at session lows.",
+            "nifty_close_range": "23,650-23,850"
+          },
+          {
+            "name": "GAP_DOWN_RECOVERY (30%)",
+            "description": "Nifty opens gap-down at 23,870 but finds support at 23,800-23,850 (DII buying + oversold). European positive cues help. Recovers to close 23,850-24,000 (flat to mild loss). BankNifty holds 54,800+.",
+            "nifty_close_range": "23,850-24,000"
+          },
+          {
+            "name": "ESCALATION_SPIRAL (15%)",
+            "description": "Trump makes formal military threat, Iran responds. Brent spikes >$115. Rupee weakens past \u20b995. Defense bids, banking/IT collapse. Nifty breaks 23,600. Flash crash risk intraday.",
+            "nifty_close_range": "23,400-23,600"
+          },
+          {
+            "name": "RELIEF_RALLY (15%)",
+            "description": "Surprise: Hormuz partial reopening signal or UAE-mediated ceasefire hint. Brent cools to $104-107. Short-covering triggers Nifty bounce from gap-down low. Closes 24,000-24,200.",
+            "nifty_close_range": "24,000-24,200"
+          }
+        ],
+        "key_risks": [
+          "Bajaj Finance Q4 provisions (macro uncertainty provision = earnings drag)",
+          "Adani Power / Vedanta results \u2014 conglomerate sentiment barometer",
+          "RBI ECL framework implementation timeline clarity (Apr 2027 start but provisioning front-loading risk NOW)",
+          "WIPRO Q4 tomorrow (Apr 30) \u2014 SELL_ON_EARNINGS_NEWS_IT 6th potential occurrence",
+          "USD/INR break above 95 = import inflation shock amplifier"
+        ]
+      },
+      "session_direction_accuracy": {
+        "direction_correct": null,
+        "grade": "PENDING",
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-29"
+      },
+      "actual": {
+        "nifty_open": null,
         "nifty_close": null,
         "nifty_change_pct": null
       },
