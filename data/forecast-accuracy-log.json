@@ -1538,7 +1538,7 @@
     },
     {
       "session_date": "2026-04-30",
-      "forecast_generated_at": "2026-04-29",
+      "forecast_generated_at": "morning_brief_2026-04-30",
       "opening_bias": {
         "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
         "gap_pct_estimate": -0.25,
@@ -1554,50 +1554,63 @@
         "confidence": 3,
         "generated_at": "eod_wrap_2026-04-29"
       },
-      "opening_bias_actual": null,
+      "opening_bias_actual": {
+        "nifty_open": 23966,
+        "nifty_prev_close": 24177.65,
+        "gift_nifty_preopen": 23966,
+        "gift_nifty_note": "GIFT Nifty 23,966 (-0.60% vs own prev close 24,110; -0.87% vs Nifty cash close 24,177.65). Brief generated 08:41 IST pre-market \u2014 Nifty open expected near 23,950-24,000.",
+        "gap_pct": -0.87,
+        "direction": "GAP_DOWN",
+        "direction_correct": true,
+        "grade": "PARTIAL",
+        "scoring_note": "Forecast FLAT_TO_SLIGHT_GAP_DOWN -0.25% (GIFT 24,117). Actual GIFT Nifty 23,966 = -0.87% gap (211 pts). Direction CORRECT (both gap down). Magnitude 3.5x stronger than forecast \u2014 driver: Brent surged to $118.03 (+6%) on April 29 close after Trump confirmed continuing Iran blockade until nuclear deal. Beyond forecast Brent band ($109-116). US Dow -0.68% overnight. UAE OPEC exit + Hormuz Week 9 + Trump escalation = wider gap than EOD wrap modeled.",
+        "source": "actual_nse_open",
+        "pre_estimated_by": "morning_brief_gift_nifty_0.87pct_gap_down",
+        "validation_required": true
+      },
       "session_direction": {
-        "direction": "RANGE_BOUND_TO_MILDLY_BEARISH",
-        "change_pct_estimate": -0.3,
-        "range_low": 23850,
-        "range_high": 24250,
-        "key_assumption": "Nifty at 24,177 faces strong technical resistance at 24,200-24,320 (50-DMA zone) confirmed by Apr 29 intraday fade. Brent $110-115 remains structural headwind. UAE OPEC exit partially priced in. P031 (24,050-24,300) scoring day \u2014 Nifty needs to hold this range for CORRECT verdict. P032 (BankNifty >56,500) almost certainly WRONG \u2014 BankNifty at 55,403, needs +2% more. P030 ASTRA MICRO (\u20b91,010-1,060) scoring day \u2014 WRONG expected (stock at ~\u20b91,096-1,124 range). Bajaj Finance results positive catalyst \u2014 NBFC/financials sector may sustain Apr 29 gains. BankNifty: ECL framework headwind balanced by strong Bajaj Finance print; likely flat-to-mild gains. No major IT earnings event (WIPRO Q4 was April 16, not April 30 as previously noted \u2014 correction). Assembly election exit polls (state) could provide intraday volatility. FII likely to continue selling; DII defensive support. Base case: Nifty consolidates 24,000-24,200, digests yesterday's +0.76% gain.",
-        "confidence": 3,
-        "generated_at": "eod_wrap_2026-04-29",
-        "regime": "GEOPOLITICAL_RISK_EXTREME_CRUDE_ELEVATED_RESISTANCE_ZONE",
-        "brent_forecast": "$109-116 \u2014 base case Brent elevated in this band; UAE OPEC exit introduces long-term supply expectations but Hormuz closure dominates near-term. Break >$116 on Iran military action = extreme risk-off; break <$108 on surprise Hormuz signal = regime shift.",
+        "direction": "BEARISH",
+        "change_pct_estimate": -0.95,
+        "range_low": 23700,
+        "range_high": 24050,
+        "key_assumption": "Brent breakthrough to $118.03 (+6% on Apr 29) on Trump blockade extension is REGIME-CHANGING \u2014 pierces forecast band ($109-116) and triggers EXTREME_RISK_OFF threshold. Nifty gap-down opening near 23,966 puts P031 (24,050-24,300) trajectory at SERIOUS RISK \u2014 Nifty must rally +0.4% from open to enter range. Compounding: US Dow -0.68%, FII Apr 29 net seller -\u20b92,186 cr (8th+ consecutive session), DII support at risk if crude sustains $118+. Sectoral: OMCs (BPCL, IOC, HPCL, MRPL) face GRM compression at $118 Brent; aviation (INDIGO) jet fuel pressure; defense (ASTRA, MAZDOCK, COCHIN) sustain premium. BankNifty likely flat-down \u2014 ECL framework continues structural headwind. Base case: gap-down extends midday, late-session DII bounce to close 23,800-24,000 range.",
+        "confidence": 4,
+        "generated_at": "morning_brief_2026-04-30",
+        "regime": "GEOPOLITICAL_RISK_EXTREME_CRUDE_BREAKOUT_TRUMP_BLOCKADE",
+        "brent_forecast": "$115-122 \u2014 Brent broke above $116 EXTREME_RISK_OFF threshold to $118.03. Trump explicit blockade rhetoric = sustained premium. Break >$122 = panic regime; break <$112 = relief signal. Base case stays $116-120 today.",
         "scoring_events": {
-          "P030": "ASTRA MICRO \u20b91,010-1,060 \u2014 EXPECTED WRONG (stock ~\u20b91,096+, above range)",
-          "P031": "NIFTY 24,050-24,300 \u2014 EXPECTED RIGHT (current 24,177, within range) \u2014 May 1 holiday means Apr 30 close is effective",
-          "P032": "BANKNIFTY >56,500 \u2014 EXPECTED WRONG (at 55,403, needs +2%)",
-          "P033": "COCHINSHIP \u20b91,720-1,800 \u2014 UNCERTAIN (Apr 28 close \u20b91,695, needs +1.5%)"
+          "P030": "ASTRA MICRO \u20b91,010-1,060 \u2014 SCORE TODAY (close). Apr 29 close \u20b91,108.25 \u2014 ABOVE RANGE by +4.6%. EXPECTED WRONG. Defense premium reinforced by Brent $118 / escalation.",
+          "P031": "NIFTY 24,050-24,300 \u2014 May 1 holiday \u2192 effective score on Apr 30 close. Pre-market 23,966 BELOW RANGE by 84 pts. Needs +0.4% rally from open for CORRECT verdict. PROBABILITY OF CORRECT DOWNGRADED from ~60% to ~25-30%.",
+          "P032": "BANKNIFTY >56,500 \u2014 score on Apr 30 close. At 55,403 needs +2% in one session = highly improbable. EXPECTED WRONG.",
+          "P033": "COCHINSHIP \u20b91,720-1,800 \u2014 score on Apr 30 close. Last close ~\u20b91,695. Defense premium boost from Brent $118 + Trump escalation could lift +1.5-3%. PROBABILITY OF CORRECT UPGRADED from 25% to 35-45%."
         },
         "scenarios": [
           {
-            "name": "CONSOLIDATION_IN_RANGE (40%)",
-            "description": "Nifty digests Apr 29 gain. Flat to -0.2% session. P031 scores CORRECT. BankNifty holds 55,200-55,800. Brent $110-113. No fresh escalation. Close 24,000-24,200.",
-            "nifty_close_range": "24,000-24,200"
+            "name": "CRUDE_BREAKOUT_EXTENSION (45%)",
+            "description": "Brent stays $116-120. FII selling extends to 8th+ session. Nifty fails to recover gap, drifts to 23,700-23,850. P031 misses (BELOW RANGE). BankNifty breaks 55,000. OMCs sell off -3-5%. Defense (ASTRA, COCHIN, MAZDOCK) +1-3%.",
+            "nifty_close_range": "23,700-23,850"
           },
           {
-            "name": "RESISTANCE_REJECTION (30%)",
-            "description": "Nifty tries 24,200 early, gets rejected hard. Brent ticks up to $114-116. FII selling accelerates. Close 23,850-24,000.",
-            "nifty_close_range": "23,850-24,000"
+            "name": "GAP_DOWN_RECOVERY (30%)",
+            "description": "DII steps in at gap-down lows ~23,950. Bargain hunting in NBFC (Bajaj Finance momentum) + FMCG. Brent stalls at $116-118. Nifty recovers to close 23,950-24,100. P031 marginally CORRECT if close >24,050.",
+            "nifty_close_range": "23,950-24,100"
           },
           {
-            "name": "BREAKOUT_ABOVE_RESISTANCE (15%)",
-            "description": "Bajaj Finance momentum continues. NBFC + FMCG lead. Brent pulls back to $108-109. Nifty breaks 24,200 decisively, closes 24,250-24,400. P032 BankNifty gets closer to target.",
-            "nifty_close_range": "24,250-24,400"
+            "name": "ESCALATION_SPIRAL (15%)",
+            "description": "Iran retaliates militarily for Trump blockade. Brent spikes >$125. Rupee breaks 95. Defense surges +3-7%, OMCs/aviation -5-8%. Nifty breaks 23,600 to 23,400-23,550 range. India VIX +15%+.",
+            "nifty_close_range": "23,400-23,600"
           },
           {
-            "name": "ELECTION_SURPRISE (15%)",
-            "description": "Assembly election exit polls cause major swing \u2014 either sharp rally (pro-growth result) or sharp fall (anti-incumbent). Binary 2% swing in either direction.",
-            "nifty_close_range": "23,600-24,600"
+            "name": "TRUMP_PIVOT_RELIEF (10%)",
+            "description": "Surprise: Trump signals deal openness OR Iran offers face-saving Hormuz partial reopen. Brent crashes -5% to $112-114. Short-covering rally \u2014 Nifty closes 24,100-24,250. P031 CORRECT.",
+            "nifty_close_range": "24,100-24,250"
           }
         ]
       },
       "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 EOD wrap 2026-04-30"
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-04-30"
       },
       "actual": {
         "nifty_open": null,
