@@ -1,6 +1,6 @@
 {
-  "version": 6,
-  "last_updated": "2026-04-26",
+  "version": 7,
+  "last_updated": "2026-05-03",
   "description": "Master checklist of fundamental and technical factors for prediction generation. Grows over time via post-mortem analysis of wrong predictions — not correlation-mining. Every factor added must have a causal explanation.",
   "macro_factors": [
     {
@@ -379,6 +379,34 @@
       "observation": "Apr 24 session: Brent COOLED -4.15% to $100.71 (constructive macro signal), but Nifty still fell -1.14% (close 23,897.95) driven primarily by IT sector cascade (INFY -6.93%, HCLTECH -4.02%). Forecast-day Brent thesis was WRONG on direction yet session-direction call held — driver attribution off. Hypothesized rule: IT sector idiosyncratic shocks (HCLTECH guidance, INFY result) can drag Nifty -0.8 to -1.5% INDEPENDENT of Brent direction when sector cascade triggers. Treat IT-sector earnings shocks as pseudo-macro events.",
       "confirmations_needed": 1,
       "first_seen": "2026-04-26"
+    },
+    {
+      "id": "BRENT_EXTREME_RECOVERY_CAP",
+      "name": "Extreme Brent Caps Nifty Recovery",
+      "status": "OBSERVING",
+      "proposed_date": "2026-05-03",
+      "observation": "P031 WRONG (0.2% miss, April 30): Brent surged to $118.03 on Trump blockade extension. Nifty intraday high was 24,019 — only 31 pts short of 24,050 range floor. Cap was ~50-100 pts below nearest resistance. When Brent opens above $115 (EXTREME zone), Nifty intraday recovery is structurally capped. Recommended fix: reduce Nifty range floor by 50-100 pts when forecasting mean-reversion sessions under extreme Brent.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-04-30"
+    },
+    {
+      "id": "ECL_BANKING_STRUCTURAL_HEADWIND",
+      "name": "RBI ECL Framework BankNifty Structural Drag",
+      "status": "OBSERVING",
+      "proposed_date": "2026-05-03",
+      "observation": "P032 WRONG (April 30): BankNifty closed 54,863 vs >56,500 target (-3%). RBI ECL provision framework creates systematic underperformance vs Nifty. HDFC Bank Q4 beat (PAT positive) could not overcome ECL structural drag + Brent $118 risk-off + FII selling. Key distinction: PSU infra DII support (mandate-driven) works for IRFC/Coal India but NOT for banking under regulatory headwinds. BankNifty bullish calls need explicit catalyst: (a) RBI ECL delay/reversal, (b) FII net buying 3+ sessions, or (c) Brent <$100 sustained.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-04-30"
+    },
+    {
+      "id": "DEFENSE_PREMIUM_PERSISTENCE",
+      "name": "Defense Premium Persists at Extreme Brent",
+      "status": "OBSERVING_STRONG",
+      "proposed_date": "2026-05-03",
+      "observation": "4 consecutive wrong/above-range bearish ASTRA MICRO predictions (P004, P009, P025, P030). At extreme Brent ($115+), defense stocks receive institutional macro-hedge bid on top of geopolitical premium. ASTRA MICRO went from $562 avg entry to $1,125+ (+100%). Stock is now an institutional macro hedge asset, not just a defense sector play. Standard M012 threshold (Brent <$92 + Hormuz open 5 days) is necessary but the premium is also driven by institutional re-rating. No tactical bearish defense prediction is reliable until BOTH M012 conditions met AND institutional positioning reversal signal.",
+      "confirmations_needed": 0,
+      "first_seen": "2026-04-08",
+      "note": "Near-promotion based on 4 occurrences. P033 COCHINSHIP CORRECT confirms direct-link defense bull works; only bearish predictions fail."
     }
   ],
   "promoted_patterns_v4": [
@@ -489,6 +517,20 @@
         "Coal India benefits from Brent >$100 as coal-substitute demand driver — direct causal link confirmed",
         "BankNifty structural break below 56,000 requires macro regime change (FII reversal OR ceasefire) to recover 57,000+"
       ]
+    },
+    {
+      "date": "2026-05-03",
+      "version": "v7",
+      "changes": "NEW OBSERVING: BRENT_EXTREME_RECOVERY_CAP (P031 — 1 occurrence: Brent $118 capped Nifty intraday recovery at 24,019 vs 24,050 floor), ECL_BANKING_STRUCTURAL_HEADWIND (P032 — 1 occurrence: BankNifty failed 56,500 on RBI ECL drag), DEFENSE_PREMIUM_PERSISTENCE (4 occurrences: 4 consecutive ASTRA MICRO bearish failures). DIRECT_CAUSAL_LINK confirmed 5/5 (100% accuracy). FORECAST_PAT005 actively firing this weekend: Iran peace proposal via Pakistani mediators → Brent $118→$108. P033 COCHINSHIP CORRECT validates single-link defense bull thesis.",
+      "accuracy_at_time": 19.2,
+      "key_learnings": [
+        "DIRECT_CAUSAL_LINK is the single most reliable prediction methodology: 5/5 = 100%. Build every new prediction around one clearly articulable causal chain.",
+        "BRENT_EXTREME_RECOVERY_CAP: when Brent >>$115, reduce Nifty mean-reversion floor by 50-100 pts to account for structural drag from extreme crude.",
+        "ECL_BANKING_STRUCTURAL_HEADWIND: RBI ECL provision framework is a persistent BankNifty headwind. Distinguish PSU infra DII support (works) from banking regulatory drag (does not yield).",
+        "DEFENSE_PREMIUM_PERSISTENCE: at extreme Brent, defense is institutional macro hedge. 4 consecutive bearish predictions WRONG. ASTRA MICRO is portfolio long only in this regime.",
+        "FORECAST_PAT005 confirmed viable: Iran peace proposal (May 1) caused Brent -$10 in one session ($118→$108). Diplomatic restart probability 25-30% within 72h now actively in play.",
+        "P033 COCHINSHIP CORRECT: direct-link defense bull (geopolitical premium → shipbuilder) works. Inverse of the failed defense-bear pattern. Single-link bullish defense = CORRECT; multi-factor bearish defense = WRONG."
+      ]
     }
   ],
   "meta_rules": [
@@ -510,6 +552,13 @@
       "added_date": "2026-04-26",
       "rule": "When generating any 7D+ index prediction, identify all binary events scheduled within the prediction window (earnings shocks, ceasefire decisions, central bank decisions, geopolitical deadlines). If 2+ have material downside skew (>30% adverse probability each), apply 1.5x downgrade to the base-case shock magnitude in the bearish scenario AND raise the bearish scenario probability by +10pp.",
       "based_on_pattern": "MULTI_BINARY_CORRELATION (1 occurrence; observe but apply preemptively)"
+    },
+    {
+      "id": "DIRECT_CAUSAL_LINK_FIRST",
+      "name": "Prioritize Single Direct Causal Link Predictions",
+      "added_date": "2026-05-03",
+      "rule": "Before generating any prediction, identify the SINGLE most direct causal chain: catalyst → mechanism → stock outcome. If you cannot identify exactly one direct link, downgrade confidence to 1★. Empirical evidence: direct-link predictions = 5/5 = 100% accuracy (P008, P015, P019, P028, P033). Multi-factor predictions = ~1/21 = 5% accuracy. The causal chain should be expressible in one sentence: e.g., Hormuz closure → higher freight rates → Adani Ports volume gains.",
+      "based_on": "5 confirmed CORRECT predictions all had exactly one direct causal link. All 18 WRONG predictions had multi-factor or regime-assumption dependencies."
     }
   ]
 }

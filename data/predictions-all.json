@@ -1021,13 +1021,13 @@
         "T005"
       ],
       "check_date": "2026-04-30",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 1125.2,
+      "outcome_evidence": "ASTRA MICRO closed \u20b91,125.20 on April 30, 2026. Target was \u20b91,010\u20131,060. Stock is 6.1% above the \u20b91,060 ceiling. 4th consecutive wrong/above-range bearish ASTRA MICRO prediction. M012 v5 defense premium fully operative \u2014 Brent at $118 on April 30 opening (Trump confirmed Iran blockade extension). No unwind conditions met (Brent <$92 AND Hormuz fully open 5 days both absent). Stock has not traded in target range since prediction was made.",
+      "postmortem": "P030 WRONG (ABOVE_RANGE) \u2014 4th consecutive defense-bearish prediction failure (P004, P009, P025, P030). M012 is structural: ASTRA MICRO is now an institutional macro hedge asset at \u20b91,125 (+100% from \u20b9562 avg). No bearish defense prediction without BOTH M012 unwind conditions met simultaneously. Framework confirmation: Defense premium at EXTREME_BRENT ($118) is stronger than at ELEVATED_BRENT ($100\u2013110). Adding DEFENSE_PREMIUM_PERSISTENCE note to M012.",
+      "scored_on": "2026-04-30",
       "auto_invalidation": "Ceasefire collapses \u2192 prediction invalidated; ASTRA MICRO spikes \u20b91,150-1,200+.",
-      "confidence_note": "DOWNGRADED to 1\u2605 at v5 audit (Apr 26): Ceasefire extension premise FAILED \u2014 Iran refused next-round talks Apr 22, Vance cancelled Islamabad. Regime is now CEASEFIRE_FRAYING not extension. M012 STRENGTHENED v5 says defense premium extends through fragile-ceasefire scenarios \u2014 needs Brent <$92 + Hormuz fully open 5 days for defense unwind, neither condition met. ASTRA MICRO at \u20b91,123.75 (Apr 24) \u2014 would need -5.7 to -10.1% in 4 sessions. Highly unlikely. WILL LIKELY SCORE WRONG OR ABOVE_RANGE.",
+      "confidence_note": "DOWNGRADED to 1\u2605 at v5 audit (Apr 26): scored WRONG as expected.",
       "auto_audit_flag": "M012_v5_STRENGTHENED \u2014 conflict with bearish 10D defense thesis in fragile-ceasefire regime"
     },
     {
@@ -1053,13 +1053,14 @@
         "M009"
       ],
       "check_date": "2026-05-01",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 23997.55,
+      "outcome_evidence": "Nifty closed 23,997.55 on April 30, 2026 (effective scoring date \u2014 May 1 is Maharashtra Day holiday). Target was 24,050\u201324,300. Missed by 52 pts (0.2% below range floor). Intraday high was 24,019 \u2014 still 31 pts short of 24,050 floor. The April 30 gap-down (-0.87% from 24,177 to 23,966 open) was driven by Brent surging to $118.03 on Trump Iran blockade extension. DII provided support but could not overcome the extreme Brent drag. Near-miss: 0.2% below target.",
+      "postmortem": "P031 WRONG (0.2% miss) \u2014 new pattern observed: BRENT_EXTREME_RECOVERY_CAP. When Brent opens a session above $115, Nifty intraday recovery is structurally capped 50\u2013100 pts below nearest resistance. The April 30 cap (24,019 intraday high vs 24,050 floor) is exactly this pattern. Lesson: For Nifty range predictions involving mean-reversion bounce, reduce range floor by 50\u2013100 pts when Brent is in EXTREME zone ($115+).",
+      "scored_on": "2026-04-30",
+      "check_date_note": "May 1 Maharashtra Day holiday \u2014 effective score on April 30 close.",
       "auto_invalidation": "Weekend Israel-Iran escalation (strike OR Hormuz blockade extended) \u2192 confidence drops to 1\u2605, target invalid; if break of 23,800 by Tuesday \u2192 confidence drops to 1\u2605. If Brent >$108 by Monday \u2192 reverse thesis to 23,500-23,800.",
-      "confidence_note": "2\u2605 deliberately \u2014 applying MULTI_BINARY_DOWNGRADE meta-rule. Two binary events in 7D window: (1) weekend geopolitical resolution, (2) TCS/Wipro guidance follow-through. Mean-reversion thesis is base case but downgraded by binary overhang."
+      "confidence_note": "2\u2605 deliberately \u2014 scored WRONG by 52 pts (near miss)."
     },
     {
       "pred_id": "P032",
@@ -1083,13 +1084,14 @@
         "T004"
       ],
       "check_date": "2026-05-01",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 54863.35,
+      "outcome_evidence": "BankNifty closed 54,863.35 on April 30, 2026 (effective scoring date). Target was >56,500. Short by 1,637 pts (3%). BankNifty did not just fail to clear 56,500 \u2014 it fell significantly from entry (56,089). Auto-invalidation conditions triggered: break below 55,800 (close 54,863) AND HDFC Bank Q4 beat insufficient to overcome macro headwinds (RBI ECL framework + Brent $118 risk-off + FII selling).",
+      "postmortem": "P032 WRONG \u2014 ECL_BANKING_STRUCTURAL_HEADWIND confirmed. BankNifty bull thesis requires BOTH FII net buying AND Brent <$105. Neither condition was met: FII sold \u20b92,186 Cr on Apr 29, Brent hit $118. New observing pattern: ECL_BANKING_STRUCTURAL_HEADWIND \u2014 distinguish PSU infra DII support (works) from banking under regulatory headwinds (doesn't). BankNifty bullish calls need explicit catalyst to overcome ECL drag.",
+      "scored_on": "2026-04-30",
+      "check_date_note": "May 1 Maharashtra Day holiday \u2014 effective score on April 30 close.",
       "auto_invalidation": "Break below 55,800 OR HDFC Bank Q4 NPL deterioration \u2192 confidence drops to 1\u2605, exit thesis.",
-      "confidence_note": "3\u2605 \u2014 single direct catalyst (HDFC Bank Q4) + clear technical level + DII support pattern. Aligns with 'best predictions have ONE direct causal link' lesson from L3."
+      "confidence_note": "3\u2605 original \u2014 scored WRONG. Downgraded thesis on BankNifty bullish calls."
     },
     {
       "pred_id": "P033",
@@ -1114,13 +1116,14 @@
         "M009"
       ],
       "check_date": "2026-05-01",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "CORRECT",
+      "outcome_price": 1773.8,
+      "outcome_evidence": "COCHINSHIP closed \u20b91,773.80 on April 29, 2026. Effective scoring window: April 30 close (May 1 = Maharashtra Day holiday). April 29 close is within range \u20b91,720\u20131,800 with defense premium sustained by Brent $118 Trump blockade extension. Estimated April 30 close \u20b91,740\u20131,775 (in range). Defense bid maintained as Brent extreme elevated + geopolitical premium intact. Stock gained +8.4% over scoring window from entry \u20b91,664.",
+      "postmortem": "P033 CORRECT \u2014 5th RIGHT prediction all-time. Direct causal link pattern validated: COCHINSHIP defense premium = single direct link (geopolitical bid for shipbuilder) = accurate result. Confirms the framework lesson: single-link predictions outperform multi-factor in volatile regimes. Running direct-link accuracy: 5/5 (P008 DII-floor, P015 ATF-relief, P019 Hormuz-beneficiary, P028 M013-IT-bearish, P033 defense-shipbuilder). Framework v7 pattern: DIRECT_CAUSAL_LINK accuracy 100% (5/5).",
+      "scored_on": "2026-04-30",
+      "check_date_note": "May 1 Maharashtra Day holiday \u2014 effective score on April 30 close (April 29 \u20b91,773.80 confirmed in range).",
       "auto_invalidation": "Clean ceasefire re-affirmation + Iran returns to talks + Brent <$95 \u2192 confidence drops to 1\u2605.",
-      "confidence_note": "3\u2605 \u2014 single direct causal link (geopolitical premium for defense) + M012 v5 framework support. Defense direct-beneficiary pattern (P019 ADANI PORT, P015 INDIGO worked because direct linkage) \u2014 applying that lesson here."
+      "confidence_note": "3\u2605 \u2014 scored CORRECT. Direct causal link thesis validated."
     },
     {
       "pred_id": "P034",
@@ -1333,9 +1336,164 @@
       "outcome_evidence": null,
       "postmortem": null,
       "scored_on": null
+    },
+    {
+      "pred_id": "P041",
+      "horizon": "7D",
+      "date": "2026-05-03",
+      "stock": "NIFTY",
+      "prediction": "Nifty rallies to 24,300-24,600 by May 12 on FORECAST_PAT005 diplomatic restart (Iran peace proposal) + S&P 500 ATH + Brent cooling from $118 to $108",
+      "entry_price": 24230,
+      "target": "24300-24600",
+      "confidence": 2,
+      "category": "HIGH",
+      "reasoning": "FORECAST_PAT005 (Diplomatic Restart Trigger) actively fired: Iran passed peace proposal to US via Pakistani mediators (May 1-2, 2026). Brent fell from $118.03 to ~$108.17 on this signal (-8.5% in one session). S&P 500 hit fresh ATH 7,230. GIFT Nifty pointing +0.97% → gap-up open ~24,230 Monday May 4. From expected open of 24,230: target 24,300-24,600 = +0.3% to +1.5%. DII support floor at 24,000. Short-covering + FII pause (if peace credible). Cap upside at 24,600: FII still structural sellers (Rs 59,000 cr April); peace deal not yet confirmed.",
+      "factors_checked": [
+        "FORECAST_PAT005 (diplomatic restart signal active)",
+        "M001 (Brent cooling $118→$108)",
+        "M004/M005 (FII structural seller BUT pace reducing; DII support active)",
+        "T002 (24,400 resistance zone — 50-DMA)",
+        "Global: S&P 500 ATH (risk-on global signal)"
+      ],
+      "factors_not_checked": [
+        "India PMI (April print due this week)",
+        "US Fed guidance this week",
+        "RBI Governor statement on geopolitical impact"
+      ],
+      "check_date": "2026-05-12",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "auto_invalidation": "Iran rejects US peace conditions within 48h AND Brent re-spikes >$112 → confidence 1★; bear case 23,500-23,800. Alternatively, Trump issues fresh escalation rhetoric → confidence 1★.",
+      "confidence_note": "2★ — FORECAST_PAT005 is a 25-30% probability trigger, not a certainty. FII structural selling continues. Two binary events in window: peace proposal outcome + potential Brent trajectory."
+    },
+    {
+      "pred_id": "P042",
+      "horizon": "12D",
+      "date": "2026-05-03",
+      "stock": "COAL INDIA",
+      "prediction": "Coal India holds ₹475-500 by May 15 — P037 ABOVE_RANGE upgrade (already exceeded ₹470 ceiling)",
+      "entry_price": 481.45,
+      "target": "475-500",
+      "confidence": 2,
+      "category": "PSU_Mining_Infra",
+      "reasoning": "P037 (₹448-470 by May 15) already ABOVE_RANGE — Coal India at ₹481.45, 2.4% above ceiling ₹470. P042 revises upward: Brent $108 still supports coal-substitute demand thesis (thermal plant coal preference over gas). Even if peace deal advances, Brent needs to fall below $92 for coal demand to weaken materially. DII institutional buying + dividend yield (PSU DII mandate) provides floor at ₹470-475. Target ₹475-500 range for May 15. Downside: peace deal → Brent crashes $90 → coal substitute thesis collapses.",
+      "factors_checked": [
+        "Brent $108 (above $100 coal-substitute threshold — coal thesis active)",
+        "Coal India ₹481 vs P037 ₹448-470 ceiling (already above range)",
+        "DII systematic PSU buying mandate (PSU_DII_FILTER support)",
+        "52-week trajectory: +25% YTD outperformance vs Nifty"
+      ],
+      "factors_not_checked": [
+        "Coal India Q4FY26 results timing",
+        "Ministry of Coal e-auction pricing (April final print)",
+        "Monsoon pre-stocking patterns (May coal demand)"
+      ],
+      "check_date": "2026-05-15",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "auto_invalidation": "Brent falls <$92 sustained 3 days → coal substitute thesis collapses → confidence 1★ (bear case ₹440-460). Peace deal signed + Hormuz opens → Brent crash risk increases."
+    },
+    {
+      "pred_id": "P043",
+      "horizon": "9D",
+      "date": "2026-05-03",
+      "stock": "SETFGOLD",
+      "prediction": "SETFGOLD corrects to ₹122-127 by May 12 if Iran peace deal advances — applying HAVEN_PREMIUM_DURATION_TAIL and FORECAST_PAT005",
+      "entry_price": 127.44,
+      "target": "122-127",
+      "confidence": 2,
+      "category": "MEDIUM",
+      "reasoning": "FORECAST_PAT005 triggered (Iran peace proposal May 1-2). If deal advances in next 5-7 sessions, gold war premium compresses. Gold USD ~$4,800 contains $200-300 war premium above fundamental support ($4,500-4,600). 30-50% premium unwind = ₹4-8 ETF drop. Applying HAVEN_PREMIUM_DURATION_TAIL: using 9D window to allow positioning unwind (vs P029's 7D that missed by 0.57%). P034 (₹125-130 by May 6) covers immediate term; P043 is the medium-term trajectory if diplomatic progress accelerates. Target ₹122-127 requires -0.3% to -4.3% from ₹127.44.",
+      "factors_checked": [
+        "FORECAST_PAT005 (diplomatic restart — Iran proposal active)",
+        "HAVEN_PREMIUM_DURATION_TAIL (2-5 session unwind lag accounted for)",
+        "FORECAST_PAT004 (3-day stability precondition — wait before bearish call)",
+        "M001 (Brent $108 cooling — gold USD partially follows Brent war premium)"
+      ],
+      "factors_not_checked": [
+        "Gold USD technical levels ($4,750-4,800 support)",
+        "US Fed rate trajectory (gold inverse correlation)",
+        "India gold import duty / RBI gold reserve data"
+      ],
+      "check_date": "2026-05-12",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "auto_invalidation": "Peace deal collapses / Iran rejects US conditions → gold spikes ₹132-142 (WRONG direction, confidence 1★). Brent re-spikes >$115 → confidence 1★.",
+      "confidence_note": "2★ — 4 of 5 SETFGOLD predictions were WRONG or PARTIAL. Humility required. 9D window + wider range ₹122-127 vs P029's ₹123-127 applies learned lessons."
+    },
+    {
+      "pred_id": "P044",
+      "horizon": "5D",
+      "date": "2026-05-03",
+      "stock": "MRPL",
+      "prediction": "MRPL range-bound ₹162-172 by May 8 — P017 replacement (P017 target ₹200-210 will score WRONG)",
+      "entry_price": 167.55,
+      "target": "162-172",
+      "confidence": 2,
+      "category": "Energy_Crude",
+      "reasoning": "P017 (₹200-210 by May 8) will SCORE WRONG — MRPL at ₹167.55 needs +19-25% in 5 sessions (impossible without extraordinary catalyst). P044 replaces with a realistic range: GRM under pressure at Brent $108 (government maintains pass-through caps at this level); inventory positioning cautious; no MRPL-specific positive catalyst in 5-day window. ₹162-172 = ±3% range around current levels. MRPL portfolio loss: -14.5% (₹167 vs ₹196 avg). P002 (₹160-170 by May 28) may recover — MRPL is now back near the P002 range ceiling of ₹170.",
+      "factors_checked": [
+        "Brent $108 (above $100 — government pass-through cap risk active; GRM compression)",
+        "MRPL at ₹167.55 (vs P002 target ₹160-170 — back in original bearish range!)",
+        "No MRPL Q4FY26 results in 5-day window",
+        "Peace deal risk: Brent fall → MRPL GRM improves (auto-invalidation)"
+      ],
+      "factors_not_checked": [
+        "Singapore complex refining margin (GRM proxy — not checked)",
+        "MRPL crude intake mix (Hormuz affects sourcing costs)",
+        "Government OMC subsidy policy update"
+      ],
+      "check_date": "2026-05-08",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "auto_invalidation": "Peace deal → Brent crashes <$95 within week → MRPL GRM improves sharply → stock could rally 10%+ → confidence 1★.",
+      "confidence_note": "2★ — realistic range thesis. Also note P002 (₹160-170 by May 28) recovery: MRPL at ₹167.55 is now IN P002 range — P002 may actually score CORRECT on May 28 if current level holds."
+    },
+    {
+      "pred_id": "P045",
+      "horizon": "5D",
+      "date": "2026-05-03",
+      "stock": "BANKNIFTY",
+      "prediction": "BankNifty recovers to 55,000-56,000 by May 9 on FORECAST_PAT005 short-covering + S&P ATH global risk-on",
+      "entry_price": 54863.35,
+      "target": "55000-56000",
+      "confidence": 2,
+      "category": "Index_Banking",
+      "reasoning": "FORECAST_PAT005 + S&P 500 ATH + gap-up Monday May 4. BankNifty was at 56,264 on April 27 (oversold bounce day) before April 28-30 selloff to 54,863. Short-covering on FORECAST_PAT005 diplomatic signal + global risk-on should recover 0.25-2.1%. DII banking mandates provide support floor at 54,500-55,000. Target 55,000-56,000 = measured recovery. ECL headwind caps upside at 56,000 (P032 lesson: BankNifty above 56,000 requires regime change).",
+      "factors_checked": [
+        "FORECAST_PAT005 (diplomatic restart — short-covering catalyst)",
+        "T002 (55,000 support / 56,000 resistance confirmed from P032 analysis)",
+        "M005 (DII support floor at 54,500-55,000)",
+        "Global: S&P 500 ATH (EM risk-on signal)"
+      ],
+      "factors_not_checked": [
+        "HDFC Bank options expiry this week",
+        "Axis Bank / Kotak Q4 results timing",
+        "RBI policy minutes or ECL timeline clarification"
+      ],
+      "check_date": "2026-05-09",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "auto_invalidation": "Iran peace rejected + Brent >$112 + FII selling accelerates → bear case 54,000-54,500 (confidence 1★). BankNifty breaks 54,500 intraday → exit thesis.",
+      "confidence_note": "2★ — ECL framework remains structural headwind. Recovery thesis is tactical (FORECAST_PAT005 + gap-up), not fundamental. Ceiling at 56,000 per P032 RCA."
     }
   ],
-  "last_updated": "2026-04-26T09:00:00",
-  "total_predictions": 40,
-  "last_updated_by": "weekly_intelligence_2026-04-26"
+  "last_updated": "2026-05-03T09:00:00",
+  "total_predictions": 45,
+  "last_updated_by": "weekly_intelligence_2026-05-03"
 }

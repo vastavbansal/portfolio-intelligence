@@ -1,6 +1,13 @@
 {
   "briefings": [
     {
+      "date": "2026-05-03",
+      "type": "weekly",
+      "label": "Sun May 3 — Weekly Review",
+      "file": "daily-briefings/weekly-2026-05-03.md",
+      "summary": "The critical weekend development: Iran has passed a peace proposal to the US through Pakistani mediators, triggering FORECAST_PAT0. The week ahead is a high-stakes inflection: if the peace proposal leads to substantive progress, Brent could fall toward $95 — tri"
+    },
+    {
       "date": "2026-04-26",
       "type": "weekly",
       "label": "Sun Apr 26 — Weekly Review",
