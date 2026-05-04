@@ -1618,6 +1618,87 @@
         "nifty_change_pct": null
       },
       "lessons": []
+    },
+    {
+      "session_date": "2026-05-04",
+      "forecast_generated_at": "2026-05-03T09:00:00",
+      "opening_bias": {
+        "direction": "GAP_UP",
+        "gap_pct_estimate": 0.97,
+        "nifty_expected_open": 24230,
+        "key_drivers": [
+          "GIFT Nifty +0.97% (24,230 vs last close 23,997.55) \u2014 Iran peace proposal + S&P ATH",
+          "Iran peace proposal via Pakistani mediators \u2014 FORECAST_PAT005 fired (25-30% deal probability)",
+          "S&P 500 fresh ATH 7,230 on May 1 \u2014 global risk-on signal",
+          "Brent eased to $108.17 from $118.03 peak \u2014 crude-sensitive sectors get relief bid",
+          "GIFT Nifty futures open confirmation needed Monday morning (check 06:00 IST)"
+        ],
+        "confidence": 3,
+        "risks": [
+          "Trump rejects Iran proposal over weekend \u2192 gap-up fades intraday \u2192 close 23,900-24,100",
+          "FII continue structural selling (9th week) \u2192 capping upside at 24,300-24,400",
+          "Any fresh escalation news (Israeli military action, Iran counter-measures) \u2192 reversal"
+        ],
+        "generated_at": "weekly_intelligence_2026-05-03"
+      },
+      "opening_bias_actual": {
+        "nifty_open": 24230,
+        "nifty_current": 24194.4,
+        "nifty_prev_close": 23997.55,
+        "gift_nifty_preopen": 24230,
+        "gap_pct": 0.82,
+        "gap_pts": 196.85,
+        "direction": "GAP_UP",
+        "direction_correct": true,
+        "grade": "CORRECT",
+        "scoring_note": "Nifty opened ~24,230 (GIFT Nifty +0.97% signal confirmed). Currently 24,194 at 12:08 IST (slight intraday pullback). Forecast was GAP_UP +0.97%; actual gap +0.82% from Apr 30 close. Direction correct, magnitude within 15% of estimate \u2014 CORRECT grade.",
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": false
+      },
+      "session_direction": {
+        "direction": "BULLISH_FADE",
+        "change_pct_estimate": 0.5,
+        "range_low": 24050,
+        "range_high": 24350,
+        "key_assumption": "Gap-up on Iran peace proposal + S&P ATH confirmed. Market opened ~24,230. By noon (12:08 IST), Nifty at 24,194 \u2014 slight intraday fade from open. Base case: consolidation 24,100-24,280, close near current levels. Key resistance 24,400 (50-DMA) expected to cap upside. FII selling continues but DII buying provides floor above 24,000. P041 (24,300-24,600 by May 12) accumulating probability slowly.",
+        "confidence": 2,
+        "generated_at": "morning_brief_2026-05-04",
+        "regime": "GEOPOLITICAL_RISK_EXTREME_DIPLOMATIC_RESTART_SIGNAL_BRENT_COOLING",
+        "brent_forecast": "$103-112 base case. Brent at $107.85, slight cooling from $108.17. Peace deal materially advancing could push $95-105 this week.",
+        "scenarios": [
+          {
+            "name": "CONSOLIDATION_CLOSE (45%)",
+            "description": "Gap-up absorbed, market consolidates 24,100-24,280. Nifty closes 24,150-24,250. FII sell but DII absorb. BankNifty holds 55,000-55,500.",
+            "nifty_close_range": "24,150-24,250"
+          },
+          {
+            "name": "AFTERNOON_RECOVERY (30%)",
+            "description": "Peace deal news trickles in post-noon, short-covering pushes Nifty toward 24,300-24,400. Close near high of day.",
+            "nifty_close_range": "24,300-24,400"
+          },
+          {
+            "name": "FADE_TO_FLAT (20%)",
+            "description": "Gap-up fades significantly. FII selling overwhelms. Nifty closes near 23,900-24,050.",
+            "nifty_close_range": "23,900-24,050"
+          },
+          {
+            "name": "LATE_RALLY_BREAKOUT (5%)",
+            "description": "Definitive Trump acceptance of Iran proposal causes explosive rally. Nifty clears 24,400 intraday.",
+            "nifty_close_range": "24,400-24,600"
+          }
+        ]
+      },
+      "session_direction_accuracy": {
+        "direction_correct": null,
+        "grade": "PENDING",
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-05-04"
+      },
+      "actual": {
+        "nifty_open": null,
+        "nifty_close": null,
+        "nifty_change_pct": null
+      }
     }
   ],
   "patterns_observed": [

@@ -1,19 +1,19 @@
 {
   "schema_version": "1.1",
-  "description": "Dynamic bridge — 2026-05-03 (Sunday) weekly intelligence | REGIME TRANSITION: DIPLOMATIC_RESTART_SIGNAL | Iran peace proposal via Pakistan → FORECAST_PAT005 active | Brent $118→$108 | GIFT Nifty +0.97%",
-  "last_updated_by": "weekly_intelligence_2026-05-03",
-  "last_updated_at": "2026-05-03T09:00:00",
+  "description": "Dynamic bridge \u2014 2026-05-03 (Sunday) weekly intelligence | REGIME TRANSITION: DIPLOMATIC_RESTART_SIGNAL | Iran peace proposal via Pakistan \u2192 FORECAST_PAT005 active | Brent $118\u2192$108 | GIFT Nifty +0.97%",
+  "last_updated_by": "morning_brief_2026-05-04",
+  "last_updated_at": "2026-05-04T09:15:00",
   "market_regime": {
     "label": "GEOPOLITICAL_RISK_EXTREME_DIPLOMATIC_RESTART_SIGNAL_BRENT_COOLING",
-    "key_risk": "Iran passed peace proposal to US via Pakistani mediators (May 1-2). Brent fell $118→$108 (-8.5%) on the signal. FORECAST_PAT005 triggered — 25-30% probability of deal within 48-72h. If deal advances: regime shifts to GEOPOLITICAL_RISK_ELEVATED_DE-ESCALATION_TRANSITION. Key Nifty level: 24,400 (50-DMA resistance). BankNifty ECL structural headwind (RBI framework) persists regardless of geopolitical outcome.",
-    "dominant_risk": "(1) Iran peace proposal status — most market-sensitive variable. Trump response/statement over weekend will determine Monday direction. (2) Brent at $108 — cooling from $118 but still above $95 regime-change threshold. Peace deal could push Brent toward $90-95. (3) BankNifty ECL framework headwind — structural, not tactical. (4) FII selling: Rs 59,000 cr net sold in April (10th consecutive month) — structural outflow; any peace deal could trigger reversal.",
+    "key_risk": "Iran passed peace proposal to US via Pakistani mediators (May 1-2). Brent fell $118\u2192$108 (-8.5%) on the signal. FORECAST_PAT005 triggered \u2014 25-30% probability of deal within 48-72h. If deal advances: regime shifts to GEOPOLITICAL_RISK_ELEVATED_DE-ESCALATION_TRANSITION. Key Nifty level: 24,400 (50-DMA resistance). BankNifty ECL structural headwind (RBI framework) persists regardless of geopolitical outcome.",
+    "dominant_risk": "(1) Iran peace proposal status \u2014 most market-sensitive variable. Trump response/statement over weekend will determine Monday direction. (2) Brent at $108 \u2014 cooling from $118 but still above $95 regime-change threshold. Peace deal could push Brent toward $90-95. (3) BankNifty ECL framework headwind \u2014 structural, not tactical. (4) FII selling: Rs 59,000 cr net sold in April (10th consecutive month) \u2014 structural outflow; any peace deal could trigger reversal.",
     "crude_last": 108.17,
     "crude_prev_high": 118.03,
     "crude_change_from_peak": -9.86,
     "crude_change_pct_from_peak": -8.3,
     "crude_note": "Brent fell from $118.03 (April 29 intraday high) to ~$108.17 on May 1 (Iran peace proposal via Pakistani mediators). This is the largest single-day Brent decline since April 8 ceasefire. If peace deal advances, Brent could fall to $95-105. Regime change threshold: $95 sustained 3 days.",
     "crude_threshold_for_regime_change": 95,
-    "crude_current_zone": "EXTREME ($100-110 range — cooling from $118+ peak)",
+    "crude_current_zone": "EXTREME ($100-110 range \u2014 cooling from $118+ peak)",
     "nifty_last": 23997.55,
     "nifty_gap_up_expected": 24230,
     "nifty_gift_pct": 0.97,
@@ -41,85 +41,86 @@
     "gap_pct_estimate": 0.97,
     "nifty_expected_open": 24230,
     "key_drivers": [
-      "GIFT Nifty +0.97% (24,230 vs last close 23,997.55) — Iran peace proposal + S&P ATH",
-      "Iran peace proposal via Pakistani mediators — FORECAST_PAT005 fired (25-30% deal probability)",
-      "S&P 500 fresh ATH 7,230 on May 1 — global risk-on signal",
-      "Brent eased to $108.17 from $118.03 peak — crude-sensitive sectors get relief bid",
+      "GIFT Nifty +0.97% (24,230 vs last close 23,997.55) \u2014 Iran peace proposal + S&P ATH",
+      "Iran peace proposal via Pakistani mediators \u2014 FORECAST_PAT005 fired (25-30% deal probability)",
+      "S&P 500 fresh ATH 7,230 on May 1 \u2014 global risk-on signal",
+      "Brent eased to $108.17 from $118.03 peak \u2014 crude-sensitive sectors get relief bid",
       "GIFT Nifty futures open confirmation needed Monday morning (check 06:00 IST)"
     ],
     "confidence": 3,
     "risks": [
-      "Trump rejects Iran proposal over weekend → gap-up fades intraday → close 23,900-24,100",
-      "FII continue structural selling (9th week) → capping upside at 24,300-24,400",
-      "Any fresh escalation news (Israeli military action, Iran counter-measures) → reversal"
+      "Trump rejects Iran proposal over weekend \u2192 gap-up fades intraday \u2192 close 23,900-24,100",
+      "FII continue structural selling (9th week) \u2192 capping upside at 24,300-24,400",
+      "Any fresh escalation news (Israeli military action, Iran counter-measures) \u2192 reversal"
     ],
     "generated_at": "weekly_intelligence_2026-05-03"
   },
   "session_direction": {
-    "direction": "BULLISH_VOLATILE",
-    "change_pct_estimate": 0.9,
-    "range_low": 23900,
-    "range_high": 24400,
-    "key_assumption": "FORECAST_PAT005 (diplomatic restart) drives gap-up. Short-covering adds momentum through morning. 24,400 (50-DMA) is the key resistance — expected to cap intraday high unless FII also turn buyers. Base case: Nifty opens 24,230, tests 24,300-24,380, fades to close 24,100-24,250. P041 (24,300-24,600 by May 12) begins accumulating probability.",
-    "confidence": 3,
+    "direction": "BULLISH_FADE",
+    "change_pct_estimate": 0.5,
+    "range_low": 24050,
+    "range_high": 24350,
+    "key_assumption": "Gap-up on Iran peace proposal + S&P ATH confirmed. Market opened ~24,230. By noon (12:08 IST), Nifty at 24,194 \u2014 slight intraday fade from open. Base case: consolidation 24,100-24,280, close near current levels. Key resistance 24,400 (50-DMA) expected to cap upside. FII selling continues but DII buying provides floor above 24,000. P041 (24,300-24,600 by May 12) accumulating probability slowly.",
+    "confidence": 2,
+    "generated_at": "morning_brief_2026-05-04",
     "regime": "GEOPOLITICAL_RISK_EXTREME_DIPLOMATIC_RESTART_SIGNAL_BRENT_COOLING",
-    "brent_forecast": "$103-112 base case. If peace deal credible → $95-100 possible by May 9. If rejected → $112-120 return.",
+    "brent_forecast": "$103-112 base case. Brent at $107.85, slight cooling from $108.17. Peace deal materially advancing could push $95-105 this week.",
     "scenarios": [
       {
-        "name": "PEACE_DEAL_RALLY (35%)",
-        "description": "Iran-US deal advances: Trump accepts proposal framework within 48-72h. Brent falls to $100-105. FII pause/reversal begins. Nifty gaps up, sustains, closes 24,300-24,500. BankNifty reclaims 55,500. Defense stocks (ASTRA MICRO, COCHINSHIP) give back 2-5%.",
-        "nifty_close_range": "24,300-24,500"
+        "name": "CONSOLIDATION_CLOSE (45%)",
+        "description": "Gap-up absorbed, market consolidates 24,100-24,280. Nifty closes 24,150-24,250. FII sell but DII absorb. BankNifty holds 55,000-55,500.",
+        "nifty_close_range": "24,150-24,250"
       },
       {
-        "name": "GAP_UP_FADE (35%)",
-        "description": "Gap-up on peace proposal but Trump rejects/modifies conditions. Short-covering fades by afternoon. Nifty closes 24,000-24,200. FII selling resumes. Brent recovers to $110-113.",
-        "nifty_close_range": "24,000-24,200"
+        "name": "AFTERNOON_RECOVERY (30%)",
+        "description": "Peace deal news trickles in post-noon, short-covering pushes Nifty toward 24,300-24,400. Close near high of day.",
+        "nifty_close_range": "24,300-24,400"
       },
       {
-        "name": "SUSTAINED_RALLY (20%)",
-        "description": "Trump accepts proposal + global risk-on extends. FII short-covering + DII buying. Nifty clears 24,400 on volume, closes 24,400-24,600. BankNifty breaks 56,000. P041 target in sight by end of week.",
+        "name": "FADE_TO_FLAT (20%)",
+        "description": "Gap-up fades significantly. FII selling overwhelms. Nifty closes near 23,900-24,050.",
+        "nifty_close_range": "23,900-24,050"
+      },
+      {
+        "name": "LATE_RALLY_BREAKOUT (5%)",
+        "description": "Definitive Trump acceptance of Iran proposal causes explosive rally. Nifty clears 24,400 intraday.",
         "nifty_close_range": "24,400-24,600"
-      },
-      {
-        "name": "REJECTION_REVERSAL (10%)",
-        "description": "Trump explicitly rejects Iran proposal over weekend/Monday morning. Brent spikes back to $115+. Gap-up reverses to red close. Nifty falls to 23,700-23,900.",
-        "nifty_close_range": "23,700-23,900"
       }
     ]
   },
   "ceasefire_binary_matrix": {
     "peace_deal_advancing": 0.35,
     "stalemate_continuing": 0.35,
-    "escalation_collapse": 0.30,
-    "note": "Upgraded peace_deal_advancing from 0.30 to 0.35 on Iran peace proposal (May 1-2). This is the strongest diplomatic signal since April 8 ceasefire — Iran proactively offering terms via Pakistan channel. Stalemate maintained at 0.35 (proposal may stall at US conditions). Escalation downgraded from 0.40 to 0.30 (Iran clearly prefers diplomacy over escalation at current oil prices)."
+    "escalation_collapse": 0.3,
+    "note": "Upgraded peace_deal_advancing from 0.30 to 0.35 on Iran peace proposal (May 1-2). This is the strongest diplomatic signal since April 8 ceasefire \u2014 Iran proactively offering terms via Pakistan channel. Stalemate maintained at 0.35 (proposal may stall at US conditions). Escalation downgraded from 0.40 to 0.30 (Iran clearly prefers diplomacy over escalation at current oil prices)."
   },
   "stocks_to_watch": [
-    "ASTRA MICRO: P036 SCORE DAY May 5 vs >₹1,050. Currently ₹1,125.20 — tracking CORRECT. Watch: peace deal → defense unwind risk (but M012 unwind needs Brent <$92, not triggered yet).",
-    "BANKNIFTY: P038 SCORE DAY May 5 vs fails 57,000. Currently 54,863 — tracking CORRECT. Watch: gap-up to 56,000+ would challenge P038 (but >57,000 in ONE session = very unlikely).",
-    "SETFGOLD: P034 SCORE DAY May 6 vs ₹125-130. Currently ₹127.44 — IN RANGE. Peace deal = downside risk. Watch: if Brent falls to $95-100, SETFGOLD could drop to ₹123-125 (P034 lower bound risk).",
-    "MRPL: P017 SCORE DAY May 8 vs ₹200-210. Currently ₹167.55 — WILL SCORE WRONG. P002 recovery watch: ₹167.55 is now INSIDE P002 range (₹160-170 by May 28). P002 may recover to CORRECT.",
-    "COAL INDIA: P037 status (₹448-470 by May 15). Currently ₹481.45 — ABOVE_RANGE already. P042 (₹475-500 by May 15) is the revised tracking prediction.",
-    "SWIGGY: P040 (₹265-278 by May 20). Currently ₹270.30 — IN RANGE. Auto-invalidation approaching if Brent falls <$95 on peace deal.",
-    "NIFTY IT: P039 (underperforms 3-5% by May 8). M013 still active (Brent $108 > $98 threshold). WIPRO Q4 results expected this week — 6th SELL_ON_EARNINGS_NEWS_IT occurrence possible.",
-    "COCHINSHIP: P033 scored CORRECT (₹1,773.80). No open prediction. Monitor for new M012 unwind conditions (Brent <$92 still needed).",
+    "ASTRA MICRO: P036 SCORE DAY May 5 vs >\u20b91,050. Currently \u20b91,125.20 \u2014 tracking CORRECT. Watch: peace deal \u2192 defense unwind risk (but M012 unwind needs Brent <$92, not triggered yet).",
+    "BANKNIFTY: P038 SCORE DAY May 5 vs fails 57,000. Currently 54,863 \u2014 tracking CORRECT. Watch: gap-up to 56,000+ would challenge P038 (but >57,000 in ONE session = very unlikely).",
+    "SETFGOLD: P034 SCORE DAY May 6 vs \u20b9125-130. Currently \u20b9127.44 \u2014 IN RANGE. Peace deal = downside risk. Watch: if Brent falls to $95-100, SETFGOLD could drop to \u20b9123-125 (P034 lower bound risk).",
+    "MRPL: P017 SCORE DAY May 8 vs \u20b9200-210. Currently \u20b9167.55 \u2014 WILL SCORE WRONG. P002 recovery watch: \u20b9167.55 is now INSIDE P002 range (\u20b9160-170 by May 28). P002 may recover to CORRECT.",
+    "COAL INDIA: P037 status (\u20b9448-470 by May 15). Currently \u20b9481.45 \u2014 ABOVE_RANGE already. P042 (\u20b9475-500 by May 15) is the revised tracking prediction.",
+    "SWIGGY: P040 (\u20b9265-278 by May 20). Currently \u20b9270.30 \u2014 IN RANGE. Auto-invalidation approaching if Brent falls <$95 on peace deal.",
+    "NIFTY IT: P039 (underperforms 3-5% by May 8). M013 still active (Brent $108 > $98 threshold). WIPRO Q4 results expected this week \u2014 6th SELL_ON_EARNINGS_NEWS_IT occurrence possible.",
+    "COCHINSHIP: P033 scored CORRECT (\u20b91,773.80). No open prediction. Monitor for new M012 unwind conditions (Brent <$92 still needed).",
     "BANKNIFTY: P045 (55,000-56,000 by May 9). Gap-up Monday should get BankNifty to 55,200-55,500 zone."
   ],
-  "prompt_for_weekly_intelligence": "WEEKLY INTELLIGENCE REPORT 2026-05-10 (Sunday): (1) Score P036 ASTRA MICRO (>₹1,050, check May 5 — EXPECTED CORRECT). (2) Score P038 BANKNIFTY (fails 57,000, check May 5 — EXPECTED CORRECT). (3) Score P034 SETFGOLD (₹125-130, check May 6 — EXPECTED CORRECT). (4) Score P017 MRPL (₹200-210, check May 8 — EXPECTED WRONG). (5) Score P039 Nifty IT (underperforms 3-5%, check May 8 — EXPECTED CORRECT). (6) Score P044 MRPL (₹162-172, check May 8) and P045 BANKNIFTY (55,000-56,000, check May 9). (7) Assess Iran peace proposal outcome — most critical binary. If deal advances: auto-invalidate P040 SWIGGY, monitor M012 unwind conditions, consider MRPL/IndiGo/consumer disc bullish predictions. (8) Generate new predictions P046+ for week of May 11-17. (9) Check Coal India P037 trajectory (₹481.45 vs ₹448-470 by May 15 — ABOVE_RANGE imminent). (10) Update all data files and write weekly-2026-05-10.md.",
+  "prompt_for_weekly_intelligence": "WEEKLY INTELLIGENCE REPORT 2026-05-10 (Sunday): (1) Score P036 ASTRA MICRO (>\u20b91,050, check May 5 \u2014 EXPECTED CORRECT). (2) Score P038 BANKNIFTY (fails 57,000, check May 5 \u2014 EXPECTED CORRECT). (3) Score P034 SETFGOLD (\u20b9125-130, check May 6 \u2014 EXPECTED CORRECT). (4) Score P017 MRPL (\u20b9200-210, check May 8 \u2014 EXPECTED WRONG). (5) Score P039 Nifty IT (underperforms 3-5%, check May 8 \u2014 EXPECTED CORRECT). (6) Score P044 MRPL (\u20b9162-172, check May 8) and P045 BANKNIFTY (55,000-56,000, check May 9). (7) Assess Iran peace proposal outcome \u2014 most critical binary. If deal advances: auto-invalidate P040 SWIGGY, monitor M012 unwind conditions, consider MRPL/IndiGo/consumer disc bullish predictions. (8) Generate new predictions P046+ for week of May 11-17. (9) Check Coal India P037 trajectory (\u20b9481.45 vs \u20b9448-470 by May 15 \u2014 ABOVE_RANGE imminent). (10) Update all data files and write weekly-2026-05-10.md.",
   "key_events_this_week": [
     {
       "date": "2026-05-04",
-      "event": "Markets reopen after 3-day weekend (April 30 was last trading day). Iran peace proposal response from US (Trump statement) — #1 market catalyst. Gap-up open expected ~24,230.",
+      "event": "Markets reopen after 3-day weekend (April 30 was last trading day). Iran peace proposal response from US (Trump statement) \u2014 #1 market catalyst. Gap-up open expected ~24,230.",
       "impact": "CRITICAL"
     },
     {
       "date": "2026-05-05",
-      "event": "P036 ASTRA MICRO (>₹1,050) + P038 BANKNIFTY (fails 57,000) scoring day.",
-      "impact": "HIGH — both expected CORRECT"
+      "event": "P036 ASTRA MICRO (>\u20b91,050) + P038 BANKNIFTY (fails 57,000) scoring day.",
+      "impact": "HIGH \u2014 both expected CORRECT"
     },
     {
       "date": "2026-05-06",
-      "event": "P034 SETFGOLD (₹125-130) scoring day.",
-      "impact": "MEDIUM — expected CORRECT if peace deal doesn't crash gold below ₹125"
+      "event": "P034 SETFGOLD (\u20b9125-130) scoring day.",
+      "impact": "MEDIUM \u2014 expected CORRECT if peace deal doesn't crash gold below \u20b9125"
     },
     {
       "date": "2026-05-07",
@@ -128,8 +129,8 @@
     },
     {
       "date": "2026-05-08",
-      "event": "P017 MRPL (₹200-210) scoring — WILL SCORE WRONG (₹167.55). P039 Nifty IT underperforms — scoring day. P044 MRPL (₹162-172) scoring day.",
-      "impact": "MEDIUM — P017 WRONG expected; P039 CORRECT expected"
+      "event": "P017 MRPL (\u20b9200-210) scoring \u2014 WILL SCORE WRONG (\u20b9167.55). P039 Nifty IT underperforms \u2014 scoring day. P044 MRPL (\u20b9162-172) scoring day.",
+      "impact": "MEDIUM \u2014 P017 WRONG expected; P039 CORRECT expected"
     },
     {
       "date": "2026-05-09",
@@ -140,33 +141,33 @@
   "framework_version": "v7",
   "active_promoted_patterns": [
     "FORECAST_PAT003 (Geopolitical Binary Underweighting)",
-    "M012 v5 STRENGTHENED (Defense Sector Duration Premium — requires Brent <$92 + Hormuz open 5D for unwind)",
+    "M012 v5 STRENGTHENED (Defense Sector Duration Premium \u2014 requires Brent <$92 + Hormuz open 5D for unwind)",
     "FII_CEASEFIRE_DISTRIBUTION",
-    "FORECAST_PAT004 (Ceasefire Stability Precondition — 3-day wait)",
-    "M013 (IT Regime Risk Filter — cap IT confidence at 2★ in active geopolitical regime)",
-    "FORECAST_PAT005 (Diplomatic Restart Trigger — ACTIVELY FIRING this weekend)",
-    "SELL_ON_EARNINGS_NEWS_IT (5 confirmations — no post-earnings IT breakout predictions)",
-    "TALKS_FAILED_WAR_PREMIUM_RETURN PROMOTED v6 (2 confirmations — 1-2 day swing pattern ONLY)",
+    "FORECAST_PAT004 (Ceasefire Stability Precondition \u2014 3-day wait)",
+    "M013 (IT Regime Risk Filter \u2014 cap IT confidence at 2\u2605 in active geopolitical regime)",
+    "FORECAST_PAT005 (Diplomatic Restart Trigger \u2014 ACTIVELY FIRING this weekend)",
+    "SELL_ON_EARNINGS_NEWS_IT (5 confirmations \u2014 no post-earnings IT breakout predictions)",
+    "TALKS_FAILED_WAR_PREMIUM_RETURN PROMOTED v6 (2 confirmations \u2014 1-2 day swing pattern ONLY)",
     "DIRECT_CAUSAL_LINK_FIRST (META-RULE: single direct causal link predictions = 5/5 = 100% accuracy)"
   ],
   "observing_patterns": [
-    "BRENT_EXTREME_RECOVERY_CAP (1 occurrence — P031: Brent $118 capped Nifty at 24,019 vs 24,050 floor)",
-    "ECL_BANKING_STRUCTURAL_HEADWIND (1 occurrence — P032: BankNifty failed 56,500 despite HDFC Bank Q4 beat)",
-    "DEFENSE_PREMIUM_PERSISTENCE (4 occurrences — NEAR_PROMOTION: 4 consecutive ASTRA MICRO bearish failures)",
-    "TRUMP_DEADLINE_PRESSURE_CRUDE (1 occurrence — needs 1 more)",
-    "MULTI_BINARY_CORRELATION (1 occurrence — needs 1 more)",
-    "HAVEN_PREMIUM_DURATION_TAIL (1 occurrence — P034 9D window applies this)",
-    "CONSUMER_DISC_BRENT_INVERSE (1 occurrence — P040 auto-invalidation clause active)",
-    "IT_CASCADE_OVERRIDES_MACRO (1 occurrence — monitoring for WIPRO results)",
+    "BRENT_EXTREME_RECOVERY_CAP (1 occurrence \u2014 P031: Brent $118 capped Nifty at 24,019 vs 24,050 floor)",
+    "ECL_BANKING_STRUCTURAL_HEADWIND (1 occurrence \u2014 P032: BankNifty failed 56,500 despite HDFC Bank Q4 beat)",
+    "DEFENSE_PREMIUM_PERSISTENCE (4 occurrences \u2014 NEAR_PROMOTION: 4 consecutive ASTRA MICRO bearish failures)",
+    "TRUMP_DEADLINE_PRESSURE_CRUDE (1 occurrence \u2014 needs 1 more)",
+    "MULTI_BINARY_CORRELATION (1 occurrence \u2014 needs 1 more)",
+    "HAVEN_PREMIUM_DURATION_TAIL (1 occurrence \u2014 P034 9D window applies this)",
+    "CONSUMER_DISC_BRENT_INVERSE (1 occurrence \u2014 P040 auto-invalidation clause active)",
+    "IT_CASCADE_OVERRIDES_MACRO (1 occurrence \u2014 monitoring for WIPRO results)",
     {
       "tag": "PSU_DII_FILTER",
-      "description": "DII systematic infrastructure mandates create support floor for PSU infra names (IRFC, Coal India). 2 occurrences (P010, P026 both IRFC bearish calls WRONG). NEAR_PROMOTION — needs 1 more occurrence.",
+      "description": "DII systematic infrastructure mandates create support floor for PSU infra names (IRFC, Coal India). 2 occurrences (P010, P026 both IRFC bearish calls WRONG). NEAR_PROMOTION \u2014 needs 1 more occurrence.",
       "count": 2,
       "status": "NEAR_PROMOTION_3_NEEDED"
     },
     {
       "tag": "EARNINGS_SURPRISE_BEATS_MACRO_FEAR",
-      "description": "Strong earnings beat from index heavyweight can override EXTREME crude macro fear (Bajaj Finance Q4 — 1 occurrence). Observing.",
+      "description": "Strong earnings beat from index heavyweight can override EXTREME crude macro fear (Bajaj Finance Q4 \u2014 1 occurrence). Observing.",
       "count": 1
     }
   ],
@@ -174,11 +175,11 @@
     {
       "pred_id": "P036",
       "stock": "ASTRA MICRO",
-      "target": ">₹1,050",
+      "target": ">\u20b91,050",
       "check_date": "2026-05-05",
       "current": 1125.2,
-      "status": "TRACKING CORRECT — ₹1,125.20 is 7.1% above ₹1,050 floor. Requires -6.6% fall in 2 days to MISS. EXPECTED CORRECT.",
-      "risk": "Peace deal → defense unwind. M012 needs Brent <$92 — not triggered. LOW RISK."
+      "status": "TRACKING CORRECT \u2014 \u20b91,125.20 is 7.1% above \u20b91,050 floor. Requires -6.6% fall in 2 days to MISS. EXPECTED CORRECT.",
+      "risk": "Peace deal \u2192 defense unwind. M012 needs Brent <$92 \u2014 not triggered. LOW RISK."
     },
     {
       "pred_id": "P038",
@@ -186,26 +187,26 @@
       "target": "fails 57,000 by May 5",
       "check_date": "2026-05-05",
       "current": 54863.35,
-      "status": "TRACKING CORRECT — BankNifty at 54,863 needs +3.9% in 2 sessions to invalidate. EXPECTED CORRECT.",
+      "status": "TRACKING CORRECT \u2014 BankNifty at 54,863 needs +3.9% in 2 sessions to invalidate. EXPECTED CORRECT.",
       "risk": "Massive short-covering gap-up on peace deal could push BankNifty. Even so, +3.9% in 2 days is unlikely. LOW-MEDIUM RISK."
     },
     {
       "pred_id": "P034",
       "stock": "SETFGOLD",
-      "target": "₹125-130",
+      "target": "\u20b9125-130",
       "check_date": "2026-05-06",
       "current": 127.44,
-      "status": "IN RANGE — ₹127.44 inside target ₹125-130. EXPECTED CORRECT.",
-      "risk": "Peace deal → gold below ₹125 (lower bound risk). MEDIUM RISK if Brent falls sharply."
+      "status": "IN RANGE \u2014 \u20b9127.44 inside target \u20b9125-130. EXPECTED CORRECT.",
+      "risk": "Peace deal \u2192 gold below \u20b9125 (lower bound risk). MEDIUM RISK if Brent falls sharply."
     },
     {
       "pred_id": "P017",
       "stock": "MRPL",
-      "target": "₹200-210",
+      "target": "\u20b9200-210",
       "check_date": "2026-05-08",
       "current": 167.55,
-      "status": "WILL SCORE WRONG — at ₹167.55 needs +19-25% in 5 days. Impossible. EXPECTED WRONG.",
-      "risk": "None — WRONG outcome certain."
+      "status": "WILL SCORE WRONG \u2014 at \u20b9167.55 needs +19-25% in 5 days. Impossible. EXPECTED WRONG.",
+      "risk": "None \u2014 WRONG outcome certain."
     },
     {
       "pred_id": "P039",
@@ -213,35 +214,35 @@
       "target": "IT underperforms Nifty 3-5%",
       "check_date": "2026-05-08",
       "current": null,
-      "status": "TRACKING — M013 active (Brent $108 > $98). IT sector structurally weak. WIPRO results expected. EXPECTED CORRECT.",
-      "risk": "Peace deal → Brent crash → IT macro headwind removes → IT sector bounce. MEDIUM RISK."
+      "status": "TRACKING \u2014 M013 active (Brent $108 > $98). IT sector structurally weak. WIPRO results expected. EXPECTED CORRECT.",
+      "risk": "Peace deal \u2192 Brent crash \u2192 IT macro headwind removes \u2192 IT sector bounce. MEDIUM RISK."
     },
     {
       "pred_id": "P037",
       "stock": "COAL INDIA",
-      "target": "₹448-470",
+      "target": "\u20b9448-470",
       "check_date": "2026-05-15",
       "current": 481.45,
-      "status": "ABOVE_RANGE — ₹481.45 vs ₹470 ceiling. P037 will score ABOVE_RANGE unless coal crashes 2.4%+. P042 (₹475-500) is the revised prediction.",
-      "risk": "Peace deal → Brent crash → coal substitute demand collapses → coal could fall to ₹460. If so, P037 scores IN RANGE (CORRECT) but P042 scores WRONG. Monitoring."
+      "status": "ABOVE_RANGE \u2014 \u20b9481.45 vs \u20b9470 ceiling. P037 will score ABOVE_RANGE unless coal crashes 2.4%+. P042 (\u20b9475-500) is the revised prediction.",
+      "risk": "Peace deal \u2192 Brent crash \u2192 coal substitute demand collapses \u2192 coal could fall to \u20b9460. If so, P037 scores IN RANGE (CORRECT) but P042 scores WRONG. Monitoring."
     },
     {
       "pred_id": "P040",
       "stock": "SWIGGY",
-      "target": "₹265-278",
+      "target": "\u20b9265-278",
       "check_date": "2026-05-20",
       "current": 270.3,
-      "status": "IN RANGE — ₹270.30 inside ₹265-278. But auto-invalidation: Brent <$95 sustained 3 days → confidence 1★.",
-      "risk": "Peace deal → Brent falls to $90-95 → CONSUMER_DISC_BRENT_INVERSE flips bullish → Swiggy rallies above ₹278. HIGH RISK if peace deal materializes."
+      "status": "IN RANGE \u2014 \u20b9270.30 inside \u20b9265-278. But auto-invalidation: Brent <$95 sustained 3 days \u2192 confidence 1\u2605.",
+      "risk": "Peace deal \u2192 Brent falls to $90-95 \u2192 CONSUMER_DISC_BRENT_INVERSE flips bullish \u2192 Swiggy rallies above \u20b9278. HIGH RISK if peace deal materializes."
     },
     {
       "pred_id": "P002",
       "stock": "MRPL",
-      "target": "₹160-170",
+      "target": "\u20b9160-170",
       "check_date": "2026-05-28",
       "current": 167.55,
-      "status": "RECOVERY — MRPL at ₹167.55 now INSIDE P002 range (₹160-170)! If MRPL stays in range through May 28, P002 scores CORRECT. Monitoring closely.",
-      "risk": "Peace deal → Brent crash → MRPL GRM improves → stock rallies above ₹170 (WRONG). OR Brent spike → stock falls below ₹160 (also CORRECT boundary risk)."
+      "status": "RECOVERY \u2014 MRPL at \u20b9167.55 now INSIDE P002 range (\u20b9160-170)! If MRPL stays in range through May 28, P002 scores CORRECT. Monitoring closely.",
+      "risk": "Peace deal \u2192 Brent crash \u2192 MRPL GRM improves \u2192 stock rallies above \u20b9170 (WRONG). OR Brent spike \u2192 stock falls below \u20b9160 (also CORRECT boundary risk)."
     }
   ],
   "portfolio_summary": {
@@ -250,16 +251,22 @@
     "total_pnl_est": 260000,
     "total_pnl_pct_est": 11.2,
     "as_of": "2026-05-03",
-    "note": "Estimated as of May 3. Key: ASTRA MICRO +100% gain (₹1,125 vs ₹562 avg) is dominant portfolio driver. Coal India +39% (₹481 vs ₹346 avg). COCHINSHIP gained significantly in April. MRPL and SWIGGY remain in loss.",
-    "biggest_position_risks": "IRFC (₹103 vs ₹130 avg = -20.7% loss), MRPL (₹167.55 vs ₹196 avg = -14.5% loss), SWIGGY (₹270 vs ₹299 avg = -9.7% loss)",
-    "biggest_winners": "ASTRA MICRO (₹1,125 est vs ₹562 avg = +100% gain), COAL INDIA (₹481 vs ₹346 avg = +39%), COCHINSHIP (₹1,773 est vs ~₹1,650 entry = +7.5%)"
+    "note": "Estimated as of May 3. Key: ASTRA MICRO +100% gain (\u20b91,125 vs \u20b9562 avg) is dominant portfolio driver. Coal India +39% (\u20b9481 vs \u20b9346 avg). COCHINSHIP gained significantly in April. MRPL and SWIGGY remain in loss.",
+    "biggest_position_risks": "IRFC (\u20b9103 vs \u20b9130 avg = -20.7% loss), MRPL (\u20b9167.55 vs \u20b9196 avg = -14.5% loss), SWIGGY (\u20b9270 vs \u20b9299 avg = -9.7% loss)",
+    "biggest_winners": "ASTRA MICRO (\u20b91,125 est vs \u20b9562 avg = +100% gain), COAL INDIA (\u20b9481 vs \u20b9346 avg = +39%), COCHINSHIP (\u20b91,773 est vs ~\u20b91,650 entry = +7.5%)"
   },
   "new_predictions_this_week": {
-    "added": ["P041", "P042", "P043", "P044", "P045"],
+    "added": [
+      "P041",
+      "P042",
+      "P043",
+      "P044",
+      "P045"
+    ],
     "P041": "NIFTY 24,300-24,600 by May 12 (FORECAST_PAT005 + S&P ATH + Brent cooling)",
-    "P042": "COAL INDIA ₹475-500 by May 15 (P037 ABOVE_RANGE revision upward)",
-    "P043": "SETFGOLD ₹122-127 by May 12 (FORECAST_PAT005 gold war premium compression)",
-    "P044": "MRPL ₹162-172 by May 8 (P017 replacement — realistic range)",
+    "P042": "COAL INDIA \u20b9475-500 by May 15 (P037 ABOVE_RANGE revision upward)",
+    "P043": "SETFGOLD \u20b9122-127 by May 12 (FORECAST_PAT005 gold war premium compression)",
+    "P044": "MRPL \u20b9162-172 by May 8 (P017 replacement \u2014 realistic range)",
     "P045": "BANKNIFTY 55,000-56,000 by May 9 (gap-up recovery)"
   },
   "week_ahead": {
@@ -267,14 +274,41 @@
     "base_case_nifty_range": "24,000-24,400",
     "base_case_direction": "BULLISH_VOLATILE",
     "opening_bias_monday": "GAP_UP (+0.97%, ~24,230)",
-    "key_binary_resolution_week": "Iran peace proposal status — Trump response is the single most important variable. P036, P038, P034 all expected CORRECT this week.",
+    "key_binary_resolution_week": "Iran peace proposal status \u2014 Trump response is the single most important variable. P036, P038, P034 all expected CORRECT this week.",
     "expected_accuracy_after_week": "9 RIGHT / 30 scored = 30.0% (if P036/P038/P034/P039 all CORRECT, P017 WRONG)",
     "macro_anchors": {
       "brent": "$103-112 (cooling from $118; peace deal could push to $90-100)",
-      "fii": "Possible pause/reversal if peace deal credible — first potential FII-positive week in 10",
+      "fii": "Possible pause/reversal if peace deal credible \u2014 first potential FII-positive week in 10",
       "usdinr": "93-95 (watch for appreciation if Brent falls)",
       "nifty_key_resistance": "24,400 (50-DMA)",
-      "banknifty_key_level": "55,000 (floor), 56,000 (ceiling — ECL capped)"
+      "banknifty_key_level": "55,000 (floor), 56,000 (ceiling \u2014 ECL capped)"
     }
+  },
+  "opening_bias_actual": {
+    "nifty_open": 24230,
+    "nifty_current": 24194.4,
+    "nifty_prev_close": 23997.55,
+    "gift_nifty_preopen": 24230,
+    "gap_pct": 0.82,
+    "gap_pts": 196.85,
+    "direction": "GAP_UP",
+    "direction_correct": true,
+    "grade": "CORRECT",
+    "scoring_note": "Nifty opened ~24,230 (GIFT Nifty +0.97% signal confirmed). Currently 24,194 at 12:08 IST (slight intraday pullback). Forecast was GAP_UP +0.97%; actual gap +0.82% from Apr 30 close. Direction correct, magnitude within 15% of estimate \u2014 CORRECT grade.",
+    "source": "actual_nse_open",
+    "pre_estimated_by": null,
+    "validation_required": false
+  },
+  "market_snapshot_morning": {
+    "as_of": "2026-05-04 12:08 IST",
+    "nifty": 24194.4,
+    "nifty_prev_close": 23997.55,
+    "nifty_change_pct": 0.82,
+    "banknifty": 55286.4,
+    "banknifty_prev_close": 54863.35,
+    "banknifty_change_pct": 0.77,
+    "brent": 107.85,
+    "gold_usd": 4604.3,
+    "wti": 101.65
   }
 }
