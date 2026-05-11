@@ -1,0 +1,7 @@
+# Dashboard dependencies — never commit these
+dashboard-v2/node_modules/
+dashboard-v2/.next/
+dashboard-v2/.env.local
+
+# Logs
+*.log

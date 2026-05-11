@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
-  "last_updated": "2026-04-29T17:30:00",
+  "last_updated": "2026-05-05",
   "predictions": [
     {
       "pred_id": "P007",
@@ -1124,6 +1124,45 @@
       "pattern_tag": "PSU_DII_FILTER",
       "root_cause": "DII systematic infrastructure mandates create consistent support floor well above fundamental fair-value for PSU rail-finance names. Second consecutive IRFC bearish call failure (P026 was also WRONG).",
       "lesson": "PSU_DII_FILTER: Avoid bearish PSU infra calls when DII systematic buying is active. IRFC 2x confirmed as DII-supported. Do not make bearish IRFC/IRCON range calls in current regime."
+    },
+    {
+      "pred_id": "P036",
+      "stock": "ASTRA MICRO",
+      "horizon": "10D",
+      "date_generated": "2026-04-26",
+      "check_date": "2026-05-05",
+      "scored_on": "2026-05-05",
+      "outcome": "CORRECT",
+      "outcome_price": 1104.1,
+      "target": ">\u20b91,050",
+      "evidence": "ASTRA MICRO closed \u20b91,104.10 on May 5. 5.1% above threshold. M012 v5 defense floor held: Brent $112.78 (>> $92 threshold), Hormuz actively contested. Defense premium structural in Iran escalation regime.",
+      "rca": "CORRECT \u2014 M012 v5 defense floor thesis validated. Prediction correctly assessed that defense premium unwind conditions (Brent <$92 + Hormuz open 5D) would NOT be met in the 10-day window. Consistent with broader defense sector pattern (MAZDOCK, COCHINSHIP also sustained)."
+    },
+    {
+      "pred_id": "P038",
+      "stock": "BANKNIFTY",
+      "horizon": "7D",
+      "date_generated": "2026-04-26",
+      "check_date": "2026-05-05",
+      "scored_on": "2026-05-05",
+      "outcome": "CORRECT",
+      "outcome_price": 54547.05,
+      "target": "Fails <57,000",
+      "evidence": "BankNifty closed 54,547.05. Never approached 57,000 \u2014 4.5% below threshold. FII selling 10th consecutive week. ECL structural headwind confirmed.",
+      "rca": "CORRECT \u2014 BankNifty structural headwind thesis. FII selling persistence and credit rotation risk in geopolitical regime materialized. Note: BankNifty actually underperformed forecast range (stayed sub-55,000 vs 54,500-56,500 expected). ECL headwind more severe than estimated."
+    },
+    {
+      "pred_id": "P014",
+      "stock": "NIFTY IT",
+      "horizon": "4W",
+      "date_generated": "2026-04-07",
+      "check_date": "2026-05-05",
+      "scored_on": "2026-05-05",
+      "outcome": "WRONG",
+      "outcome_price": null,
+      "target": "Outperform Nifty by 5-10%",
+      "evidence": "Nifty IT UNDERPERFORMED Nifty. Nifty +~9.4% (21,964\u219224,033 from Apr 7). IT stocks flat-to-negative on May 5 (TCS -0.16%, HCLTECH -0.02%, WIPRO -0.48%, TECHM -1.32%). M013 active throughout (Brent >$100). SELL_ON_EARNINGS_NEWS_IT fired 5+ times.",
+      "rca": "ROOT CAUSE: M013 (IT underperforms in Brent >$100 + Iran escalation regime) is a dominant override factor that was NOT adequately weighted at prediction time. USD strength thesis was valid in isolation but lost to geopolitical risk-off rotation. SELL_ON_EARNINGS_NEWS_IT pattern (HCLTECH, WIPRO post-results) compounded the headwind. Confidence was correctly downgraded to 1\u2605 on Apr 26 audit \u2014 but prediction should have been INVALIDATED (not just downgraded) given M013 + IT_CASCADE active. LESSON: When M013 active, no IT outperformance prediction should be initiated/maintained. P039 correctly superseded this prediction."
     }
   ]
 }
