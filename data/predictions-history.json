@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
-  "last_updated": "2026-05-05",
+  "last_updated": "2026-05-11",
   "predictions": [
     {
       "pred_id": "P007",
@@ -964,6 +964,63 @@
         "status": "OBSERVING"
       },
       "date": "2026-04-29"
+    },
+    {
+      "rca_id": "RCA_P044_2026-05-11",
+      "pred_id": "P044",
+      "type": "PREDICTION_WRONG",
+      "scored_on": "2026-05-11",
+      "stock": "MRPL",
+      "forecast": "MRPL range-bound \u20b9162-172 by May 8",
+      "actual": "MRPL \u20b9160.33 on May 11 (BELOW range_low 162 by 1.03%)",
+      "grade": "WRONG",
+      "root_cause_summary": "P044 was designed as a replacement for P017 (which targeted 200-210 and was failing). Both shared a BULLISH bias on MRPL via OMC GRM relief thesis tied to crude normalization. The May 7 Brent low ($99.10) seemed to validate the thesis briefly, but the May 11 re-escalation (Trump rejects Iran proposal, Brent +6% to $105.70) collapsed the entire OMC GRM relief narrative. MRPL has high crude-sensitivity asymmetry \u2014 it benefits modestly when Brent < $100 but gets hit hard above $103.",
+      "missing_signal": "OMC_GRM_RELIEF_REGIME_REQUIRES_BRENT_SUSTAINED_SUB_100: Single sub-$100 print (May 7) is insufficient \u2014 need 3 consecutive sessions sub-$100 to validate regime change. The OMC trade is essentially binary on the $100 line.",
+      "factor_gap": "M013/M016 (Brent regime sensitivity for OMC) was acknowledged but the probability-weighted impact of a single weekend re-escalation event was under-weighted. Confidence 2 was correct but range-low (162) was too aggressive against support at 158-160.",
+      "lesson": "For range-bound forecasts on commodity-sensitive PSUs, set range_low at least 2-3% below current price to avoid being whipsawed by 1-day regime flips. Use crude-regime gating: do not initiate OMC bullish prediction unless Brent has been sub-$100 for 3+ sessions."
+    },
+    {
+      "rca_id": "RCA_P045_2026-05-11",
+      "pred_id": "P045",
+      "type": "PREDICTION_WRONG",
+      "scored_on": "2026-05-11",
+      "stock": "BANKNIFTY",
+      "forecast": "BankNifty recovers to 55,000-56,000 by May 9",
+      "actual": "BankNifty 54,439.90 on May 11 (BELOW range_low 55,000 by 1.02% = 560 pts)",
+      "grade": "WRONG",
+      "root_cause_summary": "FORECAST_PAT005 (Diplomatic Restart Trigger) was the central engine of P045 \u2014 it assumed Iran peace process continuity would unwind credit-rotation fears and produce BankNifty short-covering. The pattern fired correctly on May 1-2 (Brent fell to $99 area, S&P ATH), but the WEEKEND_REVERSAL (Trump rejects Iran response May 10-11) collapsed the underlying premise. FII sold for the 5th consecutive week through May 8, then Monday May 11 brought a -1.57% BankNifty session breaking the 55,000 floor entirely.",
+      "missing_signal": "FORECAST_PAT005_FRAGILITY: Diplomatic Restart Trigger is contingent on continued de-escalation signal \u2014 a single weekend reversal can invalidate the entire pattern. Need a fragility filter: if peace process is < 7 sessions old AND no formal MoU/treaty signed, downgrade pattern-derived predictions by one confidence star.",
+      "factor_gap": "Geopolitical regime durability not adequately modeled. Pattern-based predictions need an \"regime decay rate\" parameter when the underlying signal is < 2 weeks old.",
+      "lesson": "BankNifty predictions in a fragile-ceasefire regime should not assume floor levels hold absent a structural support (e.g., RBI policy event, durable FII reversal). 55,000 was treated as floor; it was actually a level being defended by DII alone against systematic FII selling. Reset BankNifty floor to 54,000-54,200 in current regime."
+    },
+    {
+      "rca_id": "RCA_P038_2026-05-11",
+      "pred_id": "P038",
+      "type": "PREDICTION_CORRECT_RETRO",
+      "scored_on": "2026-05-11",
+      "stock": "BANKNIFTY",
+      "forecast": "BankNifty will fail to close above 57,000 by May 5",
+      "actual": "BankNifty did not close above 57,000 in the May 1-5 window (CORRECT)",
+      "grade": "CORRECT",
+      "note": "Retro-scored on May 11 due to EOD scoring gap May 8-10. Negative-framed predictions (X will fail to do Y) tend to score well in choppy regimes \u2014 should be deployed more often as a bias-counterweight tool."
+    },
+    {
+      "rca_id": "RCA_SESSION_2026-05-11",
+      "type": "SESSION_DIRECTION_PARTIAL_CORRECT",
+      "session_date": "2026-05-11",
+      "forecast": "CHOPPY_WITH_NEGATIVE_BIAS, -0.2%, range 24,000-24,350",
+      "actual": "Nifty -1.49% (close 23,815.85) \u2014 BELOW range_low 24,000 by 184 pts",
+      "grade": "PARTIAL_CORRECT",
+      "root_cause_summary": "Direction was correctly bearish but the BEARISH_RE_ESCALATION scenario (30% probability) was the actual outcome \u2014 and even that scenario's range (23,950-24,100) was overshot to the downside. The compound shock was: (1) Trump weekend rejection of Iran proposal, (2) Brent jumping 4-6% to $105.70, (3) PM Modi austerity message read as a domestic growth warning. Item (3) was not anticipated and acted as an India-specific amplifier on top of the global re-escalation move.",
+      "missing_signal": "POLITICAL_AUSTERITY_SIGNAL_AS_GROWTH_WARNING: A national-leader austerity message during a geopolitical stress episode acts as a confirmation signal of expected economic damage, deepening selloffs. Pattern candidate.",
+      "factor_gap": "Weekend tail-risk weighting in re-escalation regimes: scenario probabilities should re-weight Friday-to-Monday as +10-15% to the bearish tail when a binary geopolitical event is unresolved over the weekend.",
+      "proposed_pattern": {
+        "tag": "AUSTERITY_AMPLIFIES_GEOPOLITICAL_SELLOFF",
+        "description": "When a sitting national leader issues an austerity/conservation message during a geopolitical stress episode (especially crude shock for an importer), expect 30-50% additional downside vs base-case selloff because the message is interpreted as official forecast of economic damage.",
+        "instance_count": 1,
+        "first_observed": "2026-05-11"
+      },
+      "lesson_for_next_forecast": "In re-escalation regimes with Brent +4%/day moves, calibrate session_direction.change_pct_estimate to -0.8 to -1.5% (not -0.2%). Use range_low 1.5-2% below open."
     }
   ],
   "scored_predictions": [
@@ -1163,6 +1220,45 @@
       "target": "Outperform Nifty by 5-10%",
       "evidence": "Nifty IT UNDERPERFORMED Nifty. Nifty +~9.4% (21,964\u219224,033 from Apr 7). IT stocks flat-to-negative on May 5 (TCS -0.16%, HCLTECH -0.02%, WIPRO -0.48%, TECHM -1.32%). M013 active throughout (Brent >$100). SELL_ON_EARNINGS_NEWS_IT fired 5+ times.",
       "rca": "ROOT CAUSE: M013 (IT underperforms in Brent >$100 + Iran escalation regime) is a dominant override factor that was NOT adequately weighted at prediction time. USD strength thesis was valid in isolation but lost to geopolitical risk-off rotation. SELL_ON_EARNINGS_NEWS_IT pattern (HCLTECH, WIPRO post-results) compounded the headwind. Confidence was correctly downgraded to 1\u2605 on Apr 26 audit \u2014 but prediction should have been INVALIDATED (not just downgraded) given M013 + IT_CASCADE active. LESSON: When M013 active, no IT outperformance prediction should be initiated/maintained. P039 correctly superseded this prediction."
+    },
+    {
+      "pred_id": "P044",
+      "stock": "MRPL",
+      "horizon": "5D",
+      "date_generated": "2026-05-03",
+      "check_date": "2026-05-08",
+      "scored_on": "2026-05-11",
+      "outcome": "WRONG",
+      "outcome_price": 160.33,
+      "target": "162-172",
+      "evidence": "MRPL closed \u20b9160.33 on May 11 (after target May 8). Below range_low by 1.67. OMC GRM relief thesis collapsed on Brent +6% rebound to $105.70.",
+      "rca": "See RCA_P044_2026-05-11"
+    },
+    {
+      "pred_id": "P045",
+      "stock": "BANKNIFTY",
+      "horizon": "6D",
+      "date_generated": "2026-05-03",
+      "check_date": "2026-05-09",
+      "scored_on": "2026-05-11",
+      "outcome": "WRONG",
+      "outcome_price": 54439.9,
+      "target": "55,000-56,000",
+      "evidence": "BankNifty closed 54,439.90 on May 11 = 560 pts below range_low 55,000. FORECAST_PAT005 short-covering trigger collapsed when Iran-US standoff re-escalated over weekend.",
+      "rca": "See RCA_P045_2026-05-11"
+    },
+    {
+      "pred_id": "P038",
+      "stock": "BANKNIFTY",
+      "horizon": "5D",
+      "date_generated": "2026-04-30",
+      "check_date": "2026-05-05",
+      "scored_on": "2026-05-11",
+      "outcome": "CORRECT",
+      "outcome_price": "< 57,000 throughout window",
+      "target": "BANKNIFTY < 57,000 by May 5",
+      "evidence": "BankNifty did not close above 57,000 in the May 1-5 window. FII systematic selling + credit-rotation thesis validated.",
+      "rca": "See RCA_P038_2026-05-11"
     }
   ]
 }

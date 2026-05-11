@@ -1278,7 +1278,16 @@
       "outcome_price": 54547.05,
       "outcome_evidence": "BankNifty closed 54,547.05 on May 5. Target: fails to close above 57,000. BankNifty peaked at ~55,390 intraday (May 4 high 54,878.5). Never approached 57,000 \u2014 was 4.5% below threshold at close. FII systematic selling 10th consecutive week confirmed. ECL framework structural headwind materialized.",
       "postmortem": "CORRECT. Thesis: FII selling + credit rotation headwind = BankNifty cannot reclaim 57,000. Actual BankNifty range May 4-5: 54,547-54,878. 57,000 was never in range. Conservative confidence 3\u2605 was right. The range-bound 54,500-56,500 forecast from prediction was too optimistic on upside \u2014 BankNifty stayed sub-55,000. Key lesson: ECL/geopolitical headwinds are more persistent than estimated.",
-      "scored_on": "2026-05-05"
+      "scored_on": "2026-05-05",
+      "status": "CORRECT",
+      "resolution": {
+        "resolution_date": "2026-05-11",
+        "resolved_by": "eod_wrap_2026-05-11",
+        "actual_value_at_may_5": "BANKNIFTY closed well below 57,000 on May 5 (confirmed by morning brief May 5 data)",
+        "target_condition": "BANKNIFTY < 57,000 by May 5",
+        "verdict": "CORRECT",
+        "note": "BankNifty did not close above 57,000 in the May 1-5 window. FII systematic selling + credit-rotation thesis validated. Retro-scored on May 11 EOD due to scoring gap May 8-10."
+      }
     },
     {
       "pred_id": "P039",
@@ -1463,7 +1472,16 @@
       "postmortem": null,
       "scored_on": null,
       "auto_invalidation": "Peace deal \u2192 Brent crashes <$95 within week \u2192 MRPL GRM improves sharply \u2192 stock could rally 10%+ \u2192 confidence 1\u2605.",
-      "confidence_note": "2\u2605 \u2014 realistic range thesis. Also note P002 (\u20b9160-170 by May 28) recovery: MRPL at \u20b9167.55 is now IN P002 range \u2014 P002 may actually score CORRECT on May 28 if current level holds."
+      "confidence_note": "2\u2605 \u2014 realistic range thesis. Also note P002 (\u20b9160-170 by May 28) recovery: MRPL at \u20b9167.55 is now IN P002 range \u2014 P002 may actually score CORRECT on May 28 if current level holds.",
+      "status": "WRONG",
+      "resolution": {
+        "resolution_date": "2026-05-11",
+        "resolved_by": "eod_wrap_2026-05-11",
+        "actual_value": 160.33,
+        "target_range": "162-172",
+        "verdict": "BELOW_RANGE",
+        "note": "MRPL closed at \u20b9160.33 on May 11 (after target date May 8). Below range_low 162 by 1.67. OMC GRM relief thesis unwound on Brent rebound to $105+. P017 replacement thesis (P044 was the replacement) also failed as expected \u2014 both wrong."
+      }
     },
     {
       "pred_id": "P045",
@@ -1494,10 +1512,19 @@
       "postmortem": null,
       "scored_on": null,
       "auto_invalidation": "Iran peace rejected + Brent >$112 + FII selling accelerates \u2192 bear case 54,000-54,500 (confidence 1\u2605). BankNifty breaks 54,500 intraday \u2192 exit thesis.",
-      "confidence_note": "2\u2605 \u2014 ECL framework remains structural headwind. Recovery thesis is tactical (FORECAST_PAT005 + gap-up), not fundamental. Ceiling at 56,000 per P032 RCA."
+      "confidence_note": "2\u2605 \u2014 ECL framework remains structural headwind. Recovery thesis is tactical (FORECAST_PAT005 + gap-up), not fundamental. Ceiling at 56,000 per P032 RCA.",
+      "status": "WRONG",
+      "resolution": {
+        "resolution_date": "2026-05-11",
+        "resolved_by": "eod_wrap_2026-05-11",
+        "actual_value": 54439.9,
+        "target_range": "55,000-56,000",
+        "verdict": "BELOW_RANGE",
+        "note": "BankNifty at 54,439.90 on May 11 (after target date May 9). Below range_low 55,000 by 560 pts (1.02%). FORECAST_PAT005 short-covering trigger failed once Iran-US standoff re-escalated over the weekend; FII selling continued for 5th week. The pattern presumed diplomacy continuity which did not hold."
+      }
     }
   ],
-  "last_updated": "2026-05-05",
+  "last_updated": "2026-05-11",
   "total_predictions": 45,
-  "last_updated_by": "eod_wrap_2026-05-05"
+  "last_updated_by": "eod_wrap_2026-05-11"
 }

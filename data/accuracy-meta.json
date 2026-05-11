@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-05-07T17:30:00",
+  "last_updated": "2026-05-11T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 45,
@@ -446,6 +446,30 @@
       "root_cause_summary": "COCHINSHIP closed \u20b91,773.80 (April 29) / est \u20b91,740-1,775 (April 30) within \u20b91,720-1,800 target. Direct causal link: geopolitical premium for defense shipbuilder. Stock gained +8.4% from entry.",
       "win_pattern": "DIRECT_CAUSAL_LINK_WINS \u2014 single direct causal link predictions: 5/5 = 100% accuracy (P008, P015, P019, P028, P033). Multi-factor predictions: ~1/21. The lesson is confirmed empirically across regime changes.",
       "framework_value_added": "M012 v5 framework correctly kept defense floor elevated through fragile-ceasefire. Applying single-causal-link lesson (from P019 RCA) to COCHINSHIP defense premium produced the 5th consecutive single-link win."
+    },
+    {
+      "rca_id": "RCA_P044_2026-05-11",
+      "type": "PREDICTION_WRONG",
+      "pred_id": "P044",
+      "pattern": "OMC_GRM_RELIEF_REGIME_FRAGILE"
+    },
+    {
+      "rca_id": "RCA_P045_2026-05-11",
+      "type": "PREDICTION_WRONG",
+      "pred_id": "P045",
+      "pattern": "FORECAST_PAT005_WEEKEND_REVERSAL_FRAGILITY"
+    },
+    {
+      "rca_id": "RCA_P038_2026-05-11",
+      "type": "PREDICTION_CORRECT_RETRO",
+      "pred_id": "P038",
+      "pattern": "NEGATIVE_FRAME_PREDICTION_WORKS_IN_CHOPPY_REGIME"
+    },
+    {
+      "rca_id": "RCA_SESSION_2026-05-11",
+      "type": "SESSION_DIRECTION_PARTIAL_CORRECT",
+      "session_date": "2026-05-11",
+      "pattern_candidate": "AUSTERITY_AMPLIFIES_GEOPOLITICAL_SELLOFF"
     }
   ],
   "L3_trend": {
@@ -699,9 +723,9 @@
     "rolling_5_pred_accuracy": "0/5 = 0% (P022, P023, P024, P025-ABOVE_RANGE, P026 WRONG). Extended cold streak now 6 weeks, no RIGHT prediction since P019 ADANI PORT (Apr 15)."
   },
   "total": 40,
-  "scored": 20,
-  "right": 3,
-  "wrong": 14,
+  "scored": 23,
+  "right": 4,
+  "wrong": 16,
   "partial": 3,
   "note": "Updated Apr 26 weekly intelligence: P036-P040 added (framework v6). Accuracy 15.0% (3/20 scored). New predictions under v6 rules \u2014 test week begins Apr 28.",
   "L2_rca": [
@@ -851,12 +875,25 @@
     "key_lesson_of_week": "DIRECT_CAUSAL_LINK is the single most reliable prediction methodology: 5/5 = 100%. All 5 CORRECT predictions had exactly one direct causal link between catalyst and outcome. The inverse is equally confirmed: multi-factor predictions with regime assumptions fail systematically. Build every new prediction around a single, clearly articulable causal chain."
   },
   "session_direction": {
-    "last_updated": "2026-05-06",
+    "last_updated": "2026-05-11",
     "rolling_5": {
-      "correct": 2,
+      "correct": 1,
+      "partial": 2,
+      "wrong": 2,
       "total": 5,
-      "accuracy_pct": 60.0,
-      "note": "May 6 WRONG (crude crash regime shift), May 5 CORRECT, May 4 CORRECT, Apr 30 CORRECT, Apr 29 WRONG. Rolling 5: 3/5 (60%)."
+      "accuracy_pct": 20.0,
+      "directional_accuracy_pct": 60.0,
+      "note": "Sessions May 5 CORRECT, May 6 WRONG, May 7 PARTIAL, May 8 WRONG, May 11 PARTIAL. Rolling 5: 1 CORRECT, 2 PARTIAL, 2 WRONG. Strict accuracy 20%; directional accuracy (incl. partial) 60%. Quality has deteriorated as fragile-ceasefire regime increases magnitude shocks \u2014 direction calls hold up but range/magnitude calls miss."
+    },
+    "today_2026_05_11": {
+      "grade": "PARTIAL_CORRECT",
+      "forecast": "CHOPPY_WITH_NEGATIVE_BIAS, -0.2%, range 24,000-24,350",
+      "actual": "Nifty -1.49% close 23,815.85 \u2014 below range_low by 184 pts",
+      "direction_correct": true,
+      "in_range": false,
+      "brent_correct": true,
+      "note": "Direction and Brent correct; magnitude 7x worse than base case; BEARISH_RE_ESCALATION scenario (30%) was the outcome but even that scenario's range was overshot."
     }
-  }
+  },
+  "last_updated_by": "eod_wrap_2026-05-11"
 }
