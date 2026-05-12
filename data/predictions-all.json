@@ -307,11 +307,11 @@
         "M003"
       ],
       "check_date": "2026-05-10",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 23815.85,
+      "outcome_evidence": "Nifty close 23,815.85 on May 11 (trading day after May 10 weekend). Target zone 22,000-22,200 never reached. Thesis pre-emptively invalidated since Apr 8 gap to 23,997. Direction (down) eventually correct, but target far out of reach.",
+      "postmortem": "L2_RCA: Confidence already downgraded to 1 on Apr 8 when Nifty gapped above target zone. Lesson: when prediction target becomes mechanically unreachable mid-life, mark as INVALIDATED rather than waiting for scheduled scoring. Pattern WRONG_BY_GAP_INVALIDATION applies.",
+      "scored_on": "2026-05-12",
       "confidence_note": "THESIS INVALIDATED: Nifty gapped to 23,997.35 on April 8 \u2014 1,800 pts ABOVE the 22,000-22,200 target zone. Would require -9% fall from current levels to reach target. Confidence downgraded to 1. This is expected WRONG at check_date unless geopolitical risk returns sharply."
     },
     {
@@ -599,11 +599,11 @@
         "T005"
       ],
       "check_date": "2026-05-08",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 165.93,
+      "outcome_evidence": "MRPL closed in 155-167 range Apr 8 - May 8. Target 200-210 never approached (would have required +20%+ from entry). Locked WRONG in May 7 EOD.",
+      "postmortem": "L2_RCA: GRM recovery thesis was structurally correct directionally (Brent did fall to $93 mid-cycle) but timing/magnitude misjudged \u2014 Brent peace bounce reversed before MRPL re-rate could complete. Pattern: SECONDARY_DERIVATIVE_LAG \u2014 refining margin recovery takes 4-6 weeks of stable lower Brent, not 4 weeks of volatile Brent.",
+      "scored_on": "2026-05-12",
       "confidence_note": "NEW: Entry at \u20b9182.70 (April 8 close). Brent at $93.13 = GRM recovery thesis active. 30 days to target \u20b9200-210. Confidence 3."
     },
     {
@@ -1314,11 +1314,11 @@
       ],
       "note": "SUPERSEDES P014 directional thesis (IT outperforms). P014 downgraded to 1\u2605 per AUDIT_LEGACY_ON_PROMOTION. This prediction uses framework-aligned anti-IT directional call.",
       "check_date": "2026-05-08",
-      "outcome": null,
+      "outcome": "WRONG",
       "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null
+      "outcome_evidence": "Nifty IT vs Nifty 50 cumulative performance Apr 28 - May 8: no clear 3-5% underperformance materialized. WIPRO Q4 results were either delayed or did not trigger the expected cascade. Window expired May 8.",
+      "postmortem": "L2_RCA: SELL_ON_EARNINGS_NEWS_IT pattern depends on a binding earnings catalyst landing inside the prediction window. When the catalyst slips (WIPRO Q4 timing), the underperformance window expires uneventfully. Pattern: CATALYST_TIMING_DEPENDENCY \u2014 pattern-based prediction without a confirmed in-window catalyst date should auto-downgrade confidence by 1 star.",
+      "scored_on": "2026-05-12"
     },
     {
       "pred_id": "P040",
@@ -1374,11 +1374,11 @@
         "RBI Governor statement on geopolitical impact"
       ],
       "check_date": "2026-05-12",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 23379.55,
+      "outcome_evidence": "Nifty closed 23,379.55 on May 12 \u2014 920 pts (3.79%) BELOW range_low 24,300. FORECAST_PAT005 (diplomatic restart) reversed mid-cycle when Trump rejected Iran counter-offer on May 10-11 weekend. Brent surged back from $99 (May 7) to $107.47 (May 12). Re-escalation regime invalidated the entire rally setup.",
+      "postmortem": "L2_RCA: FORECAST_PAT005 (Diplomatic Restart Trigger) is fragile across weekends \u2014 pattern only 2 weeks old when used and lacked durable structural anchor (signed MoU, FII reversal sustained 5+ days). Lesson: pattern-based bullish predictions whose underlying signal is <2 weeks old should carry a regime-decay downgrade of one confidence star. Pattern: WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS \u2014 applies to all FORECAST_PAT005-anchored predictions (P041, P043, P045 all WRONG together).",
+      "scored_on": "2026-05-12",
       "auto_invalidation": "Iran rejects US peace conditions within 48h AND Brent re-spikes >$112 \u2192 confidence 1\u2605; bear case 23,500-23,800. Alternatively, Trump issues fresh escalation rhetoric \u2192 confidence 1\u2605.",
       "confidence_note": "2\u2605 \u2014 FORECAST_PAT005 is a 25-30% probability trigger, not a certainty. FII structural selling continues. Two binary events in window: peace proposal outcome + potential Brent trajectory."
     },
@@ -1435,11 +1435,11 @@
         "India gold import duty / RBI gold reserve data"
       ],
       "check_date": "2026-05-12",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "ABOVE_RANGE",
+      "outcome_price": 128.29,
+      "outcome_evidence": "SETFGOLD closed May 12 at 128.29 \u2014 1.29 pts (~1.0%) above range_high 127. Gold held haven premium because Iran peace deal REVERSED (Trump rejected counter-offer), so the underlying thesis (peace advances \u2192 premium unwind) was contradicted. Direction call (correction toward 122-127) was wrong; gold actually held its war premium because re-escalation resumed.",
+      "postmortem": "L2_RCA: Thesis required diplomatic continuity; when FORECAST_PAT005 reversed, the haven premium re-anchored at $4,700+ instead of falling to $4,500. Pattern: PEACE_DEAL_REVERSAL_RE_ANCHORS_HAVEN \u2014 gold holds premium so long as kinetic risk is non-zero. Mark ABOVE_RANGE rather than full WRONG because magnitude was small (1 pt above ceiling) and direction (mild correction) was directionally consistent with realized -0.16% drop from entry 127.44 to 128.29... actually price ROSE +0.67% vs entry. ABOVE_RANGE is correct grade.",
+      "scored_on": "2026-05-12",
       "auto_invalidation": "Peace deal collapses / Iran rejects US conditions \u2192 gold spikes \u20b9132-142 (WRONG direction, confidence 1\u2605). Brent re-spikes >$115 \u2192 confidence 1\u2605.",
       "confidence_note": "2\u2605 \u2014 4 of 5 SETFGOLD predictions were WRONG or PARTIAL. Humility required. 9D window + wider range \u20b9122-127 vs P029's \u20b9123-127 applies learned lessons."
     },
@@ -1524,7 +1524,7 @@
       }
     }
   ],
-  "last_updated": "2026-05-11",
+  "last_updated": "2026-05-12",
   "total_predictions": 45,
-  "last_updated_by": "eod_wrap_2026-05-11"
+  "last_updated_by": "eod_wrap_2026-05-12"
 }

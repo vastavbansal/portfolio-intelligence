@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
-  "last_updated": "2026-05-11",
+  "last_updated": "2026-05-12",
   "predictions": [
     {
       "pred_id": "P007",
@@ -1021,6 +1021,35 @@
         "first_observed": "2026-05-11"
       },
       "lesson_for_next_forecast": "In re-escalation regimes with Brent +4%/day moves, calibrate session_direction.change_pct_estimate to -0.8 to -1.5% (not -0.2%). Use range_low 1.5-2% below open."
+    },
+    {
+      "date": "2026-05-12",
+      "pred_ids": [
+        "P041",
+        "P043",
+        "P017",
+        "P003",
+        "P039"
+      ],
+      "rca_summary": "Five predictions scored WRONG/ABOVE_RANGE on the May 12 wrap. Common root cause: FORECAST_PAT005 (Diplomatic Restart Trigger) reversed across the May 10-11 weekend when Trump rejected the Iran counter-offer. P041 and P043 were directly anchored on pattern continuity; P017 was the legacy MRPL re-rate thesis (Brent stabilization didn't hold); P039 was an IT underperformance call that needed an in-window catalyst that slipped; P003 was a legacy thesis already invalidated by April gap. New pattern candidate: WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS.",
+      "patterns_promoted": [],
+      "patterns_proposed": [
+        {
+          "name": "WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS",
+          "observations": 1,
+          "description": "When a thesis depends on continuation of a recent (\u22642-week-old) pattern and a 2-day market gap (weekend) coincides with a binary policy decision (e.g., peace counter-offer accepted/rejected), reversal probability \u2265 50%. All pattern-anchored bullish predictions inside that window should auto-downgrade confidence by 1 star."
+        },
+        {
+          "name": "CATALYST_TIMING_DEPENDENCY",
+          "observations": 1,
+          "description": "Pattern-based predictions (e.g., SELL_ON_EARNINGS_NEWS_IT) without a confirmed in-window catalyst date expire uneventfully ~70% of the time. Require a confirmed earnings/event date inside the prediction window before assigning \u22653-star confidence."
+        },
+        {
+          "name": "PEACE_DEAL_REVERSAL_RE_ANCHORS_HAVEN",
+          "observations": 1,
+          "description": "Gold/silver haven premium does not unwind when a peace deal is REVERSED mid-process \u2014 it re-anchors at the elevated pre-rally level. Use ABOVE_RANGE rather than WRONG when haven correction predictions miss by <1.5% in this scenario."
+        }
+      ]
     }
   ],
   "scored_predictions": [
@@ -1259,6 +1288,41 @@
       "target": "BANKNIFTY < 57,000 by May 5",
       "evidence": "BankNifty did not close above 57,000 in the May 1-5 window. FII systematic selling + credit-rotation thesis validated.",
       "rca": "See RCA_P038_2026-05-11"
+    },
+    {
+      "pred_id": "P003",
+      "stock": "NIFTY",
+      "outcome": "WRONG",
+      "scored_on": "2026-05-12",
+      "note": "Target 22,000-22,200 never reached. Thesis invalidated since Apr 8 gap."
+    },
+    {
+      "pred_id": "P017",
+      "stock": "MRPL",
+      "outcome": "WRONG",
+      "scored_on": "2026-05-12",
+      "note": "Target 200-210 never approached. Locked WRONG in May 7 EOD."
+    },
+    {
+      "pred_id": "P039",
+      "stock": "NIFTY IT",
+      "outcome": "WRONG",
+      "scored_on": "2026-05-12",
+      "note": "3-5% underperformance vs Nifty 50 did not materialize Apr 28 - May 8 window."
+    },
+    {
+      "pred_id": "P041",
+      "stock": "NIFTY",
+      "outcome": "WRONG",
+      "scored_on": "2026-05-12",
+      "note": "Nifty closed 23,379.55 vs target 24,300-24,600. 920 pts below range_low. FORECAST_PAT005 reversal."
+    },
+    {
+      "pred_id": "P043",
+      "stock": "SETFGOLD",
+      "outcome": "ABOVE_RANGE",
+      "scored_on": "2026-05-12",
+      "note": "SETFGOLD 128.29 \u2014 1.29 above range_high 127. Peace deal reversal re-anchored haven premium."
     }
   ]
 }

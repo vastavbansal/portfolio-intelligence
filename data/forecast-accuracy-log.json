@@ -2264,12 +2264,96 @@
         "brent_forecast": "$103-106 range, tail risk $108+"
       },
       "session_direction_accuracy": {
-        "direction_correct": null,
-        "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-05-12"
+        "direction_correct": true,
+        "direction_note": "Forecast BEARISH_CONTINUATION (-0.5%) \u2014 actual BEARISH at -1.83%. Direction call correct, but magnitude was 3.7\u00d7 worse than forecast as geopolitical risk premium expanded intraday on rupee weakness + FII selling continuation + Brent break above $107.",
+        "in_range": false,
+        "range_note": "Forecast range 23,500\u201323,850. Actual close 23,379.55 \u2014 120 pts BELOW range_low. Forecast undershot the tail-risk scenario.",
+        "brent_correct": true,
+        "brent_note": "Brent forecast $103-106 with tail risk $108+. Actual $107.47 (+3.13%) \u2014 at the boundary of forecast main range and tail; tail-risk acknowledged but main scenario undershot.",
+        "grade": "PARTIAL_CORRECT"
       },
       "actual": {
         "nifty_open": 23722.6,
+        "nifty_close": 23379.55,
+        "nifty_change_pct": -1.83,
+        "banknifty_close": 53555.2,
+        "banknifty_change_pct": -1.63,
+        "sensex_close": 74559.24,
+        "sensex_change_pct": -1.92,
+        "brent_close": 107.47,
+        "brent_change_pct": 3.13,
+        "session_theme": "Day 2 of re-escalation breakdown \u2014 both 23,800 Nifty floor and 54,000 BankNifty floor surrendered as Brent broke above $107 and FII selling accelerated on rupee weakness."
+      },
+      "lessons": [
+        "When Brent breaks a fresh resistance after re-escalation (here >$106 \u2192 $107.47), use compound multiplier 8\u201312\u00d7 on Nifty downside (not 5\u20137\u00d7). Today saw Brent +3.13% \u2192 Nifty -1.83%, ratio ~0.58 \u2014 within the steeper end of the regime curve.",
+        "Day-2 of a re-escalation breakdown produces continuation, not oversold bounce. The 23,500\u201323,850 forecast over-weighted bounce mean-reversion (40% probability assigned in May 11 EOD scenarios) \u2014 empirical reality is that re-escalation regimes need either a fresh diplomatic catalyst OR an exhaustion print to bounce. Neither was present.",
+        "Tail-risk Brent forecasts that materialize ($108+ \u2248 tail; actual $107.47) should auto-shift the central session_direction range, not stay as a footnote. Rule: when intraday Brent crosses tail-risk floor, immediately widen range_low by an additional 0.5\u20130.8%.",
+        "Sectoral validation: defense & energy-security decoupled (Coal India -0.30% small drag, ACME SOLAR positive prior session) while OMC/aviation (MRPL -3.87%, INDIGO -2.27%) led decline. Confirms M012 (defense premium) and energy-security thesis still active in this regime.",
+        "Rupee at fresh low (95.51 prior session, weaker today on continuation) is no longer a leading indicator \u2014 it has become a coincident amplifier of FII selling pressure. Treat further rupee weakness as a tail-volatility multiplier, not a directional trigger."
+      ]
+    },
+    {
+      "session_date": "2026-05-13",
+      "forecast_generated_at": "2026-05-12",
+      "opening_bias": {
+        "direction": "GAP_DOWN_SMALL",
+        "gap_pct_estimate": -0.25,
+        "gift_nifty_estimate": 23320,
+        "key_drivers": [
+          "Nifty closed -1.83% at 23,379.55, below both prior consolidation support (23,500) and the May 11 forecast range \u2014 momentum favors continuation at open.",
+          "Brent at $107.47 (+3.13%) \u2014 no overnight resolution catalyst visible; if US session prints risk-off after the close, GIFT Nifty likely to bias 0.2\u20130.4% below today close.",
+          "BankNifty broke 54,000 floor today closing 53,555 \u2014 global EM banking weakness combined with rupee at fresh lows keeps banking under pressure at open.",
+          "Oversold technical setup (Nifty -3.32% over 2 sessions, Nifty 500 % above 200-DMA now ~13-15%) creates conditions for an intraday bounce attempt, but typically requires the first 30 minutes of continuation to flush positioning before reversal."
+        ],
+        "confidence": 2,
+        "risks": [
+          "UPSIDE: Overnight Iran-US diplomatic signal (Pakistan/Oman mediation) \u2192 gap-up reversal of up to +0.4%.",
+          "DOWNSIDE: Hormuz incident, Israel-Iran kinetic escalation, or Brent breakout >$110 \u2192 gap-down -0.6% to -0.9%.",
+          "WILDCARD: India CPI / IIP prints if scheduled overnight could move open."
+        ],
+        "generated_at": "eod_wrap_2026-05-12"
+      },
+      "opening_bias_actual": null,
+      "session_direction": {
+        "direction": "OVERSOLD_BOUNCE_WITH_BEARISH_BIAS",
+        "change_pct_estimate": 0.2,
+        "range_low": 23150,
+        "range_high": 23600,
+        "key_assumption": "After 2 sessions of compounded losses (-3.32% over May 11+12) and Nifty closing at deepest oversold print of the cycle, mean-reversion mechanics favor a modest intraday bounce attempt. Bounce will be capped at 23,600 (May 8 close zone, now resistance). Floor 23,150 holds if DII engages aggressively; below that requires fresh negative catalyst.",
+        "confidence": 2,
+        "generated_at": "eod_wrap_2026-05-12",
+        "regime": "GEOPOLITICAL_RISK_ELEVATED_BRENT_ABOVE_107_DAY3",
+        "brent_forecast": "$104-110 range. Central scenario $105-108 holding; tail risk $110-114 if Hormuz event or formal Iran-US break.",
+        "scenarios": [
+          {
+            "name": "Oversold bounce + close green",
+            "probability": 0.35,
+            "nifty_close": "23450-23600"
+          },
+          {
+            "name": "Choppy flat, marginal red",
+            "probability": 0.3,
+            "nifty_close": "23250-23450"
+          },
+          {
+            "name": "Bear continuation (Brent >$110)",
+            "probability": 0.25,
+            "nifty_close": "23000-23250"
+          },
+          {
+            "name": "Sharp relief rally (diplomatic break)",
+            "probability": 0.1,
+            "nifty_close": "23600-23800"
+          }
+        ]
+      },
+      "session_direction_accuracy": {
+        "direction_correct": null,
+        "grade": "PENDING",
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-05-13"
+      },
+      "actual": {
+        "nifty_open": null,
         "nifty_close": null,
         "nifty_change_pct": null
       },

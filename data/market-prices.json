@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-05-12T10:44:10.237587+00:00",
-  "fetched_at_ist": "2026-05-12 16:14 IST",
+  "fetched_at": "2026-05-12T18:00:05.344727+00:00",
+  "fetched_at_ist": "2026-05-12 23:30 IST",
   "coverage": {
     "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4703.3,
+      "price": 4685.9,
       "prev_close": 4718.7,
-      "change": -15.4,
-      "change_pct": -0.33,
-      "volume": 52974,
+      "change": -32.8,
+      "change_pct": -0.7,
+      "volume": 125940,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 84.51,
+      "price": 85.83,
       "prev_close": 85.49,
-      "change": -0.97,
-      "change_pct": -1.13,
-      "volume": 22989,
+      "change": 0.35,
+      "change_pct": 0.41,
+      "volume": 54863,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 101.39,
+      "price": 101.6,
       "prev_close": 98.07,
-      "change": 3.32,
-      "change_pct": 3.39,
-      "volume": 41465,
+      "change": 3.53,
+      "change_pct": 3.6,
+      "volume": 141854,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 107.47,
+      "price": 107.39,
       "prev_close": 104.21,
-      "change": 3.26,
-      "change_pct": 3.13,
-      "volume": 7892,
+      "change": 3.18,
+      "change_pct": 3.05,
+      "volume": 22904,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 2.92,
+      "price": 2.82,
       "prev_close": 2.91,
-      "change": 0.01,
-      "change_pct": 0.52,
-      "volume": 10825,
+      "change": -0.09,
+      "change_pct": -3.09,
+      "volume": 107592,
       "ticker": "NG=F"
     }
   },
@@ -303,9 +303,9 @@
     },
     "SETFGOLD": {
       "price": 128.29,
-      "prev_close": 128.29,
-      "change": 0.0,
-      "change_pct": 0.0,
+      "prev_close": 127.07,
+      "change": 1.22,
+      "change_pct": 0.96,
       "volume": 4276967,
       "symbol": "SETFGOLD",
       "yahoo_ticker": "SETFGOLD.NS",
@@ -1192,9 +1192,9 @@
     },
     "SETFGOLD.NS": {
       "price": 128.29,
-      "prev_close": 128.29,
-      "change": 0.0,
-      "change_pct": 0.0,
+      "prev_close": 127.07,
+      "change": 1.22,
+      "change_pct": 0.96,
       "volume": 4276967
     },
     "ITC.NS": {
@@ -1220,23 +1220,23 @@
     },
     "GOLDBEES.NS": {
       "price": 124.61,
-      "prev_close": 124.61,
-      "change": 0.0,
-      "change_pct": 0.0,
+      "prev_close": 123.23,
+      "change": 1.38,
+      "change_pct": 1.12,
       "volume": 43554452
     },
     "SILVERBEES.NS": {
       "price": 252.01,
-      "prev_close": 252.01,
-      "change": 0.0,
-      "change_pct": 0.0,
+      "prev_close": 241.29,
+      "change": 10.72,
+      "change_pct": 4.44,
       "volume": 71292545
     },
     "NIFTYBEES.NS": {
       "price": 265.05,
-      "prev_close": 265.05,
-      "change": 0.0,
-      "change_pct": 0.0,
+      "prev_close": 270.1,
+      "change": -5.05,
+      "change_pct": -1.87,
       "volume": 18620897
     }
   }

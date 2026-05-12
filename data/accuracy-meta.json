@@ -1,17 +1,17 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-05-11T17:30:00",
+  "last_updated": "2026-05-12T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 45,
-      "open": 16,
-      "scored": 30,
+      "open": 10,
+      "scored": 35,
       "right": 8,
-      "wrong": 19,
-      "partial": 3,
-      "accuracy_pct": 26.7,
-      "note": "May 7 EOD: Session direction PARTIAL_CORRECT (forecast BULLISH_CONTINUATION +0.3%, actual flat -0.02% to 24326.65). In range (24,100-24,600). Brent $99.10 (-2.14%) in forecast range ($93-105). No new prediction scorings today \u2014 P017/P044/P039 check May 8, P045 check May 9, P041 check May 12. Accuracy: 26.7% (8 RIGHT / 30 scored). Next scoring: May 8 (P017, P044, P039)."
+      "wrong": 22,
+      "partial": 5,
+      "accuracy_pct": 22.9,
+      "note": "May 12 EOD: 5 predictions scored \u2014 P003 WRONG (NIFTY 22000-22200 never reached), P017 WRONG (MRPL 200-210 unreachable), P039 WRONG (NIFTY IT underperformance window expired), P041 WRONG (NIFTY 24300-24600 vs actual 23379.55), P043 ABOVE_RANGE (SETFGOLD 128.29 vs 122-127 target). Total scored 35/45, accuracy 22.9%. Common RCA pattern: WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS (FORECAST_PAT005 reversed across May 10-11 weekend)."
     },
     "by_horizon": {
       "1D": {
@@ -722,12 +722,12 @@
     "key_lesson_of_week": "MULTI-BINARY CORRELATION is the dominant failure mode this week. P027 Nifty bullish target (24,600-25,000) was undone by SIMULTANEOUS earnings shock (HCLTECH guidance) + geopolitical re-fraying (Vance cancellation). Individual probabilities were known; combined impact was multiplicative not additive. New rule: when 2+ binary events resolve adversely within 5 sessions, downgrade index targets by 1.5x base case shock.",
     "rolling_5_pred_accuracy": "0/5 = 0% (P022, P023, P024, P025-ABOVE_RANGE, P026 WRONG). Extended cold streak now 6 weeks, no RIGHT prediction since P019 ADANI PORT (Apr 15)."
   },
-  "total": 40,
-  "scored": 23,
-  "right": 4,
-  "wrong": 16,
-  "partial": 3,
-  "note": "Updated Apr 26 weekly intelligence: P036-P040 added (framework v6). Accuracy 15.0% (3/20 scored). New predictions under v6 rules \u2014 test week begins Apr 28.",
+  "total": 45,
+  "scored": 35,
+  "right": 8,
+  "wrong": 22,
+  "partial": 5,
+  "note": "Accuracy 22.9% across 35 scored predictions. May 12: 5 new scorings, all bearish-reverse outcomes.",
   "L2_rca": [
     {
       "rca_id": "RCA_WEEK_APR20_26",
@@ -893,7 +893,16 @@
       "in_range": false,
       "brent_correct": true,
       "note": "Direction and Brent correct; magnitude 7x worse than base case; BEARISH_RE_ESCALATION scenario (30%) was the outcome but even that scenario's range was overshot."
-    }
+    },
+    "sessions": [
+      {
+        "date": "2026-05-12",
+        "forecast": "BEARISH_CONTINUATION (-0.5%) | range 23500-23850",
+        "actual": "BEARISH -1.83% | close 23,379.55",
+        "grade": "PARTIAL_CORRECT",
+        "note": "Direction correct, magnitude 3.7\u00d7 worse, close 120 pts below range_low."
+      }
+    ]
   },
-  "last_updated_by": "eod_wrap_2026-05-11"
+  "last_updated_by": "eod_wrap_2026-05-12"
 }
