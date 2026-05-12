@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1",
   "description": "Dynamic bridge \u2014 2026-05-12 session \u2014 Re-escalation shock cascade, Brent $105+, Nifty closed below 24,000",
-  "last_updated_by": "eod_wrap_2026-05-11",
-  "last_updated_at": "2026-05-11T17:30:00",
+  "last_updated_by": "morning_brief_2026-05-12",
+  "last_updated_at": "2026-05-12T09:00:00",
   "market_regime": {
     "label": "RE_ESCALATION_SHOCK_CASCADE_BRENT_105_NIFTY_BREAKS_24000",
     "key_risk": "Trump rejected Iran peace proposal over weekend; Brent +4-6% to $105+; Nifty -1.49% close at 23,815.85 below 24,000 floor; BankNifty broke 55,000 floor to 54,439.90; PM Modi austerity message compounds growth fears.",
@@ -24,55 +24,32 @@
     "note": "May 11 session was a magnitude shock vs forecast: CHOPPY_WITH_NEGATIVE_BIAS (-0.2% expected) became -1.49% (7x amplification). Trump-Iran standoff + Modi austerity message + Brent +4% combined to break BankNifty 55,000 floor and Nifty 24,000 floor in single session. Sentiment now fragile. Oversold technicals (most large-caps deeply oversold) set up potential bounce attempt May 12 but capped by unresolved geopolitics. Defense (M012 active) and energy security (Coal India) re-engaging; OMC (MRPL -4.53%, RELIANCE -3.27%) and aviation (INDIGO -4.94%) under pressure."
   },
   "opening_bias": {
-    "direction": "NO_PRIOR_FORECAST",
-    "gap_pct_estimate": null,
-    "gift_nifty_estimate": null,
+    "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
+    "gap_pct_estimate": -0.2,
+    "gift_nifty_estimate": 23770,
     "key_drivers": [
-      "EOD wrap for 2026-05-07 was last successful end-of-day run; no EOD wraps executed for May 8, 9, or 10.",
-      "No opening_bias forecast was generated for the May 11 session."
+      "US markets opened weak on May 11 after Trump rejected Iran response; S&P 500 / Nasdaq 100 futures down ~0.1% intraday \u2014 overnight could compound if Wall Street closes red.",
+      "Brent at $105+ continuing to weigh \u2014 no overnight resolution signal expected.",
+      "Oversold technicals (Nifty -1.49% off prior local highs, BankNifty broke 55K) typically produce bounce attempts at open, but in a re-escalation regime, gap-down opens often see early-session continuation before recovery.",
+      "BankNifty closed below 55,000 \u2014 first hour will test 54,000-54,200 support if continuation; reclaim of 54,800 needed for relief setup."
     ],
-    "confidence": null,
-    "risks": [],
-    "generated_at": "NONE"
+    "confidence": 2,
+    "risks": [
+      "UPSIDE: Overnight Iran-US back-channel signal could reverse open to gap-up. Watch Pakistan/Oman mediation news.",
+      "DOWNSIDE: Hormuz incident or fresh Israel-Iran kinetic escalation \u2192 gap-down up to -0.8%."
+    ],
+    "generated_at": "eod_wrap_2026-05-11"
   },
   "session_direction": {
-    "direction": "CHOPPY_WITH_NEGATIVE_BIAS",
-    "change_pct_estimate": -0.2,
-    "range_low": 24000,
-    "range_high": 24350,
-    "key_assumption": "Re-escalation regime: Brent crude rebounded from sub-$100 (May 7 low $99.10) back to $101-105 area on renewed US-Iran tensions/UAE incidents over the weekend. The crude normalization thesis from May 6-7 is partially reversing. Open at 24,165.90 (flat from May 8 close 24,176.15) suggests muted positioning \u2014 neither relief continuation nor panic. Friday was already bearish (-0.62%), and BankNifty closed -1.31% at 55,310.55 going into the weekend \u2014 banking weakness should continue absent a fresh positive catalyst. P041 target (NIFTY 24,300-24,600 by May 12) is now at risk \u2014 Nifty needs +0.55% in 1.5 sessions to enter range. DII buying floor at 24,000-24,100 should hold barring a sharp crude spike. Re-escalation = defense premium returns (M012 active again).",
+    "direction": "BEARISH_CONTINUATION",
+    "change_pct_estimate": -0.5,
+    "range_low": 23500,
+    "range_high": 23850,
+    "key_assumption": "Brent crude above $104, rupee at 95.51 new low, FII selling Rs 8,437 cr on May 11, US-Iran ceasefire on life support \u2014 selling pressure continues with oversold bounce attempts likely capped at 23,800-23,850.",
     "confidence": 3,
-    "generated_at": "morning_brief_2026-05-11",
-    "regime": "RE_ESCALATION_PARTIAL_REVERSAL_CRUDE_BACK_ABOVE_100",
-    "brent_forecast": "$100-108 range. Brent ~$101-105 currently (search noise on exact level). If formal escalation/Hormuz incident escalates \u2192 $108-115 zone. If diplomacy resumes \u2192 falls back to $97-100. Wide range reflects regime volatility.",
-    "scenarios": [
-      {
-        "name": "CHOPPY_FLAT_TO_DOWN (40%)",
-        "description": "Brent stays $100-105. Nifty drifts in 24,100-24,250 band, BankNifty 55,000-55,500. FII cautious, DII supports. Close near flat to -0.3%.",
-        "nifty_close_range": "24,100-24,250"
-      },
-      {
-        "name": "BEARISH_RE_ESCALATION (30%)",
-        "description": "Brent breaks above $107 on fresh Iran headlines. OMC/aviation hit, banking weak. Nifty tests 24,000-24,050 support. Defense (ASTRA, COCHINSHIP) rallies on premium return. Close -0.5% to -1.0%.",
-        "nifty_close_range": "23,950-24,100"
-      },
-      {
-        "name": "RELIEF_BOUNCE (20%)",
-        "description": "Diplomatic news flow improves intraday; Brent falls back to $98-100. BankNifty short-covering rallies. Nifty pushes toward 24,300 (P041 lower bound). Close +0.3-0.5%.",
-        "nifty_close_range": "24,250-24,350"
-      },
-      {
-        "name": "BREAKOUT_RALLY_OUTSIDE_BASE (10%)",
-        "description": "Formal Iran-US deal announcement OR major positive headline. Brent crashes to $93-95. Nifty surges past 24,300, tests 24,400-24,500. P041 enters range strongly.",
-        "nifty_close_range": "24,350-24,500"
-      }
-    ],
-    "scoring_events": {
-      "P041": "NIFTY 24,300-24,600 by May 12 (TOMORROW). Nifty at 24,165.90 = BELOW RANGE by 0.55%. Needs +0.55% in 1.5 sessions. Re-escalation regime makes CORRECT outcome unlikely. EXPECTED: WRONG (below range).",
-      "P046": "SETFGOLD 122-127 by May 12. SETFGOLD last 128.19 (-0.08%) = JUST ABOVE upper bound. Gold may consolidate or pull back as crude eases \u2014 depends on USD direction. WATCHING.",
-      "P037": "COAL INDIA 448-470 by May 15. Need to verify Coal India current price; previously trending ABOVE_RANGE.",
-      "P043": "COAL INDIA 475-500 by May 15. Same as P037, ABOVE_RANGE tracking."
-    }
+    "generated_at": "morning_brief_2026-05-12",
+    "regime": "GEOPOLITICAL_RISK_ELEVATED",
+    "brent_forecast": "$103-106 range, tail risk $108+"
   },
   "ceasefire_binary_matrix": {
     "peace_deal_advancing": 0.1,
@@ -212,13 +189,13 @@
     }
   },
   "opening_bias_actual": {
-    "nifty_open": 24165.9,
-    "gift_nifty_preopen": 24280,
-    "gap_pct": -0.04,
-    "direction": "FLAT",
-    "direction_correct": null,
-    "grade": "NOT_APPLICABLE",
-    "scoring_note": "No prior opening_bias forecast existed for 2026-05-11 (gap in EOD-wrap pipeline May 8\u201310). Cannot score CORRECT/WRONG. Reference: GIFT Nifty pre-open +40 pts (+0.17%) at 24,280; actual cash open 24,165.90 vs prev close 24,176.15 = essentially flat (-0.04%). Open undershot GIFT signal \u2014 re-escalation of Iran-US tensions (Brent recovering above $100) capped the gap-up.",
+    "nifty_open": 23722.6,
+    "gift_nifty_preopen": 23745,
+    "gap_pct": -0.39,
+    "direction": "GAP_DOWN",
+    "direction_correct": true,
+    "grade": "PARTIAL",
+    "scoring_note": "Forecast was FLAT_TO_SLIGHT_GAP_DOWN (-0.2%), actual GAP_DOWN (-0.39%). Direction correct but magnitude nearly double forecast. GIFT Nifty opened at 23,745 vs estimate of 23,770.",
     "source": "actual_nse_open",
     "pre_estimated_by": null,
     "validation_required": false

@@ -2240,45 +2240,28 @@
         ],
         "generated_at": "eod_wrap_2026-05-11"
       },
-      "opening_bias_actual": null,
+      "opening_bias_actual": {
+        "nifty_open": 23722.6,
+        "gift_nifty_preopen": 23745,
+        "gap_pct": -0.39,
+        "direction": "GAP_DOWN",
+        "direction_correct": true,
+        "grade": "PARTIAL",
+        "scoring_note": "Forecast was FLAT_TO_SLIGHT_GAP_DOWN (-0.2%), actual GAP_DOWN (-0.39%). Direction correct but magnitude nearly double forecast. GIFT Nifty opened at 23,745 vs estimate of 23,770.",
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": false
+      },
       "session_direction": {
-        "direction": "OVERSOLD_BOUNCE_ATTEMPT_CAPPED",
-        "change_pct_estimate": 0.4,
-        "range_low": 23700,
-        "range_high": 24050,
-        "key_assumption": "Oversold mean-reversion play. After -1.49% on geopolitical shock, Nifty is at deep oversold readings (most indices and large-caps at deeply oversold technicals \u2014 Nifty 500 with only ~18% above 200-day MA). DII typically steps in at these levels. However, Brent at $105+ and unresolved Iran-US standoff cap upside \u2014 bounces sold above 24,000-24,050. BankNifty needs to reclaim 54,800 for the bounce to extend; otherwise consolidates 54,000-54,500. Defense (COCHINSHIP, ASTRA, MAZDOCK) and energy security (COAL INDIA) should remain relatively bid. SETFGOLD should hold \u20b9125-130 given USD direction TBD. P041 target 24,300-24,600 by May 12 essentially impossible \u2014 expected WRONG.",
-        "confidence": 2,
-        "generated_at": "eod_wrap_2026-05-11",
-        "regime": "OVERSOLD_BOUNCE_IN_RE_ESCALATION_REGIME_BRENT_ABOVE_105",
-        "brent_forecast": "$102-108 range. Iran-US standoff unresolved \u2192 no near-term Brent relief. Tail risk to $110-115 if Hormuz/UAE incident.",
-        "scenarios": [
-          {
-            "name": "OVERSOLD_BOUNCE_CONSOLIDATION (40%)",
-            "description": "Nifty bounces in first hour from 23,700-23,800, drifts up toward 24,000 as DII buying engages. BankNifty reclaims 54,800. Defense and energy security lead. Close +0.3% to +0.7%.",
-            "nifty_close_range": "23,900-24,000"
-          },
-          {
-            "name": "CHOPPY_FLAT_NO_BOUNCE (30%)",
-            "description": "Bounce stalls quickly; Nifty oscillates 23,750-23,900 all session. FII still selling. No bear extension but no relief. Close -0.2% to +0.2%.",
-            "nifty_close_range": "23,750-23,900"
-          },
-          {
-            "name": "BEAR_CONTINUATION (20%)",
-            "description": "Brent extends above $108 on fresh Iran headline OR Hormuz incident. BankNifty breaks 54,000 \u2014 capitulation move. Nifty tests 23,500-23,600. OMC/Aviation hit again. Close -0.8% to -1.5%.",
-            "nifty_close_range": "23,500-23,700"
-          },
-          {
-            "name": "SHARP_RELIEF_RALLY (10%)",
-            "description": "Overnight breakthrough (Iran returns to table OR Trump softens stance) \u2192 Brent retraces to $98-100. BankNifty short-covers above 55,300. Nifty rallies to 24,100-24,150. Close +1.0% to +1.4%.",
-            "nifty_close_range": "24,050-24,200"
-          }
-        ],
-        "scoring_events": {
-          "P041": "NIFTY 24,300-24,600 by MAY 12 (TOMORROW): Nifty at 23,815.85 = 484 points (2.03%) BELOW range_low. Mathematically requires +2.0% to +3.3% in one session \u2014 extreme tail event. EXPECTED: WRONG (well below range).",
-          "P043": "SETFGOLD 122-127 by MAY 12 (TOMORROW): SETFGOLD closed 127.07 today = right at upper bound. Tomorrow close inside \u20b9122-127 = CORRECT, above \u20b9127 = above-range. WATCHING.",
-          "P037": "COAL INDIA 448-470 by MAY 15: COAL INDIA at 464.45 today (+1.76%) = INSIDE RANGE. Tracking favourably. Energy-security thesis confirmed today.",
-          "P045": "BANKNIFTY 55,000-56,000 by MAY 9 (already past): BankNifty closed 54,439.90 \u2014 BELOW range_low. WRONG (re-escalation killed FORECAST_PAT005 short-covering trigger)."
-        }
+        "direction": "BEARISH_CONTINUATION",
+        "change_pct_estimate": -0.5,
+        "range_low": 23500,
+        "range_high": 23850,
+        "key_assumption": "Brent crude above $104, rupee at 95.51 new low, FII selling Rs 8,437 cr on May 11, US-Iran ceasefire on life support \u2014 selling pressure continues with oversold bounce attempts likely capped at 23,800-23,850.",
+        "confidence": 3,
+        "generated_at": "morning_brief_2026-05-12",
+        "regime": "GEOPOLITICAL_RISK_ELEVATED",
+        "brent_forecast": "$103-106 range, tail risk $108+"
       },
       "session_direction_accuracy": {
         "direction_correct": null,
@@ -2286,7 +2269,7 @@
         "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-05-12"
       },
       "actual": {
-        "nifty_open": null,
+        "nifty_open": 23722.6,
         "nifty_close": null,
         "nifty_change_pct": null
       },
