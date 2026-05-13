@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1",
   "description": "Dynamic bridge \u2014 2026-05-13 session \u2014 Day 3 of re-escalation regime, Nifty -1.83% to 23,379.55, Brent $107.47",
-  "last_updated_by": "eod_wrap_2026-05-12",
-  "last_updated_at": "2026-05-12T17:30:00",
+  "last_updated_by": "morning_brief_2026-05-13",
+  "last_updated_at": "2026-05-13T09:35:00",
   "market_regime": {
     "label": "RE_ESCALATION_DAY3_BRENT_107_NIFTY_BREAKS_23500",
     "key_risk": "Day 2 of re-escalation breakdown: Nifty -1.83% to 23,379.55 \u2014 both 23,800 prior support and 23,500 morning-brief floor broken. BankNifty -1.63% to 53,555 \u2014 54,000 floor surrendered. Brent +3.13% to $107.47 (at edge of tail-risk zone). Rupee continuing to weaken. FII selling intensifying.",
@@ -26,32 +26,55 @@
     "note": "Day 2 of re-escalation produced continuation, not bounce. Nifty closed -3.32% over 2 sessions. % of Nifty 500 above 200-DMA likely ~12-15% (deeply oversold). DII engagement insufficient to absorb FII selling at current pace (~Rs 8K cr/session). Defense names still relatively bid (M012 active). OMC/aviation hammered (MRPL -3.87%, INDIGO -2.27%, SWIGGY -2.98%). Coal India only marginally down (-0.30%) \u2014 energy-security thesis intact."
   },
   "opening_bias": {
-    "direction": "FLAT_TO_SLIGHT_GAP_DOWN",
-    "gap_pct_estimate": -0.2,
-    "gift_nifty_estimate": 23770,
+    "direction": "GAP_DOWN_SMALL",
+    "gap_pct_estimate": -0.25,
+    "gift_nifty_estimate": 23320,
     "key_drivers": [
-      "US markets opened weak on May 11 after Trump rejected Iran response; S&P 500 / Nasdaq 100 futures down ~0.1% intraday \u2014 overnight could compound if Wall Street closes red.",
-      "Brent at $105+ continuing to weigh \u2014 no overnight resolution signal expected.",
-      "Oversold technicals (Nifty -1.49% off prior local highs, BankNifty broke 55K) typically produce bounce attempts at open, but in a re-escalation regime, gap-down opens often see early-session continuation before recovery.",
-      "BankNifty closed below 55,000 \u2014 first hour will test 54,000-54,200 support if continuation; reclaim of 54,800 needed for relief setup."
+      "Nifty closed -1.83% at 23,379.55, below both prior consolidation support (23,500) and the May 11 forecast range \u2014 momentum favors continuation at open.",
+      "Brent at $107.47 (+3.13%) \u2014 no overnight resolution catalyst visible; if US session prints risk-off after the close, GIFT Nifty likely to bias 0.2\u20130.4% below today close.",
+      "BankNifty broke 54,000 floor today closing 53,555 \u2014 global EM banking weakness combined with rupee at fresh lows keeps banking under pressure at open.",
+      "Oversold technical setup (Nifty -3.32% over 2 sessions, Nifty 500 % above 200-DMA now ~13-15%) creates conditions for an intraday bounce attempt, but typically requires the first 30 minutes of continuation to flush positioning before reversal."
     ],
     "confidence": 2,
     "risks": [
-      "UPSIDE: Overnight Iran-US back-channel signal could reverse open to gap-up. Watch Pakistan/Oman mediation news.",
-      "DOWNSIDE: Hormuz incident or fresh Israel-Iran kinetic escalation \u2192 gap-down up to -0.8%."
+      "UPSIDE: Overnight Iran-US diplomatic signal (Pakistan/Oman mediation) \u2192 gap-up reversal of up to +0.4%.",
+      "DOWNSIDE: Hormuz incident, Israel-Iran kinetic escalation, or Brent breakout >$110 \u2192 gap-down -0.6% to -0.9%.",
+      "WILDCARD: India CPI / IIP prints if scheduled overnight could move open."
     ],
-    "generated_at": "eod_wrap_2026-05-11"
+    "generated_at": "eod_wrap_2026-05-12"
   },
   "session_direction": {
-    "direction": "BEARISH_CONTINUATION",
-    "change_pct_estimate": -0.5,
-    "range_low": 23500,
-    "range_high": 23850,
-    "key_assumption": "Brent crude above $104, rupee at 95.51 new low, FII selling Rs 8,437 cr on May 11, US-Iran ceasefire on life support \u2014 selling pressure continues with oversold bounce attempts likely capped at 23,800-23,850.",
-    "confidence": 3,
-    "generated_at": "morning_brief_2026-05-12",
-    "regime": "GEOPOLITICAL_RISK_ELEVATED",
-    "brent_forecast": "$103-106 range, tail risk $108+"
+    "direction": "OVERSOLD_BOUNCE_CAPPED_BY_MACRO",
+    "change_pct_estimate": 0.4,
+    "range_low": 23280,
+    "range_high": 23650,
+    "key_assumption": "Flat open (+0.014%) rather than gap-down signals that overnight short-covering and FII pause have already absorbed some Day-3 re-escalation pressure. Brent has cooled to $107.05 (-0.67%) \u2014 mildly supportive. India CPI at 3.48% (still below RBI's 4% target, not stagflationary). HOWEVER: rupee at fresh low near 96/USD, gold/silver customs duty hike effective today (jewelry stocks pressured), Q4 earnings sensitivity, and Trump-Xi meet wildcard cap upside. Expect range-bound session with mean-reversion bias to 23,500-23,600 zone. Floor at 23,280 (intraday support); ceiling at 23,650 (May 8 close residual resistance).",
+    "confidence": 2,
+    "generated_at": "morning_brief_2026-05-13",
+    "regime": "GEOPOLITICAL_RISK_ELEVATED_BRENT_107_DAY3_OVERSOLD_BOUNCE_ATTEMPT",
+    "brent_forecast": "$105-110 range. Central scenario $106-108 (cooling underway). Tail risk $110+ on Hormuz or Iran-US break.",
+    "scenarios": [
+      {
+        "name": "Oversold bounce holds + close mid-range green",
+        "probability": 0.4,
+        "nifty_close": "23450-23650"
+      },
+      {
+        "name": "Choppy flat, marginal red close",
+        "probability": 0.3,
+        "nifty_close": "23300-23450"
+      },
+      {
+        "name": "Bear continuation (Brent rebound or fresh FII selling)",
+        "probability": 0.2,
+        "nifty_close": "23100-23300"
+      },
+      {
+        "name": "Sharp relief rally (Trump-Xi positive / Iran diplomatic surprise)",
+        "probability": 0.1,
+        "nifty_close": "23650-23850"
+      }
+    ]
   },
   "ceasefire_binary_matrix": {
     "peace_deal_advancing": 0.1,
@@ -247,28 +270,30 @@
     }
   },
   "opening_bias_actual": {
-    "nifty_open": 23722.6,
-    "gift_nifty_preopen": 23745,
-    "gap_pct": -0.39,
-    "direction": "GAP_DOWN",
-    "direction_correct": true,
-    "grade": "PARTIAL",
-    "scoring_note": "Forecast was FLAT_TO_SLIGHT_GAP_DOWN (-0.2%), actual GAP_DOWN (-0.39%). Direction correct but magnitude nearly double forecast. GIFT Nifty opened at 23,745 vs estimate of 23,770.",
+    "nifty_open": 23382.85,
+    "gift_nifty_preopen": 23476,
+    "gap_pct": 0.014,
+    "direction": "FLAT_TO_SLIGHT_GAP_UP",
+    "direction_correct": false,
+    "grade": "WRONG",
+    "scoring_note": "Forecast was GAP_DOWN_SMALL (-0.25%, GIFT ~23,320). Actual was essentially flat / slight gap-up: Nifty opened at 23,382.85 (+3.30 pts, +0.014%) vs prior close 23,379.55. GIFT Nifty pre-open at 23,476 (+51 pts) was 156 points HIGHER than estimate of 23,320. Direction is WRONG \u2014 forecast called for continuation of the prior-day selloff (-1.83%), market instead opened flat, suggesting the oversold bounce mechanic asserted itself overnight despite Brent still at $107 and rupee near 96. Magnitude tiny in absolute terms (both near zero), but direction sign is opposite. Lesson: re-escalation Day 3 + record-oversold prints often produce flat/up gaps as systematic short-covering precedes session.",
     "source": "actual_nse_open",
     "pre_estimated_by": null,
     "validation_required": false
   },
   "market_snapshot_morning": {
-    "as_of": "2026-05-05 09:25 IST",
-    "nifty": 24063.55,
-    "nifty_prev_close": 24119.3,
-    "nifty_change_pct": -0.23,
-    "banknifty": 54930,
-    "banknifty_prev_close": 54878.5,
-    "banknifty_change_pct": 0.09,
-    "brent": 115.0,
-    "wti": 108.0,
-    "gift_nifty_preopen": 24060
+    "as_of": "2026-05-13 09:30 IST",
+    "nifty": 23382.85,
+    "nifty_prev_close": 23379.55,
+    "nifty_change_pct": 0.014,
+    "sensex": 74666.15,
+    "sensex_prev_close": 74559.24,
+    "sensex_change_pct": 0.14,
+    "brent": 107.05,
+    "brent_change_pct": -0.67,
+    "gift_nifty_preopen": 23476,
+    "usdinr_approx": 95.95,
+    "cpi_april_yoy": 3.48
   },
   "tomorrow_forecast": {
     "date": "2026-05-13",

@@ -2313,37 +2313,48 @@
         ],
         "generated_at": "eod_wrap_2026-05-12"
       },
-      "opening_bias_actual": null,
+      "opening_bias_actual": {
+        "nifty_open": 23382.85,
+        "gift_nifty_preopen": 23476,
+        "gap_pct": 0.014,
+        "direction": "FLAT_TO_SLIGHT_GAP_UP",
+        "direction_correct": false,
+        "grade": "WRONG",
+        "scoring_note": "Forecast was GAP_DOWN_SMALL (-0.25%, GIFT ~23,320). Actual was essentially flat / slight gap-up: Nifty opened at 23,382.85 (+3.30 pts, +0.014%) vs prior close 23,379.55. GIFT Nifty pre-open at 23,476 (+51 pts) was 156 points HIGHER than estimate of 23,320. Direction is WRONG \u2014 forecast called for continuation of the prior-day selloff (-1.83%), market instead opened flat, suggesting the oversold bounce mechanic asserted itself overnight despite Brent still at $107 and rupee near 96. Magnitude tiny in absolute terms (both near zero), but direction sign is opposite. Lesson: re-escalation Day 3 + record-oversold prints often produce flat/up gaps as systematic short-covering precedes session.",
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": false
+      },
       "session_direction": {
-        "direction": "OVERSOLD_BOUNCE_WITH_BEARISH_BIAS",
-        "change_pct_estimate": 0.2,
-        "range_low": 23150,
-        "range_high": 23600,
-        "key_assumption": "After 2 sessions of compounded losses (-3.32% over May 11+12) and Nifty closing at deepest oversold print of the cycle, mean-reversion mechanics favor a modest intraday bounce attempt. Bounce will be capped at 23,600 (May 8 close zone, now resistance). Floor 23,150 holds if DII engages aggressively; below that requires fresh negative catalyst.",
+        "direction": "OVERSOLD_BOUNCE_CAPPED_BY_MACRO",
+        "change_pct_estimate": 0.4,
+        "range_low": 23280,
+        "range_high": 23650,
+        "key_assumption": "Flat open (+0.014%) rather than gap-down signals that overnight short-covering and FII pause have already absorbed some Day-3 re-escalation pressure. Brent has cooled to $107.05 (-0.67%) \u2014 mildly supportive. India CPI at 3.48% (still below RBI's 4% target, not stagflationary). HOWEVER: rupee at fresh low near 96/USD, gold/silver customs duty hike effective today (jewelry stocks pressured), Q4 earnings sensitivity, and Trump-Xi meet wildcard cap upside. Expect range-bound session with mean-reversion bias to 23,500-23,600 zone. Floor at 23,280 (intraday support); ceiling at 23,650 (May 8 close residual resistance).",
         "confidence": 2,
-        "generated_at": "eod_wrap_2026-05-12",
-        "regime": "GEOPOLITICAL_RISK_ELEVATED_BRENT_ABOVE_107_DAY3",
-        "brent_forecast": "$104-110 range. Central scenario $105-108 holding; tail risk $110-114 if Hormuz event or formal Iran-US break.",
+        "generated_at": "morning_brief_2026-05-13",
+        "regime": "GEOPOLITICAL_RISK_ELEVATED_BRENT_107_DAY3_OVERSOLD_BOUNCE_ATTEMPT",
+        "brent_forecast": "$105-110 range. Central scenario $106-108 (cooling underway). Tail risk $110+ on Hormuz or Iran-US break.",
         "scenarios": [
           {
-            "name": "Oversold bounce + close green",
-            "probability": 0.35,
-            "nifty_close": "23450-23600"
+            "name": "Oversold bounce holds + close mid-range green",
+            "probability": 0.4,
+            "nifty_close": "23450-23650"
           },
           {
-            "name": "Choppy flat, marginal red",
+            "name": "Choppy flat, marginal red close",
             "probability": 0.3,
-            "nifty_close": "23250-23450"
+            "nifty_close": "23300-23450"
           },
           {
-            "name": "Bear continuation (Brent >$110)",
-            "probability": 0.25,
-            "nifty_close": "23000-23250"
+            "name": "Bear continuation (Brent rebound or fresh FII selling)",
+            "probability": 0.2,
+            "nifty_close": "23100-23300"
           },
           {
-            "name": "Sharp relief rally (diplomatic break)",
+            "name": "Sharp relief rally (Trump-Xi positive / Iran diplomatic surprise)",
             "probability": 0.1,
-            "nifty_close": "23600-23800"
+            "nifty_close": "23650-23850"
           }
         ]
       },
