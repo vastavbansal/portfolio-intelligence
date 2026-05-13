@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Full prediction lifecycle log. Every prediction lives here from creation to resolution. Day-by-day log entries are added during each briefing session. RCA is written on WRONG outcomes. Framework updates are proposed here and promoted to signal-framework.json on approval.",
-  "last_updated": "2026-05-12",
+  "last_updated": "2026-05-13T17:30:00",
   "predictions": [
     {
       "pred_id": "P007",
@@ -1050,6 +1050,22 @@
           "description": "Gold/silver haven premium does not unwind when a peace deal is REVERSED mid-process \u2014 it re-anchors at the elevated pre-rally level. Use ABOVE_RANGE rather than WRONG when haven correction predictions miss by <1.5% in this scenario."
         }
       ]
+    },
+    {
+      "pred_id": "P044",
+      "scored_on": "2026-05-13",
+      "outcome": "WRONG",
+      "rca_category": "REGIME_OVERRIDE_OMC_DOWNSIDE",
+      "rca_detail": "MRPL 162-172 range-bound thesis failed as Brent sustained >$105 for 2+ weeks crushed GRM expectations. Price fell to 155.63 (below range). In re-escalation regimes, OMC stocks have asymmetric downside \u2014 range-bound calls are inappropriate when crude is in tail-risk territory.",
+      "lesson": "Do not predict OMC range-bound when Brent is >$105 sustained. Use directional bearish calls with wider downside targets."
+    },
+    {
+      "pred_id": "P045",
+      "scored_on": "2026-05-13",
+      "outcome": "WRONG",
+      "rca_category": "MACRO_REGIME_OVERRIDES_TECHNICALS",
+      "rca_detail": "BankNifty 55,000-56,000 recovery thesis failed as re-escalation regime (Brent >$107, rupee record lows, FII selling acceleration) overwhelmed FORECAST_PAT005 short-covering signal. Actual close 53,456 \u2014 2.8% below range_low. Banking is the most FII-sensitive sector and regime-driven selling overrides technical bounce patterns.",
+      "lesson": "Never forecast banking mean-reversion when FII selling is accelerating AND crude is in tail-risk zone. Macro regime dominance > technical patterns for BankNifty."
     }
   ],
   "scored_predictions": [

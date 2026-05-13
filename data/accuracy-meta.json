@@ -1,17 +1,17 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-05-12T17:30:00",
+  "last_updated": "2026-05-13T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 45,
-      "open": 10,
-      "scored": 35,
+      "open": 8,
+      "scored": 37,
       "right": 8,
-      "wrong": 22,
+      "wrong": 24,
       "partial": 5,
-      "accuracy_pct": 22.9,
-      "note": "May 12 EOD: 5 predictions scored \u2014 P003 WRONG (NIFTY 22000-22200 never reached), P017 WRONG (MRPL 200-210 unreachable), P039 WRONG (NIFTY IT underperformance window expired), P041 WRONG (NIFTY 24300-24600 vs actual 23379.55), P043 ABOVE_RANGE (SETFGOLD 128.29 vs 122-127 target). Total scored 35/45, accuracy 22.9%. Common RCA pattern: WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS (FORECAST_PAT005 reversed across May 10-11 weekend)."
+      "accuracy_pct": 21.6,
+      "note": "May 13 EOD: +2 WRONG (P044 MRPL below-range, P045 BankNifty below-range). Session direction scored CORRECT for May 13. Total scored 37/45, accuracy 21.6%."
     },
     "by_horizon": {
       "1D": {

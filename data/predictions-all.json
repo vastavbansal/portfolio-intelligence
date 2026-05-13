@@ -1466,11 +1466,11 @@
         "Government OMC subsidy policy update"
       ],
       "check_date": "2026-05-08",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 155.63,
+      "outcome_evidence": "MRPL closed at 155.63 on May 13 (check_date was May 8). Price is BELOW the 162-172 target range. MRPL declined on continued Brent pressure ($108) compressing refining margins \u2014 the opposite of the range-bound thesis.",
+      "postmortem": "BELOW_RANGE: MRPL fell to 155.63 vs 162-172 target. Brent staying above $105 for 2+ weeks crushed GRM expectations. The \"range-bound\" call underestimated the compound effect of sustained high crude on OMC stocks. Lesson: in re-escalation regimes with Brent >$105 sustained, OMC downside is 8-12% from entry, not range-bound.",
+      "scored_on": "2026-05-13",
       "auto_invalidation": "Peace deal \u2192 Brent crashes <$95 within week \u2192 MRPL GRM improves sharply \u2192 stock could rally 10%+ \u2192 confidence 1\u2605.",
       "confidence_note": "2\u2605 \u2014 realistic range thesis. Also note P002 (\u20b9160-170 by May 28) recovery: MRPL at \u20b9167.55 is now IN P002 range \u2014 P002 may actually score CORRECT on May 28 if current level holds.",
       "status": "WRONG",
@@ -1506,11 +1506,11 @@
         "RBI policy minutes or ECL timeline clarification"
       ],
       "check_date": "2026-05-09",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 53456.15,
+      "outcome_evidence": "BankNifty closed at 53,456.15 on May 13 (check_date was May 9). Price is BELOW the 55,000-56,000 target range by ~1,544 points (2.8%). Re-escalation regime intensified FII selling in banking; BankNifty broke 54,000 floor on May 12.",
+      "postmortem": "WRONG: BankNifty at 53,456 vs 55,000-56,000 target. The FORECAST_PAT005 short-covering thesis failed because re-escalation regime (Brent >$105, rupee at record lows) overwhelmed any technical short-covering signal. Lesson: macro regime overrides technical patterns \u2014 do not forecast mean-reversion in banking when FII selling is accelerating AND crude is in tail-risk zone.",
+      "scored_on": "2026-05-13",
       "auto_invalidation": "Iran peace rejected + Brent >$112 + FII selling accelerates \u2192 bear case 54,000-54,500 (confidence 1\u2605). BankNifty breaks 54,500 intraday \u2192 exit thesis.",
       "confidence_note": "2\u2605 \u2014 ECL framework remains structural headwind. Recovery thesis is tactical (FORECAST_PAT005 + gap-up), not fundamental. Ceiling at 56,000 per P032 RCA.",
       "status": "WRONG",
@@ -1524,7 +1524,7 @@
       }
     }
   ],
-  "last_updated": "2026-05-12",
+  "last_updated": "2026-05-13",
   "total_predictions": 45,
-  "last_updated_by": "eod_wrap_2026-05-12"
+  "last_updated_by": "eod_wrap_2026-05-13"
 }

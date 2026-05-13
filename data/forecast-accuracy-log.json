@@ -2359,9 +2359,91 @@
         ]
       },
       "session_direction_accuracy": {
+        "direction_correct": true,
+        "direction_note": "Forecast: OVERSOLD_BOUNCE_CAPPED_BY_MACRO (+0.4%). Actual: +0.14%. Direction correct \u2014 market did bounce after 4-day losing streak, snapping the sell-off. Magnitude was lower than forecast (+0.14% vs +0.4%) as BankNifty dragged (-0.18%) while broader market breadth was positive (2,328 advances vs 1,690 declines). Sectoral rotation dominated: gold import duty hike hit jewelry stocks, lifted gold financiers. Defence and shipping continued outperformance.",
+        "in_range": true,
+        "range_note": "Nifty closed at 23,412.60 \u2014 within forecast range 23,280-23,650. Close was in the lower half of the range, reflecting the capped nature of the bounce as forecast.",
+        "brent_correct": true,
+        "brent_note": "Forecast: $105-110 range. Actual: $108.10 (+0.31%) \u2014 within range. Brent cooling thesis partially validated (minimal change vs prior day $107.47).",
+        "grade": "CORRECT"
+      },
+      "actual": {
+        "nifty_open": 23382.85,
+        "nifty_close": 23412.6,
+        "nifty_change_pct": 0.14,
+        "banknifty_close": 53456.15,
+        "banknifty_change_pct": -0.18,
+        "brent_close": 108.1,
+        "brent_change_pct": 0.31,
+        "session_theme": "Day 3 oversold bounce \u2014 Nifty snapped 4-day losing streak with marginal +0.14% close at 23,412.60. Breadth positive (2,328:1,690 A/D). Sectoral rotation dominated: gold import duty hike crushed jewelry (Kalyan, Senco), lifted gold financiers (Manappuram +7%, Muthoot, IIFL Finance). Defence/shipping continued outperformance (MAZDOCK +3.06%, COCHINSHIP +2.29%). BankNifty lagged at -0.18% as PSU banks saw profit booking. Commodity ETFs surged (PREMEXPLN +8.68%, SBISILVER +6.85%, SETFGOLD +5.67%) on gold duty arbitrage."
+      },
+      "lessons": [
+        "OVERSOLD_BOUNCE_MAGNITUDE_CALIBRATION: Forecast +0.4% bounce vs actual +0.14%. In re-escalation regimes with Brent still >$107, oversold bounces are weaker than historical averages. Calibrate Day-3 bounce estimates to +0.1-0.3% when crude remains elevated, not +0.3-0.5%.",
+        "SECTORAL_ROTATION_DOMINATES_BOUNCE_DAYS: On marginal bounce days after sharp selloffs, the headline index move understates internal rotation. Breadth was 2,328:1,690 (bullish) while index only +0.14% \u2014 sectoral divergence (defense/commodities up, banking/realty lag) is the real signal.",
+        "GOLD_DUTY_POLICY_CREATES_BIFURCATION: Gold import duty hike is a new regime variable \u2014 bullish for gold ETFs (SETFGOLD +5.67%) and gold financiers, bearish for jewelry retail. This structural shift should be tracked as a macro factor for P046-type predictions.",
+        "BANKNIFTY_DECOUPLING_PERSISTS: BankNifty -0.18% on a +0.14% Nifty day confirms continued banking weakness. The 53,000-54,000 range is the new floor, not 55,000. FII selling in banking continues to be the dominant drag."
+      ]
+    },
+    {
+      "session_date": "2026-05-14",
+      "forecast_generated_at": "2026-05-13",
+      "opening_bias": {
+        "direction": "FLAT_TO_SLIGHT_GAP_UP",
+        "gap_pct_estimate": 0.15,
+        "gift_nifty_estimate": 23450,
+        "key_drivers": [
+          "Nifty snapped 4-day losing streak with positive breadth \u2014 overnight sentiment should carry mild positive bias.",
+          "Brent at $108.10, stable (+0.31%) \u2014 no fresh crude shock overnight expected unless Hormuz escalation.",
+          "Gold import duty hike digestion \u2014 Day 2 effects may see some normalization in commodity ETFs after +5-8% surges.",
+          "US markets: Trump-Xi meeting wildcard \u2014 any positive signal could amplify gap-up; negative signal caps at flat.",
+          "BankNifty at 53,456 still below 54,000 \u2014 banking needs catalyst for meaningful recovery; if global cues positive, short-covering could push gap-up to +0.3%."
+        ],
+        "confidence": 2,
+        "risks": [
+          "UPSIDE: Trump-Xi trade/diplomacy positive signal or Iran diplomatic breakthrough overnight \u2192 gap-up +0.3-0.5%.",
+          "DOWNSIDE: Brent breaks $110 overnight or fresh Hormuz incident \u2192 gap-down -0.3% to -0.5%.",
+          "DATA: India WPI or any scheduled macro print could shift open."
+        ],
+        "generated_at": "eod_wrap_2026-05-13"
+      },
+      "opening_bias_actual": null,
+      "session_direction": {
+        "direction": "RANGE_BOUND_WITH_POSITIVE_BIAS",
+        "change_pct_estimate": 0.3,
+        "range_low": 23300,
+        "range_high": 23600,
+        "key_assumption": "Day 4 of re-escalation regime but Day 2 of recovery attempt. The 4-day selling dumped Nifty -3.3% (May 8-12); today's +0.14% is a tentative floor. If Brent holds $106-110 (no breakout), Nifty should consolidate 23,300-23,600. BankNifty must reclaim 54,000 for broader index to push higher. DII buying provides floor at 23,300. Upside capped at 23,600 (May 12 open area) without a geopolitical catalyst. Probability-weighted toward the Choppy Flat scenario as neither bulls nor bears have a clear catalyst.",
+        "confidence": 2,
+        "generated_at": "eod_wrap_2026-05-13",
+        "regime": "POST_SELLOFF_CONSOLIDATION_BRENT_108",
+        "brent_forecast": "$106-110 range. Stable to slight upward drift. Tail risk $112+ on Hormuz.",
+        "scenarios": [
+          {
+            "name": "RANGE_BOUND_POSITIVE (40%)",
+            "description": "Brent stable $106-109. Nifty drifts up toward 23,500-23,600 on continued sectoral rotation. DII supports. Close +0.2-0.5%.",
+            "nifty_close_range": "23,450-23,600"
+          },
+          {
+            "name": "CHOPPY_FLAT (30%)",
+            "description": "No catalyst either way. Nifty oscillates 23,350-23,500. BankNifty stays weak. Close near flat to +0.1%.",
+            "nifty_close_range": "23,350-23,500"
+          },
+          {
+            "name": "BEARISH_REVERSAL (20%)",
+            "description": "Brent breaks $110 or fresh FII selling wave. Today's bounce was a dead cat. Nifty retests 23,300-23,200. Close -0.3-0.7%.",
+            "nifty_close_range": "23,100-23,350"
+          },
+          {
+            "name": "RELIEF_RALLY (10%)",
+            "description": "Trump-Xi positive / Iran diplomatic surprise. Nifty surges to 23,600-23,800. BankNifty reclaims 54,000+. Close +0.5-1.0%.",
+            "nifty_close_range": "23,600-23,800"
+          }
+        ]
+      },
+      "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-05-13"
+        "direction_note": "Pending \u2014 EOD wrap 2026-05-14"
       },
       "actual": {
         "nifty_open": null,
