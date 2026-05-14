@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-05-13T17:30:00",
+  "last_updated": "2026-05-14T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 45,
@@ -11,7 +11,7 @@
       "wrong": 24,
       "partial": 5,
       "accuracy_pct": 21.6,
-      "note": "May 13 EOD: +2 WRONG (P044 MRPL below-range, P045 BankNifty below-range). Session direction scored CORRECT for May 13. Total scored 37/45, accuracy 21.6%."
+      "note": "May 14 EOD: Session direction PARTIAL_CORRECT (direction right, magnitude undershot). No new predictions resolved today. Total scored 37/45, accuracy 21.6%."
     },
     "by_horizon": {
       "1D": {

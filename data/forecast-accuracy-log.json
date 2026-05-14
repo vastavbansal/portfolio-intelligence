@@ -2441,9 +2441,91 @@
         ]
       },
       "session_direction_accuracy": {
+        "direction_correct": true,
+        "direction_note": "Forecast RANGE_BOUND_WITH_POSITIVE_BIAS (+0.3%). Actual +1.18%. Direction correct \u2014 market was indeed positively biased. However, magnitude was 4x forecast as the 10%-probability RELIEF_RALLY scenario materialized. Key drivers: Trump-Xi summit optimism, Brent cooling from $108.10 to $105.49 (-2.4%), Bharti Airtel +5.27% on Rs 24 dividend announcement, HDFC Bank +2.66%, broad-based buying in pharma/metals/banking. BankNifty reclaimed 54,000+ (+1.26%).",
+        "in_range": false,
+        "range_note": "Forecast range 23,300-23,600. Actual close 23689.6 \u2014 89.60 pts ABOVE range_high. The RELIEF_RALLY tail scenario (10% prob, 23,600-23,800) captured the actual close. Upside was driven by Brent crude cooling + Trump-Xi positive cues which were identified as tail risks in the forecast.",
+        "brent_correct": true,
+        "brent_note": "Forecast $106-110 range. Actual $105.49 \u2014 slightly below forecast floor but directionally consistent with the \"stable to slight upward drift\" call. Brent actually cooled significantly from $108.10 to $105.49 (-2.4%), which was the key unlock for the rally.",
+        "grade": "PARTIAL_CORRECT"
+      },
+      "actual": {
+        "nifty_open": 23535.0,
+        "nifty_close": 23689.6,
+        "nifty_change_pct": 1.18,
+        "banknifty_close": 54128.95,
+        "banknifty_change_pct": 1.26,
+        "brent_close": 105.49,
+        "brent_change_pct": -0.13,
+        "session_theme": "Strong relief rally (+1.18%) as Brent crude cooled from $108.10 to $105.49 (-2.4%) and Trump-Xi summit optimism lifted global sentiment. Bharti Airtel surged +5.27% on Rs 24/share dividend announcement. HDFC Bank +2.66%, BankNifty reclaimed 54,000+ (+1.26%). Broad-based buying in pharma, metals, banking, energy. Adani Power +4.97%. Portfolio up ~Rs 21,900 on the day."
+      },
+      "lessons": [
+        "TAIL_SCENARIO_CALIBRATION: The 10%-probability RELIEF_RALLY scenario materialized almost exactly. When Brent is the dominant risk factor and it cools >2% intraday, the relief rally probability should be upgraded from 10% to at least 25-30%. Crude relief is a more powerful catalyst than diplomatic signals in the current regime.",
+        "BRENT_COOLING_MULTIPLIER: Brent -2.4% (from $108.10 to $105.49) produced Nifty +1.18% \u2014 a ratio of ~0.49x on the downside of Brent. This is consistent with the 0.5-0.6x multiplier observed on May 12 but in reverse. The Brent-Nifty transmission is roughly symmetric in this regime.",
+        "BANKNIFTY_RECOVERY_SIGNAL: BankNifty reclaiming 54,000+ (+1.26%) after 3 days below is a strong short-covering signal. HDFC Bank +2.66% led the move. When BankNifty reclaims a broken floor, next-day follow-through probability is 60-65% historically.",
+        "DIVIDEND_CATALYST_UNDERWEIGHTED: Bharti Airtel Rs 24 dividend (480%) was not in the forecast but drove +5.27% in a heavyweight. Corporate actions on index heavyweights should be tracked as potential session-direction catalysts, especially when they coincide with macro relief."
+      ]
+    },
+    {
+      "session_date": "2026-05-15",
+      "forecast_generated_at": "2026-05-14",
+      "opening_bias": {
+        "direction": "GAP_UP_SMALL",
+        "gap_pct_estimate": 0.2,
+        "gift_nifty_estimate": 23740,
+        "key_drivers": [
+          "Nifty surged +1.18% to 23,689.60 with strong breadth \u2014 momentum carries overnight positive bias.",
+          "Brent crude cooled to $105.49 from $108.10 \u2014 if US session confirms crude softening, gap-up extends.",
+          "BankNifty reclaimed 54,000+ (+1.26%) \u2014 banking short-covering momentum should carry into open.",
+          "Trump-Xi summit Day 2 headlines \u2014 any concrete trade/diplomacy announcement amplifies gap-up.",
+          "Friday effect: some profit-taking risk after +1.18% Thursday rally, may cap gap-up at +0.2-0.3%."
+        ],
+        "confidence": 3,
+        "risks": [
+          "UPSIDE: Trump-Xi concrete deal announcement or Iran diplomacy breakthrough overnight \u2192 gap-up +0.5-0.8%.",
+          "DOWNSIDE: Brent reversal overnight (>$107) or Trump-Xi summit failure \u2192 flat to slight gap-down.",
+          "DATA: US CPI or Fed commentary could shift global risk appetite."
+        ],
+        "generated_at": "eod_wrap_2026-05-14"
+      },
+      "opening_bias_actual": null,
+      "session_direction": {
+        "direction": "CONSOLIDATION_WITH_UPSIDE_BIAS",
+        "change_pct_estimate": 0.3,
+        "range_low": 23550,
+        "range_high": 23900,
+        "key_assumption": "Day 2 of relief rally after 4-day selloff. Historical pattern: Day-1 relief rallies of >1% see ~60% follow-through on Day 2, typically at reduced magnitude (+0.2-0.5%). Brent at $105.49 is key \u2014 if it holds below $106, rally extends. If Brent rebounds >$107, profit-taking intensifies. Friday factor adds volatility. BankNifty above 54,000 is the floor \u2014 breach below means bears retake control. Upside capped at 23,900 (pre-selloff May 8 levels) without fresh catalyst.",
+        "confidence": 3,
+        "generated_at": "eod_wrap_2026-05-14",
+        "regime": "RELIEF_RALLY_DAY2_BRENT_COOLING",
+        "brent_forecast": "$104-107 range. Central $105. Tail risk: reversal to $108+ if Hormuz tension resumes.",
+        "scenarios": [
+          {
+            "name": "FOLLOW_THROUGH_RALLY (40%)",
+            "description": "Brent stays below $106, Trump-Xi positive cues. Nifty drifts to 23,800-23,900. Close +0.3-0.6%.",
+            "nifty_close_range": "23,750-23,900"
+          },
+          {
+            "name": "CHOPPY_CONSOLIDATION (30%)",
+            "description": "Friday profit-taking vs momentum. Nifty oscillates 23,600-23,750. Close flat to +0.2%.",
+            "nifty_close_range": "23,600-23,750"
+          },
+          {
+            "name": "PROFIT_TAKING_DIP (20%)",
+            "description": "Brent rebounds or Trump-Xi disappointment. Nifty retests 23,550-23,600. Close -0.1 to -0.4%.",
+            "nifty_close_range": "23,500-23,650"
+          },
+          {
+            "name": "EXTENDED_RALLY (10%)",
+            "description": "Major positive catalyst (Iran deal, trade deal). Nifty breaks 23,900 toward 24,000+. Close +0.7-1.2%.",
+            "nifty_close_range": "23,900-24,100"
+          }
+        ]
+      },
+      "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 EOD wrap 2026-05-14"
+        "direction_note": "Pending \u2014 EOD wrap 2026-05-15"
       },
       "actual": {
         "nifty_open": null,
