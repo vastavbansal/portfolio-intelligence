@@ -1,8 +1,8 @@
 {
   "schema_version": "1.1",
   "description": "Dynamic bridge \u2014 2026-05-15 session \u2014 Relief rally Day 2, Nifty +1.18% to 23,689.60, Brent cooled to $105.49, BankNifty reclaimed 54,000+",
-  "last_updated_by": "eod_wrap_2026-05-14",
-  "last_updated_at": "2026-05-14T17:30:00",
+  "last_updated_by": "morning_brief_2026-05-15",
+  "last_updated_at": "2026-05-15T09:00:00",
   "market_regime": {
     "label": "RELIEF_RALLY_DAY2_BRENT_COOLING",
     "key_risk": "Nifty surged +1.18% on Brent cooling ($108.10\u2192$105.49) and Trump-Xi summit optimism. BankNifty reclaimed 54,000+ (+1.26%). Broad-based buying. Relief rally Day 1 was strong \u2014 Day 2 follow-through is the key question. Brent below $106 is the floor for continued rally.",
@@ -35,54 +35,54 @@
     }
   },
   "opening_bias": {
-    "direction": "FLAT_TO_SLIGHT_GAP_UP",
-    "gap_pct_estimate": 0.15,
-    "gift_nifty_estimate": 23450,
+    "direction": "GAP_UP_SMALL",
+    "gap_pct_estimate": 0.2,
+    "gift_nifty_estimate": 23740,
     "key_drivers": [
-      "Nifty snapped 4-day losing streak with positive breadth \u2014 overnight sentiment should carry mild positive bias.",
-      "Brent at $108.10, stable (+0.31%) \u2014 no fresh crude shock overnight expected unless Hormuz escalation.",
-      "Gold import duty hike digestion \u2014 Day 2 effects may see some normalization in commodity ETFs after +5-8% surges.",
-      "US markets: Trump-Xi meeting wildcard \u2014 any positive signal could amplify gap-up; negative signal caps at flat.",
-      "BankNifty at 53,456 still below 54,000 \u2014 banking needs catalyst for meaningful recovery; if global cues positive, short-covering could push gap-up to +0.3%."
+      "Nifty surged +1.18% to 23,689.60 with strong breadth \u2014 momentum carries overnight positive bias.",
+      "Brent crude cooled to $105.49 from $108.10 \u2014 if US session confirms crude softening, gap-up extends.",
+      "BankNifty reclaimed 54,000+ (+1.26%) \u2014 banking short-covering momentum should carry into open.",
+      "Trump-Xi summit Day 2 headlines \u2014 any concrete trade/diplomacy announcement amplifies gap-up.",
+      "Friday effect: some profit-taking risk after +1.18% Thursday rally, may cap gap-up at +0.2-0.3%."
     ],
-    "confidence": 2,
+    "confidence": 3,
     "risks": [
-      "UPSIDE: Trump-Xi trade/diplomacy positive signal or Iran diplomatic breakthrough overnight \u2192 gap-up +0.3-0.5%.",
-      "DOWNSIDE: Brent breaks $110 overnight or fresh Hormuz incident \u2192 gap-down -0.3% to -0.5%.",
-      "DATA: India WPI or any scheduled macro print could shift open."
+      "UPSIDE: Trump-Xi concrete deal announcement or Iran diplomacy breakthrough overnight \u2192 gap-up +0.5-0.8%.",
+      "DOWNSIDE: Brent reversal overnight (>$107) or Trump-Xi summit failure \u2192 flat to slight gap-down.",
+      "DATA: US CPI or Fed commentary could shift global risk appetite."
     ],
-    "generated_at": "eod_wrap_2026-05-13"
+    "generated_at": "eod_wrap_2026-05-14"
   },
   "session_direction": {
-    "direction": "RANGE_BOUND_WITH_POSITIVE_BIAS",
-    "change_pct_estimate": 0.3,
-    "range_low": 23300,
-    "range_high": 23600,
-    "key_assumption": "Day 4 of re-escalation regime but Day 2 of recovery attempt. The 4-day selling dumped Nifty -3.3% (May 8-12); today's +0.14% is a tentative floor. If Brent holds $106-110 (no breakout), Nifty should consolidate 23,300-23,600. BankNifty must reclaim 54,000 for broader index to push higher. DII buying provides floor at 23,300. Upside capped at 23,600 (May 12 open area) without a geopolitical catalyst. Probability-weighted toward the Choppy Flat scenario as neither bulls nor bears have a clear catalyst.",
-    "confidence": 2,
-    "generated_at": "eod_wrap_2026-05-13",
-    "regime": "POST_SELLOFF_CONSOLIDATION_BRENT_108",
-    "brent_forecast": "$106-110 range. Stable to slight upward drift. Tail risk $112+ on Hormuz.",
+    "direction": "CONSOLIDATION_WITH_UPSIDE_BIAS",
+    "change_pct_estimate": 0.25,
+    "range_low": 23650,
+    "range_high": 23900,
+    "key_assumption": "Day 2 of relief rally. Nifty opened +0.18% at 23731. Brent rebounded to $106.89 (+1.11%) overnight \u2014 partial headwind but still below $108 panic levels. US markets at record highs (S&P 7501, Dow 50063) supportive. IT sector showing buying (Infosys, TCS top gainers). Friday profit-taking risk after +1.18% Thursday rally. BankNifty above 54000 supportive. Key level: 23800 breakout triggers move to 23900+; failure means consolidation in 23650-23800 range.",
+    "confidence": 3,
+    "generated_at": "morning_brief_2026-05-15",
+    "regime": "RELIEF_RALLY_DAY2_BRENT_REBOUND_PARTIAL",
+    "brent_forecast": "$105-108 range. Central $107. Rebounded from $105.49 to $106.89. Hormuz/Iran risk persists.",
     "scenarios": [
       {
-        "name": "RANGE_BOUND_POSITIVE (40%)",
-        "description": "Brent stable $106-109. Nifty drifts up toward 23,500-23,600 on continued sectoral rotation. DII supports. Close +0.2-0.5%.",
-        "nifty_close_range": "23,450-23,600"
+        "name": "FOLLOW_THROUGH_RALLY (40%)",
+        "description": "Nifty breaks 23800, IT buying continues, BankNifty holds 54000+. Close 23800-23900 (+0.3-0.6%).",
+        "nifty_close_range": "23800-23900"
       },
       {
-        "name": "CHOPPY_FLAT (30%)",
-        "description": "No catalyst either way. Nifty oscillates 23,350-23,500. BankNifty stays weak. Close near flat to +0.1%.",
-        "nifty_close_range": "23,350-23,500"
+        "name": "CHOPPY_CONSOLIDATION (30%)",
+        "description": "Brent rebound to $107 caps gains. Friday profit-taking. Nifty oscillates 23650-23800. Close flat to +0.2%.",
+        "nifty_close_range": "23680-23800"
       },
       {
-        "name": "BEARISH_REVERSAL (20%)",
-        "description": "Brent breaks $110 or fresh FII selling wave. Today's bounce was a dead cat. Nifty retests 23,300-23,200. Close -0.3-0.7%.",
-        "nifty_close_range": "23,100-23,350"
+        "name": "PROFIT_TAKING_DIP (20%)",
+        "description": "Friday selloff intensifies, Brent pushes toward $108. Nifty retests 23600-23650. Close -0.1 to -0.3%.",
+        "nifty_close_range": "23550-23680"
       },
       {
-        "name": "RELIEF_RALLY (10%)",
-        "description": "Trump-Xi positive / Iran diplomatic surprise. Nifty surges to 23,600-23,800. BankNifty reclaims 54,000+. Close +0.5-1.0%.",
-        "nifty_close_range": "23,600-23,800"
+        "name": "BREAKOUT_RALLY (10%)",
+        "description": "Trump-Xi concrete deal or Iran breakthrough. Nifty breaks 23900 toward 24000+. Close +0.7-1.0%.",
+        "nifty_close_range": "23900-24100"
       }
     ]
   },
@@ -278,13 +278,13 @@
     }
   },
   "opening_bias_actual": {
-    "nifty_open": 23382.85,
-    "gift_nifty_preopen": 23476,
-    "gap_pct": 0.014,
-    "direction": "FLAT_TO_SLIGHT_GAP_UP",
-    "direction_correct": false,
-    "grade": "WRONG",
-    "scoring_note": "Forecast was GAP_DOWN_SMALL (-0.25%, GIFT ~23,320). Actual was essentially flat / slight gap-up: Nifty opened at 23,382.85 (+3.30 pts, +0.014%) vs prior close 23,379.55. GIFT Nifty pre-open at 23,476 (+51 pts) was 156 points HIGHER than estimate of 23,320. Direction is WRONG \u2014 forecast called for continuation of the prior-day selloff (-1.83%), market instead opened flat, suggesting the oversold bounce mechanic asserted itself overnight despite Brent still at $107 and rupee near 96. Magnitude tiny in absolute terms (both near zero), but direction sign is opposite. Lesson: re-escalation Day 3 + record-oversold prints often produce flat/up gaps as systematic short-covering precedes session.",
+    "nifty_open": 23731.4,
+    "gift_nifty_preopen": 23722.0,
+    "gap_pct": 0.176,
+    "direction": "GAP_UP_SMALL",
+    "direction_correct": true,
+    "grade": "CORRECT",
+    "scoring_note": "Forecast GAP_UP_SMALL +0.20%, actual +0.176%. Direction correct, magnitude error 12% (within 50%). GIFT Nifty forecast 23740, actual ~23722. Nifty opened 23731.40 vs prev close 23689.60.",
     "source": "actual_nse_open",
     "pre_estimated_by": null,
     "validation_required": false

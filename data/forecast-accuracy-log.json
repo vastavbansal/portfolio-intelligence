@@ -2488,47 +2488,58 @@
         ],
         "generated_at": "eod_wrap_2026-05-14"
       },
-      "opening_bias_actual": null,
+      "opening_bias_actual": {
+        "nifty_open": 23731.4,
+        "gift_nifty_preopen": 23722.0,
+        "gap_pct": 0.176,
+        "direction": "GAP_UP_SMALL",
+        "direction_correct": true,
+        "grade": "CORRECT",
+        "scoring_note": "Forecast GAP_UP_SMALL +0.20%, actual +0.176%. Direction correct, magnitude error 12% (within 50%). GIFT Nifty forecast 23740, actual ~23722. Nifty opened 23731.40 vs prev close 23689.60.",
+        "source": "actual_nse_open",
+        "pre_estimated_by": null,
+        "validation_required": false
+      },
       "session_direction": {
         "direction": "CONSOLIDATION_WITH_UPSIDE_BIAS",
-        "change_pct_estimate": 0.3,
-        "range_low": 23550,
+        "change_pct_estimate": 0.25,
+        "range_low": 23650,
         "range_high": 23900,
-        "key_assumption": "Day 2 of relief rally after 4-day selloff. Historical pattern: Day-1 relief rallies of >1% see ~60% follow-through on Day 2, typically at reduced magnitude (+0.2-0.5%). Brent at $105.49 is key \u2014 if it holds below $106, rally extends. If Brent rebounds >$107, profit-taking intensifies. Friday factor adds volatility. BankNifty above 54,000 is the floor \u2014 breach below means bears retake control. Upside capped at 23,900 (pre-selloff May 8 levels) without fresh catalyst.",
+        "key_assumption": "Day 2 of relief rally. Nifty opened +0.18% at 23731. Brent rebounded to $106.89 (+1.11%) overnight \u2014 partial headwind but still below $108 panic levels. US markets at record highs (S&P 7501, Dow 50063) supportive. IT sector showing buying (Infosys, TCS top gainers). Friday profit-taking risk after +1.18% Thursday rally. BankNifty above 54000 supportive. Key level: 23800 breakout triggers move to 23900+; failure means consolidation in 23650-23800 range.",
         "confidence": 3,
-        "generated_at": "eod_wrap_2026-05-14",
-        "regime": "RELIEF_RALLY_DAY2_BRENT_COOLING",
-        "brent_forecast": "$104-107 range. Central $105. Tail risk: reversal to $108+ if Hormuz tension resumes.",
+        "generated_at": "morning_brief_2026-05-15",
+        "regime": "RELIEF_RALLY_DAY2_BRENT_REBOUND_PARTIAL",
+        "brent_forecast": "$105-108 range. Central $107. Rebounded from $105.49 to $106.89. Hormuz/Iran risk persists.",
         "scenarios": [
           {
             "name": "FOLLOW_THROUGH_RALLY (40%)",
-            "description": "Brent stays below $106, Trump-Xi positive cues. Nifty drifts to 23,800-23,900. Close +0.3-0.6%.",
-            "nifty_close_range": "23,750-23,900"
+            "description": "Nifty breaks 23800, IT buying continues, BankNifty holds 54000+. Close 23800-23900 (+0.3-0.6%).",
+            "nifty_close_range": "23800-23900"
           },
           {
             "name": "CHOPPY_CONSOLIDATION (30%)",
-            "description": "Friday profit-taking vs momentum. Nifty oscillates 23,600-23,750. Close flat to +0.2%.",
-            "nifty_close_range": "23,600-23,750"
+            "description": "Brent rebound to $107 caps gains. Friday profit-taking. Nifty oscillates 23650-23800. Close flat to +0.2%.",
+            "nifty_close_range": "23680-23800"
           },
           {
             "name": "PROFIT_TAKING_DIP (20%)",
-            "description": "Brent rebounds or Trump-Xi disappointment. Nifty retests 23,550-23,600. Close -0.1 to -0.4%.",
-            "nifty_close_range": "23,500-23,650"
+            "description": "Friday selloff intensifies, Brent pushes toward $108. Nifty retests 23600-23650. Close -0.1 to -0.3%.",
+            "nifty_close_range": "23550-23680"
           },
           {
-            "name": "EXTENDED_RALLY (10%)",
-            "description": "Major positive catalyst (Iran deal, trade deal). Nifty breaks 23,900 toward 24,000+. Close +0.7-1.2%.",
-            "nifty_close_range": "23,900-24,100"
+            "name": "BREAKOUT_RALLY (10%)",
+            "description": "Trump-Xi concrete deal or Iran breakthrough. Nifty breaks 23900 toward 24000+. Close +0.7-1.0%.",
+            "nifty_close_range": "23900-24100"
           }
         ]
       },
       "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 EOD wrap 2026-05-15"
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-05-15"
       },
       "actual": {
-        "nifty_open": null,
+        "nifty_open": 23731.4,
         "nifty_close": null,
         "nifty_change_pct": null
       },
