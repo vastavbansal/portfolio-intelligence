@@ -1,8 +1,8 @@
 {
-  "fetched_at": "2026-05-17T10:44:04.624489+00:00",
-  "fetched_at_ist": "2026-05-17 16:14 IST",
+  "fetched_at": "2026-05-17T18:00:04.991729+00:00",
+  "fetched_at_ist": "2026-05-17 23:47 IST",
   "coverage": {
-    "nse_stocks_fetched": 88,
+    "nse_stocks_fetched": 81,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
@@ -693,26 +693,12 @@
       "change_pct": 0.77,
       "volume": 3729249
     },
-    "MARUTI.NS": {
-      "price": 13221.0,
-      "prev_close": 13075.0,
-      "change": 146.0,
-      "change_pct": 1.12,
-      "volume": 268206
-    },
     "AXISBANK.NS": {
       "price": 1244.8,
       "prev_close": 1254.6,
       "change": -9.8,
       "change_pct": -0.78,
       "volume": 4805485
-    },
-    "BAJFINANCE.NS": {
-      "price": 910.45,
-      "prev_close": 912.15,
-      "change": -1.7,
-      "change_pct": -0.19,
-      "volume": 5012279
     },
     "TITAN.NS": {
       "price": 4169.1,
@@ -756,13 +742,6 @@
       "change_pct": -1.75,
       "volume": 284388
     },
-    "ONGC.NS": {
-      "price": 299.35,
-      "prev_close": 300.9,
-      "change": -1.55,
-      "change_pct": -0.52,
-      "volume": 13695307
-    },
     "WIPRO.NS": {
       "price": 190.0,
       "prev_close": 188.3,
@@ -776,13 +755,6 @@
       "change": -35.8,
       "change_pct": -3.24,
       "volume": 6800905
-    },
-    "JSWSTEEL.NS": {
-      "price": 1278.8,
-      "prev_close": 1296.9,
-      "change": -18.1,
-      "change_pct": -1.4,
-      "volume": 3871553
     },
     "TECHM.NS": {
       "price": 1370.5,
@@ -804,13 +776,6 @@
       "change": -21.5,
       "change_pct": -2.37,
       "volume": 1437283
-    },
-    "TATACONSUM.NS": {
-      "price": 1234.0,
-      "prev_close": 1228.3,
-      "change": 5.7,
-      "change_pct": 0.46,
-      "volume": 2755516
     },
     "BAJAJFINSV.NS": {
       "price": 1728.1,
@@ -889,13 +854,6 @@
       "change_pct": -0.12,
       "volume": 851184
     },
-    "EICHERMOT.NS": {
-      "price": 7014.5,
-      "prev_close": 7034.0,
-      "change": -19.5,
-      "change_pct": -0.28,
-      "volume": 313548
-    },
     "ADANIENT.NS": {
       "price": 2716.0,
       "prev_close": 2712.9,
@@ -944,13 +902,6 @@
       "change": -4.29,
       "change_pct": -1.94,
       "volume": 33231023
-    },
-    "TRENT.NS": {
-      "price": 4101.3,
-      "prev_close": 4132.4,
-      "change": -31.1,
-      "change_pct": -0.75,
-      "volume": 683781
     },
     "BEL.NS": {
       "price": 423.65,
