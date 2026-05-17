@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-05-17T07:30:05.199045+00:00",
-  "fetched_at_ist": "2026-05-17 13:16 IST",
+  "fetched_at": "2026-05-17T10:44:04.624489+00:00",
+  "fetched_at_ist": "2026-05-17 16:14 IST",
   "coverage": {
-    "nse_stocks_fetched": 81,
+    "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 32
+    "portfolio_stocks_with_pnl": 34
   },
   "indices": {
     "NIFTY_50": {
@@ -44,19 +44,19 @@
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 77.16,
-      "prev_close": 77.16,
+      "price": 77.55,
+      "prev_close": 77.55,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 91,
+      "volume": 75013,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 105.42,
-      "prev_close": 105.42,
+      "price": 101.02,
+      "prev_close": 101.02,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 173862,
+      "volume": 182693,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
@@ -525,6 +525,22 @@
       "pnl": -1572.0,
       "pnl_pct": -2.2
     },
+    "NHPC": {
+      "price": 76.79,
+      "prev_close": 78.45,
+      "change": -1.66,
+      "change_pct": -2.12,
+      "volume": 8674290,
+      "symbol": "NHPC",
+      "yahoo_ticker": "NHPC.NS",
+      "broker": "Groww",
+      "avg_buy": 104.28,
+      "qty": 400,
+      "invested": 41712.0,
+      "market_value": 30716.0,
+      "pnl": -10996.0,
+      "pnl_pct": -26.36
+    },
     "PI INDUSTRIES": {
       "price": 3114.9,
       "prev_close": 3103.6,
@@ -556,6 +572,22 @@
       "market_value": 48110.4,
       "pnl": -2257.2,
       "pnl_pct": -4.48
+    },
+    "SATIA IND.": {
+      "price": 63.8,
+      "prev_close": 64.95,
+      "change": -1.15,
+      "change_pct": -1.77,
+      "volume": 71658,
+      "symbol": "SATIA IND.",
+      "yahoo_ticker": "SATIA.NS",
+      "broker": "Groww",
+      "avg_buy": 147.6,
+      "qty": 65,
+      "invested": 9594.0,
+      "market_value": 4147.0,
+      "pnl": -5447.0,
+      "pnl_pct": -56.78
     },
     "SUZLON (Groww)": {
       "price": 53.84,
@@ -640,6 +672,13 @@
       "change_pct": 1.0,
       "volume": 19461437
     },
+    "INFY.NS": {
+      "price": 1119.0,
+      "prev_close": 1095.0,
+      "change": 24.0,
+      "change_pct": 2.19,
+      "volume": 17482450
+    },
     "LT.NS": {
       "price": 3909.0,
       "prev_close": 3940.4,
@@ -716,6 +755,13 @@
       "change": -205.0,
       "change_pct": -1.75,
       "volume": 284388
+    },
+    "ONGC.NS": {
+      "price": 299.35,
+      "prev_close": 300.9,
+      "change": -1.55,
+      "change_pct": -0.52,
+      "volume": 13695307
     },
     "WIPRO.NS": {
       "price": 190.0,
@@ -808,6 +854,13 @@
       "change_pct": 0.62,
       "volume": 151714
     },
+    "BPCL.NS": {
+      "price": 284.45,
+      "prev_close": 295.0,
+      "change": -10.55,
+      "change_pct": -3.58,
+      "volume": 14828416
+    },
     "COALINDIA.NS": {
       "price": 462.2,
       "prev_close": 454.05,
@@ -891,6 +944,13 @@
       "change": -4.29,
       "change_pct": -1.94,
       "volume": 33231023
+    },
+    "TRENT.NS": {
+      "price": 4101.3,
+      "prev_close": 4132.4,
+      "change": -31.1,
+      "change_pct": -0.75,
+      "volume": 683781
     },
     "BEL.NS": {
       "price": 423.65,
@@ -1088,6 +1148,13 @@
       "change_pct": -0.21,
       "volume": 4344049
     },
+    "NHPC.NS": {
+      "price": 76.79,
+      "prev_close": 78.45,
+      "change": -1.66,
+      "change_pct": -2.12,
+      "volume": 8674290
+    },
     "PREMEXPLN.NS": {
       "price": 523.3,
       "prev_close": 544.1,
@@ -1144,6 +1211,13 @@
       "change_pct": 0.36,
       "volume": 218651
     },
+    "SATIA.NS": {
+      "price": 63.8,
+      "prev_close": 64.95,
+      "change": -1.15,
+      "change_pct": -1.77,
+      "volume": 71658
+    },
     "GOLDBEES.NS": {
       "price": 129.41,
       "prev_close": 131.78,
@@ -1157,6 +1231,13 @@
       "change": -21.08,
       "change_pct": -7.78,
       "volume": 66470348
+    },
+    "NIFTYBEES.NS": {
+      "price": 267.3,
+      "prev_close": 268.09,
+      "change": -0.79,
+      "change_pct": -0.29,
+      "volume": 7938250
     }
   }
 }

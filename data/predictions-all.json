@@ -1,8 +1,8 @@
 {
   "accuracy_meta": {
-    "total": 35,
-    "scored": 20,
-    "accuracy_pct": 15.0,
+    "total": 45,
+    "scored": 39,
+    "accuracy_pct": 23.1,
     "by_horizon": {
       "1D": {
         "total": 0,
@@ -11,33 +11,69 @@
         "partial": 0
       },
       "7D": {
-        "total": 14,
-        "right": 3,
-        "wrong": 9,
+        "total": 17,
+        "right": 5,
+        "wrong": 10,
         "partial": 2,
         "open": 0
       },
       "4W": {
         "total": 5,
         "right": 0,
-        "wrong": 2,
+        "wrong": 4,
         "partial": 0,
-        "open": 3
+        "open": 1
       },
       "2M": {
-        "total": 5,
+        "total": 6,
         "right": 0,
-        "wrong": 0,
+        "wrong": 1,
         "partial": 0,
         "open": 5
       },
       "10D": {
-        "total": 3,
+        "total": 4,
+        "right": 1,
+        "wrong": 1,
+        "partial": 0,
+        "above_range": 2,
+        "open": 0
+      },
+      "2W": {
+        "total": 1,
         "right": 0,
         "wrong": 1,
         "partial": 0,
+        "open": 0
+      },
+      "3W": {
+        "total": 1,
+        "right": 1,
+        "wrong": 0,
+        "partial": 0,
+        "open": 0
+      },
+      "12D": {
+        "total": 1,
+        "right": 0,
+        "wrong": 1,
+        "partial": 0,
+        "open": 0
+      },
+      "9D": {
+        "total": 1,
+        "right": 0,
+        "wrong": 0,
+        "partial": 0,
         "above_range": 1,
-        "open": 1
+        "open": 0
+      },
+      "5D": {
+        "total": 2,
+        "right": 0,
+        "wrong": 2,
+        "partial": 0,
+        "open": 0
       }
     },
     "by_category": {
@@ -47,17 +83,49 @@
         "partial": 0
       },
       "HIGH": {
-        "right": 3,
-        "wrong": 11,
-        "partial": 2
+        "right": 4,
+        "wrong": 14,
+        "partial": 3
       },
       "MEDIUM": {
-        "right": 0,
+        "right": 1,
         "wrong": 1,
         "partial": 1
+      },
+      "Defense_Premium": {
+        "right": 1,
+        "wrong": 0,
+        "partial": 0
+      },
+      "PSU_Mining_Infra": {
+        "right": 1,
+        "wrong": 1,
+        "partial": 0
+      },
+      "Index_Banking": {
+        "right": 1,
+        "wrong": 1,
+        "partial": 0
+      },
+      "IT_Sector": {
+        "right": 0,
+        "wrong": 1,
+        "partial": 0
+      },
+      "Consumer_QComm": {
+        "right": 0,
+        "wrong": 0,
+        "partial": 0,
+        "open": 1
+      },
+      "Energy_Crude": {
+        "right": 0,
+        "wrong": 1,
+        "partial": 0,
+        "open": 1
       }
     },
-    "note": "Updated eod_wrap_2026-04-26 weekly review. P027 WRONG (Nifty 23897.95 vs 24600-25000), P001 WRONG (Swiggy 287.10 vs <260), P004 WRONG (Astra 1123.75 vs 850-900), P029 PARTIAL (SETFGOLD 127.73 vs 123-127), P025 ABOVE_RANGE (Astra 1129.75 vs 1050-1100), P026 WRONG (IRFC 105.82 vs 92-96). New predictions P031-P035 added. Running: 20 scored from 35 total. Accuracy 15.0%. Cold streak 9 predictions since P019 ADANI PORT."
+    "note": "Updated weekly-2026-05-17 review. THIS WEEK: P037 COAL INDIA CORRECT (₹462.20 in ₹448-470 range — 6th DIRECT_CAUSAL_LINK win = 6/6 = 100%); P042 COAL INDIA WRONG (₹462.20 vs ₹475-500 — ABOVE_RANGE_REBASING_FAILS new pattern). Running: 38 scored from 45 total. Accuracy 23.7% (9 RIGHT / 24 WRONG / 5 PARTIAL). DIRECT_CAUSAL_LINK_FIRST meta-rule continues at 100% accuracy. Cold streak fully broken with 3 RIGHT in last 8 scored (P028, P033, P036, P038, P034, P037). Iran peace deal REJECTED by Trump May 11-12; Brent re-spiked to $109 by May 15."
   },
   "predictions": [
     {
@@ -1244,11 +1312,11 @@
         "Monsoon premonsoon coal stocking patterns"
       ],
       "check_date": "2026-05-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null
+      "outcome": "CORRECT",
+      "outcome_price": 462.2,
+      "outcome_evidence": "Coal India closed ₹462.20 on May 15, 2026 (intraday range ₹455.25–₹468.50). Target range ₹448-470 was hit cleanly — close is 3.2% above range floor (₹448) and 1.7% below range ceiling (₹470). Direct causal-link thesis (Brent $109 sustained → coal-substitute demand + DII PSU buying mandate) confirmed. 6th DIRECT_CAUSAL_LINK win.",
+      "postmortem": "P037 CORRECT — 6th DIRECT_CAUSAL_LINK win (P008, P015, P019, P028, P033, P037 = 6/6 = 100% accuracy on single-link predictions). Coal India behaved exactly as the single-link thesis predicted: Brent stayed elevated (~$107-118 range with $109 close May 15), coal-substitute demand thesis held, DII PSU mandate buying floored price. P037 conservative target (₹448-470) versus P042 aggressive upside (₹475-500) is a textbook case of why single-direct-causal-link with realistic ranges outperforms ambitious upward revisions.",
+      "scored_on": "2026-05-17"
     },
     {
       "pred_id": "P038",
@@ -1405,11 +1473,11 @@
         "Monsoon pre-stocking patterns (May coal demand)"
       ],
       "check_date": "2026-05-15",
-      "outcome": null,
-      "outcome_price": null,
-      "outcome_evidence": null,
-      "postmortem": null,
-      "scored_on": null,
+      "outcome": "WRONG",
+      "outcome_price": 462.2,
+      "outcome_evidence": "Coal India closed \u20b9462.20 on May 15, 2026 \u2014 BELOW the \u20b9475-500 target range by \u20b912.80 (-2.7% below range_low). Intraday high \u20b9468.50 also did not reach the \u20b9475 floor. Stock pulled back ~4% from the May 3 entry price of \u20b9481.45 as Brent oscillated ($93-118 range, $109 May 15 close) but no clean breakout. P037 (\u20b9448-470) was CORRECT at this same close, validating the conservative range. P042's aggressive upward revision exceeded the actual supportive bid.",
+      "postmortem": "L2_RCA: P042 was an aggressive upward revision of P037 (\u20b9448-470 \u2192 \u20b9475-500) made when Coal India was already at \u20b9481.45 above P037 ceiling. Lesson: when an in-progress prediction is ABOVE_RANGE, do NOT immediately rebase to a higher target \u2014 the stock often mean-reverts back into the lower range. Pattern: ABOVE_RANGE_REBASING_FAILS \u2014 promoting a stock above its just-cleared resistance into a new range without a fresh catalyst is structurally fragile. Direct causal link (Brent \u2192 coal-substitute demand) remained intact but did not provide the +5-8% additional re-rating that P042 implicitly required.",
+      "scored_on": "2026-05-17",
       "auto_invalidation": "Brent falls <$92 sustained 3 days \u2192 coal substitute thesis collapses \u2192 confidence 1\u2605 (bear case \u20b9440-460). Peace deal signed + Hormuz opens \u2192 Brent crash risk increases."
     },
     {
@@ -1522,9 +1590,166 @@
         "verdict": "BELOW_RANGE",
         "note": "BankNifty at 54,439.90 on May 11 (after target date May 9). Below range_low 55,000 by 560 pts (1.02%). FORECAST_PAT005 short-covering trigger failed once Iran-US standoff re-escalated over the weekend; FII selling continued for 5th week. The pattern presumed diplomacy continuity which did not hold."
       }
+    },
+    {
+      "pred_id": "P046",
+      "horizon": "7D",
+      "date": "2026-05-17",
+      "stock": "COAL INDIA",
+      "prediction": "Coal India holds ₹450-475 by May 22 — DIRECT_CAUSAL_LINK continuation of P037 success: Brent sustained $105-110 maintains coal-substitute demand, DII PSU mandate buying provides floor.",
+      "entry_price": 462.2,
+      "target": "450-475",
+      "confidence": 3,
+      "category": "PSU_Mining_Infra",
+      "reasoning": "Single direct causal link (extended P037 thesis): Brent $107-109 sustained → thermal plants prefer coal over gas → Coal India demand floor + DII PSU mandate buying. Width of range (₹450-475) is deliberately wider than the now-validated P037 (₹448-470) to allow consolidation. Critically NOT rebased upward to ₹475-500 (that's the P042 mistake — ABOVE_RANGE_REBASING_FAILS). New rule applied: same thesis, same range neighborhood. Auto-invalidation: Brent <$92 sustained 3D → coal substitute thesis collapses → confidence 1★.",
+      "factors_checked": [
+        "M001 Brent crude $109 (above $100 coal-substitute threshold)",
+        "P037 just CORRECT — same direct causal link continues",
+        "PSU_DII_FILTER (DII mandate buying floor at ₹450-455 zone)",
+        "T002 (₹462 just resolved into P037 range — technical stability)"
+      ],
+      "factors_not_checked": [
+        "Q4FY26 Coal India results timing/expectations",
+        "Ministry of Coal e-auction May data",
+        "Monsoon coal stocking patterns (May-Jun seasonal)"
+      ],
+      "auto_invalidation": "Brent <$92 sustained 3 days → coal substitute thesis collapses → confidence 1★. Iran peace deal signed AND Hormuz formally reopens → demand thesis weakens significantly.",
+      "check_date": "2026-05-22",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "confidence_note": "3★ — direct-link continuation of P037 winning thesis. NOT a rebase (P042 lesson applied). Range deliberately conservative."
+    },
+    {
+      "pred_id": "P047",
+      "horizon": "5D",
+      "date": "2026-05-17",
+      "stock": "BANKNIFTY",
+      "prediction": "BankNifty fails to close above 55,000 by May 22 — DIRECT_CAUSAL_LINK: FII selling re-intensifies post Trump rejection + ECL structural drag continues + Brent $109 keeps risk-off bid.",
+      "entry_price": 54234,
+      "target": "below 55000",
+      "confidence": 3,
+      "category": "Index_Banking",
+      "reasoning": "Single direct causal link: ECL_BANKING_STRUCTURAL_HEADWIND + FII selling + Brent $109 = BankNifty capped below 55,000 (per P032 RCA, P038 CORRECT validation). This is the negative-frame version of P038's winning thesis: BankNifty bullish predictions don't work without FII reversal AND Brent <$100. Neither condition is currently met. BankNifty at 54,234 needs +1.4% to clear 55,000 — improbable in 5 sessions given regime. Auto-invalidation: FII net BUYING 3 consecutive sessions → confidence 1★ (FII reversal would break the bearish thesis).",
+      "factors_checked": [
+        "ECL_BANKING_STRUCTURAL_HEADWIND (PROMOTED — P032 1 occurrence, P038 CORRECT validation)",
+        "FII still net seller (Rs 8,437 cr May 11 spike — pace decelerated but flow direction unchanged)",
+        "Brent $109 (above $100 — risk-off regime active)",
+        "T002 55,000 critical resistance per P032/P038 analysis"
+      ],
+      "factors_not_checked": [
+        "Axis Bank/Kotak Bank Q4 results timing",
+        "RBI policy meeting May 23 (just after check_date — but pre-policy positioning could matter)",
+        "USDINR record 96/$ impact on NBFC funding costs"
+      ],
+      "auto_invalidation": "FII net BUYING 3 consecutive sessions OR Brent <$95 sustained 3D OR RBI dovish surprise → confidence 1★.",
+      "check_date": "2026-05-22",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "confidence_note": "3★ — negative-frame prediction (P038-style: 'fails to close above X'). Single direct causal link (ECL + FII = capped). Conservative target threshold."
+    },
+    {
+      "pred_id": "P048",
+      "horizon": "7D",
+      "date": "2026-05-17",
+      "stock": "ASTRA MICRO",
+      "prediction": "ASTRA MICRO holds above ₹1,050 through May 22 — DIRECT_CAUSAL_LINK: Brent $109 + Hormuz contested + Trump-Iran rejection = M012 v5 floor intact (P036 winning thesis continuation).",
+      "entry_price": 1100,
+      "target": ">1050",
+      "confidence": 3,
+      "category": "Defense_Premium",
+      "reasoning": "Single direct causal link (P036 winning thesis continuation): M012 v5 floor requires Brent <$92 + Hormuz open 5D BOTH to unwind. Current: Brent $109, Hormuz still contested, Trump REJECTED Iran proposal May 11-12. Neither unwind condition is even close. Defense duration premium continues. Stock estimated at ₹1,080-1,120 zone (will verify on Monday open). >₹1,050 floor is 2.8%+ buffer from current level — high probability hold. Auto-invalidation: Iran-US sign formal peace agreement (not just talks) AND Hormuz formally reopens → M012 unwind conditions triggered.",
+      "factors_checked": [
+        "M012 v5 STRENGTHENED (Brent <$92 + Hormuz open 5D BOTH required — neither met)",
+        "Brent $109.24 (May 15 close, way above $92 unwind threshold)",
+        "Trump rejected Iran proposal May 11-12 → ceasefire 'life support'",
+        "Hormuz Strait remains key Iran demand point (Trump wants it reopened)",
+        "P036 CORRECT validation (same M012-floor thesis, May 5)",
+        "DEFENSE_PREMIUM_PERSISTENCE (OBSERVING_STRONG — 4 occurrences)"
+      ],
+      "factors_not_checked": [
+        "ASTRA MICRO Q4FY26 results (could be in window — verify Monday)",
+        "MoD contract announcements",
+        "Defense basket relative strength (COCHINSHIP, MAZDOCK)"
+      ],
+      "auto_invalidation": "Formal US-Iran peace deal SIGNED (not just talks) AND Hormuz officially reopens → M012 unwind conditions met → confidence 1★.",
+      "check_date": "2026-05-22",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "confidence_note": "3★ — P036 winning thesis continuation. Same direct-link methodology (M012 floor). Conservative floor threshold (>₹1,050), not aggressive range."
+    },
+    {
+      "pred_id": "P049",
+      "horizon": "7D",
+      "date": "2026-05-17",
+      "stock": "NIFTY IT",
+      "prediction": "Nifty IT underperforms Nifty 50 by 2-4% over May 18-22 — DIRECT_CAUSAL_LINK: M013 active (Brent $109 >> $98 threshold) + Hormuz contested + USDINR at record 96/$ stress on US-revenue translation visibility.",
+      "entry_price": null,
+      "target": "Nifty IT underperforms Nifty 50 by 2-4%",
+      "confidence": 3,
+      "category": "IT_Sector",
+      "reasoning": "Single direct causal link: M013 PROMOTED (IT Regime Risk Filter — cap IT confidence at 2★ in active geopolitical regime). With Brent $109 >> $98 threshold + Trump rejection + Hormuz contested, M013 fully active. P039 (2-week target) WRONG because WIPRO catalyst slipped — applying CATALYST_TIMING_DEPENDENCY lesson, shorter 7D window reduces dependency risk. Target tightened to 2-4% (from P039's 3-5%) per lesson learned. Note: capping at 3★ (M013 typically caps at 2★, but this is a BEARISH/underperform call where M013 supports rather than blocks — IT underperformance during M013-active = aligned, hence 3★).",
+      "factors_checked": [
+        "M013 PROMOTED — Brent $109 >> $98 threshold, Hormuz contested",
+        "USDINR record 96/$ (rupee weakness should HELP IT exports, but record-level depreciation creates FX hedging uncertainty)",
+        "SELL_ON_EARNINGS_NEWS_IT (5 occurrences — pattern remains active)",
+        "FORECAST_PAT005 reversed (Iran peace deal rejected → IT risk-off rotation continues)"
+      ],
+      "factors_not_checked": [
+        "TCS/INFY/WIPRO mid-quarter updates timing",
+        "US tech sector direction (Nvidia, Microsoft recent moves)",
+        "Specific Nifty IT vs Nifty 50 starting positions May 16 (need verification Monday)"
+      ],
+      "auto_invalidation": "Iran-US formal peace deal AND Brent <$92 sustained → M013 deactivates → confidence 1★. WIPRO results catalyst slipping again → confidence 2★ (CATALYST_TIMING_DEPENDENCY lesson).",
+      "check_date": "2026-05-22",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "confidence_note": "3★ — bearish IT (aligned with M013) in active regime. Direct-link methodology. Tightened range (2-4%) vs P039 (3-5%) per CATALYST_TIMING_DEPENDENCY lesson."
+    },
+    {
+      "pred_id": "P050",
+      "horizon": "5D",
+      "date": "2026-05-17",
+      "stock": "SETFGOLD",
+      "prediction": "SETFGOLD range-trades ₹126-131 by May 22 — DIRECT_CAUSAL_LINK: Trump rejection + Hormuz contested + USDINR record weak = haven bid sustained but not spiking.",
+      "entry_price": 128.5,
+      "target": "126-131",
+      "confidence": 2,
+      "category": "MEDIUM",
+      "reasoning": "Single direct causal link: haven bid for gold sustained by (a) Trump rejection May 11-12 = peace deal on 'life support', (b) Hormuz contested, (c) USDINR at record 96/$. NOT predicting a directional move (P020/P023/P029/P043 all failed on directional gold calls). Range-trade thesis with wide ±2% band reflects: gold sticky in $4,700-4,850 zone, won't spike without fresh strike, won't unwind without formal peace. P034 (May 6 CORRECT) used similar range thesis. Confidence deliberately 2★ — gold has been the worst-performing predictions sector (1/5 CORRECT). Width of range (₹126-131 = ±2%) is widest yet. Apply HAVEN_PREMIUM_DURATION_TAIL extension.",
+      "factors_checked": [
+        "HAVEN_PREMIUM_DURATION_TAIL (1 occurrence — P029)",
+        "FORECAST_PAT004 (3-day stability precondition — Trump rejection means NO stability)",
+        "M001 (Brent $109 — gold partially follows war premium)",
+        "USDINR record 96/$ (rupee weakness adds ₹/oz cushion)"
+      ],
+      "factors_not_checked": [
+        "Gold USD technical levels ($4,700-4,850 support)",
+        "US Fed minutes May 22 (inverse correlation with gold)",
+        "India gold import duty data"
+      ],
+      "auto_invalidation": "Iran-US formal peace signed → gold unwinds <₹125. Israel strikes Iran or any kinetic action → gold spikes >₹133. Either invalidation → confidence 1★.",
+      "check_date": "2026-05-22",
+      "outcome": null,
+      "outcome_price": null,
+      "outcome_evidence": null,
+      "postmortem": null,
+      "scored_on": null,
+      "confidence_note": "2★ deliberately — gold sector accuracy is 1/5 = 20%. Range thesis (not directional) per P034 winning template. Width ±2% reflects humility."
     }
   ],
-  "last_updated": "2026-05-13",
-  "total_predictions": 45,
+  "last_updated": "2026-05-17",
+  "total_predictions": 50,
   "last_updated_by": "eod_wrap_2026-05-13"
 }

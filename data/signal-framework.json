@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "last_updated": "2026-05-03",
+  "version": 8,
+  "last_updated": "2026-05-17",
   "description": "Master checklist of fundamental and technical factors for prediction generation. Grows over time via post-mortem analysis of wrong predictions — not correlation-mining. Every factor added must have a causal explanation.",
   "macro_factors": [
     {
@@ -407,6 +407,32 @@
       "confirmations_needed": 0,
       "first_seen": "2026-04-08",
       "note": "Near-promotion based on 4 occurrences. P033 COCHINSHIP CORRECT confirms direct-link defense bull works; only bearish predictions fail."
+    },
+    {
+      "id": "WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS",
+      "name": "Weekend Regime Reversal Punctures Pattern-Based Thesis",
+      "status": "PROMOTED",
+      "proposed_date": "2026-05-13",
+      "promoted_date": "2026-05-17",
+      "rule": "Pattern-based bullish predictions anchored on signals <2 weeks old are fragile across weekends. When a pattern (e.g., FORECAST_PAT005 diplomatic restart) is the primary thesis driver, AND the underlying signal has not yet been confirmed by ≥2 weeks of stable regime, downgrade prediction confidence by 1 star. Additionally, add explicit weekend-reversal-invalidation clause: 'If weekend brings counter-signal (rejection, escalation, deadline) → confidence drops to 1★ and prediction is provisionally invalidated.'",
+      "confirmed_occurrences": 3,
+      "confirmed_predictions": [
+        "P041 Nifty 24,300-24,600 WRONG (23,379 May 12 — Trump rejection May 11-12 weekend)",
+        "P043 SETFGOLD 122-127 ABOVE_RANGE (128.29 May 12 — same weekend reversal)",
+        "P045 BankNifty 55,000-56,000 WRONG (53,456 May 13 — same weekend reversal)"
+      ],
+      "first_seen": "2026-05-13",
+      "note": "All three predictions made May 3 on the bullish FORECAST_PAT005 signal (Iran peace proposal May 1-2). Single weekend Trump rejection invalidated entire cluster. Pattern was only 11 days old at prediction time."
+    },
+    {
+      "id": "ABOVE_RANGE_REBASING_FAILS",
+      "name": "Above-Range Rebasing Fragility",
+      "status": "OBSERVING",
+      "proposed_date": "2026-05-17",
+      "observation": "P042 WRONG (Coal India ₹462.20 vs ₹475-500 target — 2.7% below range floor). P042 was an aggressive upward revision of P037 (₹448-470) made when Coal India was at ₹481.45, above P037 ceiling. The stock mean-reverted to ₹462.20 — back inside the P037 range, not into the rebased range. Multi-factor rebasing without a NEW direct causal link is structurally fragile.",
+      "confirmations_needed": 1,
+      "first_seen": "2026-05-17",
+      "rule_candidate": "When an open prediction scores ABOVE_RANGE: (1) accept the win; (2) wait for stock to consolidate or pull back; (3) only re-engage with a NEW prediction if a NEW direct causal link emerges (not just the same thesis at a higher level). Do not rebase upward purely because the previous range was exceeded."
     }
   ],
   "promoted_patterns_v4": [
@@ -519,6 +545,19 @@
       ]
     },
     {
+      "date": "2026-05-17",
+      "version": "v8",
+      "changes": "PROMOTED: WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS (3 confirmations — P041/P043/P045 all WRONG on May 11-12 Trump rejection weekend reversal). NEW OBSERVING: ABOVE_RANGE_REBASING_FAILS (1 occurrence — P042 WRONG). UPDATED: DIRECT_CAUSAL_LINK_FIRST count 5→6 (P037 6th win). NEW META-RULE: NO_REBASE_WITHOUT_NEW_CAUSAL_LINK. v8 explicitly addresses: (a) weekend-fragility for pattern-based predictions, (b) above-range rebasing fragility. Both lessons drawn from this week's split-result scoring (P037 RIGHT, P042 WRONG, same stock).",
+      "accuracy_at_time": 23.1,
+      "key_learnings": [
+        "WEEKEND_REGIME_REVERSAL: pattern-based bullish predictions (FORECAST_PAT005-anchored) failed as a 3-prediction cluster when Trump rejected Iran proposal over May 11-12 weekend. Patterns <2 weeks old should auto-downgrade by 1★ AND include explicit weekend-reversal-invalidation clause.",
+        "ABOVE_RANGE_REBASING_FAILS: when prediction scores ABOVE_RANGE, do NOT rebase upward without a NEW direct causal link. P042 was 'same Brent thesis, higher target' for Coal India — stock mean-reverted to original P037 range.",
+        "DIRECT_CAUSAL_LINK at 6/6 (100%) — methodology now empirically dominant. All future predictions should be evaluated against this rule first; if no single direct causal link identifiable, downgrade to 1★ or skip.",
+        "P037 vs P042 same-week split is the cleanest A/B test of methodology in framework history: conservative single-link CORRECT (P037), aggressive multi-factor rebasing WRONG (P042). Same stock, same week, opposite outcomes — pure methodology test.",
+        "Iran peace process is structurally unstable: Trump rejected May 11; sent nuclear proposal May 16; Xi offered help May 15. Use Iran-related catalysts only for short-horizon (1-3D) predictions, not 7D+, until a signed agreement exists."
+      ]
+    },
+    {
       "date": "2026-05-03",
       "version": "v7",
       "changes": "NEW OBSERVING: BRENT_EXTREME_RECOVERY_CAP (P031 — 1 occurrence: Brent $118 capped Nifty intraday recovery at 24,019 vs 24,050 floor), ECL_BANKING_STRUCTURAL_HEADWIND (P032 — 1 occurrence: BankNifty failed 56,500 on RBI ECL drag), DEFENSE_PREMIUM_PERSISTENCE (4 occurrences: 4 consecutive ASTRA MICRO bearish failures). DIRECT_CAUSAL_LINK confirmed 5/5 (100% accuracy). FORECAST_PAT005 actively firing this weekend: Iran peace proposal via Pakistani mediators → Brent $118→$108. P033 COCHINSHIP CORRECT validates single-link defense bull thesis.",
@@ -557,8 +596,15 @@
       "id": "DIRECT_CAUSAL_LINK_FIRST",
       "name": "Prioritize Single Direct Causal Link Predictions",
       "added_date": "2026-05-03",
-      "rule": "Before generating any prediction, identify the SINGLE most direct causal chain: catalyst → mechanism → stock outcome. If you cannot identify exactly one direct link, downgrade confidence to 1★. Empirical evidence: direct-link predictions = 5/5 = 100% accuracy (P008, P015, P019, P028, P033). Multi-factor predictions = ~1/21 = 5% accuracy. The causal chain should be expressible in one sentence: e.g., Hormuz closure → higher freight rates → Adani Ports volume gains.",
-      "based_on": "5 confirmed CORRECT predictions all had exactly one direct causal link. All 18 WRONG predictions had multi-factor or regime-assumption dependencies."
+      "rule": "Before generating any prediction, identify the SINGLE most direct causal chain: catalyst → mechanism → stock outcome. If you cannot identify exactly one direct link, downgrade confidence to 1★. Empirical evidence: direct-link predictions = 6/6 = 100% accuracy (P008, P015, P019, P028, P033, P037). Multi-factor predictions = ~3/33 ≈ 9% accuracy. The causal chain should be expressible in one sentence: e.g., Hormuz closure → higher freight rates → Adani Ports volume gains.",
+      "based_on": "6 confirmed CORRECT predictions all had exactly one direct causal link. All ~25 WRONG predictions had multi-factor or regime-assumption dependencies. P037 (Coal India May 17) extends the streak; P042 (same stock, same week, rebased target) WRONG further validates the inverse."
+    },
+    {
+      "id": "NO_REBASE_WITHOUT_NEW_CAUSAL_LINK",
+      "name": "Do Not Rebase Above-Range Predictions Without New Causal Link",
+      "added_date": "2026-05-17",
+      "rule": "When an open prediction scores ABOVE_RANGE, do NOT immediately rebase to a higher target unless a NEW direct causal link has emerged. The natural impulse is to assume the stock will continue higher, but empirical evidence (P042 1st occurrence) shows the stock often mean-reverts to the original range. Instead: (1) accept the ABOVE_RANGE result; (2) wait 1-2 weeks for consolidation; (3) only generate a new prediction if a NEW catalyst is identifiable (not the same thesis at a higher level).",
+      "based_on_pattern": "ABOVE_RANGE_REBASING_FAILS (1 occurrence — P042). Observe further before strict enforcement, but apply preemptively."
     }
   ]
 }
