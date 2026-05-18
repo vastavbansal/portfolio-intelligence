@@ -1,11 +1,11 @@
 {
   "schema_version": "1.1",
-  "description": "Dynamic bridge — 2026-05-17 weekly review — Iran peace rejected, Brent volatile $99-109, Trump-Xi summit, framework v8 promoted",
-  "last_updated_by": "weekly_intelligence_report_2026-05-17",
-  "last_updated_at": "2026-05-17T18:00:00",
+  "description": "Dynamic bridge \u2014 2026-05-18 morning brief \u2014 Iran peace failure -> gap-down -1.22%, Nifty at major support 23,356",
+  "last_updated_by": "morning_brief_2026-05-18",
+  "last_updated_at": "2026-05-18T09:30:00",
   "market_regime": {
     "label": "RE_ESCALATION_FRAGILE_PEACE_BRENT_VOLATILE",
-    "key_risk": "Trump rejected Iran peace proposal May 11-12 → Brent re-spiked $99→$109 (+10% in 4 sessions). Trump sent nuclear proposal May 16; Xi offered diplomatic help. Regime is FRAGILE — neither full re-escalation nor peace deal. Brent oscillation $105-110 is the working range. USDINR record 96/$ adds rupee depreciation stress.",
+    "key_risk": "Trump rejected Iran peace proposal May 11-12 \u2192 Brent re-spiked $99\u2192$109 (+10% in 4 sessions). Trump sent nuclear proposal May 16; Xi offered diplomatic help. Regime is FRAGILE \u2014 neither full re-escalation nor peace deal. Brent oscillation $105-110 is the working range. USDINR record 96/$ adds rupee depreciation stress.",
     "dominant_risk": "IRAN_NUCLEAR_PROPOSAL_REJECTION_OR_ACCEPTANCE",
     "crude_brent_last": 109.24,
     "crude_brent_change_pct": 3.33,
@@ -18,9 +18,9 @@
     "banknifty_close": 54234.0,
     "banknifty_change_pct": 0.19,
     "usdinr": 96.0,
-    "vix_level": "Elevated — VIX likely 18-22 zone given Iran uncertainty",
-    "fii_stance": "Selling decelerating (Rs 8,438 cr May 11 → Rs 187 cr May 14) but flow direction unchanged",
-    "dii_stance": "Strong floor support — Rs 7,990 cr buying May 12 was strongest of month",
+    "vix_level": "Elevated \u2014 VIX likely 18-22 zone given Iran uncertainty",
+    "fii_stance": "Selling decelerating (Rs 8,438 cr May 11 \u2192 Rs 187 cr May 14) but flow direction unchanged",
+    "dii_stance": "Strong floor support \u2014 Rs 7,990 cr buying May 12 was strongest of month",
     "key_sectors_today": {
       "outperformers": [
         "Banking (recovery from May 12 low)",
@@ -32,7 +32,7 @@
         "MRPL/OMCs (Brent $109 = GRM compression)",
         "Friday profit-taking broad-based"
       ],
-      "note": "Coal India closed ₹462.20 — P037 CORRECT. Defense premium intact. MRPL at ₹150 — far from recovery targets."
+      "note": "Coal India closed \u20b9462.20 \u2014 P037 CORRECT. Defense premium intact. MRPL at \u20b9150 \u2014 far from recovery targets."
     }
   },
   "opening_bias": {
@@ -40,85 +40,85 @@
     "gap_pct_estimate": -0.1,
     "gift_nifty_estimate": 23620,
     "key_drivers": [
-      "Brent at $109+ Friday close — overnight crude direction determines gap",
-      "Trump nuclear proposal to Iran (May 16) — response could shift regime sharply Monday",
-      "USDINR record 96/$ — rupee weakness pressure on opening sentiment",
-      "Weekend Israel-Iran kinetic risk — no kinetic action reported but possibility persists",
-      "Friday closed -0.19% at 23,643.50 — momentum slightly negative into weekend"
+      "Brent at $109+ Friday close \u2014 overnight crude direction determines gap",
+      "Trump nuclear proposal to Iran (May 16) \u2014 response could shift regime sharply Monday",
+      "USDINR record 96/$ \u2014 rupee weakness pressure on opening sentiment",
+      "Weekend Israel-Iran kinetic risk \u2014 no kinetic action reported but possibility persists",
+      "Friday closed -0.19% at 23,643.50 \u2014 momentum slightly negative into weekend"
     ],
     "confidence": 2,
     "risks": [
-      "UPSIDE: Iran accepts nuclear proposal weekend → Brent crash $95-100 → gap-up +0.5-1.0% Monday",
-      "DOWNSIDE: Iran rejects nuclear proposal OR Israel strikes → Brent spike $115+ → gap-down -1 to -2%",
-      "DATA: US Fed minutes May 22; RBI policy May 23 — Friday afternoon could see positioning"
+      "UPSIDE: Iran accepts nuclear proposal weekend \u2192 Brent crash $95-100 \u2192 gap-up +0.5-1.0% Monday",
+      "DOWNSIDE: Iran rejects nuclear proposal OR Israel strikes \u2192 Brent spike $115+ \u2192 gap-down -1 to -2%",
+      "DATA: US Fed minutes May 22; RBI policy May 23 \u2014 Friday afternoon could see positioning"
     ],
     "generated_at": "weekly_review_2026-05-17"
   },
   "session_direction": {
-    "direction": "VOLATILE_WITH_NEGATIVE_BIAS",
-    "change_pct_estimate": -0.2,
-    "range_low": 23500,
-    "range_high": 23800,
-    "key_assumption": "Brent $109 sustained = risk-off bias persists. Trump-Iran nuclear proposal response is binary catalyst for week ahead. Without resolution, market oscillates 23,500-23,800 range with bearish skew. Coal India RIGHT validates Brent>$100 thesis — defensive/PSU/coal continue working; IT/banks under pressure.",
-    "confidence": 2,
-    "generated_at": "weekly_review_2026-05-17",
-    "regime": "FRAGILE_PEACE_BRENT_VOLATILE",
-    "brent_forecast": "$105-112 range. Central $108. Iran nuclear proposal response is binary swing factor.",
+    "direction": "BEARISH_WITH_SUPPORT_BOUNCE_ATTEMPT",
+    "change_pct_estimate": -0.9,
+    "range_low": 23250,
+    "range_high": 23500,
+    "key_assumption": "Nifty opened at major support 23,356 (-1.22% gap-down) on US-Iran peace failure + Brent crude spike. The 23,356/23,178 support cluster is critical. Base case: bounce attempt off support but heavy resistance at 23,500 with sellers active. Risk-off regime: defensives/pharma outperform, financials/metals/energy under pressure. Brent sustained $104-109 = ongoing macro headwind. USDINR at record 96+ adds pressure.",
+    "confidence": 3,
+    "generated_at": "morning_brief_2026-05-18",
+    "regime": "IRAN_PEACE_FAILURE_BRENT_REPRICE_DOWNSHOCK",
+    "brent_forecast": "$104-109 sustained. Iran peace process derailment + Hormuz risk = floor at $100. Without explicit de-escalation, Brent does not retrace below $98.",
     "scenarios": [
       {
-        "name": "CONTINUATION_DOWN (40%)",
-        "description": "Iran response negative or delayed, Brent holds $108-112, Friday weakness extends. Nifty closes 23,500-23,650.",
+        "name": "HOLD_SUPPORT_RECOVER_HALF (40%)",
+        "description": "Nifty holds 23,356 support, bounces in afternoon as bargain hunters emerge. Pharma + defensives + selective IT lead. Close 23,400-23,550 (-0.6 to -0.9%).",
+        "nifty_close_range": "23400-23550"
+      },
+      {
+        "name": "CHOPPY_NEGATIVE_DRIFT (30%)",
+        "description": "Range-bound 23,300-23,450 all session. Iran headline risk caps any upside. Selling resumes into close. Close 23,300-23,400 (-1.0 to -1.5%).",
+        "nifty_close_range": "23300-23400"
+      },
+      {
+        "name": "BREAK_DOWN_CASCADE (20%)",
+        "description": "Breaks 23,356 support, triggers stops, slides to 23,178 next support. Brent spikes >$110 intraday. Close 23,150-23,300 (-1.5 to -2.1%). High-VIX day.",
+        "nifty_close_range": "23150-23300"
+      },
+      {
+        "name": "IRAN_HEADLINE_REVERSAL (10%)",
+        "description": "Surprise positive Iran/Hormuz news during session triggers short-covering. Nifty recovers most of gap. Close 23,500-23,650 (-0.3 to flat). Brent crashes back below $103.",
         "nifty_close_range": "23500-23650"
-      },
-      {
-        "name": "CHOPPY_RANGE (35%)",
-        "description": "Iran response ambiguous, Brent oscillates $105-110, Nifty 23,600-23,800. No directional resolution.",
-        "nifty_close_range": "23600-23800"
-      },
-      {
-        "name": "PEACE_BREAKTHROUGH (15%)",
-        "description": "Iran accepts nuclear proposal AND Hormuz commitment → Brent crashes $90-100 → Nifty rallies 23,900-24,100 (+1-2%).",
-        "nifty_close_range": "23900-24100"
-      },
-      {
-        "name": "ESCALATION_CRASH (10%)",
-        "description": "Israel strikes OR Iran kinetic action → Brent spikes $115+ → Nifty -1.5 to -2.5%. Range 23,200-23,500.",
-        "nifty_close_range": "23200-23500"
       }
     ]
   },
   "ceasefire_binary_matrix": {
     "peace_deal_advancing": 0.15,
     "stalemate_continuing": 0.55,
-    "escalation_collapse": 0.30,
-    "note": "Trump REJECTED Iran proposal May 11-12 → ceasefire on 'life support'. But Trump sent nuclear proposal May 16 + Xi offered diplomatic help May 15 — diplomatic process continues despite rejection. Stalemate is now the dominant base case at 55%. Escalation 30% accounts for Israel-Iran kinetic action risk."
+    "escalation_collapse": 0.3,
+    "note": "Trump REJECTED Iran proposal May 11-12 \u2192 ceasefire on 'life support'. But Trump sent nuclear proposal May 16 + Xi offered diplomatic help May 15 \u2014 diplomatic process continues despite rejection. Stalemate is now the dominant base case at 55%. Escalation 30% accounts for Israel-Iran kinetic action risk."
   },
   "stocks_to_watch": [
-    "COAL INDIA: P037 CORRECT at ₹462. P046 new prediction ₹450-475 by May 22 — DIRECT_CAUSAL_LINK continuation",
-    "BANKNIFTY: P038 CORRECT at <57K. P047 new prediction fails 55,000 by May 22 — ECL drag continues",
-    "ASTRA MICRO: P036 CORRECT. P048 new prediction >₹1,050 by May 22 — M012 v5 floor intact",
-    "NIFTY IT: P039 WRONG (catalyst timing). P049 new prediction underperforms 2-4% — M013 active",
-    "SETFGOLD: 4 wrong gold predictions. P050 wide-range thesis ₹126-131 — humble methodology",
-    "MRPL: At ₹150.32 — far below P035 (₹190-200) and P002 (₹160-170) targets — both expected WRONG",
-    "SWIGGY: P040 check May 20 — Brent $109 sustains bearish CONSUMER_DISC_BRENT_INVERSE",
-    "INDIGO: P006 check May 30 — Brent $109 supports ATF compression thesis"
+    "COAL INDIA: P037 CORRECT at \u20b9462. P046 new prediction \u20b9450-475 by May 22 \u2014 DIRECT_CAUSAL_LINK continuation",
+    "BANKNIFTY: P038 CORRECT at <57K. P047 new prediction fails 55,000 by May 22 \u2014 ECL drag continues",
+    "ASTRA MICRO: P036 CORRECT. P048 new prediction >\u20b91,050 by May 22 \u2014 M012 v5 floor intact",
+    "NIFTY IT: P039 WRONG (catalyst timing). P049 new prediction underperforms 2-4% \u2014 M013 active",
+    "SETFGOLD: 4 wrong gold predictions. P050 wide-range thesis \u20b9126-131 \u2014 humble methodology",
+    "MRPL: At \u20b9150.32 \u2014 far below P035 (\u20b9190-200) and P002 (\u20b9160-170) targets \u2014 both expected WRONG",
+    "SWIGGY: P040 check May 20 \u2014 Brent $109 sustains bearish CONSUMER_DISC_BRENT_INVERSE",
+    "INDIGO: P006 check May 30 \u2014 Brent $109 supports ATF compression thesis"
   ],
-  "prompt_for_weekly_intelligence": "WEEKLY INTELLIGENCE REPORT 2026-05-24 (Sunday): (1) Score P040 SWIGGY (₹265-278, check May 20). (2) Score P046-P050 cluster (all check May 22): COAL INDIA ₹450-475, BANKNIFTY <55,000, ASTRA MICRO >₹1,050, NIFTY IT underperform 2-4%, SETFGOLD ₹126-131. (3) Critical methodology check: did DIRECT_CAUSAL_LINK methodology hold for P046/P047/P048? If yes, methodology accuracy moves to 9/9 = 100%. (4) Iran nuclear proposal response status — if Iran accepts: auto-invalidate P047 BANKNIFTY (FII reversal possible), P048 ASTRA MICRO (M012 unwind conditions could trigger). (5) RBI policy May 23 — directional impact on BankNifty. (6) Score P035 MRPL on May 25 — almost certainly WRONG (₹150 vs ₹190-200). (7) Generate P051+ predictions for week of May 25-29.",
+  "prompt_for_weekly_intelligence": "WEEKLY INTELLIGENCE REPORT 2026-05-24 (Sunday): (1) Score P040 SWIGGY (\u20b9265-278, check May 20). (2) Score P046-P050 cluster (all check May 22): COAL INDIA \u20b9450-475, BANKNIFTY <55,000, ASTRA MICRO >\u20b91,050, NIFTY IT underperform 2-4%, SETFGOLD \u20b9126-131. (3) Critical methodology check: did DIRECT_CAUSAL_LINK methodology hold for P046/P047/P048? If yes, methodology accuracy moves to 9/9 = 100%. (4) Iran nuclear proposal response status \u2014 if Iran accepts: auto-invalidate P047 BANKNIFTY (FII reversal possible), P048 ASTRA MICRO (M012 unwind conditions could trigger). (5) RBI policy May 23 \u2014 directional impact on BankNifty. (6) Score P035 MRPL on May 25 \u2014 almost certainly WRONG (\u20b9150 vs \u20b9190-200). (7) Generate P051+ predictions for week of May 25-29.",
   "key_events_this_week": [
     {
       "date": "2026-05-18",
-      "event": "Monday open after weekend. Iran response to Trump nuclear proposal (May 16) — critical for opening direction.",
+      "event": "Monday open after weekend. Iran response to Trump nuclear proposal (May 16) \u2014 critical for opening direction.",
       "impact": "CRITICAL"
     },
     {
       "date": "2026-05-20",
-      "event": "P040 SWIGGY (₹265-278) scoring day.",
+      "event": "P040 SWIGGY (\u20b9265-278) scoring day.",
       "impact": "MEDIUM"
     },
     {
       "date": "2026-05-22",
-      "event": "P046-P050 cluster scoring day — 5 new predictions all check this date. Major accuracy event.",
-      "impact": "HIGH — DIRECT_CAUSAL_LINK methodology test"
+      "event": "P046-P050 cluster scoring day \u2014 5 new predictions all check this date. Major accuracy event.",
+      "impact": "HIGH \u2014 DIRECT_CAUSAL_LINK methodology test"
     },
     {
       "date": "2026-05-23",
@@ -129,30 +129,30 @@
   "framework_version": "v8",
   "active_promoted_patterns": [
     "FORECAST_PAT003 (Geopolitical Binary Underweighting)",
-    "M012 v5 STRENGTHENED (Defense Sector Duration Premium — requires Brent <$92 + Hormuz open 5D for unwind)",
+    "M012 v5 STRENGTHENED (Defense Sector Duration Premium \u2014 requires Brent <$92 + Hormuz open 5D for unwind)",
     "FII_CEASEFIRE_DISTRIBUTION",
-    "FORECAST_PAT004 (Ceasefire Stability Precondition — 3-day wait)",
-    "M013 (IT Regime Risk Filter — cap IT confidence at 2★ in active geopolitical regime)",
-    "FORECAST_PAT005 (Diplomatic Restart Trigger — REVERSED this week, requires WEEKEND_REGIME_REVERSAL guard)",
+    "FORECAST_PAT004 (Ceasefire Stability Precondition \u2014 3-day wait)",
+    "M013 (IT Regime Risk Filter \u2014 cap IT confidence at 2\u2605 in active geopolitical regime)",
+    "FORECAST_PAT005 (Diplomatic Restart Trigger \u2014 REVERSED this week, requires WEEKEND_REGIME_REVERSAL guard)",
     "SELL_ON_EARNINGS_NEWS_IT (5 confirmations)",
-    "TALKS_FAILED_WAR_PREMIUM_RETURN PROMOTED v6 (2 confirmations — 1-2 day swing pattern ONLY)",
-    "DIRECT_CAUSAL_LINK_FIRST (META-RULE: 6/6 = 100% accuracy — strongest empirical signal)",
-    "WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS PROMOTED v8 (3 confirmations — pattern signals <2 weeks old need weekend-reversal-invalidation clause)",
-    "NO_REBASE_WITHOUT_NEW_CAUSAL_LINK (META-RULE v8 — do not rebase ABOVE_RANGE predictions without NEW catalyst)"
+    "TALKS_FAILED_WAR_PREMIUM_RETURN PROMOTED v6 (2 confirmations \u2014 1-2 day swing pattern ONLY)",
+    "DIRECT_CAUSAL_LINK_FIRST (META-RULE: 6/6 = 100% accuracy \u2014 strongest empirical signal)",
+    "WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS PROMOTED v8 (3 confirmations \u2014 pattern signals <2 weeks old need weekend-reversal-invalidation clause)",
+    "NO_REBASE_WITHOUT_NEW_CAUSAL_LINK (META-RULE v8 \u2014 do not rebase ABOVE_RANGE predictions without NEW catalyst)"
   ],
   "observing_patterns": [
     "BRENT_EXTREME_RECOVERY_CAP (1 occurrence)",
-    "ECL_BANKING_STRUCTURAL_HEADWIND (1 occurrence — P038 CORRECT validated)",
-    "DEFENSE_PREMIUM_PERSISTENCE (4 occurrences — OBSERVING_STRONG)",
-    "ABOVE_RANGE_REBASING_FAILS (1 occurrence — NEW v8, P042 source)",
-    "PSU_DII_FILTER (2 occurrences — NEAR_PROMOTION 3 needed)",
+    "ECL_BANKING_STRUCTURAL_HEADWIND (1 occurrence \u2014 P038 CORRECT validated)",
+    "DEFENSE_PREMIUM_PERSISTENCE (4 occurrences \u2014 OBSERVING_STRONG)",
+    "ABOVE_RANGE_REBASING_FAILS (1 occurrence \u2014 NEW v8, P042 source)",
+    "PSU_DII_FILTER (2 occurrences \u2014 NEAR_PROMOTION 3 needed)",
     "HAVEN_PREMIUM_DURATION_TAIL (1 occurrence)",
     "CONSUMER_DISC_BRENT_INVERSE (1 occurrence)",
     "IT_CASCADE_OVERRIDES_MACRO (1 occurrence)",
     "MULTI_BINARY_CORRELATION (1 occurrence)",
     "TRUMP_DEADLINE_PRESSURE_CRUDE (1 occurrence)",
     "EARNINGS_SURPRISE_BEATS_MACRO_FEAR (1 occurrence)",
-    "CATALYST_TIMING_DEPENDENCY (1 occurrence — P039 source)"
+    "CATALYST_TIMING_DEPENDENCY (1 occurrence \u2014 P039 source)"
   ],
   "scoring_queue": [
     {
@@ -167,7 +167,7 @@
       "stock": "COAL INDIA",
       "check_date": "2026-05-22",
       "target": "450-475",
-      "note": "DIRECT_CAUSAL_LINK continuation of P037. Coal India at ₹462.20 = inside range already."
+      "note": "DIRECT_CAUSAL_LINK continuation of P037. Coal India at \u20b9462.20 = inside range already."
     },
     {
       "pred_id": "P047",
@@ -202,21 +202,21 @@
       "stock": "MRPL",
       "check_date": "2026-05-25",
       "target": "190-200",
-      "note": "MRPL at ₹150.32 = far below target. Expected WRONG. Brent volatility prevented GRM recovery."
+      "note": "MRPL at \u20b9150.32 = far below target. Expected WRONG. Brent volatility prevented GRM recovery."
     },
     {
       "pred_id": "P002",
       "stock": "MRPL",
       "check_date": "2026-05-28",
       "target": "160-170",
-      "note": "MRPL at ₹150.32 = BELOW range. BELOW_RANGE likely. Thesis invalidated long ago."
+      "note": "MRPL at \u20b9150.32 = BELOW range. BELOW_RANGE likely. Thesis invalidated long ago."
     },
     {
       "pred_id": "P005",
       "stock": "COAL INDIA",
       "check_date": "2026-05-28",
       "target": ">430",
-      "note": "Coal India at ₹462.20 = ₹32 buffer above ₹430. Expected CORRECT."
+      "note": "Coal India at \u20b9462.20 = \u20b932 buffer above \u20b9430. Expected CORRECT."
     },
     {
       "pred_id": "P006",
@@ -239,17 +239,23 @@
     "total_pnl_est": 260000,
     "total_pnl_pct_est": 11.2,
     "as_of": "2026-05-17",
-    "note": "Estimated. ASTRA MICRO +96% gain dominant driver. Coal India +33.7% (₹462 vs ₹346 avg). COCHINSHIP gains intact. MRPL deepened loss to -23% (₹150 vs ₹196 avg). SWIGGY -9.7%. IRFC -20.7%.",
-    "biggest_position_risks": "MRPL (₹150.32 vs ₹196 avg = -23.3% loss), IRFC (₹103 vs ₹130 avg = -20.7% loss), SWIGGY (₹270 vs ₹299 avg = -9.7% loss)",
-    "biggest_winners": "ASTRA MICRO (est ₹1,100+ vs ₹562 avg = +96% gain), COAL INDIA (₹462 vs ₹346 avg = +33.7%), COCHINSHIP (est ~₹1,750)"
+    "note": "Estimated. ASTRA MICRO +96% gain dominant driver. Coal India +33.7% (\u20b9462 vs \u20b9346 avg). COCHINSHIP gains intact. MRPL deepened loss to -23% (\u20b9150 vs \u20b9196 avg). SWIGGY -9.7%. IRFC -20.7%.",
+    "biggest_position_risks": "MRPL (\u20b9150.32 vs \u20b9196 avg = -23.3% loss), IRFC (\u20b9103 vs \u20b9130 avg = -20.7% loss), SWIGGY (\u20b9270 vs \u20b9299 avg = -9.7% loss)",
+    "biggest_winners": "ASTRA MICRO (est \u20b91,100+ vs \u20b9562 avg = +96% gain), COAL INDIA (\u20b9462 vs \u20b9346 avg = +33.7%), COCHINSHIP (est ~\u20b91,750)"
   },
   "new_predictions_this_week": {
-    "added": ["P046", "P047", "P048", "P049", "P050"],
-    "P046": "COAL INDIA ₹450-475 by May 22 (DIRECT_CAUSAL_LINK P037 continuation, NOT rebased)",
+    "added": [
+      "P046",
+      "P047",
+      "P048",
+      "P049",
+      "P050"
+    ],
+    "P046": "COAL INDIA \u20b9450-475 by May 22 (DIRECT_CAUSAL_LINK P037 continuation, NOT rebased)",
     "P047": "BANKNIFTY fails 55,000 by May 22 (Negative-frame P038-style, ECL drag)",
-    "P048": "ASTRA MICRO >₹1,050 by May 22 (M012 v5 floor, P036 continuation)",
+    "P048": "ASTRA MICRO >\u20b91,050 by May 22 (M012 v5 floor, P036 continuation)",
     "P049": "NIFTY IT underperforms Nifty by 2-4% by May 22 (M013 active)",
-    "P050": "SETFGOLD ₹126-131 by May 22 (wide-range humble thesis)"
+    "P050": "SETFGOLD \u20b9126-131 by May 22 (wide-range humble thesis)"
   },
   "week_ahead": {
     "dates": "May 18-22, 2026",
@@ -266,6 +272,18 @@
       "banknifty_key_level": "55,000 (P047 resistance); 53,500 (P047 invalidation floor downside)"
     }
   },
-  "prompt_for_morning_brief": "MORNING BRIEF 2026-05-18: (1) Iran response to Trump nuclear proposal (sent May 16) — critical opening catalyst. (2) Brent overnight direction from Friday $109 close. (3) USDINR opening level vs Friday record 96/$. (4) Score opening bias — forecast GAP_DOWN_SMALL or FLAT (~-0.1%, GIFT ~23,620). Compare against ACTUAL NSE open. (5) Coal India P046 entry tracking (₹462.20 Friday close = inside range already). (6) Defense names ASTRA MICRO P048 entry tracking. (7) New week regime: FRAGILE_PEACE_BRENT_VOLATILE — base case is choppy with negative bias.",
-  "prompt_for_eod_wrap": "EOD WRAP 2026-05-18: (1) Score session_direction_accuracy for today (forecast VOLATILE_WITH_NEGATIVE_BIAS -0.2%, range 23,500-23,800). (2) Status check on P046-P050 cluster (5 predictions check May 22 — 4-day trajectory). (3) Confirm Brent close (regime confirmation). (4) Update next-run-context.json with tomorrow_forecast for May 19. (5) Any Iran-US news flow significant enough to trigger auto-invalidation clauses on P047 (BankNifty bearish) or P048 (ASTRA bullish)."
+  "prompt_for_morning_brief": "MORNING BRIEF 2026-05-18: (1) Iran response to Trump nuclear proposal (sent May 16) \u2014 critical opening catalyst. (2) Brent overnight direction from Friday $109 close. (3) USDINR opening level vs Friday record 96/$. (4) Score opening bias \u2014 forecast GAP_DOWN_SMALL or FLAT (~-0.1%, GIFT ~23,620). Compare against ACTUAL NSE open. (5) Coal India P046 entry tracking (\u20b9462.20 Friday close = inside range already). (6) Defense names ASTRA MICRO P048 entry tracking. (7) New week regime: FRAGILE_PEACE_BRENT_VOLATILE \u2014 base case is choppy with negative bias.",
+  "prompt_for_eod_wrap": "EOD WRAP 2026-05-18: (1) Score session_direction_accuracy for today (forecast VOLATILE_WITH_NEGATIVE_BIAS -0.2%, range 23,500-23,800). (2) Status check on P046-P050 cluster (5 predictions check May 22 \u2014 4-day trajectory). (3) Confirm Brent close (regime confirmation). (4) Update next-run-context.json with tomorrow_forecast for May 19. (5) Any Iran-US news flow significant enough to trigger auto-invalidation clauses on P047 (BankNifty bearish) or P048 (ASTRA bullish).",
+  "opening_bias_actual": {
+    "nifty_open": 23354.35,
+    "gift_nifty_preopen": 23579,
+    "gap_pct": -1.223,
+    "direction": "GAP_DOWN_LARGE",
+    "direction_correct": true,
+    "grade": "PARTIAL",
+    "scoring_note": "Forecast GAP_DOWN_SMALL_TO_FLAT (~-0.1%). Actual gap -1.22% (Nifty opened 23,354.35 vs Friday close 23,643.50). Direction CORRECT but magnitude 12x larger than central estimate. Downside risk tail (Iran tensions, US-Iran failure to reach peace, Brent surge) materialized in line with the documented DOWNSIDE risk (-1 to -2%). Confidence was correctly low (2/5).",
+    "source": "actual_nse_open",
+    "pre_estimated_by": null,
+    "validation_required": false
+  }
 }
