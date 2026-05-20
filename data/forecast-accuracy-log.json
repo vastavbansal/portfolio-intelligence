@@ -2534,16 +2534,26 @@
         ]
       },
       "session_direction_accuracy": {
-        "direction_correct": null,
-        "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-05-15"
+        "direction_correct": false,
+        "direction_note": "Forecast CONSOLIDATION_WITH_UPSIDE_BIAS +0.25% (range 23,650-23,900). Actual close 23,643.50 (-0.19%). Direction wrong (forecast positive, actual negative). Close marginally below range by 6.5 points. PROFIT_TAKING_DIP scenario (20%) was closest but even that predicted 23,550-23,680.",
+        "in_range": false,
+        "range_note": "Nifty closed 23,643.50, range was 23,650-23,900. Missed by 6.5 points \u2014 borderline.",
+        "brent_correct": true,
+        "grade": "PARTIAL_CORRECT",
+        "scored_late_by": "eod_wrap_2026-05-20"
       },
       "actual": {
         "nifty_open": 23731.4,
-        "nifty_close": null,
-        "nifty_change_pct": null
+        "nifty_close": 23643.5,
+        "nifty_change_pct": -0.19,
+        "brent_close": 109.0,
+        "session_theme": "Friday profit-taking after Thursday +1.18% rally. Brent rebounded to ~$107 overnight capping upside. Range-bound with slight negative drift."
       },
-      "lessons": []
+      "lessons": [
+        "Friday profit-taking after strong Thursday rallies is a reliable pattern \u2014 adjust Day 2 forecasts with negative skew.",
+        "Brent rebound from $105.49\u2192$106.89 overnight partially materialized the downside risk.",
+        "Range low of 23,650 was nearly perfect support call \u2014 within 6.5 points."
+      ]
     },
     {
       "session_date": "2026-05-18",
@@ -2690,16 +2700,91 @@
         ]
       },
       "session_direction_accuracy": {
+        "direction_correct": false,
+        "direction_note": "Forecast FLAT_TO_SIDEWAYS_NEGATIVE (-0.2%). Actual +0.17%. Direction label biased negative but actual was slightly positive. However, the RANGE_BOUND_FLAT scenario (45% probability) captured the outcome perfectly (-0.2% to +0.3%, range 23,550-23,700). Crude crash (Brent -2.38%, WTI -5.56%) on Trump calling off Iran strikes was not foreseen and provided intraday lift.",
+        "in_range": true,
+        "range_note": "Nifty closed 23,659 \u2014 well within forecast range 23,450-23,720.",
+        "brent_correct": true,
+        "grade": "PARTIAL_CORRECT"
+      },
+      "actual": {
+        "nifty_open": null,
+        "nifty_close": 23659.0,
+        "nifty_change_pct": 0.17,
+        "brent_close": 108.63,
+        "session_theme": "Mild positive session. Crude crashed (Brent -2.38%) on Trump calling off Iran strikes. Reliance +2.8%, ASTRA MICRO +5.62%, IGIL +5.89% outperformed. PI Industries -7.15% was major outlier. BankNifty +0.29%."
+      },
+      "lessons": [
+        "Crude crash events (Brent -2.38%) during session provide intraday lift even in consolidation regimes \u2014 adjust FLAT forecasts toward FLAT_TO_POSITIVE when crude softens.",
+        "RANGE_BOUND_FLAT scenario at 45% was the correct outcome \u2014 scenario-weighting is improving even when direction label is imprecise.",
+        "PI Industries -7.15% shows individual stock risk unrelated to macro \u2014 earnings/guidance-driven moves remain unpredictable."
+      ]
+    },
+    {
+      "session_date": "2026-05-21",
+      "forecast_generated_at": "2026-05-20",
+      "opening_bias": {
+        "direction": "GAP_UP_SMALL",
+        "gap_pct_estimate": 0.3,
+        "gift_nifty_estimate": 23730,
+        "key_drivers": [
+          "Trump called off Iran military strike after Gulf allies appealed \u2014 major de-escalation signal overnight.",
+          "Brent crashed to $108.63 (-2.38%), WTI to $101.78 (-5.56%) \u2014 biggest single-day crude drop in weeks, directly bullish for India.",
+          "Nifty closed mildly positive at 23,659 (+0.17%) \u2014 stable base for gap-up if SGX/GIFT confirms.",
+          "Iran diplomacy signals: talks reported in progress via Saudi/Qatar/UAE mediation \u2014 reduces tail risk.",
+          "Counter: Iran (Tasnim) says US conditions still overly demanding \u2014 deal NOT done, gap-up may be capped."
+        ],
+        "confidence": 3,
+        "risks": [
+          "UPSIDE: Iran accepts preliminary framework or Trump tweets deal progress \u2192 gap-up +0.5-0.8%, Brent crashes below $105.",
+          "DOWNSIDE: Iran rejects outright overnight or Hormuz incident \u2192 crude reversal, flat to gap-down.",
+          "DATA: US Fed minutes May 22 positioning could affect global risk appetite."
+        ],
+        "generated_at": "eod_wrap_2026-05-20"
+      },
+      "opening_bias_actual": null,
+      "session_direction": {
+        "direction": "MILDLY_BULLISH_CRUDE_RELIEF",
+        "change_pct_estimate": 0.4,
+        "range_low": 23600,
+        "range_high": 23850,
+        "key_assumption": "Crude relief rally (Brent $108 from $111) removes the biggest macro headwind. If Brent stays below $110, bargain hunting + DII floor should push Nifty toward 23,800 resistance. Key test: can Nifty break 23,800 for the first time since May 14? Resistance at 23,800-23,850, support 23,550. Pre-Fed minutes (May 22) and pre-RBI (June) positioning may limit upside.",
+        "confidence": 3,
+        "generated_at": "eod_wrap_2026-05-20",
+        "regime": "CRUDE_RELIEF_FRAGILE_DIPLOMACY_CONSOLIDATION",
+        "brent_forecast": "$105-110 range. Floor lifted by Iran uncertainty but cap lowered by Trump de-escalation. Central estimate $107-108.",
+        "scenarios": [
+          {
+            "name": "CRUDE_RELIEF_RALLY (40%)",
+            "description": "Brent stays below $110, GIFT Nifty confirms gap-up. Banking leads, OMCs/airlines recover. Close 23,750-23,850 (+0.4 to +0.8%).",
+            "nifty_close_range": "23750-23850"
+          },
+          {
+            "name": "FLAT_CONSOLIDATION (30%)",
+            "description": "Gap-up fades as Iran uncertainty persists. Range-bound 23,600-23,750. Pre-Fed caution. Close flat to +0.2%.",
+            "nifty_close_range": "23620-23750"
+          },
+          {
+            "name": "BREAKOUT_ABOVE_23800 (15%)",
+            "description": "Iran positive headline + crude breaks below $105. Short-covering cascade. Close 23,850-24,000 (+0.8 to +1.4%).",
+            "nifty_close_range": "23850-24000"
+          },
+          {
+            "name": "CRUDE_REVERSAL_DIP (15%)",
+            "description": "Iran rejects diplomacy framework or Hormuz incident. Brent bounces above $112. Gap-up evaporates. Close 23,500-23,600 (-0.3 to -0.7%).",
+            "nifty_close_range": "23500-23600"
+          }
+        ]
+      },
+      "session_direction_accuracy": {
         "direction_correct": null,
         "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-05-20"
+        "direction_note": "Pending \u2014 EOD wrap 2026-05-21"
       },
       "actual": {
         "nifty_open": null,
         "nifty_close": null,
-        "nifty_change_pct": null,
-        "last_known_close": 23618.0,
-        "last_known_close_date": "2026-05-19"
+        "nifty_change_pct": null
       },
       "lessons": []
     }

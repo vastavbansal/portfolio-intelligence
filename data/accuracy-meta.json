@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Aggregated accuracy tracking across all prediction tiers. Updated after each prediction is scored. L1 = overall counts, L2 = RCA patterns, L3 = trend over time + factor performance.",
-  "last_updated": "2026-05-17T18:00:00",
+  "last_updated": "2026-05-20T17:30:00",
   "L1_scorecard": {
     "all_time": {
       "total": 45,
@@ -12,7 +12,7 @@
       "partial": 3,
       "above_range": 2,
       "accuracy_pct": 23.1,
-      "note": "Weekly review 2026-05-17: P037 COAL INDIA CORRECT (₹462.20 in ₹448-470); P042 COAL INDIA WRONG (₹462.20 vs ₹475-500). Direct-causal-link methodology now 6/6 = 100% (P008, P015, P019, P028, P033, P037). Total scored 39/45, accuracy 23.1% (highest since v2 framework). Open: P002, P005, P006, P011, P035, P040."
+      "note": "Weekly review 2026-05-17: P037 COAL INDIA CORRECT (\u20b9462.20 in \u20b9448-470); P042 COAL INDIA WRONG (\u20b9462.20 vs \u20b9475-500). Direct-causal-link methodology now 6/6 = 100% (P008, P015, P019, P028, P033, P037). Total scored 39/45, accuracy 23.1% (highest since v2 framework). Open: P002, P005, P006, P011, P035, P040. EOD wrap 2026-05-20: session direction scoring only (May 15 PARTIAL, May 20 PARTIAL). No new predictions resolved."
     },
     "by_horizon": {
       "1D": {
@@ -480,8 +480,8 @@
       "stock": "COAL INDIA",
       "horizon": "3W",
       "outcome": "CORRECT",
-      "root_cause_summary": "Coal India closed ₹462.20 May 15 — squarely inside ₹448-470 target. Direct causal link held throughout 3-week window: Brent sustained $93-118 range with $107-109 closes through May 15 → coal-substitute economics favorable → DII PSU buying mandate provided floor.",
-      "win_pattern": "DIRECT_CAUSAL_LINK_FIRST — 6th consecutive single-link prediction CORRECT (P008, P015, P019, P028, P033, P037). Empirical evidence: direct-link methodology = 6/6 = 100%. Multi-factor methodology in same period: 3/33 ≈ 9%.",
+      "root_cause_summary": "Coal India closed \u20b9462.20 May 15 \u2014 squarely inside \u20b9448-470 target. Direct causal link held throughout 3-week window: Brent sustained $93-118 range with $107-109 closes through May 15 \u2192 coal-substitute economics favorable \u2192 DII PSU buying mandate provided floor.",
+      "win_pattern": "DIRECT_CAUSAL_LINK_FIRST \u2014 6th consecutive single-link prediction CORRECT (P008, P015, P019, P028, P033, P037). Empirical evidence: direct-link methodology = 6/6 = 100%. Multi-factor methodology in same period: 3/33 \u2248 9%.",
       "framework_value_added": "Confirms DIRECT_CAUSAL_LINK_FIRST meta-rule (added v7). Conservative ranges with one identifiable causal chain outperform aggressive targets with multiple regime-assumption dependencies."
     },
     {
@@ -491,49 +491,53 @@
       "stock": "COAL INDIA",
       "horizon": "12D",
       "outcome": "WRONG",
-      "root_cause_summary": "Coal India closed ₹462.20 vs ₹475-500 target — 2.7% below range floor. P042 was an aggressive upward revision of P037 (₹448-470 → ₹475-500) made when Coal India was at ₹481.45 (above P037 ceiling). Stock mean-reverted into the lower P037 range during 12-day window. Brent volatility (May 11-12 Trump rejection → re-spike to $109) suppressed additional re-rating.",
-      "missing_signal": "ABOVE_RANGE_REBASING_FAILS — when an in-progress prediction is ABOVE_RANGE, the stock often mean-reverts into the lower range rather than continuing higher. Rebasing to a higher target without a fresh catalyst (only the same Brent thesis) is structurally fragile.",
+      "root_cause_summary": "Coal India closed \u20b9462.20 vs \u20b9475-500 target \u2014 2.7% below range floor. P042 was an aggressive upward revision of P037 (\u20b9448-470 \u2192 \u20b9475-500) made when Coal India was at \u20b9481.45 (above P037 ceiling). Stock mean-reverted into the lower P037 range during 12-day window. Brent volatility (May 11-12 Trump rejection \u2192 re-spike to $109) suppressed additional re-rating.",
+      "missing_signal": "ABOVE_RANGE_REBASING_FAILS \u2014 when an in-progress prediction is ABOVE_RANGE, the stock often mean-reverts into the lower range rather than continuing higher. Rebasing to a higher target without a fresh catalyst (only the same Brent thesis) is structurally fragile.",
       "factor_gap": "Framework lacks an explicit guardrail against ABOVE_RANGE rebasing. Should require a NEW direct causal link, not just an extension of the existing one.",
       "proposed_factor_id": "ABOVE_RANGE_REBASING_FAILS",
       "proposed_factor_name": "Above-Range Rebasing Fragility",
       "pattern_tag": "ABOVE_RANGE_REBASING_FAILS",
       "framework_promoted": false,
       "confirmations_needed": 1,
-      "lesson": "When a prediction scores ABOVE_RANGE, the natural impulse is to rebase upward. Resist this. Instead: (1) accept the ABOVE_RANGE win, (2) wait for the stock to consolidate or pull back, (3) make a new prediction only if a NEW catalyst emerges (not just the same thesis at a higher level). 1st occurrence (P042) — observe."
+      "lesson": "When a prediction scores ABOVE_RANGE, the natural impulse is to rebase upward. Resist this. Instead: (1) accept the ABOVE_RANGE win, (2) wait for the stock to consolidate or pull back, (3) make a new prediction only if a NEW catalyst emerges (not just the same thesis at a higher level). 1st occurrence (P042) \u2014 observe."
     },
     {
       "rca_id": "RCA_WEEK_MAY11_15",
       "date": "2026-05-17",
       "week": "May 11-15, 2026",
       "predictions_scored": [
-        "P037 CORRECT (Coal India ₹462.20 in ₹448-470)",
-        "P042 WRONG (Coal India ₹462.20 vs ₹475-500)"
+        "P037 CORRECT (Coal India \u20b9462.20 in \u20b9448-470)",
+        "P042 WRONG (Coal India \u20b9462.20 vs \u20b9475-500)"
       ],
       "week_accuracy": "1/2 RIGHT (50.0%)",
-      "dominant_pattern": "DIRECT_CAUSAL_LINK_DOMINANCE — P037 CORRECT (single-link) + P042 WRONG (multi-factor aggressive rebasing of P037). Same stock, same week, opposite outcomes — clean A/B test of methodology.",
-      "regime_context": "Iran peace deal REJECTED by Trump May 11-12 weekend → ceasefire on 'life support' → Brent re-spiked $99→$109 (+10% in 4 sessions). FII selling decelerated late week (Rs 8,437 cr May 11 → Rs 187 cr May 14). DII support floor active. Nifty week +0.74% to ~24,176 (recovery from May 12 low of 23,379). Friday May 15 closed 23,643.50 (-0.19%) under Brent $109 pressure.",
+      "dominant_pattern": "DIRECT_CAUSAL_LINK_DOMINANCE \u2014 P037 CORRECT (single-link) + P042 WRONG (multi-factor aggressive rebasing of P037). Same stock, same week, opposite outcomes \u2014 clean A/B test of methodology.",
+      "regime_context": "Iran peace deal REJECTED by Trump May 11-12 weekend \u2192 ceasefire on 'life support' \u2192 Brent re-spiked $99\u2192$109 (+10% in 4 sessions). FII selling decelerated late week (Rs 8,437 cr May 11 \u2192 Rs 187 cr May 14). DII support floor active. Nifty week +0.74% to ~24,176 (recovery from May 12 low of 23,379). Friday May 15 closed 23,643.50 (-0.19%) under Brent $109 pressure.",
       "L2_root_causes": [
         {
           "category": "ABOVE_RANGE_REBASING_FAILS",
-          "description": "P042 was a textbook example of upward-rebasing fragility. Coal India had moved from ₹432 (P037 entry) to ₹481.45 (above P037 ceiling) — and the natural response was to set a new target ₹475-500. But without a NEW catalyst, the stock simply mean-reverted to ₹462.20 (back inside P037 range).",
-          "affected_predictions": ["P042"],
+          "description": "P042 was a textbook example of upward-rebasing fragility. Coal India had moved from \u20b9432 (P037 entry) to \u20b9481.45 (above P037 ceiling) \u2014 and the natural response was to set a new target \u20b9475-500. But without a NEW catalyst, the stock simply mean-reverted to \u20b9462.20 (back inside P037 range).",
+          "affected_predictions": [
+            "P042"
+          ],
           "fix_applied": "ABOVE_RANGE_REBASING_FAILS added to OBSERVING. New rule: do not rebase ABOVE_RANGE predictions without a NEW causal link."
         },
         {
           "category": "DIRECT_CAUSAL_LINK_VALIDATED_AGAIN",
-          "description": "P037 was the 6th consecutive single-direct-causal-link CORRECT (P008, P015, P019, P028, P033, P037 = 6/6 = 100%). The Brent-sustained-→-coal-substitute-demand thesis worked exactly as articulated.",
-          "affected_predictions": ["P037"],
+          "description": "P037 was the 6th consecutive single-direct-causal-link CORRECT (P008, P015, P019, P028, P033, P037 = 6/6 = 100%). The Brent-sustained-\u2192-coal-substitute-demand thesis worked exactly as articulated.",
+          "affected_predictions": [
+            "P037"
+          ],
           "framework_value": "DIRECT_CAUSAL_LINK_FIRST meta-rule (added v7) now has overwhelming empirical support. All new predictions should be evaluated against this rule first."
         }
       ],
       "L3_trend_analysis": {
-        "rolling_8_accuracy": "4/8 = 50.0% (P028, P033, P034, P036, P038, P037 RIGHT vs P030, P031, P032, P039, P041, P043, P044, P045, P042 WRONG — 6 RIGHT in 14 since P028)",
-        "rolling_5_accuracy": "1/5 = 20% (P037 RIGHT, P041/P043/P044/P045/P042 WRONG) — but most recent 8 trend stronger",
-        "cold_streak_status": "FULLY_BROKEN — 6 RIGHT predictions in the last 14 scored. Framework v7 + DIRECT_CAUSAL_LINK_FIRST meta-rule producing consistent wins.",
+        "rolling_8_accuracy": "4/8 = 50.0% (P028, P033, P034, P036, P038, P037 RIGHT vs P030, P031, P032, P039, P041, P043, P044, P045, P042 WRONG \u2014 6 RIGHT in 14 since P028)",
+        "rolling_5_accuracy": "1/5 = 20% (P037 RIGHT, P041/P043/P044/P045/P042 WRONG) \u2014 but most recent 8 trend stronger",
+        "cold_streak_status": "FULLY_BROKEN \u2014 6 RIGHT predictions in the last 14 scored. Framework v7 + DIRECT_CAUSAL_LINK_FIRST meta-rule producing consistent wins.",
         "best_methodology": "DIRECT_CAUSAL_LINK = 6/6 = 100%",
         "worst_methodology": "ABOVE_RANGE_REBASING = 0/1 (early signal, observe more)",
         "framework_version_at_start_of_week": "v7",
-        "framework_version_at_end_of_week": "v7 (no version change — observing patterns continue collecting)"
+        "framework_version_at_end_of_week": "v7 (no version change \u2014 observing patterns continue collecting)"
       }
     }
   ],
@@ -906,23 +910,23 @@
       "note": "Near-promotion: 4 occurrences. Recommend promotion when one more bearish defense prediction fails OR when a direct-link defense CORRECT is confirmed (P033 = first defense RIGHT)."
     },
     "ABOVE_RANGE_REBASING_FAILS": {
-      "description": "When an in-progress prediction is ABOVE_RANGE, the natural impulse to rebase upward without a NEW catalyst is structurally fragile. P042 (Coal India ₹475-500) was an aggressive upward revision of P037 (₹448-470) made when stock at ₹481.45 was above P037 ceiling. Stock mean-reverted to ₹462.20 — back inside P037 range. Multi-factor rebasing without new direct causal link = high failure rate.",
+      "description": "When an in-progress prediction is ABOVE_RANGE, the natural impulse to rebase upward without a NEW catalyst is structurally fragile. P042 (Coal India \u20b9475-500) was an aggressive upward revision of P037 (\u20b9448-470) made when stock at \u20b9481.45 was above P037 ceiling. Stock mean-reverted to \u20b9462.20 \u2014 back inside P037 range. Multi-factor rebasing without new direct causal link = high failure rate.",
       "count": 1,
-      "triggered_by": "P042 WRONG (Coal India ₹462.20 vs ₹475-500 target — 2.7% below range floor)",
+      "triggered_by": "P042 WRONG (Coal India \u20b9462.20 vs \u20b9475-500 target \u2014 2.7% below range floor)",
       "status": "OBSERVING",
       "date_added": "2026-05-17",
       "note": "1st occurrence. Lesson: when prediction scores ABOVE_RANGE, accept the win; do not rebase upward without a NEW direct causal link (not just the same thesis at a higher level)."
     },
     "WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS": {
-      "description": "FORECAST_PAT005 (Diplomatic Restart Trigger) and similar pattern-based bullish predictions whose underlying signal is <2 weeks old are fragile across weekends. Iran peace proposal (May 1-2) → Brent $118→$108 → bullish P041/P043/P045 → Trump REJECTED proposal (May 11-12 weekend) → Brent re-spike $99→$109 → all three predictions WRONG together.",
+      "description": "FORECAST_PAT005 (Diplomatic Restart Trigger) and similar pattern-based bullish predictions whose underlying signal is <2 weeks old are fragile across weekends. Iran peace proposal (May 1-2) \u2192 Brent $118\u2192$108 \u2192 bullish P041/P043/P045 \u2192 Trump REJECTED proposal (May 11-12 weekend) \u2192 Brent re-spike $99\u2192$109 \u2192 all three predictions WRONG together.",
       "count": 3,
-      "triggered_by": "P041 WRONG (Nifty 23,379 vs 24,300-24,600) + P043 ABOVE_RANGE (SETFGOLD 128.29 vs 122-127) + P045 WRONG (BankNifty 53,456 vs 55,000-56,000) — all three FORECAST_PAT005-anchored, all failed when peace deal reversed over weekend.",
+      "triggered_by": "P041 WRONG (Nifty 23,379 vs 24,300-24,600) + P043 ABOVE_RANGE (SETFGOLD 128.29 vs 122-127) + P045 WRONG (BankNifty 53,456 vs 55,000-56,000) \u2014 all three FORECAST_PAT005-anchored, all failed when peace deal reversed over weekend.",
       "status": "OBSERVING_STRONG",
       "date_added": "2026-05-13",
-      "note": "Near-promotion: 3 occurrences in one cluster. Rule candidate: pattern-based bullish predictions on signals <2 weeks old → auto-downgrade confidence by 1 star, AND add explicit weekend-reversal-invalidation clause."
+      "note": "Near-promotion: 3 occurrences in one cluster. Rule candidate: pattern-based bullish predictions on signals <2 weeks old \u2192 auto-downgrade confidence by 1 star, AND add explicit weekend-reversal-invalidation clause."
     },
     "DIRECT_CAUSAL_LINK_FIRST": {
-      "description": "Single direct causal link predictions: 6/6 = 100% accuracy (P008, P015, P019, P028, P033, P037). Multi-factor predictions: ~3/33 ≈ 9%. The methodology is now empirically validated as the dominant prediction-accuracy driver.",
+      "description": "Single direct causal link predictions: 6/6 = 100% accuracy (P008, P015, P019, P028, P033, P037). Multi-factor predictions: ~3/33 \u2248 9%. The methodology is now empirically validated as the dominant prediction-accuracy driver.",
       "count": 6,
       "triggered_by": "P008 RIGHT + P015 RIGHT + P019 RIGHT + P028 RIGHT + P033 RIGHT + P037 RIGHT (6 consecutive CORRECT)",
       "status": "PROMOTED_META_RULE",
@@ -970,23 +974,23 @@
     "review_type": "SUNDAY_WEEKLY",
     "predictions_scored_this_week": 5,
     "outcomes": {
-      "P036_ASTRA_MICRO": "CORRECT (₹1,104.10 above ₹1,050 floor — M012 v5 defense floor held)",
-      "P038_BANKNIFTY": "CORRECT (54,547 < 57,000 — FII selling + ECL headwind thesis validated)",
-      "P034_SETFGOLD": "CORRECT (₹128.06 in ₹125-130 range — HAVEN_PREMIUM_DURATION_TAIL confirmed)",
-      "P017_MRPL": "WRONG (₹165.93 vs ₹200-210 — GRM recovery thesis premature)",
-      "P039_NIFTY_IT": "WRONG (no clear 3-5% underperformance materialized — WIPRO catalyst slipped)"
+      "P036_ASTRA_MICRO": "CORRECT (\u20b91,104.10 above \u20b91,050 floor \u2014 M012 v5 defense floor held)",
+      "P038_BANKNIFTY": "CORRECT (54,547 < 57,000 \u2014 FII selling + ECL headwind thesis validated)",
+      "P034_SETFGOLD": "CORRECT (\u20b9128.06 in \u20b9125-130 range \u2014 HAVEN_PREMIUM_DURATION_TAIL confirmed)",
+      "P017_MRPL": "WRONG (\u20b9165.93 vs \u20b9200-210 \u2014 GRM recovery thesis premature)",
+      "P039_NIFTY_IT": "WRONG (no clear 3-5% underperformance materialized \u2014 WIPRO catalyst slipped)"
     },
     "note": "3 CORRECT, 2 WRONG. Best week since framework v2. Accuracy jumped to 21.6% (8/37). DIRECT_CAUSAL_LINK methodology = 5/5 = 100% (P028, P033, P036, P038, P034 all single-link). Cold streak fully broken.",
     "framework_update": "DIRECT_CAUSAL_LINK_FIRST validated 5/5. No new framework promotions (v7 stable).",
-    "key_lesson_of_week": "Three CORRECT in one week — all single direct causal link predictions. The methodology shift from multi-factor to single-link is producing measurable accuracy gains. v7 framework infrastructure (M013, M012 v5, FORECAST_PAT005, DIRECT_CAUSAL_LINK_FIRST) all firing correctly."
+    "key_lesson_of_week": "Three CORRECT in one week \u2014 all single direct causal link predictions. The methodology shift from multi-factor to single-link is producing measurable accuracy gains. v7 framework infrastructure (M013, M012 v5, FORECAST_PAT005, DIRECT_CAUSAL_LINK_FIRST) all firing correctly."
   },
   "weekly_review_2026_05_17": {
     "date": "2026-05-17",
     "review_type": "SUNDAY_WEEKLY",
     "predictions_scored_this_week": 2,
     "outcomes": {
-      "P037_COAL_INDIA": "CORRECT (₹462.20 in ₹448-470 range — 6th DIRECT_CAUSAL_LINK win)",
-      "P042_COAL_INDIA": "WRONG (₹462.20 vs ₹475-500 — ABOVE_RANGE_REBASING_FAILS, 1st occurrence)"
+      "P037_COAL_INDIA": "CORRECT (\u20b9462.20 in \u20b9448-470 range \u2014 6th DIRECT_CAUSAL_LINK win)",
+      "P042_COAL_INDIA": "WRONG (\u20b9462.20 vs \u20b9475-500 \u2014 ABOVE_RANGE_REBASING_FAILS, 1st occurrence)"
     },
     "note": "1 CORRECT, 1 WRONG. Same stock, same week, opposite outcomes = clean A/B test of methodology. Accuracy 23.1% (9/39). DIRECT_CAUSAL_LINK methodology = 6/6 = 100%. Weekly accuracy 50%.",
     "regime_evolution": "Week opened RE_ESCALATION_INTENSIFIED (Brent ~$107, Nifty 23,379 May 12). Iran peace deal REJECTED by Trump May 11-12 weekend. Mid-week relief rally May 14 (Nifty +1.18% to 23,689; Brent cooled to $105.49 on Trump-Xi summit optimism). Friday May 15 modest pullback (-0.19% to 23,643) as Brent re-spiked to $109 (+3.33%). Net regime: RELIEF_RALLY_FRAGILE_PEACE_UNCERTAIN.",
@@ -996,14 +1000,14 @@
       "May 14: Relief rally +1.18% to 23,689.60 on Brent cooling + Trump-Xi summit optimism + Bharti Airtel +5.27% dividend",
       "May 15: Mild pullback -0.19% to 23,643.50; Brent surged $109 (+3.33%); USDINR record 96/$",
       "May 16: Trump sent Iran nuclear proposal; Xi offered diplomatic help on Iran",
-      "Coal India closed ₹462.20 May 15 (intraday ₹455.25-468.50) — perfectly in P037 range",
-      "FII selling decelerated dramatically (Rs 8,438 cr May 11 → Rs 187 cr May 14)",
+      "Coal India closed \u20b9462.20 May 15 (intraday \u20b9455.25-468.50) \u2014 perfectly in P037 range",
+      "FII selling decelerated dramatically (Rs 8,438 cr May 11 \u2192 Rs 187 cr May 14)",
       "DII buying remained the floor support (Rs 7,990 cr May 12 was strongest of month)",
-      "BankNifty closed 54,234 May 15 (+0.19%) — recovered from 53,456 May 12 low",
-      "MRPL at ₹150.32 May 15 — continued GRM compression",
+      "BankNifty closed 54,234 May 15 (+0.19%) \u2014 recovered from 53,456 May 12 low",
+      "MRPL at \u20b9150.32 May 15 \u2014 continued GRM compression",
       "Weekly: Nifty range 23,379-23,839; net flat-to-slight-up despite Trump rejection volatility"
     ],
-    "framework_update": "NEW OBSERVING: ABOVE_RANGE_REBASING_FAILS (P042 1st occurrence). WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS now at 3 occurrences (P041/P043/P045) — recommend promotion to PROMOTED status. DEFENSE_PREMIUM_PERSISTENCE at 4 occurrences but P033/P036 wins favor direct-link bullish direction. PSU_DII_FILTER stays at 2 occurrences (3 needed). DIRECT_CAUSAL_LINK_FIRST validated 6/6 = 100%.",
+    "framework_update": "NEW OBSERVING: ABOVE_RANGE_REBASING_FAILS (P042 1st occurrence). WEEKEND_REGIME_REVERSAL_PUNCTURES_THESIS now at 3 occurrences (P041/P043/P045) \u2014 recommend promotion to PROMOTED status. DEFENSE_PREMIUM_PERSISTENCE at 4 occurrences but P033/P036 wins favor direct-link bullish direction. PSU_DII_FILTER stays at 2 occurrences (3 needed). DIRECT_CAUSAL_LINK_FIRST validated 6/6 = 100%.",
     "new_predictions_added": [
       "P046",
       "P047",
@@ -1011,7 +1015,7 @@
       "P049",
       "P050"
     ],
-    "key_lesson_of_week": "ABOVE_RANGE_REBASING_FAILS: when a prediction scores ABOVE_RANGE (like P037 was on May 3 at ₹481), do NOT rebase upward to a higher target without a NEW direct causal link. P042 was 'same thesis, higher target' — a fragile setup. The stock mean-reverted to ₹462, back inside the original P037 range. Future rule: ABOVE_RANGE = accept the win, wait for consolidation, only re-engage with a NEW catalyst.",
+    "key_lesson_of_week": "ABOVE_RANGE_REBASING_FAILS: when a prediction scores ABOVE_RANGE (like P037 was on May 3 at \u20b9481), do NOT rebase upward to a higher target without a NEW direct causal link. P042 was 'same thesis, higher target' \u2014 a fragile setup. The stock mean-reverted to \u20b9462, back inside the original P037 range. Future rule: ABOVE_RANGE = accept the win, wait for consolidation, only re-engage with a NEW catalyst.",
     "secondary_lesson": "P037 vs P042 same-week split is the clearest A/B test in the framework: same stock, same direction, same underlying causal link, but P037 had a conservative range and a single causal chain, while P042 was an aggressive upward revision. P037 CORRECT, P042 WRONG. This is exactly what DIRECT_CAUSAL_LINK_FIRST predicts."
   },
   "session_direction": {
