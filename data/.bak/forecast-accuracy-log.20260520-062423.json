@@ -1,7 +1,7 @@
 {
   "schema_version": "2.0",
   "description": "Dual-track forecast accuracy log. opening_bias = gap direction scored at morning open. session_direction = close direction scored at EOD. Both tracks are independent.",
-  "last_updated": "2026-05-20T09:00:00+05:30",
+  "last_updated": "2026-04-23",
   "summary": {
     "total_sessions_forecasted": 1,
     "sessions_with_direction_call": 12,
@@ -2613,93 +2613,14 @@
         ]
       },
       "session_direction_accuracy": {
-        "direction_correct": false,
-        "grade": "WRONG",
-        "direction_note": "CATCH-UP SCORING by morning_brief_2026-05-20 (May 18 EOD wrap never ran). Forecast BEARISH_WITH_SUPPORT_BOUNCE_ATTEMPT (-0.9%, close 23,250-23,500). Actual: Nifty opened 23,354.35 then staged a full intraday recovery to close 23,649.95 (+0.03% on day vs prior close, +1.27% off the open) \u2014 ABOVE the forecast range. This matched the low-probability IRAN_HEADLINE_REVERSAL scenario (10%): DII floor + dip-buying absorbed the gap-down rather than sellers pressing at 23,500. Direction WRONG.",
-        "scored_late_by": "morning_brief_2026-05-20",
-        "scored_from": "market-prices.json prev_close snapshot (2026-05-19 23:46 IST)"
+        "direction_correct": null,
+        "grade": "PENDING",
+        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-05-18"
       },
       "actual": {
         "nifty_open": 23354.35,
-        "nifty_close": 23649.95,
-        "nifty_change_pct": 0.027
-      },
-      "lessons": [
-        "GAP_DOWN_LARGE on geopolitical headline with intact DII floor frequently mean-reverts intraday \u2014 a bearish session-direction call into a record-oversold gap underestimates short-covering/dip-buying."
-      ]
-    },
-    {
-      "session_date": "2026-05-20",
-      "forecast_generated_at": "morning_brief_2026-05-20",
-      "opening_bias": {
-        "direction": "NOT_FORECAST",
-        "gap_pct_estimate": null,
-        "gift_nifty_estimate": null,
-        "key_drivers": [
-          "PIPELINE GAP: no EOD wrap ran on 2026-05-18 or 2026-05-19, so no next-day opening-bias forecast was generated for 2026-05-20."
-        ],
-        "confidence": null,
-        "note": "No opening-bias forecast existed for today. Cannot score an opening bias that was never generated.",
-        "generated_at": "none_pipeline_gap"
-      },
-      "opening_bias_actual": {
-        "nifty_open": null,
-        "gift_nifty_preopen": null,
-        "gap_pct": null,
-        "direction": null,
-        "direction_correct": null,
-        "grade": "NOT_SCORABLE",
-        "scoring_note": "Opening bias NOT SCORABLE for 2026-05-20. (a) No forecast was generated for today's open (EOD wraps for May 18 & May 19 did not run). (b) market-prices.json was last fetched 2026-05-19 23:46 IST and contains May 19's CLOSE (Nifty 23,618.00), not today's NSE open. No live GIFT Nifty / NSE open available to this run.",
-        "source": "data_unavailable",
-        "pre_estimated_by": null,
-        "validation_required": true
-      },
-      "session_direction": {
-        "direction": "FLAT_TO_SIDEWAYS_NEGATIVE",
-        "change_pct_estimate": -0.2,
-        "range_low": 23450,
-        "range_high": 23720,
-        "reference_close": 23618.0,
-        "reference_note": "Forecast framed vs May 19 close 23,618 (today's actual open unavailable to this run).",
-        "key_assumption": "Nifty fully recovered the May 18 Iran gap-down (closed 23,649.95) then drifted -0.14% on May 19 to 23,618 \u2014 consolidation, not trend. Brent still elevated at $110.4 (fragile-peace regime) is an ongoing macro headwind, but overnight commodities softened (gold -1.07%, silver -2.91%, WTI -4.96%), easing some risk-off pressure. DII floor intact; FII selling decelerating. No fresh Iran catalyst and pre-RBI (May 23) positioning caution argue for range-bound trade with a mild negative tilt. Resistance 23,800 caps; support 23,500 then the 23,356/23,178 cluster.",
-        "confidence": 2,
-        "generated_at": "morning_brief_2026-05-20",
-        "regime": "FRAGILE_PEACE_BRENT_VOLATILE_CONSOLIDATION",
-        "brent_forecast": "$108-112 working range. Iran nuclear-proposal binary unresolved; floor ~$105 absent explicit de-escalation.",
-        "scenarios": [
-          {
-            "name": "RANGE_BOUND_FLAT (45%)",
-            "description": "No fresh catalyst. Nifty oscillates 23,550-23,700 on sector rotation; DII supports. Close -0.2% to +0.3%.",
-            "nifty_close_range": "23550-23700"
-          },
-          {
-            "name": "NEGATIVE_DRIFT (30%)",
-            "description": "Brent firm $110+, rupee ~96, pre-RBI caution and lingering FII selling drag the tape lower into close. Close 23,400-23,550 (-0.3% to -0.9%).",
-            "nifty_close_range": "23400-23550"
-          },
-          {
-            "name": "RELIEF_BOUNCE (15%)",
-            "description": "Overnight commodity softening extends + an Iran de-escalation/diplomacy headline triggers short-covering. Close 23,720-23,850 (+0.4% to +1.0%).",
-            "nifty_close_range": "23720-23850"
-          },
-          {
-            "name": "BRENT_SHOCK_DOWN (10%)",
-            "description": "Brent breaks $113 or a Hormuz incident reignites risk-off; tests 23,356 support. Close 23,250-23,400 (-1.0% to -1.6%). High-VIX day.",
-            "nifty_close_range": "23250-23400"
-          }
-        ]
-      },
-      "session_direction_accuracy": {
-        "direction_correct": null,
-        "grade": "PENDING",
-        "direction_note": "Pending \u2014 to be scored by EOD wrap 2026-05-20"
-      },
-      "actual": {
-        "nifty_open": null,
         "nifty_close": null,
-        "nifty_change_pct": null,
-        "last_known_close": 23618.0,
-        "last_known_close_date": "2026-05-19"
+        "nifty_change_pct": null
       },
       "lessons": []
     }

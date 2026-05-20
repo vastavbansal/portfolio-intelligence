@@ -1,22 +1,22 @@
 {
   "schema_version": "1.1",
-  "description": "Dynamic bridge \u2014 2026-05-20 morning brief \u2014 PIPELINE GAP REPAIR: no EOD ran May 18/19. May 18 scored late (session-direction WRONG, full intraday gap recovery to 23,649.95). May 19 closed 23,618 (-0.14%). Regime: fragile Iran peace, Brent ~$110, USDINR ~96.",
-  "last_updated_by": "morning_brief_2026-05-20",
-  "last_updated_at": "2026-05-20T09:00:00",
+  "description": "Dynamic bridge \u2014 2026-05-18 morning brief \u2014 Iran peace failure -> gap-down -1.22%, Nifty at major support 23,356",
+  "last_updated_by": "morning_brief_2026-05-18",
+  "last_updated_at": "2026-05-18T09:30:00",
   "market_regime": {
-    "label": "FRAGILE_PEACE_BRENT_VOLATILE_CONSOLIDATION",
+    "label": "RE_ESCALATION_FRAGILE_PEACE_BRENT_VOLATILE",
     "key_risk": "Trump rejected Iran peace proposal May 11-12 \u2192 Brent re-spiked $99\u2192$109 (+10% in 4 sessions). Trump sent nuclear proposal May 16; Xi offered diplomatic help. Regime is FRAGILE \u2014 neither full re-escalation nor peace deal. Brent oscillation $105-110 is the working range. USDINR record 96/$ adds rupee depreciation stress.",
     "dominant_risk": "IRAN_NUCLEAR_PROPOSAL_REJECTION_OR_ACCEPTANCE",
-    "crude_brent_last": 110.37,
-    "crude_brent_change_pct": -1.54,
-    "brent_prev": 112.1,
-    "crude_wti_last": 103.27,
-    "gold_usd": 4503.6,
-    "silver_usd": 74.83,
-    "nifty_close": 23618.0,
-    "nifty_change_pct": -0.14,
-    "banknifty_close": 53409.15,
-    "banknifty_change_pct": -0.24,
+    "crude_brent_last": 109.24,
+    "crude_brent_change_pct": 3.33,
+    "brent_prev": 105.49,
+    "crude_wti_last": null,
+    "gold_usd": null,
+    "silver_usd": null,
+    "nifty_close": 23643.5,
+    "nifty_change_pct": -0.19,
+    "banknifty_close": 54234.0,
+    "banknifty_change_pct": 0.19,
     "usdinr": 96.0,
     "vix_level": "Elevated \u2014 VIX likely 18-22 zone given Iran uncertainty",
     "fii_stance": "Selling decelerating (Rs 8,438 cr May 11 \u2192 Rs 187 cr May 14) but flow direction unchanged",
@@ -33,53 +33,57 @@
         "Friday profit-taking broad-based"
       ],
       "note": "Coal India closed \u20b9462.20 \u2014 P037 CORRECT. Defense premium intact. MRPL at \u20b9150 \u2014 far from recovery targets."
-    },
-    "as_of": "2026-05-19 close (market-prices.json 23:46 IST)",
-    "pipeline_note": "No EOD wrap ran May 18 or May 19; morning_brief_2026-05-20 backfilled May 18 close & session-direction score and created the May 20 entry."
+    }
   },
   "opening_bias": {
-    "direction": "NOT_FORECAST",
-    "gap_pct_estimate": null,
-    "gift_nifty_estimate": null,
+    "direction": "GAP_DOWN_SMALL_TO_FLAT",
+    "gap_pct_estimate": -0.1,
+    "gift_nifty_estimate": 23620,
     "key_drivers": [
-      "PIPELINE GAP: no EOD wrap ran on 2026-05-18 or 2026-05-19, so no next-day opening-bias forecast was generated for 2026-05-20."
+      "Brent at $109+ Friday close \u2014 overnight crude direction determines gap",
+      "Trump nuclear proposal to Iran (May 16) \u2014 response could shift regime sharply Monday",
+      "USDINR record 96/$ \u2014 rupee weakness pressure on opening sentiment",
+      "Weekend Israel-Iran kinetic risk \u2014 no kinetic action reported but possibility persists",
+      "Friday closed -0.19% at 23,643.50 \u2014 momentum slightly negative into weekend"
     ],
-    "confidence": null,
-    "note": "No opening-bias forecast existed for today. Cannot score an opening bias that was never generated.",
-    "generated_at": "none_pipeline_gap"
+    "confidence": 2,
+    "risks": [
+      "UPSIDE: Iran accepts nuclear proposal weekend \u2192 Brent crash $95-100 \u2192 gap-up +0.5-1.0% Monday",
+      "DOWNSIDE: Iran rejects nuclear proposal OR Israel strikes \u2192 Brent spike $115+ \u2192 gap-down -1 to -2%",
+      "DATA: US Fed minutes May 22; RBI policy May 23 \u2014 Friday afternoon could see positioning"
+    ],
+    "generated_at": "weekly_review_2026-05-17"
   },
   "session_direction": {
-    "direction": "FLAT_TO_SIDEWAYS_NEGATIVE",
-    "change_pct_estimate": -0.2,
-    "range_low": 23450,
-    "range_high": 23720,
-    "reference_close": 23618.0,
-    "reference_note": "Forecast framed vs May 19 close 23,618 (today's actual open unavailable to this run).",
-    "key_assumption": "Nifty fully recovered the May 18 Iran gap-down (closed 23,649.95) then drifted -0.14% on May 19 to 23,618 \u2014 consolidation, not trend. Brent still elevated at $110.4 (fragile-peace regime) is an ongoing macro headwind, but overnight commodities softened (gold -1.07%, silver -2.91%, WTI -4.96%), easing some risk-off pressure. DII floor intact; FII selling decelerating. No fresh Iran catalyst and pre-RBI (May 23) positioning caution argue for range-bound trade with a mild negative tilt. Resistance 23,800 caps; support 23,500 then the 23,356/23,178 cluster.",
-    "confidence": 2,
-    "generated_at": "morning_brief_2026-05-20",
-    "regime": "FRAGILE_PEACE_BRENT_VOLATILE_CONSOLIDATION",
-    "brent_forecast": "$108-112 working range. Iran nuclear-proposal binary unresolved; floor ~$105 absent explicit de-escalation.",
+    "direction": "BEARISH_WITH_SUPPORT_BOUNCE_ATTEMPT",
+    "change_pct_estimate": -0.9,
+    "range_low": 23250,
+    "range_high": 23500,
+    "key_assumption": "Nifty opened at major support 23,356 (-1.22% gap-down) on US-Iran peace failure + Brent crude spike. The 23,356/23,178 support cluster is critical. Base case: bounce attempt off support but heavy resistance at 23,500 with sellers active. Risk-off regime: defensives/pharma outperform, financials/metals/energy under pressure. Brent sustained $104-109 = ongoing macro headwind. USDINR at record 96+ adds pressure.",
+    "confidence": 3,
+    "generated_at": "morning_brief_2026-05-18",
+    "regime": "IRAN_PEACE_FAILURE_BRENT_REPRICE_DOWNSHOCK",
+    "brent_forecast": "$104-109 sustained. Iran peace process derailment + Hormuz risk = floor at $100. Without explicit de-escalation, Brent does not retrace below $98.",
     "scenarios": [
       {
-        "name": "RANGE_BOUND_FLAT (45%)",
-        "description": "No fresh catalyst. Nifty oscillates 23,550-23,700 on sector rotation; DII supports. Close -0.2% to +0.3%.",
-        "nifty_close_range": "23550-23700"
-      },
-      {
-        "name": "NEGATIVE_DRIFT (30%)",
-        "description": "Brent firm $110+, rupee ~96, pre-RBI caution and lingering FII selling drag the tape lower into close. Close 23,400-23,550 (-0.3% to -0.9%).",
+        "name": "HOLD_SUPPORT_RECOVER_HALF (40%)",
+        "description": "Nifty holds 23,356 support, bounces in afternoon as bargain hunters emerge. Pharma + defensives + selective IT lead. Close 23,400-23,550 (-0.6 to -0.9%).",
         "nifty_close_range": "23400-23550"
       },
       {
-        "name": "RELIEF_BOUNCE (15%)",
-        "description": "Overnight commodity softening extends + an Iran de-escalation/diplomacy headline triggers short-covering. Close 23,720-23,850 (+0.4% to +1.0%).",
-        "nifty_close_range": "23720-23850"
+        "name": "CHOPPY_NEGATIVE_DRIFT (30%)",
+        "description": "Range-bound 23,300-23,450 all session. Iran headline risk caps any upside. Selling resumes into close. Close 23,300-23,400 (-1.0 to -1.5%).",
+        "nifty_close_range": "23300-23400"
       },
       {
-        "name": "BRENT_SHOCK_DOWN (10%)",
-        "description": "Brent breaks $113 or a Hormuz incident reignites risk-off; tests 23,356 support. Close 23,250-23,400 (-1.0% to -1.6%). High-VIX day.",
-        "nifty_close_range": "23250-23400"
+        "name": "BREAK_DOWN_CASCADE (20%)",
+        "description": "Breaks 23,356 support, triggers stops, slides to 23,178 next support. Brent spikes >$110 intraday. Close 23,150-23,300 (-1.5 to -2.1%). High-VIX day.",
+        "nifty_close_range": "23150-23300"
+      },
+      {
+        "name": "IRAN_HEADLINE_REVERSAL (10%)",
+        "description": "Surprise positive Iran/Hormuz news during session triggers short-covering. Nifty recovers most of gap. Close 23,500-23,650 (-0.3 to flat). Brent crashes back below $103.",
+        "nifty_close_range": "23500-23650"
       }
     ]
   },
@@ -271,15 +275,15 @@
   "prompt_for_morning_brief": "MORNING BRIEF 2026-05-18: (1) Iran response to Trump nuclear proposal (sent May 16) \u2014 critical opening catalyst. (2) Brent overnight direction from Friday $109 close. (3) USDINR opening level vs Friday record 96/$. (4) Score opening bias \u2014 forecast GAP_DOWN_SMALL or FLAT (~-0.1%, GIFT ~23,620). Compare against ACTUAL NSE open. (5) Coal India P046 entry tracking (\u20b9462.20 Friday close = inside range already). (6) Defense names ASTRA MICRO P048 entry tracking. (7) New week regime: FRAGILE_PEACE_BRENT_VOLATILE \u2014 base case is choppy with negative bias.",
   "prompt_for_eod_wrap": "EOD WRAP 2026-05-18: (1) Score session_direction_accuracy for today (forecast VOLATILE_WITH_NEGATIVE_BIAS -0.2%, range 23,500-23,800). (2) Status check on P046-P050 cluster (5 predictions check May 22 \u2014 4-day trajectory). (3) Confirm Brent close (regime confirmation). (4) Update next-run-context.json with tomorrow_forecast for May 19. (5) Any Iran-US news flow significant enough to trigger auto-invalidation clauses on P047 (BankNifty bearish) or P048 (ASTRA bullish).",
   "opening_bias_actual": {
-    "nifty_open": null,
-    "gift_nifty_preopen": null,
-    "gap_pct": null,
-    "direction": null,
-    "direction_correct": null,
-    "grade": "NOT_SCORABLE",
-    "scoring_note": "Opening bias NOT SCORABLE for 2026-05-20. (a) No forecast was generated for today's open (EOD wraps for May 18 & May 19 did not run). (b) market-prices.json was last fetched 2026-05-19 23:46 IST and contains May 19's CLOSE (Nifty 23,618.00), not today's NSE open. No live GIFT Nifty / NSE open available to this run.",
-    "source": "data_unavailable",
+    "nifty_open": 23354.35,
+    "gift_nifty_preopen": 23579,
+    "gap_pct": -1.223,
+    "direction": "GAP_DOWN_LARGE",
+    "direction_correct": true,
+    "grade": "PARTIAL",
+    "scoring_note": "Forecast GAP_DOWN_SMALL_TO_FLAT (~-0.1%). Actual gap -1.22% (Nifty opened 23,354.35 vs Friday close 23,643.50). Direction CORRECT but magnitude 12x larger than central estimate. Downside risk tail (Iran tensions, US-Iran failure to reach peace, Brent surge) materialized in line with the documented DOWNSIDE risk (-1 to -2%). Confidence was correctly low (2/5).",
+    "source": "actual_nse_open",
     "pre_estimated_by": null,
-    "validation_required": true
+    "validation_required": false
   }
 }
