@@ -1,46 +1,21 @@
 {
-  "fetched_at": "2026-05-25T10:44:06.712999+00:00",
-  "fetched_at_ist": "2026-05-25 16:14 IST",
+  "fetched_at": "2026-05-25T18:00:06.004171+00:00",
+  "fetched_at_ist": "2026-05-25 23:35 IST",
   "coverage": {
     "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
-    "indices_fetched": 3,
+    "indices_fetched": 0,
     "commodities_fetched": 5,
     "portfolio_stocks_with_pnl": 34
   },
-  "indices": {
-    "NIFTY_50": {
-      "price": 24031.7,
-      "prev_close": 23719.3,
-      "change": 312.4,
-      "change_pct": 1.32,
-      "volume": 0,
-      "ticker": "^NSEI"
-    },
-    "SENSEX": {
-      "price": 76488.96,
-      "prev_close": 75415.35,
-      "change": 1073.61,
-      "change_pct": 1.42,
-      "volume": 0,
-      "ticker": "^BSESN"
-    },
-    "BANKNIFTY": {
-      "price": 55293.65,
-      "prev_close": 54055.35,
-      "change": 1238.3,
-      "change_pct": 2.29,
-      "volume": 0,
-      "ticker": "^NSEBANK"
-    }
-  },
+  "indices": {},
   "commodities": {
     "GOLD_USD": {
       "price": 4523.2,
       "prev_close": 4521.0,
       "change": 2.2,
       "change_pct": 0.05,
-      "volume": 38929,
+      "volume": 63094,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
@@ -48,7 +23,7 @@
       "prev_close": 75.89,
       "change": 0.31,
       "change_pct": 0.4,
-      "volume": 11543,
+      "volume": 16799,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
@@ -56,7 +31,7 @@
       "prev_close": 96.6,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 60959,
+      "volume": 111251,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
@@ -64,7 +39,7 @@
       "prev_close": 103.54,
       "change": -3.33,
       "change_pct": -3.22,
-      "volume": 8419,
+      "volume": 15746,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
@@ -72,7 +47,7 @@
       "prev_close": 2.91,
       "change": 0.11,
       "change_pct": 3.92,
-      "volume": 6292,
+      "volume": 26718,
       "ticker": "NG=F"
     }
   },
