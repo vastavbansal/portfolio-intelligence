@@ -1,6 +1,6 @@
 {
-  "fetched_at": "2026-05-28T07:30:09.772117+00:00",
-  "fetched_at_ist": "2026-05-28 13:01 IST",
+  "fetched_at": "2026-05-28T10:44:04.915288+00:00",
+  "fetched_at_ist": "2026-05-28 16:14 IST",
   "coverage": {
     "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4425.0,
+      "price": 4429.7,
       "prev_close": 4447.5,
-      "change": -22.5,
-      "change_pct": -0.51,
-      "volume": 40724,
+      "change": -17.8,
+      "change_pct": -0.4,
+      "volume": 54408,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 73.75,
+      "price": 73.62,
       "prev_close": 74.6,
-      "change": -0.85,
-      "change_pct": -1.14,
-      "volume": 11311,
+      "change": -0.98,
+      "change_pct": -1.31,
+      "volume": 13061,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 91.08,
+      "price": 90.45,
       "prev_close": 88.68,
-      "change": 2.4,
-      "change_pct": 2.71,
-      "volume": 36788,
+      "change": 1.77,
+      "change_pct": 2.0,
+      "volume": 53997,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 94.72,
+      "price": 94.25,
       "prev_close": 94.29,
-      "change": 0.43,
-      "change_pct": 0.46,
-      "volume": 6468,
+      "change": -0.04,
+      "change_pct": -0.04,
+      "volume": 11141,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 3.07,
+      "price": 3.06,
       "prev_close": 3.04,
-      "change": 0.03,
-      "change_pct": 0.92,
-      "volume": 3940,
+      "change": 0.02,
+      "change_pct": 0.76,
+      "volume": 6716,
       "ticker": "NG=F"
     }
   },
@@ -290,7 +290,7 @@
       "prev_close": 255.69,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 1417151,
+      "volume": 0,
       "symbol": "SBISILVER",
       "yahoo_ticker": "SBISILVER.NS",
       "broker": "ICICI",
@@ -306,7 +306,7 @@
       "prev_close": 133.02,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 1699355,
+      "volume": 0,
       "symbol": "SETFGOLD",
       "yahoo_ticker": "SETFGOLD.NS",
       "broker": "ICICI",
@@ -1188,14 +1188,14 @@
       "prev_close": 255.69,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 1417151
+      "volume": 0
     },
     "SETFGOLD.NS": {
       "price": 133.02,
       "prev_close": 133.02,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 1699355
+      "volume": 0
     },
     "ITC.NS": {
       "price": 291.95,
@@ -1223,21 +1223,21 @@
       "prev_close": 129.04,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 16120254
+      "volume": 0
     },
     "SILVERBEES.NS": {
       "price": 249.87,
       "prev_close": 249.87,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 21335105
+      "volume": 0
     },
     "NIFTYBEES.NS": {
       "price": 270.94,
       "prev_close": 270.94,
       "change": 0.0,
       "change_pct": 0.0,
-      "volume": 4170088
+      "volume": 0
     }
   }
 }
