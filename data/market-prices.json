@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-05-29T10:44:05.053034+00:00",
-  "fetched_at_ist": "2026-05-29 16:14 IST",
+  "fetched_at": "2026-05-29T18:00:04.974756+00:00",
+  "fetched_at_ist": "2026-05-29 23:33 IST",
   "coverage": {
-    "nse_stocks_fetched": 88,
+    "nse_stocks_fetched": 82,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 34
+    "portfolio_stocks_with_pnl": 30
   },
   "indices": {
     "NIFTY_50": {
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4569.4,
+      "price": 4584.6,
       "prev_close": 4499.3,
-      "change": 70.1,
-      "change_pct": 1.56,
-      "volume": 43739,
+      "change": 85.3,
+      "change_pct": 1.9,
+      "volume": 115178,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 75.88,
+      "price": 75.81,
       "prev_close": 75.64,
-      "change": 0.23,
-      "change_pct": 0.3,
-      "volume": 10736,
+      "change": 0.16,
+      "change_pct": 0.21,
+      "volume": 31522,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 87.69,
+      "price": 86.92,
       "prev_close": 88.9,
-      "change": -1.21,
-      "change_pct": -1.36,
-      "volume": 46880,
+      "change": -1.98,
+      "change_pct": -2.23,
+      "volume": 196969,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 91.38,
+      "price": 90.84,
       "prev_close": 93.71,
-      "change": -2.33,
-      "change_pct": -2.49,
-      "volume": 10434,
+      "change": -2.87,
+      "change_pct": -3.06,
+      "volume": 33540,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 3.33,
+      "price": 3.32,
       "prev_close": 3.29,
-      "change": 0.05,
-      "change_pct": 1.4,
-      "volume": 15244,
+      "change": 0.03,
+      "change_pct": 0.97,
+      "volume": 122420,
       "ticker": "NG=F"
     }
   },
@@ -317,38 +317,6 @@
       "pnl": 8901.2,
       "pnl_pct": 5.97
     },
-    "SUZLON": {
-      "price": 56.99,
-      "prev_close": 56.99,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 221298777,
-      "symbol": "SUZLON",
-      "yahoo_ticker": "SUZLON.NS",
-      "broker": "ICICI",
-      "avg_buy": 40.55,
-      "qty": 2000,
-      "invested": 81100.0,
-      "market_value": 113980.0,
-      "pnl": 32880.0,
-      "pnl_pct": 40.54
-    },
-    "SWIGGY": {
-      "price": 257.9,
-      "prev_close": 257.9,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 25777305,
-      "symbol": "SWIGGY",
-      "yahoo_ticker": "SWIGGY.NS",
-      "broker": "ICICI",
-      "avg_buy": 298.75,
-      "qty": 170,
-      "invested": 50787.5,
-      "market_value": 43843.0,
-      "pnl": -6944.5,
-      "pnl_pct": -13.67
-    },
     "URBANCO": {
       "price": 120.03,
       "prev_close": 120.03,
@@ -588,38 +556,6 @@
       "market_value": 3737.5,
       "pnl": -5856.5,
       "pnl_pct": -61.04
-    },
-    "SUZLON (Groww)": {
-      "price": 56.99,
-      "prev_close": 56.99,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 221298777,
-      "symbol": "SUZLON (Groww)",
-      "yahoo_ticker": "SUZLON.NS",
-      "broker": "Groww",
-      "avg_buy": 49.13,
-      "qty": 600,
-      "invested": 29478.0,
-      "market_value": 34194.0,
-      "pnl": 4716.0,
-      "pnl_pct": 16.0
-    },
-    "SWIGGY (Groww)": {
-      "price": 257.9,
-      "prev_close": 257.9,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 25777305,
-      "symbol": "SWIGGY (Groww)",
-      "yahoo_ticker": "SWIGGY.NS",
-      "broker": "Groww",
-      "avg_buy": 375.28,
-      "qty": 212,
-      "invested": 79559.36,
-      "market_value": 54674.8,
-      "pnl": -24884.56,
-      "pnl_pct": -31.28
     }
   },
   "nse_universe": {
@@ -735,13 +671,6 @@
       "change_pct": 0.0,
       "volume": 5061445
     },
-    "NTPC.NS": {
-      "price": 386.9,
-      "prev_close": 386.9,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 17002221
-    },
     "POWERGRID.NS": {
       "price": 290.55,
       "prev_close": 290.55,
@@ -853,13 +782,6 @@
       "change": 0.0,
       "change_pct": 0.0,
       "volume": 1697862
-    },
-    "BPCL.NS": {
-      "price": 298.1,
-      "prev_close": 298.1,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 26382561
     },
     "COALINDIA.NS": {
       "price": 457.9,
@@ -1001,20 +923,6 @@
       "change_pct": 0.0,
       "volume": 2255126
     },
-    "SUZLON.NS": {
-      "price": 56.99,
-      "prev_close": 56.99,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 221298777
-    },
-    "SWIGGY.NS": {
-      "price": 257.9,
-      "prev_close": 257.9,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 25777305
-    },
     "ETERNAL.NS": {
       "price": 250.58,
       "prev_close": 250.58,
@@ -1106,13 +1014,6 @@
       "change_pct": 0.0,
       "volume": 26118069
     },
-    "IOC.NS": {
-      "price": 140.24,
-      "prev_close": 140.24,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 36201443
-    },
     "HINDPETRO.NS": {
       "price": 393.85,
       "prev_close": 393.85,
@@ -1126,13 +1027,6 @@
       "change": 0.0,
       "change_pct": 0.0,
       "volume": 4060912
-    },
-    "ADANIGREEN.NS": {
-      "price": 1475.4,
-      "prev_close": 1475.4,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 4206062
     },
     "ADANIPOWER.NS": {
       "price": 243.37,
