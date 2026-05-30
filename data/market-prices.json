@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-05-30T10:44:05.905096+00:00",
-  "fetched_at_ist": "2026-05-30 16:14 IST",
+  "fetched_at": "2026-05-30T18:00:04.365597+00:00",
+  "fetched_at_ist": "2026-05-30 23:45 IST",
   "coverage": {
-    "nse_stocks_fetched": 88,
+    "nse_stocks_fetched": 81,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 34
+    "portfolio_stocks_with_pnl": 33
   },
   "indices": {
     "NIFTY_50": {
@@ -348,22 +348,6 @@
       "market_value": 43843.0,
       "pnl": -6944.5,
       "pnl_pct": -13.67
-    },
-    "URBANCO": {
-      "price": 120.03,
-      "prev_close": 123.36,
-      "change": -3.33,
-      "change_pct": -2.7,
-      "volume": 3116664,
-      "symbol": "URBANCO",
-      "yahoo_ticker": "URBANCO.NS",
-      "broker": "ICICI",
-      "avg_buy": 122.1,
-      "qty": 725,
-      "invested": 88522.5,
-      "market_value": 87021.75,
-      "pnl": -1500.75,
-      "pnl_pct": -1.7
     },
     "ACME SOLAR": {
       "price": 310.1,
@@ -784,26 +768,12 @@
       "change_pct": -2.39,
       "volume": 3129836
     },
-    "TECHM.NS": {
-      "price": 1483.9,
-      "prev_close": 1483.9,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 3955137
-    },
     "GRASIM.NS": {
       "price": 3122.4,
       "prev_close": 3122.4,
       "change": 0.0,
       "change_pct": 0.0,
       "volume": 1635193
-    },
-    "INDUSINDBK.NS": {
-      "price": 914.35,
-      "prev_close": 932.3,
-      "change": -17.95,
-      "change_pct": -1.93,
-      "volume": 3160610
     },
     "TATACONSUM.NS": {
       "price": 1178.4,
@@ -839,13 +809,6 @@
       "change": -6.0,
       "change_pct": -0.42,
       "volume": 13063475
-    },
-    "DIVISLAB.NS": {
-      "price": 6667.0,
-      "prev_close": 6797.5,
-      "change": -130.5,
-      "change_pct": -1.92,
-      "volume": 612037
     },
     "BRITANNIA.NS": {
       "price": 5204.5,
@@ -909,13 +872,6 @@
       "change": 0.0,
       "change_pct": 0.0,
       "volume": 3554087
-    },
-    "HEROMOTOCO.NS": {
-      "price": 4903.0,
-      "prev_close": 4903.0,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 1648645
     },
     "APOLLOHOSP.NS": {
       "price": 8176.5,
@@ -1022,13 +978,6 @@
       "change_pct": -2.31,
       "volume": 51989116
     },
-    "NYKAA.NS": {
-      "price": 262.3,
-      "prev_close": 263.15,
-      "change": -0.85,
-      "change_pct": -0.32,
-      "volume": 19333644
-    },
     "DMART.NS": {
       "price": 4054.5,
       "prev_close": 4124.4,
@@ -1084,13 +1033,6 @@
       "change": 0.0,
       "change_pct": 0.0,
       "volume": 239194
-    },
-    "OBEROIRLTY.NS": {
-      "price": 1707.1,
-      "prev_close": 1707.1,
-      "change": 0.0,
-      "change_pct": 0.0,
-      "volume": 1489810
     },
     "MRPL.NS": {
       "price": 144.96,
@@ -1161,13 +1103,6 @@
       "change": 0.0,
       "change_pct": 0.0,
       "volume": 967875
-    },
-    "URBANCO.NS": {
-      "price": 120.03,
-      "prev_close": 123.36,
-      "change": -3.33,
-      "change_pct": -2.7,
-      "volume": 3116664
     },
     "IGIL.NS": {
       "price": 371.8,
