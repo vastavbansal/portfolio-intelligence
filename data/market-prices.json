@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-05-30T07:30:05.921811+00:00",
-  "fetched_at_ist": "2026-05-30 13:31 IST",
+  "fetched_at": "2026-05-30T10:44:05.905096+00:00",
+  "fetched_at_ist": "2026-05-30 16:14 IST",
   "coverage": {
-    "nse_stocks_fetched": 80,
+    "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 33
+    "portfolio_stocks_with_pnl": 34
   },
   "indices": {
     "NIFTY_50": {
@@ -541,6 +541,22 @@
       "pnl": -10164.0,
       "pnl_pct": -24.37
     },
+    "PI INDUSTRIES": {
+      "price": 2775.0,
+      "prev_close": 2775.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1148826,
+      "symbol": "PI INDUSTRIES",
+      "yahoo_ticker": "PIIND.NS",
+      "broker": "Groww",
+      "avg_buy": 3877.5,
+      "qty": 6,
+      "invested": 23265.0,
+      "market_value": 16650.0,
+      "pnl": -6615.0,
+      "pnl_pct": -28.43
+    },
     "RELIANCE": {
       "price": 1321.2,
       "prev_close": 1350.5,
@@ -691,12 +707,26 @@
       "change_pct": 0.0,
       "volume": 15215715
     },
+    "BAJFINANCE.NS": {
+      "price": 908.25,
+      "prev_close": 931.15,
+      "change": -22.9,
+      "change_pct": -2.46,
+      "volume": 46752428
+    },
     "TITAN.NS": {
       "price": 4074.9,
       "prev_close": 4074.9,
       "change": 0.0,
       "change_pct": 0.0,
       "volume": 2001419
+    },
+    "SUNPHARMA.NS": {
+      "price": 1799.2,
+      "prev_close": 1799.2,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 10058572
     },
     "ASIANPAINT.NS": {
       "price": 2671.6,
@@ -761,12 +791,26 @@
       "change_pct": 0.0,
       "volume": 3955137
     },
+    "GRASIM.NS": {
+      "price": 3122.4,
+      "prev_close": 3122.4,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1635193
+    },
     "INDUSINDBK.NS": {
       "price": 914.35,
       "prev_close": 932.3,
       "change": -17.95,
       "change_pct": -1.93,
       "volume": 3160610
+    },
+    "TATACONSUM.NS": {
+      "price": 1178.4,
+      "prev_close": 1204.6,
+      "change": -26.2,
+      "change_pct": -2.17,
+      "volume": 9836874
     },
     "BAJAJFINSV.NS": {
       "price": 1783.6,
@@ -782,6 +826,13 @@
       "change_pct": -1.21,
       "volume": 9540984
     },
+    "DRREDDY.NS": {
+      "price": 1303.5,
+      "prev_close": 1303.5,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 5424483
+    },
     "NESTLEIND.NS": {
       "price": 1421.5,
       "prev_close": 1427.5,
@@ -795,6 +846,13 @@
       "change": -130.5,
       "change_pct": -1.92,
       "volume": 612037
+    },
+    "BRITANNIA.NS": {
+      "price": 5204.5,
+      "prev_close": 5204.5,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1697949
     },
     "BPCL.NS": {
       "price": 298.1,
@@ -1020,6 +1078,13 @@
       "change_pct": -2.19,
       "volume": 1176813
     },
+    "SOBHA.NS": {
+      "price": 1418.0,
+      "prev_close": 1418.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 239194
+    },
     "OBEROIRLTY.NS": {
       "price": 1707.1,
       "prev_close": 1707.1,
@@ -1138,6 +1203,13 @@
       "change": -5.05,
       "change_pct": -1.73,
       "volume": 31930439
+    },
+    "PIIND.NS": {
+      "price": 2775.0,
+      "prev_close": 2775.0,
+      "change": 0.0,
+      "change_pct": 0.0,
+      "volume": 1148826
     },
     "SATIA.NS": {
       "price": 57.5,
