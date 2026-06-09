@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-06-09T10:44:06.812812+00:00",
-  "fetched_at_ist": "2026-06-09 16:14 IST",
+  "fetched_at": "2026-06-09T18:00:04.783078+00:00",
+  "fetched_at_ist": "2026-06-09 23:45 IST",
   "coverage": {
-    "nse_stocks_fetched": 88,
+    "nse_stocks_fetched": 80,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 34
+    "portfolio_stocks_with_pnl": 31
   },
   "indices": {
     "NIFTY_50": {
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4359.0,
+      "price": 4286.5,
       "prev_close": 4335.9,
-      "change": 23.1,
-      "change_pct": 0.53,
-      "volume": 36693,
+      "change": -49.4,
+      "change_pct": -1.14,
+      "volume": 124789,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 68.67,
+      "price": 65.27,
       "prev_close": 68.43,
-      "change": 0.24,
-      "change_pct": 0.36,
-      "volume": 8854,
+      "change": -3.16,
+      "change_pct": -4.61,
+      "volume": 51341,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 89.24,
+      "price": 88.23,
       "prev_close": 91.3,
-      "change": -2.06,
-      "change_pct": -2.26,
-      "volume": 40398,
+      "change": -3.07,
+      "change_pct": -3.36,
+      "volume": 225617,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 92.57,
+      "price": 91.58,
       "prev_close": 94.25,
-      "change": -1.68,
-      "change_pct": -1.78,
-      "volume": 7103,
+      "change": -2.67,
+      "change_pct": -2.83,
+      "volume": 37068,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 3.18,
+      "price": 3.15,
       "prev_close": 3.15,
-      "change": 0.03,
-      "change_pct": 1.02,
-      "volume": 13767,
+      "change": 0.01,
+      "change_pct": 0.22,
+      "volume": 121433,
       "ticker": "NG=F"
     }
   },
@@ -204,22 +204,6 @@
       "market_value": 145600.0,
       "pnl": -11419.2,
       "pnl_pct": -7.27
-    },
-    "JIOFIN": {
-      "price": 234.21,
-      "prev_close": 228.86,
-      "change": 5.35,
-      "change_pct": 2.34,
-      "volume": 9956325,
-      "symbol": "JIOFIN",
-      "yahoo_ticker": "JIOFIN.NS",
-      "broker": "ICICI",
-      "avg_buy": 234.99,
-      "qty": 220,
-      "invested": 51697.8,
-      "market_value": 51526.2,
-      "pnl": -171.6,
-      "pnl_pct": -0.33
     },
     "MAZDOCK": {
       "price": 2435.3,
@@ -397,22 +381,6 @@
       "pnl": 24740.0,
       "pnl_pct": 15.67
     },
-    "ADANI POWER": {
-      "price": 226.14,
-      "prev_close": 225.85,
-      "change": 0.29,
-      "change_pct": 0.13,
-      "volume": 26451048,
-      "symbol": "ADANI POWER",
-      "yahoo_ticker": "ADANIPOWER.NS",
-      "broker": "Groww",
-      "avg_buy": 157.14,
-      "qty": 1245,
-      "invested": 195639.3,
-      "market_value": 281544.3,
-      "pnl": 85905.0,
-      "pnl_pct": 43.91
-    },
     "ASTRA MICRO": {
       "price": 1457.7,
       "prev_close": 1412.2,
@@ -508,22 +476,6 @@
       "market_value": 47701.5,
       "pnl": -9023.0,
       "pnl_pct": -15.91
-    },
-    "JIOFIN (Groww)": {
-      "price": 234.21,
-      "prev_close": 228.86,
-      "change": 5.35,
-      "change_pct": 2.34,
-      "volume": 9956325,
-      "symbol": "JIOFIN (Groww)",
-      "yahoo_ticker": "JIOFIN.NS",
-      "broker": "Groww",
-      "avg_buy": 238.3,
-      "qty": 300,
-      "invested": 71490.0,
-      "market_value": 70263.0,
-      "pnl": -1227.0,
-      "pnl_pct": -1.72
     },
     "NHPC": {
       "price": 74.0,
@@ -630,13 +582,6 @@
       "change_pct": 0.47,
       "volume": 23618189
     },
-    "TCS.NS": {
-      "price": 2151.0,
-      "prev_close": 2151.4,
-      "change": -0.4,
-      "change_pct": -0.02,
-      "volume": 4147784
-    },
     "HDFCBANK.NS": {
       "price": 738.35,
       "prev_close": 738.65,
@@ -692,13 +637,6 @@
       "change": -5.0,
       "change_pct": -0.43,
       "volume": 2225378
-    },
-    "MARUTI.NS": {
-      "price": 13120.0,
-      "prev_close": 12912.0,
-      "change": 208.0,
-      "change_pct": 1.61,
-      "volume": 428307
     },
     "AXISBANK.NS": {
       "price": 1292.4,
@@ -770,13 +708,6 @@
       "change_pct": -0.05,
       "volume": 28373347
     },
-    "HINDALCO.NS": {
-      "price": 1076.7,
-      "prev_close": 1062.4,
-      "change": 14.3,
-      "change_pct": 1.35,
-      "volume": 5879980
-    },
     "JSWSTEEL.NS": {
       "price": 1261.7,
       "prev_close": 1260.7,
@@ -811,13 +742,6 @@
       "change": -0.5,
       "change_pct": -0.05,
       "volume": 756984
-    },
-    "BAJAJFINSV.NS": {
-      "price": 1693.1,
-      "prev_close": 1674.6,
-      "change": 18.5,
-      "change_pct": 1.1,
-      "volume": 567593
     },
     "CIPLA.NS": {
       "price": 1376.5,
@@ -959,13 +883,6 @@
       "change_pct": -0.22,
       "volume": 10994314
     },
-    "JIOFIN.NS": {
-      "price": 234.21,
-      "prev_close": 228.86,
-      "change": 5.35,
-      "change_pct": 2.34,
-      "volume": 9956325
-    },
     "IREDA.NS": {
       "price": 122.47,
       "prev_close": 120.16,
@@ -1021,20 +938,6 @@
       "change": -2.65,
       "change_pct": -1.07,
       "volume": 33321100
-    },
-    "NYKAA.NS": {
-      "price": 267.05,
-      "prev_close": 260.3,
-      "change": 6.75,
-      "change_pct": 2.59,
-      "volume": 6196669
-    },
-    "DMART.NS": {
-      "price": 4092.0,
-      "prev_close": 4063.3,
-      "change": 28.7,
-      "change_pct": 0.71,
-      "volume": 336770
     },
     "INDIGO.NS": {
       "price": 4537.6,
@@ -1133,13 +1036,6 @@
       "change": 44.0,
       "change_pct": 2.95,
       "volume": 4554403
-    },
-    "ADANIPOWER.NS": {
-      "price": 226.14,
-      "prev_close": 225.85,
-      "change": 0.29,
-      "change_pct": 0.13,
-      "volume": 26451048
     },
     "TATAPOWER.NS": {
       "price": 398.65,
