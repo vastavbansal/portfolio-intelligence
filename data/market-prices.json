@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-06-16T10:44:06.128574+00:00",
-  "fetched_at_ist": "2026-06-16 16:14 IST",
+  "fetched_at": "2026-06-16T18:08:21.997385+00:00",
+  "fetched_at_ist": "2026-06-16 23:53 IST",
   "coverage": {
-    "nse_stocks_fetched": 88,
+    "nse_stocks_fetched": 82,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 34
+    "portfolio_stocks_with_pnl": 29
   },
   "indices": {
     "NIFTY_50": {
@@ -19,9 +19,9 @@
     },
     "SENSEX": {
       "price": 76808.48,
-      "prev_close": 76808.48,
-      "change": 0.0,
-      "change_pct": 0.0,
+      "prev_close": 76264.33,
+      "change": 544.15,
+      "change_pct": 0.71,
       "volume": 0,
       "ticker": "^BSESN"
     },
@@ -36,63 +36,47 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4364.2,
+      "price": 4362.8,
       "prev_close": 4328.0,
-      "change": 36.2,
-      "change_pct": 0.84,
-      "volume": 33555,
+      "change": 34.8,
+      "change_pct": 0.8,
+      "volume": 82635,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 70.49,
+      "price": 70.45,
       "prev_close": 70.07,
-      "change": 0.42,
-      "change_pct": 0.61,
-      "volume": 9708,
+      "change": 0.38,
+      "change_pct": 0.55,
+      "volume": 31162,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 77.37,
+      "price": 75.02,
       "prev_close": 80.75,
-      "change": -3.38,
-      "change_pct": -4.19,
-      "volume": 41527,
+      "change": -5.73,
+      "change_pct": -7.1,
+      "volume": 188908,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 81.04,
+      "price": 78.79,
       "prev_close": 83.17,
-      "change": -2.13,
-      "change_pct": -2.56,
-      "volume": 7598,
+      "change": -4.38,
+      "change_pct": -5.27,
+      "volume": 26776,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 3.19,
+      "price": 3.22,
       "prev_close": 3.15,
-      "change": 0.04,
-      "change_pct": 1.4,
-      "volume": 13852,
+      "change": 0.08,
+      "change_pct": 2.48,
+      "volume": 117685,
       "ticker": "NG=F"
     }
   },
   "portfolio": {
-    "CDSL": {
-      "price": 1264.0,
-      "prev_close": 1265.7,
-      "change": -1.7,
-      "change_pct": -0.13,
-      "volume": 1197758,
-      "symbol": "CDSL",
-      "yahoo_ticker": "CDSL.NS",
-      "broker": "ICICI",
-      "avg_buy": 1184.8,
-      "qty": 64,
-      "invested": 75827.2,
-      "market_value": 80896.0,
-      "pnl": 5068.8,
-      "pnl_pct": 6.68
-    },
     "COCHINSHIP": {
       "price": 1431.6,
       "prev_close": 1411.8,
@@ -108,22 +92,6 @@
       "market_value": 128844.0,
       "pnl": 4275.9,
       "pnl_pct": 3.43
-    },
-    "GODREJPROP": {
-      "price": 1794.5,
-      "prev_close": 1766.2,
-      "change": 28.3,
-      "change_pct": 1.6,
-      "volume": 375307,
-      "symbol": "GODREJPROP",
-      "yahoo_ticker": "GODREJPROP.NS",
-      "broker": "ICICI",
-      "avg_buy": 1611.67,
-      "qty": 68,
-      "invested": 109593.56,
-      "market_value": 122026.0,
-      "pnl": 12432.44,
-      "pnl_pct": 11.34
     },
     "IGIL": {
       "price": 366.6,
@@ -172,22 +140,6 @@
       "market_value": 58346.4,
       "pnl": 7539.0,
       "pnl_pct": 14.84
-    },
-    "IREDA": {
-      "price": 126.15,
-      "prev_close": 124.82,
-      "change": 1.33,
-      "change_pct": 1.07,
-      "volume": 4568317,
-      "symbol": "IREDA",
-      "yahoo_ticker": "IREDA.NS",
-      "broker": "ICICI",
-      "avg_buy": 114.57,
-      "qty": 400,
-      "invested": 45828.0,
-      "market_value": 50460.0,
-      "pnl": 4632.0,
-      "pnl_pct": 10.11
     },
     "ITC": {
       "price": 291.65,
@@ -445,38 +397,6 @@
       "pnl": 5797.0,
       "pnl_pct": 30.5
     },
-    "IRFC": {
-      "price": 97.63,
-      "prev_close": 97.08,
-      "change": 0.55,
-      "change_pct": 0.57,
-      "volume": 6897021,
-      "symbol": "IRFC",
-      "yahoo_ticker": "IRFC.NS",
-      "broker": "Groww",
-      "avg_buy": 130.01,
-      "qty": 200,
-      "invested": 26002.0,
-      "market_value": 19526.0,
-      "pnl": -6476.0,
-      "pnl_pct": -24.91
-    },
-    "IREDA (Groww)": {
-      "price": 126.15,
-      "prev_close": 124.82,
-      "change": 1.33,
-      "change_pct": 1.07,
-      "volume": 4568317,
-      "symbol": "IREDA (Groww)",
-      "yahoo_ticker": "IREDA.NS",
-      "broker": "Groww",
-      "avg_buy": 175.0,
-      "qty": 200,
-      "invested": 35000.0,
-      "market_value": 25230.0,
-      "pnl": -9770.0,
-      "pnl_pct": -27.91
-    },
     "IGIL (Groww)": {
       "price": 366.6,
       "prev_close": 369.25,
@@ -700,13 +620,6 @@
       "change_pct": -0.83,
       "volume": 280500
     },
-    "AXISBANK.NS": {
-      "price": 1365.7,
-      "prev_close": 1368.3,
-      "change": -2.6,
-      "change_pct": -0.19,
-      "volume": 7708367
-    },
     "BAJFINANCE.NS": {
       "price": 959.65,
       "prev_close": 942.3,
@@ -797,13 +710,6 @@
       "change": -24.2,
       "change_pct": -0.76,
       "volume": 308263
-    },
-    "INDUSINDBK.NS": {
-      "price": 926.0,
-      "prev_close": 933.2,
-      "change": -7.2,
-      "change_pct": -0.77,
-      "volume": 1602207
     },
     "TATACONSUM.NS": {
       "price": 1130.9,
@@ -966,20 +872,6 @@
       "change_pct": 1.01,
       "volume": 15503471
     },
-    "IREDA.NS": {
-      "price": 126.15,
-      "prev_close": 124.82,
-      "change": 1.33,
-      "change_pct": 1.07,
-      "volume": 4568317
-    },
-    "IRFC.NS": {
-      "price": 97.63,
-      "prev_close": 97.08,
-      "change": 0.55,
-      "change_pct": 0.57,
-      "volume": 6897021
-    },
     "IRCON.NS": {
       "price": 138.92,
       "prev_close": 137.74,
@@ -993,13 +885,6 @@
       "change": 0.28,
       "change_pct": 0.18,
       "volume": 1507235
-    },
-    "CDSL.NS": {
-      "price": 1264.0,
-      "prev_close": 1265.7,
-      "change": -1.7,
-      "change_pct": -0.13,
-      "volume": 1197758
     },
     "SUZLON.NS": {
       "price": 57.92,
@@ -1063,13 +948,6 @@
       "change": -6.0,
       "change_pct": -0.22,
       "volume": 392976
-    },
-    "GODREJPROP.NS": {
-      "price": 1794.5,
-      "prev_close": 1766.2,
-      "change": 28.3,
-      "change_pct": 1.6,
-      "volume": 375307
     },
     "PRESTIGE.NS": {
       "price": 1521.1,
