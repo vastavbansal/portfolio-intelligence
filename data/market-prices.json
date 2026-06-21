@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-06-20T18:00:05.290669+00:00",
-  "fetched_at_ist": "2026-06-20 23:45 IST",
+  "fetched_at": "2026-06-21T07:30:04.783695+00:00",
+  "fetched_at_ist": "2026-06-21 13:00 IST",
   "coverage": {
-    "nse_stocks_fetched": 82,
+    "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 31
+    "portfolio_stocks_with_pnl": 34
   },
   "indices": {
     "NIFTY_50": {
@@ -156,6 +156,22 @@
       "market_value": 95408.5,
       "pnl": 15519.39,
       "pnl_pct": 19.43
+    },
+    "IRCON": {
+      "price": 137.19,
+      "prev_close": 139.18,
+      "change": -1.99,
+      "change_pct": -1.43,
+      "volume": 1904430,
+      "symbol": "IRCON",
+      "yahoo_ticker": "IRCON.NS",
+      "broker": "ICICI",
+      "avg_buy": 120.97,
+      "qty": 420,
+      "invested": 50807.4,
+      "market_value": 57619.8,
+      "pnl": 6812.4,
+      "pnl_pct": 13.41
     },
     "IREDA": {
       "price": 127.15,
@@ -477,6 +493,22 @@
       "pnl": -975.0,
       "pnl_pct": -4.37
     },
+    "IRCON (Groww)": {
+      "price": 137.19,
+      "prev_close": 139.18,
+      "change": -1.99,
+      "change_pct": -1.43,
+      "volume": 1904430,
+      "symbol": "IRCON (Groww)",
+      "yahoo_ticker": "IRCON.NS",
+      "broker": "Groww",
+      "avg_buy": 162.07,
+      "qty": 350,
+      "invested": 56724.5,
+      "market_value": 48016.5,
+      "pnl": -8708.0,
+      "pnl_pct": -15.35
+    },
     "JIOFIN (Groww)": {
       "price": 244.45,
       "prev_close": 244.1,
@@ -540,6 +572,22 @@
       "market_value": 47142.0,
       "pnl": -3225.6,
       "pnl_pct": -6.4
+    },
+    "SATIA IND.": {
+      "price": 55.5,
+      "prev_close": 55.73,
+      "change": -0.23,
+      "change_pct": -0.41,
+      "volume": 46322,
+      "symbol": "SATIA IND.",
+      "yahoo_ticker": "SATIA.NS",
+      "broker": "Groww",
+      "avg_buy": 147.6,
+      "qty": 65,
+      "invested": 9594.0,
+      "market_value": 3607.5,
+      "pnl": -5986.5,
+      "pnl_pct": -62.4
     },
     "SUZLON (Groww)": {
       "price": 59.2,
@@ -623,6 +671,13 @@
       "change": -3.7,
       "change_pct": -0.92,
       "volume": 17504009
+    },
+    "INFY.NS": {
+      "price": 1051.4,
+      "prev_close": 1127.5,
+      "change": -76.1,
+      "change_pct": -6.75,
+      "volume": 45665442
     },
     "LT.NS": {
       "price": 4209.4,
@@ -820,12 +875,26 @@
       "change_pct": -0.08,
       "volume": 2611538
     },
+    "HDFCLIFE.NS": {
+      "price": 591.85,
+      "prev_close": 589.2,
+      "change": 2.65,
+      "change_pct": 0.45,
+      "volume": 2678289
+    },
     "SBILIFE.NS": {
       "price": 1800.2,
       "prev_close": 1807.6,
       "change": -7.4,
       "change_pct": -0.41,
       "volume": 352560
+    },
+    "EICHERMOT.NS": {
+      "price": 7611.0,
+      "prev_close": 7601.0,
+      "change": 10.0,
+      "change_pct": 0.13,
+      "volume": 682982
     },
     "ADANIENT.NS": {
       "price": 3038.4,
@@ -876,6 +945,13 @@
       "change_pct": -0.78,
       "volume": 31571461
     },
+    "TRENT.NS": {
+      "price": 3205.8,
+      "prev_close": 3179.7,
+      "change": 26.1,
+      "change_pct": 0.82,
+      "volume": 2456189
+    },
     "BEL.NS": {
       "price": 426.9,
       "prev_close": 428.6,
@@ -903,6 +979,13 @@
       "change": -0.62,
       "change_pct": -0.62,
       "volume": 13152144
+    },
+    "IRCON.NS": {
+      "price": 137.19,
+      "prev_close": 139.18,
+      "change": -1.99,
+      "change_pct": -1.43,
+      "volume": 1904430
     },
     "NCC.NS": {
       "price": 155.84,
@@ -1127,6 +1210,13 @@
       "change": -42.4,
       "change_pct": -1.49,
       "volume": 258029
+    },
+    "SATIA.NS": {
+      "price": 55.5,
+      "prev_close": 55.73,
+      "change": -0.23,
+      "change_pct": -0.41,
+      "volume": 46322
     },
     "GOLDBEES.NS": {
       "price": 119.79,
