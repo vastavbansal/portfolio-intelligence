@@ -1,12 +1,12 @@
 {
-  "fetched_at": "2026-06-24T10:44:05.444612+00:00",
-  "fetched_at_ist": "2026-06-24 16:29 IST",
+  "fetched_at": "2026-06-24T18:00:05.395080+00:00",
+  "fetched_at_ist": "2026-06-24 23:46 IST",
   "coverage": {
-    "nse_stocks_fetched": 80,
+    "nse_stocks_fetched": 88,
     "nse_stocks_attempted": 91,
     "indices_fetched": 3,
     "commodities_fetched": 5,
-    "portfolio_stocks_with_pnl": 30
+    "portfolio_stocks_with_pnl": 34
   },
   "indices": {
     "NIFTY_50": {
@@ -36,43 +36,43 @@
   },
   "commodities": {
     "GOLD_USD": {
-      "price": 4079.8,
+      "price": 3992.8,
       "prev_close": 4129.9,
-      "change": -50.1,
-      "change_pct": -1.21,
-      "volume": 49845,
+      "change": -137.1,
+      "change_pct": -3.32,
+      "volume": 168499,
       "ticker": "GC=F"
     },
     "SILVER_USD": {
-      "price": 60.92,
+      "price": 56.44,
       "prev_close": 62.02,
-      "change": -1.1,
-      "change_pct": -1.77,
-      "volume": 22501,
+      "change": -5.58,
+      "change_pct": -9.0,
+      "volume": 78728,
       "ticker": "SI=F"
     },
     "CRUDE_WTI": {
-      "price": 71.83,
+      "price": 70.36,
       "prev_close": 73.21,
-      "change": -1.38,
-      "change_pct": -1.88,
-      "volume": 45446,
+      "change": -2.85,
+      "change_pct": -3.89,
+      "volume": 193121,
       "ticker": "CL=F"
     },
     "BRENT_CRUDE": {
-      "price": 75.59,
+      "price": 73.8,
       "prev_close": 77.08,
-      "change": -1.49,
-      "change_pct": -1.93,
-      "volume": 6467,
+      "change": -3.28,
+      "change_pct": -4.26,
+      "volume": 24368,
       "ticker": "BZ=F"
     },
     "NAT_GAS": {
-      "price": 3.21,
+      "price": 3.25,
       "prev_close": 3.15,
-      "change": 0.07,
-      "change_pct": 2.13,
-      "volume": 11172,
+      "change": 0.1,
+      "change_pct": 3.24,
+      "volume": 79732,
       "ticker": "NG=F"
     }
   },
@@ -173,6 +173,22 @@
       "pnl": 6169.8,
       "pnl_pct": 12.14
     },
+    "IREDA": {
+      "price": 127.52,
+      "prev_close": 127.31,
+      "change": 0.21,
+      "change_pct": 0.16,
+      "volume": 6967537,
+      "symbol": "IREDA",
+      "yahoo_ticker": "IREDA.NS",
+      "broker": "ICICI",
+      "avg_buy": 114.57,
+      "qty": 400,
+      "invested": 45828.0,
+      "market_value": 51008.0,
+      "pnl": 5180.0,
+      "pnl_pct": 11.3
+    },
     "ITC": {
       "price": 290.35,
       "prev_close": 290.0,
@@ -268,6 +284,22 @@
       "market_value": 113325.0,
       "pnl": 47845.5,
       "pnl_pct": 73.07
+    },
+    "SBISILVER": {
+      "price": 218.47,
+      "prev_close": 220.2,
+      "change": -1.73,
+      "change_pct": -0.79,
+      "volume": 1458827,
+      "symbol": "SBISILVER",
+      "yahoo_ticker": "SBISILVER.NS",
+      "broker": "ICICI",
+      "avg_buy": 225.05,
+      "qty": 730,
+      "invested": 164286.5,
+      "market_value": 159483.1,
+      "pnl": -4803.4,
+      "pnl_pct": -2.92
     },
     "SETFGOLD": {
       "price": 121.24,
@@ -412,6 +444,38 @@
       "market_value": 24296.25,
       "pnl": 5291.0,
       "pnl_pct": 27.84
+    },
+    "IRFC": {
+      "price": 92.5,
+      "prev_close": 98.67,
+      "change": -6.17,
+      "change_pct": -6.25,
+      "volume": 80570331,
+      "symbol": "IRFC",
+      "yahoo_ticker": "IRFC.NS",
+      "broker": "Groww",
+      "avg_buy": 130.01,
+      "qty": 200,
+      "invested": 26002.0,
+      "market_value": 18500.0,
+      "pnl": -7502.0,
+      "pnl_pct": -28.85
+    },
+    "IREDA (Groww)": {
+      "price": 127.52,
+      "prev_close": 127.31,
+      "change": 0.21,
+      "change_pct": 0.16,
+      "volume": 6967537,
+      "symbol": "IREDA (Groww)",
+      "yahoo_ticker": "IREDA.NS",
+      "broker": "Groww",
+      "avg_buy": 175.0,
+      "qty": 200,
+      "invested": 35000.0,
+      "market_value": 25504.0,
+      "pnl": -9496.0,
+      "pnl_pct": -27.13
     },
     "IGIL (Groww)": {
       "price": 352.25,
@@ -566,6 +630,13 @@
       "change_pct": 0.31,
       "volume": 11028739
     },
+    "TCS.NS": {
+      "price": 2109.0,
+      "prev_close": 2059.6,
+      "change": 49.4,
+      "change_pct": 2.4,
+      "volume": 4746298
+    },
     "HDFCBANK.NS": {
       "price": 793.2,
       "prev_close": 774.65,
@@ -593,6 +664,13 @@
       "change": 10.4,
       "change_pct": 1.02,
       "volume": 11723063
+    },
+    "KOTAKBANK.NS": {
+      "price": 405.95,
+      "prev_close": 401.65,
+      "change": 4.3,
+      "change_pct": 1.07,
+      "volume": 11767896
     },
     "INFY.NS": {
       "price": 1056.6,
@@ -727,6 +805,13 @@
       "change_pct": 2.45,
       "volume": 1792783
     },
+    "TATACONSUM.NS": {
+      "price": 1098.1,
+      "prev_close": 1103.8,
+      "change": -5.7,
+      "change_pct": -0.52,
+      "volume": 1405217
+    },
     "BAJAJFINSV.NS": {
       "price": 1780.5,
       "prev_close": 1765.0,
@@ -811,6 +896,13 @@
       "change_pct": -0.08,
       "volume": 324321
     },
+    "ADANIENT.NS": {
+      "price": 3069.7,
+      "prev_close": 2962.9,
+      "change": 106.8,
+      "change_pct": 3.6,
+      "volume": 2527655
+    },
     "ADANIPORTS.NS": {
       "price": 1813.3,
       "prev_close": 1784.0,
@@ -873,6 +965,20 @@
       "change": 1.06,
       "change_pct": 0.45,
       "volume": 9534767
+    },
+    "IREDA.NS": {
+      "price": 127.52,
+      "prev_close": 127.31,
+      "change": 0.21,
+      "change_pct": 0.16,
+      "volume": 6967537
+    },
+    "IRFC.NS": {
+      "price": 92.5,
+      "prev_close": 98.67,
+      "change": -6.17,
+      "change_pct": -6.25,
+      "volume": 80570331
     },
     "IRCON.NS": {
       "price": 135.66,
@@ -950,6 +1056,13 @@
       "change": -13.7,
       "change_pct": -0.55,
       "volume": 944122
+    },
+    "GRSE.NS": {
+      "price": 2782.7,
+      "prev_close": 2802.2,
+      "change": -19.5,
+      "change_pct": -0.7,
+      "volume": 746868
     },
     "GODREJPROP.NS": {
       "price": 1820.6,
@@ -1069,6 +1182,13 @@
       "change": -26.1,
       "change_pct": -1.55,
       "volume": 901160
+    },
+    "SBISILVER.NS": {
+      "price": 218.47,
+      "prev_close": 220.2,
+      "change": -1.73,
+      "change_pct": -0.79,
+      "volume": 1458827
     },
     "SETFGOLD.NS": {
       "price": 121.24,
